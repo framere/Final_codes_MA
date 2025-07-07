@@ -4,7 +4,7 @@ using Printf
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
 
-include("FLOP_count.jl")
+include("../FLOP_count.jl")
 
 function load_matrix(system::String)
     N = 27643

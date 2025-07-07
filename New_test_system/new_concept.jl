@@ -58,7 +58,7 @@ function load_matrix(filename::String)
     return Hermitian(A)
 end
 
-function davidson(
+function davidson_residual_deflation(
     A::AbstractMatrix{T},
     V::Matrix{T},
     n_aux::Integer,
@@ -85,6 +85,7 @@ function davidson(
     while nevf < l
         iter += 1
 
+        # Orthogonalize V against locked vectors (unchanged)
         if size(V_lock, 2) > 0
             count_orthogonalization_flops(size(V,2), size(V_lock,2), size(V,1))
             for i in 1:size(V_lock, 2)
@@ -98,7 +99,7 @@ function davidson(
         count_qr_flops(size(V,1), size(V,2))
         V = Matrix(qr(V).Q)
 
-        # Rayleigh-Ritz
+        # Rayleigh-Ritz (unchanged)
         AV = A * V
         count_matmul_flops(size(A, 1), size(A, 2), size(V, 2))
         H = Hermitian(V' * AV)
@@ -114,6 +115,17 @@ function davidson(
         R = X .* Σ' .- A * X
         count_matmul_flops(size(A, 1), size(A, 2), size(X, 2))
         count_vec_add_flops(length(R))  # For the subtraction
+
+        # DEFLATE RESIDUALS (NEW PART)
+        if size(V_lock, 2) > 0
+            count_orthogonalization_flops(size(R,2), size(V_lock,2), size(R,1))
+            for i in 1:size(V_lock, 2)
+                v_lock = V_lock[:, i]
+                for j in 1:size(R, 2)
+                    R[:, j] -= v_lock * (v_lock' * R[:, j])
+                end
+            end
+        end
 
         norms = vec(norm.(eachcol(R)))
         for _ in eachcol(R)
@@ -187,6 +199,7 @@ function davidson(
     return (Eigenvalues, Ritz_vecs)
 end
 
+
 function main(system::String, l::Integer, factor::Integer)
     global NFLOPs
     NFLOPs = 0  # reset for each run
@@ -205,7 +218,7 @@ function main(system::String, l::Integer, factor::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1e-2, system, 3)
+    @time Σ, U = davidson_residual_deflation(A, V, Naux, l, 1e-2, system, 3)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

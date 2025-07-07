@@ -85,16 +85,16 @@ function davidson_residual_deflation(
     while nevf < l
         iter += 1
 
-        # Orthogonalize V against locked vectors (unchanged)
-        if size(V_lock, 2) > 0
-            count_orthogonalization_flops(size(V,2), size(V_lock,2), size(V,1))
-            for i in 1:size(V_lock, 2)
-                v_lock = V_lock[:, i]
-                for j in 1:size(V, 2)
-                    V[:, j] -= v_lock * (v_lock' * V[:, j])
-                end
-            end
-        end
+        # # Orthogonalize V against locked vectors (unchanged)
+        # if size(V_lock, 2) > 0
+        #     count_orthogonalization_flops(size(V,2), size(V_lock,2), size(V,1))
+        #     for i in 1:size(V_lock, 2)
+        #         v_lock = V_lock[:, i]
+        #         for j in 1:size(V, 2)
+        #             V[:, j] -= v_lock * (v_lock' * V[:, j])
+        #         end
+        #     end
+        # end
         
         count_qr_flops(size(V,1), size(V,2))
         V = Matrix(qr(V).Q)
@@ -218,7 +218,7 @@ function main(system::String, l::Integer, factor::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson_residual_deflation(A, V, Naux, l, 1e-2, system, 3)
+    @time Σ, U = davidson_residual_deflation(A, V, Naux, l, 1.3e-2, system, 3)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

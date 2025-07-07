@@ -114,7 +114,7 @@ function main(system::String, Nlow::Int)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1e-2, system)
+    @time Σ, U = davidson(A, V, Naux, 1.3e-2, system)
 
     # println("Full diagonalization")
     # @time Σexact, Uexact = eigen(A)
@@ -126,9 +126,13 @@ function main(system::String, Nlow::Int)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-N_lows = [60]
+systems = ["HFbasis", "RNDbasis1", "RNDbasis2", "RNDbasis3"]
+N_lows = [60, 90, 120]  # Example values for Nlow
 
-for Nlow in N_lows
-    println("Running for Nlow = $Nlow")
-    main("HFbasis", Nlow)
+for system in systems
+    println("Running for system: $system")
+    for (i, Nlow) in enumerate(N_lows)
+        println("Nlow = $Nlow, factor = $i")
+        main(system, Nlow)  # Replace F with loop index i
+    end
 end

@@ -205,7 +205,7 @@ function main(system::String, l::Integer, factor::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1e-2, system, 3)
+    @time Σ, U = davidson(A, V, Naux, l, 1.3e-2, system, 3)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -219,8 +219,12 @@ function main(system::String, l::Integer, factor::Integer)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-ls = [60]
-for (i, l) in enumerate(ls)
-    println("Running for Nlow = $l")
-    main("HFbasis", l, i)  # Replace F with loop index i
+systems = ["HFbasis","RNDbasis1", "RNDbasis2", "RNDbasis3"]
+ls = [60, 90, 120]
+for system in systems
+    println("Running for system: $system")
+    for (i, l) in enumerate(ls)
+        println("Nlow = $l, factor = $i")
+        main(system, l, i)  # Replace F with loop index i
+    end
 end

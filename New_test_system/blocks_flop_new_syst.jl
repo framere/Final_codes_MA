@@ -140,7 +140,7 @@ function davidson(
 end
 
 function define_matrix(system::String)
-    Nlow = 45
+    Nlow = 10
     Naux = Nlow * 12
     N = 27643
 
@@ -182,10 +182,13 @@ function main(system::String, target_nev::Int)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-target_nevs = [60]
+systems = ["HFbasis", "RNDbasis1", "RNDbasis2", "RNDbasis3"]
+N_lows = [60, 90, 120]  # Example values for N
 
-for target_nev in target_nevs
-    println("Running for target_nev = ", target_nev)
-    main("HFbasis", target_nev)
-    println("\n")
+for system in systems
+    println("Running for system: $system")
+    for (i, Nlow) in enumerate(N_lows)
+        println("Nlow = $Nlow, factor = $i")
+        main(system, Nlow)  # Replace F with loop index i
+    end
 end

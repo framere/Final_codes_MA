@@ -12,8 +12,8 @@ function load_matrix(system::String)
         error("Unknown system: $system")
     end
 
-    filename = "../Master_arbeit/Davidson_algorithm/m_pp_" * system * ".dat"
-    # filename = "../../../OneDrive - Students RWTH Aachen University/Master_arbeit/Davidson_algorithm/m_pp_" * system * ".dat"
+    # filename = "../Master_arbeit/Davidson_algorithm/m_pp_" * system * ".dat"
+    filename = "../../../OneDrive - Students RWTH Aachen University/Master_arbeit/Davidson_algorithm/m_pp_" * system * ".dat"
     println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
@@ -29,7 +29,7 @@ function diagonalize_and_save(system::String)
     A = load_matrix(system)
     println("Diagonalizing the matrix for system: $system")
     @time Σexact, Uexact = eigen(A)
-    output_file="eigen_results_$system.jld2"
+    output_file="Eigenvalues_folder/eigen_results_$system.jld2"
     println("Saving results to $output_file")
     jldsave(output_file; Σexact, Uexact)  # JLD2 format
     println("Done!")

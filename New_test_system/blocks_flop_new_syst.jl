@@ -144,7 +144,7 @@ function define_matrix(system::String)
     Naux = Nlow * 12
     N = 27643
 
-    filename = "formaldehyde/gamma_VASP_" * system * ".dat"
+    filename = "../formaldehyde/gamma_VASP_" * system * ".dat"
     println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)

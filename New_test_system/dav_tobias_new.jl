@@ -7,18 +7,9 @@ global NFLOPs = 0
 include("FLOP_count.jl")
 
 function load_matrix(system::String)
-    if system == "He"
-        N = 4488
-    elseif system == "hBN"
-        N = 6863        
-    elseif system == "Si"
-        N = 6201
-    else
-        error("Unknown system: $system")
-    end
+    N = 27643
 
-    filename = "../Davidson_algorithm/m_pp_" * system * ".dat"
-    # filename = "../../../OneDrive - Students RWTH Aachen University/Master_arbeit/Davidson_algorithm/m_pp_" * system * ".dat"
+    filename = "../formaldehyde/gamma_VASP_" * system * ".dat"
     println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
@@ -27,7 +18,8 @@ function load_matrix(system::String)
 
     A = reshape(A, N, N)
     A = -A
-    return Hermitian(A)
+    A = Hermitian(A)
+    return A
 end
 
 function davidson(
@@ -134,9 +126,9 @@ function main(system::String, Nlow::Int)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-N_lows = [216, 288, 360]
+N_lows = [60]
 
 for Nlow in N_lows
     println("Running for Nlow = $Nlow")
-    main("hBN", Nlow)
+    main("HFbasis", Nlow)
 end

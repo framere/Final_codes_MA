@@ -22,10 +22,10 @@ function diagonalize_and_save(system::String)
     A = load_matrix(system)
     println("Diagonalizing the matrix for system: $system")
     @time F = eigen(A)
-    true_EVs = -sqrt.(abs.(F.values))
+    # true_EVs = -sqrt.(abs.(F.values))
     output_file="Eigenvalues_folder/eigen_results_$system.jld2"
     println("Saving results to $output_file")
-    jldsave(output_file; true_EVs)  # JLD2 format
+    jldsave(output_file; F.values)  # JLD2 format
     println("Done!")
 end
 

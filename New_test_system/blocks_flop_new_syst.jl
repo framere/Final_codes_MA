@@ -140,7 +140,7 @@ function davidson(
 end
 
 function define_matrix(system::String)
-    Nlow = 25
+    Nlow = 45
     Naux = Nlow * 12
     N = 27643
 
@@ -152,7 +152,7 @@ function define_matrix(system::String)
     close(file)
 
     A = reshape(A, N, N)
-    A = -A
+    # A = -A
     A = Hermitian(A)
     return A, N, Nlow, Naux
 end

@@ -17,7 +17,7 @@ function load_matrix(system::String)
     close(file)
 
     A = reshape(A, N, N)
-    A = -A
+    # A = -A
     A = Hermitian(A)
     return A
 end
@@ -103,7 +103,7 @@ function main(system::String, Nlow::Int)
     global NFLOPs
     NFLOPs = 0  # Reset FLOP counter
     
-    Naux = Nlow * 2
+    Naux = Nlow * 10
     A = load_matrix(system)
     N = size(A, 1)
 
@@ -120,7 +120,7 @@ function main(system::String, Nlow::Int)
     # @time Σexact, Uexact = eigen(A)
     # count_diag_flops(N)
 
-    # display("text/plain", Σ')
+    display("text/plain", Σ')
     # display("text/plain", (Σ - Σexact[1:Nlow])')
 
     println("Total estimated FLOPs: $(NFLOPs)")

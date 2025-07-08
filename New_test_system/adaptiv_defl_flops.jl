@@ -229,7 +229,7 @@ function load_eigenresults(output_file="eigen_results.jld2")
     return Σexact, Matrix{eltype(Σexact)}(undef, 0, 0)
 end
 
-function main(system::String, l::Integer = 200)
+function main(system::String, l::Integer = 200, factor::Integer)
     # Reset FLOP counter at start of main
     global NFLOPs = 0
     
@@ -272,10 +272,12 @@ function main(system::String, l::Integer = 200)
     display("text/plain", (Σ - Σexact[1:l])')
 end
 
-
-ls = [216] #, 288, 360
-
-for l in ls
-    println("Running for Nlow = $l")
-    main("hBN", l)
+systems = ["RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"
+ls = [60, 90] #, 120, 160, 200
+for system in systems
+    println("Running for system: $system")
+    for (i, l) in enumerate(ls)
+        println("Nlow = $l, factor = $i")
+        main(system, l, i)  # Replace F with loop index i
+    end
 end

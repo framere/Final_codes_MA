@@ -25,7 +25,7 @@ function transform_and_save_matrix(A::Hermitian{Float64, Matrix{Float64}}, out_f
     U = Matrix(qr_decomp.Q)
 
     println("Transforming matrix into new basis...")
-    A_new = A * U  # Equivalent to A' = Qᵀ * A * Q
+    A_new = U' * A * U  # Equivalent to A' = Qᵀ * A * Q
 
     println("Saving transformed matrix to ", out_filename)
     A_new_vec = vec(Matrix(A_new))  # Flatten to 1D
@@ -35,6 +35,6 @@ function transform_and_save_matrix(A::Hermitian{Float64, Matrix{Float64}}, out_f
 end
 
 # === MAIN USAGE ===
-system = "some_system_name"  # Replace with your actual system name
+system = "RNDbasis1"  # Replace with your actual system name
 A = load_matrix(system)
-transform_and_save_matrix(A, "transformed_matrix.dat")
+transform_and_save_matrix(A, "transformed_RND1.dat")

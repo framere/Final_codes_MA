@@ -199,13 +199,7 @@ function main(system::String, l::Integer, factor::Integer)
 
     A = load_matrix(filename)
     N = size(A, 1)
-
-    Urand = rand(N,N) .- 0.5
-    qr_decomp = qr(Urand)
-    Urand = Matrix(qr_decomp.Q)
-    A = A*Urand # transform to random basis
-    A = Hermitian(A)  # Ensure A is Hermitian after transformation
-
+    
     V = zeros(N, Nlow)
     for i = 1:Nlow
         V[i, i] = 1.0

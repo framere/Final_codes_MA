@@ -220,7 +220,7 @@ function davidson(A::AbstractMatrix{T},
     return (Eigenvalues, Ritz_vecs)
 end
 
-function read_eigenvalues(system::String)
+function read_eigenresults(system::String)
     output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")

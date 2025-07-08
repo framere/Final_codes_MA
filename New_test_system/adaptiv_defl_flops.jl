@@ -229,7 +229,7 @@ function load_eigenresults(output_file="eigen_results.jld2")
     return Σexact, Matrix{eltype(Σexact)}(undef, 0, 0)
 end
 
-function main(system::String, l::Integer = 200, factor::Integer)
+function main(system::String, l::Integer, factor::Integer)
     # Reset FLOP counter at start of main
     global NFLOPs = 0
     

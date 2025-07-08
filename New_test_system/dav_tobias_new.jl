@@ -1,5 +1,6 @@
 using LinearAlgebra
 using Printf
+using Random
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
@@ -107,6 +108,12 @@ function main(system::String, Nlow::Int)
     A = load_matrix(system)
     N = size(A, 1)
 
+    Urand = rand(N,N) .- 0.5
+    qr_decomp = qr(Urand)
+    Urand = Matrix(qr_decomp.Q)
+    A = A*Urand # transform to random basis
+    A = Hermitian(A)  # Ensure A is Hermitian after transformation
+
     # initial guess (naiv)
     V = zeros(N, Nlow)
     for i = 1:Nlow
@@ -126,8 +133,8 @@ function main(system::String, Nlow::Int)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-systems = ["HFbasis", "RNDbasis1"] #"RNDbasis2", "RNDbasis3"
-N_lows = [60, 90, 120]  # Example values for Nlow
+systems = ["RNDbasis1"] #"HFbasis", "RNDbasis2", "RNDbasis3"
+N_lows = [60, 90, 120, 160, 200]  # Example values for Nlow
 
 for system in systems
     println("Running for system: $system")

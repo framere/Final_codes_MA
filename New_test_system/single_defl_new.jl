@@ -199,6 +199,12 @@ function main(system::String, l::Integer, factor::Integer)
     A = load_matrix(filename)
     N = size(A, 1)
 
+    Urand = rand(N,N) .- 0.5
+    qr_decomp = qr(Urand)
+    Urand = Matrix(qr_decomp.Q)
+    A = A*Urand # transform to random basis
+    A = Hermitian(A)  # Ensure A is Hermitian after transformation
+
     V = zeros(N, Nlow)
     for i = 1:Nlow
         V[i, i] = 1.0
@@ -219,8 +225,8 @@ function main(system::String, l::Integer, factor::Integer)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-systems = ["HFbasis","RNDbasis1", "RNDbasis2", "RNDbasis3"]
-ls = [60, 90, 120]
+systems = ["RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"
+N_lows = [60, 90, 120, 160, 200]
 for system in systems
     println("Running for system: $system")
     for (i, l) in enumerate(ls)

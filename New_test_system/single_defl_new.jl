@@ -1,5 +1,6 @@
 using LinearAlgebra
 using Printf
+using Random
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
@@ -226,7 +227,7 @@ function main(system::String, l::Integer, factor::Integer)
 end
 
 systems = ["RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"
-N_lows = [60, 90, 120, 160, 200]
+ls = [60, 90, 120, 160, 200]
 for system in systems
     println("Running for system: $system")
     for (i, l) in enumerate(ls)

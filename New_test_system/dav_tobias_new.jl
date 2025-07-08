@@ -108,8 +108,10 @@ function main(system::String, Nlow::Int)
     A = load_matrix(system)
     N = size(A, 1)
 
+
     Urand = rand(N,N) .- 0.5
-    qr_decomp = qr(Urand)
+    println("Randomizing the basis")
+    @time qr_decomp = qr(Urand)
     Urand = Matrix(qr_decomp.Q)
     A = A*Urand # transform to random basis
     A = Hermitian(A)  # Ensure A is Hermitian after transformation

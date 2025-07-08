@@ -226,7 +226,7 @@ function read_eigenresults(system::String)
     data = jldopen(output_file, "r")
     eigenvalues = data["values"]
     close(data)
-    return eigenvalues
+    return sort(eigenvalues; rev=true)
 end
 
 function main(system::String, l::Integer, factor::Integer)
@@ -264,12 +264,12 @@ function main(system::String, l::Integer, factor::Integer)
     # Perform exact diagonalization as reference
     println("\nPerforming full diagonalization for reference...")
     # Σexact,_ = read_eigenresults("../../MA_best/Eigenvalues_folder/eigen_results_$system.jld2")
-    Σexact, _ = read_eigenresults("../Eigenvalues_folder/eigen_results_$system.jld2")
+    Σexact = read_eigenresults("../Eigenvalues_folder/eigen_results_$system.jld2")
     
 
     # Display difference
     println("\nDifference between Davidson and exact eigenvalues:")
-    display("text/plain", (Σ - Σexact[1:l])')
+    display("text/plain", (Σ + Σexact[1:l])')
 end
 
 systems = ["RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"

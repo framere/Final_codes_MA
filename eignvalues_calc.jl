@@ -41,12 +41,12 @@ function read_eigenvalues(system::String)
     data = jldopen(output_file, "r")
     eigenvalues = data["values"]
     close(data)
-    return eigenvalues
+    return sort(eigenvalues; rev=true)
 end
 
 # Example usage
 for system in names
     eigenvalues = read_eigenvalues(system)
-    println("Eigenvalues for system $system: ", eigenvalues)
+    println("Eigenvalues for system $system: ", eigenvalues[1:10])
 end
 

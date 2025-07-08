@@ -220,13 +220,13 @@ function davidson(A::AbstractMatrix{T},
     return (Eigenvalues, Ritz_vecs)
 end
 
-function load_eigenresults(output_file="eigen_results.jld2")
-    # Load the data - only contains F.values
-    data = load(output_file)
-    # Extract eigenvalues (saved as F.values)
-    Σexact = data["F.values"]
-    # Return eigenvalues and empty array for compatibility
-    return Σexact, Matrix{eltype(Σexact)}(undef, 0, 0)
+function read_eigenvalues(system::String)
+    output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
+    println("Reading eigenvalues from $output_file")
+    data = jldopen(output_file, "r")
+    eigenvalues = data["values"]
+    close(data)
+    return eigenvalues
 end
 
 function main(system::String, l::Integer, factor::Integer)
@@ -235,7 +235,7 @@ function main(system::String, l::Integer, factor::Integer)
     
     # the two test systems He and hBN are hardcoded
     system = system
-    filename = "../Eigenvalues_folder/gamma_VASP_" * system * ".dat"
+    filename = "../formaldehyde/gamma_VASP_" * system * ".dat"
 
     Nlow = 25
     Naux = Nlow * 12 * factor
@@ -263,8 +263,8 @@ function main(system::String, l::Integer, factor::Integer)
 
     # Perform exact diagonalization as reference
     println("\nPerforming full diagonalization for reference...")
-    # Σexact, Uexact = load_eigenresults("../../MA_best/Eigenvalues_folder/eigen_results_$system.jld2")
-    Σexact, _ = load_eigenresults("../Eigenvalues_folder/eigen_results_$system.jld2")
+    # Σexact,_ = read_eigenresults("../../MA_best/Eigenvalues_folder/eigen_results_$system.jld2")
+    Σexact, _ = read_eigenresults("../Eigenvalues_folder/eigen_results_$system.jld2")
     
 
     # Display difference

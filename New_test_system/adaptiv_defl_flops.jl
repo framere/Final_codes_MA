@@ -251,7 +251,7 @@ function main(system::String, l::Integer, factor::Integer)
 
     # perform Davidson algorithm
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1e-2, 7e-2, system)
+    @time Σ, U = davidson(A, V, Naux, l, 1.3e-2, 7e-2, system)
 
     # Print total FLOP count at end
     println("\nTotal FLOP count: $NFLOPs")
@@ -272,8 +272,8 @@ function main(system::String, l::Integer, factor::Integer)
     display("text/plain", (Σ + Σexact[1:l])')
 end
 
-systems = ["RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"
-ls = [60, 90] #, 120, 160, 200
+systems = [ "RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"
+ls = [60, 90, 120, 160, 200]
 for system in systems
     println("Running for system: $system")
     for (i, l) in enumerate(ls)

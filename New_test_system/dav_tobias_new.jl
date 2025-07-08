@@ -103,7 +103,7 @@ function main(system::String, Nlow::Int)
     global NFLOPs
     NFLOPs = 0  # Reset FLOP counter
     
-    Naux = Nlow * 10
+    Naux = Nlow * 7
     A = load_matrix(system)
     N = size(A, 1)
 
@@ -126,13 +126,13 @@ function main(system::String, Nlow::Int)
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-systems = ["HFbasis", "RNDbasis1", "RNDbasis2", "RNDbasis3"]
+systems = ["HFbasis", "RNDbasis1"] #"RNDbasis2", "RNDbasis3"
 N_lows = [60, 90, 120]  # Example values for Nlow
 
 for system in systems
     println("Running for system: $system")
-    for (i, Nlow) in enumerate(N_lows)
-        println("Nlow = $Nlow, factor = $i")
+    for Nlow in N_lows
+        println("Nlow = $Nlow, factor = 1")
         main(system, Nlow)  # Replace F with loop index i
     end
 end

@@ -16,7 +16,7 @@ function load_matrix(system::String)
     return Hermitian(A)
 end
 
-names = ["HFbasis", "RNDbasis1", "RNDbasis2", "RNDbasis3"]
+names = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 
 function diagonalize_and_save(system::String)
     A = load_matrix(system)

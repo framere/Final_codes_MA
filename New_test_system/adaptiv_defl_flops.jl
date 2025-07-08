@@ -221,7 +221,7 @@ function davidson(A::AbstractMatrix{T},
 end
 
 function read_eigenresults(system::String)
-    output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
+    output_file = system
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["values"]

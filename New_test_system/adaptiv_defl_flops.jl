@@ -73,7 +73,7 @@ function davidson(A::AbstractMatrix{T},
     n_aux::Integer,
     l::Integer,
     thresh::Float64,
-    deg_thresh::Float64 = 1e-3,  # Threshold for considering eigenvalues degenerate
+    deg_thresh::Float64,  # Threshold for considering eigenvalues degenerate
     system::String = ""
 )::Tuple{Vector{T}, Matrix{T}} where T<:Number
 

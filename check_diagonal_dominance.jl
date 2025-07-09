@@ -1,6 +1,5 @@
 using LinearAlgebra
 using Printf
-using JLD2
 
 function load_matrix(filename::String)
     N = 27643
@@ -11,36 +10,47 @@ function load_matrix(filename::String)
     close(file)
 
     A = reshape(A, N, N)
-    # A = -A
     return Hermitian(A)
 end
 
-function check_diagonal_dominance(A::AbstractMatrix{T}) where T<:Number
+function analyze_diagonal_dominance(A::AbstractMatrix{T}, output_filename::String) where T<:Number
     N = size(A, 1)
+    
+    # Open output file
+    output_file = open(output_filename, "w")
     
     count_non_diago_dominant_rows = 0
     for i in 1:N
         diag_element = abs(A[i, i])
         off_diag_sum = sum(abs(A[i, j]) for j in 1:N if j != i)
 
+        # Write to file
+        @printf(output_file, "%.15e %.15e\n", diag_element, off_diag_sum)
+
         if diag_element <= off_diag_sum
             count_non_diago_dominant_rows += 1            
         end
     end
-
+    
+    close(output_file)
+    
     return count_non_diago_dominant_rows
 end
 
 function main(system::String)
     filename = "formaldehyde/gamma_VASP_" * system * ".dat"
+    output_filename = "diagonal_analysis_" * system * ".txt"
+    
     println("Loading matrix from: $filename")
     A = load_matrix(filename)
 
-    non_dominant_count = check_diagonal_dominance(A)
+    non_dominant_count = analyze_diagonal_dominance(A, output_filename)
     if non_dominant_count > 0
         println("Matrix is not diagonally dominant in $non_dominant_count rows.")
+        println("Results written to $output_filename")
     else
         println("Matrix is diagonally dominant in all rows.")
+        println("Results written to $output_filename")
     end
 end
 

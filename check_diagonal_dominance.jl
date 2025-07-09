@@ -32,7 +32,7 @@ function check_diagonal_dominance(A::AbstractMatrix{T}) where T<:Number
 end
 
 function main(system::String)
-    filename = "../formaldehyde/gamma_VASP_" * system * ".dat"
+    filename = "formaldehyde/gamma_VASP_" * system * ".dat"
     println("Loading matrix from: $filename")
     A = load_matrix(filename)
 

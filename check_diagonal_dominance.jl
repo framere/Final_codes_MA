@@ -60,24 +60,48 @@ end
 #     main(system)
 # end
 
-function define_stochastic_matrix(size::Int)
-    """Generates a random stochastic matrix of given size."""
-    matrix = rand(size, size)
-    matrix ./= sum(matrix, dims=2)  # Normalize rows to sum to 1
-    return matrix
-end 
-
+# ====================== stochastic matrix generated from the HF matrix ======================
 function main()
-    size = 2000  # Example size
-    A = define_stochastic_matrix(size)
-    output_filename = "stochastic_matrix.txt"
+    filename = "Stochstic_matrix/transformed_RND1.dat"
+    output_filename = "analysis_stochastic_RND.txt"
+
+    # Load the stochastic matrix
+    A = load_matrix(filename)
+
+    # Analyze diagonal dominance
     non_dominant_count = analyze_diagonal_dominance(A, output_filename)
+    
     if non_dominant_count > 0
         println("Stochastic matrix is not diagonally dominant in $non_dominant_count rows.")
     else
         println("Stochastic matrix is diagonally dominant in all rows.")
     end    
-    println("Stochastic matrix saved to $output_filename")
+    println("Results written to $output_filename")
 end
 
 main()
+
+
+
+# ====================== fully stochastic generated matrix ======================
+# function define_stochastic_matrix(size::Int)
+#     """Generates a random stochastic matrix of given size."""
+#     matrix = rand(size, size)
+#     matrix ./= sum(matrix, dims=2)  # Normalize rows to sum to 1
+#     return matrix
+# end 
+
+# function main()
+#     size = 2000  # Example size
+#     A = define_stochastic_matrix(size)
+#     output_filename = "stochastic_matrix.txt"
+#     non_dominant_count = analyze_diagonal_dominance(A, output_filename)
+#     if non_dominant_count > 0
+#         println("Stochastic matrix is not diagonally dominant in $non_dominant_count rows.")
+#     else
+#         println("Stochastic matrix is diagonally dominant in all rows.")
+#     end    
+#     println("Stochastic matrix saved to $output_filename")
+# end
+
+# main()

@@ -20,12 +20,14 @@ function transform_and_save_matrix(A::Hermitian{Float64, Matrix{Float64}}, out_f
     N = size(A, 1)
     
     println("Generating random orthogonal matrix...")
-    Urand = rand(N, N) .- 0.5
-    qr_decomp = qr(Urand)
+    @time Urand = rand(N, N) .- 0.5
+
+    println("Performing QR decomposition to obtain orthogonal matrix...")
+    @time qr_decomp = qr(Urand)
     U = Matrix(qr_decomp.Q)
 
     println("Transforming matrix into new basis...")
-    A_new = U' * (A * U)  # Equivalent to A' = Qᵀ * A * Q
+    @time A_new = U' * (A * U)  # Equivalent to A' = Qᵀ * A * Q
 
     println("Saving transformed matrix to ", out_filename)
     A_new_vec = vec(Matrix(A_new))  # Flatten to 1D

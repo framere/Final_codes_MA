@@ -37,25 +37,47 @@ function analyze_diagonal_dominance(A::AbstractMatrix{T}, output_filename::Strin
     return count_non_diago_dominant_rows
 end
 
-function main(system::String)
-    filename = "formaldehyde/gamma_VASP_" * system * ".dat"
-    output_filename = "diagonal_analysis_" * system * ".txt"
+# function main(system::String)
+#     filename = "formaldehyde/gamma_VASP_" * system * ".dat"
+#     output_filename = "diagonal_analysis_" * system * ".txt"
     
-    println("Loading matrix from: $filename")
-    A = load_matrix(filename)
+#     println("Loading matrix from: $filename")
+#     A = load_matrix(filename)
 
+#     non_dominant_count = analyze_diagonal_dominance(A, output_filename)
+#     if non_dominant_count > 0
+#         println("Matrix is not diagonally dominant in $non_dominant_count rows.")
+#         println("Results written to $output_filename")
+#     else
+#         println("Matrix is diagonally dominant in all rows.")
+#         println("Results written to $output_filename")
+#     end
+# end
+
+# systems = ["HFbasis", "RNDbasis1"] 
+
+# for system in systems
+#     main(system)
+# end
+
+function define_stochastic_matrix(size::Int)
+    """Generates a random stochastic matrix of given size."""
+    matrix = rand(size, size)
+    matrix ./= sum(matrix, dims=2)  # Normalize rows to sum to 1
+    return matrix
+end 
+
+function main()
+    size = 2000  # Example size
+    A = define_stochastic_matrix(size)
+    output_filename = "stochastic_matrix.txt"
     non_dominant_count = analyze_diagonal_dominance(A, output_filename)
     if non_dominant_count > 0
-        println("Matrix is not diagonally dominant in $non_dominant_count rows.")
-        println("Results written to $output_filename")
+        println("Stochastic matrix is not diagonally dominant in $non_dominant_count rows.")
     else
-        println("Matrix is diagonally dominant in all rows.")
-        println("Results written to $output_filename")
-    end
+        println("Stochastic matrix is diagonally dominant in all rows.")
+    end    
+    println("Stochastic matrix saved to $output_filename")
 end
 
-systems = ["HFbasis", "RNDbasis1"] 
-
-for system in systems
-    main(system)
-end
+main()

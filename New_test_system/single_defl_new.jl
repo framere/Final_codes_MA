@@ -7,43 +7,73 @@ global NFLOPs = 0
 
 include("../FLOP_count.jl")
 
-function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
-    ν = size(t_candidates, 2)
-    n_b = 0
-    T_hat = Matrix{eltype(t_candidates)}(undef, size(t_candidates, 1), ν)
-
-    for i in 1:ν
-        t_i = t_candidates[:, i]
+function select_corrections_ORTHO(
+    t::Matrix{T}, 
+    V::Matrix{T}, 
+    V_lock::Matrix{T}, 
+    η::Float64, 
+    droptol::Float64
+)::Tuple{Matrix{T}, Int} where T<:Number
+    
+    maxorth = 2
+    n_b_hat = 0
+    m = size(V, 2) + size(V_lock, 2)
+    t_hat = Matrix{T}(undef, size(t, 1), 0)
+    
+    for i in 1:size(t, 2)
+        t_i = t[:, i]
+        k = 0
         old_norm = norm(t_i)
         count_norm_flops(length(t_i))
-        k = 0
-
-        while k < maxorth
+        
+        # Orthogonalization loop
+        while true
             k += 1
-
-            # Count orthogonalization against V
-            count_orthogonalization_flops(1, size(V,2), size(V,1))
+            temp_norm = old_norm
+            
+            # Orthogonalize against V and V_lock
             for j in 1:size(V, 2)
-                t_i -= V[:, j] * (V[:, j]' * t_i)
+                v_j = V[:, j]
+                t_i -= v_j * (v_j' * t_i)
+                count_orthogonalization_flops(1, 1, length(t_i))
             end
-
+            
+            for j in 1:size(V_lock, 2)
+                v_j = V_lock[:, j]
+                t_i -= v_j * (v_j' * t_i)
+                count_orthogonalization_flops(1, 1, length(t_i))
+            end
+            
             new_norm = norm(t_i)
             count_norm_flops(length(t_i))
-            if new_norm > η * old_norm
+            
+            # Check termination conditions
+            if k == maxorth || new_norm > η * temp_norm
                 break
             end
             old_norm = new_norm
         end
-
-        if norm(t_i) > droptol
-            count_norm_flops(length(t_i))
-            n_b += 1
-            T_hat[:, n_b] = t_i / norm(t_i)
+        
+        # Check if the vector should be kept
+        current_norm = norm(t_i)
+        count_norm_flops(length(t_i))
+        
+        if current_norm > droptol
+            n_b_hat += 1
+            t_i_normalized = t_i / current_norm
             count_vec_scaling_flops(length(t_i))
+            
+            # Add to output
+            if n_b_hat == 1
+                t_hat = similar(t, size(t, 1), 1)
+                t_hat[:, 1] = t_i_normalized
+            else
+                t_hat = hcat(t_hat, t_i_normalized)
+            end
         end
     end
-
-    return T_hat[:, 1:n_b], n_b
+    
+    return (t_hat, n_b_hat)
 end
 
 function load_matrix(filename::String)

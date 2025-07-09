@@ -1,79 +1,50 @@
 using LinearAlgebra
 using Printf
 using Random
+using JLD2
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
 
 include("../FLOP_count.jl")
 
-function select_corrections_ORTHO(
-    t::Matrix{T}, 
-    V::Matrix{T}, 
-    V_lock::Matrix{T}, 
-    η::Float64, 
-    droptol::Float64
-)::Tuple{Matrix{T}, Int} where T<:Number
-    
-    maxorth = 2
-    n_b_hat = 0
-    m = size(V, 2) + size(V_lock, 2)
-    t_hat = Matrix{T}(undef, size(t, 1), 0)
-    
-    for i in 1:size(t, 2)
-        t_i = t[:, i]
-        k = 0
+function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
+    ν = size(t_candidates, 2)
+    n_b = 0
+    T_hat = Matrix{eltype(t_candidates)}(undef, size(t_candidates, 1), ν)
+
+    for i in 1:ν
+        t_i = t_candidates[:, i]
         old_norm = norm(t_i)
         count_norm_flops(length(t_i))
-        
-        # Orthogonalization loop
-        while true
+        k = 0
+
+        while k < maxorth
             k += 1
-            temp_norm = old_norm
-            
-            # Orthogonalize against V and V_lock
+
+            # Count orthogonalization against V
+            count_orthogonalization_flops(1, size(V,2), size(V,1))
             for j in 1:size(V, 2)
-                v_j = V[:, j]
-                t_i -= v_j * (v_j' * t_i)
-                count_orthogonalization_flops(1, 1, length(t_i))
+                t_i -= V[:, j] * (V[:, j]' * t_i)
             end
-            
-            for j in 1:size(V_lock, 2)
-                v_j = V_lock[:, j]
-                t_i -= v_j * (v_j' * t_i)
-                count_orthogonalization_flops(1, 1, length(t_i))
-            end
-            
+
             new_norm = norm(t_i)
             count_norm_flops(length(t_i))
-            
-            # Check termination conditions
-            if k == maxorth || new_norm > η * temp_norm
+            if new_norm > η * old_norm
                 break
             end
             old_norm = new_norm
         end
-        
-        # Check if the vector should be kept
-        current_norm = norm(t_i)
-        count_norm_flops(length(t_i))
-        
-        if current_norm > droptol
-            n_b_hat += 1
-            t_i_normalized = t_i / current_norm
+
+        if norm(t_i) > droptol
+            count_norm_flops(length(t_i))
+            n_b += 1
+            T_hat[:, n_b] = t_i / norm(t_i)
             count_vec_scaling_flops(length(t_i))
-            
-            # Add to output
-            if n_b_hat == 1
-                t_hat = similar(t, size(t, 1), 1)
-                t_hat[:, 1] = t_i_normalized
-            else
-                t_hat = hcat(t_hat, t_i_normalized)
-            end
         end
     end
-    
-    return (t_hat, n_b_hat)
+
+    return T_hat[:, 1:n_b], n_b
 end
 
 function load_matrix(filename::String)
@@ -218,6 +189,16 @@ function davidson(
     return (Eigenvalues, Ritz_vecs)
 end
 
+function read_eigenresults(system::String)
+    output_file = system
+    println("Reading eigenvalues from $output_file")
+    data = jldopen(output_file, "r")
+    eigenvalues = data["values"]
+    close(data)
+    return sort(eigenvalues; rev=true)
+end
+
+
 function main(system::String, l::Integer, factor::Integer)
     global NFLOPs
     NFLOPs = 0  # reset for each run
@@ -236,26 +217,31 @@ function main(system::String, l::Integer, factor::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1.3e-2, system, 3)
+    @time Σ, U = davidson(A, V, Naux, l, 1.5e-2, system, 3)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
 
-    # println("Full diagonalization")
-    # @time Σexact, Uexact = eigen(A)
-    # count_diag_flops(N)
-
-    # display("text/plain", (Σ - Σexact[1:l])')
     println("Total estimated FLOPs: $(NFLOPs)")
+
+    # Perform exact diagonalization as reference
+    println("\nPerforming full diagonalization for reference...")
+    # Σexact,_ = read_eigenresults("../../MA_best/Eigenvalues_folder/eigen_results_$system.jld2")
+    Σexact = read_eigenresults("../Eigenvalues_folder/eigen_results_$system.jld2")
+    
+
+    # Display difference
+    println("\nDifference between Davidson and exact eigenvalues:")
+    display("text/plain", (Σ + Σexact[1:l])')
 end
 
 systems = ["RNDbasis1"] # "HFbasis", , "RNDbasis2", "RNDbasis3"
-ls = [60, 90, 120, 160, 200]
+ls = [60, 90, 120, 160, 200, 340]
 for system in systems
     println("Running for system: $system")
     for (i, l) in enumerate(ls)
         println("Nlow = $l, factor = $i")
-        main(system, l, i)  # Replace F with loop index i
+        main(system, l, i+2)  # Replace F with loop index i
     end
 end

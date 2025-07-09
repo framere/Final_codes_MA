@@ -25,7 +25,7 @@ function transform_and_save_matrix(A::Hermitian{Float64, Matrix{Float64}}, out_f
     U = Matrix(qr_decomp.Q)
 
     println("Transforming matrix into new basis...")
-    A_new = U' * A * U  # Equivalent to A' = Qᵀ * A * Q
+    A_new = U' * (A * U)  # Equivalent to A' = Qᵀ * A * Q
 
     println("Saving transformed matrix to ", out_filename)
     A_new_vec = vec(Matrix(A_new))  # Flatten to 1D

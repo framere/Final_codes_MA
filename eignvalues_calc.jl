@@ -21,12 +21,17 @@ names = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 function diagonalize_and_save(system::String)
     A = load_matrix(system)
     println("Diagonalizing the matrix for system: $system")
-    @time F = eigen(A)
-    # true_EVs = -sqrt.(abs.(F.values))
-    output_file="Eigenvalues_folder/eigen_results_$system.jld2"
+    @time F = eigen(A)  # F.values, F.vectors
+
+    output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
     println("Saving results to $output_file")
-    jldsave(output_file; F.values)  # JLD2 format
-    println("Done!")
+
+    jldsave(output_file; 
+        eigenvalues = F.values, 
+        eigenvectors = F.vectors
+    )
+
+    println("Done saving eigenvalues and eigenvectors.")
 end
 
 
@@ -35,18 +40,22 @@ end
 # end
 
 # open the file and read the eigenvalues
-function read_eigenvalues(system::String)
+function read_eigen_data(system::String; with_vectors::Bool=false)
     output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
-    println("Reading eigenvalues from $output_file")
+    println("Reading eigen data from $output_file")
+
     data = jldopen(output_file, "r")
-    eigenvalues = data["values"]
+    eigenvalues = data["eigenvalues"]
+    eigenvectors = with_vectors ? data["eigenvectors"] : nothing
     close(data)
-    return sort(eigenvalues; rev=true)
+
+    return eigenvalues, eigenvectors
 end
+
 
 # Example usage
 for system in names
-    eigenvalues = read_eigenvalues(system)
-    println("Eigenvalues for system $system: ", eigenvalues[1:10])
+    eigenvalues, _ = read_eigen_data(system)
+    println("Top 10 eigenvalues for system $system: ", eigenvalues[1:10])
 end
 

@@ -48,7 +48,7 @@ function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=
 end
 
 function load_matrix(filename::String)
-    N = 27643
+    N = 11994
     println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)

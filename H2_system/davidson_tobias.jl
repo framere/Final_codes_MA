@@ -8,7 +8,7 @@ global NFLOPs = 0
 include("../FLOP_count.jl")
 
 function load_matrix(system::String)
-    N = 27643
+    N = 11994
 
     filename = "../H2_molecule/gamma_VASP_" * system * ".dat"
     println("read ", filename)

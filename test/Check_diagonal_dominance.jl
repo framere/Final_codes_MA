@@ -9,6 +9,7 @@ function read_eigenresults(system::String)
     eigenvalues = data["eigenvalues"]
     eigenvectors = data["eigenvectors"]
     close(data)
+    println("Eigenvalues and eigenvectors loaded from $output_file")
     return sort(eigenvalues; rev=true), eigenvectors
 end
 

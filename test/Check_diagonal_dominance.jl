@@ -3,7 +3,7 @@ using JLD2
 using Printf
 
 function read_eigenresults(system::String)
-    output_file = "../Eigenvalues_folder/eigen_results_$system.jld2"
+    output_file = "../Eigenvalues_folder/eigenres_H2_$system.jld2"
     println("Reading eigenvalues from $system")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]

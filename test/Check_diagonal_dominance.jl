@@ -1,7 +1,15 @@
 using LinearAlgebra
 using JLD2
 using Printf
-using ExponentialUtilities: logm
+
+
+function matrix_logm(U::AbstractMatrix)
+    F = eigen(U)
+    Λ = Diagonal(F.values)
+    V = F.vectors
+    logΛ = Diagonal(log.(F.values))  # natural log of eigenvalues
+    return V * logΛ * inv(V)
+end
 
 function read_eigenresults(system::String)
     output_file = "../Eigenvalues_folder/eigen_results_$system.jld2"
@@ -17,7 +25,7 @@ systems = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 
 function geodesic_distance(eigenvectors)
     # Calculate the geometric distance between two sets of eigenvalues
-    l = logm(eigenvectors)
+    l = matrix_logm(eigenvectors)
     return norm(l, 2)
 end
 

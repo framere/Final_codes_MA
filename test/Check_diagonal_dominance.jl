@@ -14,9 +14,9 @@ end
 
 systems = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 
-function geodesic_distance(U::AbstractMatrix{<:Complex})
+function geodesic_distance(U::AbstractMatrix{<:Number})
     # Compute the matrix logarithm of U (since U₁ is the identity matrix, U₁†U₂ = U)
-    L = log(U)
+    L = log(Matrix{ComplexF64}(U))
     
     # Compute the spectral norm (2-norm) of L
     d = opnorm(L)

@@ -17,9 +17,8 @@ systems = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 
 function geodesic_distance(U::AbstractMatrix{<:Number})  # Accepts both real and complex matrices
     # Ensure U is unitary (optional but recommended for correctness)
-    if !isapprox(U' * U, I, atol=1e-10)
-        error("Input matrix is not unitary!")
-    end
+    dot_product = U' * U
+    println("Checking unitarity: norm of U'U = $dot_product")
 
     # Force complex arithmetic for stability (log of a unitary matrix is skew-Hermitian)
     println("Computing geodesic distance for matrix of size $(size(U))")

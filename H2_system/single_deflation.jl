@@ -237,7 +237,7 @@ function main(system::String, l::Integer, factor::Integer)
 end
 
 systems = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"
-ls = [60, 90] # , 120, 160, 200, 340
+ls = [60, 90, 120] # , 120, 160, 200, 340
 for system in systems
     println("Running for system: $system")
     for (i, l) in enumerate(ls)

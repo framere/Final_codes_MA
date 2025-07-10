@@ -115,7 +115,7 @@ function main(system::String, Nlow::Int)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1.3e-2, system)
+    @time Σ, U = davidson(A, V, Naux, 1.5e-2, system)
 
     # println("Full diagonalization")
     # @time Σexact, Uexact = eigen(A)
@@ -128,7 +128,7 @@ function main(system::String, Nlow::Int)
 end
 
 systems = ["HFbasis", "RNDbasis1"] #"HFbasis", "RNDbasis2", "RNDbasis3"
-N_lows = [60, 90]  # Example values for Nlow
+N_lows = [60, 90, 120]  # Example values for Nlow
 
 for system in systems
     println("Running for system: $system")

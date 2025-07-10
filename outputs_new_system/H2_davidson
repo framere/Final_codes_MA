@@ -137,3 +137,434 @@ converged!
 1×90 adjoint(::Vector{Float64}) with eltype Float64:
  -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.24167  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.189592  -0.170664  -0.165793  -0.165723  -0.155895  -0.155733  -0.153052  -0.152422  -0.144059  -0.144055  -0.132737  -0.132458  -0.11377  -0.113395  -0.0995094  -0.0988872  -0.0973754  -0.0949131  -0.0906898  -0.0901092  -0.0895073  -0.0894398  -0.0787349  -0.0781753  -0.0727128  -0.070445  -0.0703952  -0.0661615  -0.0650344  -0.0650325  -0.0618513  -0.0615896  -0.0602622  -0.0602374  -0.0562096  -0.0561403  -0.0556685  -0.0553784  -0.0484559  -0.0483922  -0.0482112  -0.0448267  -0.0448092  -0.0418855  -0.0418112  -0.0401522  -0.0397695
 Total estimated FLOPs: 977611108140
+Running for system: HFbasis
+Nlow = 60, factor = 1
+read ../H2_molecule/gamma_VASP_HFbasis.dat
+Davidson
+iter=     1  Rnorm=  2.396e+01  size(V,2)=    60
+iter=     2  Rnorm=  7.753e+00  size(V,2)=   120
+iter=     3  Rnorm=  3.489e+00  size(V,2)=   180
+iter=     4  Rnorm=  1.403e+00  size(V,2)=   240
+iter=     5  Rnorm=  8.453e-01  size(V,2)=   300
+iter=     6  Rnorm=  5.659e-01  size(V,2)=   360
+iter=     7  Rnorm=  5.622e-01  size(V,2)=   420
+iter=     8  Rnorm=  2.358e-01  size(V,2)=   120
+iter=     9  Rnorm=  1.867e-01  size(V,2)=   180
+iter=    10  Rnorm=  1.602e-01  size(V,2)=   240
+iter=    11  Rnorm=  1.219e-01  size(V,2)=   300
+iter=    12  Rnorm=  1.295e-01  size(V,2)=   360
+iter=    13  Rnorm=  8.359e-02  size(V,2)=   420
+iter=    14  Rnorm=  4.648e-02  size(V,2)=   120
+iter=    15  Rnorm=  4.207e-02  size(V,2)=   180
+iter=    16  Rnorm=  3.749e-02  size(V,2)=   240
+iter=    17  Rnorm=  3.293e-02  size(V,2)=   300
+iter=    18  Rnorm=  4.001e-02  size(V,2)=   360
+iter=    19  Rnorm=  2.709e-02  size(V,2)=   420
+iter=    20  Rnorm=  2.293e-02  size(V,2)=   120
+iter=    21  Rnorm=  2.233e-02  size(V,2)=   180
+iter=    22  Rnorm=  2.168e-02  size(V,2)=   240
+iter=    23  Rnorm=  2.065e-02  size(V,2)=   300
+iter=    24  Rnorm=  1.784e-02  size(V,2)=   360
+iter=    25  Rnorm=  1.563e-02  size(V,2)=   420
+iter=    26  Rnorm=  1.500e-02  size(V,2)=   120
+converged!
+ 58.176608 seconds (24.81 k allocations: 3.400 GiB, 0.55% gc time, 0.01% compilation time)
+1×60 adjoint(::Vector{Float64}) with eltype Float64:
+ -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.24167  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.18959  -0.170663  -0.165793  -0.16572  -0.155894  -0.155733  -0.153051  -0.152421  -0.144059  -0.144055  -0.132723  -0.132449  -0.113015  -0.112606  -0.0991026  -0.0988373  -0.0971795
+Total estimated FLOPs: 2485150391160
+Nlow = 90, factor = 1
+read ../H2_molecule/gamma_VASP_HFbasis.dat
+Davidson
+iter=     1  Rnorm=  2.537e+01  size(V,2)=    90
+iter=     2  Rnorm=  5.844e+00  size(V,2)=   180
+iter=     3  Rnorm=  2.853e+00  size(V,2)=   270
+iter=     4  Rnorm=  1.001e+00  size(V,2)=   360
+iter=     5  Rnorm=  4.745e-01  size(V,2)=   450
+iter=     6  Rnorm=  2.915e-01  size(V,2)=   540
+iter=     7  Rnorm=  2.033e-01  size(V,2)=   630
+iter=     8  Rnorm=  1.507e-01  size(V,2)=   180
+iter=     9  Rnorm=  1.306e-01  size(V,2)=   270
+iter=    10  Rnorm=  1.121e-01  size(V,2)=   360
+iter=    11  Rnorm=  9.126e-02  size(V,2)=   450
+iter=    12  Rnorm=  7.198e-02  size(V,2)=   540
+iter=    13  Rnorm=  5.548e-02  size(V,2)=   630
+iter=    14  Rnorm=  4.696e-02  size(V,2)=   180
+iter=    15  Rnorm=  4.455e-02  size(V,2)=   270
+iter=    16  Rnorm=  4.245e-02  size(V,2)=   360
+iter=    17  Rnorm=  4.017e-02  size(V,2)=   450
+iter=    18  Rnorm=  3.785e-02  size(V,2)=   540
+iter=    19  Rnorm=  3.362e-02  size(V,2)=   630
+iter=    20  Rnorm=  3.182e-02  size(V,2)=   180
+iter=    21  Rnorm=  3.095e-02  size(V,2)=   270
+iter=    22  Rnorm=  3.020e-02  size(V,2)=   360
+iter=    23  Rnorm=  2.901e-02  size(V,2)=   450
+iter=    24  Rnorm=  2.741e-02  size(V,2)=   540
+iter=    25  Rnorm=  2.544e-02  size(V,2)=   630
+iter=    26  Rnorm=  2.498e-02  size(V,2)=   180
+iter=    27  Rnorm=  2.455e-02  size(V,2)=   270
+iter=    28  Rnorm=  2.413e-02  size(V,2)=   360
+iter=    29  Rnorm=  2.360e-02  size(V,2)=   450
+iter=    30  Rnorm=  2.271e-02  size(V,2)=   540
+iter=    31  Rnorm=  2.166e-02  size(V,2)=   630
+iter=    32  Rnorm=  2.145e-02  size(V,2)=   180
+iter=    33  Rnorm=  2.125e-02  size(V,2)=   270
+iter=    34  Rnorm=  2.099e-02  size(V,2)=   360
+iter=    35  Rnorm=  2.057e-02  size(V,2)=   450
+iter=    36  Rnorm=  2.000e-02  size(V,2)=   540
+iter=    37  Rnorm=  1.916e-02  size(V,2)=   630
+iter=    38  Rnorm=  1.904e-02  size(V,2)=   180
+iter=    39  Rnorm=  1.886e-02  size(V,2)=   270
+iter=    40  Rnorm=  1.864e-02  size(V,2)=   360
+iter=    41  Rnorm=  1.834e-02  size(V,2)=   450
+iter=    42  Rnorm=  1.791e-02  size(V,2)=   540
+iter=    43  Rnorm=  1.729e-02  size(V,2)=   630
+iter=    44  Rnorm=  1.719e-02  size(V,2)=   180
+iter=    45  Rnorm=  1.705e-02  size(V,2)=   270
+iter=    46  Rnorm=  1.686e-02  size(V,2)=   360
+iter=    47  Rnorm=  1.660e-02  size(V,2)=   450
+iter=    48  Rnorm=  1.623e-02  size(V,2)=   540
+iter=    49  Rnorm=  1.552e-02  size(V,2)=   630
+iter=    50  Rnorm=  1.544e-02  size(V,2)=   180
+iter=    51  Rnorm=  1.529e-02  size(V,2)=   270
+iter=    52  Rnorm=  1.509e-02  size(V,2)=   360
+iter=    53  Rnorm=  1.484e-02  size(V,2)=   450
+converged!
+186.562061 seconds (74.84 k allocations: 10.691 GiB, 0.59% gc time)
+1×90 adjoint(::Vector{Float64}) with eltype Float64:
+ -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.24167  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.189592  -0.170664  -0.165793  -0.165723  -0.155895  -0.155733  -0.153052  -0.152422  -0.144059  -0.144055  -0.132737  -0.132458  -0.113755  -0.11339  -0.0995025  -0.0988855  -0.0973705  -0.0949129  -0.0906775  -0.0901059  -0.0895066  -0.0894396  -0.0784645  -0.0780301  -0.0726673  -0.0704256  -0.0703702  -0.0660877  -0.0650304  -0.0650218  -0.0618169  -0.0615325  -0.0602494  -0.0602324  -0.0560368  -0.0560093  -0.0552159  -0.0546152  -0.0484021  -0.0482644  -0.0480942  -0.0448364  -0.044651  -0.0422989  -0.042252  -0.0407586  -0.040468
+Total estimated FLOPs: 7947256892220
+Nlow = 120, factor = 1
+read ../H2_molecule/gamma_VASP_HFbasis.dat
+Davidson
+iter=     1  Rnorm=  2.569e+01  size(V,2)=   120
+iter=     2  Rnorm=  5.094e+00  size(V,2)=   240
+iter=     3  Rnorm=  1.991e+00  size(V,2)=   360
+iter=     4  Rnorm=  7.984e-01  size(V,2)=   480
+iter=     5  Rnorm=  4.097e-01  size(V,2)=   600
+iter=     6  Rnorm=  2.789e-01  size(V,2)=   720
+iter=     7  Rnorm=  1.896e-01  size(V,2)=   840
+iter=     8  Rnorm=  1.502e-01  size(V,2)=   240
+iter=     9  Rnorm=  1.392e-01  size(V,2)=   360
+iter=    10  Rnorm=  1.273e-01  size(V,2)=   480
+iter=    11  Rnorm=  1.148e-01  size(V,2)=   600
+iter=    12  Rnorm=  9.956e-02  size(V,2)=   720
+iter=    13  Rnorm=  8.321e-02  size(V,2)=   840
+iter=    14  Rnorm=  7.480e-02  size(V,2)=   240
+iter=    15  Rnorm=  7.237e-02  size(V,2)=   360
+iter=    16  Rnorm=  6.966e-02  size(V,2)=   480
+iter=    17  Rnorm=  6.645e-02  size(V,2)=   600
+iter=    18  Rnorm=  6.228e-02  size(V,2)=   720
+iter=    19  Rnorm=  5.675e-02  size(V,2)=   840
+iter=    20  Rnorm=  5.404e-02  size(V,2)=   240
+iter=    21  Rnorm=  5.290e-02  size(V,2)=   360
+iter=    22  Rnorm=  5.153e-02  size(V,2)=   480
+iter=    23  Rnorm=  4.997e-02  size(V,2)=   600
+iter=    24  Rnorm=  4.790e-02  size(V,2)=   720
+iter=    25  Rnorm=  4.501e-02  size(V,2)=   840
+iter=    26  Rnorm=  4.409e-02  size(V,2)=   240
+iter=    27  Rnorm=  4.348e-02  size(V,2)=   360
+iter=    28  Rnorm=  4.279e-02  size(V,2)=   480
+iter=    29  Rnorm=  4.184e-02  size(V,2)=   600
+iter=    30  Rnorm=  4.072e-02  size(V,2)=   720
+iter=    31  Rnorm=  3.914e-02  size(V,2)=   840
+iter=    32  Rnorm=  3.877e-02  size(V,2)=   240
+iter=    33  Rnorm=  3.840e-02  size(V,2)=   360
+iter=    34  Rnorm=  3.796e-02  size(V,2)=   480
+iter=    35  Rnorm=  3.733e-02  size(V,2)=   600
+iter=    36  Rnorm=  3.664e-02  size(V,2)=   720
+iter=    37  Rnorm=  3.557e-02  size(V,2)=   840
+iter=    38  Rnorm=  3.531e-02  size(V,2)=   240
+iter=    39  Rnorm=  3.504e-02  size(V,2)=   360
+iter=    40  Rnorm=  3.471e-02  size(V,2)=   480
+iter=    41  Rnorm=  3.429e-02  size(V,2)=   600
+iter=    42  Rnorm=  3.370e-02  size(V,2)=   720
+iter=    43  Rnorm=  3.292e-02  size(V,2)=   840
+iter=    44  Rnorm=  3.275e-02  size(V,2)=   240
+iter=    45  Rnorm=  3.258e-02  size(V,2)=   360
+iter=    46  Rnorm=  3.233e-02  size(V,2)=   480
+iter=    47  Rnorm=  3.200e-02  size(V,2)=   600
+iter=    48  Rnorm=  3.148e-02  size(V,2)=   720
+iter=    49  Rnorm=  3.075e-02  size(V,2)=   840
+iter=    50  Rnorm=  3.059e-02  size(V,2)=   240
+iter=    51  Rnorm=  3.044e-02  size(V,2)=   360
+iter=    52  Rnorm=  3.022e-02  size(V,2)=   480
+iter=    53  Rnorm=  2.993e-02  size(V,2)=   600
+iter=    54  Rnorm=  2.955e-02  size(V,2)=   720
+iter=    55  Rnorm=  2.895e-02  size(V,2)=   840
+iter=    56  Rnorm=  2.881e-02  size(V,2)=   240
+iter=    57  Rnorm=  2.867e-02  size(V,2)=   360
+iter=    58  Rnorm=  2.847e-02  size(V,2)=   480
+iter=    59  Rnorm=  2.819e-02  size(V,2)=   600
+iter=    60  Rnorm=  2.785e-02  size(V,2)=   720
+iter=    61  Rnorm=  2.740e-02  size(V,2)=   840
+iter=    62  Rnorm=  2.731e-02  size(V,2)=   240
+iter=    63  Rnorm=  2.721e-02  size(V,2)=   360
+iter=    64  Rnorm=  2.703e-02  size(V,2)=   480
+iter=    65  Rnorm=  2.680e-02  size(V,2)=   600
+iter=    66  Rnorm=  2.650e-02  size(V,2)=   720
+iter=    67  Rnorm=  2.606e-02  size(V,2)=   840
+iter=    68  Rnorm=  2.596e-02  size(V,2)=   240
+iter=    69  Rnorm=  2.585e-02  size(V,2)=   360
+iter=    70  Rnorm=  2.572e-02  size(V,2)=   480
+iter=    71  Rnorm=  2.551e-02  size(V,2)=   600
+iter=    72  Rnorm=  2.524e-02  size(V,2)=   720
+iter=    73  Rnorm=  2.494e-02  size(V,2)=   840
+iter=    74  Rnorm=  2.487e-02  size(V,2)=   240
+iter=    75  Rnorm=  2.479e-02  size(V,2)=   360
+iter=    76  Rnorm=  2.468e-02  size(V,2)=   480
+iter=    77  Rnorm=  2.451e-02  size(V,2)=   600
+iter=    78  Rnorm=  2.431e-02  size(V,2)=   720
+iter=    79  Rnorm=  2.389e-02  size(V,2)=   840
+iter=    80  Rnorm=  2.379e-02  size(V,2)=   240
+iter=    81  Rnorm=  2.370e-02  size(V,2)=   360
+iter=    82  Rnorm=  2.358e-02  size(V,2)=   480
+iter=    83  Rnorm=  2.342e-02  size(V,2)=   600
+iter=    84  Rnorm=  2.316e-02  size(V,2)=   720
+iter=    85  Rnorm=  2.283e-02  size(V,2)=   840
+iter=    86  Rnorm=  2.278e-02  size(V,2)=   240
+iter=    87  Rnorm=  2.269e-02  size(V,2)=   360
+iter=    88  Rnorm=  2.257e-02  size(V,2)=   480
+iter=    89  Rnorm=  2.243e-02  size(V,2)=   600
+iter=    90  Rnorm=  2.221e-02  size(V,2)=   720
+iter=    91  Rnorm=  2.193e-02  size(V,2)=   840
+iter=    92  Rnorm=  2.188e-02  size(V,2)=   240
+iter=    93  Rnorm=  2.183e-02  size(V,2)=   360
+iter=    94  Rnorm=  2.172e-02  size(V,2)=   480
+iter=    95  Rnorm=  2.159e-02  size(V,2)=   600
+iter=    96  Rnorm=  2.140e-02  size(V,2)=   720
+iter=    97  Rnorm=  2.115e-02  size(V,2)=   840
+iter=    98  Rnorm=  2.110e-02  size(V,2)=   240
+iter=    99  Rnorm=  2.104e-02  size(V,2)=   360
+iter=   100  Rnorm=  2.096e-02  size(V,2)=   480
+iter=   101  Rnorm=  2.083e-02  size(V,2)=   600
+iter=   102  Rnorm=  2.068e-02  size(V,2)=   720
+iter=   103  Rnorm=  2.045e-02  size(V,2)=   840
+iter=   104  Rnorm=  2.042e-02  size(V,2)=   240
+iter=   105  Rnorm=  2.038e-02  size(V,2)=   360
+iter=   106  Rnorm=  2.030e-02  size(V,2)=   480
+iter=   107  Rnorm=  2.020e-02  size(V,2)=   600
+iter=   108  Rnorm=  2.003e-02  size(V,2)=   720
+iter=   109  Rnorm=  1.980e-02  size(V,2)=   840
+iter=   110  Rnorm=  1.976e-02  size(V,2)=   240
+iter=   111  Rnorm=  1.972e-02  size(V,2)=   360
+iter=   112  Rnorm=  1.965e-02  size(V,2)=   480
+iter=   113  Rnorm=  1.954e-02  size(V,2)=   600
+iter=   114  Rnorm=  1.939e-02  size(V,2)=   720
+iter=   115  Rnorm=  1.916e-02  size(V,2)=   840
+iter=   116  Rnorm=  1.913e-02  size(V,2)=   240
+iter=   117  Rnorm=  1.908e-02  size(V,2)=   360
+iter=   118  Rnorm=  1.901e-02  size(V,2)=   480
+iter=   119  Rnorm=  1.892e-02  size(V,2)=   600
+iter=   120  Rnorm=  1.875e-02  size(V,2)=   720
+iter=   121  Rnorm=  1.850e-02  size(V,2)=   840
+iter=   122  Rnorm=  1.847e-02  size(V,2)=   240
+iter=   123  Rnorm=  1.842e-02  size(V,2)=   360
+iter=   124  Rnorm=  1.834e-02  size(V,2)=   480
+iter=   125  Rnorm=  1.824e-02  size(V,2)=   600
+iter=   126  Rnorm=  1.811e-02  size(V,2)=   720
+iter=   127  Rnorm=  1.791e-02  size(V,2)=   840
+iter=   128  Rnorm=  1.789e-02  size(V,2)=   240
+iter=   129  Rnorm=  1.784e-02  size(V,2)=   360
+iter=   130  Rnorm=  1.778e-02  size(V,2)=   480
+iter=   131  Rnorm=  1.769e-02  size(V,2)=   600
+iter=   132  Rnorm=  1.756e-02  size(V,2)=   720
+iter=   133  Rnorm=  1.737e-02  size(V,2)=   840
+iter=   134  Rnorm=  1.734e-02  size(V,2)=   240
+iter=   135  Rnorm=  1.730e-02  size(V,2)=   360
+iter=   136  Rnorm=  1.725e-02  size(V,2)=   480
+iter=   137  Rnorm=  1.716e-02  size(V,2)=   600
+iter=   138  Rnorm=  1.702e-02  size(V,2)=   720
+iter=   139  Rnorm=  1.684e-02  size(V,2)=   840
+iter=   140  Rnorm=  1.681e-02  size(V,2)=   240
+iter=   141  Rnorm=  1.678e-02  size(V,2)=   360
+iter=   142  Rnorm=  1.673e-02  size(V,2)=   480
+iter=   143  Rnorm=  1.664e-02  size(V,2)=   600
+iter=   144  Rnorm=  1.654e-02  size(V,2)=   720
+iter=   145  Rnorm=  1.636e-02  size(V,2)=   840
+iter=   146  Rnorm=  1.634e-02  size(V,2)=   240
+iter=   147  Rnorm=  1.630e-02  size(V,2)=   360
+iter=   148  Rnorm=  1.625e-02  size(V,2)=   480
+iter=   149  Rnorm=  1.616e-02  size(V,2)=   600
+iter=   150  Rnorm=  1.606e-02  size(V,2)=   720
+iter=   151  Rnorm=  1.590e-02  size(V,2)=   840
+iter=   152  Rnorm=  1.587e-02  size(V,2)=   240
+iter=   153  Rnorm=  1.584e-02  size(V,2)=   360
+iter=   154  Rnorm=  1.579e-02  size(V,2)=   480
+iter=   155  Rnorm=  1.571e-02  size(V,2)=   600
+iter=   156  Rnorm=  1.561e-02  size(V,2)=   720
+iter=   157  Rnorm=  1.547e-02  size(V,2)=   840
+iter=   158  Rnorm=  1.546e-02  size(V,2)=   240
+iter=   159  Rnorm=  1.543e-02  size(V,2)=   360
+iter=   160  Rnorm=  1.538e-02  size(V,2)=   480
+iter=   161  Rnorm=  1.531e-02  size(V,2)=   600
+iter=   162  Rnorm=  1.521e-02  size(V,2)=   720
+iter=   163  Rnorm=  1.506e-02  size(V,2)=   840
+iter=   164  Rnorm=  1.503e-02  size(V,2)=   240
+iter=   165  Rnorm=  1.500e-02  size(V,2)=   360
+iter=   166  Rnorm=  1.496e-02  size(V,2)=   480
+converged!
+831.178272 seconds (311.58 k allocations: 45.895 GiB, 0.63% gc time)
+1×120 adjoint(::Vector{Float64}) with eltype Float64:
+ -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.24167  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.189592  -0.170664  -0.165793  -0.165723  -0.155895  -0.155733  -0.153052  -0.152422  -0.144059  -0.144055  -0.132737  -0.132458  -0.11377  -0.113395  -0.0995094  -0.0988872  -0.0973754  -0.0949131  -0.0906898  -0.0901093  -0.0895073  -0.0894398  -0.0787264  -0.078173  -0.0727134  -0.0704466  -0.070396  -0.0661627  -0.0650376  -0.0650364  -0.0618533  -0.0615961  -0.0602666  -0.0602474  -0.0562067  -0.0561453  -0.0556131  -0.0554219  -0.0486006  -0.0484753  -0.0483253  -0.0450577  -0.0450171  -0.0424401  -0.0424283  -0.0409292  -0.0405477  -0.037324  -0.0368321  -0.0342882  -0.0331872  -0.033152  -0.0315126  -0.0314559  -0.0314205  -0.0313586  -0.0287712  -0.0268621  -0.0268091  -0.0256516  -0.0256261  -0.0255416  -0.0254375  -0.0252725  -0.0242192  -0.0241618  -0.0228883  -0.0227914  -0.0225811  -0.0225187  -0.0212921  -0.0212664  -0.0203602  -0.0184628  -0.0180698  -0.0166212  -0.0164423
+Total estimated FLOPs: 34849822080240
+Running for system: RNDbasis1
+Nlow = 60, factor = 1
+read ../H2_molecule/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  Rnorm=  9.509e+00  size(V,2)=    60
+iter=     2  Rnorm=  5.674e+00  size(V,2)=   120
+iter=     3  Rnorm=  9.174e-01  size(V,2)=   180
+iter=     4  Rnorm=  1.363e-01  size(V,2)=   240
+iter=     5  Rnorm=  3.061e-02  size(V,2)=   300
+iter=     6  Rnorm=  5.606e-03  size(V,2)=   360
+converged!
+ 13.057077 seconds (5.02 k allocations: 676.373 MiB, 0.52% gc time)
+1×60 adjoint(::Vector{Float64}) with eltype Float64:
+ -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.241669  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.189592  -0.170662  -0.165792  -0.165722  -0.155891  -0.155732  -0.153047  -0.15242  -0.144053  -0.144044  -0.132729  -0.132441  -0.113733  -0.113379  -0.0994521  -0.098829  -0.0972815
+Total estimated FLOPs: 485552855160
+Nlow = 90, factor = 1
+read ../H2_molecule/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  Rnorm=  9.887e+00  size(V,2)=    90
+iter=     2  Rnorm=  5.681e+00  size(V,2)=   180
+iter=     3  Rnorm=  5.538e-01  size(V,2)=   270
+iter=     4  Rnorm=  1.186e-01  size(V,2)=   360
+iter=     5  Rnorm=  5.269e-02  size(V,2)=   450
+iter=     6  Rnorm=  2.473e-02  size(V,2)=   540
+iter=     7  Rnorm=  1.252e-02  size(V,2)=   630
+converged!
+ 24.436306 seconds (8.71 k allocations: 1.293 GiB, 0.74% gc time)
+1×90 adjoint(::Vector{Float64}) with eltype Float64:
+ -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.24167  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.189592  -0.170664  -0.165793  -0.165723  -0.155895  -0.155733  -0.153052  -0.152422  -0.144059  -0.144055  -0.132737  -0.132458  -0.11377  -0.113395  -0.0995094  -0.0988872  -0.0973754  -0.0949131  -0.0906898  -0.0901092  -0.0895073  -0.0894398  -0.0787349  -0.0781753  -0.0727128  -0.070445  -0.0703952  -0.0661615  -0.0650344  -0.0650325  -0.0618513  -0.0615896  -0.0602622  -0.0602374  -0.0562096  -0.0561403  -0.0556685  -0.0553784  -0.0484559  -0.0483922  -0.0482112  -0.0448267  -0.0448092  -0.0418855  -0.0418112  -0.0401522  -0.0397695
+Total estimated FLOPs: 977611108140
+Nlow = 120, factor = 1
+read ../H2_molecule/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  Rnorm=  1.022e+01  size(V,2)=   120
+iter=     2  Rnorm=  5.002e+00  size(V,2)=   240
+iter=     3  Rnorm=  3.988e-01  size(V,2)=   360
+iter=     4  Rnorm=  1.129e-01  size(V,2)=   480
+iter=     5  Rnorm=  7.243e-02  size(V,2)=   600
+iter=     6  Rnorm=  5.212e-02  size(V,2)=   720
+iter=     7  Rnorm=  4.024e-02  size(V,2)=   840
+iter=     8  Rnorm=  3.541e-02  size(V,2)=   240
+iter=     9  Rnorm=  3.350e-02  size(V,2)=   360
+iter=    10  Rnorm=  3.244e-02  size(V,2)=   480
+iter=    11  Rnorm=  3.133e-02  size(V,2)=   600
+iter=    12  Rnorm=  3.033e-02  size(V,2)=   720
+iter=    13  Rnorm=  2.903e-02  size(V,2)=   840
+iter=    14  Rnorm=  2.844e-02  size(V,2)=   240
+iter=    15  Rnorm=  2.806e-02  size(V,2)=   360
+iter=    16  Rnorm=  2.768e-02  size(V,2)=   480
+iter=    17  Rnorm=  2.731e-02  size(V,2)=   600
+iter=    18  Rnorm=  2.690e-02  size(V,2)=   720
+iter=    19  Rnorm=  2.650e-02  size(V,2)=   840
+iter=    20  Rnorm=  2.629e-02  size(V,2)=   240
+iter=    21  Rnorm=  2.608e-02  size(V,2)=   360
+iter=    22  Rnorm=  2.588e-02  size(V,2)=   480
+iter=    23  Rnorm=  2.565e-02  size(V,2)=   600
+iter=    24  Rnorm=  2.538e-02  size(V,2)=   720
+iter=    25  Rnorm=  2.497e-02  size(V,2)=   840
+iter=    26  Rnorm=  2.482e-02  size(V,2)=   240
+iter=    27  Rnorm=  2.466e-02  size(V,2)=   360
+iter=    28  Rnorm=  2.448e-02  size(V,2)=   480
+iter=    29  Rnorm=  2.428e-02  size(V,2)=   600
+iter=    30  Rnorm=  2.403e-02  size(V,2)=   720
+iter=    31  Rnorm=  2.378e-02  size(V,2)=   840
+iter=    32  Rnorm=  2.369e-02  size(V,2)=   240
+iter=    33  Rnorm=  2.355e-02  size(V,2)=   360
+iter=    34  Rnorm=  2.339e-02  size(V,2)=   480
+iter=    35  Rnorm=  2.323e-02  size(V,2)=   600
+iter=    36  Rnorm=  2.304e-02  size(V,2)=   720
+iter=    37  Rnorm=  2.285e-02  size(V,2)=   840
+iter=    38  Rnorm=  2.277e-02  size(V,2)=   240
+iter=    39  Rnorm=  2.265e-02  size(V,2)=   360
+iter=    40  Rnorm=  2.252e-02  size(V,2)=   480
+iter=    41  Rnorm=  2.238e-02  size(V,2)=   600
+iter=    42  Rnorm=  2.223e-02  size(V,2)=   720
+iter=    43  Rnorm=  2.204e-02  size(V,2)=   840
+iter=    44  Rnorm=  2.196e-02  size(V,2)=   240
+iter=    45  Rnorm=  2.185e-02  size(V,2)=   360
+iter=    46  Rnorm=  2.172e-02  size(V,2)=   480
+iter=    47  Rnorm=  2.159e-02  size(V,2)=   600
+iter=    48  Rnorm=  2.144e-02  size(V,2)=   720
+iter=    49  Rnorm=  2.128e-02  size(V,2)=   840
+iter=    50  Rnorm=  2.121e-02  size(V,2)=   240
+iter=    51  Rnorm=  2.110e-02  size(V,2)=   360
+iter=    52  Rnorm=  2.099e-02  size(V,2)=   480
+iter=    53  Rnorm=  2.086e-02  size(V,2)=   600
+iter=    54  Rnorm=  2.071e-02  size(V,2)=   720
+iter=    55  Rnorm=  2.053e-02  size(V,2)=   840
+iter=    56  Rnorm=  2.047e-02  size(V,2)=   240
+iter=    57  Rnorm=  2.037e-02  size(V,2)=   360
+iter=    58  Rnorm=  2.027e-02  size(V,2)=   480
+iter=    59  Rnorm=  2.016e-02  size(V,2)=   600
+iter=    60  Rnorm=  2.003e-02  size(V,2)=   720
+iter=    61  Rnorm=  1.988e-02  size(V,2)=   840
+iter=    62  Rnorm=  1.982e-02  size(V,2)=   240
+iter=    63  Rnorm=  1.973e-02  size(V,2)=   360
+iter=    64  Rnorm=  1.963e-02  size(V,2)=   480
+iter=    65  Rnorm=  1.952e-02  size(V,2)=   600
+iter=    66  Rnorm=  1.939e-02  size(V,2)=   720
+iter=    67  Rnorm=  1.922e-02  size(V,2)=   840
+iter=    68  Rnorm=  1.917e-02  size(V,2)=   240
+iter=    69  Rnorm=  1.909e-02  size(V,2)=   360
+iter=    70  Rnorm=  1.901e-02  size(V,2)=   480
+iter=    71  Rnorm=  1.889e-02  size(V,2)=   600
+iter=    72  Rnorm=  1.878e-02  size(V,2)=   720
+iter=    73  Rnorm=  1.864e-02  size(V,2)=   840
+iter=    74  Rnorm=  1.860e-02  size(V,2)=   240
+iter=    75  Rnorm=  1.852e-02  size(V,2)=   360
+iter=    76  Rnorm=  1.844e-02  size(V,2)=   480
+iter=    77  Rnorm=  1.834e-02  size(V,2)=   600
+iter=    78  Rnorm=  1.822e-02  size(V,2)=   720
+iter=    79  Rnorm=  1.811e-02  size(V,2)=   840
+iter=    80  Rnorm=  1.807e-02  size(V,2)=   240
+iter=    81  Rnorm=  1.800e-02  size(V,2)=   360
+iter=    82  Rnorm=  1.793e-02  size(V,2)=   480
+iter=    83  Rnorm=  1.784e-02  size(V,2)=   600
+iter=    84  Rnorm=  1.774e-02  size(V,2)=   720
+iter=    85  Rnorm=  1.762e-02  size(V,2)=   840
+iter=    86  Rnorm=  1.758e-02  size(V,2)=   240
+iter=    87  Rnorm=  1.751e-02  size(V,2)=   360
+iter=    88  Rnorm=  1.743e-02  size(V,2)=   480
+iter=    89  Rnorm=  1.734e-02  size(V,2)=   600
+iter=    90  Rnorm=  1.724e-02  size(V,2)=   720
+iter=    91  Rnorm=  1.713e-02  size(V,2)=   840
+iter=    92  Rnorm=  1.709e-02  size(V,2)=   240
+iter=    93  Rnorm=  1.702e-02  size(V,2)=   360
+iter=    94  Rnorm=  1.695e-02  size(V,2)=   480
+iter=    95  Rnorm=  1.686e-02  size(V,2)=   600
+iter=    96  Rnorm=  1.678e-02  size(V,2)=   720
+iter=    97  Rnorm=  1.667e-02  size(V,2)=   840
+iter=    98  Rnorm=  1.663e-02  size(V,2)=   240
+iter=    99  Rnorm=  1.657e-02  size(V,2)=   360
+iter=   100  Rnorm=  1.650e-02  size(V,2)=   480
+iter=   101  Rnorm=  1.642e-02  size(V,2)=   600
+iter=   102  Rnorm=  1.633e-02  size(V,2)=   720
+iter=   103  Rnorm=  1.623e-02  size(V,2)=   840
+iter=   104  Rnorm=  1.619e-02  size(V,2)=   240
+iter=   105  Rnorm=  1.613e-02  size(V,2)=   360
+iter=   106  Rnorm=  1.607e-02  size(V,2)=   480
+iter=   107  Rnorm=  1.600e-02  size(V,2)=   600
+iter=   108  Rnorm=  1.591e-02  size(V,2)=   720
+iter=   109  Rnorm=  1.582e-02  size(V,2)=   840
+iter=   110  Rnorm=  1.579e-02  size(V,2)=   240
+iter=   111  Rnorm=  1.573e-02  size(V,2)=   360
+iter=   112  Rnorm=  1.567e-02  size(V,2)=   480
+iter=   113  Rnorm=  1.560e-02  size(V,2)=   600
+iter=   114  Rnorm=  1.552e-02  size(V,2)=   720
+iter=   115  Rnorm=  1.543e-02  size(V,2)=   840
+iter=   116  Rnorm=  1.539e-02  size(V,2)=   240
+iter=   117  Rnorm=  1.534e-02  size(V,2)=   360
+iter=   118  Rnorm=  1.527e-02  size(V,2)=   480
+iter=   119  Rnorm=  1.520e-02  size(V,2)=   600
+iter=   120  Rnorm=  1.513e-02  size(V,2)=   720
+iter=   121  Rnorm=  1.505e-02  size(V,2)=   840
+iter=   122  Rnorm=  1.502e-02  size(V,2)=   240
+iter=   123  Rnorm=  1.497e-02  size(V,2)=   360
+converged!
+654.237196 seconds (230.41 k allocations: 33.921 GiB, 0.67% gc time)
+1×120 adjoint(::Vector{Float64}) with eltype Float64:
+ -41.7736  -28.6339  -13.4635  -13.4575  -5.48674  -3.73664  -3.73657  -3.21471  -2.91719  -2.34366  -2.34213  -1.83138  -1.83023  -1.34639  -1.18218  -1.18202  -1.07579  -0.951971  -0.951587  -0.748487  -0.748068  -0.661102  -0.660808  -0.577551  -0.497686  -0.49659  -0.482839  -0.445973  -0.432635  -0.432371  -0.379154  -0.378892  -0.353751  -0.353418  -0.307717  -0.307604  -0.273933  -0.24167  -0.241498  -0.231922  -0.231424  -0.216248  -0.215912  -0.189592  -0.170664  -0.165793  -0.165723  -0.155895  -0.155733  -0.153052  -0.152422  -0.144059  -0.144055  -0.132737  -0.132458  -0.11377  -0.113395  -0.0995094  -0.0988872  -0.0973754  -0.0949131  -0.0906898  -0.0901093  -0.0895073  -0.0894398  -0.0787353  -0.0781755  -0.0727134  -0.0704466  -0.070396  -0.0661627  -0.0650376  -0.0650364  -0.0618538  -0.0615963  -0.0602666  -0.0602474  -0.0562236  -0.0561607  -0.0556894  -0.0554482  -0.0486028  -0.0484759  -0.0483264  -0.0451131  -0.0450909  -0.0424435  -0.0424313  -0.0409328  -0.0405496  -0.0373661  -0.0373598  -0.0344059  -0.0331971  -0.0331622  -0.0315984  -0.0315207  -0.0314986  -0.0313639  -0.0285198  -0.0266832  -0.0265404  -0.0257416  -0.0256291  -0.025576  -0.0252953  -0.0252533  -0.024132  -0.0240408  -0.0226529  -0.0225775  -0.0224842  -0.0222792  -0.0216497  -0.0215268  -0.0204428  -0.0203793  -0.0182925  -0.0180661  -0.017259
+Total estimated FLOPs: 25759887215760

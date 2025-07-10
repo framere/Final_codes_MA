@@ -2,15 +2,6 @@ using LinearAlgebra
 using JLD2
 using Printf
 
-
-function matrix_logm(U::AbstractMatrix)
-    F = eigen(U)
-    Λ = Diagonal(F.values)
-    V = F.vectors
-    logΛ = Diagonal(log.(F.values))  # natural log of eigenvalues
-    return V * logΛ * inv(V)
-end
-
 function read_eigenresults(system::String)
     output_file = "../Eigenvalues_folder/eigen_results_$system.jld2"
     println("Reading eigenvalues from $system")
@@ -23,10 +14,13 @@ end
 
 systems = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 
-function geodesic_distance(eigenvectors)
-    # Calculate the geometric distance between two sets of eigenvalues
-    l = matrix_logm(eigenvectors)
-    return norm(l, 2)
+function geodesic_distance(U::AbstractMatrix{<:Complex})
+    # Compute the matrix logarithm of U (since U₁ is the identity matrix, U₁†U₂ = U)
+    L = log(U)
+    
+    # Compute the spectral norm (2-norm) of L
+    d = opnorm(L)
+    return d
 end
 
 for system in systems

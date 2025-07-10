@@ -14,18 +14,23 @@ end
 
 systems = ["HFbasis", "RNDbasis1"] # , "RNDbasis2", "RNDbasis3"]
 
-function geodesic_distance(U::AbstractMatrix{<:Number})
-    # Compute the matrix logarithm of U (since U₁ is the identity matrix, U₁†U₂ = U)
-    L = log(Matrix{ComplexF64}(U))
+function geodesic_distance(U::AbstractMatrix{<:Number})  # Accepts both real and complex matrices
+    # Ensure U is unitary (optional but recommended for correctness)
+    if !isapprox(U' * U, I, atol=1e-10)
+        error("Input matrix is not unitary!")
+    end
+
+    # Force complex arithmetic for stability (log of a unitary matrix is skew-Hermitian)
+    println("Computing geodesic distance for matrix of size $(size(U))")
+    L = log(Matrix{ComplexF64}(U))  # Ensures Complex output even for real U
     
-    # Compute the spectral norm (2-norm) of L
+    println("Matrix logarithm computed, size of L: $(size(L))")
     d = opnorm(L)
     return d
 end
 
 for system in systems
     eigenvalues, eigenvectors = read_eigenresults(system)
-    println("Top 10 eigenvalues for system $system: ", eigenvalues[1:10])
     println("Geodesic distance for system $system: ", geodesic_distance(eigenvectors))  # Should be 0 for the same system
 end
 

@@ -32,6 +32,7 @@ end
 
 for system in systems
     eigenvalues, eigenvectors = read_eigenresults(system)
-    println("Geodesic distance for system $system: ", geodesic_distance(eigenvectors))  # Should be 0 for the same system
+    distance = geodesic_distance(eigenvectors)
+    println("Geodesic distance for system $system: ", distance)  # Should be 0 for the same system
 end
 

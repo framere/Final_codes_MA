@@ -1,0 +1,3 @@
+Reading eigenvalues from HFbasis
+Eigenvalues and eigenvectors loaded from ../Eigenvalues_folder/eigenres_formaldehyde_HFbasis.jld2
+Computing geodesic distance for matrix of size (27643, 27643)

@@ -1,0 +1,10 @@
+Reading eigenvalues from HFbasis
+Eigenvalues and eigenvectors loaded from ../Eigenvalues_folder/eigenres_H2_HFbasis.jld2
+Computing geodesic distance for matrix of size (11994, 11994)
+Matrix logarithm computed, size of L: (11994, 11994)
+Geodesic distance for system HFbasis: 198.645133
+Reading eigenvalues from RNDbasis1
+Eigenvalues and eigenvectors loaded from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+Computing geodesic distance for matrix of size (11994, 11994)
+Matrix logarithm computed, size of L: (11994, 11994)
+Geodesic distance for system RNDbasis1: 198.638948

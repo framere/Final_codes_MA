@@ -3,7 +3,7 @@ using JLD2
 using Printf
 
 function load_matrix(filename::String)
-    N = 11994
+    N = 27643 #N = 11994
     println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
@@ -27,7 +27,7 @@ end
 systems = ["HFbasis", "RNDbasis1"] #, "RNDbasis1" , "RNDbasis2", "RNDbasis3"]
 
 function main(system::String)
-    filename = "../H2_molecule/gamma_VASP_" * system * ".dat"
+    filename = "../formaldehyde/gamma_VASP_" * system * ".dat"
     println("Reading eigenvalues from $system")
     A = load_matrix(filename)
 

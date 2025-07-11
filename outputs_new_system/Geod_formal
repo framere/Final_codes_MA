@@ -1,0 +1,4 @@
+Reading eigenvalues from HFbasis
+Eigenvalues and eigenvectors loaded from ../Eigenvalues_folder/eigenres_formaldehyde_HFbasis.jld2
+Checking unitarity: norm of U'U = 3.7969337916832213e-10
+Computing geodesic distance for matrix of size (27643, 27643)

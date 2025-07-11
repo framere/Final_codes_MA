@@ -220,9 +220,9 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer)
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
-
     A = load_matrix(filename,molecule)
     N = size(A, 1)
+
     
     V = zeros(N, Nlow)
     for i = 1:Nlow

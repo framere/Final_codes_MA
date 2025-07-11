@@ -124,10 +124,16 @@ function main(system::String, l::Integer, alpha::Integer)
     global NFLOPs
     NFLOPs = 0  # Reset FLOP counter
     
-    Nlow = l
-    Naux = Nlow * alpha
     A = load_matrix(system)
     N = size(A, 1)
+
+    Nlow = l
+    Naux = Nlow * alpha
+
+    if Naux > 0.15 * N
+        println("Skipping: Naux ($Naux) is larger than 15% of the matrix size ($N).")
+        return
+    end
 
     # initial guess (naiv)
     V = zeros(N, Nlow)

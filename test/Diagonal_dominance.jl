@@ -18,7 +18,7 @@ end
 function off_diagonal_fronenius(A::Hermitian{T}) where T
     D = diag(A)
     diagonal_matrix = Diagonal(D) |> Matrix
-
+    diagonal_matrix = Hermitian(diagonal_matrix)  # Ensure it's Hermitian
     off_diagonal_matrix = A - diagonal_matrix
     offdiagonal_norm = norm(off_diagonal_matrix, 2)  # Use 2-norm for Frobenius norm
     return offdiagonal_norm

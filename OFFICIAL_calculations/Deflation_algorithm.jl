@@ -240,11 +240,11 @@ function main(molecule::String, l::Integer, beta::Integer)
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact,_ = read_eigenresults(molecule)
+    Σexact = read_eigenresults(molecule)
 
     # Display difference
     println("\nDifference between Davidson and exact eigenvalues:")
-    display("text/plain", (Σ + Σexact[1:l])')
+    display("text/plain", (Σ - Σexact[1:l])')
 end
 
 

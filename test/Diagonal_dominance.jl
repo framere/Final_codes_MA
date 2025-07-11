@@ -3,7 +3,7 @@ using JLD2
 using Printf
 
 function load_matrix(filename::String, molecule::String)
-    if molecule == "H2"
+    if molecule == "H2_molecule"
         N = 11994
     else
         N = 27643
@@ -26,12 +26,12 @@ function off_diagonal_fronenius(A::Hermitian{T}) where T
     diagonal_matrix = Hermitian(diagonal_matrix)  # Ensure it's Hermitian
     off_diagonal_matrix = A - diagonal_matrix
     println("Calculating off-diagonal norm")
-    @time offdiagonal_norm = norm(off_diagonal_matrix, Frobenius())  # Corrected: use Frobenius norm
+    @time offdiagonal_norm = norm(off_diagonal_matrix,2)  # Corrected: use Frobenius norm
     return offdiagonal_norm
 end
 
 systems = ["HFbasis", "RNDbasis1"] #, "RNDbasis1" , "RNDbasis2", "RNDbasis3"]
-molecules = ["H2", "formaldehyde"]
+molecules = ["H2_molecule", "formaldehyde"]
 
 function main(molecule::String, system::String)
     filename = "../" *molecule* "/gamma_VASP_" * system * ".dat"

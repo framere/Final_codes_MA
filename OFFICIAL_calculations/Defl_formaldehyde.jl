@@ -212,7 +212,7 @@ function davidson(
 end
 
 
-function main(molecule::String, l::Integer, beta::Integer)
+function main(molecule::String, l::Integer, beta::Integer, factor::Float64)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
@@ -230,7 +230,7 @@ function main(molecule::String, l::Integer, beta::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1.5e-2)
+    @time Σ, U = davidson(A, V, Naux, l, 1.5e-2 + 0.5e-2 * factor)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -257,9 +257,9 @@ for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas
         println("Running with beta = $beta")
-        for l in ls
+        for (i, l) in enumerate(ls)
             println("Running with l = $l")
-            main(molecule, l*occupied_orbitals(molecule), beta)
+            main(molecule, l*occupied_orbitals(molecule), beta, i)
         end
     end
     println("Finished processing molecule: $molecule")

@@ -3,7 +3,11 @@ using JLD2
 using Printf
 
 function load_matrix(filename::String)
-    N = 27643 #N = 11994
+    if molecule == "H2"
+        N = 11994
+    else
+        N = 27643
+    end
     println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
@@ -17,26 +21,33 @@ end
 
 function off_diagonal_fronenius(A::Hermitian{T}) where T
     D = diag(A)
-    diagonal_matrix = Diagonal(D) |> Matrix
+    println("Calculating diagonal elements")
+    @time diagonal_matrix = Diagonal(D) |> Matrix
     diagonal_matrix = Hermitian(diagonal_matrix)  # Ensure it's Hermitian
     off_diagonal_matrix = A - diagonal_matrix
-    offdiagonal_norm = norm(off_diagonal_matrix, 2)  # Use 2-norm for Frobenius norm
+    println("Calculating off-diagonal norm")
+    @time offdiagonal_norm = norm(off_diagonal_matrix, 2)  # Use 2-norm for Frobenius norm
     return offdiagonal_norm
 end
 
 systems = ["HFbasis", "RNDbasis1"] #, "RNDbasis1" , "RNDbasis2", "RNDbasis3"]
+molecules = ["H2", "formaldehyde"]
 
-function main(system::String)
-    filename = "../formaldehyde/gamma_VASP_" * system * ".dat"
+function main(molecule::String, system::String)
+    filename = "../" *molecule* "/gamma_VASP_" * system * ".dat"
     println("Reading eigenvalues from $system")
     A = load_matrix(filename)
-
+    println("Matrix loaded from $filename, size: $(size(A))")
     # Calculate off-diagonal Frobenius norm
     off_diag_norm = off_diagonal_fronenius(A)
     @printf("Off-diagonal Frobenius norm for system %s: %.6f\n", system, off_diag_norm)
     
 end
 
-for system in systems
-    main(system)
+for molecule in molecules
+    println("Processing molecule: $molecule")
+    for system in systems
+        main(molecule, system)
+    end
 end
+

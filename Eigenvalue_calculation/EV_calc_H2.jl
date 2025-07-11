@@ -34,27 +34,27 @@ function diagonalize_and_save(system::String)
 end
 
 
-for system in names
-    diagonalize_and_save(system)
-end
+# for system in names
+#     diagonalize_and_save(system)
+# end
 
 # open the file and read the eigenvalues
-# function read_eigen_data(system::String; with_vectors::Bool=false)
-#     output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
-#     println("Reading eigen data from $output_file")
+function read_eigen_data(system::String; with_vectors::Bool=false)
+    output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
+    println("Reading eigen data from $output_file")
 
-#     data = jldopen(output_file, "r")
-#     eigenvalues = data["eigenvalues"]
-#     eigenvectors = with_vectors ? data["eigenvectors"] : nothing
-#     close(data)
+    data = jldopen(output_file, "r")
+    eigenvalues = data["eigenvalues"]
+    eigenvectors = with_vectors ? data["eigenvectors"] : nothing
+    close(data)
 
-#     return eigenvalues, eigenvectors
-# end
+    return eigenvalues, eigenvectors
+end
 
 
-# # Example usage
-# for system in names
-#     eigenvalues, _ = read_eigen_data(system)
-#     println("Top 10 eigenvalues for system $system: ", eigenvalues[1:10])
-# end
+# Example usage
+for system in names
+    eigenvalues, _ = read_eigen_data(system)
+    println("Top 10 eigenvalues for system $system: ", eigenvalues[1:10])
+end
 

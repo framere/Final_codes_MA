@@ -80,7 +80,7 @@ function read_eigenresults(molecule::String)
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
     close(data)
-    return sort(eigenvalues; rev=true)
+    return sort(eigenvalues)
 end
 
 function davidson(
@@ -235,13 +235,13 @@ function main(molecule::String, l::Integer, beta::Integer)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
-    println("Eigenvalues: ", Σ[1:l])
+    # println("Eigenvalues: ", Σ[1:l])
     println("Total estimated FLOPs: $(NFLOPs)")
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
     Σexact = read_eigenresults(molecule)
-    println("Exact Eigenvalues: ", Σexact[1:l])
+    # println("Exact Eigenvalues: ", Σexact[1:l])
 
     # Display difference
     println("\nDifference between Davidson and exact eigenvalues:")

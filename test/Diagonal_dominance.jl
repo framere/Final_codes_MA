@@ -2,7 +2,7 @@ using LinearAlgebra
 using JLD2
 using Printf
 
-function load_matrix(filename::String)
+function load_matrix(filename::String, molecule::String)
     if molecule == "H2"
         N = 11994
     else
@@ -36,7 +36,7 @@ molecules = ["H2", "formaldehyde"]
 function main(molecule::String, system::String)
     filename = "../" *molecule* "/gamma_VASP_" * system * ".dat"
     println("Reading eigenvalues from $system")
-    A = load_matrix(filename)
+    A = load_matrix(filename, molecule)
     println("Matrix loaded from $filename, size: $(size(A))")
     # Calculate off-diagonal Frobenius norm
     off_diag_norm = off_diagonal_fronenius(A)

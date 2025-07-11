@@ -22,7 +22,7 @@ function geodesic_distance(U::AbstractMatrix{<:Number})
 
     # Compute matrix logarithm (will be complex if needed automatically)
     println("Computing geodesic distance for matrix of size $(size(U))")
-    L = log(U)
+    L = log(Matrix{ComplexF64}(U))
     
     println("Matrix logarithm computed, size of L: $(size(L))")
     d = norm(L, 2)  # Equivalent to opnorm(L)

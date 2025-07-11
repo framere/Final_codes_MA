@@ -251,7 +251,7 @@ end
 
 
 betas = [8,16,32,64]
-molecules = ["H2", "formaldehyde"]
+molecules = ["H2"]
 ls = [10, 50, 100, 200]
 for molecule in molecules
     println("Processing molecule: $molecule")

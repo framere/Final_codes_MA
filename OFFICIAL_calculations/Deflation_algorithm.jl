@@ -235,7 +235,7 @@ function main(molecule::String, l::Integer, beta::Integer)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
-
+    println("Eigenvalues: ", Σ[1:l])
     println("Total estimated FLOPs: $(NFLOPs)")
 
     # Perform exact diagonalization as reference

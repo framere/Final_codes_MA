@@ -40,7 +40,7 @@ end
 
 # open the file and read the eigenvalues
 function read_eigen_data(system::String; with_vectors::Bool=false)
-    output_file = "Eigenvalues_folder/eigen_results_$system.jld2"
+    output_file = "../Eigenvalues_folder/eigenres_H2_$system.jld2"
     println("Reading eigen data from $output_file")
 
     data = jldopen(output_file, "r")

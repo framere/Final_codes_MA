@@ -75,7 +75,7 @@ function load_matrix(filename::String, molecule::String)
 end
 
 function read_eigenresults(molecule::String)
-    output_file = "../Eigenvalues_folder/eigenres_" * molecule * "RNDbasis1.jld2 "
+    output_file = "../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2 "
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -240,7 +240,7 @@ function main(molecule::String, l::Integer, beta::Integer)
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact,_ = read_eigenresults("../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2")
+    Σexact,_ = read_eigenresults(molecule)
 
     # Display difference
     println("\nDifference between Davidson and exact eigenvalues:")

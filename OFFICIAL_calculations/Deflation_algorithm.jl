@@ -2,6 +2,50 @@ using LinearAlgebra
 using JLD2
 using Printf
 
+# === Global FLOP counter and helpers ===
+global NFLOPs = 0
+
+include("../FLOP_count.jl")
+
+function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
+    ν = size(t_candidates, 2)
+    n_b = 0
+    T_hat = Matrix{eltype(t_candidates)}(undef, size(t_candidates, 1), ν)
+
+    for i in 1:ν
+        t_i = t_candidates[:, i]
+        old_norm = norm(t_i)
+        count_norm_flops(length(t_i))
+        k = 0
+
+        while k < maxorth
+            k += 1
+
+            # Count orthogonalization against V
+            count_orthogonalization_flops(1, size(V,2), size(V,1))
+            for j in 1:size(V, 2)
+                t_i -= V[:, j] * (V[:, j]' * t_i)
+            end
+
+            new_norm = norm(t_i)
+            count_norm_flops(length(t_i))
+            if new_norm > η * old_norm
+                break
+            end
+            old_norm = new_norm
+        end
+
+        if norm(t_i) > droptol
+            count_norm_flops(length(t_i))
+            n_b += 1
+            T_hat[:, n_b] = t_i / norm(t_i)
+            count_vec_scaling_flops(length(t_i))
+        end
+    end
+
+    return T_hat[:, 1:n_b], n_b
+end
+
 function occupied_orbitals(molecule::String)
     if molecule == "H2"
         return 1
@@ -174,10 +218,10 @@ function main(molecule::String, l::Integer, beta::Integer)
 
     filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
 
-    Nlow = max(0.1*l, 16)
+    Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
 
-    A = load_matrix(filename)
+    A = load_matrix(filename,molecule)
     N = size(A, 1)
     
     V = zeros(N, Nlow)
@@ -206,7 +250,7 @@ end
 
 
 betas = [8,16,32,64]
-molecules = ["H2_molecule", "formaldehyde"]
+molecules = ["H2", "formaldehyde"]
 
 for molecule in molecules
     println("Processing molecule: $molecule")

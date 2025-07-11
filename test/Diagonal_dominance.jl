@@ -26,7 +26,7 @@ function off_diagonal_fronenius(A::Hermitian{T}) where T
     diagonal_matrix = Hermitian(diagonal_matrix)  # Ensure it's Hermitian
     off_diagonal_matrix = A - diagonal_matrix
     println("Calculating off-diagonal norm")
-    @time offdiagonal_norm = norm(off_diagonal_matrix, 2)  # Use 2-norm for Frobenius norm
+    @time offdiagonal_norm = norm(off_diagonal_matrix, Frobenius())  # Corrected: use Frobenius norm
     return offdiagonal_norm
 end
 
@@ -41,7 +41,6 @@ function main(molecule::String, system::String)
     # Calculate off-diagonal Frobenius norm
     off_diag_norm = off_diagonal_fronenius(A)
     @printf("Off-diagonal Frobenius norm for system %s: %.6f\n", system, off_diag_norm)
-    
 end
 
 for molecule in molecules
@@ -50,4 +49,3 @@ for molecule in molecules
         main(molecule, system)
     end
 end
-

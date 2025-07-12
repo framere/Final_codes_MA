@@ -1,5 +1,6 @@
 using LinearAlgebra
 using Printf
+using JLD2
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
@@ -132,10 +133,10 @@ function main(molecule::String, l::Integer, alpha::Integer)
     Nlow = l
     Naux = Nlow * alpha
 
-    if Naux > 0.15 * N
-        println("Skipping: Naux ($Naux) is larger than 15% of the matrix size ($N).")
-        return
-    end
+    #if Naux > 0.15 * N
+    #    println("Skipping: Naux ($Naux) is larger than 15% of the matrix size ($N).")
+    #    return
+    #end
 
     # initial guess (naiv)
     V = zeros(N, Nlow)

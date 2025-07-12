@@ -244,8 +244,11 @@ function main(molecule::String, l::Integer, beta::Integer)
     # println("Exact Eigenvalues: ", Σexact[1:l])
 
     # Display difference
-    println("\nDifference between Davidson and exact eigenvalues:")
-    display("text/plain", (Σ[1:l] - Σexact[1:l])')
+    # println("\nDifference between Davidson and exact eigenvalues:")
+    # display("text/plain", (Σ[1:l] - Σexact[1:l])')
+    println("\nRelative deviation between Davidson and exact eigenvalues:")
+    rel_dev = (Σ[1:l] .- Σexact[1:l]) ./ Σexact[1:l]
+    display("text/plain", rel_dev')
 end
 
 

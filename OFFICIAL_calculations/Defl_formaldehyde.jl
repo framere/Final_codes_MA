@@ -230,7 +230,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1.5e-2 + 0.5e-2 * factor)
+    @time Σ, U = davidson(A, V, Naux, l, 5e-5 + 0.5e-5 * factor)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

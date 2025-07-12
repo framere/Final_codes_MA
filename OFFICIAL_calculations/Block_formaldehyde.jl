@@ -145,7 +145,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1.5e-2)
+    @time Σ, U = davidson(A, V, Naux, 1.5e-5)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]

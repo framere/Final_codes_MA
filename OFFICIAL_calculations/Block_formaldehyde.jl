@@ -165,7 +165,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     display("text/plain", rel_dev')
 end
 
-alpha = [2,4,8,16]
+alpha = [4,8,16]
 
 molecules = ["formaldehyde"]
 

@@ -1,3 +1,11 @@
 Files work separately, but if we want to run deflation or davidson 
 algortihm for both systems, we just need to change the line where we 
-defined molecules
+defined molecule
+
+slurm 24622 - 24625: first calculation (Difference between eigenvalues --> bad measure) 
+
+slurm 24626 - 24629: first calculation (only difference is the output of the relative error) -- thresh is given by 1.5e-2
+
+slurm 24631 - 24625: thresh is 1.5e-2
+
+

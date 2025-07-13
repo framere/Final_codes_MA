@@ -168,9 +168,11 @@ function main(molecule::String, l::Integer, alpha::Integer)
     # Display difference
     # println("\nDifference between Davidson and exact eigenvalues:")
     # display("text/plain", (Σ[1:l] - Σexact[1:l])')
+    r = min(length(Σ), l)
     println("\nRelative deviation between Davidson and exact eigenvalues:")
-    rel_dev = (Σ[1:l] .- Σexact[1:l]) ./ Σexact[1:l]
+    rel_dev = (Σ[1:r] .- Σexact[1:r]) ./ Σexact[1:r]
     display("text/plain", rel_dev')
+    println("$r Eigenvalues converges, out of $l requested.")
 end
 
 alpha = [4,8,16]

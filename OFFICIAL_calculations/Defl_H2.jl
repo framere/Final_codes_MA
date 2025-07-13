@@ -139,7 +139,14 @@ function davidson(
         count_matmul_flops(size(A, 1), size(A, 2), size(X, 2))
         count_vec_add_flops(length(R))  # For the subtraction
 
-        norms = vec(norm.(eachcol(R)))
+        abs_norms = Vector{Float64}(undef, size(R, 2))
+        norms = Vector{Float64}(undef, size(R, 2))
+        for (i, r) in enumerate(eachcol(R))
+            rnorm = norm(r)
+            count_norm_flops(size(R,1))
+            abs_norms[i] = rnorm
+            norms[i] = rnorm / abs(Σ[i])  # relative residual
+        end
         for _ in eachcol(R)
             count_norm_flops(size(R,1))
         end
@@ -204,8 +211,9 @@ function davidson(
             V = hcat(V, T_hat)
             n_b += n_b_hat
         end
-
-        println("Iter $iter: V_size = $n_b, Converged = $nevf, Min ‖r‖ = $(minimum(norms))")
+        i_max = argmax(Σ)
+        norm_largest_Ritz = norms[i_max]
+        println("Iter $iter: V_size = $n_b, Converged = $nevf, ‖r‖ (largest λ) = $norm_largest_Ritz")
     end
 
     return (Eigenvalues, Ritz_vecs)
@@ -230,7 +238,7 @@ function main(molecule::String, l::Integer, beta::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 5e-5)
+    @time Σ, U = davidson(A, V, Naux, l, 5e-3)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

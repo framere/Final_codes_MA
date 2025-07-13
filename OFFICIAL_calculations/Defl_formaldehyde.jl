@@ -218,8 +218,10 @@ function davidson(
             V = hcat(V, T_hat)
             n_b += n_b_hat
         end
-
-        println("Iter $iter: V_size = $n_b, Converged = $nevf, Min ‖r‖ = $(minimum(norms))")
+        
+        i_max = argmax(Σ)
+        norm_largest_Ritz = norms[i_max]
+        println("Iter $iter: V_size = $n_b, Converged = $nevf, ‖r‖ (largest λ) = $norm_largest_Ritz")
     end
 
     return (Eigenvalues, Ritz_vecs)

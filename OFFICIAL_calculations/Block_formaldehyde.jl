@@ -49,7 +49,8 @@ function davidson(
     A::AbstractMatrix{T},
     V::Matrix{T},
     Naux::Integer,
-    thresh::Float64,
+    thresh::Float64, 
+    max_iter::Integer
 )::Tuple{Vector{T},Matrix{T}} where T<:Number
     
     global NFLOPs
@@ -64,6 +65,11 @@ function davidson(
 
     while true
         iter += 1
+
+        if iter > max_iter
+            println("Maximum iterations reached without convergence.")
+            return (Σ, X)
+        end
 
         # QR-Orthogonalisierung
         count_qr_flops(size(V,1), size(V,2))
@@ -92,12 +98,14 @@ function davidson(
 
         # Count norm calculation
         Rnorm = norm(R, 2)
+        rel_Rnorm = Rnorm / norm(X, 2)
+
         count_norm_flops(length(R))
 
-        output = @sprintf("iter=%6d  Rnorm=%11.3e  size(V,2)=%6d\n", iter, Rnorm, size(V,2))
+        output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
         print(output)
 
-        if Rnorm < thresh
+        if rel_Rnorm < thresh
             println("converged!")
             return (Σ, X)
         end
@@ -145,7 +153,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1.5e-5)
+    @time Σ, U = davidson(A, V, Naux, 1.5e-3, 500)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]

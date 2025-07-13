@@ -6,6 +6,6 @@ slurm 24622 - 24625: first calculation (Difference between eigenvalues --> bad m
 
 slurm 24626 - 24629: first calculation (only difference is the output of the relative error) -- thresh is given by 1.5e-2
 
-slurm 24631 - 24625: thresh is 1.5e-2
+slurm 24631 - 24635: thresh is 1e-5
 
-
+slure 24636 - 24639: modified the convergence criterium using relative norms, thresh is 1e-3, introduced itermax = 500

@@ -262,9 +262,11 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     # Display difference
     # println("\nDifference between Davidson and exact eigenvalues:")
     # display("text/plain", (Σ[1:l] - Σexact[1:l])')
+    r = min(length(Σ), l)
     println("\nRelative deviation between Davidson and exact eigenvalues:")
-    rel_dev = (Σ[1:l] .- Σexact[1:l]) ./ Σexact[1:l]
+    rel_dev = (Σ[1:r] .- Σexact[1:r]) ./ Σexact[1:r]
     display("text/plain", rel_dev')
+    println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
@@ -279,7 +281,7 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 500)
+            main(molecule, nev, beta, i, 1000)
         end
     end
     println("Finished processing molecule: $molecule")

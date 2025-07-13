@@ -89,6 +89,7 @@ function davidson(
     n_aux::Integer,
     l::Integer,
     thresh::Float64,
+    max_iter::Integer,
     stable_thresh::Integer = 3
 )::Tuple{Vector{T}, Matrix{T}} where T<:Number
 
@@ -108,6 +109,11 @@ function davidson(
 
     while nevf < l
         iter += 1
+
+        if iter > max_iter
+            println("Max iterations ($max_iter) reached without convergence. Skipping this case.")
+            return (Eigenvalues, Ritz_vecs)
+        end        
 
         if size(V_lock, 2) > 0
             count_orthogonalization_flops(size(V,2), size(V_lock,2), size(V,1))
@@ -220,7 +226,7 @@ function davidson(
 end
 
 
-function main(molecule::String, l::Integer, beta::Integer, factor::Integer)
+function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_iter::Integer)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
@@ -238,7 +244,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 5e-3 + 0.5e-3 * factor)
+    @time Σ, U = davidson(A, V, Naux, l, 5e-3 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

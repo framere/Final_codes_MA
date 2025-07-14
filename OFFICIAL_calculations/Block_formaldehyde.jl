@@ -66,29 +66,30 @@ function davidson(
     while true
         iter += 1
 
-        if iter > max_iter
-            println("Maximum iterations reached without convergence.")
-            return (Σ, X)
-        end
-
+        
         # QR-Orthogonalisierung
         count_qr_flops(size(V,1), size(V,2))
         qr_decomp = qr(V)
         V = Matrix(qr_decomp.Q)
-
+        
         # Rayleigh-Matrix: H = V' * (A * V)
         temp = A * V
         count_matmul_flops(size(A,1), size(A,2), size(V,2))  # A*V
         H = V' * temp
         count_matmul_flops(size(V,2), size(V,1), size(temp,2))  # V'*temp
-
+        
         H = Hermitian(H)
         Σ, U = eigen(H, 1:Nlow)
         count_diag_flops(size(H,1))  # kleine Diagonalisierung
-
+        
         X = V * U
         count_matmul_flops(size(V,1), size(V,2), size(U,2))  # V*U
-
+        
+        if iter > max_iter
+            println("Maximum iterations reached without convergence.")
+            return (Σ, X)
+        end
+        
         # R = X*Σ' - A*X
         R = X .* Σ'  # Skalierung
         temp2 = A * X

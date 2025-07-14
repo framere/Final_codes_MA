@@ -222,7 +222,7 @@ function main(l::Integer, max_iter::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 5e-3, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 5e-2, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -247,4 +247,4 @@ end
 
 
 # === MAIN USAGE ===
-main(1200, 500)
+main(700, 500)

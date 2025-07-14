@@ -279,7 +279,7 @@ for molecule in molecules
         println("Running with beta = $beta")
         for l in ls
             println("Running with l = $l")
-            main(molecule, l*occupied_orbitals(molecule), beta, 1000)
+            main(molecule, l*occupied_orbitals(molecule), beta, 500)
         end
     end
     println("Finished processing molecule: $molecule")

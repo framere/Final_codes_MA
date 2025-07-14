@@ -130,9 +130,13 @@ function davidson(
         count_matmul_flops(size(A, 1), size(A, 2), size(X, 2))
         count_vec_add_flops(length(R))  # For the subtraction
 
-        norms = vec(norm.(eachcol(R)))
-        for _ in eachcol(R)
+        abs_norms = Vector{Float64}(undef, size(R, 2))
+        norms = Vector{Float64}(undef, size(R, 2))
+        for (i, r) in enumerate(eachcol(R))
+            rnorm = norm(r)
             count_norm_flops(size(R,1))
+            abs_norms[i] = rnorm
+            norms[i] = rnorm / abs(Σ[i])  # relative residual
         end
 
         conv_indices = Int[]
@@ -160,7 +164,7 @@ function davidson(
                     V_lock = hcat(V_lock, xvec)
                     delete!(convergence_tracker, i)
                     nevf += 1
-                    println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
+                    # println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
                     if nevf >= l
                         println("Converged all eigenvalues.")
                         return (Eigenvalues, Ritz_vecs)
@@ -198,7 +202,7 @@ function davidson(
         
         i_max = argmin(Σ)
         norm_largest_Ritz = norms[i_max]
-        println("Iter $iter: V_size = $n_b, Converged = $nevf, ‖r‖ (largest λ) = $norm_largest_Ritz")
+        println("Iter $iter: V_size = $n_b, Converged = $nevf, ‖r‖ = $norm_largest_Ritz")
     end
 
     return (Eigenvalues, Ritz_vecs)
@@ -209,8 +213,8 @@ function main(l::Integer, max_iter::Integer)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "large_sparse_matrix.dat"
-    Nlow = 25
+    filename = "large_sparse_matrix_3.dat"
+    Nlow = 35
     Naux = Nlow * 12
     A = load_matrix(filename)
     N = size(A, 1)
@@ -232,7 +236,7 @@ function main(l::Integer, max_iter::Integer)
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact = read_eigenresults("test_EW_results.jld2")
+    Σexact = read_eigenresults("test_EW_results_3.jld2")
     # println("Exact Eigenvalues: ", Σexact[1:l])
 
     # Display difference
@@ -247,4 +251,11 @@ end
 
 
 # === MAIN USAGE ===
-main(700, 500)
+l = [200, 300, 400, 500, 600]
+max_iter = 150
+
+for l_val in l
+    println("\n === Running with l = $l_val ===")
+    println("NEV / Matrix_dimension: $l_val / 20000")
+    main(l_val, max_iter)
+end

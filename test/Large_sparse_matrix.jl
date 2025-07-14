@@ -6,7 +6,7 @@ function generate_random_matrix(N::Int, factor::Float64 = 100.0)
     Generates a random NxN matrix with diagonal elements scaled by `factor` and small off-diagonal elements.        
     The diagonal elements are uniformly distributed between 0 and `factor`, while off-diagonal elements are small random values.
     """
-    α = -853.7142494929915
+    α = -500.7142494929915
     β = 0.10931396203607915
     A = Matrix{Float64}(undef, N, N)
     for i in 1:N
@@ -38,8 +38,8 @@ end
 
 # === MAIN USAGE ===
 N = 12000  # Size of the matrix
-factor = 1000.0  # Scaling factor for diagonal elements
+factor = 100.0  # Scaling factor for diagonal elements
 println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
 A = generate_random_matrix(N, factor)
-println("Saving the generated matrix to 'large_sparse_matrix.dat'...")
-save_matrix_to_file(A, "large_sparse_matrix.dat")
+println("Saving the generated matrix to 'large_sparse_matrix_3.dat'...")
+save_matrix_to_file(A, "large_sparse_matrix_3.dat")

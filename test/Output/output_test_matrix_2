@@ -1,0 +1,45 @@
+
+ === Running with l = 200 ===
+NEV / Matrix_dimension: 200 / 20000
+read large_sparse_matrix_2.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.693256510094005e-6
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 9.488184725735897e-10
+Iter 3: V_size = 278, Converged = 1, ‖r‖ = 6.621778960091238e-14
+Iter 4: V_size = 398, Converged = 1, ‖r‖ = 1.392141681564692e-13
+Iter 5: V_size = 398, Converged = 1, ‖r‖ = 3.563911585057693e-15
+Iter 6: V_size = 380, Converged = 10, ‖r‖ = 2.98552244283288e-15
+Iter 7: V_size = 380, Converged = 10, ‖r‖ = 1.874374484764799e-5
+Iter 8: V_size = 380, Converged = 10, ‖r‖ = 7.773147444659565e-6
+Iter 9: V_size = 358, Converged = 21, ‖r‖ = 1.3919715297473916e-5
+Iter 10: V_size = 358, Converged = 21, ‖r‖ = 0.0007476185501227569
+Iter 11: V_size = 358, Converged = 21, ‖r‖ = 0.0014639311749427817
+Iter 12: V_size = 334, Converged = 33, ‖r‖ = 0.0006638253120939438
+Iter 13: V_size = 334, Converged = 33, ‖r‖ = 0.012234569698154405
+Iter 14: V_size = 334, Converged = 33, ‖r‖ = 0.00616660798981699
+Iter 15: V_size = 332, Converged = 34, ‖r‖ = 0.010945225500767299
+Iter 16: V_size = 328, Converged = 36, ‖r‖ = 0.005536069875865227
+Iter 17: V_size = 328, Converged = 36, ‖r‖ = 0.02064879226719336
+Iter 18: V_size = 328, Converged = 36, ‖r‖ = 0.009561845835208667
+Iter 19: V_size = 320, Converged = 40, ‖r‖ = 0.018651567825667438
+Iter 20: V_size = 320, Converged = 40, ‖r‖ = 0.008970512305345749
+Iter 21: V_size = 318, Converged = 41, ‖r‖ = 0.01702201275478032
+Iter 22: V_size = 318, Converged = 41, ‖r‖ = 0.03938533348270765
+Iter 23: V_size = 318, Converged = 41, ‖r‖ = 0.08784399137815302
+Iter 24: V_size = 310, Converged = 45, ‖r‖ = 0.039248377749167035
+Iter 25: V_size = 310, Converged = 45, ‖r‖ = 0.08532581124990402
+Iter 26: V_size = 310, Converged = 45, ‖r‖ = 0.03906350432742977
+Iter 27: V_size = 310, Converged = 45, ‖r‖ = 0.08300160673525891
+Iter 28: V_size = 308, Converged = 46, ‖r‖ = 0.03883398002028358
+Iter 29: V_size = 306, Converged = 47, ‖r‖ = 0.08083622379529609
+Iter 30: V_size = 306, Converged = 47, ‖r‖ = 0.03856184928214149
+Iter 31: V_size = 306, Converged = 47, ‖r‖ = 0.07881686835422902
+Iter 32: V_size = 304, Converged = 48, ‖r‖ = 0.038251737543544634
+Iter 33: V_size = 304, Converged = 48, ‖r‖ = 0.07691408526676433
+Iter 34: V_size = 304, Converged = 48, ‖r‖ = 0.03790804011025502
+Iter 35: V_size = 302, Converged = 49, ‖r‖ = 0.07511611242355783
+Iter 36: V_size = 302, Converged = 49, ‖r‖ = 0.03753535314379155
+Iter 37: V_size = 302, Converged = 49, ‖r‖ = 0.07340723046908108
+Iter 38: V_size = 300, Converged = 50, ‖r‖ = 0.03713778166219505
+Iter 39: V_size = 300, Converged = 50, ‖r‖ = 0.07177684664304709
+Iter 40: V_size = 300, Converged = 50, ‖r‖ = 0.03671914944597595

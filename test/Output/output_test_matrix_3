@@ -1,0 +1,11 @@
+
+ === Running with l = 200 ===
+NEV / Matrix_dimension: 200 / 20000
+read large_sparse_matrix_3.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.618009565022594e-5
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 8.210815459409116e-8
+Iter 3: V_size = 280, Converged = 0, ‖r‖ = 6.5707120821612115e-12
+Iter 4: V_size = 390, Converged = 5, ‖r‖ = 1.080357627550814e-15
+Iter 5: V_size = 390, Converged = 5, ‖r‖ = 3.70548271824665e-12
+Iter 6: V_size = 390, Converged = 5, ‖r‖ = 1.4903018211114818e-14

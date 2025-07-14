@@ -281,7 +281,7 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 1000)
+            main(molecule, nev, beta, i, 500)
         end
     end
     println("Finished processing molecule: $molecule")

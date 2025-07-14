@@ -1,0 +1,17 @@
+
+ === Running with l = 200 ===
+NEV / Matrix_dimension: 200 / 20000
+read large_sparse_matrix_1.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.664438371347063e-5
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 8.826696716141085e-8
+Iter 3: V_size = 280, Converged = 0, ‖r‖ = 7.258638114000554e-12
+Iter 4: V_size = 396, Converged = 2, ‖r‖ = 9.485655000953017e-16
+Iter 5: V_size = 396, Converged = 2, ‖r‖ = 3.969159322342674e-11
+Iter 6: V_size = 396, Converged = 2, ‖r‖ = 4.175958310695594e-13
+Iter 7: V_size = 378, Converged = 11, ‖r‖ = 7.473598070263367e-15
+Iter 8: V_size = 378, Converged = 11, ‖r‖ = 0.00041300545542382656
+Iter 9: V_size = 378, Converged = 11, ‖r‖ = 0.0001678830392074897
+Iter 10: V_size = 376, Converged = 12, ‖r‖ = 7.603368251965311e-5
+Iter 11: V_size = 376, Converged = 12, ‖r‖ = 0.00030697117836742604
+Iter 12: V_size = 376, Converged = 12, ‖r‖ = 0.0004826432423476941

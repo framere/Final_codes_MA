@@ -12,4 +12,4 @@ slurm 24636 - 24639: modified the convergence criterium using relative norms, th
 
 slurm 24640 - 24643: Problems corrected, there where some code errors
 
-
+slurm 24652 - 24655: Same code as before but I print the absolute difference, not the relative

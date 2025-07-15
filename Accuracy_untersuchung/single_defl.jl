@@ -128,35 +128,76 @@ function davidson(
 
         norms = vec(norm.(eachcol(R), 2))
 
+        # conv_indices = Int[]
+        # for i = 1:size(R, 2)
+        #     λ = Σ[i]
+        #     rnorm = norms[i]
+        #     matched = false
+        #     for (λ_prev, (count, _, _)) in convergence_tracker
+        #         if abs(λ - λ_prev) < 1e-4  # matching tolerance
+        #             convergence_tracker[λ_prev] = (count + 1, rnorm, X[:, i])
+        #             matched = true
+        #             break
+        #         end
+        #     end
+
+        #     if !matched && rnorm < thresh
+        #         convergence_tracker[λ] = (1, rnorm, X[:, i])
+        #     end
+
+        #     for (λ, (count, rnorm, xvec)) in convergence_tracker
+        #         if count >= stable_thresh
+        #             push!(conv_indices, i)  # or track by value if you prefer
+        #             push!(Eigenvalues, λ)
+        #             Ritz_vecs = hcat(Ritz_vecs, xvec)
+        #             V_lock = hcat(V_lock, xvec)
+        #             delete!(convergence_tracker, λ)
+        #             nevf += 1
+        #             println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
+        #         end
+        #     end
+
+        # end
+
+
+
+        desired_lambda_accuracy = 1e-5
+
         conv_indices = Int[]
         for i = 1:size(R, 2)
-            λ = Σ[i]
+            μ = Σ[i]                  # Ritz value, approximates λ^2
+            λ_est = sqrt(abs(μ))     # Estimated λ
             rnorm = norms[i]
+            adaptive_thresh = 2 * λ_est * desired_lambda_accuracy
+
             matched = false
-            for (λ_prev, (count, _, _)) in convergence_tracker
-                if abs(λ - λ_prev) < 1e-4  # matching tolerance
-                    convergence_tracker[λ_prev] = (count + 1, rnorm, X[:, i])
+            for (μ_prev, (count, _, _)) in convergence_tracker
+                if abs(μ - μ_prev) < 1e-4
+                    convergence_tracker[μ_prev] = (count + 1, rnorm, X[:, i])
                     matched = true
                     break
                 end
             end
 
-            if !matched && rnorm < thresh
-                convergence_tracker[λ] = (1, rnorm, X[:, i])
+            if !matched && rnorm < adaptive_thresh
+                convergence_tracker[μ] = (1, rnorm, X[:, i])
             end
+        end
 
-            for (λ, (count, rnorm, xvec)) in convergence_tracker
-                if count >= stable_thresh
-                    push!(conv_indices, i)  # or track by value if you prefer
-                    push!(Eigenvalues, λ)
-                    Ritz_vecs = hcat(Ritz_vecs, xvec)
-                    V_lock = hcat(V_lock, xvec)
-                    delete!(convergence_tracker, λ)
-                    nevf += 1
-                    println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
+        # Final convergence check
+        for (μ, (count, rnorm, xvec)) in convergence_tracker
+            if count >= stable_thresh
+                push!(Eigenvalues, μ)
+                Ritz_vecs = hcat(Ritz_vecs, xvec)
+                V_lock = hcat(V_lock, xvec)
+                nevf += 1
+                println(@sprintf("EV %3d converged μ = %.10f (λ ≈ %.10f), ‖r‖ = %.2e, stable for %d iters", nevf, μ, sqrt(abs(μ)), rnorm, count))
+                delete!(convergence_tracker, μ)
+                if nevf >= l
+                    println("Converged all eigenvalues.")
+                    return (Eigenvalues, Ritz_vecs)
                 end
             end
-
         end
 
         non_conv_indices = setdiff(1:size(R, 2), conv_indices)
@@ -209,18 +250,22 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     @time Σ, U = davidson(A, V, Naux, l, 5e-3 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
-    Σ = Σ[idx]
+    Σ_squared = Σ[idx]
     U = U[:, idx]
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact = read_eigenresults(molecule)
+    Σexact_squared = read_eigenresults(molecule)
+
 
     # Display difference
     r = min(length(Σ), l)
-    println("\nDifference between Davidson and exact eigenvalues:")
-    rel_dev = (Σ[1:r] .- Σexact[1:r])
-    display("text/plain", rel_dev')
+    println("\nSquare root of Eigenvalues:")
+    Σ_sqrt = sqrt.(abs.(Σ_squared))
+    Σexact_sqrt = sqrt.(abs.(Σexact_squared))
+    println("\nCompute the difference between computed and exact eigenvalues:")
+    difference = Σ_sqrt[1:r] - Σexact_sqrt[1:r]
+    display("text/plain", difference')
     println("$r Eigenvalues converges, out of $l requested.")
 end
 

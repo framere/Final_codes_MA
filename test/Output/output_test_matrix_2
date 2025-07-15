@@ -43,3 +43,735 @@ Iter 37: V_size = 302, Converged = 49, ‖r‖ = 0.07340723046908108
 Iter 38: V_size = 300, Converged = 50, ‖r‖ = 0.03713778166219505
 Iter 39: V_size = 300, Converged = 50, ‖r‖ = 0.07177684664304709
 Iter 40: V_size = 300, Converged = 50, ‖r‖ = 0.03671914944597595
+Iter 41: V_size = 298, Converged = 51, ‖r‖ = 0.07021740893095589
+Iter 42: V_size = 298, Converged = 51, ‖r‖ = 0.036283035177457554
+Iter 43: V_size = 298, Converged = 51, ‖r‖ = 0.06872073507193345
+Iter 44: V_size = 298, Converged = 51, ‖r‖ = 0.035832498708227425
+Iter 45: V_size = 298, Converged = 51, ‖r‖ = 0.06728121443582291
+Iter 46: V_size = 298, Converged = 51, ‖r‖ = 0.03537032889582119
+Iter 47: V_size = 294, Converged = 53, ‖r‖ = 0.06589384730416416
+Iter 48: V_size = 294, Converged = 53, ‖r‖ = 0.03489884549642126
+Iter 49: V_size = 294, Converged = 53, ‖r‖ = 0.06455389546029865
+Iter 50: V_size = 294, Converged = 53, ‖r‖ = 0.03442027031195185
+Iter 51: V_size = 292, Converged = 54, ‖r‖ = 0.063258424557866
+Iter 52: V_size = 292, Converged = 54, ‖r‖ = 0.03393668287700965
+Iter 53: V_size = 292, Converged = 54, ‖r‖ = 0.062004057804122235
+Iter 54: V_size = 292, Converged = 54, ‖r‖ = 0.03344964158343201
+Iter 55: V_size = 292, Converged = 54, ‖r‖ = 0.06078816969693361
+Iter 56: V_size = 292, Converged = 54, ‖r‖ = 0.03296074760569057
+Iter 57: V_size = 292, Converged = 54, ‖r‖ = 0.05960834535465157
+Iter 58: V_size = 292, Converged = 54, ‖r‖ = 0.032471242272259684
+Iter 59: V_size = 292, Converged = 54, ‖r‖ = 0.058462466573529
+Iter 60: V_size = 292, Converged = 54, ‖r‖ = 0.03198223992188531
+Iter 61: V_size = 290, Converged = 55, ‖r‖ = 0.057348644224155865
+Iter 62: V_size = 290, Converged = 55, ‖r‖ = 0.031494707847856004
+Iter 63: V_size = 288, Converged = 56, ‖r‖ = 0.0562651890849746
+Iter 64: V_size = 288, Converged = 56, ‖r‖ = 0.03100934880607452
+Iter 65: V_size = 288, Converged = 56, ‖r‖ = 0.05521011736340672
+Iter 66: V_size = 286, Converged = 57, ‖r‖ = 0.030526924127245603
+Iter 67: V_size = 286, Converged = 57, ‖r‖ = 0.054182277169243315
+Iter 68: V_size = 286, Converged = 57, ‖r‖ = 0.030048056125716583
+Iter 69: V_size = 286, Converged = 57, ‖r‖ = 0.05318058372171383
+Iter 70: V_size = 286, Converged = 57, ‖r‖ = 0.02957341056386446
+Iter 71: V_size = 286, Converged = 57, ‖r‖ = 0.05220396538334263
+Iter 72: V_size = 286, Converged = 57, ‖r‖ = 0.029103455538151635
+Iter 73: V_size = 286, Converged = 57, ‖r‖ = 0.05125137330651129
+Iter 74: V_size = 286, Converged = 57, ‖r‖ = 0.02863858159551985
+Iter 75: V_size = 286, Converged = 57, ‖r‖ = 0.05032183138311292
+Iter 76: V_size = 286, Converged = 57, ‖r‖ = 0.02817911703842856
+Iter 77: V_size = 282, Converged = 59, ‖r‖ = 0.0494144346920485
+Iter 78: V_size = 282, Converged = 59, ‖r‖ = 0.028878188232135813
+Iter 79: V_size = 282, Converged = 59, ‖r‖ = 0.051894355439872884
+Iter 80: V_size = 280, Converged = 60, ‖r‖ = 0.028547849377223322
+Iter 81: V_size = 420, Converged = 60, ‖r‖ = 0.051156253387402255
+Iter 82: V_size = 280, Converged = 60, ‖r‖ = 0.003855714565929063
+Iter 83: V_size = 420, Converged = 60, ‖r‖ = 0.0036912004205211543
+Iter 84: V_size = 280, Converged = 60, ‖r‖ = 0.0025103566148558265
+Iter 85: V_size = 252, Converged = 74, ‖r‖ = 0.0037199909777143373
+Iter 86: V_size = 378, Converged = 74, ‖r‖ = 0.015691802966205776
+Iter 87: V_size = 252, Converged = 74, ‖r‖ = 0.006328469083000941
+Iter 88: V_size = 378, Converged = 74, ‖r‖ = 0.00573184617927458
+Iter 89: V_size = 244, Converged = 78, ‖r‖ = 0.009052746280413138
+Iter 90: V_size = 230, Converged = 85, ‖r‖ = 0.005715050739235564
+Iter 91: V_size = 345, Converged = 85, ‖r‖ = 0.012195354439249398
+Iter 92: V_size = 230, Converged = 85, ‖r‖ = 0.0037875036223053394
+Iter 93: V_size = 202, Converged = 99, ‖r‖ = 0.007332186073749126
+Iter 94: V_size = 303, Converged = 99, ‖r‖ = 0.004035382926374373
+Iter 95: V_size = 404, Converged = 99, ‖r‖ = 0.003011233045765218
+Iter 96: V_size = 198, Converged = 101, ‖r‖ = 0.002277737851223002
+Iter 97: V_size = 297, Converged = 101, ‖r‖ = 0.002134188293867168
+Iter 98: V_size = 196, Converged = 102, ‖r‖ = 0.0020934359812195048
+Iter 99: V_size = 294, Converged = 102, ‖r‖ = 0.00498650073684461
+Iter 100: V_size = 392, Converged = 102, ‖r‖ = 0.004376318064200028
+Iter 101: V_size = 36, Converged = 182, ‖r‖ = 0.0043999767512988485
+Iter 102: V_size = 54, Converged = 182, ‖r‖ = 0.00542569056595995
+Iter 103: V_size = 72, Converged = 182, ‖r‖ = 0.008528423452787407
+Converged all eigenvalues.
+877.628175 seconds (72.42 M allocations: 2.127 TiB, 4.17% gc time)
+Total estimated FLOPs: 13812557660560
+
+Reading exact Eigenvalues...
+Reading eigenvalues from test_EW_results_2.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×200 adjoint(::Vector{Float64}) with eltype Float64:
+ 2.96843e-7  858.847  415.466  237.106  156.116  113.682  84.0153  64.2412  50.3119  41.8406  34.2865  28.802  24.2507  20.8952  18.4508  16.1987  14.2365  12.7759  11.4982  10.4307  9.45147  8.54909  7.91547  7.21801  6.60326  6.14124  5.69157  5.32411  4.95993  4.61284  4.55684  4.34807  4.10297  3.8519  3.61211  3.43335  3.23213  3.0703  2.90842  2.76946  2.62573  2.49231  2.38184  2.26635  2.17149  2.07047  1.97506  1.88862  1.81724  1.74036  1.67542  1.609  1.55053  1.4877  1.43139  1.38171  1.32908  1.28734  1.23962  1.19686  1.15857  1.12005  1.0854  1.0497  1.01593  0.983446  0.952224  0.922852  0.895841  0.86821  0.844248  0.819799  0.795468  0.773402  0.752276  0.732216  0.712324  0.693027  0.674322  0.656497  0.638944  0.622451  0.606524  0.591273  0.57613  0.561573  0.548176  0.534345  0.521473  0.508563  0.496264  0.484406  0.472816  0.461643  0.450789  0.440252  0.430051  0.420116  0.410418  0.401238  0.392134  0.383206  0.374598  0.366371  0.358321  0.350472  0.342924  0.335296  0.328137  0.321262  0.314403  0.307644  0.301114  0.295012  0.288933  0.282874  0.277174  0.271575  0.266016  0.260679  0.255475  0.250364  0.245568  0.240558  0.236047  0.231399  0.226877  0.222648  0.218139  0.214089  0.210079  0.206264  0.202192  0.198304  0.194776  0.190986  0.187604  0.184095  0.18096  0.177621  0.174354  0.171178  0.168208  0.165154  0.1622  0.159467  0.156345  0.153746  0.150946  0.148423  0.145895  0.143253  0.140872  0.138594  0.136122  0.133926  0.131522  0.129255  0.127309  0.125046  0.122799  0.121189  0.118883  0.116909  0.115324  0.113251  0.111415  0.109594  0.107577  0.105987  0.104299  0.10284  0.101002  0.0995055  0.0978508  0.0965583  0.0950158  0.0936067  0.0921016  0.0903117  0.0892764  0.0877337  0.0866174  0.0852258  0.083981  0.0822372  0.081591  0.0801164  0.0788831  0.0778554  0.0765972  0.0753422  0.0747742  0.0736662  0.0720132  0.0709754  0.0701182  0.0690693  0.0683013  0.0677316
+200 Eigenvalues converges, out of 200 requested.
+
+ === Running with l = 300 ===
+NEV / Matrix_dimension: 300 / 20000
+read large_sparse_matrix_2.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.693256510094005e-6
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 9.488184725735897e-10
+Iter 3: V_size = 278, Converged = 1, ‖r‖ = 6.621778960091238e-14
+Iter 4: V_size = 420, Converged = 1, ‖r‖ = 1.3921945265608962e-13
+Iter 5: V_size = 420, Converged = 1, ‖r‖ = 3.1782254015160578e-15
+Iter 6: V_size = 420, Converged = 10, ‖r‖ = 3.2196307769322202e-15
+Iter 7: V_size = 420, Converged = 10, ‖r‖ = 7.805575273255309e-8
+Iter 8: V_size = 420, Converged = 10, ‖r‖ = 7.216094836873742e-9
+Iter 9: V_size = 420, Converged = 34, ‖r‖ = 1.3253251495586062e-9
+Iter 10: V_size = 420, Converged = 34, ‖r‖ = 0.0004260343879314529
+Iter 11: V_size = 420, Converged = 34, ‖r‖ = 0.00026500246197764437
+Iter 12: V_size = 420, Converged = 45, ‖r‖ = 0.0002227583108051618
+Iter 13: V_size = 420, Converged = 45, ‖r‖ = 0.002961098205737906
+Iter 14: V_size = 420, Converged = 45, ‖r‖ = 0.0031815220776818145
+Iter 15: V_size = 420, Converged = 48, ‖r‖ = 0.00215391497935144
+Iter 16: V_size = 420, Converged = 48, ‖r‖ = 0.0038135691983042937
+Iter 17: V_size = 420, Converged = 48, ‖r‖ = 0.0026137620399015096
+Iter 18: V_size = 420, Converged = 51, ‖r‖ = 0.0028616675223858854
+Iter 19: V_size = 420, Converged = 51, ‖r‖ = 0.0038288944244318016
+Iter 20: V_size = 420, Converged = 51, ‖r‖ = 0.005559807892074298
+Iter 21: V_size = 420, Converged = 56, ‖r‖ = 0.002898324604536406
+Iter 22: V_size = 420, Converged = 56, ‖r‖ = 0.007109168544037543
+Iter 23: V_size = 420, Converged = 56, ‖r‖ = 0.004942152351009225
+Iter 24: V_size = 420, Converged = 60, ‖r‖ = 0.005910155879175752
+Iter 25: V_size = 420, Converged = 60, ‖r‖ = 0.006606305771615374
+Iter 26: V_size = 420, Converged = 60, ‖r‖ = 0.008928287107446172
+Iter 27: V_size = 420, Converged = 64, ‖r‖ = 0.005572549939610196
+Iter 28: V_size = 420, Converged = 64, ‖r‖ = 0.017330663927328554
+Iter 29: V_size = 420, Converged = 64, ‖r‖ = 0.011498957460054198
+Iter 30: V_size = 420, Converged = 64, ‖r‖ = 0.015799115321864725
+Iter 31: V_size = 420, Converged = 66, ‖r‖ = 0.010445858254338386
+Iter 32: V_size = 420, Converged = 66, ‖r‖ = 0.014456856103180407
+Iter 33: V_size = 420, Converged = 67, ‖r‖ = 0.009522764589094177
+Iter 34: V_size = 420, Converged = 67, ‖r‖ = 0.018188497127158754
+Iter 35: V_size = 420, Converged = 67, ‖r‖ = 0.01224007081893631
+Iter 36: V_size = 420, Converged = 69, ‖r‖ = 0.017335164102298226
+Iter 37: V_size = 420, Converged = 70, ‖r‖ = 0.011498334543686085
+Iter 38: V_size = 420, Converged = 70, ‖r‖ = 0.04078902867366511
+Iter 39: V_size = 420, Converged = 70, ‖r‖ = 0.02313868174404227
+Iter 40: V_size = 420, Converged = 71, ‖r‖ = 0.03957706037474791
+Iter 41: V_size = 420, Converged = 71, ‖r‖ = 0.021878057077207316
+Iter 42: V_size = 420, Converged = 72, ‖r‖ = 0.038484621377948974
+Iter 43: V_size = 420, Converged = 72, ‖r‖ = 0.016054206749353407
+Iter 44: V_size = 420, Converged = 72, ‖r‖ = 0.03694956063207501
+Iter 45: V_size = 420, Converged = 73, ‖r‖ = 0.015413659312989185
+Iter 46: V_size = 420, Converged = 73, ‖r‖ = 0.040614784872707865
+Iter 47: V_size = 420, Converged = 73, ‖r‖ = 0.012540605178495885
+Iter 48: V_size = 420, Converged = 74, ‖r‖ = 0.03928178741628985
+Iter 49: V_size = 420, Converged = 74, ‖r‖ = 0.021921094257532078
+Iter 50: V_size = 420, Converged = 74, ‖r‖ = 0.04465424208662704
+Iter 51: V_size = 420, Converged = 74, ‖r‖ = 0.021078686834790722
+Iter 52: V_size = 420, Converged = 74, ‖r‖ = 0.04314186183494743
+Iter 53: V_size = 420, Converged = 74, ‖r‖ = 0.02031026412235739
+Iter 54: V_size = 420, Converged = 74, ‖r‖ = 0.041730085129544875
+Iter 55: V_size = 420, Converged = 74, ‖r‖ = 0.019606469838836675
+Iter 56: V_size = 420, Converged = 74, ‖r‖ = 0.040408758281746136
+Iter 57: V_size = 420, Converged = 74, ‖r‖ = 0.01895939520005439
+Iter 58: V_size = 420, Converged = 75, ‖r‖ = 0.03916913928119901
+Iter 59: V_size = 420, Converged = 75, ‖r‖ = 0.01836181574212885
+Iter 60: V_size = 420, Converged = 75, ‖r‖ = 0.038001543005974026
+Iter 61: V_size = 420, Converged = 75, ‖r‖ = 0.01780788934016301
+Iter 62: V_size = 420, Converged = 75, ‖r‖ = 0.03690186930003486
+Iter 63: V_size = 420, Converged = 75, ‖r‖ = 0.017293230104695613
+Iter 64: V_size = 420, Converged = 75, ‖r‖ = 0.03586424100788142
+Iter 65: V_size = 420, Converged = 75, ‖r‖ = 0.016813658048045847
+Iter 66: V_size = 420, Converged = 75, ‖r‖ = 0.034883674548975584
+Iter 67: V_size = 420, Converged = 77, ‖r‖ = 0.016365544409606653
+Iter 68: V_size = 420, Converged = 77, ‖r‖ = 0.03395421947105458
+Iter 69: V_size = 420, Converged = 78, ‖r‖ = 0.01594478255513743
+Iter 70: V_size = 420, Converged = 78, ‖r‖ = 0.05716976623911262
+Iter 71: V_size = 420, Converged = 78, ‖r‖ = 0.014156347172546664
+Iter 72: V_size = 420, Converged = 81, ‖r‖ = 0.05607711058706835
+Iter 73: V_size = 420, Converged = 81, ‖r‖ = 0.013885491359421753
+Iter 74: V_size = 420, Converged = 81, ‖r‖ = 0.05502827333811628
+Iter 75: V_size = 420, Converged = 81, ‖r‖ = 0.01363010742573913
+Iter 76: V_size = 420, Converged = 82, ‖r‖ = 0.05402146514896309
+Iter 77: V_size = 420, Converged = 82, ‖r‖ = 0.01338897494999534
+Iter 78: V_size = 420, Converged = 82, ‖r‖ = 0.0530530427692368
+Iter 79: V_size = 420, Converged = 84, ‖r‖ = 0.01316062956201701
+Iter 80: V_size = 420, Converged = 85, ‖r‖ = 0.052118529139483595
+Iter 81: V_size = 420, Converged = 85, ‖r‖ = 0.012943730438652212
+Iter 82: V_size = 420, Converged = 85, ‖r‖ = 0.0512157194972123
+Iter 83: V_size = 420, Converged = 90, ‖r‖ = 0.012737303120603116
+Iter 84: V_size = 420, Converged = 90, ‖r‖ = 0.050344120291857634
+Iter 85: V_size = 420, Converged = 90, ‖r‖ = 0.012540282039896548
+Iter 86: V_size = 408, Converged = 96, ‖r‖ = 0.04950080746523635
+Iter 87: V_size = 408, Converged = 96, ‖r‖ = 0.01769785420889083
+Iter 88: V_size = 408, Converged = 96, ‖r‖ = 0.05573539264774834
+Iter 89: V_size = 404, Converged = 98, ‖r‖ = 0.01744875766276154
+Iter 90: V_size = 404, Converged = 98, ‖r‖ = 0.05481834068417322
+Iter 91: V_size = 404, Converged = 98, ‖r‖ = 0.017207926082645063
+Iter 92: V_size = 394, Converged = 103, ‖r‖ = 0.05392383339714702
+Iter 93: V_size = 394, Converged = 103, ‖r‖ = 0.016974826657012866
+Iter 94: V_size = 388, Converged = 106, ‖r‖ = 0.05305327775048903
+Iter 95: V_size = 388, Converged = 106, ‖r‖ = 0.016748833444399504
+Iter 96: V_size = 388, Converged = 106, ‖r‖ = 0.0522055407211577
+Iter 97: V_size = 366, Converged = 117, ‖r‖ = 0.016529650161571204
+Iter 98: V_size = 366, Converged = 117, ‖r‖ = 0.051374950910176395
+Iter 99: V_size = 366, Converged = 117, ‖r‖ = 0.0163159476238021
+Iter 100: V_size = 354, Converged = 123, ‖r‖ = 0.05056250129751578
+Iter 101: V_size = 354, Converged = 123, ‖r‖ = 0.016109040356632878
+Iter 102: V_size = 352, Converged = 124, ‖r‖ = 0.04977077697294132
+Iter 103: V_size = 352, Converged = 124, ‖r‖ = 0.01195432963469027
+Iter 104: V_size = 352, Converged = 124, ‖r‖ = 0.054306651551625264
+Iter 105: V_size = 340, Converged = 130, ‖r‖ = 0.011761996886242274
+Iter 106: V_size = 338, Converged = 131, ‖r‖ = 0.05359848511290498
+Iter 107: V_size = 338, Converged = 131, ‖r‖ = 0.01157675039856368
+Iter 108: V_size = 338, Converged = 131, ‖r‖ = 0.052912052660434625
+Iter 109: V_size = 314, Converged = 143, ‖r‖ = 0.011398804534306112
+Iter 110: V_size = 314, Converged = 143, ‖r‖ = 0.052239077895826144
+Iter 111: V_size = 314, Converged = 143, ‖r‖ = 0.0112259720031075
+Iter 112: V_size = 298, Converged = 151, ‖r‖ = 0.05158209836158216
+Iter 113: V_size = 298, Converged = 151, ‖r‖ = 0.011059429960096387
+Iter 114: V_size = 296, Converged = 152, ‖r‖ = 0.05093215348497227
+Iter 115: V_size = 296, Converged = 152, ‖r‖ = 0.010898980300194306
+Iter 116: V_size = 296, Converged = 152, ‖r‖ = 0.05029826755738746
+Iter 117: V_size = 276, Converged = 162, ‖r‖ = 0.010744557336379
+Iter 118: V_size = 274, Converged = 163, ‖r‖ = 0.04967858365265324
+Iter 119: V_size = 411, Converged = 163, ‖r‖ = 0.022800291437233163
+Iter 120: V_size = 274, Converged = 163, ‖r‖ = 0.014580540198551767
+Iter 121: V_size = 411, Converged = 163, ‖r‖ = 0.010551831687588576
+Iter 122: V_size = 274, Converged = 163, ‖r‖ = 0.036762392610451625
+Iter 123: V_size = 272, Converged = 164, ‖r‖ = 0.010254188952225756
+Iter 124: V_size = 260, Converged = 170, ‖r‖ = 0.03437952810422976
+Iter 125: V_size = 390, Converged = 170, ‖r‖ = 0.009586108107820976
+Iter 126: V_size = 260, Converged = 170, ‖r‖ = 0.008859639300798415
+Iter 127: V_size = 390, Converged = 170, ‖r‖ = 0.006653831407081561
+Iter 128: V_size = 260, Converged = 170, ‖r‖ = 0.031471755292334466
+Iter 129: V_size = 78, Converged = 261, ‖r‖ = 0.006626378149050285
+Iter 130: V_size = 117, Converged = 261, ‖r‖ = 0.05033815510346629
+Iter 131: V_size = 156, Converged = 261, ‖r‖ = 0.007474679747524136
+Iter 132: V_size = 195, Converged = 261, ‖r‖ = 0.008035175447667228
+Iter 133: V_size = 234, Converged = 261, ‖r‖ = 0.005897526322905298
+Iter 134: V_size = 273, Converged = 261, ‖r‖ = 0.005169093056375716
+Iter 135: V_size = 312, Converged = 261, ‖r‖ = 0.00474058152791642
+Iter 136: V_size = 72, Converged = 264, ‖r‖ = 0.004520674024103191
+Iter 137: V_size = 108, Converged = 264, ‖r‖ = 0.00855361210148237
+Iter 138: V_size = 144, Converged = 264, ‖r‖ = 0.008414831334306197
+Iter 139: V_size = 48, Converged = 276, ‖r‖ = 0.0084420564732736
+Iter 140: V_size = 72, Converged = 276, ‖r‖ = 0.0096895049530217
+Iter 141: V_size = 96, Converged = 276, ‖r‖ = 0.010818751941790954
+Iter 142: V_size = 18, Converged = 291, ‖r‖ = 0.009673584591343617
+Iter 143: V_size = 27, Converged = 291, ‖r‖ = 0.01806477088632864
+Iter 144: V_size = 36, Converged = 291, ‖r‖ = 0.01804390690844901
+Converged all eigenvalues.
+1870.948356 seconds (185.49 M allocations: 5.435 TiB, 5.00% gc time)
+Total estimated FLOPs: 24727768143460
+
+Reading exact Eigenvalues...
+Reading eigenvalues from test_EW_results_2.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×300 adjoint(::Vector{Float64}) with eltype Float64:
+ 2.96843e-7  858.847  415.466  237.106  156.116  113.682  84.0153  64.2412  50.3119  41.8406  34.2865  28.802  24.2507  20.8952  18.4508  16.1987  14.2365  12.7759  11.4982  10.4307  9.45147  8.54909  7.91547  7.21801  6.60326  6.14124  5.69157  5.3241  4.95993  4.61284  4.55684  4.34807  4.10296  3.8519  3.6121  3.43333  3.23213  3.07029  2.90842  2.76941  2.62572  2.4923  2.38184  2.26633  2.17147  2.07047  1.97506  1.88862  1.81721  1.74034  1.67542  1.60897  1.5505  1.48771  1.43137  1.38168  1.32905  1.28732  1.23962  1.19684  1.15857  1.12002  1.08539  1.04967  1.01593  0.98345  0.952238  0.922859  0.895855  0.868224  0.844284  0.819824  0.795481  0.773421  0.752308  0.732214  0.712358  0.693027  0.674358  0.656523  0.638966  0.622436  0.606567  0.591294  0.576145  0.561649  0.548234  0.534359  0.521487  0.508625  0.49627  0.484481  0.47291  0.461702  0.450826  0.440308  0.430097  0.42016  0.410507  0.401248  0.392163  0.383267  0.374703  0.366437  0.35834  0.350575  0.342964  0.335363  0.328225  0.32131  0.314423  0.307734  0.30117  0.295083  0.289044  0.28293  0.277273  0.271661  0.266097  0.260748  0.255537  0.250454  0.245651  0.240636  0.236123  0.231515  0.226934  0.222703  0.218212  0.214163  0.210128  0.206311  0.202259  0.198346  0.194821  0.191006  0.187652  0.184134  0.180998  0.177651  0.174431  0.171243  0.168253  0.165174  0.162218  0.159504  0.156382  0.153794  0.150982  0.148507  0.145948  0.143348  0.140944  0.138682  0.136186  0.134008  0.131584  0.12931  0.127395  0.125062  0.122858  0.121233  0.118939  0.116958  0.115363  0.113279  0.111437  0.109622  0.107601  0.106003  0.104338  0.10287  0.101062  0.0995605  0.0978601  0.096559  0.0950158  0.093611  0.0921047  0.0903071  0.0892596  0.0877423  0.0866409  0.0852359  0.0839716  0.0821931  0.0815291  0.0800972  0.0788473  0.0778108  0.0765966  0.0753415  0.0747321  0.0736354  0.0719889  0.0710014  0.0700966  0.0690204  0.0682585  0.0676801  0.0664763  0.0653676  0.0647665  0.0638166  0.0626411  0.061785  0.060828  0.0603214  0.0592244  0.0586365  0.058001  0.0571703  0.0564159  0.055696  0.0549802  0.0538192  0.0535592  0.0523478  0.0520878  0.0516957  0.0509617  0.0502865  0.0497233  0.0489605  0.0484153  0.0476685  0.0472514  0.0468983  0.0460505  0.0456345  0.0448437  0.0445018  0.0436374  0.0435474  0.043016  0.0426646  0.0419822  0.0414127  0.0411245  0.0408939  0.0403326  0.0399175  0.0396797  0.0392822  0.0388208  0.0384345  0.0379972  0.0376191  0.0373341  0.0369062  0.0366488  0.0363097  0.0360277  0.0355038  0.0351296  0.0349529  0.0346852  0.0343234  0.0341294  0.0338383  0.0335322  0.0333105  0.0329514  0.0327721  0.0327007  0.0323925  0.0321124  0.0319787  0.0315766  0.0314025  0.0312785  0.0311312  0.0309674  0.0309003  0.0305221  0.0304905  0.0303593  0.0301817  0.0301646  0.0296768  0.029531  0.0294838  0.0293863  0.0293233  0.0291855  0.0290044  0.0289461  0.028888  0.0286757  0.0286327  0.0285892  0.0284224  0.0282946  0.0282317  0.0280592  0.0279854  0.0278137  0.0278229  0.0277949  0.0277717
+300 Eigenvalues converges, out of 300 requested.
+
+ === Running with l = 400 ===
+NEV / Matrix_dimension: 400 / 20000
+read large_sparse_matrix_2.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.693256510094005e-6
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 9.488184725735897e-10
+Iter 3: V_size = 278, Converged = 1, ‖r‖ = 6.621778960091238e-14
+Iter 4: V_size = 420, Converged = 1, ‖r‖ = 1.3921945265608962e-13
+Iter 5: V_size = 420, Converged = 1, ‖r‖ = 3.181208068532914e-15
+Iter 6: V_size = 420, Converged = 10, ‖r‖ = 3.463297436927743e-15
+Iter 7: V_size = 420, Converged = 10, ‖r‖ = 3.920785203094883e-8
+Iter 8: V_size = 420, Converged = 10, ‖r‖ = 6.056173451203194e-9
+Iter 9: V_size = 420, Converged = 30, ‖r‖ = 1.1869875816496792e-9
+Iter 10: V_size = 420, Converged = 30, ‖r‖ = 4.7269026319653675e-5
+Iter 11: V_size = 420, Converged = 30, ‖r‖ = 4.593209137222601e-5
+Iter 12: V_size = 420, Converged = 39, ‖r‖ = 2.038897705065647e-5
+Iter 13: V_size = 420, Converged = 39, ‖r‖ = 0.003753111042139203
+Iter 14: V_size = 420, Converged = 39, ‖r‖ = 0.002247487050629931
+Iter 15: V_size = 420, Converged = 40, ‖r‖ = 0.003209602802314159
+Iter 16: V_size = 420, Converged = 40, ‖r‖ = 0.007016154007118786
+Iter 17: V_size = 420, Converged = 40, ‖r‖ = 0.01621981696122722
+Iter 18: V_size = 420, Converged = 45, ‖r‖ = 0.005682222072307325
+Iter 19: V_size = 420, Converged = 45, ‖r‖ = 0.012631637537578922
+Iter 20: V_size = 420, Converged = 45, ‖r‖ = 0.010231774894871462
+Iter 21: V_size = 420, Converged = 46, ‖r‖ = 0.012026581723713976
+Iter 22: V_size = 420, Converged = 46, ‖r‖ = 0.014218369464185174
+Iter 23: V_size = 420, Converged = 46, ‖r‖ = 0.01657869374607168
+Iter 24: V_size = 420, Converged = 47, ‖r‖ = 0.011904804202205323
+Iter 25: V_size = 420, Converged = 47, ‖r‖ = 0.01508007851937312
+Iter 26: V_size = 420, Converged = 48, ‖r‖ = 0.010020663273901982
+Iter 27: V_size = 420, Converged = 48, ‖r‖ = 0.015150560644487861
+Iter 28: V_size = 420, Converged = 48, ‖r‖ = 0.011827734203681162
+Iter 29: V_size = 420, Converged = 48, ‖r‖ = 0.014410821665709067
+Iter 30: V_size = 420, Converged = 48, ‖r‖ = 0.010891438666833753
+Iter 31: V_size = 420, Converged = 50, ‖r‖ = 0.01375286455390544
+Iter 32: V_size = 420, Converged = 50, ‖r‖ = 0.02726600308969122
+Iter 33: V_size = 420, Converged = 50, ‖r‖ = 0.016111701331464674
+Iter 34: V_size = 420, Converged = 51, ‖r‖ = 0.024109204888418084
+Iter 35: V_size = 420, Converged = 51, ‖r‖ = 0.019727423917178504
+Iter 36: V_size = 420, Converged = 51, ‖r‖ = 0.016173809726242466
+Iter 37: V_size = 420, Converged = 52, ‖r‖ = 0.018653120375198864
+Iter 38: V_size = 420, Converged = 52, ‖r‖ = 0.01490694999454791
+Iter 39: V_size = 420, Converged = 52, ‖r‖ = 0.01769565456298136
+Iter 40: V_size = 420, Converged = 52, ‖r‖ = 0.013782571895384685
+Iter 41: V_size = 420, Converged = 52, ‖r‖ = 0.016838142090719446
+Iter 42: V_size = 420, Converged = 52, ‖r‖ = 0.012784417368059587
+Iter 43: V_size = 420, Converged = 53, ‖r‖ = 0.0160656116532765
+Iter 44: V_size = 420, Converged = 53, ‖r‖ = 0.06254098939266889
+Iter 45: V_size = 420, Converged = 53, ‖r‖ = 0.06086544909080369
+Iter 46: V_size = 420, Converged = 53, ‖r‖ = 0.06191305950084325
+Iter 47: V_size = 420, Converged = 53, ‖r‖ = 0.06027467543451668
+Iter 48: V_size = 420, Converged = 53, ‖r‖ = 0.06135796370830285
+Iter 49: V_size = 420, Converged = 53, ‖r‖ = 0.05970060237090669
+Iter 50: V_size = 420, Converged = 53, ‖r‖ = 0.06086379328278467
+Iter 51: V_size = 420, Converged = 53, ‖r‖ = 0.05914511071919174
+Iter 52: V_size = 420, Converged = 53, ‖r‖ = 0.060421067332528264
+Iter 53: V_size = 420, Converged = 53, ‖r‖ = 0.05860619990521138
+Iter 54: V_size = 420, Converged = 54, ‖r‖ = 0.06002382219244805
+Iter 55: V_size = 420, Converged = 54, ‖r‖ = 0.05808178683327859
+Iter 56: V_size = 420, Converged = 54, ‖r‖ = 0.05966104572758309
+Iter 57: V_size = 420, Converged = 56, ‖r‖ = 0.05757306867357814
+Iter 58: V_size = 420, Converged = 56, ‖r‖ = 0.05933098033977283
+Iter 59: V_size = 420, Converged = 57, ‖r‖ = 0.057075427207541184
+Iter 60: V_size = 420, Converged = 57, ‖r‖ = 0.059028683389818676
+Iter 61: V_size = 420, Converged = 57, ‖r‖ = 0.0565895928698365
+Iter 62: V_size = 420, Converged = 58, ‖r‖ = 0.05875063586851984
+Iter 63: V_size = 420, Converged = 58, ‖r‖ = 0.05612194580701652
+Iter 64: V_size = 420, Converged = 58, ‖r‖ = 0.05849314449715808
+Iter 65: V_size = 420, Converged = 59, ‖r‖ = 0.05566822627182998
+Iter 66: V_size = 420, Converged = 59, ‖r‖ = 0.058256342407419746
+Iter 67: V_size = 420, Converged = 59, ‖r‖ = 0.05522963589022237
+Iter 68: V_size = 420, Converged = 59, ‖r‖ = 0.05803646506242527
+Iter 69: V_size = 420, Converged = 59, ‖r‖ = 0.05480537819530111
+Iter 70: V_size = 420, Converged = 59, ‖r‖ = 0.05783097277984882
+Iter 71: V_size = 420, Converged = 59, ‖r‖ = 0.054394754310278376
+Iter 72: V_size = 420, Converged = 59, ‖r‖ = 0.057638472902600955
+Iter 73: V_size = 420, Converged = 60, ‖r‖ = 0.053997466729322666
+Iter 74: V_size = 420, Converged = 60, ‖r‖ = 0.05745917486664834
+Iter 75: V_size = 420, Converged = 60, ‖r‖ = 0.05361368266307366
+Iter 76: V_size = 420, Converged = 60, ‖r‖ = 0.05729148965799657
+Iter 77: V_size = 420, Converged = 60, ‖r‖ = 0.053242159369409875
+Iter 78: V_size = 420, Converged = 60, ‖r‖ = 0.05713177257774499
+Iter 79: V_size = 420, Converged = 60, ‖r‖ = 0.05288312685707563
+Iter 80: V_size = 420, Converged = 60, ‖r‖ = 0.05697970137725406
+Iter 81: V_size = 420, Converged = 60, ‖r‖ = 0.05253645420936458
+Iter 82: V_size = 420, Converged = 60, ‖r‖ = 0.05683433135446231
+Iter 83: V_size = 420, Converged = 60, ‖r‖ = 0.05220160279012915
+Iter 84: V_size = 420, Converged = 60, ‖r‖ = 0.05669487268234749
+Iter 85: V_size = 420, Converged = 60, ‖r‖ = 0.051877739726687834
+Iter 86: V_size = 420, Converged = 60, ‖r‖ = 0.05656064091339011
+Iter 87: V_size = 420, Converged = 60, ‖r‖ = 0.05156486444849777
+Iter 88: V_size = 420, Converged = 60, ‖r‖ = 0.056430958942293906
+Iter 89: V_size = 420, Converged = 60, ‖r‖ = 0.05126275570011814
+Iter 90: V_size = 420, Converged = 60, ‖r‖ = 0.05630534370193509
+Iter 91: V_size = 420, Converged = 61, ‖r‖ = 0.05097087712135708
+Iter 92: V_size = 420, Converged = 61, ‖r‖ = 0.056183481669028076
+Iter 93: V_size = 420, Converged = 61, ‖r‖ = 0.05068879631941663
+Iter 94: V_size = 420, Converged = 62, ‖r‖ = 0.05606493906115629
+Iter 95: V_size = 420, Converged = 62, ‖r‖ = 0.0504160639472221
+Iter 96: V_size = 420, Converged = 62, ‖r‖ = 0.05594947027482115
+Iter 97: V_size = 420, Converged = 62, ‖r‖ = 0.05015215348430898
+Iter 98: V_size = 420, Converged = 62, ‖r‖ = 0.05583657945547439
+Iter 99: V_size = 420, Converged = 62, ‖r‖ = 0.04989687582706999
+Iter 100: V_size = 420, Converged = 63, ‖r‖ = 0.05572590105428144
+Iter 101: V_size = 420, Converged = 63, ‖r‖ = 0.04964945292308071
+Iter 102: V_size = 420, Converged = 63, ‖r‖ = 0.05561722195595679
+Iter 103: V_size = 420, Converged = 63, ‖r‖ = 0.04940988594831184
+Iter 104: V_size = 420, Converged = 64, ‖r‖ = 0.05551066767087449
+Iter 105: V_size = 420, Converged = 64, ‖r‖ = 0.049178198118209705
+Iter 106: V_size = 420, Converged = 64, ‖r‖ = 0.0554058458004608
+Iter 107: V_size = 420, Converged = 65, ‖r‖ = 0.04895363053195014
+Iter 108: V_size = 420, Converged = 66, ‖r‖ = 0.055302535641462335
+Iter 109: V_size = 420, Converged = 66, ‖r‖ = 0.04873577821716863
+Iter 110: V_size = 420, Converged = 66, ‖r‖ = 0.05520059286729756
+Iter 111: V_size = 420, Converged = 68, ‖r‖ = 0.04852472764316901
+Iter 112: V_size = 420, Converged = 70, ‖r‖ = 0.05510004546202753
+Iter 113: V_size = 420, Converged = 70, ‖r‖ = 0.04831997568578486
+Iter 114: V_size = 420, Converged = 70, ‖r‖ = 0.05500054211724255
+Iter 115: V_size = 420, Converged = 76, ‖r‖ = 0.04812078884794051
+Iter 116: V_size = 420, Converged = 76, ‖r‖ = 0.05490225351438008
+Iter 117: V_size = 420, Converged = 76, ‖r‖ = 0.047927149691927004
+Iter 118: V_size = 420, Converged = 80, ‖r‖ = 0.054804705808938994
+Iter 119: V_size = 420, Converged = 80, ‖r‖ = 0.04773890993126347
+Iter 120: V_size = 420, Converged = 80, ‖r‖ = 0.05470819514920026
+Iter 121: V_size = 420, Converged = 84, ‖r‖ = 0.047556518202346645
+Iter 122: V_size = 420, Converged = 84, ‖r‖ = 0.05461269514166706
+Iter 123: V_size = 420, Converged = 84, ‖r‖ = 0.04737936616844557
+Iter 124: V_size = 420, Converged = 89, ‖r‖ = 0.054517787162877175
+Iter 125: V_size = 420, Converged = 89, ‖r‖ = 0.04720640251949195
+Iter 126: V_size = 420, Converged = 89, ‖r‖ = 0.05442365291604677
+Iter 127: V_size = 420, Converged = 91, ‖r‖ = 0.04703854964306554
+Iter 128: V_size = 420, Converged = 92, ‖r‖ = 0.054330107822640986
+Iter 129: V_size = 420, Converged = 92, ‖r‖ = 0.04687514174295512
+Iter 130: V_size = 420, Converged = 92, ‖r‖ = 0.054237201714131544
+Iter 131: V_size = 420, Converged = 95, ‖r‖ = 0.04671593880571268
+Iter 132: V_size = 420, Converged = 95, ‖r‖ = 0.05414484815378625
+Iter 133: V_size = 420, Converged = 95, ‖r‖ = 0.04656073506878482
+Iter 134: V_size = 420, Converged = 97, ‖r‖ = 0.05405304219552796
+Iter 135: V_size = 420, Converged = 98, ‖r‖ = 0.04640909053551744
+Iter 136: V_size = 420, Converged = 100, ‖r‖ = 0.05396163018930992
+Iter 137: V_size = 420, Converged = 100, ‖r‖ = 0.04626120389146947
+Iter 138: V_size = 420, Converged = 100, ‖r‖ = 0.05387057462519399
+Iter 139: V_size = 420, Converged = 105, ‖r‖ = 0.0461166538894165
+Iter 140: V_size = 420, Converged = 106, ‖r‖ = 0.05377996594683126
+Iter 141: V_size = 420, Converged = 107, ‖r‖ = 0.0459754949428796
+Iter 142: V_size = 420, Converged = 107, ‖r‖ = 0.05368962477034505
+Iter 143: V_size = 420, Converged = 107, ‖r‖ = 0.04583728403585982
+Iter 144: V_size = 420, Converged = 112, ‖r‖ = 0.05359965113072714
+Iter 145: V_size = 420, Converged = 113, ‖r‖ = 0.04570194490577303
+Iter 146: V_size = 420, Converged = 113, ‖r‖ = 0.05350984112938738
+Iter 147: V_size = 420, Converged = 113, ‖r‖ = 0.045569472967577435
+Iter 148: V_size = 420, Converged = 123, ‖r‖ = 0.053420351480412465
+Iter 149: V_size = 420, Converged = 123, ‖r‖ = 0.04543965391885787
+Iter 150: V_size = 420, Converged = 123, ‖r‖ = 0.05333110732805417
+Max iterations (150) reached without convergence. Skipping this case.
+2930.150584 seconds (296.71 M allocations: 8.674 TiB, 5.04% gc time)
+Total estimated FLOPs: 34968107108540
+
+Reading exact Eigenvalues...
+Reading eigenvalues from test_EW_results_2.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×123 adjoint(::Vector{Float64}) with eltype Float64:
+ 2.96843e-7  858.847  415.466  237.106  156.116  113.682  84.0153  64.2412  50.3119  41.8406  34.2865  28.802  24.2507  20.8952  18.4508  16.1987  14.2365  12.7759  11.4982  10.4307  9.45147  8.54909  7.91547  7.21801  6.60326  6.14124  5.69157  5.3241  4.95993  4.61284  4.55684  4.34807  4.10296  3.8519  3.6121  3.43333  3.23213  3.07029  2.90842  2.76941  2.62572  2.49231  2.38185  2.26633  2.17147  2.07047  1.97509  1.88863  1.81724  1.74035  1.67543  1.60898  1.55051  1.49123  1.43828  1.38259  1.33814  1.28779  1.24275  1.20484  1.17268  1.15137  1.11314  1.07716  1.04342  1.01158  0.980289  0.950607  0.921094  0.892905  0.865894  0.840047  0.815125  0.791361  0.768513  0.746564  0.725363  0.705121  0.685594  0.666794  0.648789  0.63133  0.614467  0.598302  0.58268  0.567587  0.553228  0.539195  0.525742  0.512595  0.500021  0.487831  0.476056  0.46455  0.453511  0.4428  0.432458  0.422332  0.412597  0.403277  0.394012  0.385058  0.376451  0.368109  0.360119  0.35219  0.344628  0.337042  0.329867  0.323025  0.316178  0.309483  0.302947  0.296837  0.290739  0.284723  0.279038  0.273391  0.267833  0.262447  0.2573  0.252115  0.247378
+123 Eigenvalues converges, out of 400 requested.
+
+ === Running with l = 500 ===
+NEV / Matrix_dimension: 500 / 20000
+read large_sparse_matrix_2.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.693256510094005e-6
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 9.488184725735897e-10
+Iter 3: V_size = 278, Converged = 1, ‖r‖ = 6.621778960091238e-14
+Iter 4: V_size = 420, Converged = 1, ‖r‖ = 1.3921945265608962e-13
+Iter 5: V_size = 420, Converged = 1, ‖r‖ = 2.4549001123765666e-15
+Iter 6: V_size = 420, Converged = 10, ‖r‖ = 2.537346837247137e-15
+Iter 7: V_size = 420, Converged = 24, ‖r‖ = 1.9370177569478014e-6
+Iter 8: V_size = 420, Converged = 24, ‖r‖ = 2.4452647094365225e-8
+Iter 9: V_size = 420, Converged = 33, ‖r‖ = 2.445264707168154e-8
+Iter 10: V_size = 420, Converged = 37, ‖r‖ = 6.240685143893403e-6
+Iter 11: V_size = 420, Converged = 37, ‖r‖ = 9.272290066030109e-7
+Iter 12: V_size = 420, Converged = 48, ‖r‖ = 9.272290066045266e-7
+Iter 13: V_size = 420, Converged = 48, ‖r‖ = 0.0014869618857569764
+Iter 14: V_size = 420, Converged = 48, ‖r‖ = 0.0014869618857569658
+Iter 15: V_size = 420, Converged = 75, ‖r‖ = 0.0014869618857569628
+Iter 16: V_size = 420, Converged = 75, ‖r‖ = 0.020016417527211738
+Iter 17: V_size = 420, Converged = 75, ‖r‖ = 0.020016417527211748
+Iter 18: V_size = 420, Converged = 84, ‖r‖ = 0.02001641752721174
+Iter 19: V_size = 420, Converged = 84, ‖r‖ = 0.015051325550230477
+Iter 20: V_size = 420, Converged = 84, ‖r‖ = 0.006195471053794543
+Iter 21: V_size = 420, Converged = 84, ‖r‖ = 0.004853945489964131
+Iter 22: V_size = 420, Converged = 84, ‖r‖ = 0.004716775913887308
+Iter 23: V_size = 420, Converged = 85, ‖r‖ = 0.004703948243646014
+Iter 24: V_size = 420, Converged = 85, ‖r‖ = 0.018262328355674786
+Iter 25: V_size = 420, Converged = 85, ‖r‖ = 0.018261777959759293
+Iter 26: V_size = 420, Converged = 88, ‖r‖ = 0.018261827787571416
+Iter 27: V_size = 420, Converged = 88, ‖r‖ = 0.009851248606070605
+Iter 28: V_size = 420, Converged = 88, ‖r‖ = 0.009820344770611732
+Iter 29: V_size = 420, Converged = 90, ‖r‖ = 0.009812319087824376
+Iter 30: V_size = 420, Converged = 90, ‖r‖ = 0.016016618899604228
+Iter 31: V_size = 420, Converged = 90, ‖r‖ = 0.015851528923406525
+Iter 32: V_size = 420, Converged = 92, ‖r‖ = 0.015825671297435784
+Iter 33: V_size = 420, Converged = 92, ‖r‖ = 0.024665650616259287
+Iter 34: V_size = 420, Converged = 92, ‖r‖ = 0.02459640470489492
+Iter 35: V_size = 420, Converged = 95, ‖r‖ = 0.024555036252846548
+Iter 36: V_size = 420, Converged = 95, ‖r‖ = 0.018619218602268534
+Iter 37: V_size = 420, Converged = 95, ‖r‖ = 0.018582360315648968
+Iter 38: V_size = 420, Converged = 97, ‖r‖ = 0.018570847620552396
+Iter 39: V_size = 420, Converged = 97, ‖r‖ = 0.018999888745396067
+Iter 40: V_size = 420, Converged = 97, ‖r‖ = 0.018947109326868855
+Iter 41: V_size = 420, Converged = 99, ‖r‖ = 0.018933801677261827
+Iter 42: V_size = 420, Converged = 99, ‖r‖ = 0.028662864533505195
+Iter 43: V_size = 420, Converged = 99, ‖r‖ = 0.028638427633830815
+Iter 44: V_size = 420, Converged = 104, ‖r‖ = 0.028626772171138223
+Iter 45: V_size = 420, Converged = 104, ‖r‖ = 0.018645514976889137
+Iter 46: V_size = 420, Converged = 104, ‖r‖ = 0.018465513178406435
+Iter 47: V_size = 420, Converged = 106, ‖r‖ = 0.018392428592592346
+Iter 48: V_size = 420, Converged = 106, ‖r‖ = 0.024574654271016134
+Iter 49: V_size = 420, Converged = 106, ‖r‖ = 0.024506189125133544
+Iter 50: V_size = 420, Converged = 109, ‖r‖ = 0.02447781833957242
+Iter 51: V_size = 420, Converged = 109, ‖r‖ = 0.02714591661520239
+Iter 52: V_size = 420, Converged = 109, ‖r‖ = 0.027104262649788217
+Iter 53: V_size = 420, Converged = 110, ‖r‖ = 0.02707598597269097
+Iter 54: V_size = 420, Converged = 110, ‖r‖ = 0.02242470776617159
+Iter 55: V_size = 420, Converged = 110, ‖r‖ = 0.022350211454658757
+Iter 56: V_size = 420, Converged = 113, ‖r‖ = 0.022303975907757307
+Iter 57: V_size = 420, Converged = 113, ‖r‖ = 0.020525464700443755
+Iter 58: V_size = 420, Converged = 113, ‖r‖ = 0.02047800786705155
+Iter 59: V_size = 420, Converged = 115, ‖r‖ = 0.020437002738524127
+Iter 60: V_size = 420, Converged = 115, ‖r‖ = 0.01625574497877764
+Iter 61: V_size = 420, Converged = 115, ‖r‖ = 0.01616247176074879
+Iter 62: V_size = 420, Converged = 118, ‖r‖ = 0.01611545470338152
+Iter 63: V_size = 420, Converged = 118, ‖r‖ = 0.016585148809629646
+Iter 64: V_size = 420, Converged = 118, ‖r‖ = 0.016459801918109505
+Iter 65: V_size = 420, Converged = 120, ‖r‖ = 0.016311895626322914
+Iter 66: V_size = 420, Converged = 120, ‖r‖ = 0.018550515453236303
+Iter 67: V_size = 420, Converged = 120, ‖r‖ = 0.018429862160018264
+Iter 68: V_size = 420, Converged = 121, ‖r‖ = 0.018341840527932772
+Iter 69: V_size = 420, Converged = 121, ‖r‖ = 0.01108512979387103
+Iter 70: V_size = 420, Converged = 121, ‖r‖ = 0.010979788820180206
+Iter 71: V_size = 420, Converged = 124, ‖r‖ = 0.01082704493444903
+Iter 72: V_size = 420, Converged = 124, ‖r‖ = 0.02093865341047129
+Iter 73: V_size = 420, Converged = 124, ‖r‖ = 0.020551053960518966
+Iter 74: V_size = 420, Converged = 124, ‖r‖ = 0.02048050864982726
+Iter 75: V_size = 420, Converged = 124, ‖r‖ = 0.02023937777609966
+Iter 76: V_size = 420, Converged = 126, ‖r‖ = 0.02019842734946509
+Iter 77: V_size = 420, Converged = 126, ‖r‖ = 0.019658838790595747
+Iter 78: V_size = 420, Converged = 126, ‖r‖ = 0.0195376092702007
+Iter 79: V_size = 420, Converged = 128, ‖r‖ = 0.019414093070343207
+Iter 80: V_size = 420, Converged = 128, ‖r‖ = 0.015501007797586128
+Iter 81: V_size = 420, Converged = 128, ‖r‖ = 0.015414557931006986
+Iter 82: V_size = 420, Converged = 130, ‖r‖ = 0.015314812850787826
+Iter 83: V_size = 420, Converged = 130, ‖r‖ = 0.016098332986588942
+Iter 84: V_size = 420, Converged = 130, ‖r‖ = 0.01596144199590606
+Iter 85: V_size = 420, Converged = 131, ‖r‖ = 0.015834175447025957
+Iter 86: V_size = 420, Converged = 131, ‖r‖ = 0.017093244853318475
+Iter 87: V_size = 420, Converged = 131, ‖r‖ = 0.01698129025233536
+Iter 88: V_size = 420, Converged = 133, ‖r‖ = 0.016921734162054617
+Iter 89: V_size = 420, Converged = 133, ‖r‖ = 0.024722747859876028
+Iter 90: V_size = 420, Converged = 133, ‖r‖ = 0.024617978641335577
+Iter 91: V_size = 420, Converged = 136, ‖r‖ = 0.02455628382541812
+Iter 92: V_size = 420, Converged = 136, ‖r‖ = 0.013178366876926903
+Iter 93: V_size = 420, Converged = 136, ‖r‖ = 0.013020023725206714
+Iter 94: V_size = 420, Converged = 139, ‖r‖ = 0.01289951373055131
+Iter 95: V_size = 420, Converged = 139, ‖r‖ = 0.016813557036382765
+Iter 96: V_size = 420, Converged = 139, ‖r‖ = 0.01661726659975916
+Iter 97: V_size = 420, Converged = 140, ‖r‖ = 0.01658148680399786
+Iter 98: V_size = 420, Converged = 140, ‖r‖ = 0.013763079386489454
+Iter 99: V_size = 420, Converged = 140, ‖r‖ = 0.013658220365965017
+Iter 100: V_size = 420, Converged = 144, ‖r‖ = 0.01359740382726519
+Iter 101: V_size = 420, Converged = 145, ‖r‖ = 0.013508876111517075
+Iter 102: V_size = 420, Converged = 145, ‖r‖ = 0.012583739370667946
+Iter 103: V_size = 420, Converged = 145, ‖r‖ = 0.012483266002707076
+Iter 104: V_size = 420, Converged = 150, ‖r‖ = 0.01236448677271737
+Iter 105: V_size = 420, Converged = 150, ‖r‖ = 0.014978665788605126
+Iter 106: V_size = 420, Converged = 150, ‖r‖ = 0.01479176271666611
+Iter 107: V_size = 420, Converged = 153, ‖r‖ = 0.01478747938230201
+Iter 108: V_size = 420, Converged = 153, ‖r‖ = 0.01202383818908399
+Iter 109: V_size = 420, Converged = 153, ‖r‖ = 0.011843220898205692
+Iter 110: V_size = 420, Converged = 155, ‖r‖ = 0.011673324838906318
+Iter 111: V_size = 420, Converged = 156, ‖r‖ = 0.011531362575609196
+Iter 112: V_size = 420, Converged = 156, ‖r‖ = 0.011386208145525753
+Iter 113: V_size = 420, Converged = 157, ‖r‖ = 0.011273722230258411
+Iter 114: V_size = 420, Converged = 157, ‖r‖ = 0.012370495176279278
+Iter 115: V_size = 420, Converged = 157, ‖r‖ = 0.012244788813858999
+Iter 116: V_size = 420, Converged = 167, ‖r‖ = 0.01219628729320101
+Iter 117: V_size = 420, Converged = 167, ‖r‖ = 0.012422841812119343
+Iter 118: V_size = 420, Converged = 167, ‖r‖ = 0.012358916372574535
+Iter 119: V_size = 420, Converged = 170, ‖r‖ = 0.01224958579808963
+Iter 120: V_size = 420, Converged = 170, ‖r‖ = 0.013550513688776142
+Iter 121: V_size = 420, Converged = 170, ‖r‖ = 0.013473912370033073
+Iter 122: V_size = 420, Converged = 176, ‖r‖ = 0.013307484534987143
+Iter 123: V_size = 420, Converged = 176, ‖r‖ = 0.013240171536414054
+Iter 124: V_size = 420, Converged = 177, ‖r‖ = 0.013103704587048588
+Iter 125: V_size = 420, Converged = 177, ‖r‖ = 0.013971983211986732
+Iter 126: V_size = 420, Converged = 177, ‖r‖ = 0.013879943126574996
+Iter 127: V_size = 420, Converged = 185, ‖r‖ = 0.01382311577798581
+Iter 128: V_size = 420, Converged = 185, ‖r‖ = 0.011751707560533963
+Iter 129: V_size = 420, Converged = 185, ‖r‖ = 0.011704448846786111
+Iter 130: V_size = 420, Converged = 190, ‖r‖ = 0.011601331610988946
+Iter 131: V_size = 420, Converged = 190, ‖r‖ = 0.01539506821318905
+Iter 132: V_size = 420, Converged = 190, ‖r‖ = 0.01533454779806171
+Iter 133: V_size = 420, Converged = 194, ‖r‖ = 0.015270916550970872
+Iter 134: V_size = 420, Converged = 194, ‖r‖ = 0.014373614833613414
+Iter 135: V_size = 420, Converged = 194, ‖r‖ = 0.014328985429584332
+Iter 136: V_size = 420, Converged = 197, ‖r‖ = 0.014252942726787706
+Iter 137: V_size = 420, Converged = 197, ‖r‖ = 0.012616368870555828
+Iter 138: V_size = 420, Converged = 197, ‖r‖ = 0.012484839815458625
+Iter 139: V_size = 420, Converged = 205, ‖r‖ = 0.012459978270601238
+Iter 140: V_size = 420, Converged = 205, ‖r‖ = 0.013038868908734052
+Iter 141: V_size = 420, Converged = 205, ‖r‖ = 0.013040116347347598
+Iter 142: V_size = 420, Converged = 209, ‖r‖ = 0.012871250762750521
+Iter 143: V_size = 420, Converged = 209, ‖r‖ = 0.011233416754727622
+Iter 144: V_size = 420, Converged = 209, ‖r‖ = 0.011182620594809442
+Iter 145: V_size = 420, Converged = 214, ‖r‖ = 0.011068529992232559
+Iter 146: V_size = 420, Converged = 214, ‖r‖ = 0.014092232964292295
+Iter 147: V_size = 420, Converged = 214, ‖r‖ = 0.014067030963012104
+Iter 148: V_size = 420, Converged = 220, ‖r‖ = 0.013969648042246883
+Iter 149: V_size = 420, Converged = 220, ‖r‖ = 0.011961778549659477
+Iter 150: V_size = 420, Converged = 220, ‖r‖ = 0.011868076809477886
+Max iterations (150) reached without convergence. Skipping this case.
+3492.070533 seconds (367.03 M allocations: 10.726 TiB, 5.10% gc time)
+Total estimated FLOPs: 36538751288540
+
+Reading exact Eigenvalues...
+Reading eigenvalues from test_EW_results_2.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×220 adjoint(::Vector{Float64}) with eltype Float64:
+ 2.96843e-7  858.847  415.466  237.106  156.116  113.682  84.0153  64.2412  50.3119  41.8406  34.2865  28.802  24.2507  20.8952  18.4508  16.1987  14.2365  12.7759  11.4982  10.4307  9.45147  8.54909  7.91547  7.21801  6.60326  6.14124  5.69157  5.32411  4.95994  4.61296  4.55698  4.34807  4.10297  3.85191  3.61212  3.43337  3.23214  3.07033  2.90847  2.7696  2.62577  2.49239  2.38206  2.26654  2.17151  2.07085  1.9752  1.88894  1.81721  1.74079  1.67543  1.60898  1.5505  1.4877  1.43137  1.38168  1.32904  1.28731  1.23961  1.19683  1.15857  1.12002  1.08537  1.04966  1.01593  0.983421  0.952222  0.922846  0.895837  0.868207  0.844242  0.819792  0.795458  0.773395  0.752265  0.732183  0.712312  0.69295  0.674311  0.656497  0.638937  0.622398  0.606524  0.591272  0.576129  0.561573  0.548178  0.534345  0.521477  0.508566  0.496268  0.48441  0.472815  0.461645  0.450794  0.440258  0.430051  0.42012  0.410424  0.401243  0.392138  0.383206  0.374601  0.366371  0.358324  0.350477  0.342929  0.335299  0.328137  0.321267  0.314404  0.307647  0.301117  0.295015  0.288933  0.282878  0.277177  0.271578  0.26602  0.260686  0.255477  0.250365  0.245573  0.240557  0.236049  0.231401  0.22688  0.222652  0.218141  0.21409  0.21008  0.206273  0.202196  0.198309  0.194776  0.190991  0.187607  0.184099  0.180964  0.177628  0.174359  0.171183  0.168208  0.165156  0.162204  0.159468  0.156348  0.153747  0.15095  0.148429  0.145905  0.143253  0.140874  0.138595  0.136126  0.133933  0.131527  0.129262  0.127313  0.125049  0.122801  0.121192  0.118882  0.116912  0.115328  0.113253  0.111418  0.109599  0.107578  0.10599  0.1043  0.102844  0.101005  0.0995082  0.0978574  0.0965585  0.0950142  0.0936075  0.0921063  0.0903128  0.0892731  0.0877337  0.0866838  0.0853246  0.0844799  0.449747  0.453578  0.495593  0.497777  0.512104  0.555632  0.575753  0.629745  0.628909  0.658961  0.730776  0.771876  0.862355  0.870033  0.878156  1.04851  1.06737  1.1523  1.32086  1.49103  1.74168  1.82089  2.03449  2.60294  2.98776  3.68918  4.08528  6.35923  7.45039  9.58435  13.6735  27.2223  49.2934  93.5975  286.399
+220 Eigenvalues converges, out of 500 requested.
+
+ === Running with l = 600 ===
+NEV / Matrix_dimension: 600 / 20000
+read large_sparse_matrix_2.dat
+Davidson
+Iter 1: V_size = 70, Converged = 0, ‖r‖ = 9.693256510094005e-6
+Iter 2: V_size = 140, Converged = 0, ‖r‖ = 9.488184725735897e-10
+Iter 3: V_size = 278, Converged = 1, ‖r‖ = 6.621778960091238e-14
+Iter 4: V_size = 420, Converged = 1, ‖r‖ = 1.3921945265608962e-13
+Iter 5: V_size = 420, Converged = 1, ‖r‖ = 2.4549001123765666e-15
+Iter 6: V_size = 420, Converged = 10, ‖r‖ = 2.537346837247137e-15
+Iter 7: V_size = 420, Converged = 24, ‖r‖ = 1.9370177569478014e-6
+Iter 8: V_size = 420, Converged = 24, ‖r‖ = 2.4452647094365225e-8
+Iter 9: V_size = 420, Converged = 33, ‖r‖ = 2.445264707168154e-8
+Iter 10: V_size = 420, Converged = 37, ‖r‖ = 6.240685143893403e-6
+Iter 11: V_size = 420, Converged = 37, ‖r‖ = 9.272290066030109e-7
+Iter 12: V_size = 420, Converged = 48, ‖r‖ = 9.272290066045266e-7
+Iter 13: V_size = 420, Converged = 48, ‖r‖ = 0.0014869618857569764
+Iter 14: V_size = 420, Converged = 48, ‖r‖ = 0.0014869618857569658
+Iter 15: V_size = 420, Converged = 75, ‖r‖ = 0.0014869618857569628
+Iter 16: V_size = 420, Converged = 75, ‖r‖ = 0.020016417527211738
+Iter 17: V_size = 420, Converged = 75, ‖r‖ = 0.020016417527211748
+Iter 18: V_size = 420, Converged = 84, ‖r‖ = 0.02001641752721174
+Iter 19: V_size = 420, Converged = 84, ‖r‖ = 0.015051325550230515
+Iter 20: V_size = 420, Converged = 84, ‖r‖ = 0.015051325550230426
+Iter 21: V_size = 420, Converged = 92, ‖r‖ = 0.015051325550230412
+Iter 22: V_size = 420, Converged = 92, ‖r‖ = 0.03792047187126917
+Iter 23: V_size = 420, Converged = 92, ‖r‖ = 0.037920471871272614
+Iter 24: V_size = 420, Converged = 93, ‖r‖ = 0.037920471871272114
+Iter 25: V_size = 420, Converged = 93, ‖r‖ = 0.03310170486730859
+Iter 26: V_size = 420, Converged = 93, ‖r‖ = 0.03310170486730854
+Iter 27: V_size = 420, Converged = 94, ‖r‖ = 0.033101704867308554
+Iter 28: V_size = 420, Converged = 94, ‖r‖ = 0.030402486570801295
+Iter 29: V_size = 420, Converged = 94, ‖r‖ = 0.03040248657080135
+Iter 30: V_size = 420, Converged = 95, ‖r‖ = 0.030402486570801412
+Iter 31: V_size = 420, Converged = 95, ‖r‖ = 0.03517592444286889
+Iter 32: V_size = 420, Converged = 95, ‖r‖ = 0.035175924442868815
+Iter 33: V_size = 420, Converged = 96, ‖r‖ = 0.03517592444286898
+Iter 34: V_size = 420, Converged = 96, ‖r‖ = 0.04543664980875782
+Iter 35: V_size = 420, Converged = 96, ‖r‖ = 0.045436649808757876
+Iter 36: V_size = 420, Converged = 97, ‖r‖ = 0.04543664980875789
+Iter 37: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863697895
+Iter 38: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369838
+Iter 39: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369837
+Iter 40: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369824
+Iter 41: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369829
+Iter 42: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369839
+Iter 43: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369832
+Iter 44: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369824
+Iter 45: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698235
+Iter 46: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698194
+Iter 47: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369814
+Iter 48: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698166
+Iter 49: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369813
+Iter 50: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369826
+Iter 51: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369829
+Iter 52: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369817
+Iter 53: V_size = 420, Converged = 97, ‖r‖ = 0.0519860538636982
+Iter 54: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369834
+Iter 55: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369837
+Iter 56: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369815
+Iter 57: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 58: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369832
+Iter 59: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369822
+Iter 60: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698214
+Iter 61: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369837
+Iter 62: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698284
+Iter 63: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369829
+Iter 64: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698284
+Iter 65: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369827
+Iter 66: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369827
+Iter 67: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369839
+Iter 68: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369809
+Iter 69: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 70: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 71: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698166
+Iter 72: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698214
+Iter 73: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698346
+Iter 74: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369825
+Iter 75: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698194
+Iter 76: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369817
+Iter 77: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369831
+Iter 78: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 79: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369822
+Iter 80: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369817
+Iter 81: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698194
+Iter 82: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369817
+Iter 83: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698256
+Iter 84: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698346
+Iter 85: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369813
+Iter 86: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369819
+Iter 87: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369824
+Iter 88: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369814
+Iter 89: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 90: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369824
+Iter 91: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 92: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369822
+Iter 93: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369821
+Iter 94: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369829
+Iter 95: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698166
+Iter 96: V_size = 420, Converged = 97, ‖r‖ = 0.0519860538636982
+Iter 97: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369819
+Iter 98: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369819
+Iter 99: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369825
+Iter 100: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369814
+Iter 101: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369816
+Iter 102: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369829
+Iter 103: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369821
+Iter 104: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369829
+Iter 105: V_size = 420, Converged = 97, ‖r‖ = 0.0519860538636982
+Iter 106: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369817
+Iter 107: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698194
+Iter 108: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369824
+Iter 109: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698325
+Iter 110: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369826
+Iter 111: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698214
+Iter 112: V_size = 420, Converged = 97, ‖r‖ = 0.0519860538636983
+Iter 113: V_size = 420, Converged = 97, ‖r‖ = 0.0519860538636982
+Iter 114: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369824
+Iter 115: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369821
+Iter 116: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698166
+Iter 117: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369811
+Iter 118: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369827
+Iter 119: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698235
+Iter 120: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369818
+Iter 121: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369814
+Iter 122: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369821
+Iter 123: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698096
+Iter 124: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369834
+Iter 125: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369818
+Iter 126: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698416
+Iter 127: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369821
+Iter 128: V_size = 420, Converged = 97, ‖r‖ = 0.0519860538636981
+Iter 129: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369813
+Iter 130: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369817
+Iter 131: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369823
+Iter 132: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369815
+Iter 133: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369825
+Iter 134: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698124
+Iter 135: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698194
+Iter 136: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698214
+Iter 137: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698124
+Iter 138: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369798
+Iter 139: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369815
+Iter 140: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369811
+Iter 141: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369807
+Iter 142: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369814
+Iter 143: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698076
+Iter 144: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369814
+Iter 145: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698214
+Iter 146: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698145
+Iter 147: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369816
+Iter 148: V_size = 420, Converged = 97, ‖r‖ = 0.05198605386369809
+Iter 149: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698124
+Iter 150: V_size = 420, Converged = 97, ‖r‖ = 0.051986053863698145
+Max iterations (150) reached without convergence. Skipping this case.
+3263.130040 seconds (378.75 M allocations: 11.064 TiB, 4.94% gc time)
+Total estimated FLOPs: 38838891260540
+
+Reading exact Eigenvalues...
+Reading eigenvalues from test_EW_results_2.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×97 adjoint(::Vector{Float64}) with eltype Float64:
+ 2.96843e-7  858.847  415.466  237.106  156.116  113.682  84.0153  64.2412  50.3119  41.8406  34.2865  28.802  24.2507  20.8952  18.4508  16.1987  14.2365  12.7759  11.4982  10.4307  9.45147  8.54909  7.91547  7.21801  6.60326  6.14124  5.69157  5.32411  4.95994  4.61296  4.55698  4.34807  4.10297  3.85191  3.61212  3.43337  3.23214  3.07033  2.90847  2.7696  2.62577  2.49239  2.38206  2.26654  2.17151  2.07085  1.9752  1.88894  1.81725  1.74079  1.67556  1.60908  1.5507  1.4879  1.43157  1.38197  1.32932  1.2876  1.23963  1.19695  1.15876  1.12032  1.49399  1.46103  1.46883  1.43819  1.42101  1.43474  1.4264  1.4526  1.42567  1.43131  1.47916  1.49722  1.56576  1.55219  1.53972  1.69091  1.69129  1.75794  1.90937  2.06323  2.29788  2.36188  2.56032  3.11472  3.48568  4.17369  4.55706  6.81858  7.89783  10.0203  14.0987  27.6363  49.6976  93.9911  286.783
+97 Eigenvalues converges, out of 600 requested.

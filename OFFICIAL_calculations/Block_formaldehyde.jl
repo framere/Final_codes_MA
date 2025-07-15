@@ -142,7 +142,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     Nlow = l
     Naux = Nlow * alpha
 
-    if Naux > 0.15 * N
+    if Naux > 0.35 * N
         println("Skipping: Naux ($Naux) is larger than 15% of the matrix size ($N).")
         return
     end

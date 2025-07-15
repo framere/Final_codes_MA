@@ -2,7 +2,7 @@ using LinearAlgebra
 using JLD2
 
 function load_matrix(filename::String)
-    N = 12000  
+    N = 20000  
 
     println("read ", filename)
     file = open(filename, "r")
@@ -20,7 +20,7 @@ function diagonalize_and_save(filename::String)
     println("Diagonalizing the matrix ...")
     @time F = eigen(A)  # F.values, F.vectors
 
-    output_file = "test_EW_results_3.jld2"
+    output_file = "test_EW_results_1.jld2"
     println("Saving results to $output_file")
 
     jldsave(output_file; 
@@ -32,7 +32,7 @@ function diagonalize_and_save(filename::String)
 end
 
 
-diagonalize_and_save("large_sparse_matrix_3.dat")
+diagonalize_and_save("large_sparse_matrix_1.dat")
 
 # open the file and read the eigenvalues
 # function read_eigen_data(system::String; with_vectors::Bool=false)

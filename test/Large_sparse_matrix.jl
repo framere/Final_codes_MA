@@ -1,6 +1,10 @@
 using LinearAlgebra
 using Random
 
+function new_curve(x, gamma, delta, epsilon)
+    return gamma .* exp.(- delta .* x.^ epsilon)
+end
+
 function generate_random_matrix(N::Int, factor::Float64 = 100.0)
     """    generate_random_matrix(N::Int, factor::Float64 = 100.0) -> Matrix{Float64}
     Generates a random NxN matrix with diagonal elements scaled by `factor` and small off-diagonal elements.        
@@ -12,7 +16,10 @@ function generate_random_matrix(N::Int, factor::Float64 = 100.0)
     for i in 1:N
         for j in 1:N
             if i == j
-                A[i, j] = α / (β * i^2)  # Diagonal elements
+                a = 51.0282
+                b = 0.755229
+                c = 0.336993
+                A[i, j] = - new_curve(i, a,b,c)  # Diagonal elements
             else
                 a = rand()
                 if a < 0.5
@@ -37,9 +44,9 @@ function save_matrix_to_file(A::Matrix{Float64}, filename::String)
 end
 
 # === MAIN USAGE ===
-N = 12000  # Size of the matrix
-factor = 100.0  # Scaling factor for diagonal elements
+N = 20000  # Size of the matrix
+factor = 1000.0  # Scaling factor for diagonal elements
 println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
 A = generate_random_matrix(N, factor)
 println("Saving the generated matrix to 'large_sparse_matrix_3.dat'...")
-save_matrix_to_file(A, "large_sparse_matrix_3.dat")
+save_matrix_to_file(A, "large_sparse_matrix_2.dat")

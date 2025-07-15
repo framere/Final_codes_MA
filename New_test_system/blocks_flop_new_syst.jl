@@ -1,5 +1,6 @@
 using LinearAlgebra
 using Printf
+using JLD2
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
@@ -140,7 +141,7 @@ function davidson(
 end
 
 function define_matrix(system::String)
-    Nlow = 10
+    Nlow = 30
     Naux = Nlow * 12
     N = 27643
 
@@ -157,6 +158,18 @@ function define_matrix(system::String)
     return A, N, Nlow, Naux
 end
 
+
+
+function read_eigenresults(molecule::String)
+    output_file = "../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
+    println("Reading eigenvalues from $output_file")
+    data = jldopen(output_file, "r")
+    eigenvalues = data["eigenvalues"]
+    close(data)
+    return sort(eigenvalues)
+end
+
+
 function main(system::String, target_nev::Int)
     global NFLOPs
     NFLOPs = 0
@@ -169,21 +182,20 @@ function main(system::String, target_nev::Int)
     end
 
     println("Davidson")
-    Naux = 12 * Nlow
-    @time Σ, U = davidson(A, V, Naux, 1e-2, target_nev, 1e-2)
+    @time Σ, U = davidson(A, V, Naux, 1e-4, target_nev, 1e-2)
     idx = sortperm(Σ)
     Σ = Σ[idx]
 
-    # println("Full diagonalization")
-    # @time Σexact, Uexact = eigen(A)
-    # count_diag_flops(N)
+    Σexact = read_eigenresults("formaldehyde")
 
-    # display("text/plain", (Σ - Σexact[1:length(Σ)])')
+    r = max(Nlow, length(Σ))
+
+    display("text/plain", (Σ - Σexact[1:r])')
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 
-systems = ["HFbasis", "RNDbasis1", "RNDbasis2", "RNDbasis3"]
-N_lows = [60, 90, 120]  # Example values for N
+systems = ["RNDbasis1"]
+N_lows = [60, 300]  # Example values for N
 
 for system in systems
     println("Running for system: $system")

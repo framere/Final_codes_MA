@@ -213,7 +213,7 @@ function main(l::Integer, max_iter::Integer)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "large_sparse_matrix_3.dat"
+    filename = "large_sparse_matrix_1.dat"
     Nlow = 35
     Naux = Nlow * 12
     A = load_matrix(filename)
@@ -236,7 +236,7 @@ function main(l::Integer, max_iter::Integer)
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact = read_eigenresults("test_EW_results_3.jld2")
+    Σexact = read_eigenresults("test_EW_results_1.jld2")
     # println("Exact Eigenvalues: ", Σexact[1:l])
 
     # Display difference

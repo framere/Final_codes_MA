@@ -131,34 +131,31 @@ function davidson(
         for i = 1:size(R, 2)
             λ = Σ[i]
             rnorm = norms[i]
-
-            if haskey(convergence_tracker, i)
-                λ_prev, count, _, _ = convergence_tracker[i]
-                if abs(λ - λ_prev) < 1e-6 && rnorm < thresh
-                    convergence_tracker[i] = (λ, count + 1, rnorm, X[:, i])
-                else
-                    convergence_tracker[i] = (λ, 1, rnorm, X[:, i])
+            matched = false
+            for (λ_prev, (count, _, _)) in convergence_tracker
+                if abs(λ - λ_prev) < 1e-4  # matching tolerance
+                    convergence_tracker[λ_prev] = (count + 1, rnorm, X[:, i])
+                    matched = true
+                    break
                 end
-            elseif rnorm < thresh
-                convergence_tracker[i] = (λ, 1, rnorm, X[:, i])
             end
 
-            if haskey(convergence_tracker, i)
-                λ, count, rnorm, xvec = convergence_tracker[i]
+            if !matched && rnorm < thresh
+                convergence_tracker[λ] = (1, rnorm, X[:, i])
+            end
+
+            for (λ, (count, rnorm, xvec)) in convergence_tracker
                 if count >= stable_thresh
-                    push!(conv_indices, i)
+                    push!(conv_indices, i)  # or track by value if you prefer
                     push!(Eigenvalues, λ)
                     Ritz_vecs = hcat(Ritz_vecs, xvec)
                     V_lock = hcat(V_lock, xvec)
-                    delete!(convergence_tracker, i)
+                    delete!(convergence_tracker, λ)
                     nevf += 1
                     println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
-                    if nevf >= l
-                        println("Converged all eigenvalues.")
-                        return (Eigenvalues, Ritz_vecs)
-                    end
                 end
             end
+
         end
 
         non_conv_indices = setdiff(1:size(R, 2), conv_indices)
@@ -226,9 +223,9 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-betas = [8,16,32,64]
+betas = [8] # ,16,32,64
 molecules = ["formaldehyde"]
-ls = [10, 50, 100, 200]
+ls = [10] #, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

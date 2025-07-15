@@ -93,7 +93,8 @@ function davidson(
     V_lock = Matrix{T}(undef, size(A, 1), 0)
 
     iter = 0
-    convergence_tracker = Dict{Int, Tuple{Float64, Int, Float64, Vector{T}}}()
+    convergence_tracker = Dict{Float64, Tuple{Int, Float64, Vector{T}}}()
+
 
     while nevf < l
         iter += 1

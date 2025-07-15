@@ -125,7 +125,7 @@ function davidson(
 
         R = X .* Σ' .- A * X
 
-        norms = vec(norm.(eachcol(R)), 2)
+        norms = vec(norm.(eachcol(R), 2))
 
         conv_indices = Int[]
         for i = 1:size(R, 2)
@@ -186,9 +186,9 @@ function davidson(
             n_b += n_b_hat
         end
         
-        i_max = argmax(Σ)
+        i_max = argmin(Σ)
         norm_largest_Ritz = norms[i_max]
-        println("Iter $iter: V_size = $n_b, Converged = $nevf, ‖r‖ (largest λ) = $norm_largest_Ritz")
+        println("Iter $iter: V_size = $n_b, Converged = $nevf, ||r||_min = $norm_largest_Ritz")
     end
 
     return (Eigenvalues, Ritz_vecs)

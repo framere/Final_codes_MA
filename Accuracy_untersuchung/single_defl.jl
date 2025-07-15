@@ -269,9 +269,9 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-betas = [8] # ,16,32,64
+betas = [16] # ,16,32,64
 molecules = ["formaldehyde"]
-ls = [10] #, 50, 100, 200
+ls = [50] #, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

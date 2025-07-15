@@ -82,7 +82,7 @@ function davidson(
 
         Rnorm = norm(R, 2)
 
-        output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
+        output = @sprintf("iter=%6d  norm_R=%11.3e  size(V,2)=%6d\n", iter, Rnorm, size(V,2))
         print(output)
 
         if Rnorm/sqrt(Nlow) < thresh

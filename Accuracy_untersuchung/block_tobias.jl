@@ -81,12 +81,11 @@ function davidson(
         R .-= temp2
 
         Rnorm = norm(R, 2)
-        rel_Rnorm = Rnorm / norm(X, 2)
 
         output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
         print(output)
 
-        if rel_Rnorm < thresh
+        if Rnorm/sqrt(Nlow) < thresh
             println("converged!")
             return (Σ, X)
         end
@@ -140,16 +139,21 @@ function main(molecule::String, l::Integer, alpha::Integer)
     # Display difference
     r = min(length(Σ), l)
     println("\nDifference between Davidson and exact eigenvalues:")
-    rel_dev = (Σ[1:r] .- Σexact[1:r])
-    display("text/plain", rel_dev')
+    difference = (Σ[1:r] .- Σexact[1:r])
+    display("text/plain", difference')
+
+    difference_root = sqrt.(abs.(Σ[1:r])) .- sqrt.(abs.(Σexact[1:r]))
+    println("\nSquare root of Eigenvalues difference:")
+    display("text/plain", difference_root')
+    
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-alpha = [4,8,16]
+alpha = [4] # ,8,16
 
 molecules = ["formaldehyde"]
 
-ls = [10, 50, 100, 200]
+ls = [10] # 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

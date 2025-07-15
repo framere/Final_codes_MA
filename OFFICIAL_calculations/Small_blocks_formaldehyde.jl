@@ -227,7 +227,7 @@ for system in systems
     for target in targets
         for alpha in alphas
             println("Running for nev target: $target, alpha: $alpha")
-            main(system, target, 1000, alpha)
+            main(system, target, 7000, alpha)
         end
     end
 end

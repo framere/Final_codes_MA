@@ -82,6 +82,7 @@ function davidson(
         R = X .* Σ'  # Skalierung
         temp2 = A * X
         R .-= temp2
+        R .-= X * (X' * R)
 
         Rnorm = norm(R, 2)
 

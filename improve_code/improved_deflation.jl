@@ -95,6 +95,14 @@ function davidson(
 
     iter = 0
     convergence_tracker = Dict{Float64, Tuple{Int, Float64, Vector{T}}}()
+    ilu_fact = nothing
+    try
+        println("Building ILU preconditioner...")
+        A_sparse = sparse(Matrix(A))
+        ilu_fact = ilu(A_sparse; τ = 1e-3)  # Tune τ for accuracy/speed
+    catch e
+        @warn "ILU failed: falling back to diagonal preconditioning" exception = e
+    end
 
 
     while nevf < l
@@ -206,16 +214,8 @@ function davidson(
         Σ_nc = Σ[non_conv_indices]
         R_nc = R[:, non_conv_indices]
 
-
         t = Matrix{T}(undef, size(A, 1), length(non_conv_indices))
-        ϵ = 1e-6    
-        try
-            println("Using ILU preconditioner for non-converged indices...")
-            ilu_fact = ilu(A; τ = 1e-3)
-        catch e
-            @warn "ILU failed: falling back to diagonal preconditioning" exception = e
-            ilu_fact = nothing
-        end
+        ϵ = 1e-6
         for (i, idx) in enumerate(non_conv_indices)
             if ilu_fact !== nothing
                 t[:, i] = ilu_fact \ R_nc[:, i]
@@ -224,6 +224,7 @@ function davidson(
                 t[:, i] = R_nc[:, i] ./ denom
             end
         end
+
 
 
         T_hat, n_b_hat = select_corrections_ORTHO(t, V, V_lock, 0.1, 1e-10)

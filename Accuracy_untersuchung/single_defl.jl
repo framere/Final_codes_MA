@@ -247,7 +247,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-4, max_iter)
 
     idx = sortperm(Σ)
     Σ_squared = Σ[idx]
@@ -270,7 +270,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 end
 
 betas = [16] # ,16,32,64
-molecules = ["formaldehyde"]
+molecules = ["H2"]
 ls = [50] #, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

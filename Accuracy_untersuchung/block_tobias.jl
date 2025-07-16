@@ -69,7 +69,10 @@ function davidson(
         H = Hermitian(H)
         Σ, U = eigen(H, 1:Nlow)
         X = V * U
-        
+        # Verify orthonormality of X
+        XtX = X' * X
+        err = norm(XtX - I, Inf)
+        println(@sprintf("‖XᵀX - I‖_∞ = %.2e (should be close to 0)", err))        
         if iter > max_iter
             println("Maximum iterations reached without convergence.")
             return (Σ, X)

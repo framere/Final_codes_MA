@@ -1,6 +1,5 @@
 using LinearAlgebra
 
-
 function load_matrix(filename::String, molecule::String)
     if molecule == "H2"
         N = 11994
@@ -18,8 +17,6 @@ function load_matrix(filename::String, molecule::String)
     A = reshape(A, N, N)
     return Hermitian(A)
 end
-
-
 
 function main(molecule::String)
     # Load the matrix
@@ -39,7 +36,6 @@ function main(molecule::String)
 
 
 end
-
 
 molecule = ["H2", "formaldehyde"]
 for mol in molecule

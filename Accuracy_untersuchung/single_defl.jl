@@ -262,18 +262,20 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     Σexact_squared = Σexact_squared[idx_exact]
     Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
 
-
     # Display difference
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
     difference = (Σ[1:r] .- Σexact[1:r])
-    display("text/plain", difference')
+    for i in 1:r
+        println(@sprintf("%3d: % .4e", i, difference[i]))
+    end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
+
 betas = [16] # ,16,32,64
 molecules = ["H2"]
-ls = [50] #, 50, 100, 200
+ls = [10] #, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

@@ -184,26 +184,49 @@ function davidson(
             end
         end
 
-        # Final convergence check
+       # --- Degenerate cluster-based locking ---
+        cluster_tolerance = 1e-4
+        degenerate_clusters = Dict{Float64, Vector{Vector{T}}}()
+
         for (μ, (count, rnorm, xvec)) in convergence_tracker
             if count >= stable_thresh
-                # Delay locking if close eigenvalues already in Eigenvalues
-                if any(abs(μ - λ) < 1e-4 for λ in Eigenvalues)
-                    println("Skipping locking of μ = $μ due to possible degeneracy.")
-                    continue
+                added = false
+                for μ_cluster in keys(degenerate_clusters)
+                    if abs(μ - μ_cluster) < cluster_tolerance
+                        push!(degenerate_clusters[μ_cluster], xvec)
+                        added = true
+                        break
+                    end
                 end
-
-                push!(Eigenvalues, μ)
-                Ritz_vecs = hcat(Ritz_vecs, xvec)
-                V_lock = hcat(V_lock, xvec)
-                nevf += 1
-                println(@sprintf("EV %3d converged μ = %.10f (λ ≈ %.10f), ‖r‖ = %.2e, stable for %d iters", nevf, μ, sqrt(abs(μ)), rnorm, count))
-                delete!(convergence_tracker, μ)
-                if nevf >= l
-                    println("Converged all eigenvalues.")
-                    return (Eigenvalues, Ritz_vecs)
+                if !added
+                    degenerate_clusters[μ] = [xvec]
                 end
             end
+        end
+
+        for (μ_center, vecs) in degenerate_clusters
+            multiplicity = count(μ -> abs(μ - μ_center) < cluster_tolerance, Σ)
+            if length(vecs) >= multiplicity
+                println(@sprintf("Locking %d degenerate eigenvectors near μ = %.10f", multiplicity, μ_center))
+                for v in vecs[1:multiplicity]
+                    push!(Eigenvalues, μ_center)
+                    Ritz_vecs = hcat(Ritz_vecs, v)
+                    V_lock = hcat(V_lock, v)
+                    nevf += 1
+                end
+
+                # Remove converged cluster from tracker
+                for μ_remove in collect(keys(convergence_tracker))
+                    if abs(μ_remove - μ_center) < cluster_tolerance
+                        delete!(convergence_tracker, μ_remove)
+                    end
+                end
+            end
+        end
+
+        if nevf >= l
+            println("Converged all eigenvalues.")
+            return (Eigenvalues, Ritz_vecs)
         end
 
         non_conv_indices = setdiff(1:size(R, 2), conv_indices)

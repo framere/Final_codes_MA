@@ -187,6 +187,12 @@ function davidson(
         # Final convergence check
         for (μ, (count, rnorm, xvec)) in convergence_tracker
             if count >= stable_thresh
+                # Delay locking if close eigenvalues already in Eigenvalues
+                if any(abs(μ - λ) < 1e-4 for λ in Eigenvalues)
+                    println("Skipping locking of μ = $μ due to possible degeneracy.")
+                    continue
+                end
+
                 push!(Eigenvalues, μ)
                 Ritz_vecs = hcat(Ritz_vecs, xvec)
                 V_lock = hcat(V_lock, xvec)

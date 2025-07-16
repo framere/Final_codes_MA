@@ -223,7 +223,7 @@ function main(molecule::String, target_nev::Int, max_iter::Int, alpha::Int = 12)
     Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
 
     # Display difference
-    r = min(length(Σ), l)
+    r = min(length(Σ), target_nev)
     println("\nCompute the difference between computed and exact eigenvalues:")
     difference = (Σ[1:r] .- Σexact[1:r])
     for i in 1:r

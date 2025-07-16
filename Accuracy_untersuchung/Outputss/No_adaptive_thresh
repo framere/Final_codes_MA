@@ -1413,3 +1413,188 @@ Iter 15: V_size = 350, Converged = 126, ||r||_min = 25.391828885860093
 EV 127 converged μ = -0.9093255853 (λ ≈ 0.9535856466), ‖r‖ = 1.18e-05, stable for 3 iters
 Iter 16: V_size = 348, Converged = 127, ||r||_min = 7.145139917803765
 Iter 17: V_size = 346, Converged = 127, ||r||_min = 7.364594427760018
+Iter 18: V_size = 346, Converged = 127, ||r||_min = 1.603002304796123e-5
+EV 128 converged μ = -0.8595760831 (λ ≈ 0.9271332607), ‖r‖ = 1.51e-05, stable for 3 iters
+EV 129 converged μ = -0.8894285195 (λ ≈ 0.9430951805), ‖r‖ = 1.43e-05, stable for 3 iters
+Iter 19: V_size = 346, Converged = 129, ||r||_min = 1.4300946893652505e-5
+Iter 20: V_size = 342, Converged = 129, ||r||_min = 8.790176838843886
+EV 130 converged μ = -0.8084311452 (λ ≈ 0.8991279916), ‖r‖ = 1.49e-05, stable for 3 iters
+EV 131 converged μ = -0.8618417493 (λ ≈ 0.9283543231), ‖r‖ = 1.52e-05, stable for 3 iters
+Iter 21: V_size = 342, Converged = 131, ||r||_min = 1.5209699961979921e-5
+EV 132 converged μ = -0.8598145979 (λ ≈ 0.9272618820), ‖r‖ = 1.62e-05, stable for 3 iters
+Iter 22: V_size = 338, Converged = 132, ||r||_min = 15.230050120156763
+Iter 23: V_size = 336, Converged = 132, ||r||_min = 16.636101978572366
+EV 133 converged μ = -0.8007151158 (λ ≈ 0.8948268636), ‖r‖ = 1.59e-05, stable for 3 iters
+Iter 24: V_size = 336, Converged = 133, ||r||_min = 1.5929046881625273e-5
+Iter 25: V_size = 334, Converged = 133, ||r||_min = 6.026629368989073
+EV 134 converged μ = -0.7370373772 (λ ≈ 0.8585088102), ‖r‖ = 1.76e-05, stable for 3 iters
+Iter 26: V_size = 334, Converged = 134, ||r||_min = 1.8928658099898882e-5
+EV 135 converged μ = -0.7303359829 (λ ≈ 0.8545969710), ‖r‖ = 1.72e-05, stable for 3 iters
+Iter 27: V_size = 332, Converged = 135, ||r||_min = 8.13765674024999
+EV 136 converged μ = -0.7505396650 (λ ≈ 0.8663369235), ‖r‖ = 1.67e-05, stable for 3 iters
+EV 137 converged μ = -0.7694789876 (λ ≈ 0.8771995141), ‖r‖ = 1.71e-05, stable for 3 iters
+EV 138 converged μ = -0.7796579003 (λ ≈ 0.8829823896), ‖r‖ = 1.62e-05, stable for 3 iters
+Iter 28: V_size = 330, Converged = 138, ||r||_min = 8.137375450352486
+Iter 29: V_size = 324, Converged = 138, ||r||_min = 15.174098492183491
+EV 139 converged μ = -0.7175510712 (λ ≈ 0.8470838632), ‖r‖ = 1.78e-05, stable for 3 iters
+EV 140 converged μ = -0.7720179255 (λ ≈ 0.8786455062), ‖r‖ = 1.66e-05, stable for 3 iters
+Iter 30: V_size = 324, Converged = 140, ||r||_min = 1.658537717851726e-5
+Iter 31: V_size = 320, Converged = 140, ||r||_min = 9.53477123311008
+Iter 32: V_size = 480, Converged = 140, ||r||_min = 2.065848006734734e-5
+Iter 33: V_size = 320, Converged = 140, ||r||_min = 1.9490509537748957e-5
+Iter 34: V_size = 480, Converged = 140, ||r||_min = 1.8034636518474705e-5
+EV 141 converged μ = -0.6876630225 (λ ≈ 0.8292544980), ‖r‖ = 1.75e-05, stable for 3 iters
+EV 142 converged μ = -0.7384357403 (λ ≈ 0.8593228382), ‖r‖ = 1.73e-05, stable for 3 iters
+Iter 35: V_size = 320, Converged = 142, ||r||_min = 1.7301499250546594e-5
+Iter 36: V_size = 478, Converged = 142, ||r||_min = 7.923284887178365
+EV 143 converged μ = -0.6718548151 (λ ≈ 0.8196675028), ‖r‖ = 1.70e-05, stable for 3 iters
+EV 144 converged μ = -0.6841181412 (λ ≈ 0.8271143459), ‖r‖ = 1.72e-05, stable for 3 iters
+Iter 37: V_size = 316, Converged = 144, ||r||_min = 1.7119352184247243e-5
+EV 145 converged μ = -0.6974086798 (λ ≈ 0.8351099807), ‖r‖ = 1.66e-05, stable for 3 iters
+EV 146 converged μ = -0.6797779225 (λ ≈ 0.8244864599), ‖r‖ = 1.69e-05, stable for 3 iters
+EV 147 converged μ = -0.7040438778 (λ ≈ 0.8390732255), ‖r‖ = 1.61e-05, stable for 3 iters
+Iter 38: V_size = 472, Converged = 147, ||r||_min = 16.323800981061215
+EV 148 converged μ = -0.6428981973 (λ ≈ 0.8018093273), ‖r‖ = 1.77e-05, stable for 3 iters
+Iter 39: V_size = 306, Converged = 148, ||r||_min = 17.61754629517096
+EV 149 converged μ = -0.6226055268 (λ ≈ 0.7890535640), ‖r‖ = 1.76e-05, stable for 3 iters
+Iter 40: V_size = 458, Converged = 149, ||r||_min = 15.634349960076479
+Iter 41: V_size = 302, Converged = 149, ||r||_min = 7.59221009090919
+Iter 42: V_size = 453, Converged = 149, ||r||_min = 2.5899868777682204e-5
+Iter 43: V_size = 302, Converged = 149, ||r||_min = 2.4178780002106522e-5
+Iter 44: V_size = 453, Converged = 149, ||r||_min = 2.3018683320973436e-5
+Iter 45: V_size = 302, Converged = 149, ||r||_min = 2.191364652723232e-5
+EV 150 converged μ = -0.6372624212 (λ ≈ 0.7982871797), ‖r‖ = 1.80e-05, stable for 3 iters
+Iter 46: V_size = 453, Converged = 150, ||r||_min = 2.1007436161271993e-5
+Iter 47: V_size = 300, Converged = 150, ||r||_min = 8.828668603093476
+Iter 48: V_size = 450, Converged = 150, ||r||_min = 1.94752021148179e-5
+Iter 49: V_size = 300, Converged = 150, ||r||_min = 1.8753961948155973e-5
+EV 151 converged μ = -0.6452263776 (λ ≈ 0.8032598444), ‖r‖ = 1.80e-05, stable for 3 iters
+Iter 50: V_size = 450, Converged = 151, ||r||_min = 1.801677261747981e-5
+Iter 51: V_size = 298, Converged = 151, ||r||_min = 7.55910881756953
+EV 152 converged μ = -0.6145449488 (λ ≈ 0.7839291733), ‖r‖ = 1.92e-05, stable for 3 iters
+Iter 52: V_size = 447, Converged = 152, ||r||_min = 1.906984157751381e-5
+EV 153 converged μ = -0.6293186864 (λ ≈ 0.7932960900), ‖r‖ = 1.86e-05, stable for 3 iters
+Iter 53: V_size = 296, Converged = 153, ||r||_min = 9.603830219663243
+EV 154 converged μ = -0.6089057489 (λ ≈ 0.7803241307), ‖r‖ = 1.88e-05, stable for 3 iters
+Iter 54: V_size = 443, Converged = 154, ||r||_min = 9.604128753271238
+Iter 55: V_size = 292, Converged = 154, ||r||_min = 11.176894097943496
+Iter 56: V_size = 438, Converged = 154, ||r||_min = 2.070098319345791e-5
+Iter 57: V_size = 292, Converged = 154, ||r||_min = 2.031063615842542e-5
+Iter 58: V_size = 438, Converged = 154, ||r||_min = 1.9962305884787825e-5
+Iter 59: V_size = 292, Converged = 154, ||r||_min = 1.9654003712129906e-5
+EV 155 converged μ = -0.5877839426 (λ ≈ 0.7666706872), ‖r‖ = 1.93e-05, stable for 3 iters
+Iter 60: V_size = 438, Converged = 155, ||r||_min = 1.933915757156338e-5
+Iter 61: V_size = 290, Converged = 155, ||r||_min = 7.630407297173127
+Iter 62: V_size = 435, Converged = 155, ||r||_min = 2.6783305707654406e-5
+Iter 63: V_size = 290, Converged = 155, ||r||_min = 2.648459139358311e-5
+Iter 64: V_size = 435, Converged = 155, ||r||_min = 2.621279964278961e-5
+Iter 65: V_size = 290, Converged = 155, ||r||_min = 2.5983188567397413e-5
+Iter 66: V_size = 435, Converged = 155, ||r||_min = 2.573309211644811e-5
+Iter 67: V_size = 290, Converged = 155, ||r||_min = 2.5533549855954836e-5
+Iter 68: V_size = 435, Converged = 155, ||r||_min = 2.5319521535235702e-5
+Iter 69: V_size = 290, Converged = 155, ||r||_min = 2.5120432055806693e-5
+Iter 70: V_size = 435, Converged = 155, ||r||_min = 2.4928369776379085e-5
+Iter 71: V_size = 290, Converged = 155, ||r||_min = 2.474841056816644e-5
+Iter 72: V_size = 435, Converged = 155, ||r||_min = 2.4562399906924066e-5
+Iter 73: V_size = 290, Converged = 155, ||r||_min = 2.4408548712413872e-5
+Iter 74: V_size = 435, Converged = 155, ||r||_min = 2.4246048649002976e-5
+Iter 75: V_size = 290, Converged = 155, ||r||_min = 2.412151620588033e-5
+Iter 76: V_size = 435, Converged = 155, ||r||_min = 2.3983829785409425e-5
+Iter 77: V_size = 290, Converged = 155, ||r||_min = 2.3868104052070375e-5
+Iter 78: V_size = 435, Converged = 155, ||r||_min = 2.3759488475167668e-5
+Iter 79: V_size = 290, Converged = 155, ||r||_min = 2.3656046051385597e-5
+Iter 80: V_size = 435, Converged = 155, ||r||_min = 2.355201042320001e-5
+Iter 81: V_size = 290, Converged = 155, ||r||_min = 2.347560355766489e-5
+Iter 82: V_size = 435, Converged = 155, ||r||_min = 2.3381925194550734e-5
+Iter 83: V_size = 290, Converged = 155, ||r||_min = 2.329934804099759e-5
+Iter 84: V_size = 435, Converged = 155, ||r||_min = 2.3214318016119818e-5
+Iter 85: V_size = 290, Converged = 155, ||r||_min = 2.3124856019009106e-5
+Iter 86: V_size = 435, Converged = 155, ||r||_min = 2.3038796281332703e-5
+Iter 87: V_size = 290, Converged = 155, ||r||_min = 2.2964006456159204e-5
+Iter 88: V_size = 435, Converged = 155, ||r||_min = 2.287581381516737e-5
+Iter 89: V_size = 290, Converged = 155, ||r||_min = 2.2797418434374527e-5
+Iter 90: V_size = 435, Converged = 155, ||r||_min = 2.2706640607548696e-5
+Iter 91: V_size = 290, Converged = 155, ||r||_min = 2.262072593708522e-5
+Iter 92: V_size = 435, Converged = 155, ||r||_min = 2.2530935900753532e-5
+Iter 93: V_size = 290, Converged = 155, ||r||_min = 2.245063000894521e-5
+Iter 94: V_size = 435, Converged = 155, ||r||_min = 2.2362787968927463e-5
+Iter 95: V_size = 290, Converged = 155, ||r||_min = 2.227504862038419e-5
+Iter 96: V_size = 435, Converged = 155, ||r||_min = 2.2179604574867097e-5
+Iter 97: V_size = 290, Converged = 155, ||r||_min = 2.2101028209559892e-5
+Iter 98: V_size = 435, Converged = 155, ||r||_min = 2.2015294188828197e-5
+Iter 99: V_size = 290, Converged = 155, ||r||_min = 2.194067423596297e-5
+Iter 100: V_size = 435, Converged = 155, ||r||_min = 2.1869702311422072e-5
+Iter 101: V_size = 290, Converged = 155, ||r||_min = 2.1808130848599624e-5
+Iter 102: V_size = 435, Converged = 155, ||r||_min = 2.1738932608297938e-5
+Iter 103: V_size = 290, Converged = 155, ||r||_min = 2.167050493023848e-5
+Iter 104: V_size = 435, Converged = 155, ||r||_min = 2.1612413284980666e-5
+Iter 105: V_size = 290, Converged = 155, ||r||_min = 2.1558602415658264e-5
+Iter 106: V_size = 435, Converged = 155, ||r||_min = 2.1494045849842025e-5
+Iter 107: V_size = 290, Converged = 155, ||r||_min = 2.144179505877112e-5
+Iter 108: V_size = 435, Converged = 155, ||r||_min = 2.1375292891984898e-5
+Iter 109: V_size = 290, Converged = 155, ||r||_min = 2.131443182556567e-5
+Iter 110: V_size = 435, Converged = 155, ||r||_min = 2.1255991518717745e-5
+Iter 111: V_size = 290, Converged = 155, ||r||_min = 2.1200459918975056e-5
+Iter 112: V_size = 435, Converged = 155, ||r||_min = 2.1145276329684644e-5
+Iter 113: V_size = 290, Converged = 155, ||r||_min = 2.1096650632203238e-5
+Iter 114: V_size = 435, Converged = 155, ||r||_min = 2.104004075311214e-5
+Iter 115: V_size = 290, Converged = 155, ||r||_min = 2.0997269339641006e-5
+Iter 116: V_size = 435, Converged = 155, ||r||_min = 2.094724197410585e-5
+Iter 117: V_size = 290, Converged = 155, ||r||_min = 2.0899832020878393e-5
+Iter 118: V_size = 435, Converged = 155, ||r||_min = 2.0852380570013498e-5
+Iter 119: V_size = 290, Converged = 155, ||r||_min = 2.0810913576854587e-5
+Iter 120: V_size = 435, Converged = 155, ||r||_min = 2.0765631998631328e-5
+Iter 121: V_size = 290, Converged = 155, ||r||_min = 2.0729556467790667e-5
+Iter 122: V_size = 435, Converged = 155, ||r||_min = 2.069046022302411e-5
+Iter 123: V_size = 290, Converged = 155, ||r||_min = 2.0656680515444373e-5
+Iter 124: V_size = 435, Converged = 155, ||r||_min = 2.062510203039427e-5
+Iter 125: V_size = 290, Converged = 155, ||r||_min = 2.0595616146387954e-5
+Iter 126: V_size = 435, Converged = 155, ||r||_min = 2.0560442746429403e-5
+Iter 127: V_size = 290, Converged = 155, ||r||_min = 2.0531636967957594e-5
+Iter 128: V_size = 435, Converged = 155, ||r||_min = 2.0501007052884924e-5
+Iter 129: V_size = 290, Converged = 155, ||r||_min = 2.0472725273382723e-5
+Iter 130: V_size = 435, Converged = 155, ||r||_min = 2.044318823632478e-5
+Iter 131: V_size = 290, Converged = 155, ||r||_min = 2.0414526469456373e-5
+Iter 132: V_size = 435, Converged = 155, ||r||_min = 2.0385459924814432e-5
+Iter 133: V_size = 290, Converged = 155, ||r||_min = 2.0359133492885043e-5
+Iter 134: V_size = 435, Converged = 155, ||r||_min = 2.032784406366307e-5
+Iter 135: V_size = 290, Converged = 155, ||r||_min = 2.0300062492175018e-5
+Iter 136: V_size = 435, Converged = 155, ||r||_min = 2.0268209317582208e-5
+Iter 137: V_size = 290, Converged = 155, ||r||_min = 2.0240787325160572e-5
+Iter 138: V_size = 435, Converged = 155, ||r||_min = 2.02089263692639e-5
+Iter 139: V_size = 290, Converged = 155, ||r||_min = 2.0176988387748448e-5
+Iter 140: V_size = 435, Converged = 155, ||r||_min = 2.0146949520877313e-5
+Iter 141: V_size = 290, Converged = 155, ||r||_min = 2.01208708445761e-5
+Iter 142: V_size = 435, Converged = 155, ||r||_min = 2.009047240184568e-5
+Iter 143: V_size = 290, Converged = 155, ||r||_min = 2.0063394399751574e-5
+Iter 144: V_size = 435, Converged = 155, ||r||_min = 2.002284830253524e-5
+Iter 145: V_size = 290, Converged = 155, ||r||_min = 1.9990310089445908e-5
+Iter 146: V_size = 435, Converged = 155, ||r||_min = 1.995826804106587e-5
+EV 156 converged μ = -0.5664833407 (λ ≈ 0.7526508757), ‖r‖ = 1.99e-05, stable for 3 iters
+Iter 147: V_size = 290, Converged = 156, ||r||_min = 1.99223707270315e-5
+Iter 148: V_size = 434, Converged = 156, ||r||_min = 7.861404339899598
+Iter 149: V_size = 288, Converged = 156, ||r||_min = 2.2024857298060634e-5
+Iter 150: V_size = 432, Converged = 156, ||r||_min = 2.1980618161320196e-5
+Iter 151: V_size = 288, Converged = 156, ||r||_min = 2.1935034600694833e-5
+Iter 152: V_size = 432, Converged = 156, ||r||_min = 2.1895801413147846e-5
+Iter 153: V_size = 288, Converged = 156, ||r||_min = 2.1860489564802774e-5
+Iter 154: V_size = 432, Converged = 156, ||r||_min = 2.1829030077089867e-5
+Iter 155: V_size = 288, Converged = 156, ||r||_min = 2.1804499993941503e-5
+Iter 156: V_size = 432, Converged = 156, ||r||_min = 2.1775185595479998e-5
+Iter 157: V_size = 288, Converged = 156, ||r||_min = 2.175094478049123e-5
+Iter 158: V_size = 432, Converged = 156, ||r||_min = 2.172798345767815e-5
+Iter 159: V_size = 288, Converged = 156, ||r||_min = 2.1707800950429133e-5
+Iter 160: V_size = 432, Converged = 156, ||r||_min = 2.1686015322763192e-5
+Iter 161: V_size = 288, Converged = 156, ||r||_min = 2.1667157712950058e-5
+Iter 162: V_size = 432, Converged = 156, ||r||_min = 2.164461086601522e-5
+Iter 163: V_size = 288, Converged = 156, ||r||_min = 2.1625177158137234e-5
+Iter 164: V_size = 432, Converged = 156, ||r||_min = 2.1602514854534302e-5
+Iter 165: V_size = 288, Converged = 156, ||r||_min = 2.1580625452510164e-5
+Iter 166: V_size = 432, Converged = 156, ||r||_min = 2.1561760441740606e-5
+Iter 167: V_size = 288, Converged = 156, ||r||_min = 2.154599094605278e-5
+Iter 168: V_size = 432, Converged = 156, ||r||_min = 2.1527019493124118e-5
+Iter 169: V_size = 288, Converged = 156, ||r||_min = 2.1511928235100317e-5
+Iter 170: V_size = 432, Converged = 156, ||r||_min = 2.1493203556541562e-5
+Iter 171: V_size = 288, Converged = 156, ||r||_min = 2.1474367690244908e-5
+Iter 172: V_size = 432, Converged = 156, ||r||_min = 2.1459761778621305e-5
+Iter 173: V_size = 288, Converged = 156, ||r||_min = 2.1444397917174393e-5

@@ -249,10 +249,6 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("Davidson")
     @time Σ, U = davidson(A, V, Naux, l, 1e-4, max_iter)
 
-    idx = sortperm(Σ)
-    Σ_squared = Σ[idx]
-    U = U[:, idx]
-
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
     Σexact_squared = read_eigenresults(molecule)
@@ -263,6 +259,12 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("\nSquare root of Eigenvalues:")
     Σ_sqrt = sqrt.(abs.(Σ_squared))
     Σexact_sqrt = sqrt.(abs.(Σexact_squared))
+    # sort the computed eigenvalues
+    idx_approx = sortperm(Σ_sqrt)
+    Σ_sqrt = Σ_sqrt[idx_approx]
+    idx_exact = sortperm(Σexact_sqrt)
+    Σexact_sqrt = Σexact_sqrt[idx_exact]
+
     println("\nCompute the difference between computed and exact eigenvalues:")
     difference = Σ_sqrt[1:r] - Σexact_sqrt[1:r]
     display("text/plain", difference')

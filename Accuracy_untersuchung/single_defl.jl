@@ -267,7 +267,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("\nCompute the difference between computed and exact eigenvalues:")
     difference = (Σ[1:r] .- Σexact[1:r])
     for i in 1:r
-        println(@sprintf("%3d: % .4e", i, difference[i]))
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = %.10f", i, Σ[i], Σexact[i], difference[i]))
     end
     println("$r Eigenvalues converges, out of $l requested.")
 end

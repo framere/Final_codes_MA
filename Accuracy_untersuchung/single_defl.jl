@@ -257,7 +257,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     # Display difference
     r = min(length(Σ), l)
     println("\nSquare root of Eigenvalues:")
-    Σ_sqrt = sqrt.(abs.(Σ_squared))
+    Σ_sqrt = sqrt.(abs.(Σ))
     Σexact_sqrt = sqrt.(abs.(Σexact_squared))
     # sort the computed eigenvalues
     idx_approx = sortperm(Σ_sqrt)

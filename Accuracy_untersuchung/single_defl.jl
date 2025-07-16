@@ -192,6 +192,12 @@ function davidson(
                 V_lock = hcat(V_lock, xvec)
                 nevf += 1
                 println(@sprintf("EV %3d converged μ = %.10f (λ ≈ %.10f), ‖r‖ = %.2e, stable for %d iters", nevf, μ, sqrt(abs(μ)), rnorm, count))
+                println(@sprintf("EV %3d converged μ = %.10f (λ ≈ %.10f), ‖r‖ = %.2e, stable for %d iters", nevf, μ, sqrt(abs(μ)), rnorm, count))
+                # Push the index of the converged eigenvector
+                idx_in_R = findfirst(y -> xvec ≈ X[:, y], 1:size(X, 2))
+                if idx_in_R !== nothing
+                    push!(conv_indices, idx_in_R)
+                end
                 delete!(convergence_tracker, μ)
                 if nevf >= l
                     println("Converged all eigenvalues.")

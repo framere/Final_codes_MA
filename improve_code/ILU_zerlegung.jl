@@ -30,12 +30,12 @@ function main(molecule::String)
     sparsity_ratio = nnz_A / total_elements
     println("Sparsity ratio: ", sparsity_ratio)
     println("Nonzero percentage: ", 100 * sparsity_ratio, "%")
-    threshold = 1e-10
+    threshold = 1e-4
     num_small = count(x -> abs(x) < threshold, A)
     total_elements = prod(size(A))
     percentage_small = 100 * num_small / total_elements
 
-    println("Percentage of elements < 1e-10: $(percentage_small)%")
+    println("Percentage of elements < $threshold: $(percentage_small)%")
 
 
 end

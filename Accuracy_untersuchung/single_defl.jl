@@ -161,7 +161,7 @@ function davidson(
 
 
 
-        desired_lambda_accuracy = 1e-5
+        desired_lambda_accuracy = thresh
 
         conv_indices = Int[]
         for i = 1:size(R, 2)
@@ -247,7 +247,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 5e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3, max_iter)
 
     idx = sortperm(Σ)
     Σ_squared = Σ[idx]
@@ -269,9 +269,9 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-betas = [64] # ,16,32,64
+betas = [16] # ,16,32,64
 molecules = ["formaldehyde"]
-ls = [50, 100, 200] #, 50, 100, 200
+ls = [50] #, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

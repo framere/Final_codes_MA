@@ -204,9 +204,12 @@ function davidson(
         X_nc = X[:, non_conv_indices]
         Σ_nc = Σ[non_conv_indices]
         R_nc = R[:, non_conv_indices]
+        # deflate non-converged Ritz vectors
+        R_nc .-= X_nc * (X_nc' * R_nc)
 
         t = Matrix{T}(undef, size(A, 1), length(non_conv_indices))
         ϵ = 1e-6
+
         for (i, idx) in enumerate(non_conv_indices)
             denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
             t[:, i] = R_nc[:, i] ./ denom

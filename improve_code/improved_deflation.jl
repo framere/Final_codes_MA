@@ -2,6 +2,7 @@ using LinearAlgebra
 using JLD2
 using Printf
 using IncompleteLU
+using SparseArrays
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
     ν = size(t_candidates, 2)

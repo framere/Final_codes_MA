@@ -230,7 +230,7 @@ function main(molecule::String, target_nev::Int, max_iter::Int, alpha::Int = 12)
         println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
     end
 
-    println("$r Eigenvalues converges, out of $nev requested.")
+    println("$r Eigenvalues converges, out of $target_nev requested.")
 
     println("Total estimated FLOPs: $(NFLOPs)")
 end

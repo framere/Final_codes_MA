@@ -267,7 +267,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     println("\nCompute the difference between computed and exact eigenvalues:")
     difference = (Σ[1:r] .- Σexact[1:r])
     for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = %.10f", i, Σ[i], Σexact[i], difference[i]))
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
     end
     println("$r Eigenvalues converges, out of $l requested.")
 end
@@ -275,7 +275,7 @@ end
 
 betas = [16] # ,16,32,64
 molecules = ["H2"]
-ls = [10] #, 50, 100, 200
+ls = [10, 50, 100, 200]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

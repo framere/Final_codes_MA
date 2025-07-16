@@ -207,7 +207,7 @@ function main(molecule::String, target_nev::Int, max_iter::Int, alpha::Int = 12)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1e-3, target_nev, 1e-2, max_iter)
+    @time Σ, U = davidson(A, V, Naux, 5e-3, target_nev, 1e-2, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -230,7 +230,9 @@ function main(molecule::String, target_nev::Int, max_iter::Int, alpha::Int = 12)
         println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
     end
 
-    println("$r Eigenvalues converges, out of $l requested.")
+    println("$r Eigenvalues converges, out of $nev requested.")
+
+    println("Total estimated FLOPs: $(NFLOPs)")
 end
 
 systems = ["H2"]

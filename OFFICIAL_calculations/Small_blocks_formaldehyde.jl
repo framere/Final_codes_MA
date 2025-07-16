@@ -207,15 +207,29 @@ function main(molecule::String, target_nev::Int, max_iter::Int, alpha::Int = 12)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1e-4, target_nev, 1e-2, max_iter)
+    @time Σ, U = davidson(A, V, Naux, 5e-3, target_nev, 1e-2, max_iter)
     idx = sortperm(Σ)
     Σ = Σ[idx]
+    U = U[:, idx]
+    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    
+    # Perform exact diagonalization as reference
+    println("\nReading exact Eigenvalues...")
+    Σexact_squared = read_eigenresults(molecule)
 
-    Σexact = read_eigenresults(molecule)
+    idx_exact = sortperm(Σexact_squared)
+    Σexact_squared = Σexact_squared[idx_exact]
+    Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
 
-    r = length(Σ)
-    println("\nDifference between Davidson and exact eigenvalues:")
-    display("text/plain", (Σ - Σexact[1:r])')
+    # Display difference
+    r = min(length(Σ), target_nev)
+    println("\nCompute the difference between computed and exact eigenvalues:")
+    difference = (Σ[1:r] .- Σexact[1:r])
+    for i in 1:r
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    end
+
+    println("$r Eigenvalues converges, out of $nev requested.")
     println("Total estimated FLOPs: $(NFLOPs)")
 end
 

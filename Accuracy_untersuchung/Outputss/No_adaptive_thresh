@@ -1,0 +1,1415 @@
+Processing molecule: formaldehyde
+Running with beta = 16
+Running with l = 60
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+Iter 1: V_size = 32, Converged = 0, ||r||_min = 222.7319027412293
+Iter 2: V_size = 64, Converged = 0, ||r||_min = 77.08902862606995
+Iter 3: V_size = 124, Converged = 0, ||r||_min = 0.7439534172560026
+Iter 4: V_size = 184, Converged = 0, ||r||_min = 0.001087561909892973
+Iter 5: V_size = 244, Converged = 0, ||r||_min = 1.0006152565015672e-6
+Iter 6: V_size = 120, Converged = 0, ||r||_min = 3.02609507718618e-10
+EV   1 converged μ = -611.6773615864 (λ ≈ 24.7321119516), ‖r‖ = 7.68e-13, stable for 3 iters
+EV   2 converged μ = -594.7742412739 (λ ≈ 24.3879937935), ‖r‖ = 5.93e-13, stable for 3 iters
+EV   3 converged μ = -735.4153437081 (λ ≈ 27.1185424333), ‖r‖ = 5.73e-13, stable for 3 iters
+Iter 7: V_size = 180, Converged = 3, ||r||_min = 5.725447256888323e-13
+EV   4 converged μ = -134.6090002247 (λ ≈ 11.6021118864), ‖r‖ = 4.00e-11, stable for 3 iters
+EV   5 converged μ = -131.6601989757 (λ ≈ 11.4743278224), ‖r‖ = 2.03e-11, stable for 3 iters
+EV   6 converged μ = -63.1374088909 (λ ≈ 7.9459051650), ‖r‖ = 8.83e-10, stable for 3 iters
+EV   7 converged μ = -89.1246093928 (λ ≈ 9.4405831066), ‖r‖ = 1.23e-10, stable for 3 iters
+EV   8 converged μ = -178.9518495502 (λ ≈ 13.3772885724), ‖r‖ = 2.38e-12, stable for 3 iters
+EV   9 converged μ = -167.9280307310 (λ ≈ 12.9587048246), ‖r‖ = 6.83e-12, stable for 3 iters
+EV  10 converged μ = -85.0975968389 (λ ≈ 9.2248358706), ‖r‖ = 1.10e-10, stable for 3 iters
+EV  11 converged μ = -139.8613654990 (λ ≈ 11.8262997383), ‖r‖ = 4.38e-11, stable for 3 iters
+Iter 8: V_size = 237, Converged = 11, ||r||_min = 167.21328089522623
+EV  12 converged μ = -45.3851815451 (λ ≈ 6.7368524954), ‖r‖ = 1.73e-10, stable for 3 iters
+EV  13 converged μ = -36.3324001585 (λ ≈ 6.0276363658), ‖r‖ = 9.13e-10, stable for 3 iters
+EV  14 converged μ = -19.4865336759 (λ ≈ 4.4143554089), ‖r‖ = 3.11e-08, stable for 3 iters
+EV  15 converged μ = -31.1572242298 (λ ≈ 5.5818656585), ‖r‖ = 1.46e-09, stable for 3 iters
+EV  16 converged μ = -46.3616597076 (λ ≈ 6.8089396904), ‖r‖ = 1.18e-10, stable for 3 iters
+EV  17 converged μ = -24.7580637576 (λ ≈ 4.9757475577), ‖r‖ = 5.59e-09, stable for 3 iters
+EV  18 converged μ = -27.4351946095 (λ ≈ 5.2378616447), ‖r‖ = 1.50e-08, stable for 3 iters
+EV  19 converged μ = -45.8340340820 (λ ≈ 6.7700837574), ‖r‖ = 1.04e-10, stable for 3 iters
+Iter 9: V_size = 98, Converged = 19, ||r||_min = 8.508308942885781
+EV  20 converged μ = -15.4658967762 (λ ≈ 3.9326704383), ‖r‖ = 5.40e-08, stable for 3 iters
+EV  21 converged μ = -16.2829937153 (λ ≈ 4.0352191657), ‖r‖ = 1.08e-08, stable for 3 iters
+EV  22 converged μ = -14.3190661649 (λ ≈ 3.7840541969), ‖r‖ = 2.58e-08, stable for 3 iters
+EV  23 converged μ = -16.1152499782 (λ ≈ 4.0143803978), ‖r‖ = 9.42e-09, stable for 3 iters
+EV  24 converged μ = -13.6825129287 (λ ≈ 3.6989880952), ‖r‖ = 2.78e-08, stable for 3 iters
+EV  25 converged μ = -18.1142002056 (λ ≈ 4.2560780310), ‖r‖ = 7.95e-09, stable for 3 iters
+EV  26 converged μ = -12.7590433135 (λ ≈ 3.5719803070), ‖r‖ = 1.13e-07, stable for 3 iters
+EV  27 converged μ = -16.3526879910 (λ ≈ 4.0438456933), ‖r‖ = 3.22e-09, stable for 3 iters
+EV  28 converged μ = -17.2609173950 (λ ≈ 4.1546260235), ‖r‖ = 3.29e-08, stable for 3 iters
+EV  29 converged μ = -13.5269622006 (λ ≈ 3.6779018748), ‖r‖ = 1.72e-08, stable for 3 iters
+EV  30 converged μ = -19.9884918895 (λ ≈ 4.4708491240), ‖r‖ = 5.48e-09, stable for 3 iters
+EV  31 converged μ = -11.7043630518 (λ ≈ 3.4211639908), ‖r‖ = 1.15e-07, stable for 3 iters
+EV  32 converged μ = -13.7222574537 (λ ≈ 3.7043565506), ‖r‖ = 5.47e-08, stable for 3 iters
+EV  33 converged μ = -12.8445327967 (λ ≈ 3.5839270077), ‖r‖ = 5.42e-08, stable for 3 iters
+EV  34 converged μ = -25.6627957975 (λ ≈ 5.0658460100), ‖r‖ = 1.41e-09, stable for 3 iters
+Iter 10: V_size = 139, Converged = 34, ||r||_min = 204.8260468291462
+EV  35 converged μ = -11.9681742753 (λ ≈ 3.4595049177), ‖r‖ = 1.07e-08, stable for 3 iters
+EV  36 converged μ = -11.8045444347 (λ ≈ 3.4357742118), ‖r‖ = 2.82e-08, stable for 3 iters
+EV  37 converged μ = -9.7475907440 (λ ≈ 3.1221131856), ‖r‖ = 3.61e-08, stable for 3 iters
+EV  38 converged μ = -9.8477604663 (λ ≈ 3.1381141576), ‖r‖ = 3.37e-08, stable for 3 iters
+EV  39 converged μ = -9.6326196688 (λ ≈ 3.1036461894), ‖r‖ = 6.72e-08, stable for 3 iters
+EV  40 converged μ = -9.4947928788 (λ ≈ 3.0813621791), ‖r‖ = 1.33e-07, stable for 3 iters
+EV  41 converged μ = -9.4656609716 (λ ≈ 3.0766314325), ‖r‖ = 1.00e-07, stable for 3 iters
+Iter 11: V_size = 165, Converged = 41, ||r||_min = 194.51634961090937
+EV  42 converged μ = -6.8329402410 (λ ≈ 2.6139893345), ‖r‖ = 2.93e-07, stable for 3 iters
+EV  43 converged μ = -6.6283479163 (λ ≈ 2.5745578098), ‖r‖ = 1.99e-07, stable for 3 iters
+EV  44 converged μ = -6.5857751727 (λ ≈ 2.5662765192), ‖r‖ = 3.32e-07, stable for 3 iters
+EV  45 converged μ = -7.7273393554 (λ ≈ 2.7798092300), ‖r‖ = 2.96e-08, stable for 3 iters
+Iter 12: V_size = 184, Converged = 45, ||r||_min = 56.47287530761154
+EV  46 converged μ = -6.2223720999 (λ ≈ 2.4944683000), ‖r‖ = 9.33e-08, stable for 3 iters
+EV  47 converged μ = -6.5384346765 (λ ≈ 2.5570363072), ‖r‖ = 4.96e-08, stable for 3 iters
+Iter 13: V_size = 199, Converged = 47, ||r||_min = 60.589318932628494
+EV  48 converged μ = -5.7190116271 (λ ≈ 2.3914455100), ‖r‖ = 2.04e-08, stable for 3 iters
+EV  49 converged μ = -5.0399288323 (λ ≈ 2.2449785817), ‖r‖ = 1.20e-07, stable for 3 iters
+EV  50 converged μ = -4.7814412997 (λ ≈ 2.1866507036), ‖r‖ = 2.11e-07, stable for 3 iters
+EV  51 converged μ = -4.7875655256 (λ ≈ 2.1880506223), ‖r‖ = 5.73e-07, stable for 3 iters
+EV  52 converged μ = -5.7891716333 (λ ≈ 2.4060697482), ‖r‖ = 2.74e-08, stable for 3 iters
+EV  53 converged μ = -5.2281211943 (λ ≈ 2.2865085161), ‖r‖ = 4.32e-08, stable for 3 iters
+Iter 14: V_size = 212, Converged = 53, ||r||_min = 61.06083045398855
+Iter 15: V_size = 219, Converged = 53, ||r||_min = 69.79551344663814
+Iter 16: V_size = 226, Converged = 53, ||r||_min = 0.0013750879190325591
+Iter 17: V_size = 233, Converged = 53, ||r||_min = 7.250904421799527e-5
+Iter 18: V_size = 240, Converged = 53, ||r||_min = 4.027347973442957e-6
+Iter 19: V_size = 247, Converged = 53, ||r||_min = 2.292921915707934e-7
+EV  54 converged μ = -4.6652046288 (λ ≈ 2.1599084770), ‖r‖ = 6.70e-08, stable for 3 iters
+EV  55 converged μ = -4.6211801649 (λ ≈ 2.1496930397), ‖r‖ = 3.33e-08, stable for 3 iters
+EV  56 converged μ = -4.5200151779 (λ ≈ 2.1260327321), ‖r‖ = 4.86e-08, stable for 3 iters
+Iter 20: V_size = 254, Converged = 56, ||r||_min = 6.697639416652373e-8
+EV  57 converged μ = -4.4887209643 (λ ≈ 2.1186601814), ‖r‖ = 4.54e-08, stable for 3 iters
+EV  58 converged μ = -4.0926204594 (λ ≈ 2.0230226048), ‖r‖ = 6.16e-08, stable for 3 iters
+Iter 21: V_size = 8, Converged = 58, ||r||_min = 4.536457034365444e-8
+Iter 22: V_size = 10, Converged = 58, ||r||_min = 156.97614422672348
+EV  59 converged μ = -4.0016558086 (λ ≈ 2.0004139093), ‖r‖ = 7.69e-08, stable for 3 iters
+EV  60 converged μ = -3.8956052658 (λ ≈ 1.9737287721), ‖r‖ = 5.24e-08, stable for 3 iters
+Converged all eigenvalues.
+201.749756 seconds (2.75 M allocations: 184.057 GiB, 0.42% gc time, 0.26% compilation time)
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 27.1185424333 (computed) - 27.1185424333 (exact) = -3.5527e-15
+  2: 24.7321119516 (computed) - 24.7321119516 (exact) =  7.1054e-15
+  3: 24.3879937935 (computed) - 24.3879937935 (exact) =  1.4211e-14
+  4: 13.3772885724 (computed) - 13.3772885724 (exact) =  3.5527e-15
+  5: 12.9587048246 (computed) - 12.9587048246 (exact) = -5.3291e-15
+  6: 11.8262997383 (computed) - 11.8262997383 (exact) = -7.1054e-15
+  7: 11.6021118864 (computed) - 11.6021118864 (exact) =  0.0000e+00
+  8: 11.4743278224 (computed) - 11.4743278224 (exact) = -1.4211e-14
+  9: 9.4405831066 (computed) - 9.4405831066 (exact) = -7.1054e-15
+ 10: 9.2248358706 (computed) - 9.2248358706 (exact) = -3.5527e-15
+ 11: 7.9459051650 (computed) - 7.9459051650 (exact) = -1.0392e-13
+ 12: 6.8089396904 (computed) - 6.8089396904 (exact) = -6.2172e-15
+ 13: 6.7700837574 (computed) - 6.7700837574 (exact) =  3.5527e-15
+ 14: 6.7368524954 (computed) - 6.7368524954 (exact) =  2.6645e-15
+ 15: 6.0276363658 (computed) - 6.0276363658 (exact) = -1.2434e-14
+ 16: 5.5818656585 (computed) - 5.5818656585 (exact) = -1.9540e-14
+ 17: 5.2378616447 (computed) - 5.2378616448 (exact) = -1.2479e-12
+ 18: 5.0658460100 (computed) - 5.0658460100 (exact) = -3.5527e-15
+ 19: 4.9757475577 (computed) - 4.9757475577 (exact) = -2.0872e-13
+ 20: 4.4708491240 (computed) - 4.4708491240 (exact) = -4.3521e-14
+ 21: 4.4143554089 (computed) - 4.4143554089 (exact) = -2.1609e-12
+ 22: 4.2560780310 (computed) - 4.2560780310 (exact) = -7.6383e-14
+ 23: 4.1546260235 (computed) - 4.1546260235 (exact) = -8.8107e-13
+ 24: 4.0438456933 (computed) - 4.0438456933 (exact) = -1.6875e-14
+ 25: 4.0352191657 (computed) - 4.0352191657 (exact) = -7.7272e-14
+ 26: 4.0143803978 (computed) - 4.0143803978 (exact) = -7.3719e-14
+ 27: 3.9326704383 (computed) - 3.9326704383 (exact) = -1.5836e-12
+ 28: 3.7840541969 (computed) - 3.7840541969 (exact) = -4.5208e-13
+ 29: 3.7043565506 (computed) - 3.7043565506 (exact) = -1.5086e-12
+ 30: 3.6989880952 (computed) - 3.6989880952 (exact) = -7.7938e-13
+ 31: 3.6779018748 (computed) - 3.6779018748 (exact) = -2.6423e-13
+ 32: 3.5839270077 (computed) - 3.5839270077 (exact) = -1.1373e-12
+ 33: 3.5719803070 (computed) - 3.5719803070 (exact) = -4.1944e-12
+ 34: 3.4595049177 (computed) - 3.4595049177 (exact) = -3.4195e-14
+ 35: 3.4357742118 (computed) - 3.4357742118 (exact) = -9.5479e-14
+ 36: 3.4211639908 (computed) - 3.4211639908 (exact) = -4.8543e-12
+ 37: 3.1381141576 (computed) - 3.1381141576 (exact) = -1.9718e-13
+ 38: 3.1221131856 (computed) - 3.1221131856 (exact) = -2.9532e-13
+ 39: 3.1036461894 (computed) - 3.1036461894 (exact) = -5.5511e-13
+ 40: 3.0813621791 (computed) - 3.0813621791 (exact) = -3.0571e-12
+ 41: 3.0766314325 (computed) - 3.0766314325 (exact) = -1.1520e-12
+ 42: 2.7798092300 (computed) - 2.7798092300 (exact) = -2.4780e-13
+ 43: 2.6139893345 (computed) - 2.6139893345 (exact) = -9.4484e-12
+ 44: 2.5745578098 (computed) - 2.5745578099 (exact) = -6.5663e-12
+ 45: 2.5662765192 (computed) - 2.5662765192 (exact) = -1.2628e-11
+ 46: 2.5570363072 (computed) - 2.5570363072 (exact) = -6.6702e-13
+ 47: 2.4944683000 (computed) - 2.4944683000 (exact) = -2.5113e-12
+ 48: 2.4060697482 (computed) - 2.4060697482 (exact) = -1.4078e-13
+ 49: 2.3914455100 (computed) - 2.3914455100 (exact) = -6.3949e-14
+ 50: 2.2865085161 (computed) - 2.2865085161 (exact) = -5.8975e-13
+ 51: 2.2449785817 (computed) - 2.2449785817 (exact) = -1.9380e-12
+ 52: 2.1880506223 (computed) - 2.1880506223 (exact) = -1.2573e-11
+ 53: 2.1866507036 (computed) - 2.1866507036 (exact) = -6.9078e-12
+ 54: 2.1599084770 (computed) - 2.1599084770 (exact) = -8.9617e-13
+ 55: 2.1496930397 (computed) - 2.1496930397 (exact) = -6.8834e-14
+ 56: 2.1260327321 (computed) - 2.1260327321 (exact) = -2.9265e-13
+ 57: 2.1186601814 (computed) - 2.1186601814 (exact) = -6.2172e-14
+ 58: 2.0230226048 (computed) - 2.0230226048 (exact) = -2.9798e-12
+ 59: 2.0004139093 (computed) - 2.0004139093 (exact) = -8.3489e-14
+ 60: 1.9737287721 (computed) - 1.9737287721 (exact) = -1.1857e-13
+60 Eigenvalues converges, out of 60 requested.
+Running with l = 120
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+Iter 1: V_size = 32, Converged = 0, ||r||_min = 222.7319027412293
+Iter 2: V_size = 64, Converged = 0, ||r||_min = 77.08902862606995
+Iter 3: V_size = 128, Converged = 0, ||r||_min = 0.7439534172560064
+Iter 4: V_size = 248, Converged = 0, ||r||_min = 0.001073813382049262
+Iter 5: V_size = 240, Converged = 0, ||r||_min = 7.235541073119897e-7
+Iter 6: V_size = 240, Converged = 0, ||r||_min = 2.1670671105312528e-10
+EV   1 converged μ = -611.6773615864 (λ ≈ 24.7321119516), ‖r‖ = 6.00e-13, stable for 3 iters
+EV   2 converged μ = -735.4153437081 (λ ≈ 27.1185424333), ‖r‖ = 1.08e-12, stable for 3 iters
+EV   3 converged μ = -594.7742412739 (λ ≈ 24.3879937935), ‖r‖ = 5.06e-13, stable for 3 iters
+Iter 7: V_size = 240, Converged = 3, ||r||_min = 1.0833740244312996e-12
+EV   4 converged μ = -131.6601989757 (λ ≈ 11.4743278224), ‖r‖ = 3.44e-12, stable for 3 iters
+EV   5 converged μ = -178.9518495502 (λ ≈ 13.3772885724), ‖r‖ = 4.40e-13, stable for 3 iters
+EV   6 converged μ = -85.0975968389 (λ ≈ 9.2248358706), ‖r‖ = 2.00e-11, stable for 3 iters
+EV   7 converged μ = -89.1246093928 (λ ≈ 9.4405831066), ‖r‖ = 1.74e-11, stable for 3 iters
+EV   8 converged μ = -63.1374088909 (λ ≈ 7.9459051650), ‖r‖ = 1.52e-10, stable for 3 iters
+EV   9 converged μ = -167.9280307310 (λ ≈ 12.9587048246), ‖r‖ = 1.17e-12, stable for 3 iters
+EV  10 converged μ = -134.6090002247 (λ ≈ 11.6021118864), ‖r‖ = 5.60e-12, stable for 3 iters
+EV  11 converged μ = -139.8613654990 (λ ≈ 11.8262997383), ‖r‖ = 5.38e-12, stable for 3 iters
+Iter 8: V_size = 234, Converged = 11, ||r||_min = 31.565999723987588
+EV  12 converged μ = -27.4351946096 (λ ≈ 5.2378616448), ‖r‖ = 1.05e-09, stable for 3 iters
+EV  13 converged μ = -45.3851815451 (λ ≈ 6.7368524954), ‖r‖ = 6.26e-11, stable for 3 iters
+EV  14 converged μ = -19.4865336759 (λ ≈ 4.4143554089), ‖r‖ = 3.12e-09, stable for 3 iters
+EV  15 converged μ = -24.7580637576 (λ ≈ 4.9757475577), ‖r‖ = 9.55e-10, stable for 3 iters
+EV  16 converged μ = -25.6627957974 (λ ≈ 5.0658460100), ‖r‖ = 2.51e-09, stable for 3 iters
+EV  17 converged μ = -31.1572242298 (λ ≈ 5.5818656585), ‖r‖ = 1.49e-10, stable for 3 iters
+EV  18 converged μ = -46.3616597076 (λ ≈ 6.8089396904), ‖r‖ = 4.20e-11, stable for 3 iters
+EV  19 converged μ = -45.8340340820 (λ ≈ 6.7700837574), ‖r‖ = 1.58e-11, stable for 3 iters
+EV  20 converged μ = -16.3526879910 (λ ≈ 4.0438456933), ‖r‖ = 5.02e-09, stable for 3 iters
+EV  21 converged μ = -19.9884918894 (λ ≈ 4.4708491240), ‖r‖ = 6.27e-09, stable for 3 iters
+EV  22 converged μ = -18.1142002056 (λ ≈ 4.2560780310), ‖r‖ = 7.73e-09, stable for 3 iters
+EV  23 converged μ = -36.3324001585 (λ ≈ 6.0276363658), ‖r‖ = 1.89e-10, stable for 3 iters
+Iter 9: V_size = 218, Converged = 23, ||r||_min = 309.97135985288406
+EV  24 converged μ = -9.7475907439 (λ ≈ 3.1221131856), ‖r‖ = 9.41e-09, stable for 3 iters
+EV  25 converged μ = -16.1152499782 (λ ≈ 4.0143803978), ‖r‖ = 2.71e-10, stable for 3 iters
+EV  26 converged μ = -11.9681742753 (λ ≈ 3.4595049177), ‖r‖ = 2.82e-09, stable for 3 iters
+EV  27 converged μ = -15.4658967762 (λ ≈ 3.9326704383), ‖r‖ = 1.35e-09, stable for 3 iters
+EV  28 converged μ = -9.8477604663 (λ ≈ 3.1381141576), ‖r‖ = 1.10e-08, stable for 3 iters
+EV  29 converged μ = -13.5269622006 (λ ≈ 3.6779018748), ‖r‖ = 6.56e-10, stable for 3 iters
+EV  30 converged μ = -9.6326196688 (λ ≈ 3.1036461894), ‖r‖ = 1.06e-08, stable for 3 iters
+EV  31 converged μ = -17.2609173950 (λ ≈ 4.1546260235), ‖r‖ = 7.93e-10, stable for 3 iters
+EV  32 converged μ = -11.7043630519 (λ ≈ 3.4211639908), ‖r‖ = 3.04e-09, stable for 3 iters
+EV  33 converged μ = -9.4947928788 (λ ≈ 3.0813621791), ‖r‖ = 1.76e-08, stable for 3 iters
+EV  34 converged μ = -9.4656609716 (λ ≈ 3.0766314325), ‖r‖ = 1.94e-08, stable for 3 iters
+EV  35 converged μ = -11.8045444347 (λ ≈ 3.4357742118), ‖r‖ = 6.52e-09, stable for 3 iters
+EV  36 converged μ = -14.3190661649 (λ ≈ 3.7840541969), ‖r‖ = 9.88e-10, stable for 3 iters
+EV  37 converged μ = -13.6825129287 (λ ≈ 3.6989880952), ‖r‖ = 1.02e-09, stable for 3 iters
+EV  38 converged μ = -13.7222574537 (λ ≈ 3.7043565506), ‖r‖ = 9.51e-10, stable for 3 iters
+EV  39 converged μ = -12.8445327967 (λ ≈ 3.5839270077), ‖r‖ = 1.13e-09, stable for 3 iters
+EV  40 converged μ = -16.2829937153 (λ ≈ 4.0352191657), ‖r‖ = 3.74e-10, stable for 3 iters
+EV  41 converged μ = -12.7590433135 (λ ≈ 3.5719803070), ‖r‖ = 2.80e-09, stable for 3 iters
+Iter 10: V_size = 194, Converged = 41, ||r||_min = 103.812079536234
+EV  42 converged μ = -5.2281211943 (λ ≈ 2.2865085161), ‖r‖ = 4.44e-08, stable for 3 iters
+EV  43 converged μ = -5.0399288323 (λ ≈ 2.2449785817), ‖r‖ = 7.41e-08, stable for 3 iters
+EV  44 converged μ = -6.2223720999 (λ ≈ 2.4944683000), ‖r‖ = 2.08e-08, stable for 3 iters
+EV  45 converged μ = -6.5384346765 (λ ≈ 2.5570363072), ‖r‖ = 1.98e-08, stable for 3 iters
+EV  46 converged μ = -6.8329402410 (λ ≈ 2.6139893345), ‖r‖ = 1.14e-08, stable for 3 iters
+EV  47 converged μ = -5.7891716333 (λ ≈ 2.4060697482), ‖r‖ = 2.75e-08, stable for 3 iters
+EV  48 converged μ = -7.7273393554 (λ ≈ 2.7798092300), ‖r‖ = 2.82e-09, stable for 3 iters
+EV  49 converged μ = -4.6652046288 (λ ≈ 2.1599084770), ‖r‖ = 6.59e-08, stable for 3 iters
+EV  50 converged μ = -6.6283479163 (λ ≈ 2.5745578099), ‖r‖ = 1.42e-08, stable for 3 iters
+EV  51 converged μ = -5.7190116271 (λ ≈ 2.3914455100), ‖r‖ = 2.57e-08, stable for 3 iters
+EV  52 converged μ = -6.5857751728 (λ ≈ 2.5662765192), ‖r‖ = 9.91e-09, stable for 3 iters
+Iter 11: V_size = 158, Converged = 52, ||r||_min = 266.6494450293132
+EV  53 converged μ = -3.6818135643 (λ ≈ 1.9188052440), ‖r‖ = 9.22e-08, stable for 3 iters
+EV  54 converged μ = -4.0926204594 (λ ≈ 2.0230226048), ‖r‖ = 7.74e-08, stable for 3 iters
+EV  55 converged μ = -3.8956052657 (λ ≈ 1.9737287721), ‖r‖ = 3.68e-08, stable for 3 iters
+EV  56 converged μ = -4.7814412997 (λ ≈ 2.1866507036), ‖r‖ = 1.39e-08, stable for 3 iters
+EV  57 converged μ = -4.7875655256 (λ ≈ 2.1880506223), ‖r‖ = 1.04e-08, stable for 3 iters
+EV  58 converged μ = -3.2422680056 (λ ≈ 1.8006298913), ‖r‖ = 2.36e-07, stable for 3 iters
+EV  59 converged μ = -3.4639860049 (λ ≈ 1.8611786601), ‖r‖ = 5.79e-08, stable for 3 iters
+EV  60 converged μ = -3.4531110698 (λ ≈ 1.8582548452), ‖r‖ = 1.29e-07, stable for 3 iters
+EV  61 converged μ = -3.3992914116 (λ ≈ 1.8437167384), ‖r‖ = 2.26e-07, stable for 3 iters
+EV  62 converged μ = -3.5017397078 (λ ≈ 1.8712935921), ‖r‖ = 9.60e-08, stable for 3 iters
+EV  63 converged μ = -4.4887209642 (λ ≈ 2.1186601814), ‖r‖ = 4.73e-08, stable for 3 iters
+EV  64 converged μ = -4.0016558086 (λ ≈ 2.0004139093), ‖r‖ = 6.01e-08, stable for 3 iters
+EV  65 converged μ = -4.6211801649 (λ ≈ 2.1496930397), ‖r‖ = 2.04e-08, stable for 3 iters
+EV  66 converged μ = -3.1850934964 (λ ≈ 1.7846830241), ‖r‖ = 2.48e-07, stable for 3 iters
+EV  67 converged μ = -4.5200151779 (λ ≈ 2.1260327321), ‖r‖ = 2.15e-08, stable for 3 iters
+EV  68 converged μ = -3.2166850238 (λ ≈ 1.7935119246), ‖r‖ = 2.08e-07, stable for 3 iters
+Iter 12: V_size = 226, Converged = 68, ||r||_min = 145.8280455221471
+EV  69 converged μ = -2.7989965422 (λ ≈ 1.6730201858), ‖r‖ = 5.68e-08, stable for 3 iters
+EV  70 converged μ = -2.4160896953 (λ ≈ 1.5543775910), ‖r‖ = 1.57e-07, stable for 3 iters
+EV  71 converged μ = -2.5911054674 (λ ≈ 1.6096911093), ‖r‖ = 8.45e-08, stable for 3 iters
+EV  72 converged μ = -2.5874491556 (λ ≈ 1.6085549899), ‖r‖ = 5.85e-08, stable for 3 iters
+EV  73 converged μ = -2.5841064740 (λ ≈ 1.6075156217), ‖r‖ = 1.05e-07, stable for 3 iters
+EV  74 converged μ = -2.4400418245 (λ ≈ 1.5620633228), ‖r‖ = 1.70e-07, stable for 3 iters
+EV  75 converged μ = -3.2059831946 (λ ≈ 1.7905259547), ‖r‖ = 1.90e-08, stable for 3 iters
+EV  76 converged μ = -2.9546436079 (λ ≈ 1.7189076787), ‖r‖ = 5.77e-08, stable for 3 iters
+EV  77 converged μ = -2.9940284524 (λ ≈ 1.7303261116), ‖r‖ = 2.95e-08, stable for 3 iters
+EV  78 converged μ = -2.3085424804 (λ ≈ 1.5193888509), ‖r‖ = 1.46e-07, stable for 3 iters
+EV  79 converged μ = -2.5791171034 (λ ≈ 1.6059629832), ‖r‖ = 5.28e-08, stable for 3 iters
+Iter 13: V_size = 104, Converged = 79, ||r||_min = 121.05489517798527
+EV  80 converged μ = -2.1395482968 (λ ≈ 1.4627194867), ‖r‖ = 7.06e-08, stable for 3 iters
+EV  81 converged μ = -2.2323334282 (λ ≈ 1.4940995376), ‖r‖ = 3.39e-08, stable for 3 iters
+EV  82 converged μ = -2.2988237692 (λ ≈ 1.5161872474), ‖r‖ = 4.15e-08, stable for 3 iters
+EV  83 converged μ = -1.9846028432 (λ ≈ 1.4087593276), ‖r‖ = 1.82e-07, stable for 3 iters
+EV  84 converged μ = -2.3103853971 (λ ≈ 1.5199951964), ‖r‖ = 4.01e-08, stable for 3 iters
+Iter 14: V_size = 145, Converged = 84, ||r||_min = 118.03728343621603
+EV  85 converged μ = -2.0457552827 (λ ≈ 1.4302990186), ‖r‖ = 3.88e-08, stable for 3 iters
+EV  86 converged μ = -1.8609860247 (λ ≈ 1.3641796160), ‖r‖ = 1.29e-07, stable for 3 iters
+EV  87 converged μ = -1.7440793965 (λ ≈ 1.3206359818), ‖r‖ = 1.85e-07, stable for 3 iters
+EV  88 converged μ = -1.8469613688 (λ ≈ 1.3590295688), ‖r‖ = 1.52e-07, stable for 3 iters
+EV  89 converged μ = -1.9648320507 (λ ≈ 1.4017246701), ‖r‖ = 6.31e-08, stable for 3 iters
+EV  90 converged μ = -1.8218892034 (λ ≈ 1.3497737601), ‖r‖ = 1.86e-07, stable for 3 iters
+EV  91 converged μ = -2.0592220407 (λ ≈ 1.4349989689), ‖r‖ = 3.04e-08, stable for 3 iters
+EV  92 converged μ = -1.7080984095 (λ ≈ 1.3069423895), ‖r‖ = 5.36e-07, stable for 3 iters
+EV  93 converged μ = -1.7109197497 (λ ≈ 1.3080213109), ‖r‖ = 2.65e-07, stable for 3 iters
+EV  94 converged μ = -1.8894883747 (λ ≈ 1.3745866196), ‖r‖ = 1.07e-07, stable for 3 iters
+EV  95 converged μ = -1.6989800033 (λ ≈ 1.3034492715), ‖r‖ = 4.87e-07, stable for 3 iters
+EV  96 converged μ = -1.8834034052 (λ ≈ 1.3723714531), ‖r‖ = 1.07e-07, stable for 3 iters
+EV  97 converged μ = -2.0143000912 (λ ≈ 1.4192604029), ‖r‖ = 6.34e-08, stable for 3 iters
+Iter 15: V_size = 181, Converged = 97, ||r||_min = 49.548260285570294
+EV  98 converged μ = -1.5019950324 (λ ≈ 1.2255590693), ‖r‖ = 6.54e-07, stable for 3 iters
+EV  99 converged μ = -1.5798655759 (λ ≈ 1.2569270368), ‖r‖ = 4.05e-07, stable for 3 iters
+EV 100 converged μ = -1.4278863876 (λ ≈ 1.1949420018), ‖r‖ = 1.82e-06, stable for 3 iters
+EV 101 converged μ = -1.5333450949 (λ ≈ 1.2382831239), ‖r‖ = 6.36e-07, stable for 3 iters
+Iter 16: V_size = 204, Converged = 101, ||r||_min = 82.36386907132969
+EV 102 converged μ = -1.4349463720 (λ ≈ 1.1978924709), ‖r‖ = 5.69e-07, stable for 3 iters
+Iter 17: V_size = 223, Converged = 102, ||r||_min = 46.62145228656174
+Iter 18: V_size = 241, Converged = 102, ||r||_min = 19.913208425578013
+Iter 19: V_size = 36, Converged = 102, ||r||_min = 0.00028701636403780946
+Iter 20: V_size = 54, Converged = 102, ||r||_min = 6.46393949097531e-5
+Iter 21: V_size = 72, Converged = 102, ||r||_min = 2.2474809473525683e-5
+Iter 22: V_size = 90, Converged = 102, ||r||_min = 1.269476526870293e-5
+EV 103 converged μ = -1.3724487691 (λ ≈ 1.1715155864), ‖r‖ = 7.01e-06, stable for 3 iters
+Iter 23: V_size = 108, Converged = 103, ||r||_min = 8.670420240244157e-6
+EV 104 converged μ = -1.3913870880 (λ ≈ 1.1795707219), ‖r‖ = 7.87e-06, stable for 3 iters
+Iter 24: V_size = 125, Converged = 104, ||r||_min = 7.870277335029729e-6
+EV 105 converged μ = -1.3225678600 (λ ≈ 1.1500295040), ‖r‖ = 5.60e-06, stable for 3 iters
+Iter 25: V_size = 141, Converged = 105, ||r||_min = 5.540028660817305
+Iter 26: V_size = 156, Converged = 105, ||r||_min = 5.5400887621587565
+EV 106 converged μ = -1.3068113408 (λ ≈ 1.1431584933), ‖r‖ = 4.20e-06, stable for 3 iters
+EV 107 converged μ = -1.2912509440 (λ ≈ 1.1363322331), ‖r‖ = 4.15e-06, stable for 3 iters
+EV 108 converged μ = -1.3075266836 (λ ≈ 1.1434713305), ‖r‖ = 5.16e-06, stable for 3 iters
+Iter 27: V_size = 171, Converged = 108, ||r||_min = 5.156144985293317e-6
+Iter 28: V_size = 183, Converged = 108, ||r||_min = 20.70929433289795
+Iter 29: V_size = 195, Converged = 108, ||r||_min = 7.671322551741186e-7
+EV 109 converged μ = -1.2021270202 (λ ≈ 1.0964155326), ‖r‖ = 2.25e-07, stable for 3 iters
+EV 110 converged μ = -1.2327042760 (λ ≈ 1.1102721630), ‖r‖ = 1.51e-07, stable for 3 iters
+EV 111 converged μ = -1.3039428406 (λ ≈ 1.1419031660), ‖r‖ = 9.20e-08, stable for 3 iters
+Iter 30: V_size = 207, Converged = 111, ||r||_min = 9.201736247244593e-8
+EV 112 converged μ = -1.1809464847 (λ ≈ 1.0867136167), ‖r‖ = 5.34e-07, stable for 3 iters
+Iter 31: V_size = 216, Converged = 112, ||r||_min = 11.405726456100682
+EV 113 converged μ = -1.0854995362 (λ ≈ 1.0418730903), ‖r‖ = 2.34e-07, stable for 3 iters
+EV 114 converged μ = -1.1444944994 (λ ≈ 1.0698104970), ‖r‖ = 2.48e-07, stable for 3 iters
+EV 115 converged μ = -1.0815813324 (λ ≈ 1.0399910252), ‖r‖ = 1.84e-07, stable for 3 iters
+EV 116 converged μ = -1.1080548267 (λ ≈ 1.0526418321), ‖r‖ = 1.43e-07, stable for 3 iters
+EV 117 converged μ = -1.0882254514 (λ ≈ 1.0431804500), ‖r‖ = 1.86e-07, stable for 3 iters
+EV 118 converged μ = -1.1341477277 (λ ≈ 1.0649637213), ‖r‖ = 2.25e-07, stable for 3 iters
+Iter 32: V_size = 224, Converged = 118, ||r||_min = 13.755532108128758
+Iter 33: V_size = 226, Converged = 118, ||r||_min = 45.77123885031091
+EV 119 converged μ = -1.0453063721 (λ ≈ 1.0224022555), ‖r‖ = 2.42e-07, stable for 3 iters
+Iter 34: V_size = 228, Converged = 119, ||r||_min = 2.421113182575896e-7
+Iter 35: V_size = 229, Converged = 119, ||r||_min = 5.562040759837207
+Iter 36: V_size = 230, Converged = 119, ||r||_min = 0.00020980024289700102
+Iter 37: V_size = 231, Converged = 119, ||r||_min = 3.406041383220984e-5
+Iter 38: V_size = 232, Converged = 119, ||r||_min = 8.110679095754699e-6
+Iter 39: V_size = 233, Converged = 119, ||r||_min = 1.005253731109472e-6
+EV 120 converged μ = -1.0099053653 (λ ≈ 1.0049404785), ‖r‖ = 2.22e-07, stable for 3 iters
+Converged all eigenvalues.
+436.681406 seconds (9.91 M allocations: 691.433 GiB, 0.66% gc time)
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 27.1185424333 (computed) - 27.1185424333 (exact) = -1.0658e-14
+  2: 24.7321119516 (computed) - 24.7321119516 (exact) =  7.1054e-15
+  3: 24.3879937935 (computed) - 24.3879937935 (exact) =  7.1054e-15
+  4: 13.3772885724 (computed) - 13.3772885724 (exact) =  3.5527e-15
+  5: 12.9587048246 (computed) - 12.9587048246 (exact) =  3.5527e-15
+  6: 11.8262997383 (computed) - 11.8262997383 (exact) = -7.1054e-15
+  7: 11.6021118864 (computed) - 11.6021118864 (exact) =  8.8818e-15
+  8: 11.4743278224 (computed) - 11.4743278224 (exact) = -1.2434e-14
+  9: 9.4405831066 (computed) - 9.4405831066 (exact) =  0.0000e+00
+ 10: 9.2248358706 (computed) - 9.2248358706 (exact) =  3.5527e-15
+ 11: 7.9459051650 (computed) - 7.9459051650 (exact) = -4.3521e-14
+ 12: 6.8089396904 (computed) - 6.8089396904 (exact) =  0.0000e+00
+ 13: 6.7700837574 (computed) - 6.7700837574 (exact) = -1.7764e-15
+ 14: 6.7368524954 (computed) - 6.7368524954 (exact) = -8.8818e-16
+ 15: 6.0276363658 (computed) - 6.0276363658 (exact) = -3.5527e-15
+ 16: 5.5818656585 (computed) - 5.5818656585 (exact) = -1.0658e-14
+ 17: 5.2378616448 (computed) - 5.2378616448 (exact) = -1.0481e-13
+ 18: 5.0658460100 (computed) - 5.0658460100 (exact) = -4.7695e-13
+ 19: 4.9757475577 (computed) - 4.9757475577 (exact) = -3.5527e-14
+ 20: 4.4708491240 (computed) - 4.4708491240 (exact) = -1.8918e-12
+ 21: 4.4143554089 (computed) - 4.4143554089 (exact) = -3.9879e-13
+ 22: 4.2560780310 (computed) - 4.2560780310 (exact) = -2.1840e-12
+ 23: 4.1546260235 (computed) - 4.1546260235 (exact) = -2.3093e-14
+ 24: 4.0438456933 (computed) - 4.0438456933 (exact) = -6.7768e-13
+ 25: 4.0352191657 (computed) - 4.0352191657 (exact) = -1.7764e-15
+ 26: 4.0143803978 (computed) - 4.0143803978 (exact) = -2.6645e-15
+ 27: 3.9326704383 (computed) - 3.9326704383 (exact) = -3.4195e-14
+ 28: 3.7840541969 (computed) - 3.7840541969 (exact) = -1.4655e-14
+ 29: 3.7043565506 (computed) - 3.7043565506 (exact) = -2.0872e-14
+ 30: 3.6989880952 (computed) - 3.6989880952 (exact) = -2.2204e-14
+ 31: 3.6779018748 (computed) - 3.6779018748 (exact) = -2.1316e-14
+ 32: 3.5839270077 (computed) - 3.5839270077 (exact) = -3.2863e-14
+ 33: 3.5719803070 (computed) - 3.5719803070 (exact) = -1.0303e-13
+ 34: 3.4595049177 (computed) - 3.4595049177 (exact) = -8.4821e-14
+ 35: 3.4357742118 (computed) - 3.4357742118 (exact) = -4.8939e-13
+ 36: 3.4211639908 (computed) - 3.4211639908 (exact) = -1.2612e-13
+ 37: 3.1381141576 (computed) - 3.1381141576 (exact) = -8.1224e-13
+ 38: 3.1221131856 (computed) - 3.1221131856 (exact) = -5.8531e-13
+ 39: 3.1036461894 (computed) - 3.1036461894 (exact) = -8.7086e-13
+ 40: 3.0813621791 (computed) - 3.0813621791 (exact) = -2.0663e-12
+ 41: 3.0766314325 (computed) - 3.0766314325 (exact) = -2.4372e-12
+ 42: 2.7798092300 (computed) - 2.7798092300 (exact) = -3.2419e-14
+ 43: 2.6139893345 (computed) - 2.6139893345 (exact) = -3.0509e-13
+ 44: 2.5745578099 (computed) - 2.5745578099 (exact) = -3.8103e-13
+ 45: 2.5662765192 (computed) - 2.5662765192 (exact) = -2.8688e-13
+ 46: 2.5570363072 (computed) - 2.5570363072 (exact) = -7.9980e-13
+ 47: 2.4944683000 (computed) - 2.4944683000 (exact) = -1.0569e-12
+ 48: 2.4060697482 (computed) - 2.4060697482 (exact) = -1.6387e-12
+ 49: 2.3914455100 (computed) - 2.3914455100 (exact) = -1.3940e-12
+ 50: 2.2865085161 (computed) - 2.2865085161 (exact) = -2.3976e-12
+ 51: 2.2449785817 (computed) - 2.2449785817 (exact) = -7.6015e-12
+ 52: 2.1880506223 (computed) - 2.1880506223 (exact) = -1.4877e-13
+ 53: 2.1866507036 (computed) - 2.1866507036 (exact) = -1.8119e-13
+ 54: 2.1599084770 (computed) - 2.1599084770 (exact) = -4.7100e-12
+ 55: 2.1496930397 (computed) - 2.1496930397 (exact) = -3.3262e-13
+ 56: 2.1260327321 (computed) - 2.1260327321 (exact) = -3.0242e-13
+ 57: 2.1186601814 (computed) - 2.1186601814 (exact) = -1.3061e-12
+ 58: 2.0230226048 (computed) - 2.0230226048 (exact) = -2.6237e-12
+ 59: 2.0004139093 (computed) - 2.0004139093 (exact) = -1.6276e-12
+ 60: 1.9737287721 (computed) - 1.9737287721 (exact) = -6.9966e-13
+ 61: 1.9188052440 (computed) - 1.9188052440 (exact) = -3.5496e-12
+ 62: 1.8712935921 (computed) - 1.8712935921 (exact) = -3.4155e-12
+ 63: 1.8611786601 (computed) - 1.8611786601 (exact) = -1.2716e-12
+ 64: 1.8582548452 (computed) - 1.8582548452 (exact) = -6.1926e-12
+ 65: 1.8437167384 (computed) - 1.8437167384 (exact) = -1.3829e-11
+ 66: 1.8006298913 (computed) - 1.8006298914 (exact) = -1.6545e-11
+ 67: 1.7935119246 (computed) - 1.7935119246 (exact) = -1.5706e-11
+ 68: 1.7905259547 (computed) - 1.7905259547 (exact) = -1.4344e-12
+ 69: 1.7846830241 (computed) - 1.7846830241 (exact) = -1.7112e-11
+ 70: 1.7303261116 (computed) - 1.7303261116 (exact) = -2.0948e-12
+ 71: 1.7189076787 (computed) - 1.7189076787 (exact) = -1.2510e-11
+ 72: 1.6730201858 (computed) - 1.6730201858 (exact) = -8.5807e-12
+ 73: 1.6096911093 (computed) - 1.6096911093 (exact) = -1.3479e-11
+ 74: 1.6085549899 (computed) - 1.6085549899 (exact) = -8.4361e-12
+ 75: 1.6075156217 (computed) - 1.6075156217 (exact) = -1.4375e-11
+ 76: 1.6059629832 (computed) - 1.6059629832 (exact) = -6.0880e-12
+ 77: 1.5620633228 (computed) - 1.5620633229 (exact) = -6.1470e-11
+ 78: 1.5543775910 (computed) - 1.5543775910 (exact) = -5.5234e-11
+ 79: 1.5199951964 (computed) - 1.5199951964 (exact) = -1.1382e-11
+ 80: 1.5193888509 (computed) - 1.5193888510 (exact) = -4.9643e-11
+ 81: 1.5161872474 (computed) - 1.5161872474 (exact) = -7.4982e-12
+ 82: 1.4940995376 (computed) - 1.4940995376 (exact) = -7.2322e-12
+ 83: 1.4627194867 (computed) - 1.4627194867 (exact) = -1.8989e-11
+ 84: 1.4349989689 (computed) - 1.4349989689 (exact) = -3.7592e-13
+ 85: 1.4302990186 (computed) - 1.4302990186 (exact) = -4.2522e-13
+ 86: 1.4192604029 (computed) - 1.4192604029 (exact) = -8.6264e-13
+ 87: 1.4087593276 (computed) - 1.4087593277 (exact) = -7.4612e-11
+ 88: 1.4017246701 (computed) - 1.4017246701 (exact) = -8.2556e-13
+ 89: 1.3745866196 (computed) - 1.3745866196 (exact) = -2.0697e-12
+ 90: 1.3723714531 (computed) - 1.3723714531 (exact) = -2.5735e-12
+ 91: 1.3641796160 (computed) - 1.3641796160 (exact) = -3.2703e-12
+ 92: 1.3590295688 (computed) - 1.3590295688 (exact) = -4.8370e-12
+ 93: 1.3497737601 (computed) - 1.3497737601 (exact) = -5.2272e-12
+ 94: 1.3206359818 (computed) - 1.3206359818 (exact) = -5.0486e-12
+ 95: 1.3080213109 (computed) - 1.3080213109 (exact) = -6.9353e-12
+ 96: 1.3069423895 (computed) - 1.3069423895 (exact) = -3.7107e-11
+ 97: 1.3034492715 (computed) - 1.3034492715 (exact) = -2.8606e-11
+ 98: 1.2569270368 (computed) - 1.2569270368 (exact) = -1.3916e-11
+ 99: 1.2382831239 (computed) - 1.2382831239 (exact) = -2.8447e-11
+100: 1.2255590693 (computed) - 1.2255590694 (exact) = -2.3228e-11
+101: 1.1978924709 (computed) - 1.1978924710 (exact) = -5.2060e-11
+102: 1.1949420018 (computed) - 1.1949420019 (exact) = -1.5763e-10
+103: 1.1795707219 (computed) - 1.1795707220 (exact) = -5.4399e-11
+104: 1.1715155864 (computed) - 1.1715155865 (exact) = -1.6488e-10
+105: 1.1500295040 (computed) - 1.1500295041 (exact) = -9.6032e-11
+106: 1.1434713305 (computed) - 1.1434713305 (exact) = -2.7455e-11
+107: 1.1431584933 (computed) - 1.1431584934 (exact) = -4.6652e-11
+108: 1.1419031660 (computed) - 1.1419031660 (exact) = -1.1154e-11
+109: 1.1363322331 (computed) - 1.1363322331 (exact) = -3.5910e-11
+110: 1.1102721630 (computed) - 1.1102721630 (exact) = -2.2718e-11
+111: 1.0964155326 (computed) - 1.0964155327 (exact) = -5.4920e-11
+112: 1.0867136167 (computed) - 1.0867136167 (exact) = -5.8105e-12
+113: 1.0698104970 (computed) - 1.0698104970 (exact) = -1.3071e-11
+114: 1.0649637213 (computed) - 1.0649637213 (exact) = -1.4469e-11
+115: 1.0526418321 (computed) - 1.0526418321 (exact) = -5.1896e-12
+116: 1.0431804500 (computed) - 1.0431804501 (exact) = -2.1105e-11
+117: 1.0418730903 (computed) - 1.0418730903 (exact) = -3.0823e-11
+118: 1.0399910252 (computed) - 1.0399910252 (exact) = -4.6769e-12
+119: 1.0224022555 (computed) - 1.0224022555 (exact) = -7.1665e-12
+120: 1.0049404785 (computed) - 1.0049404785 (exact) = -3.4812e-11
+120 Eigenvalues converges, out of 120 requested.
+Running with l = 180
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+Iter 1: V_size = 36, Converged = 0, ||r||_min = 223.27806965046867
+Iter 2: V_size = 72, Converged = 0, ||r||_min = 55.709088581254186
+Iter 3: V_size = 144, Converged = 0, ||r||_min = 0.5202554138785989
+Iter 4: V_size = 288, Converged = 0, ||r||_min = 0.0008308572346961322
+Iter 5: V_size = 288, Converged = 0, ||r||_min = 4.2486224661217e-7
+Iter 6: V_size = 288, Converged = 0, ||r||_min = 9.743575093604733e-11
+EV   1 converged μ = -594.7742412739 (λ ≈ 24.3879937935), ‖r‖ = 7.16e-13, stable for 3 iters
+EV   2 converged μ = -611.6773615864 (λ ≈ 24.7321119516), ‖r‖ = 6.80e-13, stable for 3 iters
+EV   3 converged μ = -735.4153437081 (λ ≈ 27.1185424333), ‖r‖ = 1.12e-12, stable for 3 iters
+Iter 7: V_size = 288, Converged = 3, ||r||_min = 1.1245597120472023e-12
+EV   4 converged μ = -89.1246093928 (λ ≈ 9.4405831066), ‖r‖ = 3.28e-13, stable for 3 iters
+EV   5 converged μ = -63.1374088909 (λ ≈ 7.9459051650), ‖r‖ = 3.44e-12, stable for 3 iters
+EV   6 converged μ = -134.6090002247 (λ ≈ 11.6021118864), ‖r‖ = 3.13e-13, stable for 3 iters
+EV   7 converged μ = -85.0975968389 (λ ≈ 9.2248358706), ‖r‖ = 1.27e-12, stable for 3 iters
+EV   8 converged μ = -178.9518495502 (λ ≈ 13.3772885724), ‖r‖ = 3.27e-13, stable for 3 iters
+EV   9 converged μ = -167.9280307310 (λ ≈ 12.9587048246), ‖r‖ = 1.68e-13, stable for 3 iters
+EV  10 converged μ = -46.3616597076 (λ ≈ 6.8089396904), ‖r‖ = 1.24e-10, stable for 3 iters
+EV  11 converged μ = -131.6601989757 (λ ≈ 11.4743278224), ‖r‖ = 3.55e-13, stable for 3 iters
+EV  12 converged μ = -139.8613654990 (λ ≈ 11.8262997383), ‖r‖ = 2.06e-13, stable for 3 iters
+EV  13 converged μ = -45.8340340820 (λ ≈ 6.7700837574), ‖r‖ = 1.33e-10, stable for 3 iters
+Iter 8: V_size = 288, Converged = 13, ||r||_min = 100.1777686655318
+EV  14 converged μ = -16.2829937153 (λ ≈ 4.0352191657), ‖r‖ = 1.61e-10, stable for 3 iters
+EV  15 converged μ = -19.9884918895 (λ ≈ 4.4708491240), ‖r‖ = 9.21e-11, stable for 3 iters
+EV  16 converged μ = -45.3851815451 (λ ≈ 6.7368524954), ‖r‖ = 1.21e-12, stable for 3 iters
+EV  17 converged μ = -18.1142002056 (λ ≈ 4.2560780310), ‖r‖ = 1.55e-10, stable for 3 iters
+EV  18 converged μ = -11.9681742753 (λ ≈ 3.4595049177), ‖r‖ = 1.38e-09, stable for 3 iters
+EV  19 converged μ = -13.7222574537 (λ ≈ 3.7043565506), ‖r‖ = 8.37e-10, stable for 3 iters
+EV  20 converged μ = -14.3190661649 (λ ≈ 3.7840541969), ‖r‖ = 1.09e-09, stable for 3 iters
+EV  21 converged μ = -13.6825129287 (λ ≈ 3.6989880952), ‖r‖ = 9.18e-10, stable for 3 iters
+EV  22 converged μ = -16.1152499782 (λ ≈ 4.0143803978), ‖r‖ = 4.64e-10, stable for 3 iters
+EV  23 converged μ = -36.3324001585 (λ ≈ 6.0276363658), ‖r‖ = 2.65e-12, stable for 3 iters
+EV  24 converged μ = -24.7580637576 (λ ≈ 4.9757475577), ‖r‖ = 1.70e-11, stable for 3 iters
+EV  25 converged μ = -13.5269622006 (λ ≈ 3.6779018748), ‖r‖ = 1.19e-09, stable for 3 iters
+EV  26 converged μ = -19.4865336759 (λ ≈ 4.4143554089), ‖r‖ = 7.69e-11, stable for 3 iters
+EV  27 converged μ = -11.8045444347 (λ ≈ 3.4357742118), ‖r‖ = 1.60e-09, stable for 3 iters
+EV  28 converged μ = -12.8445327967 (λ ≈ 3.5839270077), ‖r‖ = 2.30e-09, stable for 3 iters
+EV  29 converged μ = -31.1572242298 (λ ≈ 5.5818656585), ‖r‖ = 5.15e-12, stable for 3 iters
+EV  30 converged μ = -12.7590433135 (λ ≈ 3.5719803070), ‖r‖ = 1.04e-09, stable for 3 iters
+EV  31 converged μ = -27.4351946096 (λ ≈ 5.2378616448), ‖r‖ = 8.16e-12, stable for 3 iters
+EV  32 converged μ = -16.3526879910 (λ ≈ 4.0438456933), ‖r‖ = 1.61e-10, stable for 3 iters
+EV  33 converged μ = -9.7475907439 (λ ≈ 3.1221131856), ‖r‖ = 3.58e-09, stable for 3 iters
+EV  34 converged μ = -17.2609173950 (λ ≈ 4.1546260235), ‖r‖ = 2.27e-10, stable for 3 iters
+EV  35 converged μ = -15.4658967762 (λ ≈ 3.9326704383), ‖r‖ = 3.52e-10, stable for 3 iters
+EV  36 converged μ = -25.6627957975 (λ ≈ 5.0658460100), ‖r‖ = 4.84e-11, stable for 3 iters
+Iter 9: V_size = 288, Converged = 36, ||r||_min = 188.23846642533985
+EV  37 converged μ = -5.0399288323 (λ ≈ 2.2449785817), ‖r‖ = 8.26e-09, stable for 3 iters
+EV  38 converged μ = -11.7043630519 (λ ≈ 3.4211639908), ‖r‖ = 3.81e-11, stable for 3 iters
+EV  39 converged μ = -4.0926204593 (λ ≈ 2.0230226047), ‖r‖ = 2.49e-08, stable for 3 iters
+EV  40 converged μ = -6.8329402410 (λ ≈ 2.6139893345), ‖r‖ = 2.05e-09, stable for 3 iters
+EV  41 converged μ = -6.5384346765 (λ ≈ 2.5570363072), ‖r‖ = 1.10e-09, stable for 3 iters
+EV  42 converged μ = -6.5857751728 (λ ≈ 2.5662765192), ‖r‖ = 1.85e-09, stable for 3 iters
+EV  43 converged μ = -9.6326196688 (λ ≈ 3.1036461894), ‖r‖ = 1.36e-10, stable for 3 iters
+EV  44 converged μ = -4.6211801649 (λ ≈ 2.1496930397), ‖r‖ = 1.89e-08, stable for 3 iters
+EV  45 converged μ = -7.7273393554 (λ ≈ 2.7798092300), ‖r‖ = 3.99e-10, stable for 3 iters
+EV  46 converged μ = -4.7814412997 (λ ≈ 2.1866507036), ‖r‖ = 1.07e-08, stable for 3 iters
+EV  47 converged μ = -3.8956052657 (λ ≈ 1.9737287721), ‖r‖ = 2.83e-08, stable for 3 iters
+EV  48 converged μ = -9.4947928788 (λ ≈ 3.0813621791), ‖r‖ = 1.23e-10, stable for 3 iters
+EV  49 converged μ = -4.5200151778 (λ ≈ 2.1260327321), ‖r‖ = 1.87e-08, stable for 3 iters
+EV  50 converged μ = -4.4887209642 (λ ≈ 2.1186601814), ‖r‖ = 1.56e-08, stable for 3 iters
+EV  51 converged μ = -5.2281211943 (λ ≈ 2.2865085161), ‖r‖ = 3.53e-09, stable for 3 iters
+EV  52 converged μ = -9.8477604663 (λ ≈ 3.1381141576), ‖r‖ = 6.90e-11, stable for 3 iters
+EV  53 converged μ = -5.7190116271 (λ ≈ 2.3914455100), ‖r‖ = 2.65e-09, stable for 3 iters
+EV  54 converged μ = -6.2223720999 (λ ≈ 2.4944683000), ‖r‖ = 3.28e-09, stable for 3 iters
+EV  55 converged μ = -6.6283479163 (λ ≈ 2.5745578099), ‖r‖ = 1.86e-09, stable for 3 iters
+EV  56 converged μ = -4.7875655255 (λ ≈ 2.1880506223), ‖r‖ = 1.72e-08, stable for 3 iters
+EV  57 converged μ = -5.7891716333 (λ ≈ 2.4060697482), ‖r‖ = 3.85e-09, stable for 3 iters
+EV  58 converged μ = -9.4656609716 (λ ≈ 3.0766314325), ‖r‖ = 1.15e-10, stable for 3 iters
+EV  59 converged μ = -4.6652046288 (λ ≈ 2.1599084770), ‖r‖ = 6.31e-09, stable for 3 iters
+Iter 10: V_size = 288, Converged = 59, ||r||_min = 168.2110410458797
+EV  60 converged μ = -2.3085424805 (λ ≈ 1.5193888510), ‖r‖ = 5.62e-08, stable for 3 iters
+EV  61 converged μ = -3.4531110699 (λ ≈ 1.8582548452), ‖r‖ = 3.61e-09, stable for 3 iters
+EV  62 converged μ = -4.0016558086 (λ ≈ 2.0004139093), ‖r‖ = 1.23e-09, stable for 3 iters
+EV  63 converged μ = -2.0592220405 (λ ≈ 1.4349989688), ‖r‖ = 1.03e-07, stable for 3 iters
+EV  64 converged μ = -3.2422680056 (λ ≈ 1.8006298914), ‖r‖ = 4.14e-09, stable for 3 iters
+EV  65 converged μ = -2.3103853970 (λ ≈ 1.5199951964), ‖r‖ = 7.41e-08, stable for 3 iters
+EV  66 converged μ = -3.3992914116 (λ ≈ 1.8437167384), ‖r‖ = 3.10e-09, stable for 3 iters
+EV  67 converged μ = -3.2059831946 (λ ≈ 1.7905259547), ‖r‖ = 6.10e-09, stable for 3 iters
+EV  68 converged μ = -2.2323334281 (λ ≈ 1.4940995375), ‖r‖ = 7.62e-08, stable for 3 iters
+EV  69 converged μ = -3.6818135644 (λ ≈ 1.9188052440), ‖r‖ = 1.52e-09, stable for 3 iters
+EV  70 converged μ = -3.5017397078 (λ ≈ 1.8712935921), ‖r‖ = 2.24e-09, stable for 3 iters
+EV  71 converged μ = -2.9940284524 (λ ≈ 1.7303261116), ‖r‖ = 1.17e-08, stable for 3 iters
+EV  72 converged μ = -2.5874491556 (λ ≈ 1.6085549899), ‖r‖ = 2.41e-08, stable for 3 iters
+EV  73 converged μ = -3.2166850238 (λ ≈ 1.7935119246), ‖r‖ = 1.23e-08, stable for 3 iters
+EV  74 converged μ = -2.5791171034 (λ ≈ 1.6059629832), ‖r‖ = 2.43e-08, stable for 3 iters
+EV  75 converged μ = -3.1850934965 (λ ≈ 1.7846830241), ‖r‖ = 5.51e-09, stable for 3 iters
+EV  76 converged μ = -2.7989965422 (λ ≈ 1.6730201858), ‖r‖ = 1.28e-08, stable for 3 iters
+EV  77 converged μ = -2.1395482967 (λ ≈ 1.4627194867), ‖r‖ = 8.54e-08, stable for 3 iters
+EV  78 converged μ = -2.5841064740 (λ ≈ 1.6075156217), ‖r‖ = 2.91e-08, stable for 3 iters
+EV  79 converged μ = -2.9546436079 (λ ≈ 1.7189076787), ‖r‖ = 1.72e-08, stable for 3 iters
+EV  80 converged μ = -2.5911054674 (λ ≈ 1.6096911093), ‖r‖ = 3.85e-08, stable for 3 iters
+EV  81 converged μ = -3.4639860049 (λ ≈ 1.8611786601), ‖r‖ = 2.15e-09, stable for 3 iters
+EV  82 converged μ = -2.4400418247 (λ ≈ 1.5620633229), ‖r‖ = 3.95e-08, stable for 3 iters
+EV  83 converged μ = -2.4160896954 (λ ≈ 1.5543775910), ‖r‖ = 2.95e-08, stable for 3 iters
+Iter 11: V_size = 242, Converged = 83, ||r||_min = 307.9912684359106
+EV  84 converged μ = -1.7080984095 (λ ≈ 1.3069423895), ‖r‖ = 6.24e-08, stable for 3 iters
+EV  85 converged μ = -1.3724487693 (λ ≈ 1.1715155865), ‖r‖ = 6.42e-07, stable for 3 iters
+EV  86 converged μ = -1.4278863879 (λ ≈ 1.1949420019), ‖r‖ = 1.19e-07, stable for 3 iters
+EV  87 converged μ = -1.9648320507 (λ ≈ 1.4017246701), ‖r‖ = 1.97e-08, stable for 3 iters
+EV  88 converged μ = -1.8894883747 (λ ≈ 1.3745866196), ‖r‖ = 2.90e-08, stable for 3 iters
+EV  89 converged μ = -1.9846028434 (λ ≈ 1.4087593277), ‖r‖ = 1.30e-08, stable for 3 iters
+EV  90 converged μ = -2.2988237692 (λ ≈ 1.5161872474), ‖r‖ = 6.49e-09, stable for 3 iters
+EV  91 converged μ = -1.6989800034 (λ ≈ 1.3034492715), ‖r‖ = 4.31e-08, stable for 3 iters
+EV  92 converged μ = -2.0143000912 (λ ≈ 1.4192604029), ‖r‖ = 1.06e-08, stable for 3 iters
+EV  93 converged μ = -1.7440793965 (λ ≈ 1.3206359818), ‖r‖ = 2.97e-08, stable for 3 iters
+EV  94 converged μ = -1.5019950323 (λ ≈ 1.2255590693), ‖r‖ = 1.57e-07, stable for 3 iters
+EV  95 converged μ = -1.8609860247 (λ ≈ 1.3641796160), ‖r‖ = 4.09e-08, stable for 3 iters
+EV  96 converged μ = -1.8834034052 (λ ≈ 1.3723714531), ‖r‖ = 2.07e-08, stable for 3 iters
+EV  97 converged μ = -2.0457552827 (λ ≈ 1.4302990186), ‖r‖ = 1.18e-08, stable for 3 iters
+EV  98 converged μ = -1.2912509437 (λ ≈ 1.1363322330), ‖r‖ = 1.32e-06, stable for 3 iters
+EV  99 converged μ = -1.8469613688 (λ ≈ 1.3590295688), ‖r‖ = 2.95e-08, stable for 3 iters
+EV 100 converged μ = -1.7109197497 (λ ≈ 1.3080213109), ‖r‖ = 2.88e-08, stable for 3 iters
+EV 101 converged μ = -1.8218892034 (λ ≈ 1.3497737601), ‖r‖ = 2.40e-08, stable for 3 iters
+Iter 12: V_size = 194, Converged = 101, ||r||_min = 278.39386026400956
+EV 102 converged μ = -1.3075266837 (λ ≈ 1.1434713305), ‖r‖ = 4.41e-07, stable for 3 iters
+EV 103 converged μ = -1.5798655759 (λ ≈ 1.2569270368), ‖r‖ = 2.51e-08, stable for 3 iters
+EV 104 converged μ = -1.3068113409 (λ ≈ 1.1431584933), ‖r‖ = 5.50e-07, stable for 3 iters
+EV 105 converged μ = -1.2327042760 (λ ≈ 1.1102721630), ‖r‖ = 6.14e-07, stable for 3 iters
+EV 106 converged μ = -1.3225678602 (λ ≈ 1.1500295041), ‖r‖ = 5.53e-07, stable for 3 iters
+EV 107 converged μ = -1.4349463721 (λ ≈ 1.1978924710), ‖r‖ = 4.63e-07, stable for 3 iters
+EV 108 converged μ = -1.2021270202 (λ ≈ 1.0964155326), ‖r‖ = 2.49e-06, stable for 3 iters
+EV 109 converged μ = -1.1809464844 (λ ≈ 1.0867136166), ‖r‖ = 3.36e-06, stable for 3 iters
+EV 110 converged μ = -1.5333450950 (λ ≈ 1.2382831239), ‖r‖ = 2.37e-08, stable for 3 iters
+EV 111 converged μ = -1.3039428406 (λ ≈ 1.1419031660), ‖r‖ = 1.16e-06, stable for 3 iters
+EV 112 converged μ = -1.3913870881 (λ ≈ 1.1795707220), ‖r‖ = 5.23e-07, stable for 3 iters
+Iter 13: V_size = 273, Converged = 112, ||r||_min = 77.92146048816484
+EV 113 converged μ = -1.1341477277 (λ ≈ 1.0649637213), ‖r‖ = 2.28e-06, stable for 3 iters
+EV 114 converged μ = -0.9491566537 (λ ≈ 0.9742467109), ‖r‖ = 5.38e-06, stable for 3 iters
+EV 115 converged μ = -1.0854995361 (λ ≈ 1.0418730902), ‖r‖ = 2.41e-06, stable for 3 iters
+EV 116 converged μ = -1.1080548265 (λ ≈ 1.0526418320), ‖r‖ = 3.60e-06, stable for 3 iters
+EV 117 converged μ = -1.0453063719 (λ ≈ 1.0224022554), ‖r‖ = 3.72e-06, stable for 3 iters
+EV 118 converged μ = -0.9949906605 (λ ≈ 0.9974921857), ‖r‖ = 6.27e-06, stable for 3 iters
+EV 119 converged μ = -1.0017667975 (λ ≈ 1.0008830089), ‖r‖ = 7.45e-06, stable for 3 iters
+EV 120 converged μ = -1.0882254512 (λ ≈ 1.0431804500), ‖r‖ = 4.12e-06, stable for 3 iters
+EV 121 converged μ = -1.1444944993 (λ ≈ 1.0698104969), ‖r‖ = 2.28e-06, stable for 3 iters
+EV 122 converged μ = -1.0815813324 (λ ≈ 1.0399910251), ‖r‖ = 3.04e-06, stable for 3 iters
+Iter 14: V_size = 136, Converged = 122, ||r||_min = 77.78621711242994
+EV 123 converged μ = -0.9457814273 (λ ≈ 0.9725129446), ‖r‖ = 6.70e-06, stable for 3 iters
+EV 124 converged μ = -1.0099053651 (λ ≈ 1.0049404784), ‖r‖ = 7.01e-06, stable for 3 iters
+EV 125 converged μ = -0.9093255853 (λ ≈ 0.9535856465), ‖r‖ = 1.08e-05, stable for 3 iters
+EV 126 converged μ = -0.9811878374 (λ ≈ 0.9905492605), ‖r‖ = 9.36e-06, stable for 3 iters
+EV 127 converged μ = -0.9558483390 (λ ≈ 0.9776749659), ‖r‖ = 8.70e-06, stable for 3 iters
+Iter 15: V_size = 194, Converged = 127, ||r||_min = 61.6731506017528
+EV 128 converged μ = -0.8894285196 (λ ≈ 0.9430951806), ‖r‖ = 8.54e-06, stable for 3 iters
+EV 129 converged μ = -0.8595760831 (λ ≈ 0.9271332607), ‖r‖ = 1.07e-05, stable for 3 iters
+EV 130 converged μ = -0.8618417493 (λ ≈ 0.9283543231), ‖r‖ = 1.07e-05, stable for 3 iters
+Iter 16: V_size = 247, Converged = 130, ||r||_min = 36.08397848979318
+EV 131 converged μ = -0.8007151158 (λ ≈ 0.8948268636), ‖r‖ = 1.48e-05, stable for 3 iters
+EV 132 converged μ = -0.8598145980 (λ ≈ 0.9272618821), ‖r‖ = 1.14e-05, stable for 3 iters
+Iter 17: V_size = 100, Converged = 132, ||r||_min = 32.87094689226053
+EV 133 converged μ = -0.8084311452 (λ ≈ 0.8991279915), ‖r‖ = 1.36e-05, stable for 3 iters
+Iter 18: V_size = 148, Converged = 133, ||r||_min = 30.55486066498751
+Iter 19: V_size = 195, Converged = 133, ||r||_min = 15.829389500178054
+EV 134 converged μ = -0.7796579003 (λ ≈ 0.8829823896), ‖r‖ = 1.71e-05, stable for 3 iters
+EV 135 converged μ = -0.7694789876 (λ ≈ 0.8771995141), ‖r‖ = 1.71e-05, stable for 3 iters
+Iter 20: V_size = 242, Converged = 135, ||r||_min = 1.7071028587375932e-5
+EV 136 converged μ = -0.7505396651 (λ ≈ 0.8663369235), ‖r‖ = 1.62e-05, stable for 3 iters
+Iter 21: V_size = 287, Converged = 136, ||r||_min = 31.79389407449183
+EV 137 converged μ = -0.7720179255 (λ ≈ 0.8786455062), ‖r‖ = 1.59e-05, stable for 3 iters
+Iter 22: V_size = 88, Converged = 137, ||r||_min = 17.373567309966333
+EV 138 converged μ = -0.6841181412 (λ ≈ 0.8271143459), ‖r‖ = 1.57e-05, stable for 3 iters
+EV 139 converged μ = -0.7303359829 (λ ≈ 0.8545969710), ‖r‖ = 1.54e-05, stable for 3 iters
+Iter 23: V_size = 131, Converged = 139, ||r||_min = 34.468237671881475
+Iter 24: V_size = 172, Converged = 139, ||r||_min = 19.097669479265655
+EV 140 converged μ = -0.7040438778 (λ ≈ 0.8390732255), ‖r‖ = 1.71e-05, stable for 3 iters
+EV 141 converged μ = -0.7384357404 (λ ≈ 0.8593228383), ‖r‖ = 1.67e-05, stable for 3 iters
+EV 142 converged μ = -0.6876630225 (λ ≈ 0.8292544980), ‖r‖ = 1.71e-05, stable for 3 iters
+Iter 25: V_size = 213, Converged = 142, ||r||_min = 1.6739455941051095e-5
+Iter 26: V_size = 251, Converged = 142, ||r||_min = 47.01509497486111
+Iter 27: V_size = 76, Converged = 142, ||r||_min = 1.8565654779346522e-5
+EV 143 converged μ = -0.6974086798 (λ ≈ 0.8351099806), ‖r‖ = 1.76e-05, stable for 3 iters
+EV 144 converged μ = -0.7370373772 (λ ≈ 0.8585088102), ‖r‖ = 1.76e-05, stable for 3 iters
+Iter 28: V_size = 114, Converged = 144, ||r||_min = 1.760619629636817e-5
+EV 145 converged μ = -0.7175510712 (λ ≈ 0.8470838632), ‖r‖ = 1.80e-05, stable for 3 iters
+Iter 29: V_size = 150, Converged = 145, ||r||_min = 14.644693234595746
+EV 146 converged μ = -0.6718548151 (λ ≈ 0.8196675028), ‖r‖ = 1.86e-05, stable for 3 iters
+Iter 30: V_size = 185, Converged = 146, ||r||_min = 8.915451074188024
+EV 147 converged μ = -0.6797779225 (λ ≈ 0.8244864599), ‖r‖ = 1.85e-05, stable for 3 iters
+Iter 31: V_size = 219, Converged = 147, ||r||_min = 8.903589041021874
+EV 148 converged μ = -0.6145449488 (λ ≈ 0.7839291733), ‖r‖ = 1.84e-05, stable for 3 iters
+Iter 32: V_size = 252, Converged = 148, ||r||_min = 16.371963573902665
+Iter 33: V_size = 284, Converged = 148, ||r||_min = 6.975443480401588
+EV 149 converged μ = -0.6428981973 (λ ≈ 0.8018093272), ‖r‖ = 1.82e-05, stable for 3 iters
+Iter 34: V_size = 64, Converged = 149, ||r||_min = 2.3303415519881148e-5
+Iter 35: V_size = 95, Converged = 149, ||r||_min = 16.700636417119583
+Iter 36: V_size = 126, Converged = 149, ||r||_min = 2.2186409817974448e-5
+Iter 37: V_size = 157, Converged = 149, ||r||_min = 2.1815035099113185e-5
+Iter 38: V_size = 188, Converged = 149, ||r||_min = 2.1158787377363714e-5
+EV 150 converged μ = -0.6089057489 (λ ≈ 0.7803241307), ‖r‖ = 1.88e-05, stable for 3 iters
+Iter 39: V_size = 219, Converged = 150, ||r||_min = 2.0675247565233587e-5
+Iter 40: V_size = 249, Converged = 150, ||r||_min = 10.028904880000482
+Iter 41: V_size = 279, Converged = 150, ||r||_min = 1.9627023783121252e-5
+Iter 42: V_size = 60, Converged = 150, ||r||_min = 1.9263406754673358e-5
+EV 151 converged μ = -0.6226055268 (λ ≈ 0.7890535639), ‖r‖ = 1.95e-05, stable for 3 iters
+EV 152 converged μ = -0.6452263775 (λ ≈ 0.8032598443), ‖r‖ = 1.90e-05, stable for 3 iters
+Iter 43: V_size = 90, Converged = 152, ||r||_min = 1.897974545004505e-5
+Iter 44: V_size = 118, Converged = 152, ||r||_min = 15.385606030886628
+Iter 45: V_size = 146, Converged = 152, ||r||_min = 2.88376923529505e-5
+Iter 46: V_size = 174, Converged = 152, ||r||_min = 2.848367137516699e-5
+Iter 47: V_size = 202, Converged = 152, ||r||_min = 2.818992113043295e-5
+Iter 48: V_size = 230, Converged = 152, ||r||_min = 2.7739668655353173e-5
+Iter 49: V_size = 258, Converged = 152, ||r||_min = 2.734408708362319e-5
+Iter 50: V_size = 286, Converged = 152, ||r||_min = 2.6964420668127212e-5
+Iter 51: V_size = 56, Converged = 152, ||r||_min = 2.668910218832777e-5
+Iter 52: V_size = 84, Converged = 152, ||r||_min = 2.6447059754595955e-5
+Iter 53: V_size = 112, Converged = 152, ||r||_min = 2.6305002442889115e-5
+EV 153 converged μ = -0.6293186864 (λ ≈ 0.7932960900), ‖r‖ = 1.96e-05, stable for 3 iters
+Iter 54: V_size = 140, Converged = 153, ||r||_min = 2.613640768015097e-5
+Iter 55: V_size = 167, Converged = 153, ||r||_min = 7.964786272185341
+Iter 56: V_size = 194, Converged = 153, ||r||_min = 2.5644637140937334e-5
+Iter 57: V_size = 221, Converged = 153, ||r||_min = 2.5433150871072693e-5
+Iter 58: V_size = 248, Converged = 153, ||r||_min = 2.5172550617184973e-5
+Iter 59: V_size = 275, Converged = 153, ||r||_min = 2.496413354624964e-5
+Iter 60: V_size = 54, Converged = 153, ||r||_min = 2.4824024963017183e-5
+Iter 61: V_size = 81, Converged = 153, ||r||_min = 2.4692134941186694e-5
+Iter 62: V_size = 108, Converged = 153, ||r||_min = 2.4623273524719592e-5
+Iter 63: V_size = 135, Converged = 153, ||r||_min = 2.4555768498522927e-5
+Iter 64: V_size = 162, Converged = 153, ||r||_min = 2.4402727911289917e-5
+Iter 65: V_size = 189, Converged = 153, ||r||_min = 2.4285885154355776e-5
+Iter 66: V_size = 216, Converged = 153, ||r||_min = 2.417756027021788e-5
+Iter 67: V_size = 243, Converged = 153, ||r||_min = 2.4064278693876674e-5
+Iter 68: V_size = 270, Converged = 153, ||r||_min = 2.3958523867706183e-5
+Iter 69: V_size = 54, Converged = 153, ||r||_min = 2.3871252803763894e-5
+Iter 70: V_size = 81, Converged = 153, ||r||_min = 2.378868416821228e-5
+Iter 71: V_size = 108, Converged = 153, ||r||_min = 2.3746151635218128e-5
+Iter 72: V_size = 135, Converged = 153, ||r||_min = 2.3697309796129393e-5
+Iter 73: V_size = 162, Converged = 153, ||r||_min = 2.3589659802648773e-5
+Iter 74: V_size = 189, Converged = 153, ||r||_min = 2.3521113885282085e-5
+Iter 75: V_size = 216, Converged = 153, ||r||_min = 2.3448451382564247e-5
+Iter 76: V_size = 243, Converged = 153, ||r||_min = 2.3381203810864543e-5
+Iter 77: V_size = 270, Converged = 153, ||r||_min = 2.3307632378150745e-5
+Iter 78: V_size = 54, Converged = 153, ||r||_min = 2.3256155530534475e-5
+Iter 79: V_size = 81, Converged = 153, ||r||_min = 2.3212779453030386e-5
+Iter 80: V_size = 108, Converged = 153, ||r||_min = 2.318914191868865e-5
+Iter 81: V_size = 135, Converged = 153, ||r||_min = 2.316121823972604e-5
+Iter 82: V_size = 162, Converged = 153, ||r||_min = 2.3112548082869052e-5
+Iter 83: V_size = 189, Converged = 153, ||r||_min = 2.307748452533606e-5
+Iter 84: V_size = 216, Converged = 153, ||r||_min = 2.302661360101819e-5
+Iter 85: V_size = 243, Converged = 153, ||r||_min = 2.298094376621618e-5
+Iter 86: V_size = 270, Converged = 153, ||r||_min = 2.2936551402136938e-5
+Iter 87: V_size = 54, Converged = 153, ||r||_min = 2.2899801794876697e-5
+Iter 88: V_size = 81, Converged = 153, ||r||_min = 2.284279023414917e-5
+Iter 89: V_size = 108, Converged = 153, ||r||_min = 2.2810788000931644e-5
+Iter 90: V_size = 135, Converged = 153, ||r||_min = 2.2784249519179326e-5
+Iter 91: V_size = 162, Converged = 153, ||r||_min = 2.2740082378179496e-5
+Iter 92: V_size = 189, Converged = 153, ||r||_min = 2.2695848528052095e-5
+Iter 93: V_size = 216, Converged = 153, ||r||_min = 2.2658487010734697e-5
+Iter 94: V_size = 243, Converged = 153, ||r||_min = 2.261559647881184e-5
+Iter 95: V_size = 270, Converged = 153, ||r||_min = 2.2571519594683842e-5
+Iter 96: V_size = 54, Converged = 153, ||r||_min = 2.252586839006015e-5
+Iter 97: V_size = 81, Converged = 153, ||r||_min = 2.24719282228397e-5
+Iter 98: V_size = 108, Converged = 153, ||r||_min = 2.2443678419438684e-5
+Iter 99: V_size = 135, Converged = 153, ||r||_min = 2.2411947908270847e-5
+Iter 100: V_size = 162, Converged = 153, ||r||_min = 2.2376076351283664e-5
+Iter 101: V_size = 189, Converged = 153, ||r||_min = 2.233611358632382e-5
+Iter 102: V_size = 216, Converged = 153, ||r||_min = 2.229784278847773e-5
+Iter 103: V_size = 243, Converged = 153, ||r||_min = 2.2269154152456e-5
+Iter 104: V_size = 270, Converged = 153, ||r||_min = 2.2198811425311298e-5
+Iter 105: V_size = 54, Converged = 153, ||r||_min = 2.2145846617320753e-5
+Iter 106: V_size = 81, Converged = 153, ||r||_min = 2.2091072502350775e-5
+Iter 107: V_size = 108, Converged = 153, ||r||_min = 2.2066722473112882e-5
+Iter 108: V_size = 135, Converged = 153, ||r||_min = 2.2039569793274883e-5
+Iter 109: V_size = 162, Converged = 153, ||r||_min = 2.199298141923464e-5
+Iter 110: V_size = 189, Converged = 153, ||r||_min = 2.193658973095425e-5
+Iter 111: V_size = 216, Converged = 153, ||r||_min = 2.1885091552659135e-5
+Iter 112: V_size = 243, Converged = 153, ||r||_min = 2.1852585655392096e-5
+Iter 113: V_size = 270, Converged = 153, ||r||_min = 2.1803425005230148e-5
+Iter 114: V_size = 54, Converged = 153, ||r||_min = 2.1755647189184698e-5
+Iter 115: V_size = 81, Converged = 153, ||r||_min = 2.169640955909923e-5
+Iter 116: V_size = 108, Converged = 153, ||r||_min = 2.165363557145861e-5
+Iter 117: V_size = 135, Converged = 153, ||r||_min = 2.1615001462817723e-5
+Iter 118: V_size = 162, Converged = 153, ||r||_min = 2.1535342470310428e-5
+Iter 119: V_size = 189, Converged = 153, ||r||_min = 2.14411301715231e-5
+Iter 120: V_size = 216, Converged = 153, ||r||_min = 2.1371681034764877e-5
+Iter 121: V_size = 243, Converged = 153, ||r||_min = 2.1293579638943042e-5
+Iter 122: V_size = 270, Converged = 153, ||r||_min = 2.1220600784592492e-5
+Iter 123: V_size = 54, Converged = 153, ||r||_min = 2.114692796769578e-5
+Iter 124: V_size = 81, Converged = 153, ||r||_min = 2.107241385339297e-5
+Iter 125: V_size = 108, Converged = 153, ||r||_min = 2.1018451664270483e-5
+Iter 126: V_size = 135, Converged = 153, ||r||_min = 2.094325266769668e-5
+Iter 127: V_size = 162, Converged = 153, ||r||_min = 2.0839595887123897e-5
+Iter 128: V_size = 189, Converged = 153, ||r||_min = 2.0743526210647448e-5
+Iter 129: V_size = 216, Converged = 153, ||r||_min = 2.0629803067995345e-5
+Iter 130: V_size = 243, Converged = 153, ||r||_min = 2.0522889072024255e-5
+Iter 131: V_size = 270, Converged = 153, ||r||_min = 2.0422143531788602e-5
+Iter 132: V_size = 54, Converged = 153, ||r||_min = 2.0310139471782875e-5
+Iter 133: V_size = 81, Converged = 153, ||r||_min = 2.018030040521088e-5
+Iter 134: V_size = 108, Converged = 153, ||r||_min = 2.0121074964248187e-5
+Iter 135: V_size = 135, Converged = 153, ||r||_min = 2.0056497756884195e-5
+Iter 136: V_size = 162, Converged = 153, ||r||_min = 1.9946965168947164e-5
+Iter 137: V_size = 189, Converged = 153, ||r||_min = 1.9814749475213963e-5
+EV 154 converged μ = -0.6372624212 (λ ≈ 0.7982871796), ‖r‖ = 1.97e-05, stable for 3 iters
+Iter 138: V_size = 216, Converged = 154, ||r||_min = 1.971767439457705e-5
+Iter 139: V_size = 242, Converged = 154, ||r||_min = 11.034405855440502
+Iter 140: V_size = 268, Converged = 154, ||r||_min = 2.1210070631281075e-5
+Iter 141: V_size = 52, Converged = 154, ||r||_min = 2.11831323826628e-5
+Iter 142: V_size = 78, Converged = 154, ||r||_min = 2.116549586938396e-5
+Iter 143: V_size = 104, Converged = 154, ||r||_min = 2.1151416305336854e-5
+Iter 144: V_size = 130, Converged = 154, ||r||_min = 2.1133881136491573e-5
+Iter 145: V_size = 156, Converged = 154, ||r||_min = 2.1106216706529197e-5
+Iter 146: V_size = 182, Converged = 154, ||r||_min = 2.108122892062364e-5
+Iter 147: V_size = 208, Converged = 154, ||r||_min = 2.1057869696830173e-5
+Iter 148: V_size = 234, Converged = 154, ||r||_min = 2.1035357686237292e-5
+Iter 149: V_size = 260, Converged = 154, ||r||_min = 2.1016154181278266e-5
+Iter 150: V_size = 286, Converged = 154, ||r||_min = 2.1001724747725424e-5
+Iter 151: V_size = 52, Converged = 154, ||r||_min = 2.098623223805215e-5
+Iter 152: V_size = 78, Converged = 154, ||r||_min = 2.096955972806493e-5
+Iter 153: V_size = 104, Converged = 154, ||r||_min = 2.0959325572903463e-5
+Iter 154: V_size = 130, Converged = 154, ||r||_min = 2.0951085538905782e-5
+Iter 155: V_size = 156, Converged = 154, ||r||_min = 2.0934259069991117e-5
+Iter 156: V_size = 182, Converged = 154, ||r||_min = 2.0916015793887033e-5
+Iter 157: V_size = 208, Converged = 154, ||r||_min = 2.0901846044435406e-5
+Iter 158: V_size = 234, Converged = 154, ||r||_min = 2.089271712965502e-5
+Iter 159: V_size = 260, Converged = 154, ||r||_min = 2.087993298182177e-5
+Iter 160: V_size = 286, Converged = 154, ||r||_min = 2.0867786772392145e-5
+Iter 161: V_size = 52, Converged = 154, ||r||_min = 2.0852779170589495e-5
+Iter 162: V_size = 78, Converged = 154, ||r||_min = 2.08409032974741e-5
+Iter 163: V_size = 104, Converged = 154, ||r||_min = 2.0835994840860187e-5
+Iter 164: V_size = 130, Converged = 154, ||r||_min = 2.0828931245863325e-5
+Iter 165: V_size = 156, Converged = 154, ||r||_min = 2.0816694902505762e-5
+Iter 166: V_size = 182, Converged = 154, ||r||_min = 2.080634833755784e-5
+Iter 167: V_size = 208, Converged = 154, ||r||_min = 2.0793890885648766e-5
+Iter 168: V_size = 234, Converged = 154, ||r||_min = 2.0782184100011208e-5
+Iter 169: V_size = 260, Converged = 154, ||r||_min = 2.076504940863665e-5
+Iter 170: V_size = 286, Converged = 154, ||r||_min = 2.0748184671192582e-5
+Iter 171: V_size = 52, Converged = 154, ||r||_min = 2.0733952961550914e-5
+Iter 172: V_size = 78, Converged = 154, ||r||_min = 2.072047676075585e-5
+Iter 173: V_size = 104, Converged = 154, ||r||_min = 2.071072632807848e-5
+Iter 174: V_size = 130, Converged = 154, ||r||_min = 2.069810426495809e-5
+Iter 175: V_size = 156, Converged = 154, ||r||_min = 2.0681102338014877e-5
+Iter 176: V_size = 182, Converged = 154, ||r||_min = 2.0663910987297366e-5
+Iter 177: V_size = 208, Converged = 154, ||r||_min = 2.0649191626378446e-5
+Iter 178: V_size = 234, Converged = 154, ||r||_min = 2.0636385043886586e-5
+Iter 179: V_size = 260, Converged = 154, ||r||_min = 2.0615946986992107e-5
+Iter 180: V_size = 286, Converged = 154, ||r||_min = 2.0596632674837298e-5
+Iter 181: V_size = 52, Converged = 154, ||r||_min = 2.0582982716581644e-5
+Iter 182: V_size = 78, Converged = 154, ||r||_min = 2.0569218062541944e-5
+Iter 183: V_size = 104, Converged = 154, ||r||_min = 2.05598846894284e-5
+Iter 184: V_size = 130, Converged = 154, ||r||_min = 2.054574443605916e-5
+Iter 185: V_size = 156, Converged = 154, ||r||_min = 2.0529843907266316e-5
+Iter 186: V_size = 182, Converged = 154, ||r||_min = 2.051633153500208e-5
+Iter 187: V_size = 208, Converged = 154, ||r||_min = 2.0496563770507595e-5
+Iter 188: V_size = 234, Converged = 154, ||r||_min = 2.0483129227571617e-5
+Iter 189: V_size = 260, Converged = 154, ||r||_min = 2.0466089883417116e-5
+Iter 190: V_size = 286, Converged = 154, ||r||_min = 2.044037568835978e-5
+Iter 191: V_size = 52, Converged = 154, ||r||_min = 2.041995123252819e-5
+Iter 192: V_size = 78, Converged = 154, ||r||_min = 2.0405169276128032e-5
+Iter 193: V_size = 104, Converged = 154, ||r||_min = 2.0393481486268942e-5
+Iter 194: V_size = 130, Converged = 154, ||r||_min = 2.0379597246687198e-5
+Iter 195: V_size = 156, Converged = 154, ||r||_min = 2.0358057603192944e-5
+Iter 196: V_size = 182, Converged = 154, ||r||_min = 2.0339130694824307e-5
+Iter 197: V_size = 208, Converged = 154, ||r||_min = 2.032536634882334e-5
+Iter 198: V_size = 234, Converged = 154, ||r||_min = 2.0306196621324777e-5
+Iter 199: V_size = 260, Converged = 154, ||r||_min = 2.0278094326951873e-5
+Iter 200: V_size = 286, Converged = 154, ||r||_min = 2.025186306610341e-5
+Iter 201: V_size = 52, Converged = 154, ||r||_min = 2.022908363351284e-5
+Iter 202: V_size = 78, Converged = 154, ||r||_min = 2.0199488037215493e-5
+Iter 203: V_size = 104, Converged = 154, ||r||_min = 2.0177442712204173e-5
+Iter 204: V_size = 130, Converged = 154, ||r||_min = 2.0155097485079365e-5
+Iter 205: V_size = 156, Converged = 154, ||r||_min = 2.0120084610303434e-5
+Iter 206: V_size = 182, Converged = 154, ||r||_min = 2.009809778757868e-5
+Iter 207: V_size = 208, Converged = 154, ||r||_min = 2.0070897546156666e-5
+Iter 208: V_size = 234, Converged = 154, ||r||_min = 2.0034438823772663e-5
+Iter 209: V_size = 260, Converged = 154, ||r||_min = 2.0005866716262202e-5
+Iter 210: V_size = 286, Converged = 154, ||r||_min = 1.997415422217382e-5
+Iter 211: V_size = 52, Converged = 154, ||r||_min = 1.9941213832721e-5
+EV 155 converged μ = -0.5877839426 (λ ≈ 0.7666706872), ‖r‖ = 1.99e-05, stable for 3 iters
+Iter 212: V_size = 78, Converged = 155, ||r||_min = 1.9903936669833925e-5
+Iter 213: V_size = 103, Converged = 155, ||r||_min = 14.449298543338365
+Iter 214: V_size = 128, Converged = 155, ||r||_min = 2.523462212864287e-5
+Iter 215: V_size = 153, Converged = 155, ||r||_min = 2.5195645952493875e-5
+Iter 216: V_size = 178, Converged = 155, ||r||_min = 2.514382885982404e-5
+Iter 217: V_size = 203, Converged = 155, ||r||_min = 2.5106984054953554e-5
+Iter 218: V_size = 228, Converged = 155, ||r||_min = 2.5078631687859667e-5
+Iter 219: V_size = 253, Converged = 155, ||r||_min = 2.5048998648195505e-5
+Iter 220: V_size = 278, Converged = 155, ||r||_min = 2.5022142262267994e-5
+Iter 221: V_size = 50, Converged = 155, ||r||_min = 2.5002413100529728e-5
+Iter 222: V_size = 75, Converged = 155, ||r||_min = 2.4982441995650806e-5
+Iter 223: V_size = 100, Converged = 155, ||r||_min = 2.4964775307881203e-5
+Iter 224: V_size = 125, Converged = 155, ||r||_min = 2.4951826814000324e-5
+Iter 225: V_size = 150, Converged = 155, ||r||_min = 2.493453772476996e-5
+Iter 226: V_size = 175, Converged = 155, ||r||_min = 2.4916432911509202e-5
+Iter 227: V_size = 200, Converged = 155, ||r||_min = 2.4899452747314645e-5
+Iter 228: V_size = 225, Converged = 155, ||r||_min = 2.4886711816252536e-5
+Iter 229: V_size = 250, Converged = 155, ||r||_min = 2.4864916320023017e-5
+Iter 230: V_size = 275, Converged = 155, ||r||_min = 2.4842072765216812e-5
+Iter 231: V_size = 50, Converged = 155, ||r||_min = 2.4817610298314137e-5
+Iter 232: V_size = 75, Converged = 155, ||r||_min = 2.4794066100314038e-5
+Iter 233: V_size = 100, Converged = 155, ||r||_min = 2.4783057200303518e-5
+Iter 234: V_size = 125, Converged = 155, ||r||_min = 2.4768894788969817e-5
+Iter 235: V_size = 150, Converged = 155, ||r||_min = 2.4746352249078955e-5
+Iter 236: V_size = 175, Converged = 155, ||r||_min = 2.472096572442274e-5
+Iter 237: V_size = 200, Converged = 155, ||r||_min = 2.4696449982693548e-5
+Iter 238: V_size = 225, Converged = 155, ||r||_min = 2.467710938142245e-5
+Iter 239: V_size = 250, Converged = 155, ||r||_min = 2.46552509996382e-5
+Iter 240: V_size = 275, Converged = 155, ||r||_min = 2.462929947325261e-5
+Iter 241: V_size = 50, Converged = 155, ||r||_min = 2.4595019757064316e-5
+Iter 242: V_size = 75, Converged = 155, ||r||_min = 2.4556360287062012e-5
+Iter 243: V_size = 100, Converged = 155, ||r||_min = 2.4530694767606873e-5
+Iter 244: V_size = 125, Converged = 155, ||r||_min = 2.450827209769177e-5
+Iter 245: V_size = 150, Converged = 155, ||r||_min = 2.447285227041485e-5
+Iter 246: V_size = 175, Converged = 155, ||r||_min = 2.4445367920718967e-5
+Iter 247: V_size = 200, Converged = 155, ||r||_min = 2.442187142715553e-5
+Iter 248: V_size = 225, Converged = 155, ||r||_min = 2.439950515423139e-5
+Iter 249: V_size = 250, Converged = 155, ||r||_min = 2.4371234360589028e-5
+Iter 250: V_size = 275, Converged = 155, ||r||_min = 2.4343888219586366e-5
+Iter 251: V_size = 50, Converged = 155, ||r||_min = 2.4305541198083007e-5
+Iter 252: V_size = 75, Converged = 155, ||r||_min = 2.4276220087865937e-5
+Iter 253: V_size = 100, Converged = 155, ||r||_min = 2.4261091419518416e-5
+Iter 254: V_size = 125, Converged = 155, ||r||_min = 2.424364966895146e-5
+Iter 255: V_size = 150, Converged = 155, ||r||_min = 2.4206243163909793e-5
+Iter 256: V_size = 175, Converged = 155, ||r||_min = 2.417584078880301e-5
+Iter 257: V_size = 200, Converged = 155, ||r||_min = 2.4148698004669207e-5
+Iter 258: V_size = 225, Converged = 155, ||r||_min = 2.4121942486143174e-5
+Iter 259: V_size = 250, Converged = 155, ||r||_min = 2.4081701654627194e-5
+Iter 260: V_size = 275, Converged = 155, ||r||_min = 2.4048233072677102e-5
+Iter 261: V_size = 50, Converged = 155, ||r||_min = 2.401104998889516e-5
+Iter 262: V_size = 75, Converged = 155, ||r||_min = 2.396720564360485e-5
+Iter 263: V_size = 100, Converged = 155, ||r||_min = 2.3944301112998755e-5
+Iter 264: V_size = 125, Converged = 155, ||r||_min = 2.3923816180573353e-5
+Iter 265: V_size = 150, Converged = 155, ||r||_min = 2.3881936715743007e-5
+Iter 266: V_size = 175, Converged = 155, ||r||_min = 2.3833342374474824e-5
+Iter 267: V_size = 200, Converged = 155, ||r||_min = 2.3792583447132142e-5
+Iter 268: V_size = 225, Converged = 155, ||r||_min = 2.374948593387321e-5
+Iter 269: V_size = 250, Converged = 155, ||r||_min = 2.371372368002678e-5
+Iter 270: V_size = 275, Converged = 155, ||r||_min = 2.3672236161602277e-5
+Iter 271: V_size = 50, Converged = 155, ||r||_min = 2.3624055340307846e-5
+Iter 272: V_size = 75, Converged = 155, ||r||_min = 2.357718468092701e-5
+Iter 273: V_size = 100, Converged = 155, ||r||_min = 2.355315939642727e-5
+Iter 274: V_size = 125, Converged = 155, ||r||_min = 2.3528958753687514e-5
+Iter 275: V_size = 150, Converged = 155, ||r||_min = 2.3490502713283592e-5
+Iter 276: V_size = 175, Converged = 155, ||r||_min = 2.3449256042441533e-5
+Iter 277: V_size = 200, Converged = 155, ||r||_min = 2.3417408110319047e-5
+Iter 278: V_size = 225, Converged = 155, ||r||_min = 2.338472789376122e-5
+Iter 279: V_size = 250, Converged = 155, ||r||_min = 2.3337468379924262e-5
+Iter 280: V_size = 275, Converged = 155, ||r||_min = 2.3290928254738594e-5
+Iter 281: V_size = 50, Converged = 155, ||r||_min = 2.3253454666826502e-5
+Iter 282: V_size = 75, Converged = 155, ||r||_min = 2.3216178480963915e-5
+Iter 283: V_size = 100, Converged = 155, ||r||_min = 2.3184659398972765e-5
+Iter 284: V_size = 125, Converged = 155, ||r||_min = 2.315316323801114e-5
+Iter 285: V_size = 150, Converged = 155, ||r||_min = 2.3110792258697266e-5
+Iter 286: V_size = 175, Converged = 155, ||r||_min = 2.3079641457447564e-5
+Iter 287: V_size = 200, Converged = 155, ||r||_min = 2.304440249958524e-5
+Iter 288: V_size = 225, Converged = 155, ||r||_min = 2.2994200660907595e-5
+Iter 289: V_size = 250, Converged = 155, ||r||_min = 2.2936606991806324e-5
+Iter 290: V_size = 275, Converged = 155, ||r||_min = 2.2873444560846153e-5
+Iter 291: V_size = 50, Converged = 155, ||r||_min = 2.2804574805766977e-5
+Iter 292: V_size = 75, Converged = 155, ||r||_min = 2.2739720880468712e-5
+Iter 293: V_size = 100, Converged = 155, ||r||_min = 2.2696390930315938e-5
+Iter 294: V_size = 125, Converged = 155, ||r||_min = 2.2631513985236795e-5
+Iter 295: V_size = 150, Converged = 155, ||r||_min = 2.2524229009470326e-5
+Iter 296: V_size = 175, Converged = 155, ||r||_min = 2.2461851542825037e-5
+Iter 297: V_size = 200, Converged = 155, ||r||_min = 2.2398724651189374e-5
+Iter 298: V_size = 225, Converged = 155, ||r||_min = 2.2312343226417634e-5
+Iter 299: V_size = 250, Converged = 155, ||r||_min = 2.225955884109617e-5
+Iter 300: V_size = 275, Converged = 155, ||r||_min = 2.2211347564460365e-5
+Iter 301: V_size = 50, Converged = 155, ||r||_min = 2.2137411884585603e-5
+Iter 302: V_size = 75, Converged = 155, ||r||_min = 2.2047408024672793e-5
+Iter 303: V_size = 100, Converged = 155, ||r||_min = 2.1996990606445774e-5
+Iter 304: V_size = 125, Converged = 155, ||r||_min = 2.195465045730907e-5
+Iter 305: V_size = 150, Converged = 155, ||r||_min = 2.1902027703066537e-5
+Iter 306: V_size = 175, Converged = 155, ||r||_min = 2.1852952735691365e-5
+Iter 307: V_size = 200, Converged = 155, ||r||_min = 2.180396514283474e-5
+Iter 308: V_size = 225, Converged = 155, ||r||_min = 2.1745371592378618e-5
+Iter 309: V_size = 250, Converged = 155, ||r||_min = 2.1676779008687425e-5
+Iter 310: V_size = 275, Converged = 155, ||r||_min = 2.1609349439731355e-5
+Iter 311: V_size = 50, Converged = 155, ||r||_min = 2.153130017237055e-5
+Iter 312: V_size = 75, Converged = 155, ||r||_min = 2.144467617660084e-5
+Iter 313: V_size = 100, Converged = 155, ||r||_min = 2.140872684535308e-5
+Iter 314: V_size = 125, Converged = 155, ||r||_min = 2.135211280228662e-5
+Iter 315: V_size = 150, Converged = 155, ||r||_min = 2.1278740167987202e-5
+Iter 316: V_size = 175, Converged = 155, ||r||_min = 2.1220243935028532e-5
+Iter 317: V_size = 200, Converged = 155, ||r||_min = 2.117801350475353e-5
+Iter 318: V_size = 225, Converged = 155, ||r||_min = 2.1126233322841585e-5
+Iter 319: V_size = 250, Converged = 155, ||r||_min = 2.1057100113555394e-5
+Iter 320: V_size = 275, Converged = 155, ||r||_min = 2.0981787466813394e-5
+Iter 321: V_size = 50, Converged = 155, ||r||_min = 2.0910713268114803e-5
+Iter 322: V_size = 75, Converged = 155, ||r||_min = 2.082980716265832e-5
+Iter 323: V_size = 100, Converged = 155, ||r||_min = 2.0762074836764558e-5
+Iter 324: V_size = 125, Converged = 155, ||r||_min = 2.069077138484469e-5
+Iter 325: V_size = 150, Converged = 155, ||r||_min = 2.0598531210138863e-5
+Iter 326: V_size = 175, Converged = 155, ||r||_min = 2.0521051927213125e-5
+Iter 327: V_size = 200, Converged = 155, ||r||_min = 2.045600452017119e-5
+Iter 328: V_size = 225, Converged = 155, ||r||_min = 2.0403054155744516e-5
+Iter 329: V_size = 250, Converged = 155, ||r||_min = 2.0344088916581113e-5
+Iter 330: V_size = 275, Converged = 155, ||r||_min = 2.02826472436554e-5
+Iter 331: V_size = 50, Converged = 155, ||r||_min = 2.0222703024666887e-5
+Iter 332: V_size = 75, Converged = 155, ||r||_min = 2.0146133325741818e-5
+Iter 333: V_size = 100, Converged = 155, ||r||_min = 2.010548578539389e-5
+Iter 334: V_size = 125, Converged = 155, ||r||_min = 2.0066193033986064e-5
+Iter 335: V_size = 150, Converged = 155, ||r||_min = 1.9984712074752407e-5
+Iter 336: V_size = 175, Converged = 155, ||r||_min = 1.9920481640877377e-5
+EV 156 converged μ = -0.5664833407 (λ ≈ 0.7526508757), ‖r‖ = 1.99e-05, stable for 3 iters
+Iter 337: V_size = 200, Converged = 156, ||r||_min = 1.9873169200521057e-5
+Iter 338: V_size = 224, Converged = 156, ||r||_min = 7.5336894222907675
+Iter 339: V_size = 248, Converged = 156, ||r||_min = 0.00843238309009409
+Iter 340: V_size = 272, Converged = 156, ||r||_min = 0.00842195689075104
+Iter 341: V_size = 48, Converged = 156, ||r||_min = 0.008410788910737637
+Iter 342: V_size = 72, Converged = 156, ||r||_min = 0.008404194591914561
+Iter 343: V_size = 96, Converged = 156, ||r||_min = 0.008399766292646334
+Iter 344: V_size = 120, Converged = 156, ||r||_min = 0.008396370419607098
+Iter 345: V_size = 144, Converged = 156, ||r||_min = 0.008392161736349303
+Iter 346: V_size = 168, Converged = 156, ||r||_min = 0.00838838929966165
+Iter 347: V_size = 192, Converged = 156, ||r||_min = 0.008382723227858302
+Iter 348: V_size = 216, Converged = 156, ||r||_min = 0.008378345197129182
+Iter 349: V_size = 240, Converged = 156, ||r||_min = 0.008374691649580913
+Iter 350: V_size = 264, Converged = 156, ||r||_min = 0.008369980933936354
+Iter 351: V_size = 288, Converged = 156, ||r||_min = 0.008366337970511648
+Iter 352: V_size = 48, Converged = 156, ||r||_min = 0.008358698992526859
+Iter 353: V_size = 72, Converged = 156, ||r||_min = 0.008350064475545912
+Iter 354: V_size = 96, Converged = 156, ||r||_min = 0.008345764424087255
+Iter 355: V_size = 120, Converged = 156, ||r||_min = 0.008340817164665056
+Iter 356: V_size = 144, Converged = 156, ||r||_min = 0.008332475545519361
+Iter 357: V_size = 168, Converged = 156, ||r||_min = 0.008327520193821146
+Iter 358: V_size = 192, Converged = 156, ||r||_min = 0.008322438741699292
+Iter 359: V_size = 216, Converged = 156, ||r||_min = 0.008316161780521707
+Iter 360: V_size = 240, Converged = 156, ||r||_min = 0.008308870511415423
+Iter 361: V_size = 264, Converged = 156, ||r||_min = 0.008301380744167306
+Iter 362: V_size = 288, Converged = 156, ||r||_min = 0.00829486490338177
+Iter 363: V_size = 48, Converged = 156, ||r||_min = 0.008288770067098548
+Iter 364: V_size = 72, Converged = 156, ||r||_min = 0.00828224940380587
+Iter 365: V_size = 96, Converged = 156, ||r||_min = 0.008277861270881934
+Iter 366: V_size = 120, Converged = 156, ||r||_min = 0.008271115764871
+Iter 367: V_size = 144, Converged = 156, ||r||_min = 0.008265908020748326
+Iter 368: V_size = 168, Converged = 156, ||r||_min = 0.008261889923178032
+Iter 369: V_size = 192, Converged = 156, ||r||_min = 0.008256195580836624
+Iter 370: V_size = 216, Converged = 156, ||r||_min = 0.008250315788479274
+Iter 371: V_size = 240, Converged = 156, ||r||_min = 0.008244506860284299
+Iter 372: V_size = 264, Converged = 156, ||r||_min = 0.008239665289822281
+Iter 373: V_size = 288, Converged = 156, ||r||_min = 0.008234709864837481
+Iter 374: V_size = 48, Converged = 156, ||r||_min = 0.008227775428814
+Iter 375: V_size = 72, Converged = 156, ||r||_min = 0.008218150762370308
+Iter 376: V_size = 96, Converged = 156, ||r||_min = 0.00821185439059982
+Iter 377: V_size = 120, Converged = 156, ||r||_min = 0.008206069124856896
+Iter 378: V_size = 144, Converged = 156, ||r||_min = 0.008197473390904918
+Iter 379: V_size = 168, Converged = 156, ||r||_min = 0.008188265432137833
+Iter 380: V_size = 192, Converged = 156, ||r||_min = 0.00817750557204237
+Iter 381: V_size = 216, Converged = 156, ||r||_min = 0.008167802320887168
+Iter 382: V_size = 240, Converged = 156, ||r||_min = 0.008156355606489704
+Iter 383: V_size = 264, Converged = 156, ||r||_min = 0.008144968572417465
+Iter 384: V_size = 288, Converged = 156, ||r||_min = 0.008132400364218906
+Iter 385: V_size = 48, Converged = 156, ||r||_min = 0.008117698306760205
+Iter 386: V_size = 72, Converged = 156, ||r||_min = 0.008102195420135405
+Iter 387: V_size = 96, Converged = 156, ||r||_min = 0.008091022120423785
+Iter 388: V_size = 120, Converged = 156, ||r||_min = 0.008077532623781665
+Iter 389: V_size = 144, Converged = 156, ||r||_min = 0.008059649008301153
+Iter 390: V_size = 168, Converged = 156, ||r||_min = 0.008042533189628689
+Iter 391: V_size = 192, Converged = 156, ||r||_min = 0.00802415792782547
+Iter 392: V_size = 216, Converged = 156, ||r||_min = 0.008009888412643995
+Iter 393: V_size = 240, Converged = 156, ||r||_min = 0.007994380951855878
+Iter 394: V_size = 264, Converged = 156, ||r||_min = 0.007979016153879748
+Iter 395: V_size = 288, Converged = 156, ||r||_min = 0.007968003521451971
+Iter 396: V_size = 48, Converged = 156, ||r||_min = 0.007955551153678873
+Iter 397: V_size = 72, Converged = 156, ||r||_min = 0.007943887140153226
+Iter 398: V_size = 96, Converged = 156, ||r||_min = 0.007939750256762345
+Iter 399: V_size = 120, Converged = 156, ||r||_min = 0.00793311641832072
+Iter 400: V_size = 144, Converged = 156, ||r||_min = 0.007920024246505085
+Iter 401: V_size = 168, Converged = 156, ||r||_min = 0.0079117307730732
+Iter 402: V_size = 192, Converged = 156, ||r||_min = 0.007903764329677642
+Iter 403: V_size = 216, Converged = 156, ||r||_min = 0.00789343669997354
+Iter 404: V_size = 240, Converged = 156, ||r||_min = 0.007883761177297784
+Iter 405: V_size = 264, Converged = 156, ||r||_min = 0.007875146968870504
+Iter 406: V_size = 288, Converged = 156, ||r||_min = 0.007863349326830686
+Iter 407: V_size = 48, Converged = 156, ||r||_min = 0.007853855946864332
+Iter 408: V_size = 72, Converged = 156, ||r||_min = 0.00784514078630806
+Iter 409: V_size = 96, Converged = 156, ||r||_min = 0.00783575046244064
+Iter 410: V_size = 120, Converged = 156, ||r||_min = 0.007826797141831569
+Iter 411: V_size = 144, Converged = 156, ||r||_min = 0.007816714602005483
+Iter 412: V_size = 168, Converged = 156, ||r||_min = 0.007808067769311646
+Iter 413: V_size = 192, Converged = 156, ||r||_min = 0.007798970375681635
+Iter 414: V_size = 216, Converged = 156, ||r||_min = 0.007788118231618571
+Iter 415: V_size = 240, Converged = 156, ||r||_min = 0.007772821593945217
+Iter 416: V_size = 264, Converged = 156, ||r||_min = 0.007758573388087716
+Iter 417: V_size = 288, Converged = 156, ||r||_min = 0.007749256352737273
+Iter 418: V_size = 48, Converged = 156, ||r||_min = 0.0077311453153935715
+Iter 419: V_size = 72, Converged = 156, ||r||_min = 0.007711255393965427
+Iter 420: V_size = 96, Converged = 156, ||r||_min = 0.007696165309656454
+Iter 421: V_size = 120, Converged = 156, ||r||_min = 0.00768121019152498
+Iter 422: V_size = 144, Converged = 156, ||r||_min = 0.0076644624622089355
+Iter 423: V_size = 168, Converged = 156, ||r||_min = 0.007649859190742309
+Iter 424: V_size = 192, Converged = 156, ||r||_min = 0.0076336915086201666
+Iter 425: V_size = 216, Converged = 156, ||r||_min = 0.007616545735636658
+Iter 426: V_size = 240, Converged = 156, ||r||_min = 0.007604761736911498
+Iter 427: V_size = 264, Converged = 156, ||r||_min = 0.007591128884577557
+Iter 428: V_size = 288, Converged = 156, ||r||_min = 0.007573958193636141
+Iter 429: V_size = 48, Converged = 156, ||r||_min = 0.007561729855828205
+Iter 430: V_size = 72, Converged = 156, ||r||_min = 0.007547904658714161
+Iter 431: V_size = 96, Converged = 156, ||r||_min = 0.007537065350290969
+Iter 432: V_size = 120, Converged = 156, ||r||_min = 0.00752413379279924
+Iter 433: V_size = 144, Converged = 156, ||r||_min = 0.007512855867909793
+Iter 434: V_size = 168, Converged = 156, ||r||_min = 0.007504527136810169
+Iter 435: V_size = 192, Converged = 156, ||r||_min = 0.007491463281797509
+Iter 436: V_size = 216, Converged = 156, ||r||_min = 0.007475365216015112
+Iter 437: V_size = 240, Converged = 156, ||r||_min = 0.007459702681678444
+Iter 438: V_size = 264, Converged = 156, ||r||_min = 0.007442879398095698
+Iter 439: V_size = 288, Converged = 156, ||r||_min = 0.0074214857670698514
+Iter 440: V_size = 48, Converged = 156, ||r||_min = 0.007400653433576183
+Iter 441: V_size = 72, Converged = 156, ||r||_min = 0.0073809697528713775
+Iter 442: V_size = 96, Converged = 156, ||r||_min = 0.00736622350969667
+Iter 443: V_size = 120, Converged = 156, ||r||_min = 0.0073510081780955305
+Iter 444: V_size = 144, Converged = 156, ||r||_min = 0.007329411824069004
+Iter 445: V_size = 168, Converged = 156, ||r||_min = 0.007305031405582629
+Iter 446: V_size = 192, Converged = 156, ||r||_min = 0.007282357373016741
+Iter 447: V_size = 216, Converged = 156, ||r||_min = 0.007261641836861462
+Iter 448: V_size = 240, Converged = 156, ||r||_min = 0.00724331416404087
+Iter 449: V_size = 264, Converged = 156, ||r||_min = 0.007221147772652249
+Iter 450: V_size = 288, Converged = 156, ||r||_min = 0.007189155786780971
+Iter 451: V_size = 48, Converged = 156, ||r||_min = 0.007170140843271706
+Iter 452: V_size = 72, Converged = 156, ||r||_min = 0.007151203394724685
+Iter 453: V_size = 96, Converged = 156, ||r||_min = 0.007131887168473883
+Iter 454: V_size = 120, Converged = 156, ||r||_min = 0.007116195465644985
+Iter 455: V_size = 144, Converged = 156, ||r||_min = 0.007098068306424833
+Iter 456: V_size = 168, Converged = 156, ||r||_min = 0.007075459703485471
+Iter 457: V_size = 192, Converged = 156, ||r||_min = 0.007063552904915534
+Iter 458: V_size = 216, Converged = 156, ||r||_min = 0.007053977845326854
+Iter 459: V_size = 240, Converged = 156, ||r||_min = 0.007042903321118921
+Iter 460: V_size = 264, Converged = 156, ||r||_min = 0.007033061509862219
+Iter 461: V_size = 288, Converged = 156, ||r||_min = 0.007022605614383738
+Iter 462: V_size = 48, Converged = 156, ||r||_min = 0.007010871263381672
+Iter 463: V_size = 72, Converged = 156, ||r||_min = 0.007000496083851283
+Iter 464: V_size = 96, Converged = 156, ||r||_min = 0.006994749139794113
+Iter 465: V_size = 120, Converged = 156, ||r||_min = 0.006987958450646659
+Iter 466: V_size = 144, Converged = 156, ||r||_min = 0.006978082584866692
+Iter 467: V_size = 168, Converged = 156, ||r||_min = 0.0069705915773007245
+Iter 468: V_size = 192, Converged = 156, ||r||_min = 0.006963875892270023
+Iter 469: V_size = 216, Converged = 156, ||r||_min = 0.006954734024188507
+Iter 470: V_size = 240, Converged = 156, ||r||_min = 0.006944876398001121
+Iter 471: V_size = 264, Converged = 156, ||r||_min = 0.00693261547534361
+Iter 472: V_size = 288, Converged = 156, ||r||_min = 0.0069224753248565704
+Iter 473: V_size = 48, Converged = 156, ||r||_min = 0.006910697042633658
+Iter 474: V_size = 72, Converged = 156, ||r||_min = 0.006897882587071372
+Iter 475: V_size = 96, Converged = 156, ||r||_min = 0.006887467107166665
+Iter 476: V_size = 120, Converged = 156, ||r||_min = 0.0068755441443828225
+Iter 477: V_size = 144, Converged = 156, ||r||_min = 0.006864224118004886
+Iter 478: V_size = 168, Converged = 156, ||r||_min = 0.006852598873750251
+Iter 479: V_size = 192, Converged = 156, ||r||_min = 0.006839386789749903
+Iter 480: V_size = 216, Converged = 156, ||r||_min = 0.0068245840106134735
+Iter 481: V_size = 240, Converged = 156, ||r||_min = 0.006808390511913505
+Iter 482: V_size = 264, Converged = 156, ||r||_min = 0.006791661160114356
+Iter 483: V_size = 288, Converged = 156, ||r||_min = 0.00676423515623516
+Iter 484: V_size = 48, Converged = 156, ||r||_min = 0.006737028359012791
+Iter 485: V_size = 72, Converged = 156, ||r||_min = 0.0067111776726397395
+Iter 486: V_size = 96, Converged = 156, ||r||_min = 0.006690652894589269
+Iter 487: V_size = 120, Converged = 156, ||r||_min = 0.006665754080259238
+Iter 488: V_size = 144, Converged = 156, ||r||_min = 0.006633466546377299
+Iter 489: V_size = 168, Converged = 156, ||r||_min = 0.0066045080999549465
+Iter 490: V_size = 192, Converged = 156, ||r||_min = 0.006578780877112492
+Iter 491: V_size = 216, Converged = 156, ||r||_min = 0.006558203539079902
+Iter 492: V_size = 240, Converged = 156, ||r||_min = 0.006531786699046437
+Iter 493: V_size = 264, Converged = 156, ||r||_min = 0.006503338178306862
+Iter 494: V_size = 288, Converged = 156, ||r||_min = 0.006480515523344292
+Iter 495: V_size = 48, Converged = 156, ||r||_min = 0.006462214163518138
+Iter 496: V_size = 72, Converged = 156, ||r||_min = 0.006445539423196545
+Iter 497: V_size = 96, Converged = 156, ||r||_min = 0.006431785262584937
+Iter 498: V_size = 120, Converged = 156, ||r||_min = 0.006418947946666517
+Iter 499: V_size = 144, Converged = 156, ||r||_min = 0.0064043476202881935
+Iter 500: V_size = 168, Converged = 156, ||r||_min = 0.006387227345606761
+Max iterations (500) reached without convergence. Skipping this case.
+5160.409566 seconds (180.75 M allocations: 12.216 TiB, 0.68% gc time)
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 27.1185424333 (computed) - 27.1185424333 (exact) = -2.1316e-14
+  2: 24.7321119516 (computed) - 24.7321119516 (exact) = -7.1054e-15
+  3: 24.3879937935 (computed) - 24.3879937935 (exact) =  0.0000e+00
+  4: 13.3772885724 (computed) - 13.3772885724 (exact) =  5.3291e-15
+  5: 12.9587048246 (computed) - 12.9587048246 (exact) =  5.3291e-15
+  6: 11.8262997383 (computed) - 11.8262997383 (exact) =  3.5527e-15
+  7: 11.6021118864 (computed) - 11.6021118864 (exact) =  5.3291e-15
+  8: 11.4743278224 (computed) - 11.4743278224 (exact) = -8.8818e-15
+  9: 9.4405831066 (computed) - 9.4405831066 (exact) = -1.7764e-15
+ 10: 9.2248358706 (computed) - 9.2248358706 (exact) =  5.3291e-15
+ 11: 7.9459051650 (computed) - 7.9459051650 (exact) = -7.9936e-15
+ 12: 6.8089396904 (computed) - 6.8089396904 (exact) = -6.0218e-13
+ 13: 6.7700837574 (computed) - 6.7700837574 (exact) = -4.9649e-13
+ 14: 6.7368524954 (computed) - 6.7368524954 (exact) = -3.5527e-15
+ 15: 6.0276363658 (computed) - 6.0276363658 (exact) = -8.8818e-16
+ 16: 5.5818656585 (computed) - 5.5818656585 (exact) = -2.6645e-15
+ 17: 5.2378616448 (computed) - 5.2378616448 (exact) =  0.0000e+00
+ 18: 5.0658460100 (computed) - 5.0658460100 (exact) = -6.2172e-15
+ 19: 4.9757475577 (computed) - 4.9757475577 (exact) =  4.4409e-15
+ 20: 4.4708491240 (computed) - 4.4708491240 (exact) = -1.5099e-14
+ 21: 4.4143554089 (computed) - 4.4143554089 (exact) = -1.1546e-14
+ 22: 4.2560780310 (computed) - 4.2560780310 (exact) = -4.8850e-14
+ 23: 4.1546260235 (computed) - 4.1546260235 (exact) = -1.1280e-13
+ 24: 4.0438456933 (computed) - 4.0438456933 (exact) = -4.3521e-14
+ 25: 4.0352191657 (computed) - 4.0352191657 (exact) = -4.7962e-14
+ 26: 4.0143803978 (computed) - 4.0143803978 (exact) = -4.1656e-13
+ 27: 3.9326704383 (computed) - 3.9326704383 (exact) = -2.4825e-13
+ 28: 3.7840541969 (computed) - 3.7840541969 (exact) = -1.1728e-12
+ 29: 3.7043565506 (computed) - 3.7043565506 (exact) = -7.2786e-13
+ 30: 3.6989880952 (computed) - 3.6989880952 (exact) = -7.6428e-13
+ 31: 3.6779018748 (computed) - 3.6779018748 (exact) = -1.5175e-12
+ 32: 3.5839270077 (computed) - 3.5839270077 (exact) = -3.4284e-12
+ 33: 3.5719803070 (computed) - 3.5719803070 (exact) = -9.1127e-13
+ 34: 3.4595049177 (computed) - 3.4595049177 (exact) = -1.4762e-12
+ 35: 3.4357742118 (computed) - 3.4357742118 (exact) = -2.1432e-12
+ 36: 3.4211639908 (computed) - 3.4211639908 (exact) =  7.9936e-15
+ 37: 3.1381141576 (computed) - 3.1381141576 (exact) =  4.4409e-16
+ 38: 3.1221131856 (computed) - 3.1221131856 (exact) = -5.2491e-12
+ 39: 3.1036461894 (computed) - 3.1036461894 (exact) = -2.2204e-15
+ 40: 3.0813621791 (computed) - 3.0813621791 (exact) = -8.8818e-16
+ 41: 3.0766314325 (computed) - 3.0766314325 (exact) = -4.8850e-15
+ 42: 2.7798092300 (computed) - 2.7798092300 (exact) = -3.2863e-14
+ 43: 2.6139893345 (computed) - 2.6139893345 (exact) = -4.8406e-13
+ 44: 2.5745578099 (computed) - 2.5745578099 (exact) = -4.1389e-13
+ 45: 2.5662765192 (computed) - 2.5662765192 (exact) = -4.1123e-13
+ 46: 2.5570363072 (computed) - 2.5570363072 (exact) = -1.6742e-13
+ 47: 2.4944683000 (computed) - 2.4944683000 (exact) = -1.2075e-12
+ 48: 2.4060697482 (computed) - 2.4060697482 (exact) = -1.4948e-12
+ 49: 2.3914455100 (computed) - 2.3914455100 (exact) = -6.2927e-13
+ 50: 2.2865085161 (computed) - 2.2865085161 (exact) = -1.1968e-12
+ 51: 2.2449785817 (computed) - 2.2449785817 (exact) = -5.1008e-12
+ 52: 2.1880506223 (computed) - 2.1880506223 (exact) = -1.8402e-11
+ 53: 2.1866507036 (computed) - 2.1866507036 (exact) = -6.7866e-12
+ 54: 2.1599084770 (computed) - 2.1599084770 (exact) = -2.2951e-12
+ 55: 2.1496930397 (computed) - 2.1496930397 (exact) = -1.7112e-11
+ 56: 2.1260327321 (computed) - 2.1260327321 (exact) = -2.0179e-11
+ 57: 2.1186601814 (computed) - 2.1186601814 (exact) = -1.3503e-11
+ 58: 2.0230226047 (computed) - 2.0230226048 (exact) = -2.2373e-11
+ 59: 2.0004139093 (computed) - 2.0004139093 (exact) = -4.7073e-14
+ 60: 1.9737287721 (computed) - 1.9737287721 (exact) = -1.3291e-11
+ 61: 1.9188052440 (computed) - 1.9188052440 (exact) = -6.7724e-14
+ 62: 1.8712935921 (computed) - 1.8712935921 (exact) = -1.5987e-13
+ 63: 1.8611786601 (computed) - 1.8611786601 (exact) = -1.2124e-13
+ 64: 1.8582548452 (computed) - 1.8582548452 (exact) = -3.6127e-13
+ 65: 1.8437167384 (computed) - 1.8437167384 (exact) = -2.6246e-13
+ 66: 1.8006298914 (computed) - 1.8006298914 (exact) = -3.3329e-13
+ 67: 1.7935119246 (computed) - 1.7935119246 (exact) = -2.9330e-12
+ 68: 1.7905259547 (computed) - 1.7905259547 (exact) = -8.7574e-13
+ 69: 1.7846830241 (computed) - 1.7846830241 (exact) = -6.0596e-13
+ 70: 1.7303261116 (computed) - 1.7303261116 (exact) = -2.8106e-12
+ 71: 1.7189076787 (computed) - 1.7189076787 (exact) = -3.8749e-12
+ 72: 1.6730201858 (computed) - 1.6730201858 (exact) = -2.4525e-12
+ 73: 1.6096911093 (computed) - 1.6096911093 (exact) = -1.7681e-11
+ 74: 1.6085549899 (computed) - 1.6085549899 (exact) = -6.6063e-12
+ 75: 1.6075156217 (computed) - 1.6075156217 (exact) = -1.1599e-11
+ 76: 1.6059629832 (computed) - 1.6059629832 (exact) = -5.3133e-12
+ 77: 1.5620633229 (computed) - 1.5620633229 (exact) = -1.4349e-11
+ 78: 1.5543775910 (computed) - 1.5543775910 (exact) = -8.0871e-12
+ 79: 1.5199951964 (computed) - 1.5199951964 (exact) = -4.6778e-11
+ 80: 1.5193888510 (computed) - 1.5193888510 (exact) = -2.9121e-11
+ 81: 1.5161872474 (computed) - 1.5161872474 (exact) = -3.4550e-13
+ 82: 1.4940995375 (computed) - 1.4940995376 (exact) = -4.5401e-11
+ 83: 1.4627194867 (computed) - 1.4627194867 (exact) = -4.6459e-11
+ 84: 1.4349989688 (computed) - 1.4349989689 (exact) = -6.5127e-11
+ 85: 1.4302990186 (computed) - 1.4302990186 (exact) = -7.7938e-13
+ 86: 1.4192604029 (computed) - 1.4192604029 (exact) = -6.6569e-13
+ 87: 1.4087593277 (computed) - 1.4087593277 (exact) = -5.7976e-13
+ 88: 1.4017246701 (computed) - 1.4017246701 (exact) = -2.1021e-12
+ 89: 1.3745866196 (computed) - 1.3745866196 (exact) = -1.2861e-12
+ 90: 1.3723714531 (computed) - 1.3723714531 (exact) = -8.1757e-13
+ 91: 1.3641796160 (computed) - 1.3641796160 (exact) = -5.7212e-12
+ 92: 1.3590295688 (computed) - 1.3590295688 (exact) = -2.8535e-12
+ 93: 1.3497737601 (computed) - 1.3497737601 (exact) = -2.8315e-12
+ 94: 1.3206359818 (computed) - 1.3206359818 (exact) = -3.4708e-12
+ 95: 1.3080213109 (computed) - 1.3080213109 (exact) = -3.0038e-12
+ 96: 1.3069423895 (computed) - 1.3069423895 (exact) = -1.2451e-11
+ 97: 1.3034492715 (computed) - 1.3034492715 (exact) = -6.0447e-12
+ 98: 1.2569270368 (computed) - 1.2569270368 (exact) = -1.9273e-13
+ 99: 1.2382831239 (computed) - 1.2382831239 (exact) = -3.1353e-13
+100: 1.2255590693 (computed) - 1.2255590694 (exact) = -5.9421e-11
+101: 1.1978924710 (computed) - 1.1978924710 (exact) = -2.6830e-12
+102: 1.1949420019 (computed) - 1.1949420019 (exact) = -2.4491e-11
+103: 1.1795707220 (computed) - 1.1795707220 (exact) = -5.5542e-12
+104: 1.1715155865 (computed) - 1.1715155865 (exact) = -9.1764e-11
+105: 1.1500295041 (computed) - 1.1500295041 (exact) = -6.6767e-12
+106: 1.1434713305 (computed) - 1.1434713305 (exact) = -4.9676e-12
+107: 1.1431584933 (computed) - 1.1431584934 (exact) = -8.9286e-12
+108: 1.1419031660 (computed) - 1.1419031660 (exact) = -1.8305e-11
+109: 1.1363322330 (computed) - 1.1363322331 (exact) = -1.4046e-10
+110: 1.1102721630 (computed) - 1.1102721630 (exact) = -1.2977e-11
+111: 1.0964155326 (computed) - 1.0964155327 (exact) = -4.5609e-11
+112: 1.0867136166 (computed) - 1.0867136167 (exact) = -9.8381e-11
+113: 1.0698104969 (computed) - 1.0698104970 (exact) = -6.1814e-11
+114: 1.0649637213 (computed) - 1.0649637213 (exact) = -3.5409e-11
+115: 1.0526418320 (computed) - 1.0526418321 (exact) = -9.7990e-11
+116: 1.0431804500 (computed) - 1.0431804501 (exact) = -8.0359e-11
+117: 1.0418730902 (computed) - 1.0418730903 (exact) = -7.1288e-11
+118: 1.0399910251 (computed) - 1.0399910252 (exact) = -3.8271e-11
+119: 1.0224022554 (computed) - 1.0224022555 (exact) = -7.7750e-11
+120: 1.0049404784 (computed) - 1.0049404785 (exact) = -1.1145e-10
+121: 1.0008830089 (computed) - 1.0008830090 (exact) = -1.2929e-10
+122: 0.9974921857 (computed) - 0.9974921859 (exact) = -1.6395e-10
+123: 0.9905492605 (computed) - 0.9905492607 (exact) = -1.9648e-10
+124: 0.9776749659 (computed) - 0.9776749661 (exact) = -1.5260e-10
+125: 0.9742467109 (computed) - 0.9742467110 (exact) = -1.3215e-10
+126: 0.9725129446 (computed) - 0.9725129447 (exact) = -1.3722e-10
+127: 0.9535856465 (computed) - 0.9535856468 (exact) = -2.2495e-10
+128: 0.9430951806 (computed) - 0.9430951807 (exact) = -1.4565e-10
+129: 0.9283543231 (computed) - 0.9283543234 (exact) = -2.0847e-10
+130: 0.9272618821 (computed) - 0.9272618823 (exact) = -1.4387e-10
+131: 0.9271332607 (computed) - 0.9271332609 (exact) = -2.2317e-10
+132: 0.8991279915 (computed) - 0.8991279918 (exact) = -2.3955e-10
+133: 0.8948268636 (computed) - 0.8948268638 (exact) = -2.7533e-10
+134: 0.8829823896 (computed) - 0.8829823898 (exact) = -2.8655e-10
+135: 0.8786455062 (computed) - 0.8786455064 (exact) = -2.8033e-10
+136: 0.8771995141 (computed) - 0.8771995144 (exact) = -2.6796e-10
+137: 0.8663369235 (computed) - 0.8663369238 (exact) = -2.7732e-10
+138: 0.8593228383 (computed) - 0.8593228385 (exact) = -2.5762e-10
+139: 0.8585088102 (computed) - 0.8585088105 (exact) = -3.0583e-10
+140: 0.8545969710 (computed) - 0.8545969713 (exact) = -3.0969e-10
+141: 0.8470838632 (computed) - 0.8470838635 (exact) = -3.1797e-10
+142: 0.8390732255 (computed) - 0.8390732258 (exact) = -2.9770e-10
+143: 0.8351099806 (computed) - 0.8351099810 (exact) = -3.4029e-10
+144: 0.8292544980 (computed) - 0.8292544983 (exact) = -3.0605e-10
+145: 0.8271143459 (computed) - 0.8271143462 (exact) = -3.5120e-10
+146: 0.8244864599 (computed) - 0.8244864602 (exact) = -3.5117e-10
+147: 0.8196675028 (computed) - 0.8196675031 (exact) = -3.4801e-10
+148: 0.8032598443 (computed) - 0.8032598447 (exact) = -3.7336e-10
+149: 0.8018093272 (computed) - 0.8018093276 (exact) = -3.8197e-10
+150: 0.7982871796 (computed) - 0.7982871800 (exact) = -3.9249e-10
+151: 0.7932960900 (computed) - 0.7932960904 (exact) = -3.9473e-10
+152: 0.7890535639 (computed) - 0.7890535644 (exact) = -4.0821e-10
+153: 0.7839291733 (computed) - 0.7839291737 (exact) = -4.0173e-10
+154: 0.7803241307 (computed) - 0.7803241311 (exact) = -4.1465e-10
+155: 0.7666706872 (computed) - 0.7666706876 (exact) = -4.4433e-10
+156: 0.7526508757 (computed) - 0.7526508762 (exact) = -4.7017e-10
+156 Eigenvalues converges, out of 180 requested.
+Running with l = 300
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+Iter 1: V_size = 60, Converged = 0, ||r||_min = 224.67475201319482
+Iter 2: V_size = 120, Converged = 0, ||r||_min = 22.874198899908468
+Iter 3: V_size = 240, Converged = 0, ||r||_min = 0.06506933543971079
+Iter 4: V_size = 480, Converged = 0, ||r||_min = 5.1165352148428455e-5
+Iter 5: V_size = 480, Converged = 0, ||r||_min = 1.0177769720807792e-8
+Iter 6: V_size = 480, Converged = 0, ||r||_min = 9.687332201655854e-13
+EV   1 converged μ = -89.1246093928 (λ ≈ 9.4405831066), ‖r‖ = 1.55e-12, stable for 3 iters
+EV   2 converged μ = -134.6090002247 (λ ≈ 11.6021118864), ‖r‖ = 2.33e-13, stable for 3 iters
+EV   3 converged μ = -85.0975968389 (λ ≈ 9.2248358706), ‖r‖ = 1.25e-12, stable for 3 iters
+EV   4 converged μ = -178.9518495502 (λ ≈ 13.3772885724), ‖r‖ = 2.25e-13, stable for 3 iters
+EV   5 converged μ = -167.9280307310 (λ ≈ 12.9587048246), ‖r‖ = 2.32e-13, stable for 3 iters
+EV   6 converged μ = -594.7742412739 (λ ≈ 24.3879937935), ‖r‖ = 7.24e-13, stable for 3 iters
+EV   7 converged μ = -735.4153437081 (λ ≈ 27.1185424333), ‖r‖ = 6.90e-13, stable for 3 iters
+EV   8 converged μ = -611.6773615864 (λ ≈ 24.7321119516), ‖r‖ = 6.62e-13, stable for 3 iters
+EV   9 converged μ = -131.6601989757 (λ ≈ 11.4743278224), ‖r‖ = 4.73e-13, stable for 3 iters
+EV  10 converged μ = -139.8613654990 (λ ≈ 11.8262997383), ‖r‖ = 2.21e-13, stable for 3 iters
+Iter 7: V_size = 480, Converged = 10, ||r||_min = 6.897642771423386e-13
+EV  11 converged μ = -27.4351946096 (λ ≈ 5.2378616448), ‖r‖ = 4.76e-11, stable for 3 iters
+EV  12 converged μ = -16.1152499782 (λ ≈ 4.0143803978), ‖r‖ = 1.52e-10, stable for 3 iters
+EV  13 converged μ = -45.8340340820 (λ ≈ 6.7700837574), ‖r‖ = 4.13e-13, stable for 3 iters
+EV  14 converged μ = -36.3324001585 (λ ≈ 6.0276363658), ‖r‖ = 7.10e-12, stable for 3 iters
+EV  15 converged μ = -11.9681742753 (λ ≈ 3.4595049177), ‖r‖ = 9.48e-10, stable for 3 iters
+EV  16 converged μ = -13.7222574537 (λ ≈ 3.7043565506), ‖r‖ = 8.04e-10, stable for 3 iters
+EV  17 converged μ = -46.3616597076 (λ ≈ 6.8089396904), ‖r‖ = 1.38e-12, stable for 3 iters
+EV  18 converged μ = -19.9884918895 (λ ≈ 4.4708491240), ‖r‖ = 9.03e-11, stable for 3 iters
+EV  19 converged μ = -63.1374088909 (λ ≈ 7.9459051650), ‖r‖ = 5.42e-13, stable for 3 iters
+EV  20 converged μ = -12.8445327967 (λ ≈ 3.5839270077), ‖r‖ = 4.11e-10, stable for 3 iters
+EV  21 converged μ = -14.3190661649 (λ ≈ 3.7840541969), ‖r‖ = 2.80e-10, stable for 3 iters
+EV  22 converged μ = -19.4865336759 (λ ≈ 4.4143554089), ‖r‖ = 1.38e-10, stable for 3 iters
+EV  23 converged μ = -16.3526879910 (λ ≈ 4.0438456933), ‖r‖ = 5.15e-11, stable for 3 iters
+EV  24 converged μ = -12.7590433135 (λ ≈ 3.5719803070), ‖r‖ = 1.28e-09, stable for 3 iters
+EV  25 converged μ = -18.1142002056 (λ ≈ 4.2560780310), ‖r‖ = 1.54e-10, stable for 3 iters
+EV  26 converged μ = -15.4658967762 (λ ≈ 3.9326704383), ‖r‖ = 3.79e-11, stable for 3 iters
+EV  27 converged μ = -25.6627957975 (λ ≈ 5.0658460100), ‖r‖ = 6.23e-12, stable for 3 iters
+EV  28 converged μ = -13.5269622006 (λ ≈ 3.6779018748), ‖r‖ = 7.49e-10, stable for 3 iters
+EV  29 converged μ = -17.2609173950 (λ ≈ 4.1546260235), ‖r‖ = 1.43e-10, stable for 3 iters
+EV  30 converged μ = -31.1572242298 (λ ≈ 5.5818656585), ‖r‖ = 5.14e-12, stable for 3 iters
+EV  31 converged μ = -16.2829937153 (λ ≈ 4.0352191657), ‖r‖ = 2.68e-10, stable for 3 iters
+EV  32 converged μ = -45.3851815451 (λ ≈ 6.7368524954), ‖r‖ = 3.89e-12, stable for 3 iters
+EV  33 converged μ = -13.6825129287 (λ ≈ 3.6989880952), ‖r‖ = 1.96e-10, stable for 3 iters
+EV  34 converged μ = -24.7580637576 (λ ≈ 4.9757475577), ‖r‖ = 5.25e-11, stable for 3 iters
+Iter 8: V_size = 480, Converged = 34, ||r||_min = 149.12411317034037
+EV  35 converged μ = -3.1850934965 (λ ≈ 1.7846830241), ‖r‖ = 7.68e-10, stable for 3 iters
+EV  36 converged μ = -3.5017397078 (λ ≈ 1.8712935921), ‖r‖ = 9.32e-10, stable for 3 iters
+EV  37 converged μ = -2.5874491555 (λ ≈ 1.6085549899), ‖r‖ = 2.43e-09, stable for 3 iters
+EV  38 converged μ = -3.4531110698 (λ ≈ 1.8582548452), ‖r‖ = 8.28e-10, stable for 3 iters
+EV  39 converged μ = -2.5911054674 (λ ≈ 1.6096911093), ‖r‖ = 2.25e-09, stable for 3 iters
+EV  40 converged μ = -11.8045444347 (λ ≈ 3.4357742118), ‖r‖ = 2.83e-12, stable for 3 iters
+EV  41 converged μ = -3.8956052657 (λ ≈ 1.9737287721), ‖r‖ = 2.30e-10, stable for 3 iters
+EV  42 converged μ = -4.5200151779 (λ ≈ 2.1260327321), ‖r‖ = 1.31e-10, stable for 3 iters
+EV  43 converged μ = -4.6211801649 (λ ≈ 2.1496930397), ‖r‖ = 1.73e-10, stable for 3 iters
+EV  44 converged μ = -6.5857751728 (λ ≈ 2.5662765192), ‖r‖ = 2.77e-11, stable for 3 iters
+EV  45 converged μ = -3.2166850238 (λ ≈ 1.7935119246), ‖r‖ = 9.71e-10, stable for 3 iters
+EV  46 converged μ = -6.5384346765 (λ ≈ 2.5570363072), ‖r‖ = 2.04e-11, stable for 3 iters
+EV  47 converged μ = -3.6818135643 (λ ≈ 1.9188052440), ‖r‖ = 3.52e-10, stable for 3 iters
+EV  48 converged μ = -4.6652046289 (λ ≈ 2.1599084770), ‖r‖ = 1.17e-10, stable for 3 iters
+EV  49 converged μ = -4.0016558086 (λ ≈ 2.0004139093), ‖r‖ = 2.32e-10, stable for 3 iters
+EV  50 converged μ = -6.8329402410 (λ ≈ 2.6139893345), ‖r‖ = 9.73e-12, stable for 3 iters
+EV  51 converged μ = -9.8477604663 (λ ≈ 3.1381141576), ‖r‖ = 1.93e-12, stable for 3 iters
+EV  52 converged μ = -7.7273393554 (λ ≈ 2.7798092300), ‖r‖ = 1.34e-11, stable for 3 iters
+EV  53 converged μ = -5.2281211943 (λ ≈ 2.2865085161), ‖r‖ = 8.59e-11, stable for 3 iters
+EV  54 converged μ = -4.4887209642 (λ ≈ 2.1186601814), ‖r‖ = 1.44e-10, stable for 3 iters
+EV  55 converged μ = -9.4947928788 (λ ≈ 3.0813621791), ‖r‖ = 1.38e-12, stable for 3 iters
+EV  56 converged μ = -2.9940284524 (λ ≈ 1.7303261116), ‖r‖ = 9.29e-10, stable for 3 iters
+EV  57 converged μ = -9.6326196688 (λ ≈ 3.1036461894), ‖r‖ = 3.67e-12, stable for 3 iters
+EV  58 converged μ = -3.4639860049 (λ ≈ 1.8611786601), ‖r‖ = 6.10e-10, stable for 3 iters
+EV  59 converged μ = -2.9546436078 (λ ≈ 1.7189076787), ‖r‖ = 1.53e-09, stable for 3 iters
+EV  60 converged μ = -4.7814412997 (λ ≈ 2.1866507036), ‖r‖ = 7.03e-11, stable for 3 iters
+EV  61 converged μ = -5.7891716333 (λ ≈ 2.4060697482), ‖r‖ = 2.49e-11, stable for 3 iters
+EV  62 converged μ = -5.0399288323 (λ ≈ 2.2449785817), ‖r‖ = 5.03e-11, stable for 3 iters
+EV  63 converged μ = -3.2059831945 (λ ≈ 1.7905259547), ‖r‖ = 9.59e-10, stable for 3 iters
+EV  64 converged μ = -5.7190116271 (λ ≈ 2.3914455100), ‖r‖ = 7.42e-11, stable for 3 iters
+EV  65 converged μ = -9.4656609716 (λ ≈ 3.0766314325), ‖r‖ = 3.75e-12, stable for 3 iters
+EV  66 converged μ = -6.2223720999 (λ ≈ 2.4944683000), ‖r‖ = 6.73e-11, stable for 3 iters
+EV  67 converged μ = -3.2422680056 (λ ≈ 1.8006298914), ‖r‖ = 6.00e-10, stable for 3 iters
+EV  68 converged μ = -4.0926204594 (λ ≈ 2.0230226048), ‖r‖ = 2.57e-10, stable for 3 iters
+EV  69 converged μ = -3.3992914116 (λ ≈ 1.8437167384), ‖r‖ = 5.57e-10, stable for 3 iters
+EV  70 converged μ = -9.7475907440 (λ ≈ 3.1221131856), ‖r‖ = 1.32e-12, stable for 3 iters
+EV  71 converged μ = -6.6283479163 (λ ≈ 2.5745578099), ‖r‖ = 1.28e-11, stable for 3 iters
+EV  72 converged μ = -4.7875655256 (λ ≈ 2.1880506223), ‖r‖ = 2.15e-10, stable for 3 iters
+EV  73 converged μ = -11.7043630519 (λ ≈ 3.4211639908), ‖r‖ = 1.60e-12, stable for 3 iters
+Iter 9: V_size = 480, Converged = 73, ||r||_min = 182.78576405740486
+EV  74 converged μ = -2.4400418247 (λ ≈ 1.5620633229), ‖r‖ = 5.44e-11, stable for 3 iters
+EV  75 converged μ = -1.8609860247 (λ ≈ 1.3641796160), ‖r‖ = 8.25e-09, stable for 3 iters
+EV  76 converged μ = -2.1395482969 (λ ≈ 1.4627194867), ‖r‖ = 1.17e-09, stable for 3 iters
+EV  77 converged μ = -1.7109197497 (λ ≈ 1.3080213109), ‖r‖ = 7.85e-09, stable for 3 iters
+EV  78 converged μ = -2.4160896954 (λ ≈ 1.5543775910), ‖r‖ = 4.76e-11, stable for 3 iters
+EV  79 converged μ = -1.9648320507 (λ ≈ 1.4017246701), ‖r‖ = 7.57e-09, stable for 3 iters
+EV  80 converged μ = -2.5791171034 (λ ≈ 1.6059629832), ‖r‖ = 5.34e-11, stable for 3 iters
+EV  81 converged μ = -1.3913870878 (λ ≈ 1.1795707218), ‖r‖ = 1.45e-06, stable for 3 iters
+EV  82 converged μ = -1.4278863879 (λ ≈ 1.1949420019), ‖r‖ = 5.96e-07, stable for 3 iters
+EV  83 converged μ = -1.9846028434 (λ ≈ 1.4087593277), ‖r‖ = 1.76e-09, stable for 3 iters
+EV  84 converged μ = -1.5019950324 (λ ≈ 1.2255590693), ‖r‖ = 6.97e-07, stable for 3 iters
+EV  85 converged μ = -1.8218892034 (λ ≈ 1.3497737601), ‖r‖ = 4.17e-09, stable for 3 iters
+EV  86 converged μ = -2.0457552827 (λ ≈ 1.4302990186), ‖r‖ = 3.28e-10, stable for 3 iters
+EV  87 converged μ = -2.3103853971 (λ ≈ 1.5199951964), ‖r‖ = 1.04e-10, stable for 3 iters
+EV  88 converged μ = -1.5333450949 (λ ≈ 1.2382831239), ‖r‖ = 7.72e-07, stable for 3 iters
+EV  89 converged μ = -1.4349463720 (λ ≈ 1.1978924710), ‖r‖ = 4.73e-07, stable for 3 iters
+EV  90 converged μ = -2.0143000912 (λ ≈ 1.4192604029), ‖r‖ = 8.20e-10, stable for 3 iters
+EV  91 converged μ = -2.3085424805 (λ ≈ 1.5193888510), ‖r‖ = 9.67e-11, stable for 3 iters
+EV  92 converged μ = -1.8469613688 (λ ≈ 1.3590295688), ‖r‖ = 9.47e-09, stable for 3 iters
+EV  93 converged μ = -2.7989965422 (λ ≈ 1.6730201858), ‖r‖ = 2.96e-11, stable for 3 iters
+EV  94 converged μ = -2.2323334282 (λ ≈ 1.4940995376), ‖r‖ = 9.70e-11, stable for 3 iters
+EV  95 converged μ = -1.8834034052 (λ ≈ 1.3723714531), ‖r‖ = 1.17e-09, stable for 3 iters
+EV  96 converged μ = -2.2988237692 (λ ≈ 1.5161872474), ‖r‖ = 2.45e-10, stable for 3 iters
+EV  97 converged μ = -2.5841064740 (λ ≈ 1.6075156217), ‖r‖ = 5.31e-11, stable for 3 iters
+EV  98 converged μ = -1.8894883747 (λ ≈ 1.3745866196), ‖r‖ = 2.64e-09, stable for 3 iters
+EV  99 converged μ = -1.7080984095 (λ ≈ 1.3069423895), ‖r‖ = 4.61e-09, stable for 3 iters
+EV 100 converged μ = -1.6989800034 (λ ≈ 1.3034492715), ‖r‖ = 6.56e-08, stable for 3 iters
+EV 101 converged μ = -2.0592220407 (λ ≈ 1.4349989689), ‖r‖ = 1.46e-09, stable for 3 iters
+EV 102 converged μ = -1.3724487694 (λ ≈ 1.1715155865), ‖r‖ = 1.44e-06, stable for 3 iters
+EV 103 converged μ = -1.5798655759 (λ ≈ 1.2569270368), ‖r‖ = 2.07e-07, stable for 3 iters
+EV 104 converged μ = -1.7440793965 (λ ≈ 1.3206359818), ‖r‖ = 6.83e-09, stable for 3 iters
+Iter 10: V_size = 454, Converged = 104, ||r||_min = 328.6454411523412
+EV 105 converged μ = -1.2912509439 (λ ≈ 1.1363322331), ‖r‖ = 2.14e-06, stable for 3 iters
+EV 106 converged μ = -1.3075266835 (λ ≈ 1.1434713304), ‖r‖ = 1.34e-06, stable for 3 iters
+EV 107 converged μ = -1.3039428406 (λ ≈ 1.1419031660), ‖r‖ = 7.44e-07, stable for 3 iters
+EV 108 converged μ = -1.3068113408 (λ ≈ 1.1431584933), ‖r‖ = 1.31e-06, stable for 3 iters
+EV 109 converged μ = -1.3225678601 (λ ≈ 1.1500295040), ‖r‖ = 2.14e-06, stable for 3 iters
+Iter 11: V_size = 392, Converged = 109, ||r||_min = 255.94798800781228
+EV 110 converged μ = -1.1080548264 (λ ≈ 1.0526418320), ‖r‖ = 4.38e-06, stable for 3 iters
+EV 111 converged μ = -1.2327042760 (λ ≈ 1.1102721630), ‖r‖ = 1.20e-06, stable for 3 iters
+Iter 12: V_size = 382, Converged = 111, ||r||_min = 66.16341556474192
+EV 112 converged μ = -1.2021270202 (λ ≈ 1.0964155326), ‖r‖ = 2.55e-06, stable for 3 iters
+EV 113 converged μ = -1.0882254511 (λ ≈ 1.0431804499), ‖r‖ = 6.20e-06, stable for 3 iters
+EV 114 converged μ = -1.1444944993 (λ ≈ 1.0698104969), ‖r‖ = 3.95e-06, stable for 3 iters
+EV 115 converged μ = -1.0815813321 (λ ≈ 1.0399910250), ‖r‖ = 7.17e-06, stable for 3 iters
+EV 116 converged μ = -1.0453063719 (λ ≈ 1.0224022554), ‖r‖ = 5.43e-06, stable for 3 iters
+EV 117 converged μ = -1.1341477276 (λ ≈ 1.0649637213), ‖r‖ = 3.77e-06, stable for 3 iters
+EV 118 converged μ = -1.1809464846 (λ ≈ 1.0867136166), ‖r‖ = 2.57e-06, stable for 3 iters
+EV 119 converged μ = -1.0854995361 (λ ≈ 1.0418730902), ‖r‖ = 5.33e-06, stable for 3 iters
+Iter 13: V_size = 378, Converged = 119, ||r||_min = 26.93814359951791
+EV 120 converged μ = -1.0017667975 (λ ≈ 1.0008830089), ‖r‖ = 8.65e-06, stable for 3 iters
+EV 121 converged μ = -0.9491566535 (λ ≈ 0.9742467108), ‖r‖ = 1.01e-05, stable for 3 iters
+EV 122 converged μ = -0.9457814274 (λ ≈ 0.9725129446), ‖r‖ = 7.19e-06, stable for 3 iters
+EV 123 converged μ = -0.9811878376 (λ ≈ 0.9905492606), ‖r‖ = 6.80e-06, stable for 3 iters
+EV 124 converged μ = -0.9949906606 (λ ≈ 0.9974921857), ‖r‖ = 7.96e-06, stable for 3 iters
+EV 125 converged μ = -1.0099053651 (λ ≈ 1.0049404784), ‖r‖ = 7.58e-06, stable for 3 iters
+Iter 14: V_size = 362, Converged = 125, ||r||_min = 25.445646797805168
+EV 126 converged μ = -0.9558483391 (λ ≈ 0.9776749660), ‖r‖ = 8.17e-06, stable for 3 iters
+Iter 15: V_size = 350, Converged = 126, ||r||_min = 25.391828885860093
+EV 127 converged μ = -0.9093255853 (λ ≈ 0.9535856466), ‖r‖ = 1.18e-05, stable for 3 iters
+Iter 16: V_size = 348, Converged = 127, ||r||_min = 7.145139917803765
+Iter 17: V_size = 346, Converged = 127, ||r||_min = 7.364594427760018

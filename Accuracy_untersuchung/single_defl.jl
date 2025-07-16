@@ -168,7 +168,7 @@ function davidson(
             μ = Σ[i]                  # Ritz value, approximates λ^2
             λ_est = sqrt(abs(μ))     # Estimated λ
             rnorm = norms[i]
-            adaptive_thresh = 2 * λ_est * desired_lambda_accuracy
+            adaptive_thresh = 2 * desired_lambda_accuracy
 
             matched = false
             for (μ_prev, (count, _, _)) in convergence_tracker
@@ -247,7 +247,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1e-4, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-5, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -274,8 +274,8 @@ end
 
 
 betas = [16] # ,16,32,64
-molecules = ["H2"]
-ls = [10, 50, 100, 200]
+molecules = ["formaldehyde"]
+ls = [10, 20, 30, 50]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

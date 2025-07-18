@@ -96,8 +96,8 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = l * 1.35
-    l_buffer = Integer(l_buffer)
+    l_buffer = l * 1.85
+    l_buffer = Integer(round(l_buffer))
     nu_0 = max(l_buffer, n_b)
     nevf = 0
 
@@ -151,10 +151,6 @@ function davidson(
         count_vec_add_flops(length(R))  # For the subtraction
 
         norms = vec(norm.(eachcol(R)))
-        for _ in eachcol(R)
-            count_norm_flops(size(R,1))
-        end
-
         for _ in eachcol(R)
             count_norm_flops(size(R,1))
         end
@@ -247,7 +243,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-4 + 0.5e-4 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

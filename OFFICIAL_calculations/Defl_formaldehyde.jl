@@ -236,6 +236,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
+    N_buffer = Nlow * 0.2 + Nlow
     A = load_matrix(filename,molecule)
     N = size(A, 1)
 

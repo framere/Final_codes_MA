@@ -173,16 +173,12 @@ function main(molecule::String, target_nev::Int, max_iter::Int, alpha::Int = 12)
     @time Σ, U = davidson(A, V, Naux, 1e-4, target_nev, 1e-2, max_iter)
     idx = sortperm(Σ)
     Σ = Σ[idx]
-    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues
 
     Σexact = read_eigenresults(molecule)
-    idx_exact = sortperm(Σexact)
-    Σexact = Σexact[idx_exact]
-    Σexact = sqrt.(abs.(Σexact))  # Take square root of exact eigenvalues
-    
+
     r = length(Σ)
-    println("\nDifference between Davidson and exact eigenvalues (in eV):")
-    display("text/plain", Σ .- Σexact[1:r])
+    println("\nDifference between Davidson and exact eigenvalues:")
+    display("text/plain", (Σ - Σexact[1:r])')
 end
 
 systems = ["formaldehyde"]
@@ -193,7 +189,7 @@ for system in systems
     for target in targets
         for alpha in alphas
             println("Running for nev target: $target, alpha: $alpha")
-            main(system, target, 10000, alpha)
+            main(system, target, 7000, alpha)
         end
     end
 end

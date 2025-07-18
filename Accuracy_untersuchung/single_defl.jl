@@ -211,7 +211,7 @@ function davidson(
         Σ_nc = Σ[non_conv_indices]
         R_nc = R[:, non_conv_indices]
         # deflate non-converged Ritz vectors
-        R_nc .-= X_nc * (X_nc' * R_nc)
+        #R_nc .-= X_nc * (X_nc' * R_nc)
 
         t = Matrix{T}(undef, size(A, 1), length(non_conv_indices))
         ϵ = 1e-6

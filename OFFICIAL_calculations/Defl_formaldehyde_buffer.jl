@@ -64,7 +64,7 @@ function load_matrix(filename::String, molecule::String)
     else
         error("Unknown molecule: $molecule")
     end
-    println("read ", filename)
+    # println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
     read!(file, A)
@@ -96,8 +96,13 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    nu_0 = max(l, n_b)
+    l_buffer = l * 1.35
+    l_buffer = Integer(l_buffer)
+    nu_0 = max(l_buffer, n_b)
     nevf = 0
+
+    println("Starting Davidson with n_aux = $n_aux, l_buffer = $l_buffer, thresh = $thresh, max_iter = $max_iter")
+
 
     D = diag(A)
     Eigenvalues = Float64[]
@@ -107,7 +112,7 @@ function davidson(
     iter = 0
     convergence_tracker = Dict{Int, Tuple{Float64, Int, Float64, Vector{T}}}()
 
-    while nevf < l
+    while nevf < l_buffer
         iter += 1
 
         if iter > max_iter
@@ -145,13 +150,9 @@ function davidson(
         count_matmul_flops(size(A, 1), size(A, 2), size(X, 2))
         count_vec_add_flops(length(R))  # For the subtraction
 
-        abs_norms = Vector{Float64}(undef, size(R, 2))
-        norms = Vector{Float64}(undef, size(R, 2))
-        for (i, r) in enumerate(eachcol(R))
-            rnorm = norm(r)
+        norms = vec(norm.(eachcol(R)))
+        for _ in eachcol(R)
             count_norm_flops(size(R,1))
-            abs_norms[i] = rnorm
-            norms[i] = rnorm / abs(Σ[i])  # relative residual
         end
 
         for _ in eachcol(R)
@@ -161,16 +162,18 @@ function davidson(
         conv_indices = Int[]
         for i = 1:size(R, 2)
             λ = Σ[i]
+            λ_est = sqrt(abs(λ))
+            adaptive_thresh = 2 *λ_est* thresh
             rnorm = norms[i]
 
             if haskey(convergence_tracker, i)
                 λ_prev, count, _, _ = convergence_tracker[i]
-                if abs(λ - λ_prev) < 1e-6 && rnorm < thresh
+                if abs(λ - λ_prev) < 1e-6 && rnorm < adaptive_thresh
                     convergence_tracker[i] = (λ, count + 1, rnorm, X[:, i])
                 else
                     convergence_tracker[i] = (λ, 1, rnorm, X[:, i])
                 end
-            elseif rnorm < thresh
+            elseif rnorm < adaptive_thresh
                 convergence_tracker[i] = (λ, 1, rnorm, X[:, i])
             end
 
@@ -208,7 +211,7 @@ function davidson(
 
         T_hat, n_b_hat = select_corrections_ORTHO(t, V, V_lock, 0.1, 1e-10)
 
-        if size(V, 2) + n_b_hat > n_aux || length(conv_indices) > 0 || n_b_hat == 0
+        if size(V, 2) + n_b_hat > n_aux || n_b_hat == 0 #length(conv_indices) > 0 ||
             # Restart with Ritz vectors + corrections, but enforce n_aux limit
             max_new_vectors = n_aux - size(X_nc, 2)  # Space left after keeping X_nc
             T_hat = T_hat[:, 1:min(n_b_hat, max_new_vectors)]  # Truncate if needed
@@ -239,41 +242,41 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     A = load_matrix(filename,molecule)
     N = size(A, 1)
 
-    
     V = zeros(N, Nlow)
     for i = 1:Nlow
         V[i, i] = 1.0
     end
 
-    println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 5e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
-    # println("Eigenvalues: ", Σ[1:l])
-    println("Total estimated FLOPs: $(NFLOPs)")
-
+    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact = read_eigenresults(molecule)
-    # println("Exact Eigenvalues: ", Σexact[1:l])
+    Σexact_squared = read_eigenresults(molecule)
+
+    idx_exact = sortperm(Σexact_squared)
+    Σexact_squared = Σexact_squared[idx_exact]
+    Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
 
     # Display difference
-    # println("\nDifference between Davidson and exact eigenvalues:")
-    # display("text/plain", (Σ[1:l] - Σexact[1:l])')
     r = min(length(Σ), l)
-    println("\nDifference between Davidson and exact eigenvalues:")
-    rel_dev = (Σ[1:r] .- Σexact[1:r])
-    display("text/plain", rel_dev')
+    println("\nCompute the difference between computed and exact eigenvalues:")
+    difference = (Σ[1:r] .- Σexact[1:r])
+    for i in 1:r
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
 
-betas = [8,16,32,64]
+betas = [8,16,32,64] #8,16,32,64
 molecules = ["formaldehyde"]
-ls = [10, 50, 100, 200]
+ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas
@@ -281,7 +284,7 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 500)
+            main(molecule, nev, beta, i, 5000)
         end
     end
     println("Finished processing molecule: $molecule")

@@ -11,4 +11,5 @@ end
 
 eigenvalues = read_eigenresults("formaldehyde")
 nev = 1200
-println("Print the first $nev eigenvalues: %{eigenvalues[1:nev]}")
+#println("Print the first $nev eigenvalues: %{eigenvalues[1:nev]}")
+println("Print the first $nev eigenvalues:", eigenvalues[1:nev])

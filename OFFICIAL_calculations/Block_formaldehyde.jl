@@ -154,17 +154,20 @@ function main(molecule::String, l::Integer, alpha::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1.5e-2, 500)
+    @time Σ, U = davidson(A, V, Naux, 1e-4, 500)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
+    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
 
     println("Total estimated FLOPs: $(NFLOPs)")
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
     Σexact = read_eigenresults(molecule)
-    # println("Exact Eigenvalues: ", Σexact[1:l])
+    idx_exact = sortperm(Σexact)
+    Σexact = Σexact[idx_exact]
+    Σexact = sqrt.(abs.(Σexact))  # Take square root of exact eigenvalues
 
     # Display difference
     # println("\nDifference between Davidson and exact eigenvalues:")
@@ -176,11 +179,11 @@ function main(molecule::String, l::Integer, alpha::Integer)
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-alpha = [4,8,16]
+alpha = [8]
 
 molecules = ["formaldehyde"]
 
-ls = [10, 50, 100, 200]
+ls = [10, 50, 75, 100, 150]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

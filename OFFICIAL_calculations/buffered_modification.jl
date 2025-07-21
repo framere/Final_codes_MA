@@ -86,6 +86,7 @@ function davidson(
     n_b = size(V, 2)
     l_buffer = l * 1.85
     l_buffer = Integer(round(l_buffer))
+    l_to_compute = l * 1.3
     nu_0 = max(l_buffer, n_b)
     nevf = 0
 
@@ -201,7 +202,7 @@ function davidson(
                     push!(conv_indices, idx_in_R)
                 end
                 delete!(convergence_tracker, μ)
-                if nevf >= l
+                if nevf >= l_to_compute
                     println("Converged all eigenvalues.")
                     return (Eigenvalues, Ritz_vecs)
                 end
@@ -258,7 +259,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, l, 1e-5, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-4, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -284,8 +285,8 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 end
 
 
-betas = [8,16,32,64] #8,16,32,64
-molecules = ["formaldehyde"]
+betas = [25, 40] #8,16,32,64
+molecules = ["H2","formaldehyde"]
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

@@ -99,6 +99,7 @@ function davidson(
     n_b = size(V, 2)
     l_buffer = l * 1.85
     l_buffer = Integer(round(l_buffer))
+    l_to_compute = l * 1.3
     nu_0 = max(l_buffer, n_b)
     nevf = 0
 
@@ -181,7 +182,7 @@ function davidson(
                     delete!(convergence_tracker, i)
                     nevf += 1
                     println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
-                    if nevf >= l
+                    if nevf >= l_to_compute
                         println("Converged all eigenvalues.")
                         return (Eigenvalues, Ritz_vecs)
                     end

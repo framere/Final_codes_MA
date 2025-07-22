@@ -84,9 +84,9 @@ function davidson(
 )::Tuple{Vector{T}, Matrix{T}} where T<:Number
 
     n_b = size(V, 2)
-    l_buffer = l * 1.85
+    l_buffer = l * 1.95
     l_buffer = Integer(round(l_buffer))
-    l_to_compute = l * 1.3
+    l_to_compute = l * 1.45
     nu_0 = max(l_buffer, n_b)
     nevf = 0
 

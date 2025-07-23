@@ -111,7 +111,7 @@ function davidson(
     iter = 0
     convergence_tracker = Dict{Int, Tuple{Float64, Int, Float64, Vector{T}}}()
 
-    while nevf < lc
+    while nevf < l_buffer
         iter += 1
 
         if iter > max_iter
@@ -141,7 +141,7 @@ function davidson(
         count_matmul_flops(size(V, 2), size(V, 1), size(AV, 2))
 
         # Compute approximate eigenvalues
-        nu = min(size(H, 2), l_buffer)
+        nu = min(size(H, 2), nu_0 - nevf)
         Σ, U = eigen(H, 1:nu)
         count_diag_flops(size(H, 1))
 

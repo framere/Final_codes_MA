@@ -280,6 +280,8 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     U = U[:, idx]
     Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
     
+    println("Number of FLOPs: $NFLOPs")
+
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
     Σexact_squared = read_eigenresults(molecule)

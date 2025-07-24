@@ -1,0 +1,8 @@
+1: Block algorithm are the Tobias ones
+
+2: defl_CH2O & defl_H2: We have buffer and we order the eigenvalues once they converged so to select only the l right ones
+
+3: no_stability: We removed the condition where an eigenvalue needs to be stable for 3 iterations before it converges
+
+4: Change_defl: Different approach to be sure that the eigenvalues are selected correctly. 
+Once l Ew are converged we check if some ritz values have a larger modulus and keep converging until only the l lowest are correctly solved

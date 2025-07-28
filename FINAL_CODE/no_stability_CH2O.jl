@@ -255,7 +255,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-5 + 0.5e-5 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -294,7 +294,7 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 5000)
+            main(molecule, nev, beta, i, 500)
         end
     end
     println("Finished processing molecule: $molecule")

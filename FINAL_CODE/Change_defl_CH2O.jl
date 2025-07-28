@@ -252,7 +252,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-5 + 0.5e-5 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -283,7 +283,7 @@ end
 
 betas = [25, 40] #8,16,32,64, 8,16
 molecules = ["formaldehyde"]
-ls = [10, 50, 100, 200] #10, 50, 100, 200
+ls = [10, 50, 100, 200] #10, 50, 100, 10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

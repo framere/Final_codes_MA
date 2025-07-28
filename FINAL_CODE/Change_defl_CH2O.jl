@@ -281,7 +281,7 @@ end
 
 
 
-betas = [25, 40] #8,16,32,64, 8,16
+betas = [16] #8,16,32,64, 8,16
 molecules = ["formaldehyde"]
 ls = [10, 50, 100, 200] #10, 50, 100, 10, 50, 100, 200
 for molecule in molecules

@@ -153,7 +153,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 5e-3, 8000)
+    @time Σ, U = davidson(A, V, Naux, 8e-5, 8000)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
@@ -178,11 +178,11 @@ function main(molecule::String, l::Integer, alpha::Integer)
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-alpha = [4, 8]
+alpha = [4, 8, 10]
 
 molecules = ["formaldehyde"]
 
-ls = [10, 50, 75]
+ls = [10, 15, 20, 25, 27, 30, 35]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

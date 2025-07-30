@@ -182,7 +182,7 @@ alpha = [4, 8, 10]
 
 molecules = ["formaldehyde"]
 
-ls = [10, 15, 20, 25, 27, 30, 35]
+ls = [17, 19, 21, 23]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

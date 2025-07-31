@@ -174,7 +174,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     display("text/plain", rel_dev')
 end
 
-alpha = [4,8,16]
+alpha = [4,8,10]
 
 molecules = ["H2"]
 

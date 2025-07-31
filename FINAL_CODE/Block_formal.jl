@@ -178,11 +178,11 @@ function main(molecule::String, l::Integer, alpha::Integer)
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-alpha = [4, 8, 10]
+alpha = [8, 10]
 
 molecules = ["formaldehyde"]
 
-ls = [17, 19, 21, 23]
+ls = [10, 15, 25]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

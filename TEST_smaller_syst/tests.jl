@@ -75,6 +75,7 @@ function load_matrix(filename::String, molecule::String)
     close(file)
 
     A = reshape(A, N, N)
+    A = -A
     return Hermitian(A)
 end
 
@@ -282,7 +283,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
-    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    Σ = abs.(Σ)# Take square root of eigenvalues  
     
     println("Number of FLOPs: $NFLOPs")
 
@@ -292,7 +293,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 
     idx_exact = sortperm(Σexact_squared)
     Σexact_squared = Σexact_squared[idx_exact]
-    Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
+    Σexact = abs.(Σexact_squared)  # Take square root of exact eigenvalues
 
     # Display difference
     r = min(length(Σ), l)
@@ -307,7 +308,7 @@ end
 
 
 betas = [32,64] #8,16,32,64, 8,16
-molecules = ["hBN", "Si"]
+molecules = ["He", "hBN", "Si"]
 ls = [1, 3, 5, 10] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

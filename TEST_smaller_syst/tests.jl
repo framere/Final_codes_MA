@@ -278,7 +278,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-1 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

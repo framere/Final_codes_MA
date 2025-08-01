@@ -83,7 +83,7 @@ function read_eigenresults(molecule::String)
     output_file = "../Eigenvalues_folder/eigen_results_" * molecule * ".jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
-    eigenvalues = data["eigenvalues"]
+    eigenvalues = data["Σexact"]
     close(data)
     return sort(eigenvalues)
 end

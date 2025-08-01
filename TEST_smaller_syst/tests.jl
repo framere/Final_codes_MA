@@ -176,7 +176,7 @@ function davidson(
         conv_indices = Int[]
         for (sorted_i, original_i) in enumerate(sorted_indices[1:current_cutoff])
             λ = Σ_sorted[sorted_i]
-            λ_est = sqrt(abs(λ))
+            λ_est = abs(λ)
             adaptive_thresh = 2 * λ_est * thresh
             rnorm = norms_sorted[sorted_i]
 
@@ -277,7 +277,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-1 + 0.5e-3 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

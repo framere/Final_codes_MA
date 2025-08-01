@@ -71,6 +71,7 @@ function load_matrix(filename::String, molecule::String)
     close(file)
 
     A = reshape(A, N, N)
+    A = -A
     return Hermitian(A)
 end
 
@@ -257,8 +258,8 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
-    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
-    
+    Σ = abs.(Σ)  # Take absolute value of eigenvalues
+
     println("Number of FLOPs: $NFLOPs")
 
     # Perform exact diagonalization as reference
@@ -267,7 +268,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 
     idx_exact = sortperm(Σexact_squared)
     Σexact_squared = Σexact_squared[idx_exact]
-    Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
+    Σexact = abs.(Σexact_squared)  # Take absolute value of exact eigenvalues
 
     # Display difference
     r = min(length(Σ), l)

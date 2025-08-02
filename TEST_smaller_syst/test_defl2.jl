@@ -48,11 +48,11 @@ end
 
 function occupied_orbitals(molecule::String)
     if molecule == "He"
-        return 30
+        return 1
     elseif molecule == "hBN"
-        return 30
+        return 36
     elseif molecule == "Si"
-        return 30
+        return 72
     else
         error("Unknown molecule: $molecule")
     end
@@ -286,16 +286,27 @@ end
 # === MAIN LOOP ===
 betas = [32, 64]
 molecules = ["He", "hBN", "Si"]
-ls = [1, 3, 5, 10]
+ls_hBN = [5, 10, 50, 100]
+ls_Si = [5, 10, 20, 50, 70]
+ls_He = [5, 10, 30, 50, 100, 200]
 
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas
         println("Running with beta = $beta")
+        if molecule == "hBN"
+            ls = ls_hBN
+        elseif molecule == "Si"
+            ls = ls_Si
+        elseif molecule == "He"
+            ls = ls_He
+        else
+            error("Unknown molecule: $molecule")
+        end
         for (i, l) in enumerate(ls)
             nev = l * occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 500)
+            main(molecule, nev, beta, i, 1000)
         end
     end
     println("Finished processing molecule: $molecule")

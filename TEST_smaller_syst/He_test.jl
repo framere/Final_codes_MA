@@ -308,7 +308,7 @@ end
 
 
 betas = [32,64] #8,16,32,64, 8,16
-molecules = ["He", "hBN", "Si"]
+molecules = ["He"]
 ls = [5, 10, 30, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
@@ -317,7 +317,7 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 500)
+            main(molecule, nev, beta, i, 1000)
         end
     end
     println("Finished processing molecule: $molecule")

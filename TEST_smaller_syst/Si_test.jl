@@ -308,7 +308,7 @@ end
 
 
 betas = [32,64] #8,16,32,64, 8,16
-molecules = ["He", "hBN", "Si"]
+molecules = ["Si"]
 ls = [5, 10, 20, 50, 70] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

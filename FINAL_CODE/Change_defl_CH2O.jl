@@ -240,7 +240,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
+    filename = "../" * molecule *"/gamma_VASP_HFbasis.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
@@ -281,7 +281,7 @@ end
 
 
 
-betas = [16] #8,16,32,64, 8,16
+betas = [40, 25]
 molecules = ["formaldehyde"]
 ls = [10, 50, 100, 200] #10, 50, 100, 10, 50, 100, 200
 for molecule in molecules
@@ -291,7 +291,7 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 500)
+            main(molecule, nev, beta, i, 800)
         end
     end
     println("Finished processing molecule: $molecule")

@@ -86,18 +86,19 @@ end
 
 molecules = ["H2", "formaldehyde"]
 
-Eigenvalues, Eigenvectors = read_eigenresults("H2")
+for molecule in molecules
+    Eigenvalues, Eigenvectors = read_eigenresults(molecule)
+    println("Extracting root matrix for $molecule")
+    root_ev = sqrt.(abs.(Eigenvalues))
+    diagonal_M = diagm(root_ev)
+    println("Calculating root matrix for $molecule")
+    @time root_matrix = Eigenvectors * diagonal_M * Eigenvectors'
+    println("Writing root matrix to file for $molecule")
+    output_file = "../" * molecule * "/root_matrix.dat"
+    file = open(output_file, "w")
+    write(file, root_matrix)
+    close(file)
+end
 
-root_ev = sqrt.(abs.(Eigenvalues))
-
-diagonal_M = diagm(root_ev)
-
-root_matrix = Eigenvectors * diagonal_M * Eigenvectors'
-
-#write the matrix to a file
-output_file = "../H2/root_matrix.dat"
-file = open(output_file, "w")
-write(file, root_matrix)
-close(file)
 
 

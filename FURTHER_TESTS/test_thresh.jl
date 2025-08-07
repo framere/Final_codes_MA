@@ -95,7 +95,7 @@ diagonal_M = diagm(root_ev)
 root_matrix = Eigenvectors * diagonal_M * Eigenvectors'
 
 #write the matrix to a file
-output_file = "H2/root_matrix.dat"
+output_file = "../H2/root_matrix.dat"
 file = open(output_file, "w")
 write(file, root_matrix)
 close(file)

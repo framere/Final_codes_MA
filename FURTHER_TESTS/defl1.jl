@@ -71,7 +71,7 @@ function load_matrix(filename::String, molecule::String)
     close(file)
 
     A = reshape(A, N, N)
-    return Hermitian(A)
+    return Hermitian(-A)
 end
 
 function read_eigenresults(molecule::String)
@@ -289,14 +289,14 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 
     idx_exact = sortperm(Σexact_squared)
     Σexact_squared = Σexact_squared[idx_exact]
-    # Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
+    Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
 
     # Display difference
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
-    difference = (Σ[1:r] .- Σexact_squared[1:r])
+    difference = (Σ[1:r] .+ Σexact[1:r])
     for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact_squared[i], difference[i]))
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
     end
     println("$r Eigenvalues converges, out of $l requested.")
 end

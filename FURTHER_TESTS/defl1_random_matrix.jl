@@ -290,7 +290,7 @@ function davidson(
 end
 
 
-function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_iter::Integer)
+function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_iter::Integer, sup_factors::Float64)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
@@ -298,8 +298,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
-    suppr_factor = 1000.0  # Scaling factor for diagonal elements
-    A = generate_random_matrix(N, suppr_factor)
+    A = generate_random_matrix(N, sup_factors)
 
     V = zeros(N, Nlow)
     for i = 1:Nlow
@@ -338,14 +337,17 @@ end
 betas = [40, 25] #8,16,32,64, 8,16
 molecules = ["formaldehyde"]
 ls = [10, 50, 100, 200] #10, 50, 100, 200
+sup_factors = [1000.0, 500.0, 250.0]  # Scaling factors for diagonal elements
 for molecule in molecules
-    println("Processing molecule: $molecule")
-    for beta in betas
-        println("Running with beta = $beta")
-        for (i, l) in enumerate(ls)
-	    nev = l*occupied_orbitals(molecule)
-            println("Running with l = $nev")
-            main(molecule, nev, beta, i, 500)
+    for sup_factor in sup_factors
+        println("Generating random matrix with suppressing factor $sup_factor")
+        for beta in betas
+            println("Running with beta = $beta")
+            for (i, l) in enumerate(ls)
+                nev = l*occupied_orbitals(molecule)
+                println("Running with l = $nev")
+                main(molecule, nev, beta, i, 500, sup_factor)
+            end
         end
     end
     println("Finished processing molecule: $molecule")

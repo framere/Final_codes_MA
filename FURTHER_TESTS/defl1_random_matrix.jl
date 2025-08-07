@@ -56,6 +56,10 @@ function occupied_orbitals(molecule::String)
     end
 end
 
+function new_curve(x, gamma, delta, epsilon)
+    return gamma .* exp.(- delta .* x.^ epsilon)
+end
+
 function generate_random_matrix(N::Int, factor::Float64 = 100.0)
     """    generate_random_matrix(N::Int, factor::Float64 = 100.0) -> Matrix{Float64}
     Generates a random NxN matrix with diagonal elements scaled by `factor` and small off-diagonal elements.        
@@ -332,7 +336,7 @@ end
 
 
 betas = [40, 25] #8,16,32,64, 8,16
-molecules = ["H2", "formaldehyde"]
+molecules = ["formaldehyde"]
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

@@ -23,7 +23,7 @@ function diagonalize_and_save(system::String)
     println("Diagonalizing the matrix for system: $system")
     @time F = eigen(A)  # F.values, F.vectors
 
-    output_file = "../../Eigenvalues_folder/eigenres_uracil_$system.jld2"
+    output_file = "../Eigenvalues_folder/eigenres_uracil_$system.jld2"
     println("Saving results to $output_file")
 
     jldsave(output_file; 

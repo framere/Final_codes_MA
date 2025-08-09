@@ -138,7 +138,7 @@ function main(molecule::String, l::Integer, alpha::Integer)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = molecule *"/gamma_VASP_HFbasis.dat"
+    filename = molecule *"/gamma_VASP_RNDbasis.dat"
     
     A = load_matrix(filename,molecule)
     N = size(A, 1)
@@ -185,7 +185,7 @@ end
 
 alpha = [8, 10]
 
-molecules = ["formaldehyde"]
+molecules = ["uracil"]
 
 ls = [10, 15, 25]
 for molecule in molecules

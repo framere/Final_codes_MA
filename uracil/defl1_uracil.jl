@@ -265,7 +265,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = molecule *"/gamma_VASP_HFbasis.dat"
+    filename = molecule *"/gamma_VASP_RNDbasis.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta

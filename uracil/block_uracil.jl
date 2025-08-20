@@ -183,11 +183,11 @@ function main(molecule::String, l::Integer, alpha::Integer)
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-alpha = [10]
+alpha = [4]
 
 molecules = ["uracil"]
 
-ls = [10, 15, 25]
+ls = [10, 15, 20, 25] #10, 15, 20
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

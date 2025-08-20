@@ -306,7 +306,7 @@ end
 
 
 
-betas = [40, 25] #8,16,32,64, 8,16
+betas = [16] #8,16,32,64, 8,16
 molecules = ["uracil"]
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules

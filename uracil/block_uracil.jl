@@ -187,7 +187,7 @@ alpha = [4]
 
 molecules = ["uracil"]
 
-ls = [10, 15, 20, 25] #10, 15, 20
+ls = [25] #10, 15, 20
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

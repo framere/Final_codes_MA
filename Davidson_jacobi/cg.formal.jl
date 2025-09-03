@@ -279,7 +279,7 @@ for molecule in molecules
         for l in ls
             println("Running with l = $l")
             main(molecule, l * occupied_orbitals(molecule), a, solver=:cg)
-            main(molecule, l * occupied_orbitals(molecule), a, solver=:minres)
+            # main(molecule, l * occupied_orbitals(molecule), a, solver=:minres)
         end
     end
     println("Finished processing molecule: $molecule")

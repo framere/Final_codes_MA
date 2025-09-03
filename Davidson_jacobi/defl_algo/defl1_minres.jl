@@ -5,7 +5,7 @@ using Printf
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
 
-include("../FLOP_count.jl")
+include("../../FLOP_count.jl")
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
     ν = size(t_candidates, 2)
@@ -119,7 +119,7 @@ function load_matrix(filename::String, molecule::String)
 end
 
 function read_eigenresults(molecule::String)
-    output_file = "../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis.jld2"
+    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -298,7 +298,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = molecule *"/gamma_VASP_RNDbasis.dat"
+    filename ="../../uracil/uracil/gamma_VASP_RNDbasis.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta

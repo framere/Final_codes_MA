@@ -238,7 +238,8 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     end
 
     println("Davidson with $(solver == :cg ? "CG" : "MINRES") solver")
-    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, max_iter=200)
+    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, 200)
+
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]

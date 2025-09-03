@@ -128,11 +128,11 @@ function davidson(
     V::Matrix{T},
     Naux::Integer,
     thresh::Float64,
-    system::String;
     solver::Symbol = :cg,  # Choose between :cg and :minres
     max_iter = 100
 )::Tuple{Vector{T},Matrix{T}} where T<:Number
-    
+
+    global NFLOPs
     Nlow = size(V,2) # number of eigenvalues we are interested in
     if Naux < Nlow
         println("ERROR: auxiliary basis must not be smaller than number of target eigenvalues")
@@ -237,8 +237,7 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     end
 
     println("Davidson with $(solver == :cg ? "CG" : "MINRES") solver")
-    @time Σ, U = davidson(A, V, Naux, 8e-5, system, solver=solver, max_iter=200)
-
+    @time Σ, U = davidson(A, V, Naux, 8e-5, molecule, solver=solver, max_iter=200)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]

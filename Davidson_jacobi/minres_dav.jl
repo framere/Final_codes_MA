@@ -271,7 +271,7 @@ alpha = [8, 10]
 
 molecules = ["H2"]
 
-ls = [10, 15, 25]
+ls = [50, 100, 200]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

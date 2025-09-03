@@ -127,10 +127,11 @@ function davidson(
     A::AbstractMatrix{T},
     V::Matrix{T},
     Naux::Integer,
-    thresh::Float64,
+    thresh::Float64;
     solver::Symbol = :cg,  # Choose between :cg and :minres
     max_iter = 100
 )::Tuple{Vector{T},Matrix{T}} where T<:Number
+
 
     global NFLOPs
     Nlow = size(V,2) # number of eigenvalues we are interested in
@@ -237,7 +238,7 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     end
 
     println("Davidson with $(solver == :cg ? "CG" : "MINRES") solver")
-    @time Σ, U = davidson(A, V, Naux, 8e-5, molecule, solver=solver, max_iter=200)
+    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, max_iter=200)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]

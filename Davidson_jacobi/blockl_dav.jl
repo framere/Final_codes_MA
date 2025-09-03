@@ -47,6 +47,7 @@ function read_eigenresults(molecule::String)
 end
 
 function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=100)
+    global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
 
@@ -85,6 +86,7 @@ end
 
 
 function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
+    global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
 

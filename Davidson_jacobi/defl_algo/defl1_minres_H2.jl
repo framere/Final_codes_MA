@@ -1,6 +1,9 @@
 using LinearAlgebra
-using JLD2
 using Printf
+using JLD2
+using IterativeSolvers
+using LinearMaps
+
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0

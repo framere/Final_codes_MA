@@ -127,8 +127,8 @@ function davidson(
     A::AbstractMatrix{T},
     V::Matrix{T},
     Naux::Integer,
-    thresh::Float64;
-    solver::Symbol = :cg,  # Choose between :cg and :minres
+    thresh::Float64,
+    solver::Symbol,  # Choose between :cg and :minres
     max_iter = 100
 )::Tuple{Vector{T},Matrix{T}} where T<:Number
 

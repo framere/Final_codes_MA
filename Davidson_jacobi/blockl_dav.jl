@@ -213,7 +213,7 @@ function davidson(
 end
 
 
-function main(molecule::String, l::Integer, alpha::Integer, solver:: Symbol = :cg)
+function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 

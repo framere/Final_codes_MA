@@ -7,7 +7,7 @@ using LinearMaps
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
 
-include("../FLOP_count.jl")
+include("../../FLOP_count.jl")
 
 function occupied_orbitals(molecule::String)
     if molecule == "H2"
@@ -38,7 +38,7 @@ function load_matrix(filename::String, molecule::String)
 end
 
 function read_eigenresults(molecule::String)
-    output_file = "../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
+    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -267,9 +267,9 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
 end
 
 
-alpha = [8, 10]
+alpha = [8, 10, 4]
 
-molecules = ["H2"]
+molecules = ["formaldehyde"]
 
 ls = [50, 100, 200]
 for molecule in molecules

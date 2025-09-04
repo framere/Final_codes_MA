@@ -207,7 +207,7 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     end
 
     println("Davidson with $(solver == :cg ? "CG" : "MINRES") solver")
-    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, 200)
+    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, 50)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -238,7 +238,7 @@ end
 
 alpha = [8, 10, 4]
 molecules = ["uracil"]
-ls = [10, 15, 25] #10, 50, 100, 200
+ls = [50, 75, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

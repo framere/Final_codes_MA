@@ -338,7 +338,7 @@ end
 
 
 
-betas = [40, 25] #8,16,32,64, 8,16
+betas = [16, 8] #8,16,32,64, 8,16
 molecules = ["H2"]
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules

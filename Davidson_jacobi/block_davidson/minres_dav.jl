@@ -220,7 +220,7 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
+    filename = "../../" * molecule *"/gamma_VASP_RNDbasis1.dat"
     
     A = load_matrix(filename,molecule)
     N = size(A, 1)

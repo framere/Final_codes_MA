@@ -121,7 +121,7 @@ function load_matrix(filename::String, molecule::String)
 end
 
 function read_eigenresults(molecule::String)
-    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis.jld2"
+    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -300,7 +300,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename ="../../uracil/uracil/gamma_VASP_RNDbasis.dat"
+    filename ="../../" * molecule *"/gamma_VASP_RNDbasis1.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta

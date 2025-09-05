@@ -93,6 +93,8 @@ function occupied_orbitals(molecule::String)
         return 1
     elseif molecule == "formaldehyde"
         return 6
+    elseif molecule == "uracil"
+        return 21
     else
         error("Unknown molecule: $molecule")
     end
@@ -103,6 +105,8 @@ function load_matrix(filename::String, molecule::String)
         N = 11994
     elseif molecule == "formaldehyde"
         N = 27643
+    elseif molecule == "uracil"
+        N = 32416
     else
         error("Unknown molecule: $molecule")
     end
@@ -115,6 +119,7 @@ function load_matrix(filename::String, molecule::String)
     A = reshape(A, N, N)
     return Hermitian(A)
 end
+
 
 function read_eigenresults(molecule::String)
     output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"

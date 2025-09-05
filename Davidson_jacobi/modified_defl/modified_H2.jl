@@ -232,7 +232,7 @@ function davidson(
                 Ritz_vecs = hcat(Ritz_vecs, xvec)
                 V_lock = hcat(V_lock, xvec)
                 nevf += 1
-                println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e (locked immediately)", nevf, λ, rnorm))
+                println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e ", nevf, λ, rnorm))
 
                 if nevf >= lc
                     println("Converged all required eigenvalues.")
@@ -301,7 +301,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-5 * factor, max_iter)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]

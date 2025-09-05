@@ -268,7 +268,7 @@ function davidson(
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
 
-        if iter < 50
+        if iter < 20
             # Compute correction vectors
             t = Matrix{T}(undef, size(A, 1), length(keep_indices))
             ϵ = 1e-6

@@ -278,7 +278,7 @@ function davidson(
                 count_vec_add_flops(length(D))
                 count_vec_scaling_flops(length(D))
             end
-        elseif iter >= 50
+        elseif iter >= 20
             # Use MINRES for correction equations
             println("Switching to MINRES for correction equations at iteration $iter")
             t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100)

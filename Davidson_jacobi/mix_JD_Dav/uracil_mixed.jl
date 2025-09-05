@@ -268,7 +268,7 @@ function davidson(
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
 
-        if iter < 50
+        if iter < 20
             # Compute correction vectors
             t = Matrix{T}(undef, size(A, 1), length(keep_indices))
             ϵ = 1e-6
@@ -286,7 +286,7 @@ function davidson(
 
         # Orthogonalize and select correction vectors
         T_hat, n_b_hat = select_corrections_ORTHO(t, V, V_lock, 0.1, 1e-10)
-        
+
         # Update search space
         if size(V, 2) + n_b_hat > n_aux || n_b_hat == 0
             # Restart with Ritz vectors + corrections

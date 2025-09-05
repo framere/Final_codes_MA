@@ -222,17 +222,33 @@ function davidson(
             adaptive_thresh = 2 * λ_est * thresh
             rnorm = norms_sorted[sorted_i]
 
+            # Candidate Ritz vector
+            xvec = X_sorted[:, sorted_i]
+            
+            # Project out locked subspace before locking
+            if size(V_lock, 2) > 0
+                xvec -= V_lock * (V_lock' * xvec)
+                count_orthogonalization_flops(1, size(V_lock,2), size(xvec,1))
+            end
+            xnorm = norm(xvec)
+
+            # Skip if vector is nearly in locked span
+            if xnorm < 1e-10
+                continue
+            end
+            xvec /= xnorm
+
             # If residual norm below adaptive threshold -> lock immediately
             if rnorm < adaptive_thresh
                 push!(conv_indices, original_i)
                 push!(Eigenvalues, λ)
-                push!(Ritz_vecs, ) # placeholder to ensure types match below
+                # push!(Ritz_vecs, ) # placeholder to ensure types match below
                 # Append the corresponding Ritz vector and lock it
-                xvec = X_sorted[:, sorted_i]
+                # xvec = X_sorted[:, sorted_i]
                 Ritz_vecs = hcat(Ritz_vecs, xvec)
                 V_lock = hcat(V_lock, xvec)
                 nevf += 1
-                println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e (locked immediately)", nevf, λ, rnorm))
+                println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e ", nevf, λ, rnorm))
 
                 if nevf >= lc
                     println("Converged all required eigenvalues.")

@@ -267,7 +267,7 @@ function davidson(
         X_nc = X[:, keep_indices]
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
-
+        
         if iter < 50
             # Compute correction vectors
             t = Matrix{T}(undef, size(A, 1), length(keep_indices))
@@ -279,11 +279,14 @@ function davidson(
                 count_vec_scaling_flops(length(D))
             end
         elseif iter >= 50
-        # Use MINRES for correction equations
-        println("Switching to MINRES for correction equations at iteration $iter")
-        t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100)
+            # Use MINRES for correction equations
+            println("Switching to MINRES for correction equations at iteration $iter")
+            t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100)
         end
 
+        # Orthogonalize and select correction vectors
+        T_hat, n_b_hat = select_corrections_ORTHO(t, V, V_lock, 0.1, 1e-10)
+        
         # Update search space
         if size(V, 2) + n_b_hat > n_aux || n_b_hat == 0
             # Restart with Ritz vectors + corrections

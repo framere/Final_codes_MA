@@ -228,6 +228,7 @@ function davidson(
             # Project out locked subspace before locking
             if size(V_lock, 2) > 0
                 xvec -= V_lock * (V_lock' * xvec)
+                count_orthogonalization_flops(1, size(V_lock,2), size(xvec,1))
             end
             xnorm = norm(xvec)
 

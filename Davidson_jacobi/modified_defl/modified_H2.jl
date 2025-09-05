@@ -226,7 +226,7 @@ function davidson(
             if rnorm < adaptive_thresh
                 push!(conv_indices, original_i)
                 push!(Eigenvalues, λ)
-                push!(Ritz_vecs, ) # placeholder to ensure types match below
+                # push!(Ritz_vecs, ) # placeholder to ensure types match below
                 # Append the corresponding Ritz vector and lock it
                 xvec = X_sorted[:, sorted_i]
                 Ritz_vecs = hcat(Ritz_vecs, xvec)

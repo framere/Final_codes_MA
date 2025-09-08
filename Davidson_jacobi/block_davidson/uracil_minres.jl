@@ -207,31 +207,31 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     end
 
     println("Davidson with $(solver == :cg ? "CG" : "MINRES") solver")
-    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, 50)
+    # @time Σ, U = davidson(A, V, Naux, 8e-5, solver, 50)
 
-    idx = sortperm(Σ)
-    Σ = Σ[idx]
-    U = U[:, idx]
-    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    # idx = sortperm(Σ)
+    # Σ = Σ[idx]
+    # U = U[:, idx]
+    # Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
     
-    println("Number of FLOPs: $NFLOPs")
+    # println("Number of FLOPs: $NFLOPs")
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
     Σexact_squared = read_eigenresults(molecule)
 
-    idx_exact = sortperm(Σexact_squared)
-    Σexact_squared = Σexact_squared[idx_exact]
-    Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
+    # idx_exact = sortperm(Σexact_squared)
+    # Σexact_squared = Σexact_squared[idx_exact]
+    # Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
 
-    # Display difference
-    r = min(length(Σ), l)
-    println("\nCompute the difference between computed and exact eigenvalues:")
-    difference = (Σ[1:r] .- Σexact[1:r])
-    for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    end
-    println("$r Eigenvalues converges, out of $l requested.")
+    # # Display difference
+    # r = min(length(Σ), l)
+    # println("\nCompute the difference between computed and exact eigenvalues:")
+    # difference = (Σ[1:r] .- Σexact[1:r])
+    # for i in 1:r
+    #     println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    # end
+    # println("$r Eigenvalues converges, out of $l requested.")
 end
 
 

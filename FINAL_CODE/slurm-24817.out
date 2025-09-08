@@ -1,0 +1,128 @@
+slurmstepd-andoria01: error: *** JOB 24817 ON andoria01 CANCELLED AT 2025-07-30T05:31:38 ***
+
+[132294] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/FINAL_CODE/Block_H2.jl:182
+dgemm_kernel_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+unknown function (ip: (nil))
+Allocations: 11765380 (Pool: 11764977; Big: 403); GC: 213
+Processing molecule: H2
+Running with alpha = 8
+Running with l = 10
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  rel‖R‖=  2.814e+00  size(V,2)=    10
+iter=     2  rel‖R‖=  1.642e+00  size(V,2)=    20
+iter=     3  rel‖R‖=  5.313e-01  size(V,2)=    30
+iter=     4  rel‖R‖=  3.995e-01  size(V,2)=    40
+iter=     5  rel‖R‖=  8.348e-02  size(V,2)=    50
+iter=     6  rel‖R‖=  4.161e-03  size(V,2)=    60
+iter=     7  rel‖R‖=  1.982e-04  size(V,2)=    70
+iter=     8  rel‖R‖=  8.997e-06  size(V,2)=    80
+converged!
+  8.758502 seconds (1.72 k allocations: 179.635 MiB, 0.14% gc time)
+Total estimated FLOPs: 127689696180
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×10 adjoint(::Vector{Float64}) with eltype Float64:
+ 2.84217e-14  2.13163e-14  -1.77636e-15  -1.59872e-14  4.17444e-14  1.08136e-10  1.80367e-11  1.4877e-13  1.1783e-11  1.52896e-10
+Running with l = 50
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  rel‖R‖=  1.333e+00  size(V,2)=    50
+iter=     2  rel‖R‖=  7.933e-01  size(V,2)=   100
+iter=     3  rel‖R‖=  1.537e-01  size(V,2)=   150
+iter=     4  rel‖R‖=  2.179e-02  size(V,2)=   200
+iter=     5  rel‖R‖=  5.127e-03  size(V,2)=   250
+iter=     6  rel‖R‖=  8.207e-04  size(V,2)=   300
+iter=     7  rel‖R‖=  8.347e-05  size(V,2)=   350
+iter=     8  rel‖R‖=  7.170e-06  size(V,2)=   400
+converged!
+ 27.066480 seconds (5.93 k allocations: 910.416 MiB, 0.58% gc time)
+Total estimated FLOPs: 662860224900
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×50 adjoint(::Vector{Float64}) with eltype Float64:
+ 3.55271e-14  3.55271e-14  -2.4869e-14  -1.24345e-14  6.21725e-15  -1.33227e-15  -7.54952e-15  -4.88498e-15  -2.66454e-15  -1.33227e-15  -7.54952e-15  4.44089e-16  4.44089e-16  3.10862e-15  -4.44089e-16  2.22045e-16  8.88178e-16  -1.55431e-15  2.55351e-15  -2.22045e-16  2.22045e-15  1.11022e-15  3.21965e-15  1.66533e-15  2.38698e-15  9.99201e-16  -2.22045e-15  2.16493e-15  1.28231e-14  2.17049e-14  4.05787e-14  4.25215e-14  1.57763e-13  1.55209e-13  6.50979e-13  5.35183e-13  2.50977e-12  7.05017e-12  1.70766e-11  1.53936e-11  1.29792e-11  6.51084e-11  5.1512e-11  9.26609e-11  9.13469e-10  2.8223e-10  1.44979e-9  2.17108e-9  2.13203e-9  9.70822e-9
+Running with l = 100
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  rel‖R‖=  9.993e-01  size(V,2)=   100
+iter=     2  rel‖R‖=  5.324e-01  size(V,2)=   200
+iter=     3  rel‖R‖=  4.578e-02  size(V,2)=   300
+iter=     4  rel‖R‖=  1.144e-02  size(V,2)=   400
+iter=     5  rel‖R‖=  6.114e-03  size(V,2)=   500
+iter=     6  rel‖R‖=  3.529e-03  size(V,2)=   600
+iter=     7  rel‖R‖=  2.407e-03  size(V,2)=   700
+iter=     8  rel‖R‖=  1.815e-03  size(V,2)=   800
+iter=     9  rel‖R‖=  1.616e-03  size(V,2)=   200
+iter=    10  rel‖R‖=  1.551e-03  size(V,2)=   300
+iter=    11  rel‖R‖=  1.456e-03  size(V,2)=   400
+iter=    12  rel‖R‖=  1.407e-03  size(V,2)=   500
+iter=    13  rel‖R‖=  1.348e-03  size(V,2)=   600
+iter=    14  rel‖R‖=  1.269e-03  size(V,2)=   700
+iter=    15  rel‖R‖=  1.140e-03  size(V,2)=   800
+iter=    16  rel‖R‖=  1.108e-03  size(V,2)=   200
+iter=    17  rel‖R‖=  1.086e-03  size(V,2)=   300
+iter=    18  rel‖R‖=  1.067e-03  size(V,2)=   400
+iter=    19  rel‖R‖=  1.038e-03  size(V,2)=   500
+iter=    20  rel‖R‖=  1.008e-03  size(V,2)=   600
+iter=    21  rel‖R‖=  9.774e-04  size(V,2)=   700
+iter=    22  rel‖R‖=  9.385e-04  size(V,2)=   800
+iter=    23  rel‖R‖=  9.274e-04  size(V,2)=   200
+iter=    24  rel‖R‖=  9.172e-04  size(V,2)=   300
+iter=    25  rel‖R‖=  9.032e-04  size(V,2)=   400
+iter=    26  rel‖R‖=  8.929e-04  size(V,2)=   500
+iter=    27  rel‖R‖=  8.818e-04  size(V,2)=   600
+iter=    28  rel‖R‖=  8.692e-04  size(V,2)=   700
+iter=    29  rel‖R‖=  8.479e-04  size(V,2)=   800
+iter=    30  rel‖R‖=  8.436e-04  size(V,2)=   200
+iter=    31  rel‖R‖=  8.352e-04  size(V,2)=   300
+iter=    32  rel‖R‖=  8.264e-04  size(V,2)=   400
+iter=    33  rel‖R‖=  8.178e-04  size(V,2)=   500
+iter=    34  rel‖R‖=  8.061e-04  size(V,2)=   600
+iter=    35  rel‖R‖=  7.946e-04  size(V,2)=   700
+iter=    36  rel‖R‖=  7.752e-04  size(V,2)=   800
+iter=    37  rel‖R‖=  7.712e-04  size(V,2)=   200
+iter=    38  rel‖R‖=  7.652e-04  size(V,2)=   300
+iter=    39  rel‖R‖=  7.592e-04  size(V,2)=   400
+iter=    40  rel‖R‖=  7.494e-04  size(V,2)=   500
+iter=    41  rel‖R‖=  7.424e-04  size(V,2)=   600
+iter=    42  rel‖R‖=  7.290e-04  size(V,2)=   700
+iter=    43  rel‖R‖=  7.182e-04  size(V,2)=   800
+iter=    44  rel‖R‖=  7.155e-04  size(V,2)=   200
+iter=    45  rel‖R‖=  7.103e-04  size(V,2)=   300
+iter=    46  rel‖R‖=  7.039e-04  size(V,2)=   400
+iter=    47  rel‖R‖=  6.973e-04  size(V,2)=   500
+iter=    48  rel‖R‖=  6.895e-04  size(V,2)=   600
+iter=    49  rel‖R‖=  6.761e-04  size(V,2)=   700
+iter=    50  rel‖R‖=  6.620e-04  size(V,2)=   800
+iter=    51  rel‖R‖=  6.587e-04  size(V,2)=   200
+iter=    52  rel‖R‖=  6.542e-04  size(V,2)=   300
+iter=    53  rel‖R‖=  6.499e-04  size(V,2)=   400
+iter=    54  rel‖R‖=  6.447e-04  size(V,2)=   500
+iter=    55  rel‖R‖=  6.394e-04  size(V,2)=   600
+iter=    56  rel‖R‖=  6.294e-04  size(V,2)=   700
+iter=    57  rel‖R‖=  6.205e-04  size(V,2)=   800
+iter=    58  rel‖R‖=  6.179e-04  size(V,2)=   200
+iter=    59  rel‖R‖=  6.142e-04  size(V,2)=   300
+iter=    60  rel‖R‖=  6.104e-04  size(V,2)=   400
+iter=    61  rel‖R‖=  6.054e-04  size(V,2)=   500
+iter=    62  rel‖R‖=  5.997e-04  size(V,2)=   600
+iter=    63  rel‖R‖=  5.911e-04  size(V,2)=   700
+iter=    64  rel‖R‖=  5.836e-04  size(V,2)=   800
+iter=    65  rel‖R‖=  5.813e-04  size(V,2)=   200
+iter=    66  rel‖R‖=  5.785e-04  size(V,2)=   300
+iter=    67  rel‖R‖=  5.739e-04  size(V,2)=   400
+iter=    68  rel‖R‖=  5.693e-04  size(V,2)=   500
+iter=    69  rel‖R‖=  5.632e-04  size(V,2)=   600
+iter=    70  rel‖R‖=  5.561e-04  size(V,2)=   700
+iter=    71  rel‖R‖=  5.473e-04  size(V,2)=   800
+iter=    72  rel‖R‖=  5.450e-04  size(V,2)=   200
+iter=    73  rel‖R‖=  5.423e-04  size(V,2)=   300
+iter=    74  rel‖R‖=  5.386e-04  size(V,2)=   400

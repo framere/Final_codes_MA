@@ -1,0 +1,42 @@
+slurmstepd-andoria01: error: *** JOB 24815 ON andoria01 CANCELLED AT 2025-07-29T07:57:24 ***
+
+[130279] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/FINAL_CODE/Block_formal.jl:186
+dgemm_kernel_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+unknown function (ip: (nil))
+Allocations: 11914494 (Pool: 11914082; Big: 412); GC: 18
+Processing molecule: formaldehyde
+Running with alpha = 4
+Running with l = 10
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  rel‖R‖=  3.324e+01  size(V,2)=    60
+iter=     2  rel‖R‖=  1.971e+01  size(V,2)=   120
+iter=     3  rel‖R‖=  4.462e+00  size(V,2)=   180
+iter=     4  rel‖R‖=  8.574e-01  size(V,2)=   240
+iter=     5  rel‖R‖=  2.989e-01  size(V,2)=   120
+iter=     6  rel‖R‖=  8.981e-02  size(V,2)=   180
+iter=     7  rel‖R‖=  1.741e-02  size(V,2)=   240
+iter=     8  rel‖R‖=  3.473e-03  size(V,2)=   120
+iter=     9  rel‖R‖=  9.954e-04  size(V,2)=   180
+iter=    10  rel‖R‖=  4.750e-04  size(V,2)=   240
+iter=    11  rel‖R‖=  2.700e-04  size(V,2)=   120
+iter=    12  rel‖R‖=  1.878e-04  size(V,2)=   180
+iter=    13  rel‖R‖=  5.614e-05  size(V,2)=   240
+converged!
+215.574863 seconds (11.90 k allocations: 2.908 GiB, 0.20% gc time)
+Total estimated FLOPs: 4640589149100
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×60 adjoint(::Vector{Float64}) with eltype Float64:
+ -3.55271e-15  7.10543e-15  3.55271e-15  3.55271e-15  -8.88178e-15  -1.77636e-15  8.88178e-15  -7.10543e-15  -1.77636e-15  5.32907e-15  -2.66454e-15  -3.55271e-15  -2.66454e-15  1.77636e-15  0.0  6.21725e-15  4.44089e-15  6.21725e-15  7.99361e-15  1.77636e-15  -1.77636e-15  -7.99361e-15  1.15463e-14  8.88178e-16  -8.88178e-16  -5.32907e-15  -7.99361e-15  2.22045e-15  -7.54952e-15  2.22045e-15  4.88498e-15  -4.44089e-15  -3.55271e-15  -5.77316e-15  -7.54952e-15  -2.66454e-15  5.32907e-15  -6.66134e-15  -1.06581e-14  4.88498e-15  4.88498e-15  4.88498e-15  -1.33227e-15  -1.77636e-14  1.06581e-14  1.33227e-14  5.77316e-15  -8.88178e-16  -3.10862e-15  -2.78444e-13  -9.31255e-13  -9.27702e-13  -1.82743e-12  -3.1215e-12  -1.02078e-11  -3.75686e-11  -3.13838e-11  -2.68392e-10  -1.57532e-9  -1.38631e-8
+60 Eigenvalues converges, out of 60 requested.
+Running with l = 11
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+iter=     1  rel‖R‖=  3.216e+01  size(V,2)=    66
+iter=     2  rel‖R‖=  1.911e+01  size(V,2)=   132
+iter=     3  rel‖R‖=  3.929e+00  size(V,2)=   198

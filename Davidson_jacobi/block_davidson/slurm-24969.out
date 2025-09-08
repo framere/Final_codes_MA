@@ -1,0 +1,128 @@
+Processing molecule: H2
+Running with alpha = 8
+Running with l = 10
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson with MINRES solver
+iter=     1  Rnorm=  8.900e+00  size(V,2)=    10
+iter=     2  Rnorm=  1.863e+01  size(V,2)=    20
+iter=     3  Rnorm=  1.401e+01  size(V,2)=    30
+iter=     4  Rnorm=  7.374e+00  size(V,2)=    40
+iter=     5  Rnorm=  2.697e-01  size(V,2)=    50
+iter=     6  Rnorm=  1.835e-02  size(V,2)=    60
+iter=     7  Rnorm=  6.616e-05  size(V,2)=    70
+converged!
+ 37.126752 seconds (281.65 k allocations: 721.375 MiB, 0.43% gc time, 2.06% compilation time)
+Total estimated FLOPs: 2060487752588
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×10 adjoint(::Vector{Float64}) with eltype Float64:
+ -4.44089e-15  -4.44089e-15  4.44089e-16  1.33227e-15  -1.77636e-15  -3.17524e-14  -8.88178e-15  0.0  -6.66134e-16  -6.45172e-10
+10 Eigenvalues converges, out of 10 requested.
+Running with l = 15
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson with MINRES solver
+iter=     1  Rnorm=  8.976e+00  size(V,2)=    15
+iter=     2  Rnorm=  1.936e+01  size(V,2)=    30
+iter=     3  Rnorm=  1.584e+01  size(V,2)=    45
+iter=     4  Rnorm=  7.359e+00  size(V,2)=    60
+iter=     5  Rnorm=  2.823e-02  size(V,2)=    75
+iter=     6  Rnorm=  1.523e-04  size(V,2)=    90
+iter=     7  Rnorm=  1.919e-07  size(V,2)=   105
+converged!
+ 88.143065 seconds (81.00 k allocations: 1.332 GiB, 0.25% gc time)
+Total estimated FLOPs: 3229146169698
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×15 adjoint(::Vector{Float64}) with eltype Float64:
+ -5.32907e-15  -2.66454e-15  4.44089e-16  4.44089e-16  -8.88178e-16  1.33227e-15  -2.22045e-16  -6.66134e-16  6.66134e-16  2.22045e-16  8.88178e-16  -2.22045e-15  -4.44089e-16  1.77636e-15  -1.59872e-14
+15 Eigenvalues converges, out of 15 requested.
+Running with l = 25
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson with MINRES solver
+iter=     1  Rnorm=  9.059e+00  size(V,2)=    25
+iter=     2  Rnorm=  2.081e+01  size(V,2)=    50
+iter=     3  Rnorm=  1.804e+01  size(V,2)=    75
+iter=     4  Rnorm=  6.948e-01  size(V,2)=   100
+iter=     5  Rnorm=  6.564e-03  size(V,2)=   125
+iter=     6  Rnorm=  7.101e-06  size(V,2)=   150
+converged!
+185.107921 seconds (149.66 k allocations: 2.377 GiB, 0.18% gc time)
+Total estimated FLOPs: 4731214902594
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×25 adjoint(::Vector{Float64}) with eltype Float64:
+ -4.44089e-15  -2.66454e-15  -1.33227e-15  0.0  -1.33227e-15  1.33227e-15  2.22045e-16  -6.66134e-16  -6.66134e-16  4.44089e-16  2.44249e-15  -1.77636e-15  4.44089e-16  6.66134e-16  -4.66294e-15  -6.66134e-16  -1.33227e-15  -3.21965e-15  -6.21725e-15  -2.37588e-14  -3.88578e-15  -4.03233e-13  -2.25486e-13  5.55112e-16  -7.39023e-11
+25 Eigenvalues converges, out of 25 requested.
+Running with alpha = 10
+Running with l = 10
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson with MINRES solver
+iter=     1  Rnorm=  8.900e+00  size(V,2)=    10
+iter=     2  Rnorm=  1.863e+01  size(V,2)=    20
+iter=     3  Rnorm=  1.401e+01  size(V,2)=    30
+iter=     4  Rnorm=  7.374e+00  size(V,2)=    40
+iter=     5  Rnorm=  2.697e-01  size(V,2)=    50
+iter=     6  Rnorm=  1.835e-02  size(V,2)=    60
+iter=     7  Rnorm=  6.616e-05  size(V,2)=    70
+converged!
+ 58.022102 seconds (40.80 k allocations: 709.509 MiB, 0.50% gc time)
+Total estimated FLOPs: 2060487752588
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×10 adjoint(::Vector{Float64}) with eltype Float64:
+ -4.44089e-15  -4.44089e-15  4.44089e-16  1.33227e-15  -1.77636e-15  -3.17524e-14  -8.88178e-15  0.0  -6.66134e-16  -6.45172e-10
+10 Eigenvalues converges, out of 10 requested.
+Running with l = 15
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson with MINRES solver
+iter=     1  Rnorm=  8.976e+00  size(V,2)=    15
+iter=     2  Rnorm=  1.936e+01  size(V,2)=    30
+iter=     3  Rnorm=  1.584e+01  size(V,2)=    45
+iter=     4  Rnorm=  7.359e+00  size(V,2)=    60
+iter=     5  Rnorm=  2.823e-02  size(V,2)=    75
+iter=     6  Rnorm=  1.523e-04  size(V,2)=    90
+iter=     7  Rnorm=  1.919e-07  size(V,2)=   105
+converged!
+117.331954 seconds (81.00 k allocations: 1.332 GiB, 0.27% gc time)
+Total estimated FLOPs: 3229146169698
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×15 adjoint(::Vector{Float64}) with eltype Float64:
+ -5.32907e-15  -2.66454e-15  4.44089e-16  4.44089e-16  -8.88178e-16  1.33227e-15  -2.22045e-16  -6.66134e-16  6.66134e-16  2.22045e-16  8.88178e-16  -2.22045e-15  -4.44089e-16  1.77636e-15  -1.59872e-14
+15 Eigenvalues converges, out of 15 requested.
+Running with l = 25
+read ../H2/gamma_VASP_RNDbasis1.dat
+Davidson with MINRES solver
+iter=     1  Rnorm=  9.059e+00  size(V,2)=    25
+iter=     2  Rnorm=  2.081e+01  size(V,2)=    50
+iter=     3  Rnorm=  1.804e+01  size(V,2)=    75
+iter=     4  Rnorm=  6.948e-01  size(V,2)=   100
+iter=     5  Rnorm=  6.564e-03  size(V,2)=   125
+iter=     6  Rnorm=  7.101e-06  size(V,2)=   150
+converged!
+210.242303 seconds (149.66 k allocations: 2.377 GiB, 0.15% gc time)
+Total estimated FLOPs: 4731214902594
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Difference between Davidson and exact eigenvalues:
+1×25 adjoint(::Vector{Float64}) with eltype Float64:
+ -4.44089e-15  -2.66454e-15  -1.33227e-15  0.0  -1.33227e-15  1.33227e-15  2.22045e-16  -6.66134e-16  -6.66134e-16  4.44089e-16  2.44249e-15  -1.77636e-15  4.44089e-16  6.66134e-16  -4.66294e-15  -6.66134e-16  -1.33227e-15  -3.21965e-15  -6.21725e-15  -2.37588e-14  -3.88578e-15  -4.03233e-13  -2.25486e-13  5.55112e-16  -7.39023e-11
+25 Eigenvalues converges, out of 25 requested.
+Finished processing molecule: H2

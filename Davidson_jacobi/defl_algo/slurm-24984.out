@@ -1,0 +1,1675 @@
+Processing molecule: H2
+Running with beta = 40
+Running with l = 10
+Starting Davidson with n_aux = 640, l_buffer = 20, lc = 11, thresh = 0.0015, max_iter = 500
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.01243789060943334
+Iter 2: V_size = 52, Converged = 0, ‖r‖ (largest λ) = 0.037738963838909075
+Iter 3: V_size = 72, Converged = 0, ‖r‖ (largest λ) = 0.16311511998883652
+Iter 4: V_size = 92, Converged = 0, ‖r‖ (largest λ) = 0.0128062292593859
+Iter 5: V_size = 112, Converged = 0, ‖r‖ (largest λ) = 0.0011448349916349603
+EV   1 converged λ = -41.7736162218, ‖r‖ = 1.23e-11, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 2.66e-11, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 2.92e-09, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 8.47e-10, stable for 3 iters
+EV   5 converged λ = -3.2147111475, ‖r‖ = 9.90e-08, stable for 3 iters
+Iter 6: V_size = 127, Converged = 5, ‖r‖ (largest λ) = 3.22070791831394e-5
+EV   6 converged λ = -5.4867357314, ‖r‖ = 2.80e-10, stable for 3 iters
+EV   7 converged λ = -3.7366409838, ‖r‖ = 1.09e-08, stable for 3 iters
+Iter 7: V_size = 140, Converged = 7, ‖r‖ (largest λ) = 2.0945935934393818e-7
+Iter 8: V_size = 147, Converged = 7, ‖r‖ (largest λ) = 2.2632814331435434e-8
+Iter 9: V_size = 151, Converged = 7, ‖r‖ (largest λ) = 2.06561156502039e-7
+Iter 10: V_size = 153, Converged = 7, ‖r‖ (largest λ) = 2.2795895021916157e-9
+EV   8 converged λ = -3.7365658009, ‖r‖ = 1.57e-12, stable for 3 iters
+EV   9 converged λ = -2.9171851071, ‖r‖ = 2.18e-11, stable for 3 iters
+EV  10 converged λ = -2.3436627916, ‖r‖ = 1.52e-11, stable for 3 iters
+EV  11 converged λ = -2.3421329598, ‖r‖ = 2.68e-11, stable for 3 iters
+Converged all required eigenvalues.
+ 40.798577 seconds (629.05 k allocations: 7.990 GiB, 0.98% gc time, 1.91% compilation time)
+Number of FLOPs: 5264370126952
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -1.7764e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -5.3291e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) = -4.4409e-16
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) = -1.3323e-15
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -8.8818e-16
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  2.2204e-16
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  6.6613e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) =  0.0000e+00
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  8.8818e-16
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  6.6613e-16
+10 Eigenvalues converges, out of 10 requested.
+Running with l = 50
+Starting Davidson with n_aux = 640, l_buffer = 98, lc = 55, thresh = 0.002, max_iter = 500
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.01243789060943334
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.0012880736061585962
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.00057295215611179
+Iter 4: V_size = 226, Converged = 0, ‖r‖ (largest λ) = 0.012866822026638702
+Iter 5: V_size = 320, Converged = 0, ‖r‖ (largest λ) = 0.00011375340046957775
+EV   1 converged λ = -41.7736162218, ‖r‖ = 3.40e-14, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 2.62e-14, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 1.81e-14, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 1.67e-14, stable for 3 iters
+EV   5 converged λ = -5.4867357314, ‖r‖ = 9.05e-15, stable for 3 iters
+EV   6 converged λ = -3.7365658009, ‖r‖ = 1.45e-14, stable for 3 iters
+EV   7 converged λ = -3.2147111475, ‖r‖ = 1.10e-14, stable for 3 iters
+EV   8 converged λ = -2.9171851071, ‖r‖ = 8.09e-14, stable for 3 iters
+EV   9 converged λ = -2.3436627916, ‖r‖ = 3.81e-14, stable for 3 iters
+EV  10 converged λ = -2.3421329598, ‖r‖ = 6.17e-14, stable for 3 iters
+EV  11 converged λ = -1.8313787990, ‖r‖ = 8.44e-14, stable for 3 iters
+EV  12 converged λ = -1.8302318116, ‖r‖ = 6.38e-14, stable for 3 iters
+EV  13 converged λ = -1.1821827552, ‖r‖ = 3.68e-13, stable for 3 iters
+Iter 6: V_size = 378, Converged = 13, ‖r‖ (largest λ) = 1.0247998832507024e-7
+Iter 7: V_size = 409, Converged = 13, ‖r‖ (largest λ) = 6.769035846810531e-11
+Iter 8: V_size = 420, Converged = 13, ‖r‖ (largest λ) = 6.776712577605165e-11
+Iter 9: V_size = 85, Converged = 13, ‖r‖ (largest λ) = 7.512987298946546e-13
+EV  14 converged λ = -3.7366409838, ‖r‖ = 9.14e-15, stable for 3 iters
+EV  15 converged λ = -1.3463946793, ‖r‖ = 3.26e-15, stable for 3 iters
+EV  16 converged λ = -1.1820233138, ‖r‖ = 3.22e-15, stable for 3 iters
+EV  17 converged λ = -1.0757859280, ‖r‖ = 3.46e-15, stable for 3 iters
+EV  18 converged λ = -0.9519714914, ‖r‖ = 3.04e-15, stable for 3 iters
+EV  19 converged λ = -0.9515871966, ‖r‖ = 2.49e-15, stable for 3 iters
+EV  20 converged λ = -0.7484866263, ‖r‖ = 3.84e-15, stable for 3 iters
+EV  21 converged λ = -0.7480675498, ‖r‖ = 2.24e-15, stable for 3 iters
+EV  22 converged λ = -0.6611017313, ‖r‖ = 3.12e-15, stable for 3 iters
+EV  23 converged λ = -0.6608082648, ‖r‖ = 3.20e-15, stable for 3 iters
+EV  24 converged λ = -0.5775514450, ‖r‖ = 3.45e-15, stable for 3 iters
+EV  25 converged λ = -0.4976860636, ‖r‖ = 9.34e-15, stable for 3 iters
+EV  26 converged λ = -0.4965902543, ‖r‖ = 4.81e-15, stable for 3 iters
+EV  27 converged λ = -0.4828394889, ‖r‖ = 6.20e-15, stable for 3 iters
+EV  28 converged λ = -0.4459730203, ‖r‖ = 6.95e-15, stable for 3 iters
+EV  29 converged λ = -0.4326351295, ‖r‖ = 6.19e-15, stable for 3 iters
+EV  30 converged λ = -0.4323713676, ‖r‖ = 1.45e-14, stable for 3 iters
+EV  31 converged λ = -0.3791543425, ‖r‖ = 6.42e-15, stable for 3 iters
+EV  32 converged λ = -0.3788921614, ‖r‖ = 6.96e-15, stable for 3 iters
+EV  33 converged λ = -0.3537506434, ‖r‖ = 6.01e-15, stable for 3 iters
+EV  34 converged λ = -0.3534184490, ‖r‖ = 1.13e-14, stable for 3 iters
+EV  35 converged λ = -0.3077168637, ‖r‖ = 1.42e-14, stable for 3 iters
+EV  36 converged λ = -0.3076040426, ‖r‖ = 5.01e-15, stable for 3 iters
+EV  37 converged λ = -0.2739327311, ‖r‖ = 7.94e-15, stable for 3 iters
+EV  38 converged λ = -0.2416696040, ‖r‖ = 1.10e-14, stable for 3 iters
+EV  39 converged λ = -0.2414981245, ‖r‖ = 2.59e-14, stable for 3 iters
+EV  40 converged λ = -0.2319217832, ‖r‖ = 1.50e-14, stable for 3 iters
+EV  41 converged λ = -0.2314242588, ‖r‖ = 1.63e-15, stable for 3 iters
+EV  42 converged λ = -0.2162482525, ‖r‖ = 3.00e-15, stable for 3 iters
+EV  43 converged λ = -0.2159117710, ‖r‖ = 2.11e-15, stable for 3 iters
+EV  44 converged λ = -0.1895919323, ‖r‖ = 2.60e-15, stable for 3 iters
+EV  45 converged λ = -0.1706636384, ‖r‖ = 4.74e-15, stable for 3 iters
+EV  46 converged λ = -0.1657930118, ‖r‖ = 5.96e-15, stable for 3 iters
+EV  47 converged λ = -0.1657233306, ‖r‖ = 5.49e-15, stable for 3 iters
+EV  48 converged λ = -0.1558948613, ‖r‖ = 1.26e-14, stable for 3 iters
+EV  49 converged λ = -0.1557333464, ‖r‖ = 6.48e-15, stable for 3 iters
+EV  50 converged λ = -0.1530518424, ‖r‖ = 1.76e-14, stable for 3 iters
+EV  51 converged λ = -0.1524217487, ‖r‖ = 1.23e-14, stable for 3 iters
+EV  52 converged λ = -0.1440587149, ‖r‖ = 1.50e-14, stable for 3 iters
+EV  53 converged λ = -0.1440548290, ‖r‖ = 2.54e-14, stable for 3 iters
+EV  54 converged λ = -0.1327368792, ‖r‖ = 1.85e-14, stable for 3 iters
+EV  55 converged λ = -0.1324584618, ‖r‖ = 1.25e-14, stable for 3 iters
+Converged all required eigenvalues.
+216.199683 seconds (2.51 M allocations: 72.026 GiB, 0.72% gc time)
+Number of FLOPs: 21067416984454
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -4.4409e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -3.5527e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) = -4.4409e-16
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) =  1.3323e-15
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -2.2204e-15
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  1.7764e-15
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  4.4409e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) = -1.1102e-15
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  2.6645e-15
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  0.0000e+00
+ 11: 1.5304028750 (computed) - 1.5304028750 (exact) =  1.1102e-15
+ 12: 1.3532844487 (computed) - 1.3532844487 (exact) =  6.6613e-16
+ 13: 1.3528606032 (computed) - 1.3528606032 (exact) =  8.8818e-16
+ 14: 1.1603424836 (computed) - 1.1603424836 (exact) = -1.1102e-15
+ 15: 1.0872822794 (computed) - 1.0872822794 (exact) = -2.4425e-15
+ 16: 1.0872089559 (computed) - 1.0872089559 (exact) = -4.4409e-16
+ 17: 1.0372010066 (computed) - 1.0372010066 (exact) =  4.4409e-16
+ 18: 0.9756902641 (computed) - 0.9756902641 (exact) = -2.2204e-16
+ 19: 0.9754933093 (computed) - 0.9754933093 (exact) = -4.4409e-16
+ 20: 0.8651512159 (computed) - 0.8651512159 (exact) =  7.7716e-16
+ 21: 0.8649089835 (computed) - 0.8649089835 (exact) = -6.6613e-16
+ 22: 0.8130816265 (computed) - 0.8130816265 (exact) =  6.6613e-16
+ 23: 0.8129011408 (computed) - 0.8129011408 (exact) =  0.0000e+00
+ 24: 0.7599680553 (computed) - 0.7599680553 (exact) = -7.7716e-16
+ 25: 0.7054686836 (computed) - 0.7054686836 (exact) = -5.5511e-16
+ 26: 0.7046916022 (computed) - 0.7046916022 (exact) =  3.3307e-16
+ 27: 0.6948665259 (computed) - 0.6948665259 (exact) =  1.1102e-16
+ 28: 0.6678121145 (computed) - 0.6678121145 (exact) = -1.1102e-16
+ 29: 0.6577500510 (computed) - 0.6577500510 (exact) = -2.2204e-16
+ 30: 0.6575495172 (computed) - 0.6575495172 (exact) = -4.4409e-16
+ 31: 0.6157550994 (computed) - 0.6157550994 (exact) = -3.3307e-16
+ 32: 0.6155421687 (computed) - 0.6155421687 (exact) = -3.3307e-16
+ 33: 0.5947694036 (computed) - 0.5947694036 (exact) = -3.3307e-16
+ 34: 0.5944900748 (computed) - 0.5944900748 (exact) = -5.5511e-16
+ 35: 0.5547223303 (computed) - 0.5547223303 (exact) =  4.4409e-16
+ 36: 0.5546206295 (computed) - 0.5546206295 (exact) = -3.3307e-16
+ 37: 0.5233858339 (computed) - 0.5233858339 (exact) =  1.1102e-16
+ 38: 0.4915990276 (computed) - 0.4915990276 (exact) = -5.5511e-17
+ 39: 0.4914245868 (computed) - 0.4914245868 (exact) = -2.7756e-16
+ 40: 0.4815825819 (computed) - 0.4815825819 (exact) = -5.5511e-17
+ 41: 0.4810657531 (computed) - 0.4810657531 (exact) =  5.5511e-16
+ 42: 0.4650250021 (computed) - 0.4650250021 (exact) =  2.7756e-16
+ 43: 0.4646630726 (computed) - 0.4646630726 (exact) = -3.3307e-16
+ 44: 0.4354215570 (computed) - 0.4354215570 (exact) = -1.1102e-16
+ 45: 0.4131145584 (computed) - 0.4131145584 (exact) = -1.6653e-16
+ 46: 0.4071768803 (computed) - 0.4071768803 (exact) = -5.5511e-17
+ 47: 0.4070913050 (computed) - 0.4070913050 (exact) = -4.4409e-16
+ 48: 0.3948352331 (computed) - 0.3948352331 (exact) = -1.1102e-16
+ 49: 0.3946306455 (computed) - 0.3946306455 (exact) =  1.1102e-16
+ 50: 0.3912184075 (computed) - 0.3912184075 (exact) = -1.1102e-16
+50 Eigenvalues converges, out of 50 requested.
+Running with l = 100
+Starting Davidson with n_aux = 640, l_buffer = 195, lc = 110, thresh = 0.0025, max_iter = 500
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.01243789060943334
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.0012880736061585962
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.00057295215611179
+Iter 4: V_size = 256, Converged = 0, ‖r‖ (largest λ) = 6.0804286886306373e-5
+Iter 5: V_size = 444, Converged = 0, ‖r‖ (largest λ) = 0.0013167947684336798
+EV   1 converged λ = -41.7736162218, ‖r‖ = 5.09e-14, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 6.20e-14, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 1.84e-14, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 1.74e-14, stable for 3 iters
+EV   5 converged λ = -5.4867357314, ‖r‖ = 8.50e-15, stable for 3 iters
+EV   6 converged λ = -3.7365658009, ‖r‖ = 6.07e-15, stable for 3 iters
+EV   7 converged λ = -3.2147111475, ‖r‖ = 6.61e-15, stable for 3 iters
+EV   8 converged λ = -2.9171851071, ‖r‖ = 5.14e-15, stable for 3 iters
+EV   9 converged λ = -2.3436627916, ‖r‖ = 4.15e-15, stable for 3 iters
+EV  10 converged λ = -2.3421329598, ‖r‖ = 4.80e-15, stable for 3 iters
+EV  11 converged λ = -1.8313787990, ‖r‖ = 6.89e-15, stable for 3 iters
+EV  12 converged λ = -1.8302318116, ‖r‖ = 4.80e-15, stable for 3 iters
+EV  13 converged λ = -1.1821827552, ‖r‖ = 4.03e-15, stable for 3 iters
+Iter 6: V_size = 573, Converged = 13, ‖r‖ (largest λ) = 4.138398900863304e-6
+Iter 7: V_size = 267, Converged = 13, ‖r‖ (largest λ) = 3.845403529877627e-9
+Iter 8: V_size = 320, Converged = 13, ‖r‖ (largest λ) = 0.00018610366054152555
+Iter 9: V_size = 350, Converged = 13, ‖r‖ (largest λ) = 0.00021151606494417772
+EV  14 converged λ = -3.7366409838, ‖r‖ = 4.63e-15, stable for 3 iters
+EV  15 converged λ = -1.3463946793, ‖r‖ = 2.22e-15, stable for 3 iters
+EV  16 converged λ = -1.1820233138, ‖r‖ = 2.62e-15, stable for 3 iters
+EV  17 converged λ = -1.0757859280, ‖r‖ = 2.39e-15, stable for 3 iters
+EV  18 converged λ = -0.9519714914, ‖r‖ = 1.85e-15, stable for 3 iters
+EV  19 converged λ = -0.9515871966, ‖r‖ = 2.24e-15, stable for 3 iters
+EV  20 converged λ = -0.7484866263, ‖r‖ = 2.41e-15, stable for 3 iters
+EV  21 converged λ = -0.7480675498, ‖r‖ = 2.79e-15, stable for 3 iters
+EV  22 converged λ = -0.6611017313, ‖r‖ = 1.50e-15, stable for 3 iters
+EV  23 converged λ = -0.6608082648, ‖r‖ = 2.80e-15, stable for 3 iters
+EV  24 converged λ = -0.5775514450, ‖r‖ = 2.05e-15, stable for 3 iters
+EV  25 converged λ = -0.4976860636, ‖r‖ = 1.45e-15, stable for 3 iters
+EV  26 converged λ = -0.4965902543, ‖r‖ = 1.34e-15, stable for 3 iters
+EV  27 converged λ = -0.4828394889, ‖r‖ = 2.59e-15, stable for 3 iters
+EV  28 converged λ = -0.4459730203, ‖r‖ = 2.21e-15, stable for 3 iters
+EV  29 converged λ = -0.4326351295, ‖r‖ = 1.75e-15, stable for 3 iters
+EV  30 converged λ = -0.4323713676, ‖r‖ = 2.10e-15, stable for 3 iters
+EV  31 converged λ = -0.3791543425, ‖r‖ = 1.64e-15, stable for 3 iters
+EV  32 converged λ = -0.3788921614, ‖r‖ = 1.20e-15, stable for 3 iters
+EV  33 converged λ = -0.3537506434, ‖r‖ = 1.23e-15, stable for 3 iters
+EV  34 converged λ = -0.3534184490, ‖r‖ = 1.71e-15, stable for 3 iters
+EV  35 converged λ = -0.3077168637, ‖r‖ = 1.13e-15, stable for 3 iters
+EV  36 converged λ = -0.3076040426, ‖r‖ = 1.06e-15, stable for 3 iters
+EV  37 converged λ = -0.2739327311, ‖r‖ = 1.24e-15, stable for 3 iters
+EV  38 converged λ = -0.2416696040, ‖r‖ = 1.45e-15, stable for 3 iters
+EV  39 converged λ = -0.2414981245, ‖r‖ = 1.17e-15, stable for 3 iters
+EV  40 converged λ = -0.2319217832, ‖r‖ = 1.02e-15, stable for 3 iters
+EV  41 converged λ = -0.2314242588, ‖r‖ = 1.31e-15, stable for 3 iters
+EV  42 converged λ = -0.2162482525, ‖r‖ = 1.31e-15, stable for 3 iters
+EV  43 converged λ = -0.2159117710, ‖r‖ = 1.28e-15, stable for 3 iters
+EV  44 converged λ = -0.1895919323, ‖r‖ = 2.66e-15, stable for 3 iters
+EV  45 converged λ = -0.1706636384, ‖r‖ = 1.18e-15, stable for 3 iters
+EV  46 converged λ = -0.1657930118, ‖r‖ = 1.00e-15, stable for 3 iters
+EV  47 converged λ = -0.1657233306, ‖r‖ = 1.18e-15, stable for 3 iters
+EV  48 converged λ = -0.1558948613, ‖r‖ = 9.87e-16, stable for 3 iters
+EV  49 converged λ = -0.1557333464, ‖r‖ = 1.13e-15, stable for 3 iters
+EV  50 converged λ = -0.1530518424, ‖r‖ = 1.04e-15, stable for 3 iters
+EV  51 converged λ = -0.1524217487, ‖r‖ = 1.06e-15, stable for 3 iters
+EV  52 converged λ = -0.1440587149, ‖r‖ = 1.05e-15, stable for 3 iters
+EV  53 converged λ = -0.1440548290, ‖r‖ = 1.12e-15, stable for 3 iters
+EV  54 converged λ = -0.1327368792, ‖r‖ = 9.72e-16, stable for 3 iters
+EV  55 converged λ = -0.1324584618, ‖r‖ = 1.24e-15, stable for 3 iters
+EV  56 converged λ = -0.1137697108, ‖r‖ = 1.18e-15, stable for 3 iters
+EV  57 converged λ = -0.1133949027, ‖r‖ = 1.12e-15, stable for 3 iters
+EV  58 converged λ = -0.0995094354, ‖r‖ = 9.72e-16, stable for 3 iters
+EV  59 converged λ = -0.0988872345, ‖r‖ = 1.16e-15, stable for 3 iters
+EV  60 converged λ = -0.0973754155, ‖r‖ = 1.43e-15, stable for 3 iters
+EV  61 converged λ = -0.0949131039, ‖r‖ = 2.29e-15, stable for 3 iters
+EV  62 converged λ = -0.0906898247, ‖r‖ = 1.34e-15, stable for 3 iters
+EV  63 converged λ = -0.0901092951, ‖r‖ = 1.17e-15, stable for 3 iters
+EV  64 converged λ = -0.0895073459, ‖r‖ = 1.65e-15, stable for 3 iters
+EV  65 converged λ = -0.0894398411, ‖r‖ = 9.66e-16, stable for 3 iters
+EV  66 converged λ = -0.0787353077, ‖r‖ = 8.35e-16, stable for 3 iters
+EV  67 converged λ = -0.0781754997, ‖r‖ = 1.12e-15, stable for 3 iters
+EV  68 converged λ = -0.0727134369, ‖r‖ = 5.91e-15, stable for 3 iters
+EV  69 converged λ = -0.0704466266, ‖r‖ = 8.76e-16, stable for 3 iters
+EV  70 converged λ = -0.0703960307, ‖r‖ = 1.32e-15, stable for 3 iters
+EV  71 converged λ = -0.0661627022, ‖r‖ = 1.55e-15, stable for 3 iters
+EV  72 converged λ = -0.0650376311, ‖r‖ = 7.93e-16, stable for 3 iters
+EV  73 converged λ = -0.0650363885, ‖r‖ = 7.68e-16, stable for 3 iters
+EV  74 converged λ = -0.0618538000, ‖r‖ = 8.30e-16, stable for 3 iters
+EV  75 converged λ = -0.0615962685, ‖r‖ = 7.26e-16, stable for 3 iters
+EV  76 converged λ = -0.0602665723, ‖r‖ = 7.12e-16, stable for 3 iters
+EV  77 converged λ = -0.0602473560, ‖r‖ = 7.66e-16, stable for 3 iters
+EV  78 converged λ = -0.0562235969, ‖r‖ = 9.51e-16, stable for 3 iters
+EV  79 converged λ = -0.0561606762, ‖r‖ = 1.55e-15, stable for 3 iters
+EV  80 converged λ = -0.0556893991, ‖r‖ = 9.45e-16, stable for 3 iters
+EV  81 converged λ = -0.0554482374, ‖r‖ = 1.16e-15, stable for 3 iters
+EV  82 converged λ = -0.0486027913, ‖r‖ = 1.13e-15, stable for 3 iters
+EV  83 converged λ = -0.0484758895, ‖r‖ = 1.17e-15, stable for 3 iters
+EV  84 converged λ = -0.0483264419, ‖r‖ = 1.24e-15, stable for 3 iters
+EV  85 converged λ = -0.0451131119, ‖r‖ = 1.49e-15, stable for 3 iters
+EV  86 converged λ = -0.0450908528, ‖r‖ = 1.16e-15, stable for 3 iters
+EV  87 converged λ = -0.0424434827, ‖r‖ = 9.21e-16, stable for 3 iters
+EV  88 converged λ = -0.0424312643, ‖r‖ = 1.08e-15, stable for 3 iters
+EV  89 converged λ = -0.0409328467, ‖r‖ = 1.33e-15, stable for 3 iters
+EV  90 converged λ = -0.0405495687, ‖r‖ = 1.82e-15, stable for 3 iters
+EV  91 converged λ = -0.0373722637, ‖r‖ = 3.52e-15, stable for 3 iters
+EV  92 converged λ = -0.0373673783, ‖r‖ = 2.01e-15, stable for 3 iters
+EV  93 converged λ = -0.0344515149, ‖r‖ = 2.40e-15, stable for 3 iters
+EV  94 converged λ = -0.0332710608, ‖r‖ = 2.06e-15, stable for 3 iters
+EV  95 converged λ = -0.0332554161, ‖r‖ = 1.53e-15, stable for 3 iters
+EV  96 converged λ = -0.0316720553, ‖r‖ = 3.95e-15, stable for 3 iters
+EV  97 converged λ = -0.0315930378, ‖r‖ = 2.92e-15, stable for 3 iters
+EV  98 converged λ = -0.0315861855, ‖r‖ = 1.58e-15, stable for 3 iters
+EV  99 converged λ = -0.0314479122, ‖r‖ = 2.88e-15, stable for 3 iters
+EV 100 converged λ = -0.0288422702, ‖r‖ = 1.62e-15, stable for 3 iters
+EV 101 converged λ = -0.0270341081, ‖r‖ = 4.72e-15, stable for 3 iters
+EV 102 converged λ = -0.0269430459, ‖r‖ = 5.65e-15, stable for 3 iters
+EV 103 converged λ = -0.0261312727, ‖r‖ = 3.22e-15, stable for 3 iters
+EV 104 converged λ = -0.0260029239, ‖r‖ = 2.46e-15, stable for 3 iters
+EV 105 converged λ = -0.0258961356, ‖r‖ = 2.61e-15, stable for 3 iters
+EV 106 converged λ = -0.0256713936, ‖r‖ = 7.50e-15, stable for 3 iters
+EV 107 converged λ = -0.0256227449, ‖r‖ = 5.54e-15, stable for 3 iters
+EV 108 converged λ = -0.0245529395, ‖r‖ = 1.30e-15, stable for 3 iters
+EV 109 converged λ = -0.0243833642, ‖r‖ = 8.75e-15, stable for 3 iters
+EV 110 converged λ = -0.0231171144, ‖r‖ = 3.02e-15, stable for 3 iters
+Converged all required eigenvalues.
+547.717929 seconds (5.23 M allocations: 148.834 GiB, 0.48% gc time)
+Number of FLOPs: 39000473062336
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -1.7764e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -7.9936e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) = -8.8818e-16
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) =  1.7764e-15
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -1.7764e-15
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  6.6613e-16
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  4.4409e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) =  4.4409e-16
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  8.8818e-16
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  8.8818e-16
+ 11: 1.5304028750 (computed) - 1.5304028750 (exact) =  1.7764e-15
+ 12: 1.3532844487 (computed) - 1.3532844487 (exact) = -1.3323e-15
+ 13: 1.3528606032 (computed) - 1.3528606032 (exact) =  4.4409e-16
+ 14: 1.1603424836 (computed) - 1.1603424836 (exact) = -6.6613e-16
+ 15: 1.0872822794 (computed) - 1.0872822794 (exact) = -6.6613e-16
+ 16: 1.0872089559 (computed) - 1.0872089559 (exact) = -2.2204e-16
+ 17: 1.0372010066 (computed) - 1.0372010066 (exact) = -2.2204e-16
+ 18: 0.9756902641 (computed) - 0.9756902641 (exact) = -2.2204e-16
+ 19: 0.9754933093 (computed) - 0.9754933093 (exact) = -8.8818e-16
+ 20: 0.8651512159 (computed) - 0.8651512159 (exact) =  2.2204e-16
+ 21: 0.8649089835 (computed) - 0.8649089835 (exact) = -3.3307e-16
+ 22: 0.8130816265 (computed) - 0.8130816265 (exact) =  5.5511e-16
+ 23: 0.8129011408 (computed) - 0.8129011408 (exact) =  0.0000e+00
+ 24: 0.7599680553 (computed) - 0.7599680553 (exact) = -6.6613e-16
+ 25: 0.7054686836 (computed) - 0.7054686836 (exact) =  3.3307e-16
+ 26: 0.7046916022 (computed) - 0.7046916022 (exact) =  3.3307e-16
+ 27: 0.6948665259 (computed) - 0.6948665259 (exact) =  0.0000e+00
+ 28: 0.6678121145 (computed) - 0.6678121145 (exact) =  2.2204e-16
+ 29: 0.6577500510 (computed) - 0.6577500510 (exact) =  0.0000e+00
+ 30: 0.6575495172 (computed) - 0.6575495172 (exact) = -3.3307e-16
+ 31: 0.6157550994 (computed) - 0.6157550994 (exact) =  2.2204e-16
+ 32: 0.6155421687 (computed) - 0.6155421687 (exact) = -2.2204e-16
+ 33: 0.5947694036 (computed) - 0.5947694036 (exact) =  2.2204e-16
+ 34: 0.5944900748 (computed) - 0.5944900748 (exact) = -1.1102e-16
+ 35: 0.5547223303 (computed) - 0.5547223303 (exact) =  0.0000e+00
+ 36: 0.5546206295 (computed) - 0.5546206295 (exact) = -2.2204e-16
+ 37: 0.5233858339 (computed) - 0.5233858339 (exact) =  2.2204e-16
+ 38: 0.4915990276 (computed) - 0.4915990276 (exact) =  2.2204e-16
+ 39: 0.4914245868 (computed) - 0.4914245868 (exact) = -3.8858e-16
+ 40: 0.4815825819 (computed) - 0.4815825819 (exact) = -1.1102e-16
+ 41: 0.4810657531 (computed) - 0.4810657531 (exact) =  3.8858e-16
+ 42: 0.4650250021 (computed) - 0.4650250021 (exact) =  1.1102e-16
+ 43: 0.4646630726 (computed) - 0.4646630726 (exact) = -4.9960e-16
+ 44: 0.4354215570 (computed) - 0.4354215570 (exact) = -2.7756e-16
+ 45: 0.4131145584 (computed) - 0.4131145584 (exact) = -1.1102e-16
+ 46: 0.4071768803 (computed) - 0.4071768803 (exact) = -1.6653e-16
+ 47: 0.4070913050 (computed) - 0.4070913050 (exact) =  0.0000e+00
+ 48: 0.3948352331 (computed) - 0.3948352331 (exact) =  1.6653e-16
+ 49: 0.3946306455 (computed) - 0.3946306455 (exact) =  5.5511e-16
+ 50: 0.3912184075 (computed) - 0.3912184075 (exact) = -4.9960e-16
+ 51: 0.3904122804 (computed) - 0.3904122804 (exact) = -5.5511e-17
+ 52: 0.3795506751 (computed) - 0.3795506751 (exact) = -2.2204e-16
+ 53: 0.3795455559 (computed) - 0.3795455559 (exact) = -5.5511e-17
+ 54: 0.3643307277 (computed) - 0.3643307277 (exact) = -4.4409e-16
+ 55: 0.3639484329 (computed) - 0.3639484329 (exact) =  0.0000e+00
+ 56: 0.3372976590 (computed) - 0.3372976590 (exact) =  1.6653e-16
+ 57: 0.3367415964 (computed) - 0.3367415964 (exact) =  5.5511e-17
+ 58: 0.3154511616 (computed) - 0.3154511616 (exact) =  0.0000e+00
+ 59: 0.3144634072 (computed) - 0.3144634072 (exact) = -1.6653e-16
+ 60: 0.3120503413 (computed) - 0.3120503413 (exact) = -1.1102e-16
+ 61: 0.3080797038 (computed) - 0.3080797038 (exact) =  2.2204e-16
+ 62: 0.3011475133 (computed) - 0.3011475133 (exact) = -1.1102e-16
+ 63: 0.3001821032 (computed) - 0.3001821032 (exact) =  2.2204e-16
+ 64: 0.2991777831 (computed) - 0.2991777831 (exact) = -2.2204e-16
+ 65: 0.2990649447 (computed) - 0.2990649447 (exact) =  1.6653e-16
+ 66: 0.2805981250 (computed) - 0.2805981250 (exact) =  3.3307e-16
+ 67: 0.2795988192 (computed) - 0.2795988192 (exact) = -1.6653e-16
+ 68: 0.2696542915 (computed) - 0.2696542915 (exact) = -4.4409e-16
+ 69: 0.2654178339 (computed) - 0.2654178339 (exact) =  2.2204e-16
+ 70: 0.2653225032 (computed) - 0.2653225032 (exact) =  1.6653e-16
+ 71: 0.2572211153 (computed) - 0.2572211153 (exact) = -1.6653e-16
+ 72: 0.2550247657 (computed) - 0.2550247657 (exact) =  5.5511e-17
+ 73: 0.2550223295 (computed) - 0.2550223295 (exact) =  3.3307e-16
+ 74: 0.2487042420 (computed) - 0.2487042420 (exact) =  1.6653e-16
+ 75: 0.2481859554 (computed) - 0.2481859554 (exact) =  6.1062e-16
+ 76: 0.2454925096 (computed) - 0.2454925096 (exact) =  4.4409e-16
+ 77: 0.2454533683 (computed) - 0.2454533683 (exact) =  8.3267e-17
+ 78: 0.2371151553 (computed) - 0.2371151553 (exact) = -8.0491e-16
+ 79: 0.2369824385 (computed) - 0.2369824385 (exact) =  3.6082e-16
+ 80: 0.2359860147 (computed) - 0.2359860147 (exact) =  5.8287e-16
+ 81: 0.2354744941 (computed) - 0.2354744941 (exact) = -8.8818e-16
+ 82: 0.2204604075 (computed) - 0.2204604075 (exact) =  5.5511e-16
+ 83: 0.2201724087 (computed) - 0.2201724087 (exact) =  8.3267e-17
+ 84: 0.2198327588 (computed) - 0.2198327588 (exact) = -3.6082e-16
+ 85: 0.2123984743 (computed) - 0.2123984743 (exact) = -1.1102e-16
+ 86: 0.2123460684 (computed) - 0.2123460684 (exact) =  6.6613e-16
+ 87: 0.2060181610 (computed) - 0.2060181610 (exact) =  6.6613e-16
+ 88: 0.2059885052 (computed) - 0.2059885052 (exact) =  7.4940e-16
+ 89: 0.2023186760 (computed) - 0.2023186760 (exact) = -3.8858e-16
+ 90: 0.2013692346 (computed) - 0.2013692346 (exact) =  6.6613e-16
+ 91: 0.1933190723 (computed) - 0.1933190723 (exact) =  5.8287e-16
+ 92: 0.1933064361 (computed) - 0.1933064361 (exact) = -6.6613e-16
+ 93: 0.1856111928 (computed) - 0.1856111928 (exact) =  4.1633e-16
+ 94: 0.1824035659 (computed) - 0.1824035659 (exact) = -9.9920e-16
+ 95: 0.1823606757 (computed) - 0.1823606757 (exact) = -1.3878e-16
+ 96: 0.1779664444 (computed) - 0.1779664444 (exact) =  1.1102e-16
+ 97: 0.1777443045 (computed) - 0.1777443045 (exact) = -5.8287e-16
+ 98: 0.1777250278 (computed) - 0.1777250278 (exact) =  6.3838e-16
+ 99: 0.1773355920 (computed) - 0.1773355920 (exact) =  6.1062e-16
+100: 0.1698301216 (computed) - 0.1698301216 (exact) = -1.6653e-16
+100 Eigenvalues converges, out of 100 requested.
+Running with l = 200
+Starting Davidson with n_aux = 800, l_buffer = 390, lc = 220, thresh = 0.003, max_iter = 500
+Iter 1: V_size = 40, Converged = 0, ‖r‖ (largest λ) = 0.011480073599996846
+Iter 2: V_size = 80, Converged = 0, ‖r‖ (largest λ) = 0.0009178868537195742
+Iter 3: V_size = 160, Converged = 0, ‖r‖ (largest λ) = 0.00021928799775316639
+Iter 4: V_size = 320, Converged = 0, ‖r‖ (largest λ) = 3.080038981651865e-5
+Iter 5: V_size = 628, Converged = 0, ‖r‖ (largest λ) = 3.1518103250815156e-6
+EV   1 converged λ = -41.7736162218, ‖r‖ = 7.52e-14, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 3.00e-14, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 2.09e-14, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 1.86e-14, stable for 3 iters
+EV   5 converged λ = -5.4867357314, ‖r‖ = 6.75e-15, stable for 3 iters
+EV   6 converged λ = -3.7366409838, ‖r‖ = 6.43e-15, stable for 3 iters
+EV   7 converged λ = -3.7365658009, ‖r‖ = 6.49e-15, stable for 3 iters
+EV   8 converged λ = -3.2147111475, ‖r‖ = 6.33e-15, stable for 3 iters
+EV   9 converged λ = -2.9171851071, ‖r‖ = 6.61e-15, stable for 3 iters
+EV  10 converged λ = -2.3436627916, ‖r‖ = 5.79e-15, stable for 3 iters
+EV  11 converged λ = -2.3421329598, ‖r‖ = 6.28e-15, stable for 3 iters
+EV  12 converged λ = -1.8313787990, ‖r‖ = 8.08e-15, stable for 3 iters
+EV  13 converged λ = -1.8302318116, ‖r‖ = 1.23e-14, stable for 3 iters
+EV  14 converged λ = -1.3463946793, ‖r‖ = 3.98e-15, stable for 3 iters
+EV  15 converged λ = -1.1821827552, ‖r‖ = 5.10e-15, stable for 3 iters
+EV  16 converged λ = -1.1820233138, ‖r‖ = 4.95e-15, stable for 3 iters
+EV  17 converged λ = -1.0757859280, ‖r‖ = 5.96e-15, stable for 3 iters
+EV  18 converged λ = -0.9519714914, ‖r‖ = 3.65e-15, stable for 3 iters
+EV  19 converged λ = -0.9515871966, ‖r‖ = 4.16e-15, stable for 3 iters
+EV  20 converged λ = -0.7484866263, ‖r‖ = 3.33e-15, stable for 3 iters
+EV  21 converged λ = -0.7480675498, ‖r‖ = 3.94e-15, stable for 3 iters
+EV  22 converged λ = -0.6611017313, ‖r‖ = 3.23e-15, stable for 3 iters
+EV  23 converged λ = -0.6608082648, ‖r‖ = 4.02e-15, stable for 3 iters
+Iter 6: V_size = 658, Converged = 23, ‖r‖ (largest λ) = 5.375401524639743e-5
+Iter 7: V_size = 616, Converged = 23, ‖r‖ (largest λ) = 1.269888521013054e-5
+Iter 8: V_size = 581, Converged = 23, ‖r‖ (largest λ) = 1.2267018508729529e-5
+EV  24 converged λ = -0.5775514450, ‖r‖ = 2.42e-15, stable for 3 iters
+EV  25 converged λ = -0.4976860636, ‖r‖ = 1.56e-15, stable for 3 iters
+EV  26 converged λ = -0.4965902543, ‖r‖ = 2.63e-15, stable for 3 iters
+EV  27 converged λ = -0.4828394889, ‖r‖ = 1.89e-15, stable for 3 iters
+EV  28 converged λ = -0.4459730203, ‖r‖ = 1.48e-15, stable for 3 iters
+EV  29 converged λ = -0.4326351295, ‖r‖ = 1.61e-15, stable for 3 iters
+EV  30 converged λ = -0.4323713676, ‖r‖ = 2.30e-15, stable for 3 iters
+EV  31 converged λ = -0.3791543425, ‖r‖ = 1.62e-15, stable for 3 iters
+EV  32 converged λ = -0.3788921614, ‖r‖ = 1.32e-15, stable for 3 iters
+EV  33 converged λ = -0.3537506434, ‖r‖ = 3.86e-15, stable for 3 iters
+EV  34 converged λ = -0.3534184490, ‖r‖ = 1.93e-15, stable for 3 iters
+EV  35 converged λ = -0.3077168637, ‖r‖ = 2.62e-15, stable for 3 iters
+EV  36 converged λ = -0.3076040426, ‖r‖ = 1.00e-15, stable for 3 iters
+EV  37 converged λ = -0.2739327311, ‖r‖ = 1.90e-15, stable for 3 iters
+EV  38 converged λ = -0.2416696040, ‖r‖ = 1.41e-15, stable for 3 iters
+EV  39 converged λ = -0.2414981245, ‖r‖ = 1.59e-15, stable for 3 iters
+EV  40 converged λ = -0.2319217832, ‖r‖ = 1.58e-15, stable for 3 iters
+EV  41 converged λ = -0.2314242588, ‖r‖ = 2.84e-15, stable for 3 iters
+EV  42 converged λ = -0.2162482525, ‖r‖ = 1.26e-15, stable for 3 iters
+EV  43 converged λ = -0.2159117710, ‖r‖ = 1.42e-15, stable for 3 iters
+EV  44 converged λ = -0.1895919323, ‖r‖ = 1.65e-15, stable for 3 iters
+EV  45 converged λ = -0.1706636384, ‖r‖ = 1.10e-15, stable for 3 iters
+EV  46 converged λ = -0.1657930118, ‖r‖ = 8.89e-16, stable for 3 iters
+EV  47 converged λ = -0.1657233306, ‖r‖ = 1.33e-15, stable for 3 iters
+EV  48 converged λ = -0.1558948613, ‖r‖ = 1.48e-15, stable for 3 iters
+EV  49 converged λ = -0.1557333464, ‖r‖ = 1.02e-15, stable for 3 iters
+EV  50 converged λ = -0.1530518424, ‖r‖ = 1.08e-15, stable for 3 iters
+EV  51 converged λ = -0.1524217487, ‖r‖ = 9.15e-16, stable for 3 iters
+EV  52 converged λ = -0.1440587149, ‖r‖ = 1.05e-15, stable for 3 iters
+EV  53 converged λ = -0.1440548290, ‖r‖ = 8.82e-16, stable for 3 iters
+EV  54 converged λ = -0.1327368792, ‖r‖ = 1.69e-15, stable for 3 iters
+EV  55 converged λ = -0.1324584618, ‖r‖ = 6.78e-16, stable for 3 iters
+EV  56 converged λ = -0.1137697108, ‖r‖ = 1.01e-15, stable for 3 iters
+EV  57 converged λ = -0.1133949027, ‖r‖ = 1.12e-15, stable for 3 iters
+EV  58 converged λ = -0.0995094354, ‖r‖ = 1.54e-15, stable for 3 iters
+EV  59 converged λ = -0.0988872345, ‖r‖ = 8.09e-16, stable for 3 iters
+EV  60 converged λ = -0.0973754155, ‖r‖ = 1.74e-15, stable for 3 iters
+EV  61 converged λ = -0.0949131039, ‖r‖ = 1.15e-15, stable for 3 iters
+EV  62 converged λ = -0.0906898247, ‖r‖ = 1.02e-15, stable for 3 iters
+EV  63 converged λ = -0.0901092951, ‖r‖ = 1.27e-15, stable for 3 iters
+EV  64 converged λ = -0.0895073459, ‖r‖ = 8.15e-16, stable for 3 iters
+EV  65 converged λ = -0.0894398411, ‖r‖ = 1.32e-15, stable for 3 iters
+EV  66 converged λ = -0.0787353077, ‖r‖ = 1.05e-15, stable for 3 iters
+EV  67 converged λ = -0.0781754997, ‖r‖ = 1.43e-15, stable for 3 iters
+EV  68 converged λ = -0.0727134369, ‖r‖ = 2.51e-15, stable for 3 iters
+EV  69 converged λ = -0.0704466266, ‖r‖ = 1.02e-15, stable for 3 iters
+EV  70 converged λ = -0.0703960307, ‖r‖ = 1.09e-15, stable for 3 iters
+EV  71 converged λ = -0.0661627022, ‖r‖ = 1.47e-15, stable for 3 iters
+EV  72 converged λ = -0.0650376311, ‖r‖ = 5.70e-16, stable for 3 iters
+EV  73 converged λ = -0.0650363885, ‖r‖ = 8.12e-16, stable for 3 iters
+EV  74 converged λ = -0.0618538000, ‖r‖ = 9.65e-16, stable for 3 iters
+EV  75 converged λ = -0.0615962685, ‖r‖ = 1.43e-15, stable for 3 iters
+EV  76 converged λ = -0.0602665723, ‖r‖ = 1.19e-15, stable for 3 iters
+EV  77 converged λ = -0.0602473560, ‖r‖ = 8.19e-16, stable for 3 iters
+EV  78 converged λ = -0.0562235969, ‖r‖ = 8.53e-16, stable for 3 iters
+EV  79 converged λ = -0.0561606762, ‖r‖ = 9.79e-16, stable for 3 iters
+EV  80 converged λ = -0.0556893991, ‖r‖ = 8.75e-16, stable for 3 iters
+EV  81 converged λ = -0.0554482374, ‖r‖ = 9.98e-16, stable for 3 iters
+EV  82 converged λ = -0.0486027913, ‖r‖ = 1.00e-15, stable for 3 iters
+EV  83 converged λ = -0.0484758895, ‖r‖ = 1.13e-15, stable for 3 iters
+EV  84 converged λ = -0.0483264419, ‖r‖ = 1.19e-15, stable for 3 iters
+EV  85 converged λ = -0.0451131119, ‖r‖ = 8.89e-16, stable for 3 iters
+EV  86 converged λ = -0.0450908528, ‖r‖ = 7.72e-16, stable for 3 iters
+EV  87 converged λ = -0.0424434827, ‖r‖ = 9.93e-16, stable for 3 iters
+EV  88 converged λ = -0.0424312643, ‖r‖ = 6.82e-16, stable for 3 iters
+EV  89 converged λ = -0.0409328467, ‖r‖ = 8.48e-16, stable for 3 iters
+EV  90 converged λ = -0.0405495687, ‖r‖ = 1.16e-15, stable for 3 iters
+EV  91 converged λ = -0.0373722637, ‖r‖ = 1.29e-15, stable for 3 iters
+EV  92 converged λ = -0.0373673783, ‖r‖ = 8.21e-16, stable for 3 iters
+EV  93 converged λ = -0.0344515149, ‖r‖ = 7.35e-16, stable for 3 iters
+EV  94 converged λ = -0.0332710608, ‖r‖ = 1.14e-15, stable for 3 iters
+EV  95 converged λ = -0.0332554161, ‖r‖ = 9.21e-16, stable for 3 iters
+EV  96 converged λ = -0.0316720553, ‖r‖ = 8.60e-16, stable for 3 iters
+EV  97 converged λ = -0.0315930378, ‖r‖ = 8.07e-16, stable for 3 iters
+EV  98 converged λ = -0.0315861855, ‖r‖ = 1.07e-15, stable for 3 iters
+EV  99 converged λ = -0.0314479122, ‖r‖ = 8.54e-16, stable for 3 iters
+EV 100 converged λ = -0.0288422702, ‖r‖ = 1.67e-15, stable for 3 iters
+EV 101 converged λ = -0.0270341081, ‖r‖ = 6.09e-16, stable for 3 iters
+EV 102 converged λ = -0.0269430459, ‖r‖ = 9.38e-16, stable for 3 iters
+EV 103 converged λ = -0.0261312727, ‖r‖ = 6.81e-16, stable for 3 iters
+EV 104 converged λ = -0.0260029239, ‖r‖ = 7.49e-16, stable for 3 iters
+EV 105 converged λ = -0.0258961356, ‖r‖ = 9.64e-16, stable for 3 iters
+EV 106 converged λ = -0.0256713936, ‖r‖ = 1.10e-15, stable for 3 iters
+EV 107 converged λ = -0.0256227449, ‖r‖ = 1.23e-15, stable for 3 iters
+EV 108 converged λ = -0.0245529395, ‖r‖ = 6.32e-16, stable for 3 iters
+EV 109 converged λ = -0.0243833642, ‖r‖ = 8.99e-16, stable for 3 iters
+EV 110 converged λ = -0.0231171144, ‖r‖ = 6.98e-16, stable for 3 iters
+EV 111 converged λ = -0.0230890091, ‖r‖ = 5.41e-16, stable for 3 iters
+EV 112 converged λ = -0.0229082494, ‖r‖ = 8.93e-16, stable for 3 iters
+EV 113 converged λ = -0.0227806398, ‖r‖ = 5.27e-16, stable for 3 iters
+EV 114 converged λ = -0.0221155618, ‖r‖ = 1.08e-15, stable for 3 iters
+EV 115 converged λ = -0.0220811249, ‖r‖ = 7.87e-16, stable for 3 iters
+EV 116 converged λ = -0.0210228797, ‖r‖ = 1.24e-15, stable for 3 iters
+EV 117 converged λ = -0.0208679120, ‖r‖ = 7.46e-16, stable for 3 iters
+EV 118 converged λ = -0.0187969204, ‖r‖ = 5.10e-16, stable for 3 iters
+EV 119 converged λ = -0.0187024286, ‖r‖ = 9.87e-16, stable for 3 iters
+EV 120 converged λ = -0.0179784406, ‖r‖ = 5.46e-16, stable for 3 iters
+EV 121 converged λ = -0.0176597250, ‖r‖ = 6.41e-16, stable for 3 iters
+EV 122 converged λ = -0.0170719211, ‖r‖ = 1.22e-15, stable for 3 iters
+EV 123 converged λ = -0.0170266991, ‖r‖ = 8.01e-16, stable for 3 iters
+EV 124 converged λ = -0.0167554589, ‖r‖ = 9.54e-16, stable for 3 iters
+EV 125 converged λ = -0.0160333224, ‖r‖ = 6.26e-16, stable for 3 iters
+EV 126 converged λ = -0.0159287089, ‖r‖ = 8.69e-16, stable for 3 iters
+EV 127 converged λ = -0.0158998711, ‖r‖ = 4.86e-16, stable for 3 iters
+EV 128 converged λ = -0.0158933520, ‖r‖ = 6.53e-16, stable for 3 iters
+EV 129 converged λ = -0.0142983333, ‖r‖ = 1.22e-15, stable for 3 iters
+EV 130 converged λ = -0.0142009218, ‖r‖ = 9.94e-16, stable for 3 iters
+EV 131 converged λ = -0.0136445276, ‖r‖ = 7.21e-16, stable for 3 iters
+EV 132 converged λ = -0.0136143901, ‖r‖ = 1.14e-15, stable for 3 iters
+EV 133 converged λ = -0.0135954004, ‖r‖ = 9.09e-16, stable for 3 iters
+EV 134 converged λ = -0.0135232158, ‖r‖ = 9.27e-16, stable for 3 iters
+EV 135 converged λ = -0.0130414759, ‖r‖ = 6.57e-16, stable for 3 iters
+EV 136 converged λ = -0.0130244164, ‖r‖ = 9.36e-16, stable for 3 iters
+EV 137 converged λ = -0.0122053181, ‖r‖ = 5.85e-16, stable for 3 iters
+EV 138 converged λ = -0.0121048497, ‖r‖ = 9.02e-16, stable for 3 iters
+EV 139 converged λ = -0.0119762647, ‖r‖ = 9.61e-16, stable for 3 iters
+EV 140 converged λ = -0.0118525935, ‖r‖ = 6.65e-16, stable for 3 iters
+EV 141 converged λ = -0.0115263235, ‖r‖ = 8.52e-16, stable for 3 iters
+EV 142 converged λ = -0.0114970309, ‖r‖ = 7.19e-16, stable for 3 iters
+EV 143 converged λ = -0.0105315981, ‖r‖ = 6.66e-16, stable for 3 iters
+EV 144 converged λ = -0.0105278191, ‖r‖ = 8.95e-16, stable for 3 iters
+EV 145 converged λ = -0.0104440354, ‖r‖ = 1.76e-15, stable for 3 iters
+EV 146 converged λ = -0.0100091985, ‖r‖ = 1.78e-15, stable for 3 iters
+EV 147 converged λ = -0.0098954825, ‖r‖ = 1.17e-15, stable for 3 iters
+EV 148 converged λ = -0.0098735214, ‖r‖ = 7.64e-16, stable for 3 iters
+EV 149 converged λ = -0.0096869294, ‖r‖ = 9.76e-16, stable for 3 iters
+EV 150 converged λ = -0.0095825139, ‖r‖ = 7.97e-16, stable for 3 iters
+EV 151 converged λ = -0.0095555759, ‖r‖ = 1.02e-15, stable for 3 iters
+EV 152 converged λ = -0.0094761131, ‖r‖ = 7.80e-16, stable for 3 iters
+EV 153 converged λ = -0.0092469782, ‖r‖ = 1.31e-15, stable for 3 iters
+EV 154 converged λ = -0.0092379185, ‖r‖ = 1.23e-15, stable for 3 iters
+EV 155 converged λ = -0.0091357031, ‖r‖ = 9.34e-16, stable for 3 iters
+EV 156 converged λ = -0.0091280491, ‖r‖ = 9.10e-16, stable for 3 iters
+EV 157 converged λ = -0.0090521292, ‖r‖ = 3.42e-15, stable for 3 iters
+EV 158 converged λ = -0.0090413932, ‖r‖ = 2.19e-15, stable for 3 iters
+EV 159 converged λ = -0.0083676911, ‖r‖ = 3.31e-15, stable for 3 iters
+EV 160 converged λ = -0.0082975846, ‖r‖ = 1.63e-15, stable for 3 iters
+EV 161 converged λ = -0.0080429122, ‖r‖ = 1.63e-15, stable for 3 iters
+EV 162 converged λ = -0.0080296906, ‖r‖ = 2.99e-15, stable for 3 iters
+EV 163 converged λ = -0.0078666585, ‖r‖ = 1.28e-15, stable for 3 iters
+EV 164 converged λ = -0.0078567703, ‖r‖ = 1.14e-15, stable for 3 iters
+EV 165 converged λ = -0.0076878061, ‖r‖ = 9.49e-16, stable for 3 iters
+EV 166 converged λ = -0.0070066150, ‖r‖ = 3.78e-15, stable for 3 iters
+EV 167 converged λ = -0.0069929915, ‖r‖ = 2.61e-15, stable for 3 iters
+EV 168 converged λ = -0.0068021577, ‖r‖ = 6.36e-15, stable for 3 iters
+EV 169 converged λ = -0.0067797093, ‖r‖ = 1.13e-14, stable for 3 iters
+EV 170 converged λ = -0.0067212156, ‖r‖ = 6.88e-15, stable for 3 iters
+EV 171 converged λ = -0.0066824059, ‖r‖ = 4.98e-15, stable for 3 iters
+EV 172 converged λ = -0.0066692597, ‖r‖ = 2.52e-15, stable for 3 iters
+EV 173 converged λ = -0.0066067173, ‖r‖ = 2.49e-15, stable for 3 iters
+EV 174 converged λ = -0.0064250722, ‖r‖ = 5.23e-15, stable for 3 iters
+EV 175 converged λ = -0.0060134172, ‖r‖ = 1.83e-14, stable for 3 iters
+EV 176 converged λ = -0.0060131972, ‖r‖ = 8.60e-15, stable for 3 iters
+EV 177 converged λ = -0.0060013077, ‖r‖ = 1.51e-14, stable for 3 iters
+EV 178 converged λ = -0.0059520097, ‖r‖ = 1.20e-14, stable for 3 iters
+EV 179 converged λ = -0.0058672676, ‖r‖ = 1.85e-14, stable for 3 iters
+EV 180 converged λ = -0.0058038438, ‖r‖ = 3.01e-14, stable for 3 iters
+EV 181 converged λ = -0.0054199550, ‖r‖ = 2.72e-14, stable for 3 iters
+EV 182 converged λ = -0.0053330977, ‖r‖ = 6.13e-14, stable for 3 iters
+EV 183 converged λ = -0.0050183237, ‖r‖ = 3.35e-14, stable for 3 iters
+EV 184 converged λ = -0.0050143434, ‖r‖ = 5.55e-14, stable for 3 iters
+EV 185 converged λ = -0.0050015290, ‖r‖ = 2.61e-14, stable for 3 iters
+EV 186 converged λ = -0.0049175298, ‖r‖ = 7.71e-14, stable for 3 iters
+EV 187 converged λ = -0.0049065399, ‖r‖ = 3.26e-14, stable for 3 iters
+EV 188 converged λ = -0.0048773024, ‖r‖ = 3.30e-14, stable for 3 iters
+EV 189 converged λ = -0.0048671010, ‖r‖ = 7.93e-14, stable for 3 iters
+EV 190 converged λ = -0.0047429362, ‖r‖ = 1.09e-13, stable for 3 iters
+EV 191 converged λ = -0.0047038862, ‖r‖ = 1.16e-13, stable for 3 iters
+EV 192 converged λ = -0.0044775465, ‖r‖ = 1.77e-13, stable for 3 iters
+EV 193 converged λ = -0.0044154633, ‖r‖ = 1.16e-13, stable for 3 iters
+EV 194 converged λ = -0.0041833277, ‖r‖ = 1.65e-13, stable for 3 iters
+EV 195 converged λ = -0.0041740122, ‖r‖ = 9.48e-14, stable for 3 iters
+EV 196 converged λ = -0.0041354361, ‖r‖ = 1.81e-13, stable for 3 iters
+EV 197 converged λ = -0.0041328757, ‖r‖ = 2.21e-14, stable for 3 iters
+EV 198 converged λ = -0.0041138374, ‖r‖ = 1.63e-13, stable for 3 iters
+EV 199 converged λ = -0.0039873538, ‖r‖ = 3.02e-13, stable for 3 iters
+EV 200 converged λ = -0.0039773206, ‖r‖ = 5.35e-13, stable for 3 iters
+EV 201 converged λ = -0.0038286397, ‖r‖ = 1.74e-13, stable for 3 iters
+EV 202 converged λ = -0.0038282311, ‖r‖ = 4.47e-13, stable for 3 iters
+EV 203 converged λ = -0.0038148298, ‖r‖ = 2.99e-13, stable for 3 iters
+EV 204 converged λ = -0.0037143922, ‖r‖ = 7.28e-13, stable for 3 iters
+EV 205 converged λ = -0.0036657967, ‖r‖ = 2.91e-13, stable for 3 iters
+EV 206 converged λ = -0.0035806763, ‖r‖ = 1.38e-12, stable for 3 iters
+EV 207 converged λ = -0.0035497287, ‖r‖ = 1.23e-12, stable for 3 iters
+EV 208 converged λ = -0.0035345321, ‖r‖ = 6.89e-13, stable for 3 iters
+EV 209 converged λ = -0.0035225228, ‖r‖ = 8.76e-13, stable for 3 iters
+EV 210 converged λ = -0.0035122842, ‖r‖ = 7.76e-13, stable for 3 iters
+EV 211 converged λ = -0.0035012866, ‖r‖ = 5.21e-13, stable for 3 iters
+EV 212 converged λ = -0.0034342920, ‖r‖ = 1.29e-12, stable for 3 iters
+EV 213 converged λ = -0.0034250807, ‖r‖ = 1.46e-12, stable for 3 iters
+EV 214 converged λ = -0.0033493828, ‖r‖ = 4.41e-13, stable for 3 iters
+EV 215 converged λ = -0.0033211788, ‖r‖ = 1.96e-12, stable for 3 iters
+EV 216 converged λ = -0.0031266175, ‖r‖ = 3.63e-12, stable for 3 iters
+EV 217 converged λ = -0.0031219251, ‖r‖ = 2.79e-12, stable for 3 iters
+EV 218 converged λ = -0.0030643583, ‖r‖ = 7.95e-13, stable for 3 iters
+EV 219 converged λ = -0.0030599566, ‖r‖ = 4.94e-12, stable for 3 iters
+EV 220 converged λ = -0.0030303642, ‖r‖ = 2.78e-12, stable for 3 iters
+Converged all required eigenvalues.
+910.759524 seconds (11.51 M allocations: 334.170 GiB, 0.53% gc time)
+Number of FLOPs: 59224288452110
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) =  0.0000e+00
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -3.5527e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) =  1.7764e-15
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) =  8.8818e-16
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -1.3323e-15
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  1.1102e-15
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  4.4409e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) =  1.3323e-15
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  0.0000e+00
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  1.9984e-15
+ 11: 1.5304028750 (computed) - 1.5304028750 (exact) =  1.1102e-15
+ 12: 1.3532844487 (computed) - 1.3532844487 (exact) = -2.2204e-16
+ 13: 1.3528606032 (computed) - 1.3528606032 (exact) =  2.2204e-16
+ 14: 1.1603424836 (computed) - 1.1603424836 (exact) = -1.3323e-15
+ 15: 1.0872822794 (computed) - 1.0872822794 (exact) = -1.5543e-15
+ 16: 1.0872089559 (computed) - 1.0872089559 (exact) = -1.1102e-15
+ 17: 1.0372010066 (computed) - 1.0372010066 (exact) = -2.2204e-15
+ 18: 0.9756902641 (computed) - 0.9756902641 (exact) =  2.2204e-16
+ 19: 0.9754933093 (computed) - 0.9754933093 (exact) = -2.2204e-16
+ 20: 0.8651512159 (computed) - 0.8651512159 (exact) =  5.5511e-16
+ 21: 0.8649089835 (computed) - 0.8649089835 (exact) = -1.8874e-15
+ 22: 0.8130816265 (computed) - 0.8130816265 (exact) =  1.7764e-15
+ 23: 0.8129011408 (computed) - 0.8129011408 (exact) =  8.8818e-16
+ 24: 0.7599680553 (computed) - 0.7599680553 (exact) = -3.3307e-16
+ 25: 0.7054686836 (computed) - 0.7054686836 (exact) =  1.1102e-16
+ 26: 0.7046916022 (computed) - 0.7046916022 (exact) =  2.2204e-16
+ 27: 0.6948665259 (computed) - 0.6948665259 (exact) = -1.1102e-16
+ 28: 0.6678121145 (computed) - 0.6678121145 (exact) = -1.1102e-16
+ 29: 0.6577500510 (computed) - 0.6577500510 (exact) =  0.0000e+00
+ 30: 0.6575495172 (computed) - 0.6575495172 (exact) = -2.2204e-16
+ 31: 0.6157550994 (computed) - 0.6157550994 (exact) =  2.2204e-16
+ 32: 0.6155421687 (computed) - 0.6155421687 (exact) = -4.4409e-16
+ 33: 0.5947694036 (computed) - 0.5947694036 (exact) = -1.1102e-16
+ 34: 0.5944900748 (computed) - 0.5944900748 (exact) =  0.0000e+00
+ 35: 0.5547223303 (computed) - 0.5547223303 (exact) =  0.0000e+00
+ 36: 0.5546206295 (computed) - 0.5546206295 (exact) = -6.6613e-16
+ 37: 0.5233858339 (computed) - 0.5233858339 (exact) =  2.2204e-16
+ 38: 0.4915990276 (computed) - 0.4915990276 (exact) =  0.0000e+00
+ 39: 0.4914245868 (computed) - 0.4914245868 (exact) = -1.6653e-16
+ 40: 0.4815825819 (computed) - 0.4815825819 (exact) =  1.1102e-16
+ 41: 0.4810657531 (computed) - 0.4810657531 (exact) =  1.1102e-16
+ 42: 0.4650250021 (computed) - 0.4650250021 (exact) =  2.7756e-16
+ 43: 0.4646630726 (computed) - 0.4646630726 (exact) = -2.2204e-16
+ 44: 0.4354215570 (computed) - 0.4354215570 (exact) = -2.2204e-16
+ 45: 0.4131145584 (computed) - 0.4131145584 (exact) = -1.1102e-16
+ 46: 0.4071768803 (computed) - 0.4071768803 (exact) = -1.1102e-16
+ 47: 0.4070913050 (computed) - 0.4070913050 (exact) = -1.1102e-16
+ 48: 0.3948352331 (computed) - 0.3948352331 (exact) = -2.2204e-16
+ 49: 0.3946306455 (computed) - 0.3946306455 (exact) =  5.5511e-17
+ 50: 0.3912184075 (computed) - 0.3912184075 (exact) = -3.3307e-16
+ 51: 0.3904122804 (computed) - 0.3904122804 (exact) = -2.2204e-16
+ 52: 0.3795506751 (computed) - 0.3795506751 (exact) =  0.0000e+00
+ 53: 0.3795455559 (computed) - 0.3795455559 (exact) =  2.2204e-16
+ 54: 0.3643307277 (computed) - 0.3643307277 (exact) = -5.5511e-17
+ 55: 0.3639484329 (computed) - 0.3639484329 (exact) =  0.0000e+00
+ 56: 0.3372976590 (computed) - 0.3372976590 (exact) =  1.1102e-16
+ 57: 0.3367415964 (computed) - 0.3367415964 (exact) =  5.5511e-17
+ 58: 0.3154511616 (computed) - 0.3154511616 (exact) =  2.7756e-16
+ 59: 0.3144634072 (computed) - 0.3144634072 (exact) =  1.1102e-16
+ 60: 0.3120503413 (computed) - 0.3120503413 (exact) = -5.5511e-17
+ 61: 0.3080797038 (computed) - 0.3080797038 (exact) =  0.0000e+00
+ 62: 0.3011475133 (computed) - 0.3011475133 (exact) =  2.2204e-16
+ 63: 0.3001821032 (computed) - 0.3001821032 (exact) =  5.5511e-17
+ 64: 0.2991777831 (computed) - 0.2991777831 (exact) = -5.5511e-17
+ 65: 0.2990649447 (computed) - 0.2990649447 (exact) =  5.5511e-17
+ 66: 0.2805981250 (computed) - 0.2805981250 (exact) =  0.0000e+00
+ 67: 0.2795988192 (computed) - 0.2795988192 (exact) =  5.5511e-17
+ 68: 0.2696542915 (computed) - 0.2696542915 (exact) =  1.6653e-16
+ 69: 0.2654178339 (computed) - 0.2654178339 (exact) =  0.0000e+00
+ 70: 0.2653225032 (computed) - 0.2653225032 (exact) =  1.1102e-16
+ 71: 0.2572211153 (computed) - 0.2572211153 (exact) =  1.1102e-16
+ 72: 0.2550247657 (computed) - 0.2550247657 (exact) = -5.5511e-17
+ 73: 0.2550223295 (computed) - 0.2550223295 (exact) = -5.5511e-17
+ 74: 0.2487042420 (computed) - 0.2487042420 (exact) = -8.3267e-17
+ 75: 0.2481859554 (computed) - 0.2481859554 (exact) =  0.0000e+00
+ 76: 0.2454925096 (computed) - 0.2454925096 (exact) = -1.3878e-16
+ 77: 0.2454533683 (computed) - 0.2454533683 (exact) =  1.9429e-16
+ 78: 0.2371151553 (computed) - 0.2371151553 (exact) =  8.3267e-17
+ 79: 0.2369824385 (computed) - 0.2369824385 (exact) = -1.1102e-16
+ 80: 0.2359860147 (computed) - 0.2359860147 (exact) =  8.3267e-17
+ 81: 0.2354744941 (computed) - 0.2354744941 (exact) = -1.1102e-16
+ 82: 0.2204604075 (computed) - 0.2204604075 (exact) = -5.5511e-17
+ 83: 0.2201724087 (computed) - 0.2201724087 (exact) =  2.2204e-16
+ 84: 0.2198327588 (computed) - 0.2198327588 (exact) =  5.5511e-17
+ 85: 0.2123984743 (computed) - 0.2123984743 (exact) =  8.3267e-17
+ 86: 0.2123460684 (computed) - 0.2123460684 (exact) =  5.5511e-17
+ 87: 0.2060181610 (computed) - 0.2060181610 (exact) =  3.3307e-16
+ 88: 0.2059885052 (computed) - 0.2059885052 (exact) =  8.3267e-17
+ 89: 0.2023186760 (computed) - 0.2023186760 (exact) =  1.3878e-16
+ 90: 0.2013692346 (computed) - 0.2013692346 (exact) =  0.0000e+00
+ 91: 0.1933190723 (computed) - 0.1933190723 (exact) = -2.7756e-17
+ 92: 0.1933064361 (computed) - 0.1933064361 (exact) =  0.0000e+00
+ 93: 0.1856111928 (computed) - 0.1856111928 (exact) = -2.2204e-16
+ 94: 0.1824035659 (computed) - 0.1824035659 (exact) =  2.2204e-16
+ 95: 0.1823606757 (computed) - 0.1823606757 (exact) = -2.7756e-17
+ 96: 0.1779664444 (computed) - 0.1779664444 (exact) =  5.5511e-17
+ 97: 0.1777443045 (computed) - 0.1777443045 (exact) = -2.7756e-17
+ 98: 0.1777250278 (computed) - 0.1777250278 (exact) =  5.5511e-17
+ 99: 0.1773355920 (computed) - 0.1773355920 (exact) = -1.3878e-16
+100: 0.1698301216 (computed) - 0.1698301216 (exact) =  2.7756e-17
+101: 0.1644205221 (computed) - 0.1644205221 (exact) = -1.1102e-16
+102: 0.1641433698 (computed) - 0.1641433698 (exact) = -2.7756e-17
+103: 0.1616517018 (computed) - 0.1616517018 (exact) = -8.3267e-17
+104: 0.1612542213 (computed) - 0.1612542213 (exact) =  0.0000e+00
+105: 0.1609227627 (computed) - 0.1609227627 (exact) = -8.3267e-17
+106: 0.1602229498 (computed) - 0.1602229498 (exact) =  2.2204e-16
+107: 0.1600710620 (computed) - 0.1600710620 (exact) =  5.5511e-17
+108: 0.1566937762 (computed) - 0.1566937762 (exact) = -5.5511e-17
+109: 0.1561517344 (computed) - 0.1561517344 (exact) =  3.6082e-16
+110: 0.1520431333 (computed) - 0.1520431333 (exact) = -1.6653e-16
+111: 0.1519506799 (computed) - 0.1519506799 (exact) =  2.7756e-16
+112: 0.1513547139 (computed) - 0.1513547139 (exact) = -2.7756e-16
+113: 0.1509325671 (computed) - 0.1509325671 (exact) = -2.4980e-16
+114: 0.1487130181 (computed) - 0.1487130181 (exact) = -1.1102e-16
+115: 0.1485971899 (computed) - 0.1485971899 (exact) =  1.6653e-16
+116: 0.1449926885 (computed) - 0.1449926885 (exact) = -4.1633e-16
+117: 0.1444573017 (computed) - 0.1444573017 (exact) =  2.7756e-17
+118: 0.1371018614 (computed) - 0.1371018614 (exact) =  3.6082e-16
+119: 0.1367568228 (computed) - 0.1367568228 (exact) =  2.7756e-17
+120: 0.1340837076 (computed) - 0.1340837076 (exact) =  2.2204e-16
+121: 0.1328898979 (computed) - 0.1328898979 (exact) =  2.7756e-17
+122: 0.1306595620 (computed) - 0.1306595620 (exact) =  0.0000e+00
+123: 0.1304863942 (computed) - 0.1304863942 (exact) = -5.5511e-17
+124: 0.1294428789 (computed) - 0.1294428789 (exact) = -5.5511e-17
+125: 0.1266227563 (computed) - 0.1266227563 (exact) = -2.7756e-17
+126: 0.1262089891 (computed) - 0.1262089891 (exact) = -2.7756e-17
+127: 0.1260946910 (computed) - 0.1260946910 (exact) = -1.6653e-16
+128: 0.1260688384 (computed) - 0.1260688384 (exact) =  0.0000e+00
+129: 0.1195756383 (computed) - 0.1195756383 (exact) = -5.5511e-17
+130: 0.1191676207 (computed) - 0.1191676207 (exact) = -3.7470e-16
+131: 0.1168097922 (computed) - 0.1168097922 (exact) =  2.3592e-16
+132: 0.1166807188 (computed) - 0.1166807188 (exact) =  4.7184e-16
+133: 0.1165993156 (computed) - 0.1165993156 (exact) = -5.8287e-16
+134: 0.1162893625 (computed) - 0.1162893625 (exact) = -2.2204e-16
+135: 0.1141992815 (computed) - 0.1141992815 (exact) =  4.1633e-17
+136: 0.1141245651 (computed) - 0.1141245651 (exact) = -2.0817e-16
+137: 0.1104776816 (computed) - 0.1104776816 (exact) =  2.6368e-16
+138: 0.1100220420 (computed) - 0.1100220420 (exact) = -5.5511e-17
+139: 0.1094361214 (computed) - 0.1094361214 (exact) =  0.0000e+00
+140: 0.1088696169 (computed) - 0.1088696169 (exact) =  1.1102e-16
+141: 0.1073607167 (computed) - 0.1073607167 (exact) =  2.2204e-16
+142: 0.1072242084 (computed) - 0.1072242084 (exact) =  2.2204e-16
+143: 0.1026235749 (computed) - 0.1026235749 (exact) =  1.2490e-16
+144: 0.1026051611 (computed) - 0.1026051611 (exact) = -5.5511e-17
+145: 0.1021960635 (computed) - 0.1021960635 (exact) =  9.7145e-17
+146: 0.1000459818 (computed) - 0.1000459818 (exact) =  2.7756e-17
+147: 0.0994760400 (computed) - 0.0994760400 (exact) = -2.6368e-16
+148: 0.0993655948 (computed) - 0.0993655948 (exact) =  1.1102e-16
+149: 0.0984221997 (computed) - 0.0984221997 (exact) = -2.3592e-16
+150: 0.0978903156 (computed) - 0.0978903156 (exact) = -2.4980e-16
+151: 0.0977526260 (computed) - 0.0977526260 (exact) =  1.3878e-17
+152: 0.0973453292 (computed) - 0.0973453292 (exact) =  1.3878e-16
+153: 0.0961612096 (computed) - 0.0961612096 (exact) =  9.7145e-17
+154: 0.0961140912 (computed) - 0.0961140912 (exact) = -1.5266e-16
+155: 0.0955808723 (computed) - 0.0955808723 (exact) = -1.3878e-16
+156: 0.0955408241 (computed) - 0.0955408241 (exact) = -6.1062e-16
+157: 0.0951426780 (computed) - 0.0951426780 (exact) =  1.6653e-16
+158: 0.0950862411 (computed) - 0.0950862411 (exact) = -1.2490e-16
+159: 0.0914750848 (computed) - 0.0914750848 (exact) = -3.3307e-16
+160: 0.0910910788 (computed) - 0.0910910788 (exact) =  3.1919e-16
+161: 0.0896822848 (computed) - 0.0896822848 (exact) = -2.7756e-16
+162: 0.0896085411 (computed) - 0.0896085411 (exact) = -4.9960e-16
+163: 0.0886941852 (computed) - 0.0886941852 (exact) = -1.6653e-16
+164: 0.0886384245 (computed) - 0.0886384245 (exact) =  2.0817e-16
+165: 0.0876801352 (computed) - 0.0876801352 (exact) = -1.9429e-16
+166: 0.0837055256 (computed) - 0.0837055256 (exact) = -4.3021e-16
+167: 0.0836241085 (computed) - 0.0836241085 (exact) = -2.2204e-16
+168: 0.0824751942 (computed) - 0.0824751942 (exact) =  1.1102e-16
+169: 0.0823389903 (computed) - 0.0823389903 (exact) = -1.9429e-16
+170: 0.0819830203 (computed) - 0.0819830203 (exact) =  6.9389e-17
+171: 0.0817459843 (computed) - 0.0817459843 (exact) =  3.0531e-16
+172: 0.0816655358 (computed) - 0.0816655358 (exact) =  1.6653e-16
+173: 0.0812817159 (computed) - 0.0812817159 (exact) = -1.8041e-16
+174: 0.0801565480 (computed) - 0.0801565480 (exact) = -4.1633e-17
+175: 0.0775462260 (computed) - 0.0775462260 (exact) = -1.6653e-16
+176: 0.0775448077 (computed) - 0.0775448077 (exact) = -4.0246e-16
+177: 0.0774681075 (computed) - 0.0774681075 (exact) = -1.3878e-16
+178: 0.0771492687 (computed) - 0.0771492687 (exact) =  7.4940e-16
+179: 0.0765980914 (computed) - 0.0765980914 (exact) = -5.8287e-16
+180: 0.0761829625 (computed) - 0.0761829625 (exact) =  2.2204e-16
+181: 0.0736203439 (computed) - 0.0736203439 (exact) =  6.9389e-17
+182: 0.0730280612 (computed) - 0.0730280612 (exact) =  5.1348e-16
+183: 0.0708401275 (computed) - 0.0708401275 (exact) =  1.8041e-16
+184: 0.0708120287 (computed) - 0.0708120287 (exact) = -4.7184e-16
+185: 0.0707214890 (computed) - 0.0707214890 (exact) = -2.4980e-16
+186: 0.0701251008 (computed) - 0.0701251008 (exact) =  2.0817e-16
+187: 0.0700466977 (computed) - 0.0700466977 (exact) = -6.9389e-17
+188: 0.0698376864 (computed) - 0.0698376864 (exact) =  2.0817e-16
+189: 0.0697646116 (computed) - 0.0697646116 (exact) =  3.0531e-16
+190: 0.0688689785 (computed) - 0.0688689785 (exact) = -5.1348e-16
+191: 0.0685848835 (computed) - 0.0685848835 (exact) = -9.7145e-17
+192: 0.0669144717 (computed) - 0.0669144717 (exact) =  3.3307e-16
+193: 0.0664489524 (computed) - 0.0664489524 (exact) = -5.4123e-16
+194: 0.0646786496 (computed) - 0.0646786496 (exact) =  4.1633e-17
+195: 0.0646065956 (computed) - 0.0646065956 (exact) = -1.1102e-16
+196: 0.0643073561 (computed) - 0.0643073561 (exact) =  5.9674e-16
+197: 0.0642874463 (computed) - 0.0642874463 (exact) = -2.2204e-16
+198: 0.0641392034 (computed) - 0.0641392034 (exact) =  4.5797e-16
+199: 0.0631454967 (computed) - 0.0631454967 (exact) = -4.3021e-16
+200: 0.0630660017 (computed) - 0.0630660017 (exact) =  1.1102e-16
+200 Eigenvalues converges, out of 200 requested.
+Running with beta = 25
+Running with l = 10
+Starting Davidson with n_aux = 400, l_buffer = 20, lc = 11, thresh = 0.0015, max_iter = 500
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.01243789060943334
+Iter 2: V_size = 52, Converged = 0, ‖r‖ (largest λ) = 0.037738963838909075
+Iter 3: V_size = 72, Converged = 0, ‖r‖ (largest λ) = 0.16311511998883652
+Iter 4: V_size = 92, Converged = 0, ‖r‖ (largest λ) = 0.0128062292593859
+Iter 5: V_size = 112, Converged = 0, ‖r‖ (largest λ) = 0.0011448349916349603
+EV   1 converged λ = -41.7736162218, ‖r‖ = 1.23e-11, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 2.66e-11, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 2.92e-09, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 8.47e-10, stable for 3 iters
+EV   5 converged λ = -3.2147111475, ‖r‖ = 9.90e-08, stable for 3 iters
+Iter 6: V_size = 127, Converged = 5, ‖r‖ (largest λ) = 3.22070791831394e-5
+EV   6 converged λ = -5.4867357314, ‖r‖ = 2.80e-10, stable for 3 iters
+EV   7 converged λ = -3.7366409838, ‖r‖ = 1.09e-08, stable for 3 iters
+Iter 7: V_size = 140, Converged = 7, ‖r‖ (largest λ) = 2.0945935934393818e-7
+Iter 8: V_size = 147, Converged = 7, ‖r‖ (largest λ) = 2.2632814331435434e-8
+Iter 9: V_size = 151, Converged = 7, ‖r‖ (largest λ) = 2.06561156502039e-7
+Iter 10: V_size = 153, Converged = 7, ‖r‖ (largest λ) = 2.2795895021916157e-9
+EV   8 converged λ = -3.7365658009, ‖r‖ = 1.57e-12, stable for 3 iters
+EV   9 converged λ = -2.9171851071, ‖r‖ = 2.18e-11, stable for 3 iters
+EV  10 converged λ = -2.3436627916, ‖r‖ = 1.52e-11, stable for 3 iters
+EV  11 converged λ = -2.3421329598, ‖r‖ = 2.68e-11, stable for 3 iters
+Converged all required eigenvalues.
+ 42.076838 seconds (277.22 k allocations: 7.973 GiB, 1.22% gc time)
+Number of FLOPs: 5264370126952
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -1.7764e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -5.3291e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) = -4.4409e-16
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) = -1.3323e-15
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -8.8818e-16
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  2.2204e-16
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  6.6613e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) =  0.0000e+00
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  8.8818e-16
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  6.6613e-16
+10 Eigenvalues converges, out of 10 requested.
+Running with l = 50
+Starting Davidson with n_aux = 400, l_buffer = 98, lc = 55, thresh = 0.002, max_iter = 500
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.01243789060943334
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.0012880736061585962
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.00057295215611179
+Iter 4: V_size = 226, Converged = 0, ‖r‖ (largest λ) = 0.012866822026638702
+Iter 5: V_size = 320, Converged = 0, ‖r‖ (largest λ) = 0.00011375340046957775
+EV   1 converged λ = -41.7736162218, ‖r‖ = 3.40e-14, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 2.62e-14, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 1.81e-14, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 1.67e-14, stable for 3 iters
+EV   5 converged λ = -5.4867357314, ‖r‖ = 9.05e-15, stable for 3 iters
+EV   6 converged λ = -3.7365658009, ‖r‖ = 1.45e-14, stable for 3 iters
+EV   7 converged λ = -3.2147111475, ‖r‖ = 1.10e-14, stable for 3 iters
+EV   8 converged λ = -2.9171851071, ‖r‖ = 8.09e-14, stable for 3 iters
+EV   9 converged λ = -2.3436627916, ‖r‖ = 3.81e-14, stable for 3 iters
+EV  10 converged λ = -2.3421329598, ‖r‖ = 6.17e-14, stable for 3 iters
+EV  11 converged λ = -1.8313787990, ‖r‖ = 8.44e-14, stable for 3 iters
+EV  12 converged λ = -1.8302318116, ‖r‖ = 6.38e-14, stable for 3 iters
+EV  13 converged λ = -1.1821827552, ‖r‖ = 3.68e-13, stable for 3 iters
+Iter 6: V_size = 378, Converged = 13, ‖r‖ (largest λ) = 1.0247998832507024e-7
+Iter 7: V_size = 116, Converged = 13, ‖r‖ (largest λ) = 6.769035846810531e-11
+Iter 8: V_size = 127, Converged = 13, ‖r‖ (largest λ) = 0.0005997020382393478
+Iter 9: V_size = 138, Converged = 13, ‖r‖ (largest λ) = 0.0004898921355707611
+EV  14 converged λ = -3.7366409838, ‖r‖ = 7.75e-15, stable for 3 iters
+EV  15 converged λ = -1.3463946793, ‖r‖ = 2.62e-15, stable for 3 iters
+EV  16 converged λ = -1.1820233138, ‖r‖ = 3.00e-15, stable for 3 iters
+EV  17 converged λ = -1.0757859280, ‖r‖ = 3.17e-15, stable for 3 iters
+EV  18 converged λ = -0.9519714914, ‖r‖ = 3.63e-15, stable for 3 iters
+EV  19 converged λ = -0.9515871966, ‖r‖ = 2.21e-15, stable for 3 iters
+EV  20 converged λ = -0.7484866263, ‖r‖ = 3.95e-15, stable for 3 iters
+EV  21 converged λ = -0.7480675498, ‖r‖ = 2.08e-15, stable for 3 iters
+EV  22 converged λ = -0.6611017313, ‖r‖ = 3.84e-15, stable for 3 iters
+EV  23 converged λ = -0.6608082648, ‖r‖ = 3.54e-15, stable for 3 iters
+EV  24 converged λ = -0.5775514450, ‖r‖ = 3.65e-15, stable for 3 iters
+EV  25 converged λ = -0.4976860636, ‖r‖ = 1.14e-14, stable for 3 iters
+EV  26 converged λ = -0.4965902543, ‖r‖ = 7.40e-15, stable for 3 iters
+EV  27 converged λ = -0.4828394889, ‖r‖ = 7.00e-15, stable for 3 iters
+EV  28 converged λ = -0.4459730203, ‖r‖ = 8.41e-15, stable for 3 iters
+EV  29 converged λ = -0.4326351295, ‖r‖ = 7.10e-15, stable for 3 iters
+EV  30 converged λ = -0.4323713676, ‖r‖ = 1.70e-14, stable for 3 iters
+EV  31 converged λ = -0.3791543425, ‖r‖ = 8.67e-15, stable for 3 iters
+EV  32 converged λ = -0.3788921614, ‖r‖ = 1.01e-14, stable for 3 iters
+EV  33 converged λ = -0.3537506434, ‖r‖ = 6.76e-15, stable for 3 iters
+EV  34 converged λ = -0.3534184490, ‖r‖ = 1.51e-14, stable for 3 iters
+EV  35 converged λ = -0.3077168637, ‖r‖ = 1.89e-14, stable for 3 iters
+EV  36 converged λ = -0.3076040426, ‖r‖ = 6.71e-15, stable for 3 iters
+EV  37 converged λ = -0.2739327311, ‖r‖ = 1.06e-14, stable for 3 iters
+EV  38 converged λ = -0.2416696040, ‖r‖ = 1.22e-14, stable for 3 iters
+EV  39 converged λ = -0.2414981245, ‖r‖ = 3.04e-14, stable for 3 iters
+EV  40 converged λ = -0.2319217832, ‖r‖ = 1.90e-14, stable for 3 iters
+EV  41 converged λ = -0.2314242588, ‖r‖ = 2.89e-15, stable for 3 iters
+EV  42 converged λ = -0.2162482525, ‖r‖ = 8.12e-15, stable for 3 iters
+EV  43 converged λ = -0.2159117710, ‖r‖ = 4.26e-15, stable for 3 iters
+EV  44 converged λ = -0.1895919323, ‖r‖ = 4.08e-15, stable for 3 iters
+EV  45 converged λ = -0.1706636384, ‖r‖ = 8.69e-15, stable for 3 iters
+EV  46 converged λ = -0.1657930118, ‖r‖ = 1.72e-14, stable for 3 iters
+EV  47 converged λ = -0.1657233306, ‖r‖ = 1.51e-14, stable for 3 iters
+EV  48 converged λ = -0.1558948613, ‖r‖ = 2.51e-14, stable for 3 iters
+EV  49 converged λ = -0.1557333464, ‖r‖ = 1.04e-14, stable for 3 iters
+EV  50 converged λ = -0.1530518424, ‖r‖ = 3.90e-14, stable for 3 iters
+EV  51 converged λ = -0.1524217487, ‖r‖ = 3.35e-14, stable for 3 iters
+EV  52 converged λ = -0.1440587149, ‖r‖ = 4.29e-14, stable for 3 iters
+EV  53 converged λ = -0.1440548290, ‖r‖ = 6.35e-14, stable for 3 iters
+EV  54 converged λ = -0.1327368792, ‖r‖ = 4.87e-14, stable for 3 iters
+EV  55 converged λ = -0.1324584618, ‖r‖ = 3.41e-14, stable for 3 iters
+Converged all required eigenvalues.
+297.688628 seconds (1.92 M allocations: 52.836 GiB, 0.37% gc time)
+Number of FLOPs: 21511275416646
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -4.4409e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -3.5527e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) = -4.4409e-16
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) =  1.3323e-15
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -2.2204e-15
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  8.8818e-16
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  4.4409e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) = -1.1102e-15
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  2.6645e-15
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  0.0000e+00
+ 11: 1.5304028750 (computed) - 1.5304028750 (exact) =  1.1102e-15
+ 12: 1.3532844487 (computed) - 1.3532844487 (exact) =  6.6613e-16
+ 13: 1.3528606032 (computed) - 1.3528606032 (exact) =  8.8818e-16
+ 14: 1.1603424836 (computed) - 1.1603424836 (exact) = -8.8818e-16
+ 15: 1.0872822794 (computed) - 1.0872822794 (exact) = -2.4425e-15
+ 16: 1.0872089559 (computed) - 1.0872089559 (exact) = -2.2204e-16
+ 17: 1.0372010066 (computed) - 1.0372010066 (exact) = -2.2204e-16
+ 18: 0.9756902641 (computed) - 0.9756902641 (exact) = -4.4409e-16
+ 19: 0.9754933093 (computed) - 0.9754933093 (exact) = -6.6613e-16
+ 20: 0.8651512159 (computed) - 0.8651512159 (exact) =  4.4409e-16
+ 21: 0.8649089835 (computed) - 0.8649089835 (exact) = -2.2204e-16
+ 22: 0.8130816265 (computed) - 0.8130816265 (exact) =  7.7716e-16
+ 23: 0.8129011408 (computed) - 0.8129011408 (exact) = -2.2204e-16
+ 24: 0.7599680553 (computed) - 0.7599680553 (exact) = -3.3307e-16
+ 25: 0.7054686836 (computed) - 0.7054686836 (exact) =  2.2204e-16
+ 26: 0.7046916022 (computed) - 0.7046916022 (exact) =  4.4409e-16
+ 27: 0.6948665259 (computed) - 0.6948665259 (exact) =  1.1102e-16
+ 28: 0.6678121145 (computed) - 0.6678121145 (exact) = -1.1102e-16
+ 29: 0.6577500510 (computed) - 0.6577500510 (exact) = -2.2204e-16
+ 30: 0.6575495172 (computed) - 0.6575495172 (exact) =  1.1102e-16
+ 31: 0.6157550994 (computed) - 0.6157550994 (exact) =  2.2204e-16
+ 32: 0.6155421687 (computed) - 0.6155421687 (exact) = -5.5511e-16
+ 33: 0.5947694036 (computed) - 0.5947694036 (exact) = -4.4409e-16
+ 34: 0.5944900748 (computed) - 0.5944900748 (exact) = -3.3307e-16
+ 35: 0.5547223303 (computed) - 0.5547223303 (exact) =  0.0000e+00
+ 36: 0.5546206295 (computed) - 0.5546206295 (exact) = -2.2204e-16
+ 37: 0.5233858339 (computed) - 0.5233858339 (exact) =  1.1102e-16
+ 38: 0.4915990276 (computed) - 0.4915990276 (exact) =  0.0000e+00
+ 39: 0.4914245868 (computed) - 0.4914245868 (exact) = -5.5511e-17
+ 40: 0.4815825819 (computed) - 0.4815825819 (exact) =  5.5511e-16
+ 41: 0.4810657531 (computed) - 0.4810657531 (exact) =  4.4409e-16
+ 42: 0.4650250021 (computed) - 0.4650250021 (exact) = -4.9960e-16
+ 43: 0.4646630726 (computed) - 0.4646630726 (exact) = -5.5511e-17
+ 44: 0.4354215570 (computed) - 0.4354215570 (exact) =  0.0000e+00
+ 45: 0.4131145584 (computed) - 0.4131145584 (exact) =  1.6653e-16
+ 46: 0.4071768803 (computed) - 0.4071768803 (exact) =  3.3307e-16
+ 47: 0.4070913050 (computed) - 0.4070913050 (exact) = -7.2164e-16
+ 48: 0.3948352331 (computed) - 0.3948352331 (exact) =  3.8858e-16
+ 49: 0.3946306455 (computed) - 0.3946306455 (exact) = -2.2204e-16
+ 50: 0.3912184075 (computed) - 0.3912184075 (exact) = -1.1102e-16
+50 Eigenvalues converges, out of 50 requested.
+Running with l = 100
+Starting Davidson with n_aux = 400, l_buffer = 195, lc = 110, thresh = 0.0025, max_iter = 500
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.01243789060943334
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.0012880736061585962
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.00057295215611179
+Iter 4: V_size = 256, Converged = 0, ‖r‖ (largest λ) = 6.0804286886306373e-5
+Iter 5: V_size = 383, Converged = 0, ‖r‖ (largest λ) = 0.0013167947684336798
+EV   1 converged λ = -41.7736162218, ‖r‖ = 4.35e-14, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 3.09e-14, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 1.58e-14, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 1.40e-14, stable for 3 iters
+EV   5 converged λ = -5.4867357314, ‖r‖ = 4.76e-14, stable for 3 iters
+EV   6 converged λ = -3.7365658009, ‖r‖ = 9.04e-14, stable for 3 iters
+EV   7 converged λ = -3.2147111475, ‖r‖ = 3.31e-14, stable for 3 iters
+EV   8 converged λ = -2.9171851071, ‖r‖ = 7.30e-13, stable for 3 iters
+EV   9 converged λ = -2.3436627916, ‖r‖ = 1.88e-12, stable for 3 iters
+EV  10 converged λ = -2.3421329598, ‖r‖ = 3.12e-12, stable for 3 iters
+EV  11 converged λ = -1.8313787990, ‖r‖ = 1.28e-12, stable for 3 iters
+EV  12 converged λ = -1.8302318116, ‖r‖ = 1.87e-12, stable for 3 iters
+EV  13 converged λ = -1.1821827552, ‖r‖ = 3.62e-12, stable for 3 iters
+Iter 6: V_size = 354, Converged = 13, ‖r‖ (largest λ) = 0.00037112256714284987
+Iter 7: V_size = 331, Converged = 13, ‖r‖ (largest λ) = 1.98203425694661e-5
+Iter 8: V_size = 313, Converged = 13, ‖r‖ (largest λ) = 1.1809465619576332e-5
+EV  14 converged λ = -3.7366409838, ‖r‖ = 4.31e-15, stable for 3 iters
+EV  15 converged λ = -1.3463946793, ‖r‖ = 2.21e-15, stable for 3 iters
+EV  16 converged λ = -1.1820233138, ‖r‖ = 2.03e-15, stable for 3 iters
+EV  17 converged λ = -1.0757859280, ‖r‖ = 2.41e-15, stable for 3 iters
+EV  18 converged λ = -0.9519714914, ‖r‖ = 1.47e-15, stable for 3 iters
+EV  19 converged λ = -0.9515871966, ‖r‖ = 1.56e-15, stable for 3 iters
+EV  20 converged λ = -0.7484866263, ‖r‖ = 1.42e-15, stable for 3 iters
+EV  21 converged λ = -0.7480675498, ‖r‖ = 1.23e-15, stable for 3 iters
+EV  22 converged λ = -0.6611017313, ‖r‖ = 1.40e-15, stable for 3 iters
+EV  23 converged λ = -0.6608082648, ‖r‖ = 1.17e-15, stable for 3 iters
+EV  24 converged λ = -0.5775514450, ‖r‖ = 1.37e-15, stable for 3 iters
+EV  25 converged λ = -0.4976860636, ‖r‖ = 1.01e-15, stable for 3 iters
+EV  26 converged λ = -0.4965902543, ‖r‖ = 1.32e-15, stable for 3 iters
+EV  27 converged λ = -0.4828394889, ‖r‖ = 2.14e-15, stable for 3 iters
+EV  28 converged λ = -0.4459730203, ‖r‖ = 1.47e-15, stable for 3 iters
+EV  29 converged λ = -0.4326351295, ‖r‖ = 1.03e-15, stable for 3 iters
+EV  30 converged λ = -0.4323713676, ‖r‖ = 1.32e-15, stable for 3 iters
+EV  31 converged λ = -0.3791543425, ‖r‖ = 1.04e-15, stable for 3 iters
+EV  32 converged λ = -0.3788921614, ‖r‖ = 8.73e-16, stable for 3 iters
+EV  33 converged λ = -0.3537506434, ‖r‖ = 1.15e-15, stable for 3 iters
+EV  34 converged λ = -0.3534184490, ‖r‖ = 8.72e-16, stable for 3 iters
+EV  35 converged λ = -0.3077168637, ‖r‖ = 8.05e-16, stable for 3 iters
+EV  36 converged λ = -0.3076040426, ‖r‖ = 6.76e-16, stable for 3 iters
+EV  37 converged λ = -0.2739327311, ‖r‖ = 1.22e-15, stable for 3 iters
+EV  38 converged λ = -0.2416696040, ‖r‖ = 9.00e-16, stable for 3 iters
+EV  39 converged λ = -0.2414981245, ‖r‖ = 9.07e-16, stable for 3 iters
+EV  40 converged λ = -0.2319217832, ‖r‖ = 7.22e-16, stable for 3 iters
+EV  41 converged λ = -0.2314242588, ‖r‖ = 9.24e-16, stable for 3 iters
+EV  42 converged λ = -0.2162482525, ‖r‖ = 1.33e-15, stable for 3 iters
+EV  43 converged λ = -0.2159117710, ‖r‖ = 8.32e-16, stable for 3 iters
+EV  44 converged λ = -0.1895919323, ‖r‖ = 1.35e-15, stable for 3 iters
+EV  45 converged λ = -0.1706636384, ‖r‖ = 1.49e-15, stable for 3 iters
+EV  46 converged λ = -0.1657930118, ‖r‖ = 1.84e-15, stable for 3 iters
+EV  47 converged λ = -0.1657233306, ‖r‖ = 1.69e-15, stable for 3 iters
+EV  48 converged λ = -0.1558948613, ‖r‖ = 1.96e-15, stable for 3 iters
+EV  49 converged λ = -0.1557333464, ‖r‖ = 1.37e-15, stable for 3 iters
+EV  50 converged λ = -0.1530518424, ‖r‖ = 2.53e-15, stable for 3 iters
+EV  51 converged λ = -0.1524217487, ‖r‖ = 2.83e-15, stable for 3 iters
+EV  52 converged λ = -0.1440587149, ‖r‖ = 2.52e-15, stable for 3 iters
+EV  53 converged λ = -0.1440548290, ‖r‖ = 5.61e-15, stable for 3 iters
+EV  54 converged λ = -0.1327368792, ‖r‖ = 2.29e-15, stable for 3 iters
+EV  55 converged λ = -0.1324584618, ‖r‖ = 6.07e-15, stable for 3 iters
+EV  56 converged λ = -0.1137697108, ‖r‖ = 6.28e-15, stable for 3 iters
+EV  57 converged λ = -0.1133949027, ‖r‖ = 2.00e-14, stable for 3 iters
+EV  58 converged λ = -0.0995094354, ‖r‖ = 1.63e-14, stable for 3 iters
+EV  59 converged λ = -0.0988872345, ‖r‖ = 5.42e-14, stable for 3 iters
+EV  60 converged λ = -0.0973754155, ‖r‖ = 2.14e-14, stable for 3 iters
+EV  61 converged λ = -0.0949131039, ‖r‖ = 9.80e-15, stable for 3 iters
+EV  62 converged λ = -0.0906898247, ‖r‖ = 1.02e-13, stable for 3 iters
+EV  63 converged λ = -0.0901092951, ‖r‖ = 9.07e-14, stable for 3 iters
+EV  64 converged λ = -0.0895073459, ‖r‖ = 2.06e-13, stable for 3 iters
+EV  65 converged λ = -0.0894398411, ‖r‖ = 8.60e-14, stable for 3 iters
+EV  66 converged λ = -0.0787353077, ‖r‖ = 2.83e-13, stable for 3 iters
+EV  67 converged λ = -0.0781754997, ‖r‖ = 2.25e-13, stable for 3 iters
+EV  68 converged λ = -0.0727134369, ‖r‖ = 1.83e-13, stable for 3 iters
+EV  69 converged λ = -0.0704466266, ‖r‖ = 7.94e-13, stable for 3 iters
+EV  70 converged λ = -0.0703960307, ‖r‖ = 9.31e-13, stable for 3 iters
+EV  71 converged λ = -0.0661627022, ‖r‖ = 7.87e-13, stable for 3 iters
+EV  72 converged λ = -0.0650376311, ‖r‖ = 2.40e-12, stable for 3 iters
+EV  73 converged λ = -0.0650363885, ‖r‖ = 2.43e-12, stable for 3 iters
+EV  74 converged λ = -0.0618538000, ‖r‖ = 8.06e-13, stable for 3 iters
+EV  75 converged λ = -0.0615962685, ‖r‖ = 1.23e-12, stable for 3 iters
+EV  76 converged λ = -0.0602665723, ‖r‖ = 4.63e-13, stable for 3 iters
+EV  77 converged λ = -0.0602473560, ‖r‖ = 3.35e-13, stable for 3 iters
+EV  78 converged λ = -0.0562235969, ‖r‖ = 2.17e-12, stable for 3 iters
+EV  79 converged λ = -0.0561606762, ‖r‖ = 3.85e-12, stable for 3 iters
+EV  80 converged λ = -0.0556893991, ‖r‖ = 3.30e-12, stable for 3 iters
+EV  81 converged λ = -0.0554482374, ‖r‖ = 4.11e-12, stable for 3 iters
+EV  82 converged λ = -0.0486027913, ‖r‖ = 5.15e-12, stable for 3 iters
+EV  83 converged λ = -0.0484758895, ‖r‖ = 1.89e-12, stable for 3 iters
+EV  84 converged λ = -0.0483264419, ‖r‖ = 7.59e-12, stable for 3 iters
+EV  85 converged λ = -0.0451131119, ‖r‖ = 1.51e-11, stable for 3 iters
+EV  86 converged λ = -0.0450908528, ‖r‖ = 1.88e-11, stable for 3 iters
+EV  87 converged λ = -0.0424434827, ‖r‖ = 5.64e-12, stable for 3 iters
+EV  88 converged λ = -0.0424312643, ‖r‖ = 1.06e-11, stable for 3 iters
+EV  89 converged λ = -0.0409328467, ‖r‖ = 1.52e-11, stable for 3 iters
+EV  90 converged λ = -0.0405495687, ‖r‖ = 2.29e-11, stable for 3 iters
+EV  91 converged λ = -0.0373722637, ‖r‖ = 6.23e-11, stable for 3 iters
+EV  92 converged λ = -0.0373673783, ‖r‖ = 5.13e-11, stable for 3 iters
+EV  93 converged λ = -0.0344515149, ‖r‖ = 4.10e-11, stable for 3 iters
+EV  94 converged λ = -0.0332710608, ‖r‖ = 6.54e-11, stable for 3 iters
+EV  95 converged λ = -0.0332554161, ‖r‖ = 5.64e-11, stable for 3 iters
+EV  96 converged λ = -0.0316720553, ‖r‖ = 1.22e-10, stable for 3 iters
+EV  97 converged λ = -0.0315930378, ‖r‖ = 1.15e-10, stable for 3 iters
+EV  98 converged λ = -0.0315861855, ‖r‖ = 7.77e-11, stable for 3 iters
+EV  99 converged λ = -0.0314479122, ‖r‖ = 7.37e-11, stable for 3 iters
+EV 100 converged λ = -0.0288422702, ‖r‖ = 4.22e-11, stable for 3 iters
+EV 101 converged λ = -0.0270341081, ‖r‖ = 3.91e-10, stable for 3 iters
+EV 102 converged λ = -0.0269430459, ‖r‖ = 5.41e-10, stable for 3 iters
+EV 103 converged λ = -0.0261312727, ‖r‖ = 1.84e-09, stable for 3 iters
+EV 104 converged λ = -0.0260029239, ‖r‖ = 1.24e-09, stable for 3 iters
+EV 105 converged λ = -0.0258961356, ‖r‖ = 6.91e-10, stable for 3 iters
+EV 106 converged λ = -0.0256713936, ‖r‖ = 1.39e-09, stable for 3 iters
+EV 107 converged λ = -0.0256227449, ‖r‖ = 4.71e-10, stable for 3 iters
+EV 108 converged λ = -0.0245529395, ‖r‖ = 3.85e-09, stable for 3 iters
+EV 109 converged λ = -0.0243833642, ‖r‖ = 2.35e-09, stable for 3 iters
+EV 110 converged λ = -0.0231171144, ‖r‖ = 5.10e-09, stable for 3 iters
+Converged all required eigenvalues.
+320.465654 seconds (3.75 M allocations: 107.995 GiB, 0.58% gc time)
+Number of FLOPs: 31883810817346
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -4.4409e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -2.6645e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) =  0.0000e+00
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) =  4.4409e-16
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -1.3323e-15
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) =  4.4409e-16
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  6.6613e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) =  4.4409e-16
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  1.1102e-15
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  1.1102e-15
+ 11: 1.5304028750 (computed) - 1.5304028750 (exact) =  2.2204e-15
+ 12: 1.3532844487 (computed) - 1.3532844487 (exact) =  4.4409e-16
+ 13: 1.3528606032 (computed) - 1.3528606032 (exact) =  2.4425e-15
+ 14: 1.1603424836 (computed) - 1.1603424836 (exact) = -6.6613e-16
+ 15: 1.0872822794 (computed) - 1.0872822794 (exact) =  1.1102e-15
+ 16: 1.0872089559 (computed) - 1.0872089559 (exact) =  0.0000e+00
+ 17: 1.0372010066 (computed) - 1.0372010066 (exact) =  4.4409e-16
+ 18: 0.9756902641 (computed) - 0.9756902641 (exact) = -2.2204e-16
+ 19: 0.9754933093 (computed) - 0.9754933093 (exact) = -5.5511e-16
+ 20: 0.8651512159 (computed) - 0.8651512159 (exact) =  1.1102e-16
+ 21: 0.8649089835 (computed) - 0.8649089835 (exact) = -5.5511e-16
+ 22: 0.8130816265 (computed) - 0.8130816265 (exact) =  5.5511e-16
+ 23: 0.8129011408 (computed) - 0.8129011408 (exact) = -1.1102e-16
+ 24: 0.7599680553 (computed) - 0.7599680553 (exact) = -1.1102e-16
+ 25: 0.7054686836 (computed) - 0.7054686836 (exact) =  0.0000e+00
+ 26: 0.7046916022 (computed) - 0.7046916022 (exact) =  3.3307e-16
+ 27: 0.6948665259 (computed) - 0.6948665259 (exact) = -2.2204e-16
+ 28: 0.6678121145 (computed) - 0.6678121145 (exact) =  2.2204e-16
+ 29: 0.6577500510 (computed) - 0.6577500510 (exact) =  2.2204e-16
+ 30: 0.6575495172 (computed) - 0.6575495172 (exact) =  1.1102e-16
+ 31: 0.6157550994 (computed) - 0.6157550994 (exact) =  4.4409e-16
+ 32: 0.6155421687 (computed) - 0.6155421687 (exact) = -5.5511e-16
+ 33: 0.5947694036 (computed) - 0.5947694036 (exact) = -4.4409e-16
+ 34: 0.5944900748 (computed) - 0.5944900748 (exact) = -2.2204e-16
+ 35: 0.5547223303 (computed) - 0.5547223303 (exact) =  1.1102e-16
+ 36: 0.5546206295 (computed) - 0.5546206295 (exact) = -4.4409e-16
+ 37: 0.5233858339 (computed) - 0.5233858339 (exact) = -1.1102e-16
+ 38: 0.4915990276 (computed) - 0.4915990276 (exact) =  1.1102e-16
+ 39: 0.4914245868 (computed) - 0.4914245868 (exact) = -2.2204e-16
+ 40: 0.4815825819 (computed) - 0.4815825819 (exact) = -2.2204e-16
+ 41: 0.4810657531 (computed) - 0.4810657531 (exact) =  3.8858e-16
+ 42: 0.4650250021 (computed) - 0.4650250021 (exact) =  3.8858e-16
+ 43: 0.4646630726 (computed) - 0.4646630726 (exact) =  1.6653e-16
+ 44: 0.4354215570 (computed) - 0.4354215570 (exact) =  1.1102e-16
+ 45: 0.4131145584 (computed) - 0.4131145584 (exact) = -1.1102e-16
+ 46: 0.4071768803 (computed) - 0.4071768803 (exact) =  0.0000e+00
+ 47: 0.4070913050 (computed) - 0.4070913050 (exact) = -9.4369e-16
+ 48: 0.3948352331 (computed) - 0.3948352331 (exact) = -7.7716e-16
+ 49: 0.3946306455 (computed) - 0.3946306455 (exact) = -2.2204e-16
+ 50: 0.3912184075 (computed) - 0.3912184075 (exact) =  0.0000e+00
+ 51: 0.3904122804 (computed) - 0.3904122804 (exact) = -5.5511e-17
+ 52: 0.3795506751 (computed) - 0.3795506751 (exact) =  4.9960e-16
+ 53: 0.3795455559 (computed) - 0.3795455559 (exact) =  4.4409e-16
+ 54: 0.3643307277 (computed) - 0.3643307277 (exact) = -5.5511e-17
+ 55: 0.3639484329 (computed) - 0.3639484329 (exact) =  6.1062e-16
+ 56: 0.3372976590 (computed) - 0.3372976590 (exact) = -1.1102e-16
+ 57: 0.3367415964 (computed) - 0.3367415964 (exact) =  1.1102e-16
+ 58: 0.3154511616 (computed) - 0.3154511616 (exact) = -1.1102e-16
+ 59: 0.3144634072 (computed) - 0.3144634072 (exact) =  4.9960e-16
+ 60: 0.3120503413 (computed) - 0.3120503413 (exact) =  5.5511e-17
+ 61: 0.3080797038 (computed) - 0.3080797038 (exact) = -1.1102e-16
+ 62: 0.3011475133 (computed) - 0.3011475133 (exact) =  3.3307e-16
+ 63: 0.3001821032 (computed) - 0.3001821032 (exact) = -7.7716e-16
+ 64: 0.2991777831 (computed) - 0.2991777831 (exact) =  3.3307e-16
+ 65: 0.2990649447 (computed) - 0.2990649447 (exact) =  5.5511e-17
+ 66: 0.2805981250 (computed) - 0.2805981250 (exact) =  2.2204e-16
+ 67: 0.2795988192 (computed) - 0.2795988192 (exact) =  3.8858e-16
+ 68: 0.2696542915 (computed) - 0.2696542915 (exact) =  4.4409e-16
+ 69: 0.2654178339 (computed) - 0.2654178339 (exact) = -3.8858e-16
+ 70: 0.2653225032 (computed) - 0.2653225032 (exact) =  5.5511e-17
+ 71: 0.2572211153 (computed) - 0.2572211153 (exact) =  1.1102e-16
+ 72: 0.2550247657 (computed) - 0.2550247657 (exact) =  5.5511e-17
+ 73: 0.2550223295 (computed) - 0.2550223295 (exact) =  5.5511e-17
+ 74: 0.2487042420 (computed) - 0.2487042420 (exact) = -3.0531e-16
+ 75: 0.2481859554 (computed) - 0.2481859554 (exact) = -3.8858e-16
+ 76: 0.2454925096 (computed) - 0.2454925096 (exact) = -1.3878e-16
+ 77: 0.2454533683 (computed) - 0.2454533683 (exact) = -3.8858e-16
+ 78: 0.2371151553 (computed) - 0.2371151553 (exact) =  2.2204e-16
+ 79: 0.2369824385 (computed) - 0.2369824385 (exact) =  1.6653e-16
+ 80: 0.2359860147 (computed) - 0.2359860147 (exact) = -4.7184e-16
+ 81: 0.2354744941 (computed) - 0.2354744941 (exact) = -9.4369e-16
+ 82: 0.2204604075 (computed) - 0.2204604075 (exact) =  8.3267e-17
+ 83: 0.2201724087 (computed) - 0.2201724087 (exact) = -2.4980e-16
+ 84: 0.2198327588 (computed) - 0.2198327588 (exact) = -3.6082e-16
+ 85: 0.2123984743 (computed) - 0.2123984743 (exact) = -4.4409e-16
+ 86: 0.2123460684 (computed) - 0.2123460684 (exact) = -3.0531e-16
+ 87: 0.2060181610 (computed) - 0.2060181610 (exact) = -2.4980e-16
+ 88: 0.2059885052 (computed) - 0.2059885052 (exact) =  4.7184e-16
+ 89: 0.2023186760 (computed) - 0.2023186760 (exact) = -5.5511e-16
+ 90: 0.2013692346 (computed) - 0.2013692346 (exact) = -1.3878e-16
+ 91: 0.1933190723 (computed) - 0.1933190723 (exact) =  0.0000e+00
+ 92: 0.1933064361 (computed) - 0.1933064361 (exact) =  3.3307e-16
+ 93: 0.1856111928 (computed) - 0.1856111928 (exact) = -5.8287e-16
+ 94: 0.1824035659 (computed) - 0.1824035659 (exact) =  2.2204e-16
+ 95: 0.1823606757 (computed) - 0.1823606757 (exact) =  5.8287e-16
+ 96: 0.1779664444 (computed) - 0.1779664444 (exact) =  4.1633e-16
+ 97: 0.1777443045 (computed) - 0.1777443045 (exact) = -6.1062e-16
+ 98: 0.1777250278 (computed) - 0.1777250278 (exact) =  4.4409e-16
+ 99: 0.1773355920 (computed) - 0.1773355920 (exact) = -1.6653e-16
+100: 0.1698301216 (computed) - 0.1698301216 (exact) = -6.3838e-16
+100 Eigenvalues converges, out of 100 requested.
+Running with l = 200
+Starting Davidson with n_aux = 500, l_buffer = 390, lc = 220, thresh = 0.003, max_iter = 500
+Iter 1: V_size = 40, Converged = 0, ‖r‖ (largest λ) = 0.011480073599996846
+Iter 2: V_size = 80, Converged = 0, ‖r‖ (largest λ) = 0.0009178868537195742
+Iter 3: V_size = 160, Converged = 0, ‖r‖ (largest λ) = 0.00021928799775316639
+Iter 4: V_size = 320, Converged = 0, ‖r‖ (largest λ) = 3.080038981651865e-5
+Iter 5: V_size = 500, Converged = 0, ‖r‖ (largest λ) = 3.1518103250815156e-6
+EV   1 converged λ = -41.7736162218, ‖r‖ = 4.34e-14, stable for 3 iters
+EV   2 converged λ = -28.6339145596, ‖r‖ = 2.87e-14, stable for 3 iters
+EV   3 converged λ = -13.4635262472, ‖r‖ = 2.38e-14, stable for 3 iters
+EV   4 converged λ = -13.4575148590, ‖r‖ = 1.58e-14, stable for 3 iters
+EV   5 converged λ = -5.4867357314, ‖r‖ = 6.79e-15, stable for 3 iters
+EV   6 converged λ = -3.7366409838, ‖r‖ = 5.42e-15, stable for 3 iters
+EV   7 converged λ = -3.7365658009, ‖r‖ = 4.95e-15, stable for 3 iters
+EV   8 converged λ = -3.2147111475, ‖r‖ = 6.84e-15, stable for 3 iters
+EV   9 converged λ = -2.9171851071, ‖r‖ = 4.19e-15, stable for 3 iters
+EV  10 converged λ = -2.3436627916, ‖r‖ = 3.15e-15, stable for 3 iters
+EV  11 converged λ = -2.3421329598, ‖r‖ = 3.19e-15, stable for 3 iters
+EV  12 converged λ = -1.8313787990, ‖r‖ = 3.12e-15, stable for 3 iters
+EV  13 converged λ = -1.8302318116, ‖r‖ = 3.84e-15, stable for 3 iters
+EV  14 converged λ = -1.3463946793, ‖r‖ = 2.48e-15, stable for 3 iters
+EV  15 converged λ = -1.1821827552, ‖r‖ = 2.36e-15, stable for 3 iters
+EV  16 converged λ = -1.1820233138, ‖r‖ = 1.65e-15, stable for 3 iters
+EV  17 converged λ = -1.0757859280, ‖r‖ = 2.00e-15, stable for 3 iters
+EV  18 converged λ = -0.9519714914, ‖r‖ = 2.45e-15, stable for 3 iters
+EV  19 converged λ = -0.9515871966, ‖r‖ = 2.32e-15, stable for 3 iters
+EV  20 converged λ = -0.7484866263, ‖r‖ = 2.74e-15, stable for 3 iters
+EV  21 converged λ = -0.7480675498, ‖r‖ = 1.89e-15, stable for 3 iters
+EV  22 converged λ = -0.6611017313, ‖r‖ = 2.41e-15, stable for 3 iters
+EV  23 converged λ = -0.6608082648, ‖r‖ = 2.07e-15, stable for 3 iters
+Iter 6: V_size = 500, Converged = 23, ‖r‖ (largest λ) = 1.4502426209115318e-5
+Iter 7: V_size = 500, Converged = 23, ‖r‖ (largest λ) = 6.876889248573163e-5
+Iter 8: V_size = 500, Converged = 23, ‖r‖ (largest λ) = 6.422171089074772e-5
+EV  24 converged λ = -0.5775514450, ‖r‖ = 1.31e-15, stable for 3 iters
+EV  25 converged λ = -0.4976860636, ‖r‖ = 1.73e-15, stable for 3 iters
+EV  26 converged λ = -0.4965902543, ‖r‖ = 1.24e-15, stable for 3 iters
+EV  27 converged λ = -0.4828394889, ‖r‖ = 2.82e-15, stable for 3 iters
+EV  28 converged λ = -0.4459730203, ‖r‖ = 1.59e-15, stable for 3 iters
+EV  29 converged λ = -0.4326351295, ‖r‖ = 1.13e-15, stable for 3 iters
+EV  30 converged λ = -0.4323713676, ‖r‖ = 1.08e-15, stable for 3 iters
+EV  31 converged λ = -0.3791543425, ‖r‖ = 1.12e-15, stable for 3 iters
+EV  32 converged λ = -0.3788921614, ‖r‖ = 1.03e-15, stable for 3 iters
+EV  33 converged λ = -0.3537506434, ‖r‖ = 1.02e-15, stable for 3 iters
+EV  34 converged λ = -0.3534184490, ‖r‖ = 1.15e-15, stable for 3 iters
+EV  35 converged λ = -0.3077168637, ‖r‖ = 1.18e-15, stable for 3 iters
+EV  36 converged λ = -0.3076040426, ‖r‖ = 9.80e-16, stable for 3 iters
+EV  37 converged λ = -0.2739327311, ‖r‖ = 1.51e-15, stable for 3 iters
+EV  38 converged λ = -0.2416696040, ‖r‖ = 8.90e-16, stable for 3 iters
+EV  39 converged λ = -0.2414981245, ‖r‖ = 7.29e-16, stable for 3 iters
+EV  40 converged λ = -0.2319217832, ‖r‖ = 1.17e-15, stable for 3 iters
+EV  41 converged λ = -0.2314242588, ‖r‖ = 8.01e-16, stable for 3 iters
+EV  42 converged λ = -0.2162482525, ‖r‖ = 9.24e-16, stable for 3 iters
+EV  43 converged λ = -0.2159117710, ‖r‖ = 6.93e-16, stable for 3 iters
+EV  44 converged λ = -0.1895919323, ‖r‖ = 1.39e-15, stable for 3 iters
+EV  45 converged λ = -0.1706636384, ‖r‖ = 5.98e-16, stable for 3 iters
+EV  46 converged λ = -0.1657930118, ‖r‖ = 8.88e-16, stable for 3 iters
+EV  47 converged λ = -0.1657233306, ‖r‖ = 7.52e-16, stable for 3 iters
+EV  48 converged λ = -0.1558948613, ‖r‖ = 7.35e-16, stable for 3 iters
+EV  49 converged λ = -0.1557333464, ‖r‖ = 1.09e-15, stable for 3 iters
+EV  50 converged λ = -0.1530518424, ‖r‖ = 6.49e-16, stable for 3 iters
+EV  51 converged λ = -0.1524217487, ‖r‖ = 8.34e-16, stable for 3 iters
+EV  52 converged λ = -0.1440587149, ‖r‖ = 7.71e-16, stable for 3 iters
+EV  53 converged λ = -0.1440548290, ‖r‖ = 6.60e-16, stable for 3 iters
+EV  54 converged λ = -0.1327368792, ‖r‖ = 6.80e-16, stable for 3 iters
+EV  55 converged λ = -0.1324584618, ‖r‖ = 1.06e-15, stable for 3 iters
+EV  56 converged λ = -0.1137697108, ‖r‖ = 5.77e-16, stable for 3 iters
+EV  57 converged λ = -0.1133949027, ‖r‖ = 5.11e-16, stable for 3 iters
+EV  58 converged λ = -0.0995094354, ‖r‖ = 6.98e-16, stable for 3 iters
+EV  59 converged λ = -0.0988872345, ‖r‖ = 1.01e-15, stable for 3 iters
+EV  60 converged λ = -0.0973754155, ‖r‖ = 8.78e-16, stable for 3 iters
+EV  61 converged λ = -0.0949131039, ‖r‖ = 4.65e-15, stable for 3 iters
+EV  62 converged λ = -0.0906898247, ‖r‖ = 7.16e-16, stable for 3 iters
+EV  63 converged λ = -0.0901092951, ‖r‖ = 7.70e-16, stable for 3 iters
+EV  64 converged λ = -0.0895073459, ‖r‖ = 6.56e-16, stable for 3 iters
+EV  65 converged λ = -0.0894398411, ‖r‖ = 5.70e-16, stable for 3 iters
+EV  66 converged λ = -0.0787353077, ‖r‖ = 8.04e-16, stable for 3 iters
+EV  67 converged λ = -0.0781754997, ‖r‖ = 6.90e-16, stable for 3 iters
+EV  68 converged λ = -0.0727134369, ‖r‖ = 1.60e-15, stable for 3 iters
+EV  69 converged λ = -0.0704466266, ‖r‖ = 5.92e-16, stable for 3 iters
+EV  70 converged λ = -0.0703960307, ‖r‖ = 9.92e-16, stable for 3 iters
+EV  71 converged λ = -0.0661627022, ‖r‖ = 8.00e-16, stable for 3 iters
+EV  72 converged λ = -0.0650376311, ‖r‖ = 6.94e-16, stable for 3 iters
+EV  73 converged λ = -0.0650363885, ‖r‖ = 1.03e-15, stable for 3 iters
+EV  74 converged λ = -0.0618538000, ‖r‖ = 5.96e-16, stable for 3 iters
+EV  75 converged λ = -0.0615962685, ‖r‖ = 8.30e-16, stable for 3 iters
+EV  76 converged λ = -0.0602665723, ‖r‖ = 9.44e-16, stable for 3 iters
+EV  77 converged λ = -0.0602473560, ‖r‖ = 6.72e-16, stable for 3 iters
+EV  78 converged λ = -0.0562235969, ‖r‖ = 1.16e-15, stable for 3 iters
+EV  79 converged λ = -0.0561606762, ‖r‖ = 1.19e-15, stable for 3 iters
+EV  80 converged λ = -0.0556893991, ‖r‖ = 7.35e-16, stable for 3 iters
+EV  81 converged λ = -0.0554482374, ‖r‖ = 1.11e-15, stable for 3 iters
+EV  82 converged λ = -0.0486027913, ‖r‖ = 8.72e-16, stable for 3 iters
+EV  83 converged λ = -0.0484758895, ‖r‖ = 1.79e-15, stable for 3 iters
+EV  84 converged λ = -0.0483264419, ‖r‖ = 7.34e-16, stable for 3 iters
+EV  85 converged λ = -0.0451131119, ‖r‖ = 6.57e-16, stable for 3 iters
+EV  86 converged λ = -0.0450908528, ‖r‖ = 8.15e-16, stable for 3 iters
+EV  87 converged λ = -0.0424434827, ‖r‖ = 9.02e-16, stable for 3 iters
+EV  88 converged λ = -0.0424312643, ‖r‖ = 6.97e-16, stable for 3 iters
+EV  89 converged λ = -0.0409328467, ‖r‖ = 4.73e-16, stable for 3 iters
+EV  90 converged λ = -0.0405495687, ‖r‖ = 1.01e-15, stable for 3 iters
+EV  91 converged λ = -0.0373722637, ‖r‖ = 5.99e-16, stable for 3 iters
+EV  92 converged λ = -0.0373673783, ‖r‖ = 5.23e-16, stable for 3 iters
+EV  93 converged λ = -0.0344515149, ‖r‖ = 1.97e-15, stable for 3 iters
+EV  94 converged λ = -0.0332710608, ‖r‖ = 1.02e-15, stable for 3 iters
+EV  95 converged λ = -0.0332554161, ‖r‖ = 7.21e-16, stable for 3 iters
+EV  96 converged λ = -0.0316720553, ‖r‖ = 9.72e-16, stable for 3 iters
+EV  97 converged λ = -0.0315930378, ‖r‖ = 6.65e-16, stable for 3 iters
+EV  98 converged λ = -0.0315861855, ‖r‖ = 8.05e-16, stable for 3 iters
+EV  99 converged λ = -0.0314479122, ‖r‖ = 6.91e-16, stable for 3 iters
+EV 100 converged λ = -0.0288422702, ‖r‖ = 1.56e-15, stable for 3 iters
+EV 101 converged λ = -0.0270341081, ‖r‖ = 9.86e-16, stable for 3 iters
+EV 102 converged λ = -0.0269430459, ‖r‖ = 7.40e-16, stable for 3 iters
+EV 103 converged λ = -0.0261312727, ‖r‖ = 6.64e-16, stable for 3 iters
+EV 104 converged λ = -0.0260029239, ‖r‖ = 5.86e-16, stable for 3 iters
+EV 105 converged λ = -0.0258961356, ‖r‖ = 7.12e-16, stable for 3 iters
+EV 106 converged λ = -0.0256713936, ‖r‖ = 6.97e-16, stable for 3 iters
+EV 107 converged λ = -0.0256227449, ‖r‖ = 9.00e-16, stable for 3 iters
+EV 108 converged λ = -0.0245529395, ‖r‖ = 7.18e-16, stable for 3 iters
+EV 109 converged λ = -0.0243833642, ‖r‖ = 8.52e-16, stable for 3 iters
+EV 110 converged λ = -0.0231171144, ‖r‖ = 8.25e-16, stable for 3 iters
+EV 111 converged λ = -0.0230890091, ‖r‖ = 7.14e-16, stable for 3 iters
+EV 112 converged λ = -0.0229082494, ‖r‖ = 7.86e-16, stable for 3 iters
+EV 113 converged λ = -0.0227806398, ‖r‖ = 7.22e-16, stable for 3 iters
+EV 114 converged λ = -0.0221155618, ‖r‖ = 6.84e-16, stable for 3 iters
+EV 115 converged λ = -0.0220811249, ‖r‖ = 9.62e-16, stable for 3 iters
+EV 116 converged λ = -0.0210228797, ‖r‖ = 8.79e-16, stable for 3 iters
+EV 117 converged λ = -0.0208679120, ‖r‖ = 1.96e-15, stable for 3 iters
+EV 118 converged λ = -0.0187969204, ‖r‖ = 7.54e-16, stable for 3 iters
+EV 119 converged λ = -0.0187024286, ‖r‖ = 6.71e-16, stable for 3 iters
+EV 120 converged λ = -0.0179784406, ‖r‖ = 5.40e-16, stable for 3 iters
+EV 121 converged λ = -0.0176597250, ‖r‖ = 7.67e-16, stable for 3 iters
+EV 122 converged λ = -0.0170719211, ‖r‖ = 1.24e-15, stable for 3 iters
+EV 123 converged λ = -0.0170266991, ‖r‖ = 1.40e-15, stable for 3 iters
+EV 124 converged λ = -0.0167554589, ‖r‖ = 6.24e-16, stable for 3 iters
+EV 125 converged λ = -0.0160333224, ‖r‖ = 7.29e-16, stable for 3 iters
+EV 126 converged λ = -0.0159287089, ‖r‖ = 7.38e-16, stable for 3 iters
+EV 127 converged λ = -0.0158998711, ‖r‖ = 8.89e-16, stable for 3 iters
+EV 128 converged λ = -0.0158933520, ‖r‖ = 6.37e-16, stable for 3 iters
+EV 129 converged λ = -0.0142983333, ‖r‖ = 6.21e-16, stable for 3 iters
+EV 130 converged λ = -0.0142009218, ‖r‖ = 7.73e-16, stable for 3 iters
+EV 131 converged λ = -0.0136445276, ‖r‖ = 1.33e-15, stable for 3 iters
+EV 132 converged λ = -0.0136143901, ‖r‖ = 1.22e-15, stable for 3 iters
+EV 133 converged λ = -0.0135954004, ‖r‖ = 1.32e-15, stable for 3 iters
+EV 134 converged λ = -0.0135232158, ‖r‖ = 1.29e-15, stable for 3 iters
+EV 135 converged λ = -0.0130414759, ‖r‖ = 2.18e-15, stable for 3 iters
+EV 136 converged λ = -0.0130244164, ‖r‖ = 1.96e-15, stable for 3 iters
+EV 137 converged λ = -0.0122053181, ‖r‖ = 2.16e-15, stable for 3 iters
+EV 138 converged λ = -0.0121048497, ‖r‖ = 3.69e-15, stable for 3 iters
+EV 139 converged λ = -0.0119762647, ‖r‖ = 2.75e-15, stable for 3 iters
+EV 140 converged λ = -0.0118525935, ‖r‖ = 5.37e-15, stable for 3 iters
+EV 141 converged λ = -0.0115263235, ‖r‖ = 5.73e-15, stable for 3 iters
+EV 142 converged λ = -0.0114970309, ‖r‖ = 4.39e-15, stable for 3 iters
+EV 143 converged λ = -0.0105315981, ‖r‖ = 9.79e-15, stable for 3 iters
+EV 144 converged λ = -0.0105278191, ‖r‖ = 1.80e-14, stable for 3 iters
+EV 145 converged λ = -0.0104440354, ‖r‖ = 6.84e-15, stable for 3 iters
+EV 146 converged λ = -0.0100091985, ‖r‖ = 5.03e-15, stable for 3 iters
+EV 147 converged λ = -0.0098954825, ‖r‖ = 1.99e-14, stable for 3 iters
+EV 148 converged λ = -0.0098735214, ‖r‖ = 1.45e-14, stable for 3 iters
+EV 149 converged λ = -0.0096869294, ‖r‖ = 1.20e-14, stable for 3 iters
+EV 150 converged λ = -0.0095825139, ‖r‖ = 5.63e-15, stable for 3 iters
+EV 151 converged λ = -0.0095555759, ‖r‖ = 1.56e-14, stable for 3 iters
+EV 152 converged λ = -0.0094761131, ‖r‖ = 2.05e-14, stable for 3 iters
+EV 153 converged λ = -0.0092469782, ‖r‖ = 3.37e-14, stable for 3 iters
+EV 154 converged λ = -0.0092379185, ‖r‖ = 4.40e-14, stable for 3 iters
+EV 155 converged λ = -0.0091357031, ‖r‖ = 1.35e-15, stable for 3 iters
+EV 156 converged λ = -0.0091280491, ‖r‖ = 2.64e-15, stable for 3 iters
+EV 157 converged λ = -0.0090521292, ‖r‖ = 7.17e-14, stable for 3 iters
+EV 158 converged λ = -0.0090413932, ‖r‖ = 3.40e-14, stable for 3 iters
+EV 159 converged λ = -0.0083676911, ‖r‖ = 4.69e-14, stable for 3 iters
+EV 160 converged λ = -0.0082975846, ‖r‖ = 2.14e-14, stable for 3 iters
+EV 161 converged λ = -0.0080429122, ‖r‖ = 2.81e-14, stable for 3 iters
+EV 162 converged λ = -0.0080296906, ‖r‖ = 7.05e-14, stable for 3 iters
+EV 163 converged λ = -0.0078666585, ‖r‖ = 2.23e-14, stable for 3 iters
+EV 164 converged λ = -0.0078567703, ‖r‖ = 3.74e-14, stable for 3 iters
+EV 165 converged λ = -0.0076878061, ‖r‖ = 3.87e-14, stable for 3 iters
+EV 166 converged λ = -0.0070066150, ‖r‖ = 7.21e-14, stable for 3 iters
+EV 167 converged λ = -0.0069929915, ‖r‖ = 1.02e-13, stable for 3 iters
+EV 168 converged λ = -0.0068021577, ‖r‖ = 1.07e-13, stable for 3 iters
+EV 169 converged λ = -0.0067797093, ‖r‖ = 2.49e-13, stable for 3 iters
+EV 170 converged λ = -0.0067212156, ‖r‖ = 1.40e-13, stable for 3 iters
+EV 171 converged λ = -0.0066824059, ‖r‖ = 1.18e-13, stable for 3 iters
+EV 172 converged λ = -0.0066692597, ‖r‖ = 1.27e-13, stable for 3 iters
+EV 173 converged λ = -0.0066067173, ‖r‖ = 9.54e-14, stable for 3 iters
+EV 174 converged λ = -0.0064250722, ‖r‖ = 2.98e-13, stable for 3 iters
+EV 175 converged λ = -0.0060134172, ‖r‖ = 3.96e-13, stable for 3 iters
+EV 176 converged λ = -0.0060131972, ‖r‖ = 2.88e-13, stable for 3 iters
+EV 177 converged λ = -0.0060013077, ‖r‖ = 4.94e-13, stable for 3 iters
+EV 178 converged λ = -0.0059520097, ‖r‖ = 2.98e-13, stable for 3 iters
+EV 179 converged λ = -0.0058672676, ‖r‖ = 2.92e-13, stable for 3 iters
+EV 180 converged λ = -0.0058038438, ‖r‖ = 8.20e-13, stable for 3 iters
+EV 181 converged λ = -0.0054199550, ‖r‖ = 9.17e-13, stable for 3 iters
+EV 182 converged λ = -0.0053330977, ‖r‖ = 9.45e-13, stable for 3 iters
+EV 183 converged λ = -0.0050183237, ‖r‖ = 1.44e-12, stable for 3 iters
+EV 184 converged λ = -0.0050143434, ‖r‖ = 1.75e-12, stable for 3 iters
+EV 185 converged λ = -0.0050015290, ‖r‖ = 1.99e-12, stable for 3 iters
+EV 186 converged λ = -0.0049175298, ‖r‖ = 3.05e-12, stable for 3 iters
+EV 187 converged λ = -0.0049065399, ‖r‖ = 1.59e-12, stable for 3 iters
+EV 188 converged λ = -0.0048773024, ‖r‖ = 1.23e-12, stable for 3 iters
+EV 189 converged λ = -0.0048671010, ‖r‖ = 1.80e-12, stable for 3 iters
+EV 190 converged λ = -0.0047429362, ‖r‖ = 3.55e-12, stable for 3 iters
+EV 191 converged λ = -0.0047038862, ‖r‖ = 5.23e-12, stable for 3 iters
+EV 192 converged λ = -0.0044775465, ‖r‖ = 7.66e-12, stable for 3 iters
+EV 193 converged λ = -0.0044154633, ‖r‖ = 6.70e-12, stable for 3 iters
+EV 194 converged λ = -0.0041833277, ‖r‖ = 9.39e-12, stable for 3 iters
+EV 195 converged λ = -0.0041740122, ‖r‖ = 6.57e-12, stable for 3 iters
+EV 196 converged λ = -0.0041354361, ‖r‖ = 8.08e-12, stable for 3 iters
+EV 197 converged λ = -0.0041328757, ‖r‖ = 1.06e-12, stable for 3 iters
+EV 198 converged λ = -0.0041138374, ‖r‖ = 1.11e-11, stable for 3 iters
+EV 199 converged λ = -0.0039873538, ‖r‖ = 8.78e-12, stable for 3 iters
+EV 200 converged λ = -0.0039773206, ‖r‖ = 1.75e-11, stable for 3 iters
+EV 201 converged λ = -0.0038286397, ‖r‖ = 8.63e-12, stable for 3 iters
+EV 202 converged λ = -0.0038282311, ‖r‖ = 1.38e-11, stable for 3 iters
+EV 203 converged λ = -0.0038148298, ‖r‖ = 2.26e-11, stable for 3 iters
+EV 204 converged λ = -0.0037143922, ‖r‖ = 3.80e-11, stable for 3 iters
+EV 205 converged λ = -0.0036657967, ‖r‖ = 3.10e-11, stable for 3 iters
+EV 206 converged λ = -0.0035806763, ‖r‖ = 5.45e-11, stable for 3 iters
+EV 207 converged λ = -0.0035497287, ‖r‖ = 6.79e-11, stable for 3 iters
+EV 208 converged λ = -0.0035345321, ‖r‖ = 2.21e-11, stable for 3 iters
+EV 209 converged λ = -0.0035225228, ‖r‖ = 3.38e-11, stable for 3 iters
+EV 210 converged λ = -0.0035122842, ‖r‖ = 2.92e-11, stable for 3 iters
+EV 211 converged λ = -0.0035012866, ‖r‖ = 2.68e-11, stable for 3 iters
+EV 212 converged λ = -0.0034342920, ‖r‖ = 4.68e-11, stable for 3 iters
+EV 213 converged λ = -0.0034250807, ‖r‖ = 3.15e-11, stable for 3 iters
+EV 214 converged λ = -0.0033493828, ‖r‖ = 5.11e-11, stable for 3 iters
+EV 215 converged λ = -0.0033211788, ‖r‖ = 9.23e-11, stable for 3 iters
+EV 216 converged λ = -0.0031266175, ‖r‖ = 1.76e-10, stable for 3 iters
+EV 217 converged λ = -0.0031219251, ‖r‖ = 1.66e-10, stable for 3 iters
+EV 218 converged λ = -0.0030643583, ‖r‖ = 6.57e-11, stable for 3 iters
+EV 219 converged λ = -0.0030599566, ‖r‖ = 2.62e-10, stable for 3 iters
+EV 220 converged λ = -0.0030303642, ‖r‖ = 1.77e-10, stable for 3 iters
+Converged all required eigenvalues.
+3592.844060 seconds (9.94 M allocations: 282.476 GiB, 0.32% gc time)
+Number of FLOPs: 61196212860032
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_H2_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 6.4632512114 (computed) - 6.4632512114 (exact) = -1.7764e-15
+  2: 5.3510666749 (computed) - 5.3510666749 (exact) = -2.6645e-15
+  3: 3.6692678081 (computed) - 3.6692678081 (exact) =  2.2204e-15
+  4: 3.6684485630 (computed) - 3.6684485630 (exact) =  0.0000e+00
+  5: 2.3423782213 (computed) - 2.3423782213 (exact) = -1.3323e-15
+  6: 1.9330393125 (computed) - 1.9330393125 (exact) = -2.2204e-16
+  7: 1.9330198656 (computed) - 1.9330198656 (exact) =  6.6613e-16
+  8: 1.7929615577 (computed) - 1.7929615577 (exact) = -1.1102e-15
+  9: 1.7079769047 (computed) - 1.7079769047 (exact) =  2.2204e-16
+ 10: 1.5309026068 (computed) - 1.5309026068 (exact) =  8.8818e-16
+ 11: 1.5304028750 (computed) - 1.5304028750 (exact) =  1.9984e-15
+ 12: 1.3532844487 (computed) - 1.3532844487 (exact) =  4.4409e-16
+ 13: 1.3528606032 (computed) - 1.3528606032 (exact) =  1.5543e-15
+ 14: 1.1603424836 (computed) - 1.1603424836 (exact) =  0.0000e+00
+ 15: 1.0872822794 (computed) - 1.0872822794 (exact) = -1.1102e-15
+ 16: 1.0872089559 (computed) - 1.0872089559 (exact) = -8.8818e-16
+ 17: 1.0372010066 (computed) - 1.0372010066 (exact) =  0.0000e+00
+ 18: 0.9756902641 (computed) - 0.9756902641 (exact) = -1.1102e-15
+ 19: 0.9754933093 (computed) - 0.9754933093 (exact) = -1.5543e-15
+ 20: 0.8651512159 (computed) - 0.8651512159 (exact) = -1.1102e-15
+ 21: 0.8649089835 (computed) - 0.8649089835 (exact) = -1.4433e-15
+ 22: 0.8130816265 (computed) - 0.8130816265 (exact) = -4.4409e-16
+ 23: 0.8129011408 (computed) - 0.8129011408 (exact) =  6.6613e-16
+ 24: 0.7599680553 (computed) - 0.7599680553 (exact) = -5.5511e-16
+ 25: 0.7054686836 (computed) - 0.7054686836 (exact) =  0.0000e+00
+ 26: 0.7046916022 (computed) - 0.7046916022 (exact) =  3.3307e-16
+ 27: 0.6948665259 (computed) - 0.6948665259 (exact) = -1.1102e-16
+ 28: 0.6678121145 (computed) - 0.6678121145 (exact) =  0.0000e+00
+ 29: 0.6577500510 (computed) - 0.6577500510 (exact) =  1.1102e-16
+ 30: 0.6575495172 (computed) - 0.6575495172 (exact) = -1.1102e-16
+ 31: 0.6157550994 (computed) - 0.6157550994 (exact) =  2.2204e-16
+ 32: 0.6155421687 (computed) - 0.6155421687 (exact) = -5.5511e-16
+ 33: 0.5947694036 (computed) - 0.5947694036 (exact) = -2.2204e-16
+ 34: 0.5944900748 (computed) - 0.5944900748 (exact) =  0.0000e+00
+ 35: 0.5547223303 (computed) - 0.5547223303 (exact) =  1.1102e-16
+ 36: 0.5546206295 (computed) - 0.5546206295 (exact) = -6.6613e-16
+ 37: 0.5233858339 (computed) - 0.5233858339 (exact) =  3.3307e-16
+ 38: 0.4915990276 (computed) - 0.4915990276 (exact) =  5.5511e-17
+ 39: 0.4914245868 (computed) - 0.4914245868 (exact) = -1.1102e-16
+ 40: 0.4815825819 (computed) - 0.4815825819 (exact) = -5.5511e-17
+ 41: 0.4810657531 (computed) - 0.4810657531 (exact) =  3.3307e-16
+ 42: 0.4650250021 (computed) - 0.4650250021 (exact) =  1.1102e-16
+ 43: 0.4646630726 (computed) - 0.4646630726 (exact) = -1.1102e-16
+ 44: 0.4354215570 (computed) - 0.4354215570 (exact) =  5.5511e-17
+ 45: 0.4131145584 (computed) - 0.4131145584 (exact) =  2.2204e-16
+ 46: 0.4071768803 (computed) - 0.4071768803 (exact) =  2.2204e-16
+ 47: 0.4070913050 (computed) - 0.4070913050 (exact) = -2.7756e-16
+ 48: 0.3948352331 (computed) - 0.3948352331 (exact) = -1.6653e-16
+ 49: 0.3946306455 (computed) - 0.3946306455 (exact) = -1.6653e-16
+ 50: 0.3912184075 (computed) - 0.3912184075 (exact) = -1.1102e-16
+ 51: 0.3904122804 (computed) - 0.3904122804 (exact) = -5.5511e-17
+ 52: 0.3795506751 (computed) - 0.3795506751 (exact) =  0.0000e+00
+ 53: 0.3795455559 (computed) - 0.3795455559 (exact) =  2.2204e-16
+ 54: 0.3643307277 (computed) - 0.3643307277 (exact) = -5.5511e-17
+ 55: 0.3639484329 (computed) - 0.3639484329 (exact) =  1.6653e-16
+ 56: 0.3372976590 (computed) - 0.3372976590 (exact) =  0.0000e+00
+ 57: 0.3367415964 (computed) - 0.3367415964 (exact) =  0.0000e+00
+ 58: 0.3154511616 (computed) - 0.3154511616 (exact) =  1.6653e-16
+ 59: 0.3144634072 (computed) - 0.3144634072 (exact) =  1.6653e-16
+ 60: 0.3120503413 (computed) - 0.3120503413 (exact) = -1.6653e-16
+ 61: 0.3080797038 (computed) - 0.3080797038 (exact) =  0.0000e+00
+ 62: 0.3011475133 (computed) - 0.3011475133 (exact) =  0.0000e+00
+ 63: 0.3001821032 (computed) - 0.3001821032 (exact) =  0.0000e+00
+ 64: 0.2991777831 (computed) - 0.2991777831 (exact) =  5.5511e-17
+ 65: 0.2990649447 (computed) - 0.2990649447 (exact) = -5.5511e-17
+ 66: 0.2805981250 (computed) - 0.2805981250 (exact) =  5.5511e-17
+ 67: 0.2795988192 (computed) - 0.2795988192 (exact) =  5.5511e-17
+ 68: 0.2696542915 (computed) - 0.2696542915 (exact) =  2.2204e-16
+ 69: 0.2654178339 (computed) - 0.2654178339 (exact) = -1.1102e-16
+ 70: 0.2653225032 (computed) - 0.2653225032 (exact) =  5.5511e-17
+ 71: 0.2572211153 (computed) - 0.2572211153 (exact) = -1.6653e-16
+ 72: 0.2550247657 (computed) - 0.2550247657 (exact) = -5.5511e-17
+ 73: 0.2550223295 (computed) - 0.2550223295 (exact) =  0.0000e+00
+ 74: 0.2487042420 (computed) - 0.2487042420 (exact) = -2.2204e-16
+ 75: 0.2481859554 (computed) - 0.2481859554 (exact) = -2.7756e-17
+ 76: 0.2454925096 (computed) - 0.2454925096 (exact) = -2.7756e-17
+ 77: 0.2454533683 (computed) - 0.2454533683 (exact) =  3.6082e-16
+ 78: 0.2371151553 (computed) - 0.2371151553 (exact) =  2.2204e-16
+ 79: 0.2369824385 (computed) - 0.2369824385 (exact) = -8.3267e-17
+ 80: 0.2359860147 (computed) - 0.2359860147 (exact) =  1.3878e-16
+ 81: 0.2354744941 (computed) - 0.2354744941 (exact) = -5.5511e-17
+ 82: 0.2204604075 (computed) - 0.2204604075 (exact) =  1.3878e-16
+ 83: 0.2201724087 (computed) - 0.2201724087 (exact) =  1.3878e-16
+ 84: 0.2198327588 (computed) - 0.2198327588 (exact) = -5.5511e-17
+ 85: 0.2123984743 (computed) - 0.2123984743 (exact) =  1.1102e-16
+ 86: 0.2123460684 (computed) - 0.2123460684 (exact) =  1.6653e-16
+ 87: 0.2060181610 (computed) - 0.2060181610 (exact) =  3.0531e-16
+ 88: 0.2059885052 (computed) - 0.2059885052 (exact) =  1.6653e-16
+ 89: 0.2023186760 (computed) - 0.2023186760 (exact) =  5.5511e-17
+ 90: 0.2013692346 (computed) - 0.2013692346 (exact) = -5.5511e-17
+ 91: 0.1933190723 (computed) - 0.1933190723 (exact) =  5.5511e-17
+ 92: 0.1933064361 (computed) - 0.1933064361 (exact) = -5.5511e-17
+ 93: 0.1856111928 (computed) - 0.1856111928 (exact) = -1.1102e-16
+ 94: 0.1824035659 (computed) - 0.1824035659 (exact) =  5.5511e-17
+ 95: 0.1823606757 (computed) - 0.1823606757 (exact) = -8.3267e-17
+ 96: 0.1779664444 (computed) - 0.1779664444 (exact) =  5.5511e-17
+ 97: 0.1777443045 (computed) - 0.1777443045 (exact) = -1.9429e-16
+ 98: 0.1777250278 (computed) - 0.1777250278 (exact) =  5.5511e-17
+ 99: 0.1773355920 (computed) - 0.1773355920 (exact) =  1.1102e-16
+100: 0.1698301216 (computed) - 0.1698301216 (exact) = -2.7756e-17
+101: 0.1644205221 (computed) - 0.1644205221 (exact) = -1.9429e-16
+102: 0.1641433698 (computed) - 0.1641433698 (exact) = -8.3267e-17
+103: 0.1616517018 (computed) - 0.1616517018 (exact) =  1.1102e-16
+104: 0.1612542213 (computed) - 0.1612542213 (exact) =  8.3267e-17
+105: 0.1609227627 (computed) - 0.1609227627 (exact) =  5.5511e-17
+106: 0.1602229498 (computed) - 0.1602229498 (exact) =  1.9429e-16
+107: 0.1600710620 (computed) - 0.1600710620 (exact) =  1.6653e-16
+108: 0.1566937762 (computed) - 0.1566937762 (exact) =  8.3267e-17
+109: 0.1561517344 (computed) - 0.1561517344 (exact) =  3.0531e-16
+110: 0.1520431333 (computed) - 0.1520431333 (exact) = -1.3878e-16
+111: 0.1519506799 (computed) - 0.1519506799 (exact) =  1.3878e-16
+112: 0.1513547139 (computed) - 0.1513547139 (exact) = -1.3878e-16
+113: 0.1509325671 (computed) - 0.1509325671 (exact) =  5.5511e-17
+114: 0.1487130181 (computed) - 0.1487130181 (exact) = -3.0531e-16
+115: 0.1485971899 (computed) - 0.1485971899 (exact) =  3.8858e-16
+116: 0.1449926885 (computed) - 0.1449926885 (exact) = -1.6653e-16
+117: 0.1444573017 (computed) - 0.1444573017 (exact) =  8.3267e-17
+118: 0.1371018614 (computed) - 0.1371018614 (exact) =  5.5511e-17
+119: 0.1367568228 (computed) - 0.1367568228 (exact) =  0.0000e+00
+120: 0.1340837076 (computed) - 0.1340837076 (exact) =  1.3878e-16
+121: 0.1328898979 (computed) - 0.1328898979 (exact) = -1.3878e-16
+122: 0.1306595620 (computed) - 0.1306595620 (exact) = -5.5511e-17
+123: 0.1304863942 (computed) - 0.1304863942 (exact) = -1.3878e-16
+124: 0.1294428789 (computed) - 0.1294428789 (exact) =  8.3267e-17
+125: 0.1266227563 (computed) - 0.1266227563 (exact) =  1.9429e-16
+126: 0.1262089891 (computed) - 0.1262089891 (exact) =  1.1102e-16
+127: 0.1260946910 (computed) - 0.1260946910 (exact) = -2.7756e-17
+128: 0.1260688384 (computed) - 0.1260688384 (exact) = -2.2204e-16
+129: 0.1195756383 (computed) - 0.1195756383 (exact) =  1.9429e-16
+130: 0.1191676207 (computed) - 0.1191676207 (exact) = -1.3878e-16
+131: 0.1168097922 (computed) - 0.1168097922 (exact) =  1.9429e-16
+132: 0.1166807188 (computed) - 0.1166807188 (exact) =  4.1633e-17
+133: 0.1165993156 (computed) - 0.1165993156 (exact) = -5.2736e-16
+134: 0.1162893625 (computed) - 0.1162893625 (exact) = -1.3878e-17
+135: 0.1141992815 (computed) - 0.1141992815 (exact) = -1.2490e-16
+136: 0.1141245651 (computed) - 0.1141245651 (exact) =  9.7145e-17
+137: 0.1104776816 (computed) - 0.1104776816 (exact) =  1.5266e-16
+138: 0.1100220420 (computed) - 0.1100220420 (exact) = -5.5511e-17
+139: 0.1094361214 (computed) - 0.1094361214 (exact) =  1.8041e-16
+140: 0.1088696169 (computed) - 0.1088696169 (exact) =  2.6368e-16
+141: 0.1073607167 (computed) - 0.1073607167 (exact) =  2.7756e-16
+142: 0.1072242084 (computed) - 0.1072242084 (exact) =  9.7145e-17
+143: 0.1026235749 (computed) - 0.1026235749 (exact) =  1.6653e-16
+144: 0.1026051611 (computed) - 0.1026051611 (exact) =  3.4694e-16
+145: 0.1021960635 (computed) - 0.1021960635 (exact) =  5.9674e-16
+146: 0.1000459818 (computed) - 0.1000459818 (exact) = -8.3267e-17
+147: 0.0994760400 (computed) - 0.0994760400 (exact) = -4.7184e-16
+148: 0.0993655948 (computed) - 0.0993655948 (exact) =  2.4980e-16
+149: 0.0984221997 (computed) - 0.0984221997 (exact) =  6.9389e-17
+150: 0.0978903156 (computed) - 0.0978903156 (exact) =  9.7145e-17
+151: 0.0977526260 (computed) - 0.0977526260 (exact) =  1.1102e-16
+152: 0.0973453292 (computed) - 0.0973453292 (exact) =  1.9429e-16
+153: 0.0961612096 (computed) - 0.0961612096 (exact) = -1.1102e-16
+154: 0.0961140912 (computed) - 0.0961140912 (exact) = -5.5511e-17
+155: 0.0955808723 (computed) - 0.0955808723 (exact) =  9.7145e-17
+156: 0.0955408241 (computed) - 0.0955408241 (exact) = -2.3592e-16
+157: 0.0951426780 (computed) - 0.0951426780 (exact) =  2.7756e-17
+158: 0.0950862411 (computed) - 0.0950862411 (exact) = -6.9389e-17
+159: 0.0914750848 (computed) - 0.0914750848 (exact) = -1.2490e-16
+160: 0.0910910788 (computed) - 0.0910910788 (exact) =  3.6082e-16
+161: 0.0896822848 (computed) - 0.0896822848 (exact) = -1.5266e-16
+162: 0.0896085411 (computed) - 0.0896085411 (exact) = -1.3878e-17
+163: 0.0886941852 (computed) - 0.0886941852 (exact) =  1.3878e-16
+164: 0.0886384245 (computed) - 0.0886384245 (exact) =  8.3267e-17
+165: 0.0876801352 (computed) - 0.0876801352 (exact) =  4.1633e-17
+166: 0.0837055256 (computed) - 0.0837055256 (exact) =  2.7756e-17
+167: 0.0836241085 (computed) - 0.0836241085 (exact) = -1.5266e-16
+168: 0.0824751942 (computed) - 0.0824751942 (exact) = -2.7756e-17
+169: 0.0823389903 (computed) - 0.0823389903 (exact) = -3.4694e-16
+170: 0.0819830203 (computed) - 0.0819830203 (exact) = -1.9429e-16
+171: 0.0817459843 (computed) - 0.0817459843 (exact) = -1.9429e-16
+172: 0.0816655358 (computed) - 0.0816655358 (exact) = -9.7145e-17
+173: 0.0812817159 (computed) - 0.0812817159 (exact) = -1.5266e-16
+174: 0.0801565480 (computed) - 0.0801565480 (exact) =  1.8041e-16
+175: 0.0775462260 (computed) - 0.0775462260 (exact) = -1.2490e-16
+176: 0.0775448077 (computed) - 0.0775448077 (exact) =  2.6368e-16
+177: 0.0774681075 (computed) - 0.0774681075 (exact) = -2.7756e-16
+178: 0.0771492687 (computed) - 0.0771492687 (exact) =  3.4694e-16
+179: 0.0765980914 (computed) - 0.0765980914 (exact) = -1.2490e-16
+180: 0.0761829625 (computed) - 0.0761829625 (exact) = -5.5511e-17
+181: 0.0736203439 (computed) - 0.0736203439 (exact) = -1.3878e-16
+182: 0.0730280612 (computed) - 0.0730280612 (exact) = -2.3592e-16
+183: 0.0708401275 (computed) - 0.0708401275 (exact) =  1.3878e-16
+184: 0.0708120287 (computed) - 0.0708120287 (exact) = -2.7756e-17
+185: 0.0707214890 (computed) - 0.0707214890 (exact) = -2.2204e-16
+186: 0.0701251008 (computed) - 0.0701251008 (exact) =  2.7756e-16
+187: 0.0700466977 (computed) - 0.0700466977 (exact) = -1.8041e-16
+188: 0.0698376864 (computed) - 0.0698376864 (exact) = -5.2736e-16
+189: 0.0697646116 (computed) - 0.0697646116 (exact) = -3.1919e-16
+190: 0.0688689785 (computed) - 0.0688689785 (exact) = -3.1919e-16
+191: 0.0685848835 (computed) - 0.0685848835 (exact) =  1.9429e-16
+192: 0.0669144717 (computed) - 0.0669144717 (exact) =  8.3267e-17
+193: 0.0664489524 (computed) - 0.0664489524 (exact) =  6.9389e-17
+194: 0.0646786496 (computed) - 0.0646786496 (exact) =  2.6368e-16
+195: 0.0646065956 (computed) - 0.0646065956 (exact) = -1.9429e-16
+196: 0.0643073561 (computed) - 0.0643073561 (exact) =  6.2450e-16
+197: 0.0642874463 (computed) - 0.0642874463 (exact) = -5.4123e-16
+198: 0.0641392034 (computed) - 0.0641392034 (exact) =  2.6368e-16
+199: 0.0631454967 (computed) - 0.0631454967 (exact) =  4.5797e-16
+200: 0.0630660017 (computed) - 0.0630660017 (exact) = -1.8041e-16
+200 Eigenvalues converges, out of 200 requested.
+Finished processing molecule: H2

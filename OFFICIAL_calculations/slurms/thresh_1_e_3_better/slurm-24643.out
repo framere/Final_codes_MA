@@ -1,0 +1,23 @@
+slurmstepd-andoria01: error: *** JOB 24643 ON andoria01 CANCELLED AT 2025-07-13T16:53:32 ***
+
+[62537] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/OFFICIAL_calculations/Defl_formaldehyde.jl:275
+dgemm_kernel_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+unknown function (ip: (nil))
+Allocations: 13661498 (Pool: 13661050; Big: 448); GC: 123
+Processing molecule: formaldehyde
+Running with beta = 8
+Running with l = 60
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Davidson
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 44.648751310431436
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 29.631669466799888
+Iter 3: V_size = 124, Converged = 0, ‖r‖ (largest λ) = 21.19109417929311
+Iter 4: V_size = 120, Converged = 0, ‖r‖ (largest λ) = 0.8112863850145101
+Iter 5: V_size = 120, Converged = 0, ‖r‖ (largest λ) = 0.2642926702632518
+EV   1 converged λ = -735.4153437081, ‖r‖ = 1.92e-12, stable for 3 iters
+EV   2 converged λ = -611.6773615864, ‖r‖ = 5.09e-12, stable for 3 iters
+EV   3 converged λ = -594.7742412739, ‖r‖ = 4.61e-12, stable for 3 iters
+Iter 6: V_size = 114, Converged = 3, ‖r‖ (largest λ) = 0.05793499550074754
+Iter 7: V_size = 114, Converged = 3, ‖r‖ (largest λ) = 0.033698954927939236
+Iter 8: V_size = 114, Converged = 3, ‖r‖ (largest λ) = 0.016646635812185732

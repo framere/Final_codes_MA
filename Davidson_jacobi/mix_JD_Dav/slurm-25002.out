@@ -1,0 +1,16 @@
+slurmstepd-andoria01: error: *** JOB 25002 ON andoria01 CANCELLED AT 2025-09-05T10:24:04 ***
+
+[186794] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/formal_mixed.jl:361
+dgemm_kernel_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+unknown function (ip: (nil))
+Allocations: 16634593 (Pool: 16634078; Big: 515); GC: 91
+Processing molecule: formaldehyde
+Running with beta = 16
+Running with l = 60
+Starting Davidson with n_aux = 256, l_buffer = 72, lc = 61, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.8656922926223112
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.18084421183679666
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.060623910912410116
+Iter 4: V_size = 200, Converged = 0, ‖r‖ (largest λ) = 0.24846579636660096
+Iter 5: V_size = 144, Converged = 0, ‖r‖ (largest λ) = 0.5107513930940635

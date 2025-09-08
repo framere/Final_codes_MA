@@ -1,7 +1,6 @@
 *.jld2
 formaldehyde/
 *.dat
-*.out
 *.sh
 *.pdf
 *.png

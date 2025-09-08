@@ -1,0 +1,14 @@
+slurmstepd-andoria01: error: *** JOB 24712 ON andoria01 CANCELLED AT 2025-07-24T07:09:42 ***
+
+[101292] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/FINAL_CODE/no_stability_CH2O.jl:290
+dgemm_kernel_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+unknown function (ip: (nil))
+Allocations: 13889559 (Pool: 13889095; Big: 464); GC: 26
+Processing molecule: formaldehyde
+Running with beta = 25
+Running with l = 60
+Starting Davidson with n_aux = 400, l_buffer = 117, lc = 66, thresh = 1.5000000000000002e-5, max_iter = 5000
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.8656922926223112
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.18084421183679666
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.060623910912410116

@@ -1,0 +1,24 @@
+ERROR: LoadError: SystemError: opening file "../H2/gamma_VASP_HFbasisdat": No such file or directory
+Stacktrace:
+ [1] systemerror(p::String, errno::Int32; extrainfo::Nothing)
+   @ Base ./error.jl:176
+ [2] systemerror
+   @ ./error.jl:175 [inlined]
+ [3] open(fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:295
+ [4] open
+   @ ./iostream.jl:277 [inlined]
+ [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:358
+ [6] open
+   @ ./iostream.jl:357 [inlined]
+ [7] load_matrix(filename::String, molecule::String)
+   @ Main ~/MA_best/FINAL_CODE/Change_defl_H2.jl:68
+ [8] main(molecule::String, l::Int64, beta::Int64, factor::Int64, max_iter::Int64)
+   @ Main ~/MA_best/FINAL_CODE/Change_defl_H2.jl:247
+ [9] top-level scope
+   @ ~/MA_best/FINAL_CODE/Change_defl_H2.jl:294
+in expression starting at /home/fmereto/MA_best/FINAL_CODE/Change_defl_H2.jl:287
+Processing molecule: H2
+Running with beta = 40
+Running with l = 10

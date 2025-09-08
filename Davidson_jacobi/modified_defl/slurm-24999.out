@@ -1,0 +1,869 @@
+Processing molecule: formaldehyde
+Running with beta = 16
+Running with l = 60
+Starting Davidson with n_aux = 256, l_buffer = 72, lc = 61, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.8656922926223112
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.04958554400585558
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.028905894784470844
+EV   1 converged λ = -735.4153437080, ‖r‖ = 2.90e-04 
+EV   2 converged λ = -611.6773615863, ‖r‖ = 2.55e-04 
+EV   3 converged λ = -594.7742412738, ‖r‖ = 6.62e-05 
+EV   4 converged λ = -178.9518461144, ‖r‖ = 2.47e-02 
+EV   5 converged λ = -134.6089975828, ‖r‖ = 1.87e-02 
+EV   6 converged λ = -131.6601945206, ‖r‖ = 2.40e-02 
+EV   7 converged λ = -89.1246078490, ‖r‖ = 1.16e-02 
+EV   8 converged λ = -85.0975895367, ‖r‖ = 2.47e-02 
+EV   9 converged λ = -63.1374073074, ‖r‖ = 9.89e-03 
+EV  10 converged λ = -46.3616572170, ‖r‖ = 1.06e-02 
+Iter 4: V_size = 190, Converged = 10, ‖r‖ (largest λ) = 0.5407516213632697
+EV  11 converged λ = -167.9280307310, ‖r‖ = 1.80e-05 
+EV  12 converged λ = -139.8613654990, ‖r‖ = 1.48e-05 
+EV  13 converged λ = -45.8340340820, ‖r‖ = 7.49e-05 
+EV  14 converged λ = -45.3851815450, ‖r‖ = 8.93e-05 
+EV  15 converged λ = -36.3324001585, ‖r‖ = 4.16e-04 
+EV  16 converged λ = -31.1572242295, ‖r‖ = 1.76e-04 
+EV  17 converged λ = -27.4351946075, ‖r‖ = 2.87e-04 
+EV  18 converged λ = -25.6627957952, ‖r‖ = 6.41e-04 
+EV  19 converged λ = -24.7580637566, ‖r‖ = 1.53e-03 
+EV  20 converged λ = -19.9884918825, ‖r‖ = 3.87e-04 
+EV  21 converged λ = -19.4865336722, ‖r‖ = 3.24e-04 
+EV  22 converged λ = -18.1142001920, ‖r‖ = 5.13e-04 
+EV  23 converged λ = -17.2609173900, ‖r‖ = 5.00e-04 
+EV  24 converged λ = -16.3526879828, ‖r‖ = 3.66e-04 
+EV  25 converged λ = -16.2829937051, ‖r‖ = 4.95e-04 
+EV  26 converged λ = -16.1152499704, ‖r‖ = 7.11e-04 
+EV  27 converged λ = -15.4658967689, ‖r‖ = 4.19e-04 
+EV  28 converged λ = -14.3190661502, ‖r‖ = 5.21e-04 
+EV  29 converged λ = -13.7222574432, ‖r‖ = 4.62e-04 
+EV  30 converged λ = -13.6825128608, ‖r‖ = 1.18e-03 
+EV  31 converged λ = -13.5269622010, ‖r‖ = 1.06e-03 
+EV  32 converged λ = -12.8445327294, ‖r‖ = 1.24e-03 
+EV  33 converged λ = -12.7590433133, ‖r‖ = 8.19e-04 
+EV  34 converged λ = -11.8045444335, ‖r‖ = 4.25e-04 
+EV  35 converged λ = -11.7043630516, ‖r‖ = 1.30e-03 
+EV  36 converged λ = -9.8477604044, ‖r‖ = 3.27e-03 
+EV  37 converged λ = -9.7475907387, ‖r‖ = 4.29e-03 
+EV  38 converged λ = -9.6326196269, ‖r‖ = 2.81e-03 
+EV  39 converged λ = -9.4947928590, ‖r‖ = 1.68e-03 
+EV  40 converged λ = -9.4656609315, ‖r‖ = 1.23e-03 
+EV  41 converged λ = -7.7273391070, ‖r‖ = 1.81e-03 
+EV  42 converged λ = -6.8329394761, ‖r‖ = 3.72e-03 
+EV  43 converged λ = -5.7891709856, ‖r‖ = 2.72e-03 
+EV  44 converged λ = -5.7190113146, ‖r‖ = 4.76e-03 
+EV  45 converged λ = -5.2281201557, ‖r‖ = 2.32e-03 
+EV  46 converged λ = -5.0399256321, ‖r‖ = 5.87e-03 
+EV  47 converged λ = -4.6652028557, ‖r‖ = 5.89e-03 
+Iter 5: V_size = 215, Converged = 47, ‖r‖ (largest λ) = 0.005808903848429629
+EV  48 converged λ = -11.9681742760, ‖r‖ = 4.34e-04 
+EV  49 converged λ = -6.6283479671, ‖r‖ = 3.17e-03 
+EV  50 converged λ = -6.5857753938, ‖r‖ = 6.88e-03 
+EV  51 converged λ = -6.5384347123, ‖r‖ = 2.95e-03 
+Iter 6: V_size = 236, Converged = 51, ‖r‖ (largest λ) = 0.005152261637127147
+EV  52 converged λ = -6.2223722812, ‖r‖ = 5.10e-03 
+EV  53 converged λ = -4.7814415416, ‖r‖ = 5.96e-03 
+EV  54 converged λ = -4.6211802925, ‖r‖ = 4.45e-03 
+EV  55 converged λ = -4.5200152801, ‖r‖ = 3.93e-03 
+EV  56 converged λ = -4.4887211110, ‖r‖ = 4.86e-03 
+EV  57 converged λ = -4.0016559105, ‖r‖ = 3.56e-03 
+EV  58 converged λ = -3.8956053385, ‖r‖ = 2.55e-03 
+EV  59 converged λ = -3.6818136895, ‖r‖ = 4.38e-03 
+Iter 7: V_size = 249, Converged = 59, ‖r‖ (largest λ) = 0.01589136860377627
+Iter 8: V_size = 26, Converged = 59, ‖r‖ (largest λ) = 0.010074600576901523
+Iter 9: V_size = 39, Converged = 59, ‖r‖ (largest λ) = 0.36160168962582295
+Iter 10: V_size = 52, Converged = 59, ‖r‖ (largest λ) = 0.35049580225488514
+Iter 11: V_size = 65, Converged = 59, ‖r‖ (largest λ) = 0.6932384427956444
+Iter 12: V_size = 78, Converged = 59, ‖r‖ (largest λ) = 0.4013800587806631
+Iter 13: V_size = 91, Converged = 59, ‖r‖ (largest λ) = 0.2173638426032608
+Iter 14: V_size = 104, Converged = 59, ‖r‖ (largest λ) = 0.01558815382293809
+Iter 15: V_size = 117, Converged = 59, ‖r‖ (largest λ) = 0.008604252094504487
+Iter 16: V_size = 130, Converged = 59, ‖r‖ (largest λ) = 0.00856874099966136
+Iter 17: V_size = 143, Converged = 59, ‖r‖ (largest λ) = 0.008564401801677031
+Iter 18: V_size = 156, Converged = 59, ‖r‖ (largest λ) = 0.008564117081603855
+Iter 19: V_size = 169, Converged = 59, ‖r‖ (largest λ) = 0.008564117322435734
+Iter 20: V_size = 182, Converged = 59, ‖r‖ (largest λ) = 0.00856411746811098
+Iter 21: V_size = 195, Converged = 59, ‖r‖ (largest λ) = 0.008564118001983255
+Iter 22: V_size = 208, Converged = 59, ‖r‖ (largest λ) = 0.00856411837126886
+Iter 23: V_size = 221, Converged = 59, ‖r‖ (largest λ) = 0.008564118812665337
+Iter 24: V_size = 234, Converged = 59, ‖r‖ (largest λ) = 0.008564119151156483
+Iter 25: V_size = 247, Converged = 59, ‖r‖ (largest λ) = 0.008564119462009365
+Iter 26: V_size = 26, Converged = 59, ‖r‖ (largest λ) = 0.008564119557993022
+Iter 27: V_size = 39, Converged = 59, ‖r‖ (largest λ) = 0.00856411960662922
+Iter 28: V_size = 52, Converged = 59, ‖r‖ (largest λ) = 0.008564119631432129
+Iter 29: V_size = 65, Converged = 59, ‖r‖ (largest λ) = 0.008564119598574504
+Iter 30: V_size = 78, Converged = 59, ‖r‖ (largest λ) = 0.008564119631565618
+Iter 31: V_size = 91, Converged = 59, ‖r‖ (largest λ) = 0.008564119630501051
+Iter 32: V_size = 104, Converged = 59, ‖r‖ (largest λ) = 0.008564119637173065
+Iter 33: V_size = 117, Converged = 59, ‖r‖ (largest λ) = 0.008564119640501022
+Iter 34: V_size = 130, Converged = 59, ‖r‖ (largest λ) = 0.008564119647723096
+Iter 35: V_size = 143, Converged = 59, ‖r‖ (largest λ) = 0.008564119654911618
+Iter 36: V_size = 156, Converged = 59, ‖r‖ (largest λ) = 0.008564119657273916
+Iter 37: V_size = 169, Converged = 59, ‖r‖ (largest λ) = 0.008564119663013741
+Iter 38: V_size = 182, Converged = 59, ‖r‖ (largest λ) = 0.008564119672673702
+Iter 39: V_size = 195, Converged = 59, ‖r‖ (largest λ) = 0.008564119678371014
+Iter 40: V_size = 208, Converged = 59, ‖r‖ (largest λ) = 0.008564119688753804
+Iter 41: V_size = 221, Converged = 59, ‖r‖ (largest λ) = 0.008564119702195401
+Iter 42: V_size = 234, Converged = 59, ‖r‖ (largest λ) = 0.008564119712276299
+Iter 43: V_size = 247, Converged = 59, ‖r‖ (largest λ) = 0.008564119722165513
+Iter 44: V_size = 26, Converged = 59, ‖r‖ (largest λ) = 0.008564119738435155
+Iter 45: V_size = 39, Converged = 59, ‖r‖ (largest λ) = 0.00856411974880737
+Iter 46: V_size = 52, Converged = 59, ‖r‖ (largest λ) = 0.00856411975069135
+Iter 47: V_size = 65, Converged = 59, ‖r‖ (largest λ) = 0.008564119747818861
+Iter 48: V_size = 78, Converged = 59, ‖r‖ (largest λ) = 0.008564119758555058
+Iter 49: V_size = 91, Converged = 59, ‖r‖ (largest λ) = 0.008564119756859808
+Iter 50: V_size = 104, Converged = 59, ‖r‖ (largest λ) = 0.008564119756141946
+Iter 51: V_size = 117, Converged = 59, ‖r‖ (largest λ) = 0.008564119758939049
+Iter 52: V_size = 130, Converged = 59, ‖r‖ (largest λ) = 0.00856411975982842
+Iter 53: V_size = 143, Converged = 59, ‖r‖ (largest λ) = 0.008564119760883556
+Iter 54: V_size = 156, Converged = 59, ‖r‖ (largest λ) = 0.008564119764702277
+Iter 55: V_size = 169, Converged = 59, ‖r‖ (largest λ) = 0.008564119766885078
+Iter 56: V_size = 182, Converged = 59, ‖r‖ (largest λ) = 0.008564119768169835
+Iter 57: V_size = 195, Converged = 59, ‖r‖ (largest λ) = 0.008564119771402829
+Iter 58: V_size = 208, Converged = 59, ‖r‖ (largest λ) = 0.00856411977593766
+Iter 59: V_size = 221, Converged = 59, ‖r‖ (largest λ) = 0.008564119778846377
+Iter 60: V_size = 234, Converged = 59, ‖r‖ (largest λ) = 0.00856411978690244
+Iter 61: V_size = 247, Converged = 59, ‖r‖ (largest λ) = 0.00856411979476975
+Iter 62: V_size = 26, Converged = 59, ‖r‖ (largest λ) = 0.008564119803737504
+Iter 63: V_size = 39, Converged = 59, ‖r‖ (largest λ) = 0.008564119810613708
+Iter 64: V_size = 52, Converged = 59, ‖r‖ (largest λ) = 0.008564119812394726
+Iter 65: V_size = 65, Converged = 59, ‖r‖ (largest λ) = 0.00856411995520654
+Iter 66: V_size = 78, Converged = 59, ‖r‖ (largest λ) = 0.008564119814795601
+Iter 67: V_size = 91, Converged = 59, ‖r‖ (largest λ) = 0.008564119819512935
+Iter 68: V_size = 104, Converged = 59, ‖r‖ (largest λ) = 0.008564119816881086
+Iter 69: V_size = 117, Converged = 59, ‖r‖ (largest λ) = 0.008564119818320469
+Iter 70: V_size = 130, Converged = 59, ‖r‖ (largest λ) = 0.008564119819358656
+Iter 71: V_size = 143, Converged = 59, ‖r‖ (largest λ) = 0.00856411982153978
+Iter 72: V_size = 156, Converged = 59, ‖r‖ (largest λ) = 0.008564119824476966
+Iter 73: V_size = 169, Converged = 59, ‖r‖ (largest λ) = 0.008564119827113468
+Iter 74: V_size = 182, Converged = 59, ‖r‖ (largest λ) = 0.008564119827937111
+Iter 75: V_size = 195, Converged = 59, ‖r‖ (largest λ) = 0.008564119829102166
+Iter 76: V_size = 208, Converged = 59, ‖r‖ (largest λ) = 0.00856411983419648
+Iter 77: V_size = 221, Converged = 59, ‖r‖ (largest λ) = 0.008564119835001058
+Iter 78: V_size = 234, Converged = 59, ‖r‖ (largest λ) = 0.008564119840729969
+Iter 79: V_size = 247, Converged = 59, ‖r‖ (largest λ) = 0.008564119846932684
+Iter 80: V_size = 26, Converged = 59, ‖r‖ (largest λ) = 0.008564119856036277
+Iter 81: V_size = 39, Converged = 59, ‖r‖ (largest λ) = 0.008564119860073225
+Iter 82: V_size = 52, Converged = 59, ‖r‖ (largest λ) = 0.008564119858209915
+Iter 83: V_size = 65, Converged = 59, ‖r‖ (largest λ) = 0.00856411983408165
+Iter 84: V_size = 78, Converged = 59, ‖r‖ (largest λ) = 0.00856411986824097
+Iter 85: V_size = 91, Converged = 59, ‖r‖ (largest λ) = 0.008564119866316638
+Iter 86: V_size = 104, Converged = 59, ‖r‖ (largest λ) = 0.008564119862941113
+Iter 87: V_size = 117, Converged = 59, ‖r‖ (largest λ) = 0.008564119863994702
+Iter 88: V_size = 130, Converged = 59, ‖r‖ (largest λ) = 0.008564119864087965
+Iter 89: V_size = 143, Converged = 59, ‖r‖ (largest λ) = 0.008564119864380573
+Iter 90: V_size = 156, Converged = 59, ‖r‖ (largest λ) = 0.008564119865540445
+Iter 91: V_size = 169, Converged = 59, ‖r‖ (largest λ) = 0.008564119867288706
+Iter 92: V_size = 182, Converged = 59, ‖r‖ (largest λ) = 0.008564119868965034
+Iter 93: V_size = 195, Converged = 59, ‖r‖ (largest λ) = 0.008564119870527012
+Iter 94: V_size = 208, Converged = 59, ‖r‖ (largest λ) = 0.008564119872080153
+Iter 95: V_size = 221, Converged = 59, ‖r‖ (largest λ) = 0.008564119876048382
+Iter 96: V_size = 234, Converged = 59, ‖r‖ (largest λ) = 0.008564119882310222
+Iter 97: V_size = 247, Converged = 59, ‖r‖ (largest λ) = 0.008564119886357413
+Iter 98: V_size = 26, Converged = 59, ‖r‖ (largest λ) = 0.00856411989064004
+Iter 99: V_size = 39, Converged = 59, ‖r‖ (largest λ) = 0.008564119894302974
+Iter 100: V_size = 52, Converged = 59, ‖r‖ (largest λ) = 0.008564119893393379
+Max iterations (100) reached without convergence. Skipping this case.
+12757.752912 seconds (12.24 M allocations: 819.757 GiB, 0.15% gc time, 0.01% compilation time)
+Number of FLOPs: 255133175874601
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 27.1185424333 (computed) - 27.1185424333 (exact) = -2.1210e-12
+  2: 24.7321119516 (computed) - 24.7321119516 (exact) = -2.1600e-12
+  3: 24.3879937935 (computed) - 24.3879937935 (exact) = -1.5277e-13
+  4: 13.3772884440 (computed) - 13.3772885724 (exact) = -1.2842e-07
+  5: 12.9587048246 (computed) - 12.9587048246 (exact) =  6.9278e-14
+  6: 11.8262997383 (computed) - 11.8262997383 (exact) = -2.6823e-13
+  7: 11.6021117726 (computed) - 11.6021118864 (exact) = -1.1385e-07
+  8: 11.4743276283 (computed) - 11.4743278224 (exact) = -1.9413e-07
+  9: 9.4405830248 (computed) - 9.4405831066 (exact) = -8.1766e-08
+ 10: 9.2248354748 (computed) - 9.2248358706 (exact) = -3.9579e-07
+ 11: 7.9459050653 (computed) - 7.9459051650 (exact) = -9.9638e-08
+ 12: 6.8089395075 (computed) - 6.8089396904 (exact) = -1.8289e-07
+ 13: 6.7700837574 (computed) - 6.7700837574 (exact) = -3.1513e-12
+ 14: 6.7368524954 (computed) - 6.7368524954 (exact) = -7.9705e-12
+ 15: 6.0276363658 (computed) - 6.0276363658 (exact) = -2.1130e-12
+ 16: 5.5818656585 (computed) - 5.5818656585 (exact) = -3.0377e-11
+ 17: 5.2378616446 (computed) - 5.2378616448 (exact) = -1.9174e-10
+ 18: 5.0658460098 (computed) - 5.0658460100 (exact) = -2.2386e-10
+ 19: 4.9757475576 (computed) - 4.9757475577 (exact) = -9.6830e-11
+ 20: 4.4708491232 (computed) - 4.4708491240 (exact) = -7.7435e-10
+ 21: 4.4143554085 (computed) - 4.4143554089 (exact) = -4.1781e-10
+ 22: 4.2560780294 (computed) - 4.2560780310 (exact) = -1.5943e-09
+ 23: 4.1546260229 (computed) - 4.1546260235 (exact) = -5.9300e-10
+ 24: 4.0438456923 (computed) - 4.0438456933 (exact) = -1.0145e-09
+ 25: 4.0352191644 (computed) - 4.0352191657 (exact) = -1.2583e-09
+ 26: 4.0143803968 (computed) - 4.0143803978 (exact) = -9.7315e-10
+ 27: 3.9326704374 (computed) - 3.9326704383 (exact) = -9.2940e-10
+ 28: 3.7840541949 (computed) - 3.7840541969 (exact) = -1.9370e-09
+ 29: 3.7043565492 (computed) - 3.7043565506 (exact) = -1.4141e-09
+ 30: 3.6989880861 (computed) - 3.6989880952 (exact) = -9.1766e-09
+ 31: 3.6779018748 (computed) - 3.6779018748 (exact) =  5.0859e-11
+ 32: 3.5839269983 (computed) - 3.5839270077 (exact) = -9.3958e-09
+ 33: 3.5719803070 (computed) - 3.5719803070 (exact) = -2.3154e-11
+ 34: 3.4595049178 (computed) - 3.4595049177 (exact) =  1.0520e-10
+ 35: 3.4357742117 (computed) - 3.4357742118 (exact) = -1.7460e-10
+ 36: 3.4211639907 (computed) - 3.4211639908 (exact) = -4.1792e-11
+ 37: 3.1381141478 (computed) - 3.1381141576 (exact) = -9.8652e-09
+ 38: 3.1221131848 (computed) - 3.1221131856 (exact) = -8.3737e-10
+ 39: 3.1036461826 (computed) - 3.1036461894 (exact) = -6.7447e-09
+ 40: 3.0813621759 (computed) - 3.0813621791 (exact) = -3.2215e-09
+ 41: 3.0766314260 (computed) - 3.0766314325 (exact) = -6.5153e-09
+ 42: 2.7798091854 (computed) - 2.7798092300 (exact) = -4.4673e-08
+ 43: 2.6139891882 (computed) - 2.6139893345 (exact) = -1.4631e-07
+ 44: 2.5745578197 (computed) - 2.5745578099 (exact) =  9.8675e-09
+ 45: 2.5662765622 (computed) - 2.5662765192 (exact) =  4.3062e-08
+ 46: 2.5570363142 (computed) - 2.5570363072 (exact) =  7.0107e-09
+ 47: 2.4944683364 (computed) - 2.4944683000 (exact) =  3.6349e-08
+ 48: 2.4060696136 (computed) - 2.4060697482 (exact) = -1.3461e-07
+ 49: 2.3914454446 (computed) - 2.3914455100 (exact) = -6.5327e-08
+ 50: 2.2865082890 (computed) - 2.2865085161 (exact) = -2.2711e-07
+ 51: 2.2449778689 (computed) - 2.2449785817 (exact) = -7.1276e-07
+ 52: 2.1866507589 (computed) - 2.1880506223 (exact) = -1.3999e-03
+ 53: 2.1599080665 (computed) - 2.1866507036 (exact) = -2.6743e-02
+ 54: 2.1496930694 (computed) - 2.1599084770 (exact) = -1.0215e-02
+ 55: 2.1260327561 (computed) - 2.1496930397 (exact) = -2.3660e-02
+ 56: 2.1186602160 (computed) - 2.1260327321 (exact) = -7.3725e-03
+ 57: 2.0004139348 (computed) - 2.1186601814 (exact) = -1.1825e-01
+ 58: 1.9737287905 (computed) - 2.0230226048 (exact) = -4.9294e-02
+ 59: 1.9188052766 (computed) - 2.0004139093 (exact) = -8.1609e-02
+59 Eigenvalues converges, out of 60 requested.
+Running with l = 300
+Starting Davidson with n_aux = 480, l_buffer = 360, lc = 303, thresh = 0.002, max_iter = 100
+Iter 1: V_size = 60, Converged = 0, ‖r‖ (largest λ) = 0.26486861963827185
+Iter 2: V_size = 120, Converged = 0, ‖r‖ (largest λ) = 0.03603579271662835
+EV   1 converged λ = -611.6773556619, ‖r‖ = 6.00e-02 
+EV   2 converged λ = -594.7742391987, ‖r‖ = 3.48e-02 
+Iter 3: V_size = 238, Converged = 2, ‖r‖ (largest λ) = 0.00703541636439489
+EV   3 converged λ = -735.4153437081, ‖r‖ = 7.14e-06 
+EV   4 converged λ = -178.9518495500, ‖r‖ = 1.77e-04 
+EV   5 converged λ = -167.9280307309, ‖r‖ = 2.73e-04 
+EV   6 converged λ = -139.8613654989, ‖r‖ = 2.25e-04 
+EV   7 converged λ = -134.6090002244, ‖r‖ = 4.88e-04 
+EV   8 converged λ = -131.6601989736, ‖r‖ = 1.41e-03 
+EV   9 converged λ = -89.1246093806, ‖r‖ = 1.09e-03 
+EV  10 converged λ = -85.0975968373, ‖r‖ = 1.04e-03 
+EV  11 converged λ = -63.1374088608, ‖r‖ = 2.06e-03 
+EV  12 converged λ = -46.3616596927, ‖r‖ = 2.81e-03 
+EV  13 converged λ = -45.8340340715, ‖r‖ = 1.10e-03 
+EV  14 converged λ = -45.3851815375, ‖r‖ = 5.88e-04 
+EV  15 converged λ = -36.3324001245, ‖r‖ = 1.39e-03 
+EV  16 converged λ = -31.1572242181, ‖r‖ = 3.94e-03 
+EV  17 converged λ = -27.4351941456, ‖r‖ = 3.55e-03 
+EV  18 converged λ = -25.6627955561, ‖r‖ = 5.60e-03 
+EV  19 converged λ = -24.7580629892, ‖r‖ = 4.62e-03 
+EV  20 converged λ = -19.9884906071, ‖r‖ = 1.08e-02 
+EV  21 converged λ = -19.4865329179, ‖r‖ = 5.75e-03 
+EV  22 converged λ = -18.1141995534, ‖r‖ = 9.17e-03 
+EV  23 converged λ = -17.2609149956, ‖r‖ = 9.02e-03 
+EV  24 converged λ = -16.3526859736, ‖r‖ = 6.39e-03 
+EV  25 converged λ = -16.2829907964, ‖r‖ = 9.97e-03 
+EV  26 converged λ = -16.1152419009, ‖r‖ = 1.48e-02 
+EV  27 converged λ = -15.4658902254, ‖r‖ = 1.11e-02 
+EV  28 converged λ = -13.7222508938, ‖r‖ = 1.21e-02 
+EV  29 converged λ = -13.6825084922, ‖r‖ = 9.46e-03 
+EV  30 converged λ = -13.5269541812, ‖r‖ = 1.26e-02 
+EV  31 converged λ = -12.7590352208, ‖r‖ = 1.04e-02 
+EV  32 converged λ = -11.9681589255, ‖r‖ = 1.34e-02 
+EV  33 converged λ = -9.4656526506, ‖r‖ = 8.70e-03 
+Iter 4: V_size = 445, Converged = 33, ‖r‖ (largest λ) = 0.0016234393247609264
+EV  34 converged λ = -11.7043630501, ‖r‖ = 5.28e-03 
+EV  35 converged λ = -9.8477604101, ‖r‖ = 5.12e-03 
+EV  36 converged λ = -9.7475907410, ‖r‖ = 1.32e-03 
+EV  37 converged λ = -9.6326196555, ‖r‖ = 2.88e-03 
+EV  38 converged λ = -9.4947928732, ‖r‖ = 1.73e-03 
+EV  39 converged λ = -6.5857751558, ‖r‖ = 8.26e-03 
+EV  40 converged λ = -5.7891716323, ‖r‖ = 1.12e-03 
+EV  41 converged λ = -5.7190116218, ‖r‖ = 2.10e-03 
+EV  42 converged λ = -5.2281211198, ‖r‖ = 6.05e-03 
+EV  43 converged λ = -5.0399287949, ‖r‖ = 4.76e-03 
+EV  44 converged λ = -4.7875655256, ‖r‖ = 1.38e-03 
+EV  45 converged λ = -4.7814413102, ‖r‖ = 7.05e-03 
+EV  46 converged λ = -4.6652046299, ‖r‖ = 1.27e-03 
+EV  47 converged λ = -4.5200151585, ‖r‖ = 5.17e-03 
+EV  48 converged λ = -4.0926204613, ‖r‖ = 1.79e-03 
+EV  49 converged λ = -4.0016558122, ‖r‖ = 4.47e-03 
+EV  50 converged λ = -3.6818135568, ‖r‖ = 4.39e-03 
+EV  51 converged λ = -3.5017397166, ‖r‖ = 4.69e-03 
+EV  52 converged λ = -3.4639860122, ‖r‖ = 3.65e-03 
+EV  53 converged λ = -3.4531110746, ‖r‖ = 2.00e-03 
+EV  54 converged λ = -3.3992914209, ‖r‖ = 3.32e-03 
+EV  55 converged λ = -3.2422680088, ‖r‖ = 3.36e-03 
+EV  56 converged λ = -3.1850934957, ‖r‖ = 3.13e-03 
+EV  57 converged λ = -2.9940284381, ‖r‖ = 3.37e-03 
+EV  58 converged λ = -2.7989965339, ‖r‖ = 2.00e-03 
+EV  59 converged λ = -2.5911054656, ‖r‖ = 3.45e-03 
+EV  60 converged λ = -2.5841064889, ‖r‖ = 2.68e-03 
+EV  61 converged λ = -2.5791170966, ‖r‖ = 4.51e-03 
+EV  62 converged λ = -2.4400418291, ‖r‖ = 2.31e-03 
+EV  63 converged λ = -2.4160896929, ‖r‖ = 1.16e-03 
+EV  64 converged λ = -2.0143000860, ‖r‖ = 3.12e-03 
+EV  65 converged λ = -1.9846028315, ‖r‖ = 3.58e-03 
+EV  66 converged λ = -1.9648320628, ‖r‖ = 1.82e-03 
+EV  67 converged λ = -1.8894884203, ‖r‖ = 2.49e-03 
+EV  68 converged λ = -1.8834034286, ‖r‖ = 2.81e-03 
+EV  69 converged λ = -1.8609861289, ‖r‖ = 3.10e-03 
+EV  70 converged λ = -1.8469613762, ‖r‖ = 3.21e-03 
+EV  71 converged λ = -1.8218892101, ‖r‖ = 1.00e-03 
+EV  72 converged λ = -1.6989802446, ‖r‖ = 3.52e-03 
+EV  73 converged λ = -1.5333451753, ‖r‖ = 3.71e-03 
+EV  74 converged λ = -1.3724488168, ‖r‖ = 4.14e-03 
+EV  75 converged λ = -1.2021270906, ‖r‖ = 4.12e-03 
+EV  76 converged λ = -0.6293171583, ‖r‖ = 2.70e-03 
+Iter 5: V_size = 480, Converged = 76, ‖r‖ (largest λ) = 0.08963444881755524
+EV  77 converged λ = -14.3190663019, ‖r‖ = 9.05e-03 
+EV  78 converged λ = -11.8045446042, ‖r‖ = 1.00e-02 
+EV  79 converged λ = -7.7273393660, ‖r‖ = 2.50e-03 
+EV  80 converged λ = -6.8329403031, ‖r‖ = 6.11e-03 
+EV  81 converged λ = -6.6283480370, ‖r‖ = 8.47e-03 
+EV  82 converged λ = -4.6211802049, ‖r‖ = 4.88e-03 
+EV  83 converged λ = -3.8956053644, ‖r‖ = 7.73e-03 
+EV  84 converged λ = -3.2166850727, ‖r‖ = 5.39e-03 
+EV  85 converged λ = -2.9546436443, ‖r‖ = 4.63e-03 
+EV  86 converged λ = -2.5874492052, ‖r‖ = 4.77e-03 
+EV  87 converged λ = -2.2988238063, ‖r‖ = 3.31e-03 
+EV  88 converged λ = -2.1395483596, ‖r‖ = 5.70e-03 
+EV  89 converged λ = -2.0592220701, ‖r‖ = 2.72e-03 
+EV  90 converged λ = -1.7109202116, ‖r‖ = 5.13e-03 
+EV  91 converged λ = -1.7080986591, ‖r‖ = 3.25e-03 
+EV  92 converged λ = -1.3913873316, ‖r‖ = 3.80e-03 
+EV  93 converged λ = -1.3075268789, ‖r‖ = 2.11e-03 
+EV  94 converged λ = -1.3068119068, ‖r‖ = 3.99e-03 
+EV  95 converged λ = -1.2912514388, ‖r‖ = 3.45e-03 
+EV  96 converged λ = -1.2327048121, ‖r‖ = 3.05e-03 
+EV  97 converged λ = -1.1809467259, ‖r‖ = 2.70e-03 
+EV  98 converged λ = -1.1444947426, ‖r‖ = 3.54e-03 
+EV  99 converged λ = -1.1341480400, ‖r‖ = 1.96e-03 
+EV 100 converged λ = -1.1080550294, ‖r‖ = 2.46e-03 
+EV 101 converged λ = -1.0815815069, ‖r‖ = 2.77e-03 
+EV 102 converged λ = -1.0017670284, ‖r‖ = 1.79e-03 
+EV 103 converged λ = -0.9811880884, ‖r‖ = 3.58e-03 
+EV 104 converged λ = -0.9558486531, ‖r‖ = 3.25e-03 
+EV 105 converged λ = -0.8894292026, ‖r‖ = 3.69e-03 
+EV 106 converged λ = -0.8598146506, ‖r‖ = 3.63e-03 
+EV 107 converged λ = -0.8007154200, ‖r‖ = 2.73e-03 
+EV 108 converged λ = -0.7694791784, ‖r‖ = 3.10e-03 
+EV 109 converged λ = -0.7384360793, ‖r‖ = 2.79e-03 
+EV 110 converged λ = -0.7175512821, ‖r‖ = 2.86e-03 
+EV 111 converged λ = -0.6797787074, ‖r‖ = 3.21e-03 
+EV 112 converged λ = -0.6718549322, ‖r‖ = 1.88e-03 
+EV 113 converged λ = -0.6452266194, ‖r‖ = 2.26e-03 
+EV 114 converged λ = -0.6145454531, ‖r‖ = 2.65e-03 
+EV 115 converged λ = -0.6089060117, ‖r‖ = 1.97e-03 
+EV 116 converged λ = -0.5877843276, ‖r‖ = 2.54e-03 
+EV 117 converged λ = -0.5152168890, ‖r‖ = 1.39e-03 
+EV 118 converged λ = -0.5140600048, ‖r‖ = 2.76e-03 
+EV 119 converged λ = -0.5010358844, ‖r‖ = 1.82e-03 
+EV 120 converged λ = -0.4957456559, ‖r‖ = 1.69e-03 
+EV 121 converged λ = -0.4884206904, ‖r‖ = 2.15e-03 
+EV 122 converged λ = -0.4829000471, ‖r‖ = 2.37e-03 
+EV 123 converged λ = -0.4725361333, ‖r‖ = 1.62e-03 
+EV 124 converged λ = -0.4692614419, ‖r‖ = 1.32e-03 
+EV 125 converged λ = -0.4479912027, ‖r‖ = 2.58e-03 
+EV 126 converged λ = -0.4319267215, ‖r‖ = 2.14e-03 
+EV 127 converged λ = -0.4309957399, ‖r‖ = 1.60e-03 
+EV 128 converged λ = -0.4001682205, ‖r‖ = 2.23e-03 
+EV 129 converged λ = -0.3795495920, ‖r‖ = 2.31e-03 
+EV 130 converged λ = -0.3660855106, ‖r‖ = 2.15e-03 
+EV 131 converged λ = -0.3618223961, ‖r‖ = 1.64e-03 
+EV 132 converged λ = -0.3509084947, ‖r‖ = 2.19e-03 
+EV 133 converged λ = -0.3331309594, ‖r‖ = 2.09e-03 
+EV 134 converged λ = -0.3050657845, ‖r‖ = 2.09e-03 
+EV 135 converged λ = -0.2724143132, ‖r‖ = 1.69e-03 
+EV 136 converged λ = -0.2720486192, ‖r‖ = 1.78e-03 
+EV 137 converged λ = -0.2552679605, ‖r‖ = 2.00e-03 
+EV 138 converged λ = -0.2533270429, ‖r‖ = 2.01e-03 
+EV 139 converged λ = -0.2437324723, ‖r‖ = 1.79e-03 
+EV 140 converged λ = -0.2417695510, ‖r‖ = 1.63e-03 
+EV 141 converged λ = -0.2379634118, ‖r‖ = 1.80e-03 
+EV 142 converged λ = -0.2347835275, ‖r‖ = 1.81e-03 
+EV 143 converged λ = -0.2247840398, ‖r‖ = 1.85e-03 
+Iter 6: V_size = 434, Converged = 143, ‖r‖ (largest λ) = 0.011513828868012155
+EV 144 converged λ = -0.2390708714, ‖r‖ = 1.92e-03 
+EV 145 converged λ = -0.2371365764, ‖r‖ = 1.80e-03 
+EV 146 converged λ = -0.2302243001, ‖r‖ = 1.85e-03 
+EV 147 converged λ = -0.2276356750, ‖r‖ = 1.67e-03 
+EV 148 converged λ = -0.2134518699, ‖r‖ = 1.67e-03 
+EV 149 converged λ = -0.1831570473, ‖r‖ = 1.69e-03 
+EV 150 converged λ = -0.1699935284, ‖r‖ = 1.36e-03 
+EV 151 converged λ = -0.1653965828, ‖r‖ = 1.42e-03 
+EV 152 converged λ = -0.1448839158, ‖r‖ = 1.40e-03 
+EV 153 converged λ = -0.1423721295, ‖r‖ = 1.39e-03 
+EV 154 converged λ = -0.1342119671, ‖r‖ = 1.44e-03 
+EV 155 converged λ = -0.1323651858, ‖r‖ = 1.18e-03 
+EV 156 converged λ = -0.1268986911, ‖r‖ = 1.40e-03 
+EV 157 converged λ = -0.1261432977, ‖r‖ = 1.18e-03 
+Iter 7: V_size = 406, Converged = 157, ‖r‖ (largest λ) = 0.003096064723183797
+EV 158 converged λ = -0.1541236669, ‖r‖ = 1.55e-03 
+EV 159 converged λ = -0.1224291907, ‖r‖ = 1.36e-03 
+EV 160 converged λ = -0.1124964370, ‖r‖ = 1.04e-03 
+EV 161 converged λ = -0.0976311237, ‖r‖ = 1.23e-03 
+EV 162 converged λ = -0.0931165737, ‖r‖ = 6.31e-04 
+EV 163 converged λ = -0.0897888486, ‖r‖ = 7.88e-04 
+Iter 8: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0018641769668819614
+Iter 9: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0016724156433054146
+Iter 10: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0014500477977412501
+Iter 11: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.001672219645881047
+Iter 12: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0015376720773375117
+Iter 13: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.00179669097279406
+Iter 14: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0015978129887313083
+Iter 15: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0017320018761997234
+Iter 16: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0009236437465855636
+Iter 17: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008896809205397335
+Iter 18: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008786097371079089
+Iter 19: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008832192910558033
+Iter 20: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008763563649773647
+Iter 21: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008781767867081153
+Iter 22: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008797681552174739
+Iter 23: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008743892599836655
+Iter 24: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008709020545215698
+Iter 25: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008762080256268613
+Iter 26: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008743083109403276
+Iter 27: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008760190089508832
+Iter 28: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008749908382152019
+Iter 29: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008734713421313381
+Iter 30: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008733373868827814
+Iter 31: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008741026868597677
+Iter 32: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008735968587349988
+Iter 33: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008747911071438191
+Iter 34: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008734652226046248
+Iter 35: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000874122492760108
+Iter 36: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008728420524549087
+Iter 37: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008739193309202556
+Iter 38: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008729778525777786
+Iter 39: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008732766437625093
+Iter 40: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008724287122766736
+Iter 41: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008728258769544987
+Iter 42: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008723922838752271
+Iter 43: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008726695032109135
+Iter 44: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008720330602802052
+Iter 45: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008722669020422469
+Iter 46: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008721007646513404
+Iter 47: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008721061700880367
+Iter 48: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008717357385697294
+Iter 49: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008720071562197437
+Iter 50: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008714843871051208
+Iter 51: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008717083323245213
+Iter 52: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008715557115635004
+Iter 53: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000871741697683933
+Iter 54: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008711718775779734
+Iter 55: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008714487095075843
+Iter 56: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008713734492362629
+Iter 57: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008713784053175799
+Iter 58: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008709667460609252
+Iter 59: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008712561320766047
+Iter 60: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008709115586200562
+Iter 61: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008711310907556119
+Iter 62: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008707331267308478
+Iter 63: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008709254715719725
+Iter 64: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870715665441544
+Iter 65: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008708460863692382
+Iter 66: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008706553164911761
+Iter 67: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870803119643479
+Iter 68: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008707071925557982
+Iter 69: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008706966793715381
+Iter 70: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008705786090925795
+Iter 71: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870571776240478
+Iter 72: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008708789131111901
+Iter 73: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008705528785906216
+Iter 74: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008705554494918791
+Iter 75: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008704741557994126
+Iter 76: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008703695332642577
+Iter 77: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008705911090231589
+Iter 78: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008703381640491028
+Iter 79: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008703677686448722
+Iter 80: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008703067574085607
+Iter 81: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870609173046668
+Iter 82: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008704211042247338
+Iter 83: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008705070669185051
+Iter 84: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008704430259361735
+slurmstepd-andoria01: error: *** JOB 24999 ON andoria01 CANCELLED AT 2025-09-07T09:13:41 ***
+
+[186732] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:352
+dsymv_kernel_4x4.constprop.0 at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_U_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_64_ at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+symv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/blas.jl:815
+gemv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:452
+generic_matvecmul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:79 [inlined]
+_mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:73 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:70 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:253 [inlined]
+* at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:60 [inlined]
+#2 at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:25
+_unsafe_mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/functionmap.jl:127 [inlined]
+mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/LinearMaps.jl:166 [inlined]
+iterate at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:104
+iterate at ./iterators.jl:206 [inlined]
+#minres!#25 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:230
+minres! at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:200 [inlined]
+#minres#26 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244 [inlined]
+minres at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244
+unknown function (ip: 0x7f50c02489cd)
+#correction_equations_minres#1 at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:41
+correction_equations_minres at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:13 [inlined]
+davidson at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:275
+davidson at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:142 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:320
+unknown function (ip: 0x7f50c0242d52)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/modified_defl/modified_formal.jl:359
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 145901311 (Pool: 145900741; Big: 570); GC: 31018
+Iter 85: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008706367289182701
+Iter 86: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008703235455199275
+Iter 87: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008704521082121673
+Iter 88: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008703504775716776
+Iter 89: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008702908587071427
+Iter 90: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008704379746812642
+Iter 91: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008709655351892609
+Iter 92: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870210942369424
+Iter 93: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008702138856952322
+Iter 94: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008702056129070628
+Iter 95: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008701882613273313
+Iter 96: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870248051296557
+Iter 97: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008702367861088188
+Iter 98: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008704126907476048
+Iter 99: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.0008706152073873466
+Iter 100: V_size = 394, Converged = 163, ‖r‖ (largest λ) = 0.000870224812984677
+Max iterations (100) reached without convergence. Skipping this case.
+144705.893859 seconds (174.58 M allocations: 11.420 TiB, 0.09% gc time)
+Number of FLOPs: 3384064139596197
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 27.1185424333 (computed) - 27.1185424333 (exact) = -2.1316e-14
+  2: 24.7321118318 (computed) - 24.7321119516 (exact) = -1.1977e-07
+  3: 24.3879937510 (computed) - 24.3879937935 (exact) = -4.2544e-08
+  4: 13.3772885724 (computed) - 13.3772885724 (exact) = -6.2759e-12
+  5: 12.9587048246 (computed) - 12.9587048246 (exact) = -1.8510e-12
+  6: 11.8262997382 (computed) - 11.8262997383 (exact) = -3.1815e-12
+  7: 11.6021118864 (computed) - 11.6021118864 (exact) = -1.0298e-11
+  8: 11.4743278223 (computed) - 11.4743278224 (exact) = -9.0745e-11
+  9: 9.4405831060 (computed) - 9.4405831066 (exact) = -6.4596e-10
+ 10: 9.2248358705 (computed) - 9.2248358706 (exact) = -8.6573e-11
+ 11: 7.9459051631 (computed) - 7.9459051650 (exact) = -1.8883e-09
+ 12: 6.8089396893 (computed) - 6.8089396904 (exact) = -1.0946e-09
+ 13: 6.7700837566 (computed) - 6.7700837574 (exact) = -7.7340e-10
+ 14: 6.7368524949 (computed) - 6.7368524954 (exact) = -5.6230e-10
+ 15: 6.0276363630 (computed) - 6.0276363658 (exact) = -2.8224e-09
+ 16: 5.5818656575 (computed) - 5.5818656585 (exact) = -1.0516e-09
+ 17: 5.2378616005 (computed) - 5.2378616448 (exact) = -4.4288e-08
+ 18: 5.0658459862 (computed) - 5.0658460100 (exact) = -2.3825e-08
+ 19: 4.9757474804 (computed) - 4.9757475577 (exact) = -7.7216e-08
+ 20: 4.4708489806 (computed) - 4.4708491240 (exact) = -1.4342e-07
+ 21: 4.4143553230 (computed) - 4.4143554089 (exact) = -8.5859e-08
+ 22: 4.2560779543 (computed) - 4.2560780310 (exact) = -7.6620e-08
+ 23: 4.1546257347 (computed) - 4.1546260235 (exact) = -2.8875e-07
+ 24: 4.0438454438 (computed) - 4.0438456933 (exact) = -2.4944e-07
+ 25: 4.0352188040 (computed) - 4.0352191657 (exact) = -3.6168e-07
+ 26: 4.0143793918 (computed) - 4.0143803978 (exact) = -1.0060e-06
+ 27: 3.9326696054 (computed) - 3.9326704383 (exact) = -8.3287e-07
+ 28: 3.7840542150 (computed) - 3.7840541969 (exact) =  1.8102e-08
+ 29: 3.7043556651 (computed) - 3.7043565506 (exact) = -8.8543e-07
+ 30: 3.6989874955 (computed) - 3.6989880952 (exact) = -5.9969e-07
+ 31: 3.6779007846 (computed) - 3.6779018748 (exact) = -1.0902e-06
+ 32: 3.5719791742 (computed) - 3.5839270077 (exact) = -1.1948e-02
+ 33: 3.4595026992 (computed) - 3.5719803070 (exact) = -1.1248e-01
+ 34: 3.4357742365 (computed) - 3.4595049177 (exact) = -2.3731e-02
+ 35: 3.4211639905 (computed) - 3.4357742118 (exact) = -1.4610e-02
+ 36: 3.1381141487 (computed) - 3.4211639908 (exact) = -2.8305e-01
+ 37: 3.1221131852 (computed) - 3.1381141576 (exact) = -1.6001e-02
+ 38: 3.1036461872 (computed) - 3.1221131856 (exact) = -1.8467e-02
+ 39: 3.0813621782 (computed) - 3.1036461894 (exact) = -2.2284e-02
+ 40: 3.0766300802 (computed) - 3.0813621791 (exact) = -4.7321e-03
+ 41: 2.7798092319 (computed) - 3.0766314325 (exact) = -2.9682e-01
+ 42: 2.6139893464 (computed) - 2.7798092300 (exact) = -1.6582e-01
+ 43: 2.5745578333 (computed) - 2.6139893345 (exact) = -3.9432e-02
+ 44: 2.5662765158 (computed) - 2.5745578099 (exact) = -8.2813e-03
+ 45: 2.4060697480 (computed) - 2.5662765192 (exact) = -1.6021e-01
+ 46: 2.3914455088 (computed) - 2.5570363072 (exact) = -1.6559e-01
+ 47: 2.2865084998 (computed) - 2.4944683000 (exact) = -2.0796e-01
+ 48: 2.2449785734 (computed) - 2.4060697482 (exact) = -1.6109e-01
+ 49: 2.1880506223 (computed) - 2.3914455100 (exact) = -2.0339e-01
+ 50: 2.1866507060 (computed) - 2.2865085161 (exact) = -9.9858e-02
+ 51: 2.1599084772 (computed) - 2.2449785817 (exact) = -8.5070e-02
+ 52: 2.1496930490 (computed) - 2.1880506223 (exact) = -3.8358e-02
+ 53: 2.1260327275 (computed) - 2.1866507036 (exact) = -6.0618e-02
+ 54: 2.0230226052 (computed) - 2.1599084770 (exact) = -1.3689e-01
+ 55: 2.0004139102 (computed) - 2.1496930397 (exact) = -1.4928e-01
+ 56: 1.9737287971 (computed) - 2.1260327321 (exact) = -1.5230e-01
+ 57: 1.9188052420 (computed) - 2.1186601814 (exact) = -1.9985e-01
+ 58: 1.8712935944 (computed) - 2.0230226048 (exact) = -1.5173e-01
+ 59: 1.8611786621 (computed) - 2.0004139093 (exact) = -1.3924e-01
+ 60: 1.8582548465 (computed) - 1.9737287721 (exact) = -1.1547e-01
+ 61: 1.8437167409 (computed) - 1.9188052440 (exact) = -7.5089e-02
+ 62: 1.8006298922 (computed) - 1.8712935921 (exact) = -7.0664e-02
+ 63: 1.7935119383 (computed) - 1.8611786601 (exact) = -6.7667e-02
+ 64: 1.7846830239 (computed) - 1.8582548452 (exact) = -7.3572e-02
+ 65: 1.7303261074 (computed) - 1.8437167384 (exact) = -1.1339e-01
+ 66: 1.7189076893 (computed) - 1.8006298914 (exact) = -8.1722e-02
+ 67: 1.6730201833 (computed) - 1.7935119246 (exact) = -1.2049e-01
+ 68: 1.6096911088 (computed) - 1.7905259547 (exact) = -1.8083e-01
+ 69: 1.6085550053 (computed) - 1.7846830241 (exact) = -1.7613e-01
+ 70: 1.6075156263 (computed) - 1.7303261116 (exact) = -1.2281e-01
+ 71: 1.6059629811 (computed) - 1.7189076787 (exact) = -1.1294e-01
+ 72: 1.5620633243 (computed) - 1.6730201858 (exact) = -1.1096e-01
+ 73: 1.5543775902 (computed) - 1.6096911093 (exact) = -5.5314e-02
+ 74: 1.5161872596 (computed) - 1.6085549899 (exact) = -9.2368e-02
+ 75: 1.4627195082 (computed) - 1.6075156217 (exact) = -1.4480e-01
+ 76: 1.4349989791 (computed) - 1.6059629832 (exact) = -1.7096e-01
+ 77: 1.4192604011 (computed) - 1.5620633229 (exact) = -1.4280e-01
+ 78: 1.4087593235 (computed) - 1.5543775910 (exact) = -1.4562e-01
+ 79: 1.4017246744 (computed) - 1.5199951964 (exact) = -1.1827e-01
+ 80: 1.3745866361 (computed) - 1.5193888510 (exact) = -1.4480e-01
+ 81: 1.3723714616 (computed) - 1.5161872474 (exact) = -1.4382e-01
+ 82: 1.3641796542 (computed) - 1.4940995376 (exact) = -1.2992e-01
+ 83: 1.3590295715 (computed) - 1.4627194867 (exact) = -1.0369e-01
+ 84: 1.3497737625 (computed) - 1.4349989689 (exact) = -8.5225e-02
+ 85: 1.3080214874 (computed) - 1.4302990186 (exact) = -1.2228e-01
+ 86: 1.3069424850 (computed) - 1.4192604029 (exact) = -1.1232e-01
+ 87: 1.3034493640 (computed) - 1.4087593277 (exact) = -1.0531e-01
+ 88: 1.2382831563 (computed) - 1.4017246701 (exact) = -1.6344e-01
+ 89: 1.1795708252 (computed) - 1.3745866196 (exact) = -1.9502e-01
+ 90: 1.1715156067 (computed) - 1.3723714531 (exact) = -2.0086e-01
+ 91: 1.1434714159 (computed) - 1.3641796160 (exact) = -2.2071e-01
+ 92: 1.1431587408 (computed) - 1.3590295688 (exact) = -2.1587e-01
+ 93: 1.1363324508 (computed) - 1.3497737601 (exact) = -2.1344e-01
+ 94: 1.1102724044 (computed) - 1.3206359818 (exact) = -2.1036e-01
+ 95: 1.0964155647 (computed) - 1.3080213109 (exact) = -2.1161e-01
+ 96: 1.0867137277 (computed) - 1.3069423895 (exact) = -2.2023e-01
+ 97: 1.0698106106 (computed) - 1.3034492715 (exact) = -2.3364e-01
+ 98: 1.0649638679 (computed) - 1.2569270368 (exact) = -1.9196e-01
+ 99: 1.0526419284 (computed) - 1.2382831239 (exact) = -1.8564e-01
+100: 1.0399911091 (computed) - 1.2255590694 (exact) = -1.8557e-01
+101: 1.0008831242 (computed) - 1.1978924710 (exact) = -1.9701e-01
+102: 0.9905493871 (computed) - 1.1949420019 (exact) = -2.0439e-01
+103: 0.9776751266 (computed) - 1.1795707220 (exact) = -2.0190e-01
+104: 0.9430955427 (computed) - 1.1715155865 (exact) = -2.2842e-01
+105: 0.9272619105 (computed) - 1.1500295041 (exact) = -2.2277e-01
+106: 0.8948270336 (computed) - 1.1434713305 (exact) = -2.4864e-01
+107: 0.8771996229 (computed) - 1.1431584934 (exact) = -2.6596e-01
+108: 0.8593230355 (computed) - 1.1419031660 (exact) = -2.8258e-01
+109: 0.8470839876 (computed) - 1.1363322331 (exact) = -2.8925e-01
+110: 0.8244869359 (computed) - 1.1102721630 (exact) = -2.8579e-01
+111: 0.8196675742 (computed) - 1.0964155327 (exact) = -2.7675e-01
+112: 0.8032599949 (computed) - 1.0867136167 (exact) = -2.8345e-01
+113: 0.7932951269 (computed) - 1.0698104970 (exact) = -2.7652e-01
+114: 0.7839294950 (computed) - 1.0649637213 (exact) = -2.8103e-01
+115: 0.7803242990 (computed) - 1.0526418321 (exact) = -2.7232e-01
+116: 0.7666709383 (computed) - 1.0431804501 (exact) = -2.7651e-01
+117: 0.7177861025 (computed) - 1.0418730903 (exact) = -3.2409e-01
+118: 0.7169797799 (computed) - 1.0399910252 (exact) = -3.2301e-01
+119: 0.7078388831 (computed) - 1.0224022555 (exact) = -3.1456e-01
+120: 0.7040920791 (computed) - 1.0049404785 (exact) = -3.0085e-01
+121: 0.6988710113 (computed) - 1.0008830090 (exact) = -3.0201e-01
+122: 0.6949101000 (computed) - 0.9974921859 (exact) = -3.0258e-01
+123: 0.6874126369 (computed) - 0.9905492607 (exact) = -3.0314e-01
+124: 0.6850265994 (computed) - 0.9776749661 (exact) = -2.9265e-01
+125: 0.6693214495 (computed) - 0.9742467110 (exact) = -3.0493e-01
+126: 0.6572113218 (computed) - 0.9725129447 (exact) = -3.1530e-01
+127: 0.6565026580 (computed) - 0.9535856468 (exact) = -2.9708e-01
+128: 0.6325885080 (computed) - 0.9430951807 (exact) = -3.1051e-01
+129: 0.6160759629 (computed) - 0.9283543234 (exact) = -3.1228e-01
+130: 0.6050500067 (computed) - 0.9272618823 (exact) = -3.2221e-01
+131: 0.6015167463 (computed) - 0.9271332609 (exact) = -3.2562e-01
+132: 0.5923752989 (computed) - 0.8991279918 (exact) = -3.0675e-01
+133: 0.5771749816 (computed) - 0.8948268638 (exact) = -3.1765e-01
+134: 0.5523276062 (computed) - 0.8829823898 (exact) = -3.3065e-01
+135: 0.5219332459 (computed) - 0.8786455064 (exact) = -3.5671e-01
+136: 0.5215828019 (computed) - 0.8771995144 (exact) = -3.5562e-01
+137: 0.5052404977 (computed) - 0.8663369238 (exact) = -3.6110e-01
+138: 0.5033160468 (computed) - 0.8593228385 (exact) = -3.5601e-01
+139: 0.4936926902 (computed) - 0.8585088105 (exact) = -3.6482e-01
+140: 0.4917006721 (computed) - 0.8545969713 (exact) = -3.6290e-01
+141: 0.4889487410 (computed) - 0.8470838635 (exact) = -3.5814e-01
+142: 0.4878149360 (computed) - 0.8390732258 (exact) = -3.5126e-01
+143: 0.4869667097 (computed) - 0.8351099810 (exact) = -3.4814e-01
+144: 0.4845446599 (computed) - 0.8292544983 (exact) = -3.4471e-01
+145: 0.4798169443 (computed) - 0.8271143462 (exact) = -3.4730e-01
+146: 0.4771118056 (computed) - 0.8244864602 (exact) = -3.4737e-01
+147: 0.4741139523 (computed) - 0.8196675031 (exact) = -3.4555e-01
+148: 0.4620085171 (computed) - 0.8032598447 (exact) = -3.4125e-01
+149: 0.4279685120 (computed) - 0.8018093276 (exact) = -3.7384e-01
+150: 0.4123027145 (computed) - 0.7982871800 (exact) = -3.8598e-01
+151: 0.4066897869 (computed) - 0.7932960904 (exact) = -3.8661e-01
+152: 0.3925858720 (computed) - 0.7890535644 (exact) = -3.9647e-01
+153: 0.3806361988 (computed) - 0.7839291737 (exact) = -4.0329e-01
+154: 0.3773223151 (computed) - 0.7803241311 (exact) = -4.0300e-01
+155: 0.3663495150 (computed) - 0.7666706876 (exact) = -4.0032e-01
+156: 0.3638202658 (computed) - 0.7526508762 (exact) = -3.8883e-01
+157: 0.3562284255 (computed) - 0.7211089737 (exact) = -3.6488e-01
+158: 0.3551665774 (computed) - 0.7177860435 (exact) = -3.6262e-01
+159: 0.3498988293 (computed) - 0.7169794591 (exact) = -3.6708e-01
+160: 0.3354048851 (computed) - 0.7078388434 (exact) = -3.7243e-01
+161: 0.3124597954 (computed) - 0.7040919528 (exact) = -3.9163e-01
+162: 0.3051500839 (computed) - 0.6988709477 (exact) = -3.9372e-01
+163: 0.2996478744 (computed) - 0.6956766575 (exact) = -3.9603e-01
+163 Eigenvalues converges, out of 300 requested.
+Running with l = 600
+Starting Davidson with n_aux = 960, l_buffer = 720, lc = 606, thresh = 0.0025, max_iter = 100
+Iter 1: V_size = 120, Converged = 0, ‖r‖ (largest λ) = 0.10358086508213564
+Iter 2: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.011122265153346219
+EV   1 converged λ = -735.4153436996, ‖r‖ = 2.50e-03 
+EV   2 converged λ = -611.6773615041, ‖r‖ = 7.09e-03 
+EV   3 converged λ = -594.7742412677, ‖r‖ = 1.91e-03 
+EV   4 converged λ = -167.9280209613, ‖r‖ = 4.04e-02 
+EV   5 converged λ = -139.8613509346, ‖r‖ = 4.50e-02 
+EV   6 converged λ = -89.1245964717, ‖r‖ = 3.37e-02 
+EV   7 converged λ = -85.0975863990, ‖r‖ = 2.96e-02 
+Iter 3: V_size = 473, Converged = 7, ‖r‖ (largest λ) = 0.0018830632555277892
+EV   8 converged λ = -178.9518495501, ‖r‖ = 4.20e-05 
+EV   9 converged λ = -134.6090002247, ‖r‖ = 1.96e-05 
+EV  10 converged λ = -131.6601989757, ‖r‖ = 1.37e-05 
+EV  11 converged λ = -63.1374088910, ‖r‖ = 9.19e-05 
+EV  12 converged λ = -46.3616597089, ‖r‖ = 6.70e-04 
+EV  13 converged λ = -45.8340340845, ‖r‖ = 9.60e-04 
+EV  14 converged λ = -45.3851815464, ‖r‖ = 7.20e-04 
+EV  15 converged λ = -36.3324001479, ‖r‖ = 2.28e-02 
+EV  16 converged λ = -31.1572242281, ‖r‖ = 2.01e-03 
+EV  17 converged λ = -27.4351946121, ‖r‖ = 1.23e-03 
+EV  18 converged λ = -25.6627958127, ‖r‖ = 2.88e-03 
+EV  19 converged λ = -24.7580637575, ‖r‖ = 7.31e-04 
+EV  20 converged λ = -19.9884918792, ‖r‖ = 4.46e-03 
+EV  21 converged λ = -19.4865336653, ‖r‖ = 3.54e-03 
+EV  22 converged λ = -18.1142002055, ‖r‖ = 5.15e-04 
+EV  23 converged λ = -17.2609173999, ‖r‖ = 1.09e-03 
+EV  24 converged λ = -16.3526879904, ‖r‖ = 1.16e-03 
+EV  25 converged λ = -16.2829937123, ‖r‖ = 1.01e-03 
+EV  26 converged λ = -16.1152499788, ‖r‖ = 4.73e-04 
+EV  27 converged λ = -15.4658967752, ‖r‖ = 1.29e-03 
+EV  28 converged λ = -14.3190661653, ‖r‖ = 6.24e-04 
+EV  29 converged λ = -13.7222574546, ‖r‖ = 3.79e-04 
+EV  30 converged λ = -13.6825129341, ‖r‖ = 1.28e-03 
+EV  31 converged λ = -13.5269622027, ‖r‖ = 9.91e-04 
+EV  32 converged λ = -12.8445327918, ‖r‖ = 8.93e-04 
+EV  33 converged λ = -12.7590433165, ‖r‖ = 1.30e-03 
+EV  34 converged λ = -11.9681742845, ‖r‖ = 2.49e-03 
+EV  35 converged λ = -11.8045444355, ‖r‖ = 1.24e-03 
+EV  36 converged λ = -11.7043630550, ‖r‖ = 7.20e-04 
+EV  37 converged λ = -9.8477604672, ‖r‖ = 2.34e-03 
+EV  38 converged λ = -9.7475907426, ‖r‖ = 1.33e-03 
+EV  39 converged λ = -9.6326196671, ‖r‖ = 7.80e-04 
+EV  40 converged λ = -9.4947928778, ‖r‖ = 9.99e-04 
+EV  41 converged λ = -9.4656609812, ‖r‖ = 2.92e-03 
+EV  42 converged λ = -7.7273393648, ‖r‖ = 1.71e-03 
+EV  43 converged λ = -6.8329401893, ‖r‖ = 4.17e-03 
+EV  44 converged λ = -6.6283479210, ‖r‖ = 1.68e-03 
+EV  45 converged λ = -6.5857751976, ‖r‖ = 1.90e-03 
+EV  46 converged λ = -6.5384346651, ‖r‖ = 2.36e-03 
+EV  47 converged λ = -6.2223721465, ‖r‖ = 2.34e-03 
+EV  48 converged λ = -5.7891716375, ‖r‖ = 1.72e-03 
+EV  49 converged λ = -5.7190116181, ‖r‖ = 1.02e-03 
+EV  50 converged λ = -5.2281211511, ‖r‖ = 2.92e-03 
+EV  51 converged λ = -5.0399288285, ‖r‖ = 1.09e-03 
+EV  52 converged λ = -4.7875655390, ‖r‖ = 1.93e-03 
+EV  53 converged λ = -4.7814413104, ‖r‖ = 1.70e-03 
+EV  54 converged λ = -4.6652045930, ‖r‖ = 2.25e-03 
+EV  55 converged λ = -4.6211801145, ‖r‖ = 2.39e-03 
+EV  56 converged λ = -4.5200151750, ‖r‖ = 6.59e-04 
+EV  57 converged λ = -4.4887209630, ‖r‖ = 1.08e-03 
+EV  58 converged λ = -4.0926204830, ‖r‖ = 2.98e-03 
+EV  59 converged λ = -4.0016557563, ‖r‖ = 2.54e-03 
+EV  60 converged λ = -3.8956052316, ‖r‖ = 1.70e-03 
+EV  61 converged λ = -3.6818135189, ‖r‖ = 1.64e-03 
+EV  62 converged λ = -3.5017397726, ‖r‖ = 2.94e-03 
+EV  63 converged λ = -3.4639860608, ‖r‖ = 2.69e-03 
+EV  64 converged λ = -3.4531110554, ‖r‖ = 2.85e-03 
+EV  65 converged λ = -3.3992913910, ‖r‖ = 1.20e-03 
+EV  66 converged λ = -3.2422679515, ‖r‖ = 1.94e-03 
+EV  67 converged λ = -3.2166849472, ‖r‖ = 1.60e-03 
+EV  68 converged λ = -3.2059831095, ‖r‖ = 2.18e-03 
+EV  69 converged λ = -3.1850934207, ‖r‖ = 1.94e-03 
+EV  70 converged λ = -2.9940283452, ‖r‖ = 9.20e-04 
+EV  71 converged λ = -2.9546434589, ‖r‖ = 1.36e-03 
+EV  72 converged λ = -2.7989964584, ‖r‖ = 7.99e-04 
+EV  73 converged λ = -2.5911054013, ‖r‖ = 9.60e-04 
+EV  74 converged λ = -2.5874491226, ‖r‖ = 2.30e-03 
+EV  75 converged λ = -2.5841063901, ‖r‖ = 8.54e-04 
+EV  76 converged λ = -2.5791171117, ‖r‖ = 2.67e-03 
+EV  77 converged λ = -2.4400417965, ‖r‖ = 3.81e-03 
+EV  78 converged λ = -2.4160896377, ‖r‖ = 5.04e-04 
+EV  79 converged λ = -2.3103853014, ‖r‖ = 3.76e-03 
+EV  80 converged λ = -2.3085423522, ‖r‖ = 8.67e-04 
+EV  81 converged λ = -2.2988237160, ‖r‖ = 4.52e-03 
+EV  82 converged λ = -2.2323332738, ‖r‖ = 2.34e-03 
+EV  83 converged λ = -2.1395479552, ‖r‖ = 3.24e-03 
+EV  84 converged λ = -2.0592217734, ‖r‖ = 4.36e-03 
+EV  85 converged λ = -2.0457545481, ‖r‖ = 2.99e-03 
+EV  86 converged λ = -2.0142995830, ‖r‖ = 1.63e-03 
+EV  87 converged λ = -1.9846021948, ‖r‖ = 4.08e-03 
+EV  88 converged λ = -1.9648313063, ‖r‖ = 1.23e-03 
+EV  89 converged λ = -1.8894868151, ‖r‖ = 1.76e-03 
+EV  90 converged λ = -1.8834030329, ‖r‖ = 4.77e-03 
+EV  91 converged λ = -1.8609850451, ‖r‖ = 2.78e-03 
+EV  92 converged λ = -1.8469600254, ‖r‖ = 1.72e-03 
+EV  93 converged λ = -1.8218885580, ‖r‖ = 4.73e-03 
+EV  94 converged λ = -1.7440780835, ‖r‖ = 1.97e-03 
+EV  95 converged λ = -1.7109181275, ‖r‖ = 3.08e-03 
+EV  96 converged λ = -1.7080957130, ‖r‖ = 2.74e-03 
+EV  97 converged λ = -1.6989791062, ‖r‖ = 5.42e-03 
+EV  98 converged λ = -1.5798636023, ‖r‖ = 2.72e-03 
+EV  99 converged λ = -1.5333431887, ‖r‖ = 3.93e-03 
+EV 100 converged λ = -1.5019929005, ‖r‖ = 2.16e-03 
+EV 101 converged λ = -1.4349451050, ‖r‖ = 1.71e-03 
+EV 102 converged λ = -1.4278853238, ‖r‖ = 4.25e-03 
+EV 103 converged λ = -1.3913855441, ‖r‖ = 3.09e-03 
+EV 104 converged λ = -1.3724466516, ‖r‖ = 2.02e-03 
+EV 105 converged λ = -1.3225629094, ‖r‖ = 2.61e-03 
+EV 106 converged λ = -1.3075245545, ‖r‖ = 4.47e-03 
+EV 107 converged λ = -1.3068096884, ‖r‖ = 4.85e-03 
+EV 108 converged λ = -1.3039406740, ‖r‖ = 2.82e-03 
+EV 109 converged λ = -1.2912452892, ‖r‖ = 4.20e-03 
+EV 110 converged λ = -1.2021247989, ‖r‖ = 1.71e-03 
+EV 111 converged λ = -1.1809433927, ‖r‖ = 3.05e-03 
+EV 112 converged λ = -1.1444915911, ‖r‖ = 3.24e-03 
+EV 113 converged λ = -1.1341431468, ‖r‖ = 3.52e-03 
+EV 114 converged λ = -1.1080520566, ‖r‖ = 2.91e-03 
+EV 115 converged λ = -1.0882212534, ‖r‖ = 2.13e-03 
+EV 116 converged λ = -1.0854926999, ‖r‖ = 3.36e-03 
+EV 117 converged λ = -1.0815754436, ‖r‖ = 3.11e-03 
+EV 118 converged λ = -1.0452984947, ‖r‖ = 3.38e-03 
+EV 119 converged λ = -1.0098955699, ‖r‖ = 3.52e-03 
+EV 120 converged λ = -1.0017626399, ‖r‖ = 2.12e-03 
+EV 121 converged λ = -0.9949881069, ‖r‖ = 2.39e-03 
+EV 122 converged λ = -0.9811843082, ‖r‖ = 4.83e-03 
+EV 123 converged λ = -0.9558416294, ‖r‖ = 2.61e-03 
+EV 124 converged λ = -0.9491528203, ‖r‖ = 2.45e-03 
+EV 125 converged λ = -0.9457746375, ‖r‖ = 2.73e-03 
+EV 126 converged λ = -0.9093214992, ‖r‖ = 4.22e-03 
+EV 127 converged λ = -0.8894225716, ‖r‖ = 3.48e-03 
+EV 128 converged λ = -0.8618387413, ‖r‖ = 3.73e-03 
+EV 129 converged λ = -0.8598090330, ‖r‖ = 2.38e-03 
+EV 130 converged λ = -0.8595710094, ‖r‖ = 3.95e-03 
+EV 131 converged λ = -0.8084254276, ‖r‖ = 3.35e-03 
+EV 132 converged λ = -0.8007053184, ‖r‖ = 3.22e-03 
+EV 133 converged λ = -0.7720124165, ‖r‖ = 3.32e-03 
+EV 134 converged λ = -0.7505301994, ‖r‖ = 3.37e-03 
+EV 135 converged λ = -0.7303279575, ‖r‖ = 3.19e-03 
+EV 136 converged λ = -0.7175431177, ‖r‖ = 3.68e-03 
+EV 137 converged λ = -0.7040343488, ‖r‖ = 2.77e-03 
+EV 138 converged λ = -0.6973952467, ‖r‖ = 3.00e-03 
+EV 139 converged λ = -0.6876570136, ‖r‖ = 3.01e-03 
+EV 140 converged λ = -0.6841109524, ‖r‖ = 2.44e-03 
+EV 141 converged λ = -0.6797575443, ‖r‖ = 3.70e-03 
+EV 142 converged λ = -0.6718388658, ‖r‖ = 3.20e-03 
+EV 143 converged λ = -0.6452120766, ‖r‖ = 3.18e-03 
+EV 144 converged λ = -0.6293023719, ‖r‖ = 3.18e-03 
+EV 145 converged λ = -0.6088936589, ‖r‖ = 2.67e-03 

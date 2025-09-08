@@ -83,7 +83,7 @@ function load_matrix(filename::String, molecule::String)
 end
 
 function read_eigenresults(molecule::String)
-    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis.jld2"
+    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -238,7 +238,8 @@ end
 
 alpha = [8, 10, 4]
 molecules = ["uracil"]
-ls = [50, 75, 100, 200] #10, 50, 100, 200
+# ls = [50, 75, 100, 200] #10, 50, 100, 200
+ls = [10, 15, 25]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

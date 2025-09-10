@@ -238,8 +238,8 @@ end
 
 alpha = [8, 10, 4]
 molecules = ["uracil"]
-# ls = [50, 75, 100, 200] #10, 50, 100, 200
-ls = [10, 15, 25]
+ls = [50, 75, 100, 200] #10, 50, 100, 200
+# ls = [10, 15, 25]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for a in alpha

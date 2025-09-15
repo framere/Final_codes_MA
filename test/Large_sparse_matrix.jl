@@ -44,9 +44,16 @@ function save_matrix_to_file(A::Matrix{Float64}, filename::String)
 end
 
 # === MAIN USAGE ===
-N = 20000  # Size of the matrix
-factor = 1000.0  # Scaling factor for diagonal elements
-println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
-A = generate_random_matrix(N, factor)
-println("Saving the generated matrix to 'large_sparse_matrix_3.dat'...")
-save_matrix_to_file(A, "large_sparse_matrix_2.dat")
+Ns = [10000, 20000]  # Different sizes for testing
+factors = [1000.0, 100.0, 10.0]  # Different scaling factors for diagonal elements
+
+global counter = 1
+for (N, factor) in Iterators.product(Ns, factors)
+    println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
+    A = generate_random_matrix(N, factor)
+    filename = "large_sparse_matrix_$(counter).dat"
+    println("Saving the generated matrix to '$filename'...")
+    save_matrix_to_file(A, filename)
+    global counter += 1
+end
+

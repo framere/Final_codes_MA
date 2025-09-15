@@ -1,0 +1,10 @@
+read ../formaldehyde/gamma_VASP_HFbasis.dat
+Diagonalizing the matrix for system: HFbasis
+5618.375093 seconds (25 allocations: 17.089 GiB, 0.00% gc time)
+Saving results to ../Eigenvalues_folder/eigenres_formaldehyde_HFbasis.jld2
+Done saving eigenvalues and eigenvectors.
+read ../formaldehyde/gamma_VASP_RNDbasis1.dat
+Diagonalizing the matrix for system: RNDbasis1
+3646.760552 seconds (25 allocations: 17.089 GiB, 0.01% gc time)
+Saving results to ../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+Done saving eigenvalues and eigenvectors.

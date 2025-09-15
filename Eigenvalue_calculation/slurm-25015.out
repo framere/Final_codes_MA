@@ -1,0 +1,5 @@
+read ../uracil/uracil/gamma_VASP_RNDbasis.dat
+Diagonalizing the matrix for system: RNDbasis
+8622.537616 seconds (25 allocations: 23.498 GiB, 0.00% gc time)
+Saving results to ../Eigenvalues_folder/eigenres_uracil_RNDbasis.jld2
+Done saving eigenvalues and eigenvectors.

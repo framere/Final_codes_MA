@@ -1,4 +1,0 @@
-slurmstepd-andoria01: error: *** JOB 25003 ON andoria01 CANCELLED AT 2025-09-05T10:24:04 ***
-
-[186806] signal 15: Terminated
-in expression starting at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/H2_mixed.jl:361

@@ -322,7 +322,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
-    Σexact_squared = read_eigenresults(molecule)
+    Σexact_squared = read_eigenresults(number)
 
     idx_exact = sortperm(Σexact_squared)
     Σexact_squared = Σexact_squared[idx_exact]
@@ -341,7 +341,7 @@ end
 
 
 betas = [32] #8,16,32,64, 8,16
-numbers = [1] #1,2,3,4,5,6
+numbers = [5] #1,2,3,4,5,6
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 
 for number in numbers

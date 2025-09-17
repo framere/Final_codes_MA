@@ -3,6 +3,7 @@ using Printf
 using JLD2
 using IterativeSolvers
 using LinearMaps
+using Preconditioners
 
 
 # === Global FLOP counter and helpers ===
@@ -47,6 +48,90 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     end
     return S
 end
+
+function correction_equations_minres_IC(A, U, lambdas, R; tol=1e-1, maxiter=100)
+    global NFLOPs
+    n, k = size(U)
+    S = zeros(eltype(A), n, k)
+
+    for j in 1:k
+        λ, r = lambdas[j], R[:, j]
+
+        # Build shifted matrix B = A - λI (must be SPD for IC to work)
+        B = copy(A)
+        for i in 1:n
+            B[i,i] -= λ
+        end
+
+        # Build IC(0) factorization (precompute once per eigenpair)
+        P = CholeskyPreconditioner(B, 0)  # level-0 incomplete Cholesky
+
+        M_apply = function(x)
+            # Apply preconditioner first: x_precond = P \ x
+            x_precond = P \ x
+            
+            # Then apply the original operator to preconditioned vector
+            x_perp = x_precond - (U * (U' * x_precond)) 
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return res
+        end
+
+        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        # Right-hand side: (I - UUᵀ)(-r)
+        rhs = r - (U * (U' * r))
+        rhs = -rhs
+
+        # Solve WITHOUT external preconditioner (it's built into M_apply)
+        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
+
+        # Reproject correction orthogonal to U
+        s_j = s_j - (U * (U' * s_j))
+        S[:, j] = s_j
+    end
+
+    return S
+end
+
+function correction_equations_minres_diag(A, U, lambdas, R; tol=1e-1, maxiter=100)
+    global NFLOPs
+    n, k = size(U)
+    S = zeros(eltype(A), n, k)
+
+    for j in 1:k
+        λ, r = lambdas[j], R[:, j]
+
+        # Precompute diagonal preconditioner: (D - λI)^-1
+        D = diag(A) .- λ
+        D_inv = 1.0 ./ D  # Precompute the inverse once
+
+        M_apply = function(x)
+            # Apply preconditioner first: x_precond = D_inv * x
+            x_precond = x .* D_inv
+            
+            # Then apply the original operator to preconditioned vector
+            x_perp = x_precond - (U * (U' * x_precond)) 
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return res
+        end
+
+        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        rhs = r - (U * (U' * r))
+        rhs = -rhs
+
+        # Solve WITHOUT external preconditioner (it's built into M_apply)
+        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
+
+        s_j = s_j - (U * (U' * s_j))
+        S[:, j] = s_j
+    end
+
+    return S
+end
+
 
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
@@ -120,8 +205,9 @@ function load_matrix(filename::String, molecule::String)
     return Hermitian(A)
 end
 
+
 function read_eigenresults(molecule::String)
-    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_HFbasis.jld2"
+    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -136,13 +222,14 @@ function davidson(
     l::Integer,
     thresh::Float64,
     max_iter::Integer,
+    solver::Symbol,
     stable_thresh::Integer = 3
 )::Tuple{Vector{T}, Matrix{T}} where T<:Number
 
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.7)
+    l_buffer = round(Int, l * 1.2)
     lc = round(Int, 1.01 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
@@ -280,7 +367,10 @@ function davidson(
         elseif iter >= 20
             # Use MINRES for correction equations
             println("Switching to MINRES for correction equations at iteration $iter")
-            t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100)
+            t = solver == :minres_diag ? correction_equations_minres_diag(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
+                solver == :minres_IC ? correction_equations_minres_IC(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
+                solver == :minres ? correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
+                error("Unknown solver: $solver. Choose :minres_diag or :minres_IC")
         end
 
         # Orthogonalize and select correction vectors
@@ -309,11 +399,11 @@ function davidson(
 end
 
 
-function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_iter::Integer)
+function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_iter::Integer, solver::Symbol)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "../../" * molecule *"/gamma_VASP_HFbasis.dat"
+    filename = "../../" * molecule *"/gamma_VASP_RNDbasis1.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
@@ -325,7 +415,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter, solver)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -353,17 +443,22 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
 end
 
 
+
 betas = [25] #8,16,32,64, 8,16
-molecules = ["H2"] # "formaldehyde",
+molecules = ["formaldehyde"] # "H2", "formaldehyde", "uracil"
 ls = [10, 50, 100, 200] #10, 50, 100, 200
+solvers = [:minres_diag, :minres_IC, :minres]
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas
         println("Running with beta = $beta")
-        for (i, l) in enumerate(ls)
-	    nev = l*occupied_orbitals(molecule)
-            println("Running with l = $nev")
-            main(molecule, nev, beta, i, 100)
+        for solver in solvers
+            println("Using solver: $solver")
+            for (i, l) in enumerate(ls)
+                nev = l*occupied_orbitals(molecule)
+                println("Running with l = $nev")
+                main(molecule, nev, beta, i, 100, solver)
+            end
         end
     end
     println("Finished processing molecule: $molecule")

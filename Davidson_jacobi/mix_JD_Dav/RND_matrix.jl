@@ -111,14 +111,14 @@ function load_matrix(filename::String, number::Int)
     close(file)
 
     A = reshape(A, N, N)
-    return Hermitian(A)
+    return Hermitian(-A)
 end
 
 function read_eigenresults(number::Int)
     output_file = "../../test/Eigenvalues_folder/eigenresults_matrix_$(number).jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
-    eigenvalues = data["Σexact"]
+    eigenvalues = -data["Σexact"]
     close(data)
     return sort(eigenvalues)
 end
@@ -349,9 +349,9 @@ end
 
 
 
-betas = [25] #8,16,32,64, 8,16
-numbers = [6] #1,2,3,4,5,6
-ls = [10, 50, 100, 200] #10, 50, 100, 200
+betas = [32] #8,16,32,64, 8,16
+numbers = [2] #1,2,3,4,5,6
+ls = [100] #10, 50, 100, 200
 
 for number in numbers
     println("Processing molecule: $number")

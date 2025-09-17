@@ -2,6 +2,7 @@ using LinearAlgebra
 using Printf
 using JLD2
 using IterativeSolvers
+# using Krylov
 using LinearMaps
 
 # === Global FLOP counter and helpers ===
@@ -55,72 +56,33 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
+        # Precompute diagonal preconditioner: (D - λI)^-1
+        D = diag(A) .- λ
+        D_inv = 1.0 ./ D  # Precompute the inverse once
+
         M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
-
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
+            # Apply preconditioner first: x_precond = D_inv * x
+            x_precond = x .* D_inv
+            
+            # Then apply the original operator to preconditioned vector
+            x_perp = x_precond - (U * (U' * x_precond)) 
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
             return res
         end
 
         M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
 
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
+        rhs = r - (U * (U' * r))
+        rhs = -rhs
 
-        # Estimate FLOPs for MINRES solve (approx)
-        NFLOPs += maxiter * (2*n^2 + 4*n*k)
+        # Solve WITHOUT external preconditioner (it's built into M_apply)
         s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
 
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
+        s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
-    return S
-end
 
-
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
-    global NFLOPs
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
-
-    for j in 1:k
-        λ, r = lambdas[j], R[:, j]
-
-        M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
-
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-            return res
-        end
-
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
-
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
-
-        # Estimate FLOPs for MINRES solve (approx)
-        NFLOPs += maxiter * (2*n^2 + 4*n*k)
-        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
-
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-        S[:, j] = s_j
-    end
     return S
 end
 

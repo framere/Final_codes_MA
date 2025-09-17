@@ -3,6 +3,8 @@ using Printf
 using JLD2
 using IterativeSolvers
 using LinearMaps
+using Preconditioners
+using SparseArrays
 
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
@@ -47,7 +49,38 @@ function read_eigenresults(molecule::String)
 end
 
 
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
+function build_ainv_preconditioner(A; drop_tol=1e-3)
+    n = size(A, 1)
+    
+    # Initialize factors
+    Z = Matrix(I, n, n)  # Z will become the approximate inverse
+    W = Matrix(I, n, n)  # Working matrix
+    
+    # AINV algorithm
+    for i in 1:n
+        # Normalize current row
+        if abs(W[i, i]) > eps()
+            W[i, :] ./= W[i, i]
+            Z[i, :] ./= W[i, i]
+        end
+        
+        # Orthogonalize subsequent rows
+        for j in i+1:n
+            if abs(W[j, i]) > drop_tol  # Drop small entries
+                factor = W[j, i]
+                W[j, :] -= factor * W[i, :]
+                Z[j, :] -= factor * Z[i, :]
+            end
+        end
+    end
+    
+    # Make Z sparse by dropping small entries
+    Z_sparse = dropzeros!(sparse(Z))
+    
+    return Z_sparse
+end
+
+function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100, drop_tol=1e-3)
     global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
@@ -55,74 +88,76 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
+        # Build shifted matrix B = A - λI
+        B = copy(A)
+        for i in 1:n
+            B[i,i] -= λ
+        end
+
+        # Build AINV preconditioner
+        Z = build_ainv_preconditioner(B, drop_tol=drop_tol)
+
         M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
-
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
+            # Apply AINV preconditioner: x_precond = Z * x
+            x_precond = Z * x
+            
+            # Apply the original operator
+            x_perp = x_precond - (U * (U' * x_precond)) 
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
             return res
         end
 
         M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
 
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
+        rhs = r - (U * (U' * r))
+        rhs = -rhs
 
-        # Estimate FLOPs for MINRES solve (approx)
-        NFLOPs += maxiter * (2*n^2 + 4*n*k)
         s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
-
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
+        s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
+
     return S
 end
 
+# function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
+#     global NFLOPs
+#     n, k = size(U)
+#     S = zeros(eltype(A), n, k)
 
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
-    global NFLOPs
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
+#     for j in 1:k
+#         λ, r = lambdas[j], R[:, j]
 
-    for j in 1:k
-        λ, r = lambdas[j], R[:, j]
+#         M_apply = function(x)
+#             x_perp = x - (U * (U' * x)); 
+#             count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
 
-        M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
+#             tmp = (A * x_perp) - λ * x_perp; 
+#             count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
 
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
+#             res = tmp - (U * (U' * tmp)); 
+#             count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
+#             return res
+#         end
 
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-            return res
-        end
+#         M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
 
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+#         rhs = r - (U * (U' * r)); 
+#         count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
+#         rhs = -rhs; count_vec_scaling_flops(n)
 
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
+#         # Estimate FLOPs for MINRES solve (approx)
+#         NFLOPs += maxiter * (2*n^2 + 4*n*k)
+#         s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
 
-        # Estimate FLOPs for MINRES solve (approx)
-        NFLOPs += maxiter * (2*n^2 + 4*n*k)
-        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
+#         s_j = s_j - (U * (U' * s_j)); 
+#         count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
 
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-        S[:, j] = s_j
-    end
-    return S
-end
+#         S[:, j] = s_j
+#     end
+#     return S
+# end
 
 
 # a simple implementation of the block Davidson method for a Hermitian matrix A

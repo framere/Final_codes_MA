@@ -2,7 +2,7 @@ using LinearAlgebra
 using Printf
 using JLD2
 using IterativeSolvers
-# using Krylov
+using Preconditioners
 using LinearMaps
 
 # === Global FLOP counter and helpers ===
@@ -53,33 +53,52 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     n, k = size(U)
     S = zeros(eltype(A), n, k)
 
+    # Projection helper
+    project(x) = x .- U * (U' * x)
+
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
-        # Precompute diagonal preconditioner: (D - λI)^-1
-        D = diag(A) .- λ
-        D_inv = 1.0 ./ D  # Precompute the inverse once
+        # Diagonal preconditioner M_inv approximate inverse for (A - λI)
+        diag_entries = diag(A) .- λ
+        diag_entries = map(x -> abs(x) < 1e-12 ? 1e-12 : x, diag_entries)
+        M_inv_diag = 1.0 ./ diag_entries
 
-        M_apply = function(x)
-            # Apply preconditioner first: x_precond = D_inv * x
-            x_precond = x .* D_inv
-            
-            # Then apply the original operator to preconditioned vector
-            x_perp = x_precond - (U * (U' * x_precond)) 
-            tmp = (A * x_perp) - λ * x_perp
-            res = tmp - (U * (U' * tmp))
-            return res
+        # Define M_d operator: (I - u u^T)(A - λ I)(I - u u^T)
+        function Md_op(x)
+            x_perp = project(x)
+            Ax = A * x_perp - λ .* x_perp
+            return project(Ax) |> Vector
         end
 
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+        # Define preconditioned operator: M_inv * Md_op (apply diagonal inverse after Md_op)
+        function Mtilde_op(x)
+            y = M_inv_diag .* Md_op(x)
+            return Vector(y)   # ensures result is a 1D vector
+        end
 
-        rhs = r - (U * (U' * r))
-        rhs = -rhs
 
-        # Solve WITHOUT external preconditioner (it's built into M_apply)
-        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
+        println("Md_op(x) size: ", size(Md_op(randn(n))))
+        println("Mtilde_op(x) size: ", size(Mtilde_op(randn(n))))
 
-        s_j = s_j - (U * (U' * s_j))
+
+        M_op = LinearMap{eltype(A)}(Mtilde_op, n, n; ishermitian=true)
+
+        rhs = -project(r)
+        
+        # Apply diagonal preconditioner to rhs
+        rhs_prec = vec(M_inv_diag .* rhs)
+
+        println("rhs_prec size: ", size(rhs_prec))
+
+        s_j, info = minres(M_op, rhs_prec; reltol=tol, maxiter=maxiter)
+        s_j = vec(s_j)           # ensures it's a 1D vector
+        s_j = project(s_j)
+
+
+        println("s_j size: ", size(s_j))
+
+
         S[:, j] = s_j
     end
 

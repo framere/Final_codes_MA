@@ -3,6 +3,7 @@ using Printf
 using JLD2
 using IterativeSolvers
 using LinearMaps
+using SparseArrays
 using Preconditioners
 
 
@@ -95,6 +96,82 @@ function correction_equations_minres_IC(A, U, lambdas, R; tol=1e-1, maxiter=100)
 end
 
 function correction_equations_minres_diag(A, U, lambdas, R; tol=1e-1, maxiter=100)
+    n, k = size(U)
+    S = zeros(eltype(A), n, k)
+
+    # Precompute diagonal of A once
+    A_diag = diag(A)
+
+    for j in 1:k
+        λ = lambdas[j]
+        r = R[:, j]
+
+        # Operator: (I - UU^T)(A - λI)(I - UU^T)
+        function M_apply(x)
+            x_perp = x - U * (U' * x)                   # Orthogonalize x against U
+            Ax = A * x_perp
+            tmp = Ax - λ * x_perp                        # Apply (A - λI) to x_perp
+            res = tmp - U * (U' * tmp)                   # Project result
+            return res
+        end
+
+        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        # Preconditioner applying diagonal inverse and orthogonalize
+        D_inv = 1.0 ./ (A_diag .- λ)
+
+        function preconditioner(x)
+            x_perp = x - U * (U' * x)                    # Orthogonalize input
+            z = D_inv .* x_perp                           # Apply diagonal inverse approx
+            z - U * (U' * z)                             # Orthogonalize output
+        end
+
+        # Right-hand side: projected residual
+        rhs = - (r - U * (U' * r))
+
+        # Call MINRES with preconditioner
+        s_j, flag = minres(M_op, rhs; Pl=preconditioner, reltol=tol, maxiter=maxiter)
+
+        # Ensure orthogonality of solution
+        s_j = s_j - U * (U' * s_j)
+        S[:, j] = s_j
+    end
+
+    return S
+end
+
+function build_ainv_preconditioner(A; drop_tol=1e-3)
+    n = size(A, 1)
+    
+    # Initialize factors
+    Z = Matrix(I, n, n)  # Z will become the approximate inverse
+    W = Matrix(I, n, n)  # Working matrix
+    
+    # AINV algorithm
+    for i in 1:n
+        # Normalize current row
+        if abs(W[i, i]) > eps()
+            W[i, :] ./= W[i, i]
+            Z[i, :] ./= W[i, i]
+        end
+        
+        # Orthogonalize subsequent rows
+        for j in i+1:n
+            if abs(W[j, i]) > drop_tol  # Drop small entries
+                factor = W[j, i]
+                W[j, :] -= factor * W[i, :]
+                Z[j, :] -= factor * Z[i, :]
+            end
+        end
+    end
+    
+    # Make Z sparse by dropping small entries
+    Z_sparse = dropzeros!(sparse(Z))
+    
+    return Z_sparse
+end
+
+function correction_equations_minres_AINV(A, U, lambdas, R; tol=1e-1, maxiter=100, drop_tol=1e-3)
     global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
@@ -102,15 +179,20 @@ function correction_equations_minres_diag(A, U, lambdas, R; tol=1e-1, maxiter=10
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
-        # Precompute diagonal preconditioner: (D - λI)^-1
-        D = diag(A) .- λ
-        D_inv = 1.0 ./ D  # Precompute the inverse once
+        # Build shifted matrix B = A - λI
+        B = copy(A)
+        for i in 1:n
+            B[i,i] -= λ
+        end
+
+        # Build AINV preconditioner
+        Z = build_ainv_preconditioner(B, drop_tol=drop_tol)
 
         M_apply = function(x)
-            # Apply preconditioner first: x_precond = D_inv * x
-            x_precond = x .* D_inv
+            # Apply AINV preconditioner: x_precond = Z * x
+            x_precond = Z * x
             
-            # Then apply the original operator to preconditioned vector
+            # Apply the original operator
             x_perp = x_precond - (U * (U' * x_precond)) 
             tmp = (A * x_perp) - λ * x_perp
             res = tmp - (U * (U' * tmp))
@@ -122,17 +204,13 @@ function correction_equations_minres_diag(A, U, lambdas, R; tol=1e-1, maxiter=10
         rhs = r - (U * (U' * r))
         rhs = -rhs
 
-        # Solve WITHOUT external preconditioner (it's built into M_apply)
         s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
-
         s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
 
     return S
 end
-
-
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
     ν = size(t_candidates, 2)
@@ -370,6 +448,7 @@ function davidson(
             t = solver == :minres_diag ? correction_equations_minres_diag(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
                 solver == :minres_IC ? correction_equations_minres_IC(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
                 solver == :minres ? correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
+                solver == :minres_AINV ? correction_equations_minres_AINV(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=100) :
                 error("Unknown solver: $solver. Choose :minres_diag or :minres_IC")
         end
 
@@ -446,8 +525,8 @@ end
 
 betas = [25] #8,16,32,64, 8,16
 molecules = ["formaldehyde"] # "H2", "formaldehyde", "uracil"
-ls = [10, 50, 100, 200] #10, 50, 100, 200
-solvers = [:minres_diag, :minres_IC, :minres]
+ls = [50, 100, 200] #10, 50, 100, 200
+solvers = [:minres_AINV] # :minres_diag, :minres_IC, :minres, :minres_AINV
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

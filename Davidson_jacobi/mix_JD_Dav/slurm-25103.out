@@ -1,6 +1,27 @@
+ERROR: LoadError: UndefVarError: `dropzeros!` not defined in `Main`
+Stacktrace:
+ [1] build_ainv_preconditioner(A::Hermitian{Float64, Matrix{Float64}}; drop_tol::Float64)
+   @ Main ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:162
+ [2] build_ainv_preconditioner
+   @ ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:136 [inlined]
+ [3] correction_equations_minres_AINV(A::Hermitian{Float64, Matrix{Float64}}, U::Matrix{Float64}, lambdas::Vector{Float64}, R::Matrix{Float64}; tol::Float64, maxiter::Int64, drop_tol::Float64)
+   @ Main ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:182
+ [4] correction_equations_minres_AINV
+   @ ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:167 [inlined]
+ [5] davidson(A::Hermitian{Float64, Matrix{Float64}}, V::Matrix{Float64}, n_aux::Int64, l::Int64, thresh::Float64, max_iter::Int64, solver::Symbol, stable_thresh::Int64)
+   @ Main ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:441
+ [6] davidson
+   @ ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:300 [inlined]
+ [7] macro expansion
+   @ ./timing.jl:581 [inlined]
+ [8] main(molecule::String, l::Int64, beta::Int64, factor::Int64, max_iter::Int64, solver::Symbol)
+   @ Main ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:490
+ [9] top-level scope
+   @ ~/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:532
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/mixed_precond.jl:523
 Processing molecule: formaldehyde
 Running with beta = 25
-Using solver: minres_diag
+Using solver: minres_AINV
 Running with l = 60
 Starting Davidson with n_aux = 400, l_buffer = 72, lc = 61, thresh = 0.0015, max_iter = 100
 Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.8656922926223112
@@ -74,7 +95,7 @@ EV  59 converged λ = -4.0016558086, ‖r‖ = 3.54e-06, stable for 3 iters
 EV  60 converged λ = -3.8956052657, ‖r‖ = 1.92e-06, stable for 3 iters
 EV  61 converged λ = -3.6818135643, ‖r‖ = 6.01e-06, stable for 3 iters
 Converged all required eigenvalues.
-1033.261450 seconds (1.32 M allocations: 84.601 GiB, 0.33% gc time, 0.81% compilation time)
+688.313770 seconds (1.32 M allocations: 84.601 GiB, 0.51% gc time, 0.80% compilation time)
 Number of FLOPs: 3541251633876
 
 Reading exact Eigenvalues...
@@ -412,31 +433,3 @@ Iter 18: V_size = 339, Converged = 247, ‖r‖ (largest λ) = 0.004301260003160
 Iter 19: V_size = 452, Converged = 247, ‖r‖ (largest λ) = 0.014314027609986148
 EV 248 converged λ = -0.1446510652, ‖r‖ = 1.49e-03, stable for 3 iters
 Switching to MINRES for correction equations at iteration 20
-Iter 20: V_size = 564, Converged = 248, ‖r‖ (largest λ) = 0.01286777612710338
-Switching to MINRES for correction equations at iteration 21
-Iter 21: V_size = 673, Converged = 248, ‖r‖ (largest λ) = 0.008583592369506397
-Switching to MINRES for correction equations at iteration 22
-Iter 22: V_size = 196, Converged = 248, ‖r‖ (largest λ) = 0.006135081096092722
-EV 249 converged λ = -0.1615974430, ‖r‖ = 2.06e-05, stable for 3 iters
-EV 250 converged λ = -0.1588428970, ‖r‖ = 1.92e-05, stable for 3 iters
-EV 251 converged λ = -0.1563681979, ‖r‖ = 2.25e-05, stable for 3 iters
-EV 252 converged λ = -0.1541235297, ‖r‖ = 2.47e-05, stable for 3 iters
-EV 253 converged λ = -0.1524567712, ‖r‖ = 1.61e-05, stable for 3 iters
-EV 254 converged λ = -0.1452130752, ‖r‖ = 1.79e-05, stable for 3 iters
-EV 255 converged λ = -0.1448853375, ‖r‖ = 1.14e-05, stable for 3 iters
-EV 256 converged λ = -0.1423723397, ‖r‖ = 5.16e-05, stable for 3 iters
-EV 257 converged λ = -0.1408427880, ‖r‖ = 7.34e-05, stable for 3 iters
-EV 258 converged λ = -0.1388972762, ‖r‖ = 1.88e-05, stable for 3 iters
-EV 259 converged λ = -0.1355060655, ‖r‖ = 1.94e-05, stable for 3 iters
-EV 260 converged λ = -0.1342138003, ‖r‖ = 4.22e-05, stable for 3 iters
-EV 261 converged λ = -0.1332448099, ‖r‖ = 5.27e-05, stable for 3 iters
-EV 262 converged λ = -0.1323674692, ‖r‖ = 4.30e-05, stable for 3 iters
-EV 263 converged λ = -0.1308776143, ‖r‖ = 2.51e-05, stable for 3 iters
-EV 264 converged λ = -0.1295655040, ‖r‖ = 1.78e-05, stable for 3 iters
-EV 265 converged λ = -0.1269013816, ‖r‖ = 3.46e-05, stable for 3 iters
-EV 266 converged λ = -0.1261450897, ‖r‖ = 2.62e-05, stable for 3 iters
-EV 267 converged λ = -0.1250016969, ‖r‖ = 1.43e-05, stable for 3 iters
-EV 268 converged λ = -0.1226617194, ‖r‖ = 2.38e-05, stable for 3 iters
-EV 269 converged λ = -0.1224291459, ‖r‖ = 2.26e-05, stable for 3 iters
-EV 270 converged λ = -0.1216841971, ‖r‖ = 3.22e-05, stable for 3 iters
-EV 271 converged λ = -0.1201961875, ‖r‖ = 8.76e-05, stable for 3 iters

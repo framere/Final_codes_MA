@@ -1,0 +1,80 @@
+slurmstepd-andoria01: error: *** JOB 25098 ON andoria01 CANCELLED AT 2025-09-19T14:08:52 ***
+
+[27185] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:356
+dsymv_kernel_4x4.constprop.0 at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_U_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_64_ at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+symv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/blas.jl:815
+gemv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:452
+generic_matvecmul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:79 [inlined]
+_mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:73 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:70 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:253 [inlined]
+* at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:60 [inlined]
+#2 at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:25
+_unsafe_mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/functionmap.jl:127 [inlined]
+mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/LinearMaps.jl:166 [inlined]
+iterate at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:104
+iterate at ./iterators.jl:206 [inlined]
+#minres!#25 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:230
+minres! at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:200 [inlined]
+#minres#26 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244 [inlined]
+minres at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244
+unknown function (ip: 0x7ff744bdae0d)
+#correction_equations_minres#1 at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:41
+correction_equations_minres at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:13 [inlined]
+davidson at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:278
+davidson at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:137 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:323
+unknown function (ip: 0x7ff744bd5195)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:363
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 1370912063 (Pool: 1370911534; Big: 529); GC: 241751
+Processing molecule: 2
+Running with beta = 32
+Running with l = 1900
+Starting Davidson with n_aux = 6080, l_buffer = 2280, lc = 1919, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 380, Converged = 0, ‖r‖ (largest λ) = 0.057204969273624735
+Iter 2: V_size = 760, Converged = 0, ‖r‖ (largest λ) = 0.0009375581718754195
+Iter 3: V_size = 1520, Converged = 0, ‖r‖ (largest λ) = 1.75841933141732e-6
+Iter 4: V_size = 3040, Converged = 0, ‖r‖ (largest λ) = 3.2277509098527505e-9
+Iter 5: V_size = 5320, Converged = 0, ‖r‖ (largest λ) = 0.019790556423781275
+Iter 6: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.03325710246638685
+Iter 7: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.02664720869740079
+Iter 8: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.02066872566550044
+Iter 9: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.018017756667818238
+Iter 10: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.014978763649524527
+Iter 11: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.013019343400480632
+Iter 12: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.011627770874608367
+Iter 13: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.011280908937846336
+Iter 14: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.008727568810769717
+Iter 15: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.008944635022935118
+Iter 16: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.007128691755857857
+Iter 17: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.007687410855304545
+Iter 18: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.006109308997655578
+Iter 19: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.00637717930473637
+Switching to MINRES for correction equations at iteration 20
+Iter 20: V_size = 4560, Converged = 0, ‖r‖ (largest λ) = 0.00531495583736446
+EV   1 converged λ = -0.0891868212, ‖r‖ = 5.54e-04, stable for 3 iters
+EV   2 converged λ = -0.0889488322, ‖r‖ = 5.84e-04, stable for 3 iters
+EV   3 converged λ = -0.0889149382, ‖r‖ = 6.11e-04, stable for 3 iters
+Switching to MINRES for correction equations at iteration 21

@@ -10,34 +10,79 @@ global NFLOPs = 0
 
 include("../../FLOP_count.jl")
 
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
+function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=25)
     global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
     total_iter = 0
-
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
+        # Operator (projected (A - λI))
         M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
-
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
+            x_perp = x - (U * (U' * x))
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
             return res
         end
-
         M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
 
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
+        # Preconditioner: Jacobi (diag(A - λI))
+        D = diag(A) .- λ
+        Mprec = DiagonalPreconditioner(D)
 
-        s_j, msg = minres(M_op, rhs; reltol=tol, maxiter=maxiter, log=true)
+        # Right-hand side
+        rhs = -(r - (U * (U' * r)))
+
+        # Solve correction equation
+        s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=Mprec, log=true)
+        m = match(r"(\d+)\s+iterations", string(msg))
+        if m !== nothing
+            niter = parse(Int, m.captures[1])
+            # println("Number of iterations: ", niter)
+            total_iter += niter
+        else
+            println("No iteration number found in message: ", msg)
+        end
+
+        # Project solution to orthogonal complement
+        s_j = s_j - (U * (U' * s_j))
+        S[:, j] = s_j
+    end
+    println("Total CG iterations: ", total_iter)
+    NFLOPs += total_iter * (2*n^2 + 4*n*k)  # Estimate FLOPs for CG solve (approx)
+    return S
+end
+
+
+function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=25)
+    global NFLOPs
+    n, k = size(U)
+    S = zeros(eltype(A), n, k)
+    total_iter = 0
+    for j in 1:k
+        λ, r = lambdas[j], R[:, j]
+
+        # Diagonal preconditioner
+        D = diag(A) .- λ
+        D = @. ifelse(abs(D) < 1e-12, 1.0, D)
+        Pinv = Diagonal(1.0 ./ D)
+
+        # Operator with preconditioning (Pinv * M)
+        M_apply = function(x)
+            x_perp = x - (U * (U' * x))
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return Pinv * res
+        end
+        Mprec_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        # Preconditioned RHS
+        rhs = -(r - (U * (U' * r)))
+        rhs_prec = Pinv * rhs
+
+        # Solve with MINRES
+        s_j, msg = minres(Mprec_op, rhs_prec; reltol=tol, maxiter=maxiter, log=true)
         m = match(r"(\d+)\s+iterations", string(msg))
         if m !== nothing
             niter = parse(Int, m.captures[1])
@@ -47,15 +92,15 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
             println("No iteration number found in message: ", msg)
         end
 
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
+        # Project solution back
+        s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
     println("Total MINRES iterations: ", total_iter)
-    NFLOPs += total_iter * (2*n^2 + 4*n*k)  
+    NFLOPs += total_iter * (2*n^2 + 4*n*k)  # Estimate FLOPs for MINRES solve (approx)
     return S
 end
+
 
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
@@ -146,6 +191,7 @@ function davidson(
     l::Integer,
     thresh::Float64,
     max_iter::Integer,
+    solver::Symbol = :minres,
     stable_thresh::Integer = 3
 )::Tuple{Vector{T}, Matrix{T}} where T<:Number
 
@@ -288,11 +334,19 @@ function davidson(
                 count_vec_scaling_flops(length(D))
             end
         elseif iter >= 20
-            # Use MINRES for correction equations
-            if iter == 20
-                println("Switching to MINRES for correction equations at iteration $iter")
+            if solver == :cg
+                if iter == 20
+                    println("Switching to iterative solver for correction equations at iteration $iter")
+                end
+                t = correction_equations_cg(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
+            elseif solver == :minres
+                if iter == 20
+                    println("Switching to iterative solver for correction equations at iteration $iter")
+                end
+                t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
+            else
+                error("Unknown solver: $solver. Choose :cg or :minres")
             end
-            t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
         end
 
         # Orthogonalize and select correction vectors
@@ -367,9 +421,10 @@ end
 
 
 
-betas = [32] #8,16,32,64, 8,16
-molecules = ["formaldehyde"] #, "uracil"
+betas = [32, 25] #8,16,32,64, 8,16
+molecules = ["uracil"]
 ls = [10, 50, 100, 200] #10, 50, 100, 200
+solvers = [:cg, :minres] #, :minres
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas
@@ -377,10 +432,11 @@ for molecule in molecules
         for (i, l) in enumerate(ls)
 	    nev = l*occupied_orbitals(molecule)
             println("Running with l = $nev")
-            main(molecule, nev, beta, i, 100)
+            for solver in solvers
+                println("Using solver: $solver")
+                main(molecule, nev, beta, i, 100)
+            end
         end
     end
     println("Finished processing molecule: $molecule")
 end
-
-

@@ -51,7 +51,7 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
-
+    total_iter = 0
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
@@ -75,52 +75,24 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
 
         # Estimate FLOPs for MINRES solve (approx)
         NFLOPs += maxiter * (2*n^2 + 4*n*k)
-        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
+        # Solve with MINRES
 
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-        S[:, j] = s_j
-    end
-    return S
-end
-
-
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
-    global NFLOPs
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
-
-    for j in 1:k
-        λ, r = lambdas[j], R[:, j]
-
-        M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
-
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-            return res
+        s_j, msg = minres(M_op, rhs; reltol=tol, maxiter=maxiter, log=true)
+        m = match(r"(\d+)\s+iterations", string(msg))
+        if m !== nothing
+            niter = parse(Int, m.captures[1])
+            total_iter += niter
+            # println("Number of iterations: ", niter)
+        else
+            println("No iteration number found in message: ", msg)
         end
 
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
-
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
-
-        # Estimate FLOPs for MINRES solve (approx)
-        NFLOPs += maxiter * (2*n^2 + 4*n*k)
-        s_j = minres(M_op, rhs; reltol=tol, maxiter=maxiter)
-
         s_j = s_j - (U * (U' * s_j)); 
         count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
 
         S[:, j] = s_j
     end
+    println("Total MINRES iterations: ", total_iter)
     return S
 end
 
@@ -193,9 +165,9 @@ function davidson(
         
         # Solve correction equations using chosen solver
         if solver == :cg
-            t = correction_equations_cg(A, X, Σ, R; tol=1e-2, maxiter=100)
+            t = correction_equations_cg(A, X, Σ, R; tol=1e-2, maxiter=30)
         elseif solver == :minres
-            t = correction_equations_minres(A, X, Σ, R; tol=1e-2, maxiter=100)
+            t = correction_equations_minres(A, X, Σ, R; tol=1e-2, maxiter=30)
         else
             error("Unknown solver: $solver. Choose :cg or :minres")
         end

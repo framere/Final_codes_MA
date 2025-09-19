@@ -47,63 +47,133 @@ function read_eigenresults(molecule::String)
     return sort(eigenvalues)
 end
 
-
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
-    global NFLOPs
+function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=40)
     n, k = size(U)
     S = zeros(eltype(A), n, k)
+    total_iter = 0
+    for j in 1:k
+        λ, r = lambdas[j], R[:, j]
 
-    # Projection helper
-    project(x) = x .- U * (U' * x)
+        # Operator (projected (A - λI))
+        M_apply = function(x)
+            x_perp = x - (U * (U' * x))
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return res
+        end
+        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        # Preconditioner: Jacobi (diag(A - λI))
+        D = diag(A) .- λ
+        Mprec = DiagonalPreconditioner(D)
+
+        # Right-hand side
+        rhs = -(r - (U * (U' * r)))
+
+        # Solve correction equation
+        s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=Mprec, log=true)
+        m = match(r"(\d+)\s+iterations", string(msg))
+        if m !== nothing
+            niter = parse(Int, m.captures[1])
+            # println("Number of iterations: ", niter)
+            total_iter += niter
+        else
+            println("No iteration number found in message: ", msg)
+        end
+
+        # Project solution to orthogonal complement
+        s_j = s_j - (U * (U' * s_j))
+        S[:, j] = s_j
+    end
+    println("Total CG iterations: ", total_iter)
+    return S
+end
+
+function correction_equations_cg_cholesky(A, U, lambdas, R; tol=1e-1, maxiter=40)
+    n, k = size(U)
+    S = zeros(eltype(A), n, k)
 
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 
-        # Diagonal preconditioner M_inv approximate inverse for (A - λI)
-        diag_entries = diag(A) .- λ
-        diag_entries = map(x -> abs(x) < 1e-12 ? 1e-12 : x, diag_entries)
-        M_inv_diag = 1.0 ./ diag_entries
+        # Projected operator (A - λI)
+        M_apply = function(x)
+            x_perp = x - (U * (U' * x))
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return res
+        end
+        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
 
-        # Define M_d operator: (I - u u^T)(A - λ I)(I - u u^T)
-        function Md_op(x)
-            x_perp = project(x)
-            Ax = A * x_perp - λ .* x_perp
-            return project(Ax) |> Vector
+        # Preconditioner: Cholesky factorization of (A - λI)
+        # (if SPD — otherwise you need LDL')
+        Mmat = Matrix(A) - λ*I
+        F = cholesky(Hermitian(Mmat))   # factor object, acts as preconditioner
+
+        # Right-hand side
+        rhs = -(r - (U * (U' * r)))
+
+        # Solve correction equation with CG + Cholesky preconditioner
+        s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=F, log=true)
+        m = match(r"(\d+)\s+iterations", string(msg))
+        if m !== nothing
+            niter = parse(Int, m.captures[1])
+            println("Number of iterations: ", niter)
+        else
+            println("No iteration number found in message: ", msg)
         end
 
-        # Define preconditioned operator: M_inv * Md_op (apply diagonal inverse after Md_op)
-        function Mtilde_op(x)
-            y = M_inv_diag .* Md_op(x)
-            return Vector(y)   # ensures result is a 1D vector
-        end
-
-
-        println("Md_op(x) size: ", size(Md_op(randn(n))))
-        println("Mtilde_op(x) size: ", size(Mtilde_op(randn(n))))
-
-
-        M_op = LinearMap{eltype(A)}(Mtilde_op, n, n; ishermitian=true)
-
-        rhs = -project(r)
-        
-        # Apply diagonal preconditioner to rhs
-        rhs_prec = vec(M_inv_diag .* rhs)
-
-        println("rhs_prec size: ", size(rhs_prec))
-
-        s_j, info = minres(M_op, rhs_prec; reltol=tol, maxiter=maxiter)
-        s_j = vec(s_j)           # ensures it's a 1D vector
-        s_j = project(s_j)
-
-
-        println("s_j size: ", size(s_j))
-
-
+        # Project solution to orthogonal complement
+        s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
-
     return S
 end
+
+function correction_equations_minres(A, U, lambdas, R; tol=1e-6, maxiter=200)
+    n, k = size(U)
+    S = zeros(eltype(A), n, k)
+    total_iter = 0
+    for j in 1:k
+        λ, r = lambdas[j], R[:, j]
+
+        # Diagonal preconditioner
+        D = diag(A) .- λ
+        D = @. ifelse(abs(D) < 1e-12, 1.0, D)
+        Pinv = Diagonal(1.0 ./ D)
+
+        # Operator with preconditioning (Pinv * M)
+        M_apply = function(x)
+            x_perp = x - (U * (U' * x))
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return Pinv * res
+        end
+        Mprec_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        # Preconditioned RHS
+        rhs = -(r - (U * (U' * r)))
+        rhs_prec = Pinv * rhs
+
+        # Solve with MINRES
+        s_j, msg = minres(Mprec_op, rhs_prec; reltol=tol, maxiter=maxiter, log=true)
+        m = match(r"(\d+)\s+iterations", string(msg))
+        if m !== nothing
+            niter = parse(Int, m.captures[1])
+            total_iter += niter
+            # println("Number of iterations: ", niter)
+        else
+            println("No iteration number found in message: ", msg)
+        end
+
+        # Project solution back
+        s_j = s_j - (U * (U' * s_j))
+        S[:, j] = s_j
+    end
+    println("Total MINRES iterations: ", total_iter)
+    return S
+end
+
 
 
 # a simple implementation of the block Davidson method for a Hermitian matrix A
@@ -174,9 +244,9 @@ function davidson(
         
         # Solve correction equations using chosen solver
         if solver == :cg
-            t = correction_equations_cg(A, X, Σ, R; tol=1e-2, maxiter=100)
+            t = correction_equations_cg(A, X, Σ, R; tol=1e-1, maxiter=30)
         elseif solver == :minres
-            t = correction_equations_minres(A, X, Σ, R; tol=1e-2, maxiter=100)
+            t = correction_equations_minres(A, X, Σ, R; tol=1e-1, maxiter=30)
         else
             error("Unknown solver: $solver. Choose :cg or :minres")
         end
@@ -261,7 +331,10 @@ for molecule in molecules
         for l in ls
             println("Running with l = $l")
             # main(molecule, l * occupied_orbitals(molecule), a, solver=:cg)
+            println("Using MINRES solver")
             main(molecule, l * occupied_orbitals(molecule), a, solver=:minres)
+            println("Using CG solver")
+            main(molecule, l * occupied_orbitals(molecule), a, solver=:cg)
         end
     end
     println("Finished processing molecule: $molecule")

@@ -1,0 +1,187 @@
+slurmstepd-andoria01: error: *** JOB 25093 ON andoria01 CANCELLED AT 2025-09-20T09:42:16 DUE TO TIME LIMIT ***
+
+[27125] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:356
+dsymv_kernel_4x4.constprop.0 at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_U_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_64_ at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+symv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/blas.jl:815
+gemv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:452
+generic_matvecmul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:79 [inlined]
+_mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:73 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:70 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:253 [inlined]
+* at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:60 [inlined]
+#2 at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:25
+_unsafe_mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/functionmap.jl:127 [inlined]
+mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/LinearMaps.jl:166 [inlined]
+iterate at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:104
+iterate at ./iterators.jl:206 [inlined]
+#minres!#25 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:230
+minres! at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:200 [inlined]
+#minres#26 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244 [inlined]
+minres at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244
+unknown function (ip: 0x7f5d398f5e0d)
+#correction_equations_minres#1 at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:41
+correction_equations_minres at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:13 [inlined]
+davidson at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:278
+davidson at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:137 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:323
+unknown function (ip: 0x7f5d398f0195)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:363
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 100389970 (Pool: 100389442; Big: 528); GC: 27406
+Processing molecule: 4
+Running with beta = 25
+Running with l = 190
+Starting Davidson with n_aux = 475, l_buffer = 228, lc = 192, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 38, Converged = 0, ‖r‖ (largest λ) = 0.5780759989811547
+Iter 2: V_size = 76, Converged = 0, ‖r‖ (largest λ) = 13.819055313016232
+Iter 3: V_size = 152, Converged = 0, ‖r‖ (largest λ) = 0.13690490489539822
+Iter 4: V_size = 304, Converged = 0, ‖r‖ (largest λ) = 0.0012448626254880277
+Iter 5: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.42607943638449397
+Iter 6: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.4119454832958459
+Iter 7: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.46035683624917484
+Iter 8: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.5961169580449484
+Iter 9: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.2536158235598763
+Iter 10: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.23081433515376962
+Iter 11: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.20876724413246397
+Iter 12: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.1914198252078981
+Iter 13: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.17996836510504874
+Iter 14: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.16204185866613033
+Iter 15: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.15163038825790803
+Iter 16: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.13249270096769197
+Iter 17: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.1263406026775232
+Iter 18: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.11448464009898675
+Iter 19: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.1117681857562914
+Switching to MINRES for correction equations at iteration 20
+Iter 20: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.10170894718169902
+Switching to MINRES for correction equations at iteration 21
+Iter 21: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.19015789969896654
+Switching to MINRES for correction equations at iteration 22
+Iter 22: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.10970958648964359
+Switching to MINRES for correction equations at iteration 23
+Iter 23: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.1121077484867069
+Switching to MINRES for correction equations at iteration 24
+Iter 24: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.0908680502886684
+Switching to MINRES for correction equations at iteration 25
+Iter 25: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.07187059364157376
+Switching to MINRES for correction equations at iteration 26
+Iter 26: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.05093774457332689
+Switching to MINRES for correction equations at iteration 27
+Iter 27: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.04481448859954939
+Switching to MINRES for correction equations at iteration 28
+Iter 28: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.03754115158263729
+Switching to MINRES for correction equations at iteration 29
+Iter 29: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.0344411911686136
+Switching to MINRES for correction equations at iteration 30
+Iter 30: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.027369614946892846
+Switching to MINRES for correction equations at iteration 31
+Iter 31: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.02914408608042324
+Switching to MINRES for correction equations at iteration 32
+Iter 32: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.025838295817088335
+Switching to MINRES for correction equations at iteration 33
+Iter 33: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.026030984882820567
+Switching to MINRES for correction equations at iteration 34
+Iter 34: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.022997695836239302
+Switching to MINRES for correction equations at iteration 35
+Iter 35: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.024094359147478667
+Switching to MINRES for correction equations at iteration 36
+Iter 36: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.021269659659380075
+Switching to MINRES for correction equations at iteration 37
+Iter 37: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.022380379799755802
+Switching to MINRES for correction equations at iteration 38
+Iter 38: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.020104973646510316
+Switching to MINRES for correction equations at iteration 39
+Iter 39: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.021562305825956755
+Switching to MINRES for correction equations at iteration 40
+Iter 40: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.01922656752120611
+Switching to MINRES for correction equations at iteration 41
+Iter 41: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.019810094400001595
+Switching to MINRES for correction equations at iteration 42
+Iter 42: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.017861813226033016
+Switching to MINRES for correction equations at iteration 43
+Iter 43: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.017989082561569118
+Switching to MINRES for correction equations at iteration 44
+Iter 44: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.01660381828515873
+Switching to MINRES for correction equations at iteration 45
+Iter 45: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.016162621391128406
+Switching to MINRES for correction equations at iteration 46
+Iter 46: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.015655872468543663
+Switching to MINRES for correction equations at iteration 47
+Iter 47: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.015017529120376292
+Switching to MINRES for correction equations at iteration 48
+Iter 48: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.01420909106891198
+Switching to MINRES for correction equations at iteration 49
+Iter 49: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.014156625731784639
+Switching to MINRES for correction equations at iteration 50
+Iter 50: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.013318563617148265
+Switching to MINRES for correction equations at iteration 51
+Iter 51: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.01344039725658708
+Switching to MINRES for correction equations at iteration 52
+Iter 52: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.012594582929736444
+Switching to MINRES for correction equations at iteration 53
+Iter 53: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.012783772302677852
+Switching to MINRES for correction equations at iteration 54
+Iter 54: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.01218574667377907
+Switching to MINRES for correction equations at iteration 55
+Iter 55: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.012217384439686672
+Switching to MINRES for correction equations at iteration 56
+Iter 56: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.011701439082097654
+Switching to MINRES for correction equations at iteration 57
+Iter 57: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.011286306047170036
+Switching to MINRES for correction equations at iteration 58
+Iter 58: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.010955081679338879
+Switching to MINRES for correction equations at iteration 59
+Iter 59: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.010924412920137034
+Switching to MINRES for correction equations at iteration 60
+Iter 60: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.010482751593458987
+Switching to MINRES for correction equations at iteration 61
+Iter 61: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.01034932714673469
+Switching to MINRES for correction equations at iteration 62
+Iter 62: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.009924342674212175
+Switching to MINRES for correction equations at iteration 63
+Iter 63: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.00988055833061939
+Switching to MINRES for correction equations at iteration 64
+Iter 64: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.009522860106008642
+Switching to MINRES for correction equations at iteration 65
+Iter 65: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.009349410207174653
+Switching to MINRES for correction equations at iteration 66
+Iter 66: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.009144685062388136
+Switching to MINRES for correction equations at iteration 67
+Iter 67: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.009005636370640275
+Switching to MINRES for correction equations at iteration 68
+Iter 68: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008772291295314429
+Switching to MINRES for correction equations at iteration 69
+Iter 69: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.009044627250087907
+Switching to MINRES for correction equations at iteration 70
+Iter 70: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008467651137483686
+Switching to MINRES for correction equations at iteration 71
+Iter 71: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008606536216792885
+Switching to MINRES for correction equations at iteration 72
+Iter 72: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008280275135455558
+Switching to MINRES for correction equations at iteration 73
+Iter 73: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008399274441651691
+Switching to MINRES for correction equations at iteration 74
+Iter 74: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008105706040311361
+Switching to MINRES for correction equations at iteration 75
+Iter 75: V_size = 456, Converged = 0, ‖r‖ (largest λ) = 0.008180254687442618
+Switching to MINRES for correction equations at iteration 76

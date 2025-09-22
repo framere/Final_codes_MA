@@ -1,0 +1,529 @@
+Processing molecule: 3
+Running with beta = 25
+Running with l = 100
+Starting Davidson with n_aux = 400, l_buffer = 120, lc = 101, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.4082537532369863
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 1.414228940503421
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.10324667889563512
+Iter 4: V_size = 248, Converged = 0, ‖r‖ (largest λ) = 0.00011948663106762782
+Iter 5: V_size = 368, Converged = 0, ‖r‖ (largest λ) = 0.39681494499187603
+Iter 6: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.26162120879651984
+Iter 7: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.3298775701101171
+Iter 8: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.33314611866937077
+Iter 9: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.23806879440470943
+Iter 10: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.22454905409579873
+Iter 11: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.14861828127048393
+Iter 12: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.15955120187359947
+Iter 13: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.12701692782553628
+Iter 14: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.15269252972276262
+Iter 15: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.10740023118116285
+Iter 16: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.12581983249058631
+Iter 17: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.09103273802473322
+Iter 18: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.11899593361702093
+Iter 19: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.0776752327611841
+Switching to MINRES for correction equations at iteration 20
+Iter 20: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.09792723070259712
+Switching to MINRES for correction equations at iteration 21
+Iter 21: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.16533852886036027
+Switching to MINRES for correction equations at iteration 22
+Iter 22: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.056712689781868095
+Switching to MINRES for correction equations at iteration 23
+Iter 23: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.03457170322006637
+Switching to MINRES for correction equations at iteration 24
+Iter 24: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.02167424857277397
+Switching to MINRES for correction equations at iteration 25
+Iter 25: V_size = 360, Converged = 0, ‖r‖ (largest λ) = 0.017164178613764253
+EV   1 converged λ = -0.6340726564, ‖r‖ = 7.35e-05, stable for 3 iters
+EV   2 converged λ = -0.6329012171, ‖r‖ = 6.21e-05, stable for 3 iters
+EV   3 converged λ = -0.6320722718, ‖r‖ = 6.97e-05, stable for 3 iters
+Switching to MINRES for correction equations at iteration 26
+Iter 26: V_size = 234, Converged = 3, ‖r‖ (largest λ) = 0.0035196922407100795
+Switching to MINRES for correction equations at iteration 27
+Iter 27: V_size = 351, Converged = 3, ‖r‖ (largest λ) = 0.0042150849614077624
+Switching to MINRES for correction equations at iteration 28
+Iter 28: V_size = 234, Converged = 3, ‖r‖ (largest λ) = 0.002350155383324079
+EV   4 converged λ = -0.6310986973, ‖r‖ = 6.71e-06, stable for 3 iters
+EV   5 converged λ = -0.6304846888, ‖r‖ = 7.03e-06, stable for 3 iters
+EV   6 converged λ = -0.6296677245, ‖r‖ = 1.00e-05, stable for 3 iters
+EV   7 converged λ = -0.6288504661, ‖r‖ = 9.44e-06, stable for 3 iters
+EV   8 converged λ = -0.6278065441, ‖r‖ = 8.65e-06, stable for 3 iters
+EV   9 converged λ = -0.6276086807, ‖r‖ = 1.10e-05, stable for 3 iters
+EV  10 converged λ = -0.6268716444, ‖r‖ = 1.18e-05, stable for 3 iters
+EV  11 converged λ = -0.6266952324, ‖r‖ = 1.49e-05, stable for 3 iters
+EV  12 converged λ = -0.6256381018, ‖r‖ = 1.03e-05, stable for 3 iters
+EV  13 converged λ = -0.6251372497, ‖r‖ = 1.49e-05, stable for 3 iters
+EV  14 converged λ = -0.6245823953, ‖r‖ = 1.42e-05, stable for 3 iters
+EV  15 converged λ = -0.6241127854, ‖r‖ = 1.05e-05, stable for 3 iters
+EV  16 converged λ = -0.6233610603, ‖r‖ = 2.38e-05, stable for 3 iters
+EV  17 converged λ = -0.6225848388, ‖r‖ = 1.45e-05, stable for 3 iters
+EV  18 converged λ = -0.6225140611, ‖r‖ = 1.37e-05, stable for 3 iters
+EV  19 converged λ = -0.6217343330, ‖r‖ = 1.86e-05, stable for 3 iters
+EV  20 converged λ = -0.6210568187, ‖r‖ = 2.15e-05, stable for 3 iters
+EV  21 converged λ = -0.6205429075, ‖r‖ = 2.36e-05, stable for 3 iters
+EV  22 converged λ = -0.6204471166, ‖r‖ = 1.82e-05, stable for 3 iters
+EV  23 converged λ = -0.6197281579, ‖r‖ = 3.04e-05, stable for 3 iters
+EV  24 converged λ = -0.6195567674, ‖r‖ = 2.32e-05, stable for 3 iters
+EV  25 converged λ = -0.6193459048, ‖r‖ = 2.35e-05, stable for 3 iters
+EV  26 converged λ = -0.6188163193, ‖r‖ = 2.74e-05, stable for 3 iters
+EV  27 converged λ = -0.6180203112, ‖r‖ = 3.68e-05, stable for 3 iters
+EV  28 converged λ = -0.6176611753, ‖r‖ = 3.29e-05, stable for 3 iters
+EV  29 converged λ = -0.6172522057, ‖r‖ = 2.92e-05, stable for 3 iters
+EV  30 converged λ = -0.6167332991, ‖r‖ = 2.66e-05, stable for 3 iters
+EV  31 converged λ = -0.6164426957, ‖r‖ = 3.42e-05, stable for 3 iters
+EV  32 converged λ = -0.6156831141, ‖r‖ = 5.05e-05, stable for 3 iters
+EV  33 converged λ = -0.6148442270, ‖r‖ = 5.78e-05, stable for 3 iters
+EV  34 converged λ = -0.6147543055, ‖r‖ = 6.08e-05, stable for 3 iters
+EV  35 converged λ = -0.6143355380, ‖r‖ = 5.31e-05, stable for 3 iters
+EV  36 converged λ = -0.6140001529, ‖r‖ = 4.79e-05, stable for 3 iters
+EV  37 converged λ = -0.6136390345, ‖r‖ = 7.36e-05, stable for 3 iters
+EV  38 converged λ = -0.6131838130, ‖r‖ = 4.61e-05, stable for 3 iters
+EV  39 converged λ = -0.6125464288, ‖r‖ = 5.62e-05, stable for 3 iters
+EV  40 converged λ = -0.6122855396, ‖r‖ = 5.25e-05, stable for 3 iters
+EV  41 converged λ = -0.6117247796, ‖r‖ = 6.87e-05, stable for 3 iters
+EV  42 converged λ = -0.6112457663, ‖r‖ = 7.77e-05, stable for 3 iters
+EV  43 converged λ = -0.6103486405, ‖r‖ = 7.31e-05, stable for 3 iters
+Switching to MINRES for correction equations at iteration 29
+Iter 29: V_size = 311, Converged = 43, ‖r‖ (largest λ) = 0.0024469890854108864
+Switching to MINRES for correction equations at iteration 30
+Iter 30: V_size = 388, Converged = 43, ‖r‖ (largest λ) = 0.0005920975296608621
+Switching to MINRES for correction equations at iteration 31
+Iter 31: V_size = 154, Converged = 43, ‖r‖ (largest λ) = 0.002081659949371463
+EV  44 converged λ = -0.6124065974, ‖r‖ = 1.17e-06, stable for 3 iters
+EV  45 converged λ = -0.6114945015, ‖r‖ = 1.45e-06, stable for 3 iters
+EV  46 converged λ = -0.6107761369, ‖r‖ = 8.82e-07, stable for 3 iters
+EV  47 converged λ = -0.6104499703, ‖r‖ = 1.07e-06, stable for 3 iters
+EV  48 converged λ = -0.6094527397, ‖r‖ = 1.35e-06, stable for 3 iters
+EV  49 converged λ = -0.6092448787, ‖r‖ = 1.32e-06, stable for 3 iters
+EV  50 converged λ = -0.6090246491, ‖r‖ = 1.55e-06, stable for 3 iters
+EV  51 converged λ = -0.6088298989, ‖r‖ = 1.72e-06, stable for 3 iters
+EV  52 converged λ = -0.6085709948, ‖r‖ = 1.90e-06, stable for 3 iters
+EV  53 converged λ = -0.6083187838, ‖r‖ = 1.69e-06, stable for 3 iters
+EV  54 converged λ = -0.6077730351, ‖r‖ = 1.59e-06, stable for 3 iters
+Switching to MINRES for correction equations at iteration 32
+Iter 32: V_size = 220, Converged = 54, ‖r‖ (largest λ) = 0.0019876930855722004
+Switching to MINRES for correction equations at iteration 33
+Iter 33: V_size = 286, Converged = 54, ‖r‖ (largest λ) = 0.0005201386224107797
+Switching to MINRES for correction equations at iteration 34
+Iter 34: V_size = 352, Converged = 54, ‖r‖ (largest λ) = 0.00035038571754181464
+EV  55 converged λ = -0.6073084411, ‖r‖ = 6.26e-08, stable for 3 iters
+EV  56 converged λ = -0.6069394028, ‖r‖ = 7.44e-08, stable for 3 iters
+EV  57 converged λ = -0.6065601336, ‖r‖ = 1.12e-07, stable for 3 iters
+EV  58 converged λ = -0.6064165562, ‖r‖ = 8.41e-08, stable for 3 iters
+EV  59 converged λ = -0.6059617377, ‖r‖ = 1.16e-07, stable for 3 iters
+EV  60 converged λ = -0.6054624849, ‖r‖ = 6.49e-08, stable for 3 iters
+EV  61 converged λ = -0.6047972220, ‖r‖ = 9.12e-08, stable for 3 iters
+EV  62 converged λ = -0.6046134148, ‖r‖ = 7.92e-08, stable for 3 iters
+EV  63 converged λ = -0.6045063339, ‖r‖ = 2.23e-07, stable for 3 iters
+EV  64 converged λ = -0.6040943406, ‖r‖ = 9.03e-08, stable for 3 iters
+EV  65 converged λ = -0.6039775917, ‖r‖ = 1.42e-07, stable for 3 iters
+EV  66 converged λ = -0.6032273712, ‖r‖ = 1.79e-07, stable for 3 iters
+EV  67 converged λ = -0.6029520182, ‖r‖ = 1.44e-07, stable for 3 iters
+EV  68 converged λ = -0.6027240395, ‖r‖ = 3.28e-07, stable for 3 iters
+EV  69 converged λ = -0.6020724680, ‖r‖ = 2.66e-07, stable for 3 iters
+EV  70 converged λ = -0.6015754336, ‖r‖ = 1.79e-07, stable for 3 iters
+EV  71 converged λ = -0.6011253922, ‖r‖ = 2.56e-07, stable for 3 iters
+EV  72 converged λ = -0.6009698501, ‖r‖ = 1.72e-07, stable for 3 iters
+EV  73 converged λ = -0.6008499267, ‖r‖ = 2.23e-07, stable for 3 iters
+EV  74 converged λ = -0.6005437627, ‖r‖ = 2.56e-07, stable for 3 iters
+EV  75 converged λ = -0.6001106380, ‖r‖ = 1.90e-07, stable for 3 iters
+EV  76 converged λ = -0.6000106825, ‖r‖ = 1.06e-07, stable for 3 iters
+EV  77 converged λ = -0.5993433611, ‖r‖ = 3.23e-07, stable for 3 iters
+EV  78 converged λ = -0.5993249781, ‖r‖ = 1.92e-07, stable for 3 iters
+EV  79 converged λ = -0.5989360660, ‖r‖ = 4.99e-07, stable for 3 iters
+EV  80 converged λ = -0.5987436222, ‖r‖ = 1.25e-07, stable for 3 iters
+EV  81 converged λ = -0.5985765651, ‖r‖ = 1.66e-07, stable for 3 iters
+EV  82 converged λ = -0.5982336540, ‖r‖ = 2.45e-07, stable for 3 iters
+EV  83 converged λ = -0.5979153512, ‖r‖ = 2.96e-07, stable for 3 iters
+EV  84 converged λ = -0.5979049351, ‖r‖ = 1.03e-07, stable for 3 iters
+EV  85 converged λ = -0.5976836725, ‖r‖ = 1.50e-07, stable for 3 iters
+EV  86 converged λ = -0.5972280779, ‖r‖ = 3.60e-07, stable for 3 iters
+EV  87 converged λ = -0.5969667204, ‖r‖ = 2.69e-07, stable for 3 iters
+EV  88 converged λ = -0.5968199115, ‖r‖ = 3.77e-07, stable for 3 iters
+EV  89 converged λ = -0.5963102891, ‖r‖ = 2.42e-07, stable for 3 iters
+EV  90 converged λ = -0.5961521156, ‖r‖ = 2.97e-07, stable for 3 iters
+EV  91 converged λ = -0.5957422187, ‖r‖ = 2.39e-07, stable for 3 iters
+EV  92 converged λ = -0.5955721754, ‖r‖ = 8.02e-07, stable for 3 iters
+EV  93 converged λ = -0.5950648047, ‖r‖ = 4.00e-07, stable for 3 iters
+EV  94 converged λ = -0.5949169978, ‖r‖ = 2.45e-07, stable for 3 iters
+EV  95 converged λ = -0.5946484435, ‖r‖ = 4.64e-07, stable for 3 iters
+EV  96 converged λ = -0.5940988014, ‖r‖ = 3.16e-07, stable for 3 iters
+EV  97 converged λ = -0.5939419641, ‖r‖ = 2.79e-07, stable for 3 iters
+EV  98 converged λ = -0.5935045389, ‖r‖ = 2.47e-07, stable for 3 iters
+EV  99 converged λ = -0.5933179397, ‖r‖ = 7.73e-07, stable for 3 iters
+EV 100 converged λ = -0.5932668269, ‖r‖ = 5.69e-07, stable for 3 iters
+EV 101 converged λ = -0.5929130507, ‖r‖ = 6.07e-07, stable for 3 iters
+Converged all required eigenvalues.
+10114.445010 seconds (16.73 M allocations: 369.884 GiB, 0.30% gc time, 0.11% compilation time)
+Number of FLOPs: 48550038719480
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../test/Eigenvalues_folder/eigenresults_matrix_3.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 0.7962867928 (computed) - 5.0149874072 (exact) = -4.2187e+00
+  2: 0.7955508891 (computed) - 4.8918040863 (exact) = -4.0963e+00
+  3: 0.7950297302 (computed) - 4.4329615637 (exact) = -3.6379e+00
+  4: 0.7944172061 (computed) - 4.1343829482 (exact) = -3.3400e+00
+  5: 0.7940306599 (computed) - 3.9107531846 (exact) = -3.1167e+00
+  6: 0.7935160518 (computed) - 3.7311988780 (exact) = -2.9377e+00
+  7: 0.7930009244 (computed) - 3.5809306682 (exact) = -2.7879e+00
+  8: 0.7923424412 (computed) - 3.4516246573 (exact) = -2.6593e+00
+  9: 0.7922175716 (computed) - 3.3381206219 (exact) = -2.5459e+00
+ 10: 0.7917522620 (computed) - 3.2370153396 (exact) = -2.4453e+00
+ 11: 0.7916408481 (computed) - 3.1458531910 (exact) = -2.3542e+00
+ 12: 0.7909728831 (computed) - 3.0629169937 (exact) = -2.2719e+00
+ 13: 0.7906562146 (computed) - 2.9868206906 (exact) = -2.1962e+00
+ 14: 0.7903052545 (computed) - 2.9166216143 (exact) = -2.1263e+00
+ 15: 0.7900080920 (computed) - 2.8514299647 (exact) = -2.0614e+00
+ 16: 0.7895321781 (computed) - 2.7906487051 (exact) = -2.0011e+00
+ 17: 0.7890404545 (computed) - 2.7336839719 (exact) = -1.9446e+00
+ 18: 0.7889956027 (computed) - 2.6802234933 (exact) = -1.8912e+00
+ 19: 0.7885013209 (computed) - 2.6297508524 (exact) = -1.8412e+00
+ 20: 0.7880715822 (computed) - 2.5820104384 (exact) = -1.7939e+00
+ 21: 0.7877454586 (computed) - 2.5367305749 (exact) = -1.7490e+00
+ 22: 0.7876846556 (computed) - 2.4938359534 (exact) = -1.7062e+00
+ 23: 0.7872281486 (computed) - 2.4528129057 (exact) = -1.6656e+00
+ 24: 0.7871192841 (computed) - 2.4137841461 (exact) = -1.6267e+00
+ 25: 0.7869853269 (computed) - 2.3763623348 (exact) = -1.5894e+00
+ 26: 0.7866487903 (computed) - 2.3406896609 (exact) = -1.5540e+00
+ 27: 0.7861426787 (computed) - 2.3063840897 (exact) = -1.5202e+00
+ 28: 0.7859142289 (computed) - 2.2733299259 (exact) = -1.4874e+00
+ 29: 0.7856539987 (computed) - 2.2416592392 (exact) = -1.4560e+00
+ 30: 0.7853236906 (computed) - 2.2111871915 (exact) = -1.4259e+00
+ 31: 0.7851386474 (computed) - 2.1818205659 (exact) = -1.3967e+00
+ 32: 0.7846547738 (computed) - 2.1535600416 (exact) = -1.3689e+00
+ 33: 0.7841200335 (computed) - 2.1259809404 (exact) = -1.3419e+00
+ 34: 0.7840626923 (computed) - 2.0996886450 (exact) = -1.3156e+00
+ 35: 0.7837955971 (computed) - 2.0740853679 (exact) = -1.2903e+00
+ 36: 0.7835816185 (computed) - 2.0491927015 (exact) = -1.2656e+00
+ 37: 0.7833511566 (computed) - 2.0251957508 (exact) = -1.2418e+00
+ 38: 0.7830605424 (computed) - 2.0018006464 (exact) = -1.2187e+00
+ 39: 0.7826534538 (computed) - 1.9793391921 (exact) = -1.1967e+00
+ 40: 0.7825641171 (computed) - 1.9573026611 (exact) = -1.1747e+00
+ 41: 0.7824867664 (computed) - 1.9359563006 (exact) = -1.1535e+00
+ 42: 0.7821283652 (computed) - 1.9153334981 (exact) = -1.1332e+00
+ 43: 0.7819811388 (computed) - 1.8950330717 (exact) = -1.1131e+00
+ 44: 0.7818220810 (computed) - 1.8753268941 (exact) = -1.0935e+00
+ 45: 0.7815216804 (computed) - 1.8563093415 (exact) = -1.0748e+00
+ 46: 0.7813129785 (computed) - 1.8373933924 (exact) = -1.0561e+00
+ 47: 0.7812481299 (computed) - 1.8193370312 (exact) = -1.0381e+00
+ 48: 0.7806745415 (computed) - 1.8019520653 (exact) = -1.0213e+00
+ 49: 0.7805414010 (computed) - 1.7844650662 (exact) = -1.0039e+00
+ 50: 0.7804003134 (computed) - 1.7672697544 (exact) = -9.8687e-01
+ 51: 0.7802755276 (computed) - 1.7508958395 (exact) = -9.7062e-01
+ 52: 0.7801096043 (computed) - 1.7350371293 (exact) = -9.5493e-01
+ 53: 0.7799479366 (computed) - 1.7191873934 (exact) = -9.3924e-01
+ 54: 0.7795979958 (computed) - 1.7039407719 (exact) = -9.2434e-01
+ 55: 0.7792999686 (computed) - 1.6884285812 (exact) = -9.0913e-01
+ 56: 0.7790631571 (computed) - 1.6742590491 (exact) = -8.9520e-01
+ 57: 0.7788197054 (computed) - 1.6594428536 (exact) = -8.8062e-01
+ 58: 0.7787275237 (computed) - 1.6455407244 (exact) = -8.6681e-01
+ 59: 0.7784354422 (computed) - 1.6318310517 (exact) = -8.5340e-01
+ 60: 0.7781146991 (computed) - 1.6182441373 (exact) = -8.4013e-01
+ 61: 0.7776870978 (computed) - 1.6053649796 (exact) = -8.2768e-01
+ 62: 0.7775689132 (computed) - 1.5917846591 (exact) = -8.1422e-01
+ 63: 0.7775000539 (computed) - 1.5792496424 (exact) = -8.0175e-01
+ 64: 0.7772350614 (computed) - 1.5669350001 (exact) = -7.8970e-01
+ 65: 0.7771599524 (computed) - 1.5550368976 (exact) = -7.7788e-01
+ 66: 0.7766771345 (computed) - 1.5426622890 (exact) = -7.6599e-01
+ 67: 0.7764998508 (computed) - 1.5310492808 (exact) = -7.5455e-01
+ 68: 0.7763530379 (computed) - 1.5192651728 (exact) = -7.4291e-01
+ 69: 0.7759332884 (computed) - 1.5078055735 (exact) = -7.3187e-01
+ 70: 0.7756129406 (computed) - 1.4965209613 (exact) = -7.2091e-01
+ 71: 0.7753227665 (computed) - 1.4858357271 (exact) = -7.1051e-01
+ 72: 0.7752224520 (computed) - 1.4754093991 (exact) = -7.0019e-01
+ 73: 0.7751451004 (computed) - 1.4645682784 (exact) = -6.8942e-01
+ 74: 0.7749475871 (computed) - 1.4544046935 (exact) = -6.7946e-01
+ 75: 0.7746680825 (computed) - 1.4443835040 (exact) = -6.6972e-01
+ 76: 0.7746035647 (computed) - 1.4338448222 (exact) = -6.5924e-01
+ 77: 0.7741726946 (computed) - 1.4244845953 (exact) = -6.5031e-01
+ 78: 0.7741608218 (computed) - 1.4146424819 (exact) = -6.4048e-01
+ 79: 0.7739095981 (computed) - 1.4051613943 (exact) = -6.3125e-01
+ 80: 0.7737852559 (computed) - 1.3955390830 (exact) = -6.2175e-01
+ 81: 0.7736773003 (computed) - 1.3860298522 (exact) = -6.1235e-01
+ 82: 0.7734556574 (computed) - 1.3778295774 (exact) = -6.0437e-01
+ 83: 0.7732498634 (computed) - 1.3689481601 (exact) = -5.9570e-01
+ 84: 0.7732431280 (computed) - 1.3595922456 (exact) = -5.8635e-01
+ 85: 0.7731000404 (computed) - 1.3516178101 (exact) = -5.7852e-01
+ 86: 0.7728053299 (computed) - 1.3426240466 (exact) = -5.6982e-01
+ 87: 0.7726362148 (computed) - 1.3346568699 (exact) = -5.6202e-01
+ 88: 0.7725412038 (computed) - 1.3260995770 (exact) = -5.5356e-01
+ 89: 0.7722112982 (computed) - 1.3187315091 (exact) = -5.4652e-01
+ 90: 0.7721088755 (computed) - 1.3109379923 (exact) = -5.3883e-01
+ 91: 0.7718433900 (computed) - 1.3020440577 (exact) = -5.3020e-01
+ 92: 0.7717332281 (computed) - 1.2938469279 (exact) = -5.2211e-01
+ 93: 0.7714044365 (computed) - 1.2861316804 (exact) = -5.1473e-01
+ 94: 0.7713086268 (computed) - 1.2804100450 (exact) = -5.0910e-01
+ 95: 0.7711345171 (computed) - 1.2713667477 (exact) = -5.0023e-01
+ 96: 0.7707780494 (computed) - 1.2657339043 (exact) = -4.9496e-01
+ 97: 0.7706763031 (computed) - 1.2573608911 (exact) = -4.8668e-01
+ 98: 0.7703924577 (computed) - 1.2509796118 (exact) = -4.8059e-01
+ 99: 0.7702713416 (computed) - 1.2442973400 (exact) = -4.7403e-01
+100: 0.7702381625 (computed) - 1.2368437884 (exact) = -4.6661e-01
+100 Eigenvalues converges, out of 100 requested.
+Running with l = 500
+Starting Davidson with n_aux = 1250, l_buffer = 600, lc = 505, thresh = 0.002, max_iter = 100
+Iter 1: V_size = 100, Converged = 0, ‖r‖ (largest λ) = 0.40820093187996015
+Iter 2: V_size = 200, Converged = 0, ‖r‖ (largest λ) = 3.870554506794556
+Iter 3: V_size = 400, Converged = 0, ‖r‖ (largest λ) = 0.060167116907904515
+Iter 4: V_size = 800, Converged = 0, ‖r‖ (largest λ) = 0.0007485570339423028
+Iter 5: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.24765683365548166
+Iter 6: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.29509136449890094
+Iter 7: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.2975598023658664
+Iter 8: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.16659220613237322
+Iter 9: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.15451341605597155
+Iter 10: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.13298409933352218
+Iter 11: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.12260159435178651
+Iter 12: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.10780536894319637
+Iter 13: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.10069158701536317
+Iter 14: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.09153081303306942
+Iter 15: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.08610963925021818
+Iter 16: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.08031617263548903
+Iter 17: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.07427487717215488
+Iter 18: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.06990868439304619
+Iter 19: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.06333914988456033
+Switching to MINRES for correction equations at iteration 20
+Iter 20: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.05865793304163585
+Switching to MINRES for correction equations at iteration 21
+Iter 21: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.05243390744042611
+Switching to MINRES for correction equations at iteration 22
+Iter 22: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.04866351883928369
+Switching to MINRES for correction equations at iteration 23
+Iter 23: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.04790937126703611
+Switching to MINRES for correction equations at iteration 24
+Iter 24: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.04368103191682235
+Switching to MINRES for correction equations at iteration 25
+Iter 25: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.04319067951712773
+Switching to MINRES for correction equations at iteration 26
+Iter 26: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.03933536683427411
+Switching to MINRES for correction equations at iteration 27
+Iter 27: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.03943115540394644
+Switching to MINRES for correction equations at iteration 28
+Iter 28: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.035920532198404846
+Switching to MINRES for correction equations at iteration 29
+Iter 29: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.03591306512100087
+Switching to MINRES for correction equations at iteration 30
+Iter 30: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.03301544079075685
+Switching to MINRES for correction equations at iteration 31
+Iter 31: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.03259717740031567
+Switching to MINRES for correction equations at iteration 32
+Iter 32: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.02936368231025087
+Switching to MINRES for correction equations at iteration 33
+Iter 33: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.028678912432351926
+Switching to MINRES for correction equations at iteration 34
+Iter 34: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.026100813351618454
+Switching to MINRES for correction equations at iteration 35
+Iter 35: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.025998691636886947
+Switching to MINRES for correction equations at iteration 36
+Iter 36: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.023529708644715906
+Switching to MINRES for correction equations at iteration 37
+Iter 37: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.023565928721252113
+Switching to MINRES for correction equations at iteration 38
+Iter 38: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.021370341551858806
+Switching to MINRES for correction equations at iteration 39
+Iter 39: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.02155318490957759
+Switching to MINRES for correction equations at iteration 40
+Iter 40: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.019512504274243253
+Switching to MINRES for correction equations at iteration 41
+Iter 41: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.019966803916542663
+Switching to MINRES for correction equations at iteration 42
+Iter 42: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.018161214734966173
+Switching to MINRES for correction equations at iteration 43
+Iter 43: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.01867198493911502
+Switching to MINRES for correction equations at iteration 44
+Iter 44: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.01706307501971408
+Switching to MINRES for correction equations at iteration 45
+Iter 45: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.017509002976450597
+Switching to MINRES for correction equations at iteration 46
+Iter 46: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.016173356170794878
+Switching to MINRES for correction equations at iteration 47
+Iter 47: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.016652040116319426
+Switching to MINRES for correction equations at iteration 48
+Iter 48: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.015421345237319953
+Switching to MINRES for correction equations at iteration 49
+Iter 49: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.015985935199128314
+Switching to MINRES for correction equations at iteration 50
+Iter 50: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.014842234507015713
+Switching to MINRES for correction equations at iteration 51
+Iter 51: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.01536931200181725
+Switching to MINRES for correction equations at iteration 52
+Iter 52: V_size = 1200, Converged = 0, ‖r‖ (largest λ) = 0.01436971551105449
+EV   1 converged λ = -0.6266855952, ‖r‖ = 1.93e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 53
+Iter 53: V_size = 1198, Converged = 1, ‖r‖ (largest λ) = 0.014843052714081836
+EV   2 converged λ = -0.6310885953, ‖r‖ = 2.16e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 54
+Iter 54: V_size = 1196, Converged = 2, ‖r‖ (largest λ) = 0.013952408659798311
+EV   3 converged λ = -0.6328892744, ‖r‖ = 2.20e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 55
+Iter 55: V_size = 1194, Converged = 3, ‖r‖ (largest λ) = 0.014397257616067985
+Switching to MINRES for correction equations at iteration 56
+Iter 56: V_size = 1194, Converged = 3, ‖r‖ (largest λ) = 0.013517181972407647
+Switching to MINRES for correction equations at iteration 57
+Iter 57: V_size = 1194, Converged = 3, ‖r‖ (largest λ) = 0.013925340689351674
+EV   4 converged λ = -0.6340603659, ‖r‖ = 2.41e-03, stable for 3 iters
+EV   5 converged λ = -0.6296568230, ‖r‖ = 2.21e-03, stable for 3 iters
+EV   6 converged λ = -0.6268634576, ‖r‖ = 1.76e-03, stable for 3 iters
+EV   7 converged λ = -0.6241028445, ‖r‖ = 2.15e-03, stable for 3 iters
+EV   8 converged λ = -0.6188057767, ‖r‖ = 2.06e-03, stable for 3 iters
+EV   9 converged λ = -0.6046025218, ‖r‖ = 2.07e-03, stable for 3 iters
+EV  10 converged λ = -0.5987340693, ‖r‖ = 1.80e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 58
+Iter 58: V_size = 1180, Converged = 10, ‖r‖ (largest λ) = 0.013131820005147966
+Switching to MINRES for correction equations at iteration 59
+Iter 59: V_size = 1180, Converged = 10, ‖r‖ (largest λ) = 0.013577088794089351
+Switching to MINRES for correction equations at iteration 60
+Iter 60: V_size = 1180, Converged = 10, ‖r‖ (largest λ) = 0.012782610161303174
+EV  11 converged λ = -0.6320612111, ‖r‖ = 2.01e-03, stable for 3 iters
+EV  12 converged λ = -0.6304735945, ‖r‖ = 1.99e-03, stable for 3 iters
+EV  13 converged λ = -0.6288412342, ‖r‖ = 2.00e-03, stable for 3 iters
+EV  14 converged λ = -0.6275972200, ‖r‖ = 2.06e-03, stable for 3 iters
+EV  15 converged λ = -0.6251259641, ‖r‖ = 2.00e-03, stable for 3 iters
+EV  16 converged λ = -0.6225726135, ‖r‖ = 1.98e-03, stable for 3 iters
+EV  17 converged λ = -0.6217236942, ‖r‖ = 2.09e-03, stable for 3 iters
+EV  18 converged λ = -0.6205307654, ‖r‖ = 2.22e-03, stable for 3 iters
+EV  19 converged λ = -0.6195468920, ‖r‖ = 2.02e-03, stable for 3 iters
+EV  20 converged λ = -0.6104417691, ‖r‖ = 1.67e-03, stable for 3 iters
+EV  21 converged λ = -0.6092343181, ‖r‖ = 1.93e-03, stable for 3 iters
+EV  22 converged λ = -0.6072969827, ‖r‖ = 1.97e-03, stable for 3 iters
+EV  23 converged λ = -0.6059518840, ‖r‖ = 1.83e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 61
+Iter 61: V_size = 1154, Converged = 23, ‖r‖ (largest λ) = 0.013218938989950538
+Switching to MINRES for correction equations at iteration 62
+Iter 62: V_size = 1154, Converged = 23, ‖r‖ (largest λ) = 0.01249086991107461
+Switching to MINRES for correction equations at iteration 63
+Iter 63: V_size = 1154, Converged = 23, ‖r‖ (largest λ) = 0.012874582769670366
+EV  24 converged λ = -0.6245732064, ‖r‖ = 1.92e-03, stable for 3 iters
+EV  25 converged λ = -0.6210434279, ‖r‖ = 2.50e-03, stable for 3 iters
+EV  26 converged λ = -0.6193353713, ‖r‖ = 2.07e-03, stable for 3 iters
+EV  27 converged λ = -0.6172416674, ‖r‖ = 1.98e-03, stable for 3 iters
+EV  28 converged λ = -0.6167224944, ‖r‖ = 1.99e-03, stable for 3 iters
+EV  29 converged λ = -0.6156739288, ‖r‖ = 1.85e-03, stable for 3 iters
+EV  30 converged λ = -0.6125381653, ‖r‖ = 1.70e-03, stable for 3 iters
+EV  31 converged λ = -0.6112362215, ‖r‖ = 1.93e-03, stable for 3 iters
+EV  32 converged λ = -0.6103379229, ‖r‖ = 2.00e-03, stable for 3 iters
+EV  33 converged λ = -0.6064046297, ‖r‖ = 2.19e-03, stable for 3 iters
+EV  34 converged λ = -0.6044951502, ‖r‖ = 2.11e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 64
+Iter 64: V_size = 1132, Converged = 34, ‖r‖ (largest λ) = 0.012207719603948555
+Switching to MINRES for correction equations at iteration 65
+Iter 65: V_size = 1132, Converged = 34, ‖r‖ (largest λ) = 0.01259199077773082
+Switching to MINRES for correction equations at iteration 66
+Iter 66: V_size = 1132, Converged = 34, ‖r‖ (largest λ) = 0.011966746612100522
+EV  35 converged λ = -0.6277933344, ‖r‖ = 2.32e-03, stable for 3 iters
+EV  36 converged λ = -0.6233505739, ‖r‖ = 2.06e-03, stable for 3 iters
+EV  37 converged λ = -0.6225054220, ‖r‖ = 1.97e-03, stable for 3 iters
+EV  38 converged λ = -0.6204366422, ‖r‖ = 2.02e-03, stable for 3 iters
+EV  39 converged λ = -0.6197176118, ‖r‖ = 2.01e-03, stable for 3 iters
+EV  40 converged λ = -0.6176504724, ‖r‖ = 1.96e-03, stable for 3 iters
+EV  41 converged λ = -0.6148333399, ‖r‖ = 2.01e-03, stable for 3 iters
+EV  42 converged λ = -0.6147405553, ‖r‖ = 2.30e-03, stable for 3 iters
+EV  43 converged λ = -0.6143244347, ‖r‖ = 1.98e-03, stable for 3 iters
+EV  44 converged λ = -0.6136287239, ‖r‖ = 1.99e-03, stable for 3 iters
+EV  45 converged λ = -0.6131705055, ‖r‖ = 2.16e-03, stable for 3 iters
+EV  46 converged λ = -0.6123953153, ‖r‖ = 2.02e-03, stable for 3 iters
+EV  47 converged λ = -0.6122732575, ‖r‖ = 2.04e-03, stable for 3 iters
+EV  48 converged λ = -0.6094441051, ‖r‖ = 1.71e-03, stable for 3 iters
+EV  49 converged λ = -0.6088183377, ‖r‖ = 2.10e-03, stable for 3 iters
+EV  50 converged λ = -0.6085583771, ‖r‖ = 2.38e-03, stable for 3 iters
+EV  51 converged λ = -0.6069264745, ‖r‖ = 2.07e-03, stable for 3 iters
+EV  52 converged λ = -0.6054514772, ‖r‖ = 1.93e-03, stable for 3 iters
+EV  53 converged λ = -0.6009546113, ‖r‖ = 2.45e-03, stable for 3 iters
+EV  54 converged λ = -0.5993303594, ‖r‖ = 2.10e-03, stable for 3 iters
+EV  55 converged λ = -0.5982216640, ‖r‖ = 2.03e-03, stable for 3 iters
+EV  56 converged λ = -0.5972157486, ‖r‖ = 2.02e-03, stable for 3 iters
+EV  57 converged λ = -0.5950514057, ‖r‖ = 2.14e-03, stable for 3 iters
+EV  58 converged λ = -0.5933035785, ‖r‖ = 2.15e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 67
+Iter 67: V_size = 1084, Converged = 58, ‖r‖ (largest λ) = 0.012325734965072197
+Switching to MINRES for correction equations at iteration 68
+Iter 68: V_size = 1084, Converged = 58, ‖r‖ (largest λ) = 0.011710261771898833
+Switching to MINRES for correction equations at iteration 69
+Iter 69: V_size = 1084, Converged = 58, ‖r‖ (largest λ) = 0.012076723203912253
+EV  59 converged λ = -0.6256280528, ‖r‖ = 2.05e-03, stable for 3 iters
+EV  60 converged λ = -0.6180068573, ‖r‖ = 2.35e-03, stable for 3 iters
+EV  61 converged λ = -0.6164304212, ‖r‖ = 2.27e-03, stable for 3 iters
+EV  62 converged λ = -0.6139872769, ‖r‖ = 2.36e-03, stable for 3 iters
+EV  63 converged λ = -0.6117130991, ‖r‖ = 2.09e-03, stable for 3 iters
+EV  64 converged λ = -0.6114827986, ‖r‖ = 2.09e-03, stable for 3 iters
+EV  65 converged λ = -0.6077606305, ‖r‖ = 2.22e-03, stable for 3 iters
+EV  66 converged λ = -0.6047869224, ‖r‖ = 1.95e-03, stable for 3 iters
+EV  67 converged λ = -0.6039660301, ‖r‖ = 2.09e-03, stable for 3 iters
+EV  68 converged λ = -0.6032146186, ‖r‖ = 2.22e-03, stable for 3 iters
+EV  69 converged λ = -0.6029414175, ‖r‖ = 1.85e-03, stable for 3 iters
+EV  70 converged λ = -0.6027116011, ‖r‖ = 2.19e-03, stable for 3 iters
+EV  71 converged λ = -0.5993122904, ‖r‖ = 2.12e-03, stable for 3 iters
+slurmstepd-andoria01: error: *** JOB 25092 ON andoria01 CANCELLED AT 2025-09-20T09:42:16 DUE TO TIME LIMIT ***
+
+[27113] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:356
+dsymv_kernel_4x4.constprop.0 at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_U_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_64_ at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+symv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/blas.jl:815
+gemv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:452
+generic_matvecmul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:79 [inlined]
+_mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:73 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:70 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:253 [inlined]
+* at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:60 [inlined]
+#2 at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:25
+_unsafe_mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/functionmap.jl:127 [inlined]
+mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/LinearMaps.jl:166 [inlined]
+iterate at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:104
+iterate at ./iterators.jl:206 [inlined]
+#minres!#25 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:230
+minres! at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:200 [inlined]
+#minres#26 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244 [inlined]
+minres at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244
+unknown function (ip: 0x7f05cff77dfd)
+#correction_equations_minres#1 at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:41
+correction_equations_minres at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:13 [inlined]
+davidson at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:278
+davidson at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:137 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:323
+unknown function (ip: 0x7f05cff72185)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/mix_JD_Dav/RND_matrix.jl:363
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 473465305 (Pool: 473464701; Big: 604); GC: 213315
+EV  72 converged λ = -0.5939280619, ‖r‖ = 2.28e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 70
+Iter 70: V_size = 1056, Converged = 72, ‖r‖ (largest λ) = 0.011492600681758029
+Switching to MINRES for correction equations at iteration 71
+Iter 71: V_size = 1056, Converged = 72, ‖r‖ (largest λ) = 0.011818540946389148
+Switching to MINRES for correction equations at iteration 72
+Iter 72: V_size = 1056, Converged = 72, ‖r‖ (largest λ) = 0.011206895557093713
+EV  73 converged λ = -0.6107608745, ‖r‖ = 2.25e-03, stable for 3 iters
+EV  74 converged λ = -0.6090101564, ‖r‖ = 2.21e-03, stable for 3 iters
+EV  75 converged λ = -0.6083073725, ‖r‖ = 2.01e-03, stable for 3 iters
+EV  76 converged λ = -0.5989238625, ‖r‖ = 2.09e-03, stable for 3 iters
+EV  77 converged λ = -0.5979039749, ‖r‖ = 1.91e-03, stable for 3 iters
+EV  78 converged λ = -0.5962953666, ‖r‖ = 2.28e-03, stable for 3 iters
+EV  79 converged λ = -0.5961386804, ‖r‖ = 2.11e-03, stable for 3 iters
+EV  80 converged λ = -0.5949032945, ‖r‖ = 2.15e-03, stable for 3 iters
+EV  81 converged λ = -0.5946377245, ‖r‖ = 1.99e-03, stable for 3 iters
+EV  82 converged λ = -0.5913203520, ‖r‖ = 2.09e-03, stable for 3 iters
+EV  83 converged λ = -0.5901843958, ‖r‖ = 1.94e-03, stable for 3 iters
+EV  84 converged λ = -0.5881129089, ‖r‖ = 2.27e-03, stable for 3 iters
+EV  85 converged λ = -0.5820292820, ‖r‖ = 2.03e-03, stable for 3 iters
+Switching to MINRES for correction equations at iteration 73
+Iter 73: V_size = 1030, Converged = 85, ‖r‖ (largest λ) = 0.011552990070920418
+Switching to MINRES for correction equations at iteration 74

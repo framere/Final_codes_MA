@@ -152,7 +152,7 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.7)
+    l_buffer = round(Int, l * 1.5)
     lc = round(Int, 1.01 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
@@ -277,7 +277,7 @@ function davidson(
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
 
-        if iter < 20
+        if iter < 12
             # Compute correction vectors
             t = Matrix{T}(undef, size(A, 1), length(keep_indices))
             ϵ = 1e-6
@@ -287,9 +287,9 @@ function davidson(
                 count_vec_add_flops(length(D))
                 count_vec_scaling_flops(length(D))
             end
-        elseif iter >= 20
+        elseif iter >= 12
             # Use MINRES for correction equations
-            if iter == 20
+            if iter == 12
                 println("Switching to MINRES for correction equations at iteration $iter")
             end
             t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
@@ -367,8 +367,8 @@ end
 
 
 
-betas = [32] #8,16,32,64, 8,16
-molecules = ["formaldehyde"] #, "uracil"
+betas = [25] #8,16,32,64, 8,16
+molecules = ["H2"] #, "uracil"
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

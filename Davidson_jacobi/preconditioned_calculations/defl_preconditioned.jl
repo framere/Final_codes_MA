@@ -12,44 +12,46 @@ include("../../FLOP_count.jl")
 
 function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=25)
     global NFLOPs
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
+    n, k = size(U) # n: size of matrix, k: number of eigenvalues
+    S = zeros(eltype(A), n, k) # Correction vectors initialization
     total_iter = 0
     for j in 1:k
-        λ, r = lambdas[j], R[:, j]
+        λ, r = lambdas[j], R[:, j] # Eigenvalue and residual for j-th vector
 
-        # Operator (projected (A - λI))
+        # Operator (projected (A - λI)) used in correction equation
         M_apply = function(x)
             x_perp = x - (U * (U' * x))
             tmp = (A * x_perp) - λ * x_perp
             res = tmp - (U * (U' * tmp))
             return res
         end
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true) # transformation as a LinearMap
 
         # Preconditioner: Jacobi (diag(A - λI))
-        D = diag(A) .- λ
-        Mprec = DiagonalPreconditioner(D)
+        D = diag(A) .- λ # Diagonal elements of (A - λI)
+        Mprec = DiagonalPreconditioner(D) # Jacobi preconditioner
 
-        # Right-hand side
+        # Right-hand side of the correction equation (projected residual)
         rhs = -(r - (U * (U' * r)))
 
-        # Solve correction equation
+        # Solve correction equation with Preconditioned CG
         s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=Mprec, log=true)
+
+        # Extract number of iterations from message
         m = match(r"(\d+)\s+iterations", string(msg))
         if m !== nothing
             niter = parse(Int, m.captures[1])
-            # println("Number of iterations: ", niter)
             total_iter += niter
         else
             println("No iteration number found in message: ", msg)
         end
 
-        # Project solution to orthogonal complement
-        s_j = s_j - (U * (U' * s_j))
+        # Project solution to orthogonal complement and store
+        s_j = s_j - (U * (U' * s_j))      
         S[:, j] = s_j
     end
-    println("Total CG iterations: ", total_iter)
+    println("Total CG iterations: ", total_iter) 
     NFLOPs += total_iter * (2*n^2 + 4*n*k)  # Estimate FLOPs for CG solve (approx)
     return S
 end
@@ -57,15 +59,16 @@ end
 
 function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=25)
     global NFLOPs
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
-    total_iter = 0
+    n, k = size(U) # n: size of matrix, k: number of eigenvalues
+    S = zeros(eltype(A), n, k) # Correction vectors initialization
+    total_iter = 0 
     for j in 1:k
-        λ, r = lambdas[j], R[:, j]
+        λ, r = lambdas[j], R[:, j] # Eigenvalue and residual for j-th vector
 
         # Diagonal preconditioner
         D = diag(A) .- λ
         D = @. ifelse(abs(D) < 1e-12, 1.0, D)
+        # diagonal preconditioner inverse
         Pinv = Diagonal(1.0 ./ D)
 
         # Operator with preconditioning (Pinv * M)
@@ -75,24 +78,25 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=25)
             res = tmp - (U * (U' * tmp))
             return Pinv * res
         end
-        Mprec_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+
+        Mprec_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true) # transformation as a LinearMap
 
         # Preconditioned RHS
         rhs = -(r - (U * (U' * r)))
-        rhs_prec = Pinv * rhs
+        rhs_prec = Pinv * rhs # Apply preconditioner to RHS
 
         # Solve with MINRES
         s_j, msg = minres(Mprec_op, rhs_prec; reltol=tol, maxiter=maxiter, log=true)
+        # Extract number of iterations from message
         m = match(r"(\d+)\s+iterations", string(msg))
         if m !== nothing
             niter = parse(Int, m.captures[1])
             total_iter += niter
-            # println("Number of iterations: ", niter)
         else
             println("No iteration number found in message: ", msg)
         end
 
-        # Project solution back
+        # Project solution back and store
         s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
@@ -100,7 +104,6 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=25)
     NFLOPs += total_iter * (2*n^2 + 4*n*k)  # Estimate FLOPs for MINRES solve (approx)
     return S
 end
-
 
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
@@ -173,7 +176,6 @@ function load_matrix(filename::String, molecule::String)
     A = reshape(A, N, N)
     return Hermitian(A)
 end
-
 
 function read_eigenresults(molecule::String)
     output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"

@@ -48,6 +48,7 @@ function read_eigenresults(molecule::String)
 end
 
 function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=40)
+    global NFLOPs
     n, k = size(U)
     S = zeros(eltype(A), n, k)
     total_iter = 0
@@ -71,7 +72,7 @@ function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=40)
         rhs = -(r - (U * (U' * r)))
 
         # Solve correction equation
-        s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=Mprec, log=true)
+        s_j, msg = cg(M_op, rhs; reltol=tol, Pl=Mprec, maxiter=maxiter, log=true) #, Pl=Mprec
         m = match(r"(\d+)\s+iterations", string(msg))
         if m !== nothing
             niter = parse(Int, m.captures[1])
@@ -86,49 +87,53 @@ function correction_equations_cg(A, U, lambdas, R; tol=1e-1, maxiter=40)
         S[:, j] = s_j
     end
     println("Total CG iterations: ", total_iter)
+    NFLOPs += total_iter * (2*n^2 + 4*n*k)  # Estimate FLOPs for CG solve (approx)
     return S
 end
 
-function correction_equations_cg_cholesky(A, U, lambdas, R; tol=1e-1, maxiter=40)
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
+# function correction_equations_cg_cholesky(A, U, lambdas, R; tol=1e-1, maxiter=40)
+#     n, k = size(U)
+#     S = zeros(eltype(A), n, k)
 
-    for j in 1:k
-        λ, r = lambdas[j], R[:, j]
+#     for j in 1:k
+#         λ, r = lambdas[j], R[:, j]
 
-        # Projected operator (A - λI)
-        M_apply = function(x)
-            x_perp = x - (U * (U' * x))
-            tmp = (A * x_perp) - λ * x_perp
-            res = tmp - (U * (U' * tmp))
-            return res
-        end
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+#         # Projected operator (A - λI)
+#         M_apply = function(x)
+#             x_perp = x - (U * (U' * x))
+#             tmp = (A * x_perp) - λ * x_perp
+#             res = tmp - (U * (U' * tmp))
+#             return res
+#         end
+#         M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
 
-        # Preconditioner: Cholesky factorization of (A - λI)
-        # (if SPD — otherwise you need LDL')
-        Mmat = Matrix(A) - λ*I
-        F = cholesky(Hermitian(Mmat))   # factor object, acts as preconditioner
+#         # Preconditioner: Cholesky factorization of (A - λI)
+#         # (if SPD — otherwise you need LDL')
+#         σ = 1e-2
+#         Mmat = Matrix(A) - (λ - σ)*I
+#         F = cholesky(Hermitian(Mmat))
+#         Pl = y -> F \ y
+#         # factor object, acts as preconditioner
 
-        # Right-hand side
-        rhs = -(r - (U * (U' * r)))
+#         # Right-hand side
+#         rhs = -(r - (U * (U' * r)))
 
-        # Solve correction equation with CG + Cholesky preconditioner
-        s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=F, log=true)
-        m = match(r"(\d+)\s+iterations", string(msg))
-        if m !== nothing
-            niter = parse(Int, m.captures[1])
-            println("Number of iterations: ", niter)
-        else
-            println("No iteration number found in message: ", msg)
-        end
+#         # Solve correction equation with CG + Cholesky preconditioner
+#         s_j, msg = cg(M_op, rhs; reltol=tol, maxiter=maxiter, Pl=Pl, log=true)
+#         m = match(r"(\d+)\s+iterations", string(msg))
+#         if m !== nothing
+#             niter = parse(Int, m.captures[1])
+#             println("Number of iterations: ", niter)
+#         else
+#             println("No iteration number found in message: ", msg)
+#         end
 
-        # Project solution to orthogonal complement
-        s_j = s_j - (U * (U' * s_j))
-        S[:, j] = s_j
-    end
-    return S
-end
+#         # Project solution to orthogonal complement
+#         s_j = s_j - (U * (U' * s_j))
+#         S[:, j] = s_j
+#     end
+#     return S
+# end
 
 function correction_equations_minres(A, U, lambdas, R; tol=1e-6, maxiter=200)
     n, k = size(U)
@@ -292,7 +297,7 @@ function main(molecule::String, l::Integer, alpha::Integer; solver::Symbol = :cg
     end
 
     println("Davidson with $(solver == :cg ? "CG" : "MINRES") solver")
-    @time Σ, U = davidson(A, V, Naux, 8e-5, solver, 200)
+    @time Σ, U = davidson(A, V, Naux, 8e-3, solver, 200)
 
     idx = sortperm(Σ)
     Σ = Σ[idx]
@@ -331,8 +336,8 @@ for molecule in molecules
         for l in ls
             println("Running with l = $l")
             # main(molecule, l * occupied_orbitals(molecule), a, solver=:cg)
-            println("Using MINRES solver")
-            main(molecule, l * occupied_orbitals(molecule), a, solver=:minres)
+            # println("Using MINRES solver")
+            # main(molecule, l * occupied_orbitals(molecule), a, solver=:minres)
             println("Using CG solver")
             main(molecule, l * occupied_orbitals(molecule), a, solver=:cg)
         end

@@ -166,6 +166,14 @@ function davidson(
 
     iter = 0
     convergence_tracker = Dict{Int, Tuple{Float64, Int, Float64, Vector{T}}}()
+    residual_history = Dict{Int, Vector{Float64}}()   # for stagnation detection
+
+    # Helper function: stagnation check
+    function is_stagnating(hist::Vector{Float64}; tol=0.1, window=2)
+        length(hist) < window && return false
+        r_old, r_new = hist[end-window+1], hist[end]
+        return abs(r_old - r_new) / r_old < tol
+    end
 
     while nevf < l_buffer
         iter += 1
@@ -224,7 +232,7 @@ function davidson(
 
         # Determine how many eigenvalues we need to consider for convergence
         current_cutoff = min(lc - nevf, length(Σ_sorted))
-        
+                    
         conv_indices = Int[]
         for (sorted_i, original_i) in enumerate(sorted_indices[1:current_cutoff])
             λ = Σ_sorted[sorted_i]
@@ -254,7 +262,6 @@ function davidson(
                     V_lock = hcat(V_lock, xvec)
                     delete!(convergence_tracker, original_i)
                     nevf += 1
-                    # println(@sprintf("EV %3d converged λ = %.10f, ‖r‖ = %.2e, stable for %d iters", nevf, λ, rnorm, count))
                     if nevf >= lc
                         println("Converged all required eigenvalues.")
                         return (Eigenvalues, Ritz_vecs)
@@ -277,22 +284,70 @@ function davidson(
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
 
-        if iter < 12
-            # Compute correction vectors
+        # Update residual histories
+        for idx in keep_indices
+            push!(get!(residual_history, idx, Float64[]), norms[idx])
+            if length(residual_history[idx]) > 3
+                popfirst!(residual_history[idx]) # keep short history
+            end
+        end
+
+        # === Compute correction vectors ===
+        ϵ = 1e-6
+
+        if iter < 10
+            # Pure Davidson correction in the early iterations
             t = Matrix{T}(undef, size(A, 1), length(keep_indices))
-            ϵ = 1e-6
             for (i, idx) in enumerate(keep_indices)
                 denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
                 t[:, i] = R_nc[:, i] ./ denom
                 count_vec_add_flops(length(D))
                 count_vec_scaling_flops(length(D))
             end
-        elseif iter >= 12
-            # Use MINRES for correction equations
-            if iter == 12
-                println("Switching to MINRES for correction equations at iteration $iter")
+        else
+            # Hybrid Davidson–Jacobi-Davidson
+            println("Hybrid Davidson-JD corrections at iteration $iter")
+
+            dav_indices = Int[]
+            jd_indices  = Int[]
+
+            for (i, idx) in enumerate(keep_indices)
+                if idx > current_cutoff
+                    # Anything beyond lc cutoff → always Davidson
+                    push!(dav_indices, i)
+                else
+                    r = norms[idx]
+                    hist = get(residual_history, idx, Float64[])
+                    if r >= 1e-2 || is_stagnating(hist; tol=0.1, window=2)
+                        push!(jd_indices, i)
+                    else
+                        push!(dav_indices, i)
+                    end
+                end
             end
-            t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
+
+            # --- Davidson corrections ---
+            t_dav = Matrix{T}(undef, size(A, 1), length(dav_indices))
+            for (j, i) in enumerate(dav_indices)
+                idx = keep_indices[i]
+                denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
+                t_dav[:, j] = R_nc[:, i] ./ denom
+                count_vec_add_flops(length(D))
+                count_vec_scaling_flops(length(D))
+            end
+
+            # --- JD corrections ---
+            t_jd = correction_equations_minres(
+                A,
+                X_nc[:, jd_indices],
+                Σ_nc[jd_indices],
+                R_nc[:, jd_indices];
+                tol=1e-1,
+                maxiter=25
+            )
+
+            # Merge
+            t = hcat(t_dav, t_jd)
         end
 
         # Orthogonalize and select correction vectors
@@ -300,13 +355,11 @@ function davidson(
         
         # Update search space
         if size(V, 2) + n_b_hat > n_aux || n_b_hat == 0
-            # Restart with Ritz vectors + corrections
             max_new_vectors = n_aux - size(X_nc, 2)
             T_hat = T_hat[:, 1:min(n_b_hat, max_new_vectors)]
             V = hcat(X_nc, T_hat)
             n_b = size(V, 2)
         else
-            # Expand the search space
             V = hcat(V, T_hat)
             n_b += n_b_hat
         end
@@ -367,9 +420,9 @@ end
 
 
 
-betas = [25] #8,16,32,64, 8,16
-molecules = ["H2"] #, "uracil"
-ls = [10, 50, 100, 200] #10, 50, 100, 200
+betas = [25, 32] #8,16,32,64, 8,16
+molecules = ["formaldehyde"] #, "uracil"
+ls = [200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

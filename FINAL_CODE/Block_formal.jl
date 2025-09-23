@@ -120,12 +120,13 @@ function davidson(
             count_vec_scaling_flops(length(D))   # For the multiplication
         end
 
-        # Update V
+        # Update V (restart logic)
         if size(V,2) <= Naux - Nlow
             V = hcat(V, t)
         else
+            # simple restart: keep only current approximations
             V = hcat(X, t)
-        end
+        end   
     end
 end
 

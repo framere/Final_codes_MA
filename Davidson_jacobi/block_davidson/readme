@@ -1,0 +1,1 @@
+Starting from the traditional block davidson algorithm, we try to implement the JD correction equation, solving with cg and MINRES

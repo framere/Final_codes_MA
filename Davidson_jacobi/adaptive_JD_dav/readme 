@@ -1,0 +1,7 @@
+Idea: Improve the quality of the correction equation (switch Dav to JD smoother) 
+
+1) Create a hybrid JD and Davidson, where the correction equation is solved with JD and Diagonal davidson, depending on the residual norm
+2) Monitor the norms and if there's no improvement switch to MINRES
+3) See how aligned r and t are. I there's no alignment, then the Dav is not working properly
+
+

@@ -1,0 +1,1 @@
+Very rudimentary mix of Diagonal davidson and JD. After N iterations we switch to JD (works but not adaptive)

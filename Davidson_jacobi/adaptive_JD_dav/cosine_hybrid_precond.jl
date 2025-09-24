@@ -10,52 +10,54 @@ global NFLOPs = 0
 
 include("../../FLOP_count.jl")
 
-function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
+function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=25)
     global NFLOPs
-    n, k = size(U)
-    S = zeros(eltype(A), n, k)
-    total_iter = 0
-
+    n, k = size(U) # n: size of matrix, k: number of eigenvalues
+    S = zeros(eltype(A), n, k) # Correction vectors initialization
+    total_iter = 0 
     for j in 1:k
-        λ, r = lambdas[j], R[:, j]
+        λ, r = lambdas[j], R[:, j] # Eigenvalue and residual for j-th vector
 
+        # Diagonal preconditioner
+        D = diag(A) .- λ
+        D = @. ifelse(abs(D) < 1e-12, 1.0, D)
+        # diagonal preconditioner inverse
+        Pinv = Diagonal(1.0 ./ D)
+
+        # Operator with preconditioning (Pinv * M)
         M_apply = function(x)
-            x_perp = x - (U * (U' * x)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
-            tmp = (A * x_perp) - λ * x_perp; 
-            count_matmul_flops(n,1,n); count_vec_scaling_flops(n); count_vec_add_flops(n)
-
-            res = tmp - (U * (U' * tmp)); 
-            count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-            return res
+            x_perp = x - (U * (U' * x))
+            tmp = (A * x_perp) - λ * x_perp
+            res = tmp - (U * (U' * tmp))
+            return Pinv * res
         end
 
-        M_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true)
+        Mprec_op = LinearMap{eltype(A)}(M_apply, n, n; ishermitian=true) # transformation as a LinearMap
 
-        rhs = r - (U * (U' * r)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-        rhs = -rhs; count_vec_scaling_flops(n)
+        # Preconditioned RHS
+        rhs = -(r - (U * (U' * r)))
+        rhs_prec = Pinv * rhs # Apply preconditioner to RHS
 
-        s_j, msg = minres(M_op, rhs; reltol=tol, maxiter=maxiter, log=true)
+        # Solve with MINRES
+        s_j, msg = minres(Mprec_op, rhs_prec; reltol=tol, maxiter=maxiter, log=true)
+        # Extract number of iterations from message
         m = match(r"(\d+)\s+iterations", string(msg))
         if m !== nothing
             niter = parse(Int, m.captures[1])
             total_iter += niter
-            # println("Number of iterations: ", niter)
         else
             println("No iteration number found in message: ", msg)
         end
 
-        s_j = s_j - (U * (U' * s_j)); 
-        count_matmul_flops(k,1,n); count_matmul_flops(n,1,k); count_vec_add_flops(n)
-
+        # Project solution back and store
+        s_j = s_j - (U * (U' * s_j))
         S[:, j] = s_j
     end
     println("Total MINRES iterations: ", total_iter)
-    NFLOPs += total_iter * (2*n^2 + 4*n*k)  
+    NFLOPs += total_iter * (2*n^2 + 4*n*k)  # Estimate FLOPs for MINRES solve (approx)
     return S
 end
+
 
 
 function select_corrections_ORTHO(t_candidates, V, V_lock, η, droptol; maxorth=2)
@@ -175,6 +177,13 @@ function davidson(
         return abs(r_old - r_new) / r_old < tol
     end
 
+
+    function is_misaligned(r::AbstractVector{T}, t::AbstractVector{T}; cos_thresh=0.9) where T
+        cosθ = abs(dot(r, t)) / (norm(r) * norm(t))
+        return cosθ < cos_thresh
+    end
+
+
     while nevf < l_buffer
         iter += 1
 
@@ -284,14 +293,6 @@ function davidson(
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
 
-        # Update residual histories
-        for idx in keep_indices
-            push!(get!(residual_history, idx, Float64[]), norms[idx])
-            if length(residual_history[idx]) > 3
-                popfirst!(residual_history[idx]) # keep short history
-            end
-        end
-
         # === Compute correction vectors ===
         ϵ = 1e-6
 
@@ -307,47 +308,49 @@ function davidson(
         else
             # Hybrid Davidson–Jacobi-Davidson
             println("Hybrid Davidson-JD corrections at iteration $iter")
-
-            dav_indices = Int[]
-            jd_indices  = Int[]
+            ϵ = 1e-6
+            t_dav_list = Vector{Vector{T}}()
+            jd_indices = Int[]
 
             for (i, idx) in enumerate(keep_indices)
                 if idx > current_cutoff
                     # Anything beyond lc cutoff → always Davidson
-                    push!(dav_indices, i)
+                    denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
+                    t_dav_i = R_nc[:, i] ./ denom
+                    push!(t_dav_list, t_dav_i)
+                    count_vec_add_flops(length(D))
+                    count_vec_scaling_flops(length(D))
                 else
-                    r = norms[idx]
-                    hist = get(residual_history, idx, Float64[])
-                    if r >= 1e-2 || is_stagnating(hist; tol=0.1, window=2)
+                    # Try Davidson correction
+                    denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
+                    t_dav_i = R_nc[:, i] ./ denom
+
+                    if norms[idx] >= 1e-2 || is_misaligned(R_nc[:, i], t_dav_i; cos_thresh=0.8)
+                        # Save index for JD recomputation
                         push!(jd_indices, i)
                     else
-                        push!(dav_indices, i)
+                        push!(t_dav_list, t_dav_i)
                     end
                 end
             end
 
-            # --- Davidson corrections ---
-            t_dav = Matrix{T}(undef, size(A, 1), length(dav_indices))
-            for (j, i) in enumerate(dav_indices)
-                idx = keep_indices[i]
-                denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
-                t_dav[:, j] = R_nc[:, i] ./ denom
-                count_vec_add_flops(length(D))
-                count_vec_scaling_flops(length(D))
-            end
+            # Collect Davidson corrections into a matrix
+            t_dav = isempty(t_dav_list) ? Matrix{T}(undef, size(A,1), 0) : hcat(t_dav_list...)
 
-            # --- JD corrections ---
-            t_jd = correction_equations_minres(
-                A,
-                X_nc[:, jd_indices],
-                Σ_nc[jd_indices],
-                R_nc[:, jd_indices];
-                tol=1e-1,
-                maxiter=25
-            )
+            # Compute JD corrections only where needed
+            t_jd = isempty(jd_indices) ? Matrix{T}(undef, size(A,1), 0) :
+                correction_equations_minres(
+                    A,
+                    X_nc[:, jd_indices],
+                    Σ_nc[jd_indices],
+                    R_nc[:, jd_indices];
+                    tol=1e-1,
+                    maxiter=25
+                )
 
             # Merge
             t = hcat(t_dav, t_jd)
+
         end
 
         # Orthogonalize and select correction vectors
@@ -420,8 +423,8 @@ end
 
 
 
-betas = [40] #8,16,32,64, 8,16
-molecules = ["formaldehyde"] #, "uracil"
+betas = [36, 40] #8,16,32,64, 8,16
+molecules = ["uracil"] #, "uracil"
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

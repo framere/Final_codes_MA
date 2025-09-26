@@ -323,7 +323,7 @@ function davidson(
                     denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
                     t_dav_i = R_nc[:, i] ./ denom
 
-                    if norms[idx] >= 1e-2 || is_misaligned(R_nc[:, i], t_dav_i; cos_thresh=0.8)
+                    if norms[idx] >= 1e-2 || is_misaligned(R_nc[:, i], t_dav_i; cos_thresh=0.9)
                         # Save index for JD recomputation
                         push!(jd_indices, i)
                     else
@@ -421,7 +421,7 @@ end
 
 
 
-betas = [36, 40] #8,16,32,64, 8,16
+betas = [32] #8,16,32,64, 8,16
 molecules = ["uracil"] #, "uracil"
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules

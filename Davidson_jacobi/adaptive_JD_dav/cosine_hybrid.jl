@@ -152,7 +152,7 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.5)
+    l_buffer = round(Int, l * 1.7)
     lc = round(Int, 1.01 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0

@@ -371,3 +371,418 @@ Number of FLOPs: 110996960343594
 
 Reading exact Eigenvalues...
 Reading eigenvalues from ../../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+1×1200 adjoint(::Vector{Float64}) with eltype Float64:
+ -3.55271e-15  1.77636e-14  -7.10543e-15  7.10543e-15  1.77636e-15  -7.10543e-15  5.32907e-15  -2.13163e-14  0.0  -5.32907e-15  -8.88178e-16  1.77636e-15  2.66454e-15  -8.88178e-16  8.88178e-16  0.0  2.66454e-15  3.55271e-15  1.77636e-15  -1.77636e-15  0.0  0.0  -1.77636e-15  2.66454e-15  1.77636e-15  -4.44089e-15  4.44089e-16  -1.77636e-15  -4.88498e-15  -4.44089e-16  -1.77636e-15  4.44089e-16  8.88178e-16  4.44089e-16  3.10862e-15  -4.44089e-16  2.66454e-15  0.0  4.44089e-16  3.9968e-15  8.88178e-16  -2.66454e-15  -4.44089e-16  0.0  0.0  -1.77636e-15  1.77636e-15  0.0  -8.88178e-16  8.88178e-16  -1.33227e-15  -1.77636e-15  -2.22045e-15  4.44089e-16  0.0  0.0  0.0  4.44089e-16  4.44089e-16  8.88178e-16  1.33227e-15  4.44089e-16  0.0  -1.33227e-15  4.44089e-16  1.11022e-15  -4.44089e-16  -6.66134e-16  -2.22045e-16  -1.55431e-15  2.88658e-15  -4.44089e-16  -2.22045e-16  4.44089e-16  -1.55431e-15  1.9984e-15  0.0  1.55431e-15  -1.55431e-15  -1.55431e-15  1.33227e-15  2.22045e-16  2.44249e-15  0.0  1.9984e-15  4.44089e-16  3.77476e-15  -4.44089e-16  2.22045e-16  2.22045e-16  1.11022e-15  4.44089e-16  -1.9984e-15  -2.22045e-16  -2.22045e-16  1.33227e-15  -1.11022e-15  -4.44089e-16  -2.66454e-15  3.55271e-15  1.55431e-15  -2.22045e-16  8.88178e-16  -6.66134e-16  -1.11022e-15  -1.55431e-15  -8.88178e-16  6.66134e-16  -1.11022e-15  2.66454e-15  1.11022e-15  1.55431e-15  3.10862e-15  -1.77636e-15  2.22045e-15  2.22045e-16  -2.22045e-16  -8.88178e-16  -6.9722e-14  -1.34337e-13  -9.05942e-14  -1.69864e-14  -9.60343e-14  -9.09273e-14  -6.51257e-13  -7.91589e-14  -3.92129e-11  -1.26998e-10  -1.34921e-10  -1.85314e-10  -3.28371e-10  -3.3301e-10  -9.06838e-10  -1.07227e-9  -5.36852e-10  -8.08224e-10  -1.98014e-9  -2.32856e-9  -9.11307e-10  -2.00066e-9  -2.85547e-9  -2.46032e-9  -1.87685e-9  -1.84587e-9  -2.28371e-9  -3.80719e-9  -4.02939e-9  -5.53175e-9  -4.89921e-9  -4.29999e-9  -4.00178e-9  -1.03113e-8  -6.92858e-9  -4.07199e-9  -5.85915e-9  -1.39145e-8  -7.67251e-9  -1.30569e-8  -1.2509e-8  -1.01201e-8  -1.22547e-8  -1.73073e-8  -1.57863e-8  -3.11725e-8  -2.33153e-8  -1.6968e-8  -1.73199e-8  -2.13444e-8  -3.23145e-8  -2.17628e-8  -1.51388e-8  -2.63348e-8  -3.77104e-8  -4.42441e-8  -3.03014e-8  -2.02014e-9  -5.42263e-8  -1.95266e-9  -4.18909e-8  -2.92699e-8  -5.73022e-8  -4.54455e-8  -2.26949e-9  -4.81804e-8  -1.75033e-9  -1.46357e-9  -1.42566e-9  -1.41962e-9  -2.06773e-9  -1.73763e-9  -2.10331e-9  -2.65339e-9  -1.74417e-9  -1.81556e-9  -3.17973e-9  -1.99546e-9  -1.90234e-9  -2.13756e-9  -2.88236e-9  -3.06212e-9  -1.74346e-9  -2.81859e-9  -2.3306e-9  -3.1489e-9  -2.60309e-9  -2.80403e-9  -5.2816e-9  -4.25079e-9  -3.36948e-9  -4.36541e-9  -3.01832e-9  -3.5866e-9  -3.83467e-9  -2.53971e-9  -3.14526e-9  -4.49863e-9  -4.54438e-9  -2.81065e-9  -3.41813e-9  -5.14159e-9  -4.97323e-9  -3.44142e-9  -3.46531e-9  -3.90445e-9  -2.94203e-9  -6.35742e-9  -3.53797e-9  -3.54153e-9  -3.68243e-9  -5.01776e-9  -4.11286e-9  -3.11868e-9  -4.85535e-9  -3.85183e-9  -6.51554e-9  -5.13609e-9  -5.53452e-9  -6.15749e-9  -4.1276e-9  -4.52758e-9  -7.53718e-9  -4.68821e-9  -5.99217e-9  -5.16061e-9  -1.01458e-8  -5.77372e-9  -5.74398e-9  -6.88443e-9  -5.12148e-9  -7.82307e-9  -5.13522e-9  -5.40458e-9  -7.77541e-9  -8.90456e-9  -7.2414e-9  -1.12651e-8  -7.01617e-9  -8.31452e-9  -9.3905e-9  -1.09949e-8  -1.10718e-8  -9.93548e-9  -8.22522e-9  -9.88371e-9  -1.23894e-8  -1.07689e-8  -9.05037e-9  -1.09418e-8  -1.40584e-8  -9.31944e-9  -9.93468e-9  -1.52381e-8  -1.23398e-8  -1.31432e-8  -9.51001e-9  -1.75886e-8  -1.21108e-8  -8.74815e-9  -1.10406e-8  -2.21439e-8  -1.45581e-8  -1.62662e-8  -1.54336e-8  -1.53529e-8  -1.50346e-8  -1.15786e-8  -1.64237e-8  -1.27654e-8  -1.68076e-8  -1.43189e-8  -1.91657e-8  -2.81127e-8  -1.4541e-8  -2.03606e-8  -1.20478e-8  -1.86532e-8  -2.32448e-8  -1.56447e-8  -1.91513e-8  -1.67707e-8  -2.00268e-8  -2.18367e-8  -2.57652e-8  -1.78371e-8  -1.90169e-8  -1.99874e-8  -2.20288e-8  -1.70617e-8  -2.34915e-8  -2.44842e-8  -1.99574e-8  -2.05292e-8  -1.81262e-8  -2.1969e-8  -3.04318e-8  -2.88092e-8  -3.41569e-8  -2.84423e-8  -3.82931e-8  -3.44064e-8  -2.30217e-8  -3.55745e-8  -3.46972e-8  -2.50702e-8  -2.86869e-8  -3.21301e-8  -2.81229e-8  -3.92793e-8  -4.30788e-8  -3.48175e-8  -3.83095e-8  -3.51743e-8  -3.85586e-8  -4.60616e-8  -4.29739e-8  -4.4238e-8  -4.24495e-8  -3.61727e-8  -4.25608e-8  -4.20075e-8  -5.10995e-8  -6.24834e-8  -4.26305e-8  -5.58918e-8  -4.80933e-8  -5.37012e-8  -4.02369e-8  -5.2902e-8  -7.4351e-8  -4.69468e-8  -6.12851e-8  -4.78787e-8  -6.8405e-8  -5.69504e-8  -5.36713e-8  -7.28404e-8  -6.11448e-8  -8.40465e-8  -8.4468e-8  -7.64739e-8  -7.80887e-8  -8.87754e-8  -5.89094e-8  -6.77206e-8  -7.85058e-8  -1.10157e-7  -7.89602e-8  -7.87503e-8  -1.50659e-7  -1.11469e-7  -1.0454e-7  -1.26441e-7  -7.48221e-8  -1.45055e-7  -1.41322e-7  -1.34265e-7  -1.49209e-7  -2.10926e-7  -1.13599e-7  -1.18393e-7  -1.8419e-7  -2.03612e-7  -1.73425e-7  -2.38375e-7  -1.63145e-7  -1.40628e-7  -2.85173e-7  -2.67253e-7  -1.97702e-7  -2.46027e-7  -3.15883e-7  -2.85974e-7  -2.23418e-7  -3.04285e-7  -3.18671e-7  -2.56966e-7  -3.17351e-7  -2.30894e-7  -3.04569e-7  -3.22433e-7  -2.99989e-7  -3.56775e-7  -3.36839e-7  -2.59953e-7  -3.11022e-7  -3.00083e-7  -3.12312e-7  -3.2667e-7  -2.95248e-7  -2.84363e-7  -2.82489e-7  -3.78958e-7  -2.97521e-7  -3.56429e-7  -3.95546e-7  -3.96011e-7  -4.49344e-7  -3.42134e-7  -3.04996e-7  -3.05087e-7  -5.02696e-7  -3.74215e-7  -4.12098e-7  -4.92323e-7  -6.52564e-7  -3.27406e-7  -5.21178e-7  -4.81855e-7  -5.17862e-7  -4.97588e-7  -5.02878e-7  -5.4294e-7  -6.49298e-7  -4.10288e-7  -5.8664e-7  -5.42637e-7  -4.68078e-7  -7.86986e-7  -5.49086e-7  -5.96315e-7  -7.40773e-7  -7.3129e-7  -6.20218e-7  -7.80093e-7  -8.44613e-7  -7.5073e-7  -8.53389e-7  -7.86273e-7  -7.86977e-7  -7.28857e-7  -6.16727e-7  -7.1569e-7  -8.34162e-7  -8.68286e-7  -8.36158e-7  -6.34688e-7  -8.75606e-7  -9.82065e-7  -8.1844e-7  -7.3988e-7  -7.06959e-7  -1.01834e-6  -8.90493e-7  -8.90977e-7  -7.39399e-7  -9.21008e-7  -1.1458e-6  -7.24665e-7  -8.9717e-7  -9.81634e-7  -1.00746e-6  -9.43461e-7  -8.89877e-7  -9.95548e-7  -1.03387e-6  -8.55459e-7  -8.06331e-7  -8.67852e-7  -9.01112e-7  -7.69487e-7  -7.54492e-7  -1.12945e-6  -8.91048e-7  -7.45655e-7  -9.42152e-7  -1.24017e-6  -1.16172e-6  -1.13672e-6  -1.00652e-6  -1.15301e-6  -1.06662e-6  -9.31248e-7  -9.62173e-7  -1.09723e-6  -1.15792e-6  -1.02004e-6  -1.17513e-6  -1.27382e-6  -1.13953e-6  -9.81833e-7  -1.20565e-6  -1.22993e-6  -1.02499e-6  -1.2332e-6  -1.00518e-6  -1.17816e-6  -1.08774e-6  -1.53343e-6  -1.04927e-6  -1.22092e-6  -1.22034e-6  -1.11313e-6  -1.00087e-6  -1.20723e-6  -1.36916e-6  -1.3232e-6  -1.55664e-6  -1.22662e-6  -1.44981e-6  -1.49073e-6  -1.67786e-6  -1.27512e-6  -1.39577e-6  -1.40885e-6  -1.36673e-6  -1.46791e-6  -1.57818e-6  -1.14409e-6  -1.49524e-6  -1.22433e-6  -1.58203e-6  -1.46333e-6  -1.52097e-6  -1.16632e-6  -1.43308e-6  -1.37133e-6  -1.27036e-6  -1.39556e-6  -1.47822e-6  -1.56711e-6  -1.49576e-6  -1.41978e-6  -1.34421e-6  -1.43761e-6  -1.28992e-6  -1.51676e-6  -1.27333e-6  -1.5125e-6  -1.52815e-6  -1.26708e-6  -1.28245e-6  -1.67642e-6  -1.60899e-6  -1.68088e-6  -1.58951e-6  -1.57465e-6  -1.54902e-6  -1.5913e-6  -1.88613e-6  -1.22068e-6  -1.46337e-6  -1.42057e-6  -1.41116e-6  -1.60208e-6  -1.46008e-6  -1.34306e-6  -1.55135e-6  -1.39365e-6  -1.68812e-6  -1.35491e-6  -1.47388e-6  -1.38261e-6  -1.46934e-6  -1.65005e-6  -1.45945e-6  -1.61564e-6  -1.76251e-6  -1.75167e-6  -1.71173e-6  -1.53604e-6  -1.48002e-6  -1.47838e-6  -1.57665e-6  -1.88356e-6  -1.51189e-6  -1.6573e-6  -1.52982e-6  -1.51238e-6  -1.70039e-6  -1.84698e-6  -1.62674e-6  -1.32917e-6  -1.45543e-6  -1.69761e-6  -1.76352e-6  -1.91904e-6  -1.62025e-6  -1.77514e-6  -1.7619e-6  -1.44963e-6  -1.3336e-6  -1.79762e-6  -1.59566e-6  -1.48888e-6  -1.68167e-6  -1.37304e-6  -1.59295e-6  -2.03294e-6  -1.66238e-6  -1.76774e-6  -1.9065e-6  -1.46626e-6  -1.50468e-6  -1.61554e-6  -1.76696e-6  -1.67335e-6  -1.6375e-6  -1.49236e-6  -1.54903e-6  -1.60493e-6  -1.65517e-6  -1.73752e-6  -1.36404e-6  -1.47093e-6  -1.61464e-6  -1.83104e-6  -1.74315e-6  -1.77058e-6  -1.53204e-6  -1.58963e-6  -1.60376e-6  -1.94957e-6  -1.84039e-6  -1.56252e-6  -1.70603e-6  -1.42903e-6  -1.65767e-6  -1.90036e-6  -1.89298e-6  -1.936e-6  -1.65207e-6  -1.7946e-6  -1.60584e-6  -1.89526e-6  -1.69922e-6  -1.65841e-6  -1.81819e-6  -1.69093e-6  -1.47399e-6  -1.586e-6  -1.75098e-6  -1.67308e-6  -1.48718e-6  -1.71372e-6  -1.70012e-6  -1.79645e-6  -1.44951e-6  -1.73279e-6  -1.64343e-6  -1.66705e-6  -1.52114e-6  -1.65172e-6  -1.71324e-6  -1.47189e-6  -1.56903e-6  -1.68768e-6  -1.74455e-6  -1.68665e-6  -1.85453e-6  -1.63944e-6  -1.66375e-6  -1.5663e-6  -1.53771e-6  -1.7752e-6  -1.61463e-6  -1.71373e-6  -1.63924e-6  -1.63614e-6  -1.62016e-6  -1.54202e-6  -1.54087e-6  -1.6327e-6  -1.70093e-6  -1.67557e-6  -1.73496e-6  -1.43223e-6  -1.46495e-6  -1.60121e-6  -1.53707e-6  -1.50718e-6  -1.75336e-6  -1.67626e-6  -1.54266e-6  -1.36095e-6  -1.72642e-6  -1.66302e-6  -1.47381e-6  -1.57725e-6  -1.59966e-6  -1.65898e-6  -1.53655e-6  -1.52349e-6  -1.71491e-6  -1.61597e-6  -1.56281e-6  -1.57107e-6  -1.50282e-6  -1.51641e-6  -1.67537e-6  -1.4688e-6  -1.55906e-6  -1.63522e-6  -1.38138e-6  -1.49284e-6  -1.4582e-6  -1.63349e-6  -1.5866e-6  -1.60866e-6  -1.7524e-6  -1.59814e-6  -1.47054e-6  -1.49709e-6  -1.43412e-6  -1.58964e-6  -1.59835e-6  -1.49318e-6  -1.42494e-6  -1.51698e-6  -1.49487e-6  -1.48908e-6  -1.5971e-6  -1.46572e-6  -1.50269e-6  -1.42899e-6  -1.43052e-6  -1.48984e-6  -1.47094e-6  -1.47747e-6  -1.45947e-6  -1.37909e-6  -1.72506e-6  -1.6635e-6  -1.66079e-6  -1.4645e-6  -1.50938e-6  -1.48965e-6  -1.50977e-6  -1.49566e-6  -1.53308e-6  -1.36814e-6  -1.45345e-6  -1.5124e-6  -1.42945e-6  -1.40858e-6  -1.47851e-6  -1.40808e-6  -1.6355e-6  -1.58503e-6  -1.49053e-6  -1.46183e-6  -1.62119e-6  -1.37931e-6  -1.43534e-6  -1.43779e-6  -1.53354e-6  -1.37492e-6  -1.53865e-6  -1.30275e-6  -1.45991e-6  -1.34011e-6  -1.65321e-6  -1.64457e-6  -1.48179e-6  -1.44921e-6  -1.4666e-6  -1.38932e-6  -1.64004e-6  -1.27547e-6  -1.43311e-6  -1.49121e-6  -1.49698e-6  -1.46824e-6  -1.55132e-6  -1.41296e-6  -1.35909e-6  -1.42653e-6  -1.54305e-6  -1.38957e-6  -1.32433e-6  -1.51861e-6  -1.36003e-6  -1.41669e-6  -1.26638e-6  -1.3851e-6  -1.38922e-6  -1.42083e-6  -1.33015e-6  -1.49285e-6  -1.50844e-6  -1.39526e-6  -1.46005e-6  -1.3096e-6  -1.31215e-6  -1.32786e-6  -1.46572e-6  -1.3559e-6  -1.58548e-6  -1.55684e-6  -1.33054e-6  -1.4426e-6  -1.24389e-6  -1.42466e-6  -1.50387e-6  -1.37288e-6  -1.44528e-6  -1.41014e-6  -1.27346e-6  -1.34737e-6  -1.47628e-6  -1.2969e-6  -1.44239e-6  -1.48593e-6  -1.4419e-6  -1.33037e-6  -1.42583e-6  -1.47117e-6  -1.47685e-6  -1.49785e-6  -1.39852e-6  -1.47692e-6  -1.51258e-6  -1.26423e-6  -1.21252e-6  -1.36625e-6  -1.52508e-6  -1.3055e-6  -1.4145e-6  -1.29695e-6  -1.52936e-6  -1.46205e-6  -1.52876e-6  -1.43553e-6  -1.39772e-6  -1.26327e-6  -1.42829e-6  -1.45077e-6  -1.40774e-6  -1.43678e-6  -1.4549e-6  -1.3499e-6  -1.44235e-6  -1.43051e-6  -1.50093e-6  -1.41633e-6  -1.55521e-6  -1.51587e-6  -1.2898e-6  -1.5743e-6  -1.34848e-6  -1.32638e-6  -1.34593e-6  -1.47668e-6  -1.39769e-6  -1.48177e-6  -1.38716e-6  -1.36307e-6  -1.37168e-6  -1.32784e-6  -1.34984e-6  -1.28686e-6  -1.38819e-6  -1.39659e-6  -1.48702e-6  -1.30042e-6  -1.36372e-6  -1.37645e-6  -1.4533e-6  -1.4482e-6  -1.26038e-6  -1.21278e-6  -1.38692e-6  -1.33934e-6  -1.27335e-6  -1.3131e-6  -1.36652e-6  -1.23148e-6  -1.43385e-6  -1.41035e-6  -1.38244e-6  -1.41777e-6  -1.44526e-6  -1.41046e-6  -1.49738e-6  -1.29155e-6  -1.53724e-6  -1.33684e-6  -1.3789e-6  -1.32671e-6  -1.41571e-6  -1.30504e-6  -1.44561e-6  -1.30112e-6  -1.38443e-6  -1.35187e-6  -1.4138e-6  -1.45097e-6  -1.38521e-6  -1.36985e-6  -1.37853e-6  -1.43532e-6  -1.44312e-6  -1.36645e-6  -1.38657e-6  -1.36735e-6  -1.26307e-6  -1.54093e-6  -1.34532e-6  -1.36435e-6  -1.51762e-6  -1.35547e-6  -1.46184e-6  -1.25249e-6  -1.28685e-6  -1.3083e-6  -1.33485e-6  -1.32194e-6  -1.36804e-6  -1.32448e-6  -1.31094e-6  -1.33923e-6  -1.24112e-6  -1.43559e-6  -1.37566e-6  -1.40287e-6  -1.53955e-6  -1.31442e-6  -1.22889e-6  -1.46807e-6  -1.30838e-6  -1.18099e-6  -1.36534e-6  -1.479e-6  -1.42139e-6  -1.30949e-6  -1.24282e-6  -1.38782e-6  -1.85381e-6  -1.43212e-6  -1.45225e-6  -1.24701e-6  -1.4001e-6  -1.41622e-6  -1.51225e-6  -1.33111e-6  -1.52021e-6  -1.35495e-6  -1.32771e-6  -1.32836e-6  -1.38848e-6  -1.48345e-6  -1.387e-6  -1.40588e-6  -1.30752e-6  -1.37359e-6  -1.4014e-6  -1.42584e-6  -1.48796e-6  -1.41888e-6  -1.42749e-6  -1.32177e-6  -1.26719e-6  -1.40502e-6  -1.31397e-6  -1.45371e-6  -3.06296e-6  -2.84702e-6  -2.69928e-6  -2.63101e-6  -3.04831e-6  -2.77904e-6  -2.86589e-6  -2.98587e-6  -2.91122e-6  -2.78132e-6  -3.10058e-6  -2.8716e-6  -2.73952e-6  -3.00316e-6  -3.08996e-6  -2.91692e-6  -2.87214e-6  -2.82322e-6  -3.1314e-6  -2.75938e-6  -3.04597e-6  -3.17291e-6  -3.14588e-6  -3.00346e-6  -3.17189e-6  -2.80989e-6  -3.17891e-6  -2.94259e-6  -3.00149e-6  -3.0954e-6  -2.79674e-6  -3.22725e-6  -3.28649e-6  -3.21298e-6  -3.10948e-6  -2.77701e-6  -3.19096e-6  -3.0081e-6  -3.13118e-6  -3.27579e-6  -3.04447e-6  -2.94134e-6  -3.01279e-6  -2.9888e-6  -2.81709e-6  -2.87774e-6  -3.04056e-6  -2.98518e-6  -3.00777e-6  -3.07963e-6  -2.90556e-6  -3.21888e-6  -3.0855e-6  -3.22095e-6  -2.91887e-6  -3.46132e-6  -3.18898e-6  -3.2822e-6  -2.97484e-6  -3.23274e-6  -2.90569e-6  -2.9911e-6  -3.16593e-6  -3.03605e-6  -2.98537e-6  -3.17811e-6  -3.1769e-6  -3.53312e-6  -3.07232e-6  -3.43452e-6  -3.49597e-6  -3.08675e-6  -3.03849e-6  -3.16614e-6  -3.55025e-6  -3.09657e-6  -3.45733e-6  -3.51129e-6  -3.2941e-6  -3.09294e-6  -3.02083e-6  -3.62281e-6  -3.19003e-6  -3.15547e-6  -3.49232e-6  -3.47814e-6  -3.20513e-6  -3.47726e-6  -3.60087e-6  -3.24348e-6  -3.12977e-6  -3.54767e-6  -3.60791e-6  -3.40898e-6  -3.37532e-6  -3.82987e-6  -3.69777e-6  -3.28653e-6  -3.57008e-6  -3.60446e-6  -3.55194e-6  -3.40641e-6  -3.30716e-6  -3.42102e-6  -3.50532e-6  -3.61651e-6  -3.34337e-6  -3.62183e-6  -3.57327e-6  -3.46735e-6  -3.56202e-6  -3.28118e-6  -3.74781e-6  -3.85651e-6  -3.38259e-6  -4.24456e-6  -3.78134e-6  -3.81921e-6  -3.7061e-6  -3.76805e-6  -3.30187e-6  -3.74707e-6  -3.70753e-6  -3.46954e-6  -3.91564e-6  -4.0458e-6  -3.6815e-6  -3.5814e-6  -3.5099e-6  -3.99477e-6  -3.48375e-6  -3.99621e-6  -3.70383e-6  -3.29933e-6  -4.00285e-6  -3.73496e-6  -3.67065e-6  -3.95869e-6  -4.08164e-6  -3.81253e-6  -4.06215e-6  -3.62776e-6  -4.25812e-6  -3.68291e-6  -4.16993e-6  -3.65033e-6  -3.99862e-6  -4.58378e-6  -3.7461e-6  -4.2155e-6  -4.07831e-6  -4.06523e-6  -4.6928e-6  -3.74959e-6  -4.58215e-6  -4.19251e-6  -4.53681e-6  -4.39653e-6  -3.89193e-6  -4.00561e-6  -4.66314e-6  -5.55828e-6  -5.46259e-6  -4.32841e-6  -4.44841e-6  -4.22236e-6  -4.67458e-6  -4.5027e-6  -5.13334e-6  -4.64904e-6  -5.04873e-6  -4.37278e-6  -4.87208e-6  -4.60995e-6  -4.73876e-6  -4.34481e-6  -4.73868e-6  -4.50721e-6  -4.66295e-6  -4.34587e-6  -5.17753e-6  -5.00814e-6  -5.86928e-6  -5.36143e-6  -5.43012e-6  -4.38117e-6  -5.34141e-6  -5.53709e-6  -4.67763e-6  -4.66485e-6  -4.39149e-6  -5.93609e-6  -5.74818e-6  -5.36401e-6  -6.00559e-6  -4.52165e-6  -5.46947e-6  -6.10321e-6  -5.47313e-6  -6.5721e-6  -5.35609e-6  -6.59684e-6  -4.96879e-6  -5.45151e-6  -5.38661e-6  -7.59152e-6  -7.18992e-6  -9.69347e-6  -7.47454e-6  -6.68814e-6  -6.87293e-6  -6.78852e-6  -7.99377e-6  -1.04276e-5  -6.76876e-6  -9.54317e-6  -8.99868e-6  -8.26217e-6  -8.94245e-6  -7.81388e-6  -8.83332e-6  -6.23082e-6  -9.49138e-6  -8.79909e-6  -7.77925e-6  -7.75142e-6
+1200 Eigenvalues converges, out of 1200 requested.
+Running with beta = 32
+Running with l = 60
+Starting Davidson with n_aux = 512, l_buffer = 90, lc = 61, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 0.8656922926223112
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 0.18084421183679666
+Iter 3: V_size = 128, Converged = 0, ‖r‖ (largest λ) = 0.060623910912410116
+Iter 4: V_size = 218, Converged = 0, ‖r‖ (largest λ) = 0.09164873999488632
+Iter 5: V_size = 308, Converged = 0, ‖r‖ (largest λ) = 0.49834366829223853
+Iter 6: V_size = 394, Converged = 4, ‖r‖ (largest λ) = 0.11034496814644347
+Iter 7: V_size = 480, Converged = 4, ‖r‖ (largest λ) = 0.007484730182962817
+Iter 8: V_size = 172, Converged = 4, ‖r‖ (largest λ) = 0.00011806341109952234
+Iter 9: V_size = 258, Converged = 4, ‖r‖ (largest λ) = 3.6163288267971657e-6
+Converged all required eigenvalues.
+318.489424 seconds (1.97 M allocations: 134.864 GiB, 1.02% gc time)
+Number of FLOPs: 4372274410042
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+1×60 adjoint(::Vector{Float64}) with eltype Float64:
+ -3.55271e-15  7.10543e-15  0.0  5.32907e-15  0.0  0.0  8.88178e-15  -7.10543e-15  -1.77636e-15  5.32907e-15  0.0  1.77636e-15  -1.77636e-15  -1.77636e-15  -1.77636e-15  0.0  4.44089e-15  5.32907e-15  3.55271e-15  -2.66454e-15  0.0  0.0  8.88178e-16  -2.66454e-15  -8.88178e-16  -2.66454e-15  1.33227e-15  1.33227e-15  -2.66454e-15  1.77636e-15  -1.77636e-15  8.88178e-16  1.77636e-15  -8.88178e-16  1.33227e-15  -4.44089e-16  -1.33227e-15  1.33227e-15  4.44089e-16  0.0  2.22045e-15  2.66454e-15  -2.22045e-15  -1.77636e-15  -8.88178e-16  -2.22045e-15  2.66454e-15  -4.88498e-15  3.55271e-15  0.0  -1.77636e-15  -3.55271e-15  -8.88178e-16  2.22045e-15  -1.77636e-15  -4.44089e-16  1.77636e-15  -1.33227e-15  2.22045e-15  4.21885e-15
+60 Eigenvalues converges, out of 60 requested.
+Running with l = 300
+Starting Davidson with n_aux = 960, l_buffer = 450, lc = 303, thresh = 0.002, max_iter = 100
+Iter 1: V_size = 60, Converged = 0, ‖r‖ (largest λ) = 0.26486861963827185
+Iter 2: V_size = 120, Converged = 0, ‖r‖ (largest λ) = 0.06605965136343936
+Iter 3: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.024614027791462368
+Iter 4: V_size = 480, Converged = 0, ‖r‖ (largest λ) = 0.005532686722171159
+Iter 5: V_size = 929, Converged = 1, ‖r‖ (largest λ) = 0.0012823894690469453
+Iter 6: V_size = 882, Converged = 9, ‖r‖ (largest λ) = 0.006959442605831579
+Iter 7: V_size = 882, Converged = 9, ‖r‖ (largest λ) = 0.007446652446262207
+Iter 8: V_size = 878, Converged = 11, ‖r‖ (largest λ) = 0.003944300837591246
+Iter 9: V_size = 878, Converged = 11, ‖r‖ (largest λ) = 0.002790537558587821
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 4807
+Iter 10: V_size = 878, Converged = 11, ‖r‖ (largest λ) = 0.002077002426359225
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 1250
+Iter 11: V_size = 394, Converged = 253, ‖r‖ (largest λ) = 0.001598832248191918
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 1238
+Iter 12: V_size = 591, Converged = 253, ‖r‖ (largest λ) = 0.0013222699873992032
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 1250
+Iter 13: V_size = 788, Converged = 253, ‖r‖ (largest λ) = 0.0012850718777263008
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 775
+Iter 14: V_size = 356, Converged = 272, ‖r‖ (largest λ) = 0.0012518584235697607
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 751
+Iter 15: V_size = 534, Converged = 272, ‖r‖ (largest λ) = 0.0009254552463186684
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 756
+Iter 16: V_size = 712, Converged = 272, ‖r‖ (largest λ) = 0.0007942224867983689
+Hybrid Davidson-JD corrections at iteration 17
+Total MINRES iterations: 712
+Iter 17: V_size = 888, Converged = 274, ‖r‖ (largest λ) = 0.0008174465126279402
+Hybrid Davidson-JD corrections at iteration 18
+Total MINRES iterations: 687
+Iter 18: V_size = 352, Converged = 274, ‖r‖ (largest λ) = 0.0007996845660491665
+Hybrid Davidson-JD corrections at iteration 19
+Total MINRES iterations: 725
+Iter 19: V_size = 528, Converged = 274, ‖r‖ (largest λ) = 0.005994294586611405
+Hybrid Davidson-JD corrections at iteration 20
+Total MINRES iterations: 725
+Iter 20: V_size = 704, Converged = 274, ‖r‖ (largest λ) = 0.0066368061110194335
+Hybrid Davidson-JD corrections at iteration 21
+Total MINRES iterations: 596
+Iter 21: V_size = 875, Converged = 279, ‖r‖ (largest λ) = 0.004458216837955541
+Hybrid Davidson-JD corrections at iteration 22
+Total MINRES iterations: 552
+Iter 22: V_size = 342, Converged = 279, ‖r‖ (largest λ) = 0.00041147898660526017
+Hybrid Davidson-JD corrections at iteration 23
+Total MINRES iterations: 600
+Iter 23: V_size = 513, Converged = 279, ‖r‖ (largest λ) = 0.005927311409612454
+Hybrid Davidson-JD corrections at iteration 24
+Total MINRES iterations: 600
+Iter 24: V_size = 684, Converged = 279, ‖r‖ (largest λ) = 0.006372319201735936
+Hybrid Davidson-JD corrections at iteration 25
+Total MINRES iterations: 561
+Iter 25: V_size = 854, Converged = 280, ‖r‖ (largest λ) = 0.003881720990903676
+Hybrid Davidson-JD corrections at iteration 26
+Total MINRES iterations: 543
+Iter 26: V_size = 340, Converged = 280, ‖r‖ (largest λ) = 0.00255788990234856
+Hybrid Davidson-JD corrections at iteration 27
+Total MINRES iterations: 575
+Iter 27: V_size = 510, Converged = 280, ‖r‖ (largest λ) = 0.007584449088832547
+Hybrid Davidson-JD corrections at iteration 28
+Total MINRES iterations: 575
+Iter 28: V_size = 680, Converged = 280, ‖r‖ (largest λ) = 0.006203820514315107
+Hybrid Davidson-JD corrections at iteration 29
+Total MINRES iterations: 525
+Iter 29: V_size = 848, Converged = 282, ‖r‖ (largest λ) = 0.004041174731250222
+Hybrid Davidson-JD corrections at iteration 30
+Total MINRES iterations: 501
+Iter 30: V_size = 336, Converged = 282, ‖r‖ (largest λ) = 0.0011541787266179742
+Hybrid Davidson-JD corrections at iteration 31
+Total MINRES iterations: 525
+Iter 31: V_size = 504, Converged = 282, ‖r‖ (largest λ) = 0.007169085353603109
+Hybrid Davidson-JD corrections at iteration 32
+Total MINRES iterations: 519
+Iter 32: V_size = 672, Converged = 282, ‖r‖ (largest λ) = 0.006689869220670153
+Hybrid Davidson-JD corrections at iteration 33
+Total MINRES iterations: 500
+Iter 33: V_size = 839, Converged = 283, ‖r‖ (largest λ) = 0.004395587996279567
+Hybrid Davidson-JD corrections at iteration 34
+Total MINRES iterations: 476
+Iter 34: V_size = 334, Converged = 283, ‖r‖ (largest λ) = 0.0027751162141517382
+Hybrid Davidson-JD corrections at iteration 35
+Total MINRES iterations: 500
+Iter 35: V_size = 501, Converged = 283, ‖r‖ (largest λ) = 0.007858337549370717
+Hybrid Davidson-JD corrections at iteration 36
+Total MINRES iterations: 484
+Iter 36: V_size = 668, Converged = 283, ‖r‖ (largest λ) = 0.006508835845877015
+Hybrid Davidson-JD corrections at iteration 37
+Total MINRES iterations: 475
+Iter 37: V_size = 834, Converged = 284, ‖r‖ (largest λ) = 0.004264702597532417
+Hybrid Davidson-JD corrections at iteration 38
+Total MINRES iterations: 451
+Iter 38: V_size = 332, Converged = 284, ‖r‖ (largest λ) = 0.0012230100574588062
+Hybrid Davidson-JD corrections at iteration 39
+Total MINRES iterations: 475
+Iter 39: V_size = 498, Converged = 284, ‖r‖ (largest λ) = 0.007794424725467003
+Hybrid Davidson-JD corrections at iteration 40
+Total MINRES iterations: 475
+Iter 40: V_size = 664, Converged = 284, ‖r‖ (largest λ) = 0.006799527144582955
+Hybrid Davidson-JD corrections at iteration 41
+Total MINRES iterations: 475
+Iter 41: V_size = 830, Converged = 284, ‖r‖ (largest λ) = 0.0044382951792655105
+Hybrid Davidson-JD corrections at iteration 42
+Total MINRES iterations: 475
+Iter 42: V_size = 332, Converged = 284, ‖r‖ (largest λ) = 0.0027867857656892242
+Hybrid Davidson-JD corrections at iteration 43
+Total MINRES iterations: 475
+Iter 43: V_size = 498, Converged = 284, ‖r‖ (largest λ) = 0.0017176801456059876
+Hybrid Davidson-JD corrections at iteration 44
+Total MINRES iterations: 459
+Iter 44: V_size = 664, Converged = 284, ‖r‖ (largest λ) = 0.0012876214890357527
+Hybrid Davidson-JD corrections at iteration 45
+Total MINRES iterations: 467
+Iter 45: V_size = 830, Converged = 284, ‖r‖ (largest λ) = 0.001068424677859563
+Hybrid Davidson-JD corrections at iteration 46
+Total MINRES iterations: 475
+Iter 46: V_size = 332, Converged = 284, ‖r‖ (largest λ) = 0.0010941217493295554
+Hybrid Davidson-JD corrections at iteration 47
+Total MINRES iterations: 465
+Iter 47: V_size = 498, Converged = 284, ‖r‖ (largest λ) = 0.000718242018061877
+Hybrid Davidson-JD corrections at iteration 48
+Total MINRES iterations: 475
+Iter 48: V_size = 664, Converged = 284, ‖r‖ (largest λ) = 0.000604433156331682
+Hybrid Davidson-JD corrections at iteration 49
+Total MINRES iterations: 475
+Iter 49: V_size = 830, Converged = 284, ‖r‖ (largest λ) = 0.0006922805337286832
+Hybrid Davidson-JD corrections at iteration 50
+Total MINRES iterations: 475
+Iter 50: V_size = 332, Converged = 284, ‖r‖ (largest λ) = 0.000860499365417881
+Hybrid Davidson-JD corrections at iteration 51
+Total MINRES iterations: 465
+Iter 51: V_size = 498, Converged = 284, ‖r‖ (largest λ) = 0.0005022705507593508
+Hybrid Davidson-JD corrections at iteration 52
+Total MINRES iterations: 469
+Iter 52: V_size = 664, Converged = 284, ‖r‖ (largest λ) = 0.00039091177248255115
+Hybrid Davidson-JD corrections at iteration 53
+Total MINRES iterations: 469
+Iter 53: V_size = 830, Converged = 284, ‖r‖ (largest λ) = 0.00039464804859506644
+Hybrid Davidson-JD corrections at iteration 54
+Total MINRES iterations: 475
+Iter 54: V_size = 332, Converged = 284, ‖r‖ (largest λ) = 0.0004747025886467935
+Hybrid Davidson-JD corrections at iteration 55
+Total MINRES iterations: 475
+Iter 55: V_size = 498, Converged = 284, ‖r‖ (largest λ) = 0.0003088845727924134
+Hybrid Davidson-JD corrections at iteration 56
+Total MINRES iterations: 475
+Iter 56: V_size = 664, Converged = 284, ‖r‖ (largest λ) = 0.000266612529733002
+Hybrid Davidson-JD corrections at iteration 57
+Total MINRES iterations: 467
+Iter 57: V_size = 830, Converged = 284, ‖r‖ (largest λ) = 0.0003002911976788108
+Hybrid Davidson-JD corrections at iteration 58
+Total MINRES iterations: 475
+Iter 58: V_size = 332, Converged = 284, ‖r‖ (largest λ) = 0.0003726266452003293
+Hybrid Davidson-JD corrections at iteration 59
+Total MINRES iterations: 475
+Iter 59: V_size = 498, Converged = 284, ‖r‖ (largest λ) = 0.0002389155339425242
+Hybrid Davidson-JD corrections at iteration 60
+Total MINRES iterations: 450
+Iter 60: V_size = 663, Converged = 285, ‖r‖ (largest λ) = 0.00019578725857037044
+Hybrid Davidson-JD corrections at iteration 61
+Total MINRES iterations: 450
+Iter 61: V_size = 828, Converged = 285, ‖r‖ (largest λ) = 0.00033558015359133614
+Hybrid Davidson-JD corrections at iteration 62
+Total MINRES iterations: 450
+Iter 62: V_size = 330, Converged = 285, ‖r‖ (largest λ) = 0.0002513667050867007
+Hybrid Davidson-JD corrections at iteration 63
+Total MINRES iterations: 450
+Iter 63: V_size = 495, Converged = 285, ‖r‖ (largest λ) = 0.00017500918810134868
+Hybrid Davidson-JD corrections at iteration 64
+Total MINRES iterations: 450
+Iter 64: V_size = 660, Converged = 285, ‖r‖ (largest λ) = 0.00015678144664478405
+Hybrid Davidson-JD corrections at iteration 65
+Total MINRES iterations: 436
+Iter 65: V_size = 825, Converged = 285, ‖r‖ (largest λ) = 0.0001810567340833676
+Hybrid Davidson-JD corrections at iteration 66
+Total MINRES iterations: 450
+Iter 66: V_size = 330, Converged = 285, ‖r‖ (largest λ) = 0.00023384886839154082
+Hybrid Davidson-JD corrections at iteration 67
+Total MINRES iterations: 450
+Iter 67: V_size = 495, Converged = 285, ‖r‖ (largest λ) = 0.00015909513798822796
+Hybrid Davidson-JD corrections at iteration 68
+Total MINRES iterations: 450
+Iter 68: V_size = 660, Converged = 285, ‖r‖ (largest λ) = 0.00013544612282423242
+Hybrid Davidson-JD corrections at iteration 69
+Total MINRES iterations: 425
+Iter 69: V_size = 824, Converged = 286, ‖r‖ (largest λ) = 0.00014170309886951056
+Hybrid Davidson-JD corrections at iteration 70
+Total MINRES iterations: 401
+Iter 70: V_size = 328, Converged = 286, ‖r‖ (largest λ) = 0.0002569934747876633
+Hybrid Davidson-JD corrections at iteration 71
+Total MINRES iterations: 425
+Iter 71: V_size = 492, Converged = 286, ‖r‖ (largest λ) = 0.006928273031820168
+Hybrid Davidson-JD corrections at iteration 72
+Total MINRES iterations: 425
+Iter 72: V_size = 656, Converged = 286, ‖r‖ (largest λ) = 0.006555811976022814
+Hybrid Davidson-JD corrections at iteration 73
+Total MINRES iterations: 425
+Iter 73: V_size = 820, Converged = 286, ‖r‖ (largest λ) = 0.004671100923195538
+Hybrid Davidson-JD corrections at iteration 74
+Total MINRES iterations: 425
+Iter 74: V_size = 328, Converged = 286, ‖r‖ (largest λ) = 0.003654953644393421
+Hybrid Davidson-JD corrections at iteration 75
+Total MINRES iterations: 425
+Iter 75: V_size = 492, Converged = 286, ‖r‖ (largest λ) = 0.002351645137810085
+Hybrid Davidson-JD corrections at iteration 76
+Total MINRES iterations: 425
+Iter 76: V_size = 656, Converged = 286, ‖r‖ (largest λ) = 0.0017973302552391891
+Hybrid Davidson-JD corrections at iteration 77
+Total MINRES iterations: 425
+Iter 77: V_size = 820, Converged = 286, ‖r‖ (largest λ) = 0.0014794304930303747
+Hybrid Davidson-JD corrections at iteration 78
+Total MINRES iterations: 400
+Iter 78: V_size = 326, Converged = 287, ‖r‖ (largest λ) = 0.0012848312256132101
+Hybrid Davidson-JD corrections at iteration 79
+Total MINRES iterations: 400
+Iter 79: V_size = 489, Converged = 287, ‖r‖ (largest λ) = 0.0008838626887053152
+Hybrid Davidson-JD corrections at iteration 80
+Total MINRES iterations: 400
+Iter 80: V_size = 652, Converged = 287, ‖r‖ (largest λ) = 0.0007361908498222591
+Hybrid Davidson-JD corrections at iteration 81
+Total MINRES iterations: 400
+Iter 81: V_size = 815, Converged = 287, ‖r‖ (largest λ) = 0.0007113822734822389
+Hybrid Davidson-JD corrections at iteration 82
+Total MINRES iterations: 400
+Iter 82: V_size = 326, Converged = 287, ‖r‖ (largest λ) = 0.0006870508082402055
+Hybrid Davidson-JD corrections at iteration 83
+Total MINRES iterations: 400
+Iter 83: V_size = 489, Converged = 287, ‖r‖ (largest λ) = 0.00045612873761019914
+Hybrid Davidson-JD corrections at iteration 84
+Total MINRES iterations: 375
+Iter 84: V_size = 651, Converged = 288, ‖r‖ (largest λ) = 0.0003664357471791217
+Hybrid Davidson-JD corrections at iteration 85
+Total MINRES iterations: 375
+Iter 85: V_size = 813, Converged = 288, ‖r‖ (largest λ) = 0.00014721484228337822
+Hybrid Davidson-JD corrections at iteration 86
+Total MINRES iterations: 375
+Iter 86: V_size = 324, Converged = 288, ‖r‖ (largest λ) = 0.00036364064877552607
+Hybrid Davidson-JD corrections at iteration 87
+Total MINRES iterations: 375
+Iter 87: V_size = 486, Converged = 288, ‖r‖ (largest λ) = 0.00024964879610913705
+Hybrid Davidson-JD corrections at iteration 88
+Total MINRES iterations: 350
+Iter 88: V_size = 647, Converged = 289, ‖r‖ (largest λ) = 0.00021179673679978293
+Hybrid Davidson-JD corrections at iteration 89
+Total MINRES iterations: 350
+Iter 89: V_size = 808, Converged = 289, ‖r‖ (largest λ) = 0.00012341013193328462
+Hybrid Davidson-JD corrections at iteration 90
+Total MINRES iterations: 350
+Iter 90: V_size = 322, Converged = 289, ‖r‖ (largest λ) = 0.0002422703952407602
+Hybrid Davidson-JD corrections at iteration 91
+Total MINRES iterations: 350
+Iter 91: V_size = 483, Converged = 289, ‖r‖ (largest λ) = 0.00016803364790275946
+Hybrid Davidson-JD corrections at iteration 92
+Total MINRES iterations: 350
+Iter 92: V_size = 644, Converged = 289, ‖r‖ (largest λ) = 0.00014502225542565613
+Hybrid Davidson-JD corrections at iteration 93
+Total MINRES iterations: 350
+Iter 93: V_size = 805, Converged = 289, ‖r‖ (largest λ) = 0.00015031702969222938
+Hybrid Davidson-JD corrections at iteration 94
+Total MINRES iterations: 333
+Iter 94: V_size = 322, Converged = 289, ‖r‖ (largest λ) = 0.0001685833122203731
+Hybrid Davidson-JD corrections at iteration 95
+Total MINRES iterations: 318
+Iter 95: V_size = 483, Converged = 289, ‖r‖ (largest λ) = 0.0001222961961876966
+Hybrid Davidson-JD corrections at iteration 96
+Total MINRES iterations: 318
+Iter 96: V_size = 644, Converged = 289, ‖r‖ (largest λ) = 0.00010918936040124707
+Hybrid Davidson-JD corrections at iteration 97
+Total MINRES iterations: 350
+Iter 97: V_size = 805, Converged = 289, ‖r‖ (largest λ) = 0.00011516947353319555
+Hybrid Davidson-JD corrections at iteration 98
+Total MINRES iterations: 350
+slurmstepd-andoria01: error: *** JOB 25241 ON andoria01 CANCELLED AT 2025-09-27T12:55:38 DUE TO TIME LIMIT ***
+
+[65360] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:429
+dsymv_kernel_4x4.constprop.0 at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_U_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_64_ at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+symv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/blas.jl:815
+gemv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:452
+generic_matvecmul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:79 [inlined]
+_mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:73 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:70 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:253 [inlined]
+* at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:60 [inlined]
+#2 at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:30
+_unsafe_mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/functionmap.jl:127 [inlined]
+mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/LinearMaps.jl:166 [inlined]
+iterate at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:104
+iterate at ./iterators.jl:206 [inlined]
+#minres!#25 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:230
+minres! at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:200 [inlined]
+#minres#26 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244 [inlined]
+minres at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244
+unknown function (ip: 0x7fe605dfbfbd)
+#correction_equations_minres#1 at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:42
+correction_equations_minres at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:13
+unknown function (ip: 0x7fe605df6466)
+davidson at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:341
+davidson at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:154 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:396
+unknown function (ip: 0x7fe605db7462)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:436
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 1343920592 (Pool: 1343919877; Big: 715); GC: 142660
+Iter 98: V_size = 322, Converged = 289, ‖r‖ (largest λ) = 0.00013248399247495056
+Hybrid Davidson-JD corrections at iteration 99
+Total MINRES iterations: 350
+Iter 99: V_size = 483, Converged = 289, ‖r‖ (largest λ) = 0.00010058987129672759
+Hybrid Davidson-JD corrections at iteration 100
+Total MINRES iterations: 338
+Iter 100: V_size = 644, Converged = 289, ‖r‖ (largest λ) = 9.197811996625134e-5
+Max iterations (100) reached without convergence. Skipping this case.
+61861.080243 seconds (421.67 M allocations: 21.442 TiB, 0.48% gc time, 0.00% compilation time)
+Number of FLOPs: 199530930225396
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+1×289 adjoint(::Vector{Float64}) with eltype Float64:
+ 7.10543e-15  -3.55271e-15  7.10543e-15  3.55271e-15  -8.88178e-15  0.0  5.32907e-15  -1.59872e-14  0.0  0.0  -4.44089e-15  0.0  2.66454e-15  1.77636e-15  0.0  0.0  1.77636e-15  2.66454e-15  3.55271e-15  -8.88178e-16  8.88178e-16  0.0  0.0  -3.55271e-15  8.88178e-16  -1.77636e-15  2.22045e-15  -2.22045e-15  -1.77636e-15  1.33227e-15  -8.88178e-16  -8.88178e-16  0.0  4.44089e-16  1.33227e-15  1.77636e-15  4.44089e-16  1.77636e-15  8.88178e-16  2.66454e-15  1.33227e-15  -4.44089e-16  -2.66454e-15  -1.33227e-15  1.77636e-15  -3.10862e-15  1.33227e-15  -2.22045e-15  -1.33227e-15  0.0  -1.33227e-15  4.44089e-16  -1.33227e-15  8.88178e-16  -4.44089e-16  8.88178e-16  0.0  -1.77636e-15  4.44089e-16  -2.22045e-16  1.9984e-15  8.88178e-16  -4.44089e-16  -8.88178e-16  8.88178e-16  4.44089e-16  1.77636e-15  -4.44089e-16  2.22045e-16  2.22045e-16  8.88178e-16  -8.88178e-16  -1.11022e-15  -4.44089e-16  -3.10862e-15  -4.44089e-16  1.55431e-15  8.88178e-16  -1.11022e-15  0.0  0.0  2.22045e-16  1.55431e-15  1.55431e-15  1.33227e-15  2.22045e-15  1.9984e-15  6.66134e-16  -1.33227e-15  1.11022e-15  -1.11022e-15  -1.55431e-15  -8.88178e-16  1.33227e-15  1.77636e-15  1.11022e-15  6.66134e-16  1.33227e-15  1.33227e-15  0.0  1.55431e-15  -8.88178e-16  -4.44089e-16  1.33227e-15  4.44089e-16  -4.44089e-16  -4.44089e-16  0.0  -8.88178e-16  -1.77636e-15  -3.41949e-14  -2.70894e-14  -5.19584e-14  -3.01537e-13  -2.85105e-13  -3.62799e-12  -6.3507e-12  -3.0731e-13  -1.57223e-11  -4.93392e-11  -2.31469e-10  -1.67372e-10  -3.0229e-10  -2.89091e-10  -1.86327e-10  -1.35095e-10  -6.9523e-10  -6.76719e-10  -6.35432e-10  -9.8822e-10  -6.08074e-10  -9.21884e-10  -2.42615e-9  -2.67769e-9  -3.07423e-9  -2.07814e-9  -2.33559e-9  -2.91352e-9  -3.32526e-9  -2.38606e-9  -2.25757e-9  -3.55212e-9  -5.13421e-9  -3.13349e-9  -3.11354e-9  -7.01524e-9  -6.70584e-9  -1.00831e-8  -3.87215e-9  -8.11646e-9  -8.17909e-9  -4.08527e-9  -7.1253e-9  -1.44715e-8  -1.08837e-8  -2.03061e-8  -2.21322e-8  -2.06127e-8  -3.96102e-8  -2.13504e-8  -5.33955e-8  -5.87126e-8  -4.47303e-8  -3.71706e-8  -5.03585e-8  -5.64289e-8  -5.31705e-8  -5.67483e-8  -1.18097e-7  -9.15982e-8  -9.76251e-8  -8.67835e-8  -6.91475e-8  -1.66311e-7  -1.40508e-7  -1.41161e-7  -1.6932e-7  -1.86867e-7  -1.15821e-7  -1.40459e-7  -1.69334e-7  -1.82832e-7  -3.71875e-7  -3.48316e-7  -3.82923e-7  -2.80667e-7  -3.03655e-7  -4.83415e-7  -4.7808e-7  -3.77956e-7  -4.07706e-7  -2.38681e-7  -3.72914e-7  -3.28891e-7  -6.30103e-7  -8.13578e-7  -3.72849e-7  -7.72828e-7  -4.18303e-7  -8.51525e-7  -4.4716e-7  -6.31525e-7  -6.98025e-7  -7.65371e-7  -4.14813e-7  -9.45419e-7  -1.21416e-6  -1.2077e-6  -7.54369e-7  -1.51005e-6  -1.24536e-6  -1.18325e-6  -8.87216e-7  -1.37326e-6  -1.74184e-6  -1.16921e-6  -1.96659e-6  -1.74627e-6  -1.54812e-6  -1.31127e-6  -1.6888e-6  -2.11286e-6  -1.53272e-6  -1.59366e-6  -1.40682e-6  -2.59513e-6  -2.31804e-6  -2.11815e-6  -1.96951e-6  -2.85072e-6  -2.33475e-6  -3.11085e-6  -2.109e-6  -3.2361e-6  -3.75425e-6  -2.6824e-6  -5.23524e-6  -4.15594e-6  -2.67086e-6  -3.89439e-6  -5.44891e-6  -5.79967e-6  -7.22183e-6  -4.64246e-6  -3.98683e-6  -6.49474e-6  -7.01785e-6  -7.06254e-6  -8.34195e-6  -8.18136e-6  -9.92399e-6  -8.55178e-6  -8.98088e-6  -1.11982e-5  -6.76221e-6  -1.44901e-5  -1.21345e-5  -1.60662e-5  -1.0076e-5  -1.16592e-5  -1.46301e-5  -1.07473e-5  -1.33358e-5  -1.03822e-5  -1.94784e-5  -1.31945e-5  -1.47926e-5  -2.05257e-5  -2.11715e-5  -1.11264e-5  -1.84306e-5  -2.0636e-5  -2.11137e-5  -2.00163e-5  -2.1612e-5  -2.22794e-5  -2.38834e-5  -2.15269e-5  -2.04791e-5  -0.000969974  -0.00155589  -0.0052953  -0.00670291  -0.00705662  -0.00715339  -0.00674035  -0.00702402  -0.0103685  -0.0109296
+289 Eigenvalues converges, out of 300 requested.
+Running with l = 600
+Starting Davidson with n_aux = 1920, l_buffer = 900, lc = 606, thresh = 0.0025, max_iter = 100
+Iter 1: V_size = 120, Converged = 0, ‖r‖ (largest λ) = 0.10358086508213564
+Iter 2: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.025588054618247306
+Iter 3: V_size = 480, Converged = 0, ‖r‖ (largest λ) = 0.005422886881735896
+Iter 4: V_size = 960, Converged = 0, ‖r‖ (largest λ) = 0.0006278081963591829
+Iter 5: V_size = 1857, Converged = 3, ‖r‖ (largest λ) = 7.638828250977523e-5
+Iter 6: V_size = 1794, Converged = 3, ‖r‖ (largest λ) = 0.000309542107819557
+Iter 7: V_size = 1794, Converged = 3, ‖r‖ (largest λ) = 0.000432750921079079
+Iter 8: V_size = 1794, Converged = 3, ‖r‖ (largest λ) = 0.00019612600253548308
+Iter 9: V_size = 1302, Converged = 249, ‖r‖ (largest λ) = 0.0001402100988637185
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 8913
+Iter 10: V_size = 1302, Converged = 249, ‖r‖ (largest λ) = 0.00011264657211560328
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 8869
+Iter 11: V_size = 1302, Converged = 249, ‖r‖ (largest λ) = 8.74755429014731e-5
+Converged all required eigenvalues.
+26267.614424 seconds (129.28 M allocations: 8.135 TiB, 0.54% gc time)
+Number of FLOPs: 63136313897081
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_formaldehyde_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+1×600 adjoint(::Vector{Float64}) with eltype Float64:
+ -1.06581e-14  0.0  2.84217e-14  1.77636e-15  -1.77636e-15  0.0  5.32907e-15  -1.24345e-14  0.0  5.32907e-15  -8.88178e-16  -8.88178e-16  8.88178e-16  0.0  0.0  1.77636e-15  8.88178e-16  8.88178e-16  1.77636e-15  -8.88178e-16  3.55271e-15  0.0  -2.66454e-15  -1.77636e-15  4.44089e-15  -3.55271e-15  0.0  1.77636e-15  0.0  1.33227e-15  -1.33227e-15  0.0  3.55271e-15  2.22045e-15  -1.33227e-15  4.44089e-16  4.88498e-15  3.9968e-15  3.10862e-15  8.88178e-16  2.22045e-15  8.88178e-16  -5.77316e-15  8.88178e-16  1.33227e-15  -1.33227e-15  0.0  -4.44089e-15  0.0  -2.22045e-15  -4.44089e-16  -1.33227e-15  4.44089e-16  1.33227e-15  -5.32907e-15  -4.44089e-15  -4.44089e-16  -2.66454e-15  -2.66454e-15  1.77636e-15  -5.10703e-15  2.44249e-15  1.9984e-15  1.9984e-15  5.77316e-15  6.66134e-16  2.88658e-15  6.66134e-16  -1.9984e-15  1.77636e-15  -3.9968e-15  1.77636e-15  -3.55271e-15  -3.77476e-15  2.22045e-15  -4.44089e-15  7.10543e-15  5.10703e-15  -1.77636e-15  -4.44089e-16  -3.10862e-15  -2.66454e-15  3.55271e-15  1.33227e-15  1.11022e-15  5.10703e-15  5.55112e-15  4.21885e-15  -7.99361e-15  4.88498e-15  -7.77156e-15  -8.88178e-16  -4.44089e-16  -2.44249e-15  8.43769e-15  -4.44089e-16  6.43929e-15  4.44089e-15  3.10862e-15  7.99361e-15  3.33067e-15  4.88498e-15  4.66294e-15  -5.10703e-15  -9.32587e-15  -4.21885e-15  -5.55112e-15  -9.32587e-15  6.66134e-16  5.77316e-15  8.88178e-16  -2.66454e-15  -9.76996e-15  -6.21725e-15  -1.11022e-15  -1.13243e-14  -1.02141e-14  5.77316e-15  -9.99201e-15  -1.08802e-14  -2.34257e-13  -5.10703e-14  -4.9194e-13  -2.28706e-13  -1.1614e-12  -1.20104e-12  -1.12682e-10  -1.99314e-10  -2.80519e-10  -2.80353e-10  -2.72364e-10  -2.71917e-10  -2.54376e-10  -6.92526e-10  -3.40319e-10  -4.74479e-10  -7.07516e-10  -1.22141e-9  -1.03609e-9  -6.95477e-10  -6.59421e-10  -9.3878e-10  -7.84542e-10  -1.90058e-9  -6.99386e-10  -1.01592e-9  -1.83343e-9  -2.30301e-9  -1.10728e-9  -1.25289e-9  -2.46382e-9  -2.42548e-9  -1.31176e-9  -2.42021e-9  -3.23178e-9  -3.61816e-9  -4.53212e-9  -4.12461e-9  -4.43288e-9  -8.31373e-9  -7.56675e-9  -7.36178e-9  -7.74814e-9  -8.43879e-9  -8.82275e-9  -7.38049e-9  -1.01994e-8  -1.26983e-8  -1.1293e-8  -9.70188e-9  -1.21636e-8  -6.0104e-9  -1.34334e-8  -2.0499e-8  -1.50431e-8  -2.2948e-8  -2.78896e-8  -2.18015e-8  -2.03655e-8  -1.96583e-8  -2.67922e-8  -3.05514e-8  -3.08249e-8  -2.08898e-8  -3.72765e-8  -2.755e-8  -2.72901e-8  -3.73836e-8  -2.51927e-8  -2.54578e-8  -4.61653e-8  -2.96695e-8  -3.22455e-8  -2.45094e-8  -4.78168e-8  -3.99675e-8  -4.84683e-8  -4.1491e-8  -5.08993e-8  -7.25852e-8  -3.80678e-8  -4.3289e-8  -4.5521e-8  -5.38288e-8  -4.92564e-8  -5.80889e-8  -8.04841e-8  -8.42254e-8  -6.87905e-8  -6.12907e-8  -1.10048e-7  -8.34618e-8  -8.62471e-8  -9.6895e-8  -6.08742e-8  -7.85559e-8  -6.11336e-8  -8.63366e-8  -7.65742e-8  -9.57934e-8  -9.17331e-8  -1.07821e-7  -9.67851e-8  -7.36956e-8  -1.36328e-7  -8.76073e-8  -1.42861e-7  -1.32297e-7  -1.6731e-7  -9.08281e-8  -1.28375e-7  -1.57613e-7  -1.30722e-7  -1.32371e-7  -1.61578e-7  -1.98096e-7  -2.33348e-7  -1.50232e-7  -2.16059e-7  -1.81502e-7  -2.42499e-7  -2.31184e-7  -2.03941e-7  -1.94444e-7  -2.5231e-7  -6.00221e-8  -4.65341e-8  -5.11876e-8  -3.59713e-8  -4.97327e-8  -2.05869e-7  -1.52005e-7  -2.37745e-7  -2.50264e-7  -4.78207e-8  -7.3733e-8  -6.39997e-8  -8.17887e-8  -4.61056e-8  -4.80967e-8  -5.76787e-8  -6.14158e-8  -6.96348e-8  -4.93963e-8  -7.2723e-8  -8.51469e-8  -9.22395e-8  -1.08113e-7  -5.68382e-8  -5.51668e-8  -6.02224e-8  -9.35871e-8  -1.0898e-7  -9.26428e-8  -1.05279e-7  -1.08639e-7  -1.22007e-7  -1.04484e-7  -9.41695e-8  -1.341e-7  -1.28303e-7  -1.10224e-7  -1.31398e-7  -1.24037e-7  -8.80712e-8  -1.35656e-7  -1.21843e-7  -1.57254e-7  -1.34247e-7  -1.56085e-7  -1.76322e-7  -1.41444e-7  -1.25939e-7  -1.30721e-7  -1.45548e-7  -1.82679e-7  -1.31816e-7  -1.23069e-7  -1.91108e-7  -1.72561e-7  -1.98783e-7  -1.70384e-7  -2.85268e-7  -2.08934e-7  -2.22957e-7  -2.83573e-7  -2.18596e-7  -1.72611e-7  -2.37033e-7  -1.8928e-7  -2.45323e-7  -2.66842e-7  -2.62238e-7  -2.3275e-7  -2.96513e-7  -2.38607e-7  -2.76437e-7  -3.38599e-7  -3.49133e-7  -2.29612e-7  -3.6366e-7  -3.15638e-7  -3.49108e-7  -3.35894e-7  -3.13055e-7  -3.81445e-7  -2.27424e-7  -4.36103e-7  -4.16316e-7  -2.97521e-7  -3.62687e-7  -3.26698e-7  -4.17169e-7  -4.77347e-7  -3.17253e-7  -4.42445e-7  -4.01793e-7  -5.10419e-7  -4.85511e-7  -5.93901e-7  -4.49785e-7  -6.23299e-7  -4.55064e-7  -4.83668e-7  -5.36541e-7  -5.81681e-7  -6.34647e-7  -6.37146e-7  -6.77201e-7  -7.05082e-7  -6.35184e-7  -8.34441e-7  -7.53753e-7  -6.53858e-7  -6.64085e-7  -8.32385e-7  -6.99394e-7  -6.02566e-7  -8.5964e-7  -7.80531e-7  -9.82893e-7  -1.1054e-6  -1.23959e-6  -7.99395e-7  -9.77727e-7  -1.33134e-6  -1.2854e-6  -9.83514e-7  -9.72977e-7  -1.39741e-6  -1.16215e-6  -1.06058e-6  -1.16271e-6  -1.31787e-6  -1.25238e-6  -1.0704e-6  -1.44279e-6  -1.34847e-6  -1.48303e-6  -1.40955e-6  -1.57613e-6  -1.1614e-6  -1.48933e-6  -1.66402e-6  -1.6566e-6  -1.22059e-6  -1.42505e-6  -2.05888e-6  -1.23691e-6  -2.0934e-6  -2.13741e-6  -2.13517e-6  -1.58284e-6  -2.58885e-6  -1.64671e-6  -2.10971e-6  -2.79758e-6  -2.42482e-6  -2.60567e-6  -3.43365e-6  -2.0487e-6  -1.79032e-6  -2.3341e-6  -2.00801e-6  -1.75537e-6  -2.42319e-6  -2.07849e-6  -2.12733e-6  -2.12866e-6  -1.61471e-6  -2.45461e-6  -1.89943e-6  -1.90653e-6  -2.40244e-6  -2.04964e-6  -2.27821e-6  -2.3024e-6  -2.20759e-6  -1.92959e-6  -2.67915e-6  -2.79595e-6  -2.54505e-6  -1.83957e-6  -1.8419e-6  -2.26315e-6  -2.50153e-6  -2.37081e-6  -2.9213e-6  -3.30018e-6  -2.54677e-6  -2.71026e-6  -2.75158e-6  -3.65293e-6  -2.53729e-6  -3.10184e-6  -2.49927e-6  -2.67684e-6  -2.82828e-6  -2.35073e-6  -2.79663e-6  -3.06752e-6  -2.84228e-6  -3.34749e-6  -2.92263e-6  -2.93808e-6  -2.73112e-6  -3.24771e-6  -3.14455e-6  -2.96701e-6  -3.08304e-6  -2.43273e-6  -2.68458e-6  -3.31949e-6  -3.36819e-6  -3.45584e-6  -2.60663e-6  -3.42347e-6  -4.17077e-6  -3.09013e-6  -2.74804e-6  -3.35266e-6  -3.12693e-6  -3.45889e-6  -2.99434e-6  -3.58439e-6  -3.315e-6  -2.66745e-6  -3.15899e-6  -3.29012e-6  -3.27923e-6  -3.83173e-6  -2.95228e-6  -2.78422e-6  -3.32084e-6  -2.94447e-6  -2.91395e-6  -2.46649e-6  -2.6078e-6  -3.79376e-6  -3.01843e-6  -4.30273e-6  -3.30002e-6  -3.66089e-6  -2.73074e-6  -3.19518e-6  -3.72516e-6  -3.07148e-6  -2.97115e-6  -3.7387e-6  -3.43322e-6  -3.69159e-6  -3.49017e-6  -3.25017e-6  -3.32023e-6  -4.47195e-6  -3.8587e-6  -3.59317e-6  -3.41994e-6  -4.12258e-6  -3.38535e-6  -2.82056e-6  -3.98641e-6  -4.10995e-6  -4.15671e-6  -3.75953e-6  -3.13127e-6  -3.76146e-6  -3.83753e-6  -4.5295e-6  -4.38911e-6  -4.29242e-6  -3.9094e-6  -3.11971e-6  -3.73178e-6  -4.03983e-6  -4.03374e-6  -3.34072e-6  -4.0399e-6  -4.76737e-6  -4.13106e-6  -4.12668e-6  -3.34885e-6  -4.88997e-6  -3.42307e-6  -3.87278e-6  -3.6935e-6  -3.94983e-6  -3.9127e-6  -4.75805e-6  -4.22396e-6  -3.78541e-6  -3.94117e-6  -3.94774e-6  -3.91912e-6  -4.86632e-6  -4.00251e-6  -4.26692e-6  -3.46935e-6  -4.51133e-6  -3.71254e-6  -3.89531e-6  -4.50056e-6  -4.88376e-6  -3.68903e-6  -3.27664e-6  -3.56529e-6  -4.11681e-6  -4.2114e-6  -3.68107e-6  -4.31907e-6  -4.29328e-6  -4.62624e-6  -4.20213e-6  -4.1571e-6  -3.86801e-6  -4.945e-6  -4.59183e-6  -4.39648e-6  -4.92643e-6  -4.03163e-6  -4.27467e-6  -4.48058e-6  -3.82294e-6  -3.9797e-6  -3.91428e-6  -3.91112e-6  -4.54546e-6  -4.54793e-6  -4.24305e-6  -4.47538e-6  -3.94686e-6  -5.07538e-6  -4.73901e-6  -4.9002e-6  -5.25531e-6  -4.12703e-6  -4.53455e-6  -4.1314e-6  -5.08679e-6  -4.35157e-6  -4.16341e-6  -4.4232e-6  -4.63493e-6  -5.27924e-6  -4.91318e-6  -4.23206e-6  -4.30381e-6  -4.33389e-6  -4.99375e-6  -4.67401e-6  -4.88439e-6  -4.09765e-6  -4.53394e-6  -4.7562e-6  -4.65085e-6  -4.16225e-6  -4.02007e-6  -4.64324e-6  -4.53894e-6  -4.28444e-6
+600 Eigenvalues converges, out of 600 requested.
+Running with l = 1200
+Starting Davidson with n_aux = 3840, l_buffer = 1800, lc = 1212, thresh = 0.003, max_iter = 100
+Iter 1: V_size = 240, Converged = 0, ‖r‖ (largest λ) = 0.032488483234252935
+Iter 2: V_size = 480, Converged = 0, ‖r‖ (largest λ) = 0.005894022566926656
+Iter 3: V_size = 960, Converged = 0, ‖r‖ (largest λ) = 0.0006631194141480979
+Iter 4: V_size = 1920, Converged = 0, ‖r‖ (largest λ) = 3.7134725888781206e-5
+Iter 5: V_size = 3710, Converged = 10, ‖r‖ (largest λ) = 1.9791358956528203e-6
+Iter 6: V_size = 3562, Converged = 19, ‖r‖ (largest λ) = 5.935506079909337e-6
+Iter 7: V_size = 3562, Converged = 19, ‖r‖ (largest λ) = 8.288820578675107e-6
+Iter 8: V_size = 3410, Converged = 95, ‖r‖ (largest λ) = 3.261749837839128e-6
+Iter 9: V_size = 2324, Converged = 638, ‖r‖ (largest λ) = 2.2957256912670975e-6
+Hybrid Davidson-JD corrections at iteration 10

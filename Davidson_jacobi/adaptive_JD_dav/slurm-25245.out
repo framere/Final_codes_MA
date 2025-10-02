@@ -1,0 +1,330 @@
+slurmstepd-andoria01: error: *** JOB 25245 ON andoria01 CANCELLED AT 2025-09-27T12:56:38 DUE TO TIME LIMIT ***
+
+[65409] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:429
+dsymv_kernel_4x4.constprop.0 at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_U_ZEN at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+dsymv_64_ at /home/fmereto/julia/bin/../lib/julia/libopenblas64_.so (unknown line)
+symv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/blas.jl:815
+gemv! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:452
+generic_matvecmul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:79 [inlined]
+_mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:73 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:70 [inlined]
+mul! at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:253 [inlined]
+* at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/LinearAlgebra/src/matmul.jl:60 [inlined]
+#2 at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:30
+_unsafe_mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/functionmap.jl:127 [inlined]
+mul! at /home/fmereto/.julia/packages/LinearMaps/KV78T/src/LinearMaps.jl:166 [inlined]
+iterate at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:104
+iterate at ./iterators.jl:206 [inlined]
+#minres!#25 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:230
+minres! at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:200 [inlined]
+#minres#26 at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244 [inlined]
+minres at /home/fmereto/.julia/packages/IterativeSolvers/bjiMt/src/minres.jl:244
+unknown function (ip: 0x7f3ffa6f790d)
+#correction_equations_minres#1 at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:42
+correction_equations_minres at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:13
+unknown function (ip: 0x7f3ffa6f1db6)
+davidson at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:341
+davidson at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:154 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:396
+unknown function (ip: 0x7f3ffa6c5462)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/cosine_hybrid_precond.jl:436
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 413094666 (Pool: 413093823; Big: 843); GC: 80778
+Processing molecule: uracil
+Running with beta = 16
+Running with l = 210
+Starting Davidson with n_aux = 336, l_buffer = 315, lc = 212, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 42, Converged = 0, ‖r‖ (largest λ) = 1.4440469943908738
+Iter 2: V_size = 84, Converged = 0, ‖r‖ (largest λ) = 0.3472672833475846
+Iter 3: V_size = 168, Converged = 0, ‖r‖ (largest λ) = 0.1630019671042047
+Iter 4: V_size = 336, Converged = 0, ‖r‖ (largest λ) = 0.042939359637024006
+Iter 5: V_size = 336, Converged = 0, ‖r‖ (largest λ) = 0.12069638143395725
+Iter 6: V_size = 336, Converged = 1, ‖r‖ (largest λ) = 0.14841841432088096
+Iter 7: V_size = 336, Converged = 2, ‖r‖ (largest λ) = 0.16738822908299383
+Iter 8: V_size = 336, Converged = 2, ‖r‖ (largest λ) = 0.21069016224570447
+Iter 9: V_size = 336, Converged = 2, ‖r‖ (largest λ) = 0.27363428882909446
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 2461
+Iter 10: V_size = 336, Converged = 27, ‖r‖ (largest λ) = 0.31525477954241615
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 2431
+Iter 11: V_size = 336, Converged = 27, ‖r‖ (largest λ) = 0.5029129985753591
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 2377
+Iter 12: V_size = 336, Converged = 27, ‖r‖ (largest λ) = 0.6061503012062746
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 2360
+Iter 13: V_size = 336, Converged = 32, ‖r‖ (largest λ) = 0.7562308058286314
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 2426
+Iter 14: V_size = 336, Converged = 32, ‖r‖ (largest λ) = 0.5315645828188459
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 2617
+Iter 15: V_size = 336, Converged = 32, ‖r‖ (largest λ) = 0.3602742488865412
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 2506
+Iter 16: V_size = 336, Converged = 38, ‖r‖ (largest λ) = 0.2999428240492216
+Hybrid Davidson-JD corrections at iteration 17
+Total MINRES iterations: 2320
+Iter 17: V_size = 336, Converged = 38, ‖r‖ (largest λ) = 0.26726197466255247
+Hybrid Davidson-JD corrections at iteration 18
+Total MINRES iterations: 2198
+Iter 18: V_size = 336, Converged = 38, ‖r‖ (largest λ) = 0.2259026173936109
+Hybrid Davidson-JD corrections at iteration 19
+Total MINRES iterations: 2290
+Iter 19: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.17902792239255144
+Hybrid Davidson-JD corrections at iteration 20
+Total MINRES iterations: 2293
+Iter 20: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.1378107074470522
+Hybrid Davidson-JD corrections at iteration 21
+Total MINRES iterations: 2175
+Iter 21: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.12934243945924526
+Hybrid Davidson-JD corrections at iteration 22
+Total MINRES iterations: 2157
+Iter 22: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.11915479886766808
+Hybrid Davidson-JD corrections at iteration 23
+Total MINRES iterations: 1885
+Iter 23: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.11242156007094829
+Hybrid Davidson-JD corrections at iteration 24
+Total MINRES iterations: 1907
+Iter 24: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.10610994719600553
+Hybrid Davidson-JD corrections at iteration 25
+Total MINRES iterations: 1956
+Iter 25: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.09934013597897859
+Hybrid Davidson-JD corrections at iteration 26
+Total MINRES iterations: 1864
+Iter 26: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.09374722971648018
+Hybrid Davidson-JD corrections at iteration 27
+Total MINRES iterations: 1786
+Iter 27: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.0883864973726014
+Hybrid Davidson-JD corrections at iteration 28
+Total MINRES iterations: 1807
+Iter 28: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.08410060861519991
+Hybrid Davidson-JD corrections at iteration 29
+Total MINRES iterations: 1724
+Iter 29: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.07665146674637172
+Hybrid Davidson-JD corrections at iteration 30
+Total MINRES iterations: 1584
+Iter 30: V_size = 336, Converged = 40, ‖r‖ (largest λ) = 0.07318707427881255
+Hybrid Davidson-JD corrections at iteration 31
+Total MINRES iterations: 1583
+Iter 31: V_size = 336, Converged = 41, ‖r‖ (largest λ) = 0.06699277359113433
+Hybrid Davidson-JD corrections at iteration 32
+Total MINRES iterations: 1589
+Iter 32: V_size = 336, Converged = 41, ‖r‖ (largest λ) = 0.06300325998431325
+Hybrid Davidson-JD corrections at iteration 33
+Total MINRES iterations: 1548
+Iter 33: V_size = 336, Converged = 43, ‖r‖ (largest λ) = 0.059087012493716395
+Hybrid Davidson-JD corrections at iteration 34
+Total MINRES iterations: 1435
+Iter 34: V_size = 336, Converged = 43, ‖r‖ (largest λ) = 0.055414061157907694
+Hybrid Davidson-JD corrections at iteration 35
+Total MINRES iterations: 1347
+Iter 35: V_size = 336, Converged = 43, ‖r‖ (largest λ) = 0.0513370991580858
+Hybrid Davidson-JD corrections at iteration 36
+Total MINRES iterations: 1316
+Iter 36: V_size = 336, Converged = 43, ‖r‖ (largest λ) = 0.04856733492523511
+Hybrid Davidson-JD corrections at iteration 37
+Total MINRES iterations: 1298
+Iter 37: V_size = 336, Converged = 46, ‖r‖ (largest λ) = 0.04632700700541111
+Hybrid Davidson-JD corrections at iteration 38
+Total MINRES iterations: 1239
+Iter 38: V_size = 336, Converged = 46, ‖r‖ (largest λ) = 0.04388713421759926
+Hybrid Davidson-JD corrections at iteration 39
+Total MINRES iterations: 1261
+Iter 39: V_size = 336, Converged = 46, ‖r‖ (largest λ) = 0.042421964460044516
+Hybrid Davidson-JD corrections at iteration 40
+Total MINRES iterations: 1211
+Iter 40: V_size = 336, Converged = 49, ‖r‖ (largest λ) = 0.04106092772332224
+Hybrid Davidson-JD corrections at iteration 41
+Total MINRES iterations: 1192
+Iter 41: V_size = 336, Converged = 50, ‖r‖ (largest λ) = 0.03920258979925989
+Hybrid Davidson-JD corrections at iteration 42
+Total MINRES iterations: 1175
+Iter 42: V_size = 336, Converged = 51, ‖r‖ (largest λ) = 0.037700036581693366
+Hybrid Davidson-JD corrections at iteration 43
+Total MINRES iterations: 1189
+Iter 43: V_size = 336, Converged = 51, ‖r‖ (largest λ) = 0.036464202301802424
+Hybrid Davidson-JD corrections at iteration 44
+Total MINRES iterations: 1180
+Iter 44: V_size = 336, Converged = 51, ‖r‖ (largest λ) = 0.03578433791150964
+Hybrid Davidson-JD corrections at iteration 45
+Total MINRES iterations: 1129
+Iter 45: V_size = 336, Converged = 57, ‖r‖ (largest λ) = 0.03493856928417939
+Hybrid Davidson-JD corrections at iteration 46
+Total MINRES iterations: 1030
+Iter 46: V_size = 336, Converged = 57, ‖r‖ (largest λ) = 0.03380194591828606
+Hybrid Davidson-JD corrections at iteration 47
+Total MINRES iterations: 1012
+Iter 47: V_size = 336, Converged = 57, ‖r‖ (largest λ) = 0.0329750144612874
+Hybrid Davidson-JD corrections at iteration 48
+Total MINRES iterations: 895
+Iter 48: V_size = 336, Converged = 59, ‖r‖ (largest λ) = 0.0324138261011776
+Hybrid Davidson-JD corrections at iteration 49
+Total MINRES iterations: 882
+Iter 49: V_size = 336, Converged = 61, ‖r‖ (largest λ) = 0.03202308152133422
+Hybrid Davidson-JD corrections at iteration 50
+Total MINRES iterations: 806
+Iter 50: V_size = 336, Converged = 61, ‖r‖ (largest λ) = 0.031574312785744386
+Hybrid Davidson-JD corrections at iteration 51
+Total MINRES iterations: 820
+Iter 51: V_size = 336, Converged = 63, ‖r‖ (largest λ) = 0.031340645064979925
+Hybrid Davidson-JD corrections at iteration 52
+Total MINRES iterations: 816
+Iter 52: V_size = 336, Converged = 63, ‖r‖ (largest λ) = 0.03091763640906996
+Hybrid Davidson-JD corrections at iteration 53
+Total MINRES iterations: 816
+Iter 53: V_size = 336, Converged = 64, ‖r‖ (largest λ) = 0.03058374045880192
+Hybrid Davidson-JD corrections at iteration 54
+Total MINRES iterations: 788
+Iter 54: V_size = 336, Converged = 64, ‖r‖ (largest λ) = 0.030450394308040828
+Hybrid Davidson-JD corrections at iteration 55
+Total MINRES iterations: 806
+Iter 55: V_size = 336, Converged = 65, ‖r‖ (largest λ) = 0.030086624086442547
+Hybrid Davidson-JD corrections at iteration 56
+Total MINRES iterations: 777
+Iter 56: V_size = 336, Converged = 65, ‖r‖ (largest λ) = 0.030138014503544162
+Hybrid Davidson-JD corrections at iteration 57
+Total MINRES iterations: 758
+Iter 57: V_size = 336, Converged = 65, ‖r‖ (largest λ) = 0.029823220096658883
+Hybrid Davidson-JD corrections at iteration 58
+Total MINRES iterations: 772
+Iter 58: V_size = 336, Converged = 74, ‖r‖ (largest λ) = 0.029959907183839143
+Hybrid Davidson-JD corrections at iteration 59
+Total MINRES iterations: 799
+Iter 59: V_size = 336, Converged = 74, ‖r‖ (largest λ) = 0.02794604784479314
+Hybrid Davidson-JD corrections at iteration 60
+Total MINRES iterations: 724
+Iter 60: V_size = 336, Converged = 74, ‖r‖ (largest λ) = 0.028091063686028626
+Hybrid Davidson-JD corrections at iteration 61
+Total MINRES iterations: 725
+Iter 61: V_size = 336, Converged = 76, ‖r‖ (largest λ) = 0.02756474018076004
+Hybrid Davidson-JD corrections at iteration 62
+Total MINRES iterations: 732
+Iter 62: V_size = 336, Converged = 76, ‖r‖ (largest λ) = 0.027881620659360232
+Hybrid Davidson-JD corrections at iteration 63
+Total MINRES iterations: 721
+Iter 63: V_size = 336, Converged = 76, ‖r‖ (largest λ) = 0.02743713206739532
+Hybrid Davidson-JD corrections at iteration 64
+Total MINRES iterations: 693
+Iter 64: V_size = 336, Converged = 79, ‖r‖ (largest λ) = 0.027760022575920792
+Hybrid Davidson-JD corrections at iteration 65
+Total MINRES iterations: 654
+Iter 65: V_size = 336, Converged = 79, ‖r‖ (largest λ) = 0.026923190499630358
+Hybrid Davidson-JD corrections at iteration 66
+Total MINRES iterations: 645
+Iter 66: V_size = 336, Converged = 79, ‖r‖ (largest λ) = 0.027176991562963104
+Hybrid Davidson-JD corrections at iteration 67
+Total MINRES iterations: 642
+Iter 67: V_size = 336, Converged = 82, ‖r‖ (largest λ) = 0.0264362582831266
+Hybrid Davidson-JD corrections at iteration 68
+Total MINRES iterations: 636
+Iter 68: V_size = 336, Converged = 82, ‖r‖ (largest λ) = 0.026576165518912936
+Hybrid Davidson-JD corrections at iteration 69
+Total MINRES iterations: 639
+Iter 69: V_size = 336, Converged = 82, ‖r‖ (largest λ) = 0.02579915322878316
+Hybrid Davidson-JD corrections at iteration 70
+Total MINRES iterations: 642
+Iter 70: V_size = 336, Converged = 84, ‖r‖ (largest λ) = 0.0260675665149811
+Hybrid Davidson-JD corrections at iteration 71
+Total MINRES iterations: 633
+Iter 71: V_size = 336, Converged = 84, ‖r‖ (largest λ) = 0.02373250754653878
+Hybrid Davidson-JD corrections at iteration 72
+Total MINRES iterations: 643
+Iter 72: V_size = 336, Converged = 85, ‖r‖ (largest λ) = 0.02391295705373672
+Hybrid Davidson-JD corrections at iteration 73
+Total MINRES iterations: 645
+Iter 73: V_size = 336, Converged = 87, ‖r‖ (largest λ) = 0.023066661272751213
+Hybrid Davidson-JD corrections at iteration 74
+Total MINRES iterations: 619
+Iter 74: V_size = 336, Converged = 87, ‖r‖ (largest λ) = 0.023326876574974505
+Hybrid Davidson-JD corrections at iteration 75
+Total MINRES iterations: 615
+Iter 75: V_size = 336, Converged = 87, ‖r‖ (largest λ) = 0.022442827440806404
+Hybrid Davidson-JD corrections at iteration 76
+Total MINRES iterations: 643
+Iter 76: V_size = 336, Converged = 93, ‖r‖ (largest λ) = 0.02265537026609405
+Hybrid Davidson-JD corrections at iteration 77
+Total MINRES iterations: 710
+Iter 77: V_size = 336, Converged = 93, ‖r‖ (largest λ) = 0.021768628834262848
+Hybrid Davidson-JD corrections at iteration 78
+Total MINRES iterations: 684
+Iter 78: V_size = 336, Converged = 93, ‖r‖ (largest λ) = 0.021929373849057063
+Hybrid Davidson-JD corrections at iteration 79
+Total MINRES iterations: 676
+Iter 79: V_size = 336, Converged = 105, ‖r‖ (largest λ) = 0.02103341569624488
+Hybrid Davidson-JD corrections at iteration 80
+Total MINRES iterations: 555
+Iter 80: V_size = 336, Converged = 105, ‖r‖ (largest λ) = 0.02116920898120218
+Hybrid Davidson-JD corrections at iteration 81
+Iter 81: V_size = 336, Converged = 105, ‖r‖ (largest λ) = 0.020267205794510978
+Hybrid Davidson-JD corrections at iteration 82
+Iter 82: V_size = 312, Converged = 159, ‖r‖ (largest λ) = 0.023256037429437538
+Hybrid Davidson-JD corrections at iteration 83
+Iter 83: V_size = 312, Converged = 159, ‖r‖ (largest λ) = 0.021703175845769064
+Hybrid Davidson-JD corrections at iteration 84
+Iter 84: V_size = 312, Converged = 159, ‖r‖ (largest λ) = 0.020721572383059227
+Converged all required eigenvalues.
+96865.674579 seconds (118.10 M allocations: 8.345 TiB, 0.13% gc time, 0.03% compilation time)
+Number of FLOPs: 296566287953892
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ../../Eigenvalues_folder/eigenres_uracil_RNDbasis1.jld2
+
+Compute the difference between computed and exact eigenvalues:
+1×210 adjoint(::Vector{Float64}) with eltype Float64:
+ -1.77636e-14  -3.55271e-15  1.06581e-14  0.0  1.06581e-14  -3.55271e-15  0.0  3.55271e-15  3.55271e-15  -1.42109e-14  -3.55271e-15  -1.06581e-14  0.0  -1.77636e-15  1.77636e-15  1.77636e-15  0.0  -3.55271e-15  -1.77636e-15  0.0  -3.55271e-15  5.32907e-15  3.55271e-15  1.77636e-15  3.55271e-15  -6.22824e-8  -1.03768e-7  -2.7813e-7  -4.7881e-8  -7.05579e-8  -1.14347e-7  -1.15042e-7  -1.39273e-7  -2.83096e-7  -2.35305e-7  -3.01376e-7  -1.73662e-7  -2.66429e-7  -2.10396e-7  -4.77681e-7  -4.49525e-7  -4.28853e-7  -4.53645e-7  -5.28116e-7  -4.32989e-7  -5.72174e-7  -5.52676e-7  -4.43753e-7  2.96758e-11  8.11919e-11  5.58034e-11  4.71161e-11  1.08476e-10  -6.61474e-7  -5.18004e-7  2.44582e-10  1.55665e-10  1.05073e-10  1.51744e-10  2.08041e-10  6.09308e-11  2.07397e-10  1.15698e-10  1.25056e-10  1.26761e-10  1.13608e-10  2.85117e-10  7.22072e-10  2.13217e-10  1.6012e-10  -7.60563e-7  2.62416e-10  2.15154e-10  9.5179e-11  1.71286e-10  1.15384e-9  1.32682e-9  6.70079e-10  2.90778e-10  3.4973e-10  4.83341e-10  1.95604e-10  2.29125e-10  5.34251e-10  3.88323e-10  3.05315e-9  1.1694e-9  1.05429e-9  6.59202e-10  8.13128e-10  4.12562e-10  2.55144e-10  3.87111e-10  2.39477e-9  1.10615e-9  5.22721e-10  1.22283e-9  8.65524e-10  3.80066e-10  8.06232e-10  4.111e-10  7.09643e-10  1.16986e-9  4.92722e-10  3.90771e-10  4.42715e-10  8.14735e-10  1.17598e-9  6.05983e-10  3.17151e-10  3.89928e-10  1.08422e-9  3.63504e-10  3.05453e-10  9.50938e-10  3.71295e-9  3.15538e-10  2.52186e-10  4.8499e-10  4.52685e-10  8.13509e-10  2.45036e-9  6.32106e-10  1.88918e-9  4.23399e-10  1.48653e-9  3.09127e-9  1.20844e-9  4.81133e-10  2.12129e-9  2.70263e-9  7.3482e-10  5.05045e-10  8.7062e-10  2.65361e-10  1.33728e-9  1.14284e-9  3.18413e-9  5.89758e-10  3.18126e-9  1.71249e-9  3.24295e-9  1.48965e-9  1.98789e-9  1.61099e-9  7.60624e-9  2.97295e-9  1.19209e-9  6.32977e-9  8.92563e-10  1.01713e-8  2.24732e-9  2.7329e-9  1.04059e-9  1.38574e-9  2.45544e-9  2.48921e-9  4.0807e-9  1.43455e-9  3.52784e-9  8.2692e-9  7.39934e-9  1.34542e-9  1.72963e-9  1.86084e-9  1.01952e-8  8.17244e-9  3.72671e-9  1.35117e-8  1.42084e-8  3.69741e-9  6.13941e-9  1.07288e-8  2.34155e-9  9.51289e-9  1.2927e-9  6.49332e-9  5.99205e-9  3.17136e-9  2.6644e-9  3.825e-9  1.90518e-8  2.6785e-9  2.77485e-8  1.53237e-9  1.17356e-8  7.98939e-9  8.13761e-9  2.11101e-8  2.54907e-9  2.71632e-9  6.74966e-9  6.3532e-9  7.29525e-9  2.1837e-8  3.69832e-9  6.77756e-8  2.61929e-9  3.45891e-9  3.58413e-9  7.04673e-9  1.13908e-8  8.75543e-9  1.27921e-8  9.13826e-9  1.0112e-8  1.40286e-8  3.57243e-8  8.1325e-9  7.29034e-10
+210 Eigenvalues converges, out of 210 requested.
+Running with l = 1050
+Starting Davidson with n_aux = 1680, l_buffer = 1575, lc = 1060, thresh = 0.002, max_iter = 100
+Iter 1: V_size = 210, Converged = 0, ‖r‖ (largest λ) = 0.1516315241105587
+Iter 2: V_size = 420, Converged = 0, ‖r‖ (largest λ) = 0.03270368987561489
+Iter 3: V_size = 840, Converged = 0, ‖r‖ (largest λ) = 0.009779089027487775
+Iter 4: V_size = 1680, Converged = 0, ‖r‖ (largest λ) = 0.0025810782883984172
+Iter 5: V_size = 1680, Converged = 1, ‖r‖ (largest λ) = 0.002343135629871159
+Iter 6: V_size = 1680, Converged = 2, ‖r‖ (largest λ) = 0.0026120572553905625
+Iter 7: V_size = 1680, Converged = 2, ‖r‖ (largest λ) = 0.0028977102705952723
+Iter 8: V_size = 1680, Converged = 2, ‖r‖ (largest λ) = 0.0031880409819505227
+Iter 9: V_size = 1680, Converged = 198, ‖r‖ (largest λ) = 0.0034220707632463114
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 16870
+Iter 10: V_size = 1680, Converged = 198, ‖r‖ (largest λ) = 0.004308987330087206
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 17077
+Iter 11: V_size = 1680, Converged = 198, ‖r‖ (largest λ) = 0.0056398518954945895
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 15566
+Iter 12: V_size = 1680, Converged = 368, ‖r‖ (largest λ) = 0.007267461667439394
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 16850
+Iter 13: V_size = 1680, Converged = 368, ‖r‖ (largest λ) = 0.007172728592677674
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 16591
+Iter 14: V_size = 1680, Converged = 368, ‖r‖ (largest λ) = 0.00519875945823107
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 14825
+Iter 15: V_size = 1680, Converged = 452, ‖r‖ (largest λ) = 0.004300953100683567
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 14319
+Iter 16: V_size = 1680, Converged = 452, ‖r‖ (largest λ) = 0.002818166264380171
+Hybrid Davidson-JD corrections at iteration 17

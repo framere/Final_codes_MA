@@ -421,8 +421,8 @@ end
 
 
 
-betas = [32] #8,16,32,64, 8,16
-molecules = ["uracil"] #, "uracil"
+betas = [12, 32, 36] #8,16,32,64, 8,16
+molecules = ["H2"] #, "uracil"
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")

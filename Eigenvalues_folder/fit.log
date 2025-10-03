@@ -1,0 +1,610 @@
+
+
+*******************************************************************************
+Fri Oct  3 15:07:10 2025
+
+
+FIT:    data read from "uracil_eigenvalues.dat" every ::0::last_uracil using 1:(abs($2))
+        format = x:z
+        #datapoints = 31817
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = p1_1 * exp(-p1_2 * x**p1_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p1_1          p1_2          p1_3         
+   0 2.3517628473e+10   0.00e+00  9.81e+02    1.000000e+03   1.000000e-05   1.000000e+00
+  21 4.1082077665e+05   0.00e+00  9.81e+00    6.294278e+02   7.947926e-04   2.798448e+00
+
+Maximum iteration count (20) reached. Fit stopped.
+final sum of squares of residuals : 410821
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 31814
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.5935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 12.9132
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p1_1            = 629.428          +/- 1.894        (0.3009%)
+p1_2            = 0.000794793      +/- 5.893e-05    (7.415%)
+p1_3            = 2.79845          +/- 0.02812      (1.005%)
+
+correlation matrix of the fit parameters:
+                p1_1   p1_2   p1_3   
+p1_1            1.000 
+p1_2            0.670  1.000 
+p1_3           -0.637 -0.996  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:07:19 2025
+
+
+FIT:    data read from "formaldehyde_eigenvalues.dat" every ::0::last_formaldehyde using 1:(abs($2))
+        format = x:z
+        #datapoints = 26994
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = p2_1 * exp(-p2_2 * x**p2_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p2_1          p2_2          p2_3         
+   0 2.0852677374e+10   0.00e+00  8.91e+02    1.000000e+03   1.000000e-05   1.000000e+00
+  21 1.1908223027e+05   0.00e+00  8.91e-01    6.957348e+02   1.888856e-03   4.458811e+00
+
+Maximum iteration count (20) reached. Fit stopped.
+final sum of squares of residuals : 119082
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 26991
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.10046
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.41192
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p2_1            = 695.735          +/- 1.772        (0.2548%)
+p2_2            = 0.00188886       +/- 0.0001292    (6.839%)
+p2_3            = 4.45881          +/- 0.0477       (1.07%)
+
+correlation matrix of the fit parameters:
+                p2_1   p2_2   p2_3   
+p2_1            1.000 
+p2_2            0.614  1.000 
+p2_3           -0.576 -0.994  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:07:26 2025
+
+
+FIT:    data read from "H2_eigenvalues.dat" every ::0::last_H2 using 1:(abs($2))
+        format = x:z
+        #datapoints = 11795
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = p3_1 * exp(-p3_2 * x**p3_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p3_1          p3_2          p3_3         
+   0 1.0506620261e+10   0.00e+00  6.36e+02    1.000000e+03   1.000000e-05   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Oct  3 15:08:22 2025
+
+
+FIT:    data read from "uracil_eigenvalues.dat" every ::0::last_uracil using 1:(abs($2))
+        format = x:z
+        #datapoints = 31817
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = p1_1 * exp(-p1_2 * x**p1_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p1_1          p1_2          p1_3         
+   0 2.3517628473e+10   0.00e+00  9.81e+02    1.000000e+03   1.000000e-05   1.000000e+00
+   6 3.3433194092e+06   0.00e+00  9.81e+00    2.110001e+01   1.357650e-04   1.559878e+00
+
+Maximum iteration count (5) reached. Fit stopped.
+final sum of squares of residuals : 3.34332e+06
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 31814
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 10.2513
+variance of residuals (reduced chisquare) = WSSR/ndf   : 105.09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p1_1            = 21.1             +/- 1.466        (6.946%)
+p1_2            = 0.000135765      +/- 0.0002067    (152.2%)
+p1_3            = 1.55988          +/- 0.2535       (16.25%)
+
+correlation matrix of the fit parameters:
+                p1_1   p1_2   p1_3   
+p1_1            1.000 
+p1_2            0.756  1.000 
+p1_3           -0.732 -0.998  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:08:24 2025
+
+
+FIT:    data read from "formaldehyde_eigenvalues.dat" every ::0::last_formaldehyde using 1:(abs($2))
+        format = x:z
+        #datapoints = 26994
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = p2_1 * exp(-p2_2 * x**p2_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p2_1          p2_2          p2_3         
+   0 2.0852677374e+10   0.00e+00  8.91e+02    1.000000e+03   1.000000e-05   1.000000e+00
+   6 1.1924738243e+06   0.00e+00  8.91e+00    4.250475e+01   4.388002e-05   3.969109e+00
+
+Maximum iteration count (5) reached. Fit stopped.
+final sum of squares of residuals : 1.19247e+06
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 26991
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.64684
+variance of residuals (reduced chisquare) = WSSR/ndf   : 44.1804
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p2_1            = 42.5048          +/- 3.021        (7.107%)
+p2_2            = 4.388e-05        +/- 0.000136     (309.9%)
+p2_3            = 3.96911          +/- 1.213        (30.56%)
+
+correlation matrix of the fit parameters:
+                p2_1   p2_2   p2_3   
+p2_1            1.000 
+p2_2            0.589  1.000 
+p2_3           -0.565 -0.998  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:08:26 2025
+
+
+FIT:    data read from "H2_eigenvalues.dat" every ::0::last_H2 using 1:(abs($2))
+        format = x:z
+        #datapoints = 11795
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = p3_1 * exp(-p3_2 * x**p3_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p3_1          p3_2          p3_3         
+   0 1.0506620261e+10   0.00e+00  6.36e+02    1.000000e+03   1.000000e-05   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Oct  3 15:17:12 2025
+
+
+FIT:    data read from "uracil_eigenvalues.dat" every ::0::last_uracil using 1:(abs($2))
+        format = x:z
+        #datapoints = 31817
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = p1_1 * exp(-p1_2 * x**0.5)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p1_1          p1_2         
+   0 3.1720572793e+10   0.00e+00  7.06e+02    1.000000e+03   1.000000e-05
+   2 3.7372050634e+06  -2.12e-03  7.06e+00    3.874992e-01   1.030050e-05
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 3.73721e+06
+rel. change during last iteration : -2.11949e-05
+
+degrees of freedom    (FIT_NDF)                        : 31815
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 10.8382
+variance of residuals (reduced chisquare) = WSSR/ndf   : 117.467
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p1_1            = 0.387499         +/- 0.1824       (47.08%)
+p1_2            = 1.03005e-05      +/- 0.003733     (3.625e+04%)
+
+correlation matrix of the fit parameters:
+                p1_1   p1_2   
+p1_1            1.000 
+p1_2            0.943  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:17:12 2025
+
+
+FIT:    data read from "formaldehyde_eigenvalues.dat" every ::0::last_formaldehyde using 1:(abs($2))
+        format = x:z
+        #datapoints = 26994
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = p2_1 * exp(-p2_2 * x**0.5)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p2_1          p2_2         
+   0 2.6928731275e+10   0.00e+00  7.06e+02    1.000000e+03   1.000000e-05
+   2 1.4185313887e+06  -1.55e-03  7.06e+00    1.415410e-01   1.009312e-05
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.41853e+06
+rel. change during last iteration : -1.549e-05
+
+degrees of freedom    (FIT_NDF)                        : 26992
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.2494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 52.5538
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p2_1            = 0.141541         +/- 0.1325       (93.59%)
+p2_2            = 1.00931e-05      +/- 0.008057     (7.983e+04%)
+
+correlation matrix of the fit parameters:
+                p2_1   p2_2   
+p2_1            1.000 
+p2_2            0.943  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:17:13 2025
+
+
+FIT:    data read from "H2_eigenvalues.dat" every ::0::last_H2 using 1:(abs($2))
+        format = x:z
+        #datapoints = 11795
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = p3_1 * exp(-p3_2 * x**0.5)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p3_1          p3_2         
+   0 1.1777641019e+10   0.00e+00  7.07e+02    1.000000e+03   1.000000e-05
+   2 3.0328434866e+03  -7.20e-01  7.07e+00    1.252032e-02   1.000931e-05
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 3032.84
+rel. change during last iteration : -0.00720101
+
+degrees of freedom    (FIT_NDF)                        : 11793
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.507122
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.257173
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p3_1            = 0.0125203        +/- 0.01402      (112%)
+p3_2            = 1.00093e-05      +/- 0.01458      (1.457e+05%)
+
+correlation matrix of the fit parameters:
+                p3_1   p3_2   
+p3_1            1.000 
+p3_2            0.943  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:17:55 2025
+
+
+FIT:    data read from "uracil_eigenvalues.dat" every ::0::last_uracil using 1:(abs($2))
+        format = x:z
+        #datapoints = 31817
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = p1_1 * exp(-p1_2 * x**0.5)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p1_1          p1_2         
+   0 3.1720572793e+10   0.00e+00  7.06e+02    1.000000e+03   1.000000e-05
+   6 3.6031276741e+06  -3.40e+06  7.06e-04    9.718479e+00   1.165288e-01
+
+Maximum iteration count (5) reached. Fit stopped.
+final sum of squares of residuals : 3.60313e+06
+rel. change during last iteration : -0.0340455
+
+degrees of freedom    (FIT_NDF)                        : 31815
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 10.642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 113.252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p1_1            = 9.71848          +/- 3.093        (31.83%)
+p1_2            = 0.116529         +/- 0.03013      (25.85%)
+
+correlation matrix of the fit parameters:
+                p1_1   p1_2   
+p1_1            1.000 
+p1_2            0.821  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:17:56 2025
+
+
+FIT:    data read from "formaldehyde_eigenvalues.dat" every ::0::last_formaldehyde using 1:(abs($2))
+        format = x:z
+        #datapoints = 26994
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = p2_1 * exp(-p2_2 * x**0.5)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p2_1          p2_2         
+   0 2.6928731275e+10   0.00e+00  7.06e+02    1.000000e+03   1.000000e-05
+   3 1.4185313754e+06  -9.37e-01  7.06e-01    1.415428e-01   1.020852e-05
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.41853e+06
+rel. change during last iteration : -9.36683e-09
+
+degrees of freedom    (FIT_NDF)                        : 26992
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.2494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 52.5538
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p2_1            = 0.141543         +/- 0.1325       (93.59%)
+p2_2            = 1.02085e-05      +/- 0.008057     (7.893e+04%)
+
+correlation matrix of the fit parameters:
+                p2_1   p2_2   
+p2_1            1.000 
+p2_2            0.943  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:17:56 2025
+
+
+FIT:    data read from "H2_eigenvalues.dat" every ::0::last_H2 using 1:(abs($2))
+        format = x:z
+        #datapoints = 11795
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = p3_1 * exp(-p3_2 * x**0.5)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p3_1          p3_2         
+   0 1.1777641019e+10   0.00e+00  7.07e+02    1.000000e+03   1.000000e-05
+   3 3.0328434866e+03  -2.21e-03  7.07e-01    1.252030e-02   1.000956e-05
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3032.84
+rel. change during last iteration : -2.20978e-11
+
+degrees of freedom    (FIT_NDF)                        : 11793
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.507122
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.257173
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p3_1            = 0.0125203        +/- 0.01402      (112%)
+p3_2            = 1.00096e-05      +/- 0.01458      (1.457e+05%)
+
+correlation matrix of the fit parameters:
+                p3_1   p3_2   
+p3_1            1.000 
+p3_2            0.943  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:18:42 2025
+
+
+FIT:    data read from "uracil_eigenvalues.dat" every ::0::last_uracil using 1:(abs($2))
+        format = x:z
+        #datapoints = 31817
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = p1_1 * exp(-p1_2 * x**p1_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p1_1          p1_2          p1_3         
+   0 2.3517628473e+10   0.00e+00  9.81e+02    1.000000e+03   1.000000e-05   1.000000e+00
+ 100 1.4512156857e+05  -1.67e+06  9.81e-03    8.255630e+02   8.381898e-02   1.015772e+00
+
+The fit was stopped by the user after 100 iterations.
+final sum of squares of residuals : 145122
+rel. change during last iteration : -0.0167311
+
+degrees of freedom    (FIT_NDF)                        : 31814
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.13578
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.56156
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p1_1            = 825.563          +/- 2.599        (0.3148%)
+p1_2            = 0.083819         +/- 0.001296     (1.547%)
+p1_3            = 1.01577          +/- 0.00474      (0.4667%)
+
+correlation matrix of the fit parameters:
+                p1_1   p1_2   p1_3   
+p1_1            1.000 
+p1_2            0.898  1.000 
+p1_3           -0.850 -0.989  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:19:35 2025
+
+
+FIT:    data read from "formaldehyde_eigenvalues.dat" every ::0::last_formaldehyde using 1:(abs($2))
+        format = x:z
+        #datapoints = 26994
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = p2_1 * exp(-p2_2 * x**p2_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p2_1          p2_2          p2_3         
+   0 2.0852677374e+10   0.00e+00  8.91e+02    1.000000e+03   1.000000e-05   1.000000e+00
+iter      chisq       delta/lim  lambda   p2_1          p2_2          p2_3         
+   0 2.0852677374e+10  -4.80e+27  8.91e+02    1.000000e+03   1.000000e-05   1.000000e+00
+
+The fit was stopped by the user after 0 iterations.
+final sum of squares of residuals : 2.08527e+10
+rel. change during last iteration : -4.79555e+19
+
+degrees of freedom    (FIT_NDF)                        : 26991
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 878.965
+variance of residuals (reduced chisquare) = WSSR/ndf   : 772579
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p2_1            = 1000             +/- 22.36        (2.236%)
+p2_2            = 1e-05            +/- 2.364e-05    (236.4%)
+p2_3            = 1                +/- 0.228        (22.8%)
+
+correlation matrix of the fit parameters:
+                p2_1   p2_2   p2_3   
+p2_1            1.000 
+p2_2            0.874  1.000 
+p2_3           -0.860 -0.999  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:19:37 2025
+
+
+FIT:    data read from "H2_eigenvalues.dat" every ::0::last_H2 using 1:(abs($2))
+        format = x:z
+        #datapoints = 11795
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = p3_1 * exp(-p3_2 * x**p3_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p3_1          p3_2          p3_3         
+   0 1.0506620261e+10   0.00e+00  6.36e+02    1.000000e+03   1.000000e-05   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Oct  3 15:20:39 2025
+
+
+FIT:    data read from "uracil_eigenvalues.dat" every ::300::last_uracil using 1:(abs($2))
+        format = x:z
+        #datapoints = 31517
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = p1_1 * exp(-p1_2 * x**p1_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p1_1          p1_2          p1_3         
+   0 2.3238408998e+10   0.00e+00  9.84e+02    1.000000e+03   1.000000e-05   1.000000e+00
+  30 3.0664870036e+00   0.00e+00  9.84e-02    5.350944e+00   4.712624e-04   1.328073e+00
+
+The fit was stopped by the user after 30 iterations.
+final sum of squares of residuals : 3.06649
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 31514
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00986436
+variance of residuals (reduced chisquare) = WSSR/ndf   : 9.73055e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p1_1            = 5.35094          +/- 0.04042      (0.7555%)
+p1_2            = 0.000471262      +/- 2.066e-05    (4.384%)
+p1_3            = 1.32807          +/- 0.006366     (0.4794%)
+
+correlation matrix of the fit parameters:
+                p1_1   p1_2   p1_3   
+p1_1            1.000 
+p1_2            0.987  1.000 
+p1_3           -0.984 -1.000  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:20:53 2025
+
+
+FIT:    data read from "formaldehyde_eigenvalues.dat" every ::300::last_formaldehyde using 1:(abs($2))
+        format = x:z
+        #datapoints = 26694
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = p2_1 * exp(-p2_2 * x**p2_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p2_1          p2_2          p2_3         
+   0 2.0559765010e+10   0.00e+00  8.93e+02    1.000000e+03   1.000000e-05   1.000000e+00
+  24 2.4838161229e-03  -2.93e+05  8.93e-04    3.268109e-01   1.100269e-04   1.658910e+00
+
+The fit was stopped by the user after 24 iterations.
+final sum of squares of residuals : 0.00248382
+rel. change during last iteration : -0.00293491
+
+degrees of freedom    (FIT_NDF)                        : 26691
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000305054
+variance of residuals (reduced chisquare) = WSSR/ndf   : 9.30582e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p2_1            = 0.326811         +/- 0.005441     (1.665%)
+p2_2            = 0.000110027      +/- 1.013e-05    (9.204%)
+p2_3            = 1.65891          +/- 0.01419      (0.8551%)
+
+correlation matrix of the fit parameters:
+                p2_1   p2_2   p2_3   
+p2_1            1.000 
+p2_2            0.993  1.000 
+p2_3           -0.992 -1.000  1.000 
+
+
+*******************************************************************************
+Fri Oct  3 15:21:03 2025
+
+
+FIT:    data read from "H2_eigenvalues.dat" every ::300::last_H2 using 1:(abs($2))
+        format = x:z
+        #datapoints = 11495
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = p3_1 * exp(-p3_2 * x**p3_3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p3_1          p3_2          p3_3         
+   0 1.0207813131e+10   0.00e+00  6.38e+02    1.000000e+03   1.000000e-05   1.000000e+00
+  35 4.5390792119e-07   0.00e+00  6.38e-04    3.041634e-03   1.738991e-05   1.955724e+00
+
+The fit was stopped by the user after 35 iterations.
+final sum of squares of residuals : 4.53908e-07
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 11492
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.28472e-06
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.94977e-11
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p3_1            = 0.00304163       +/- 8.527e-05    (2.804%)
+p3_2            = 1.73899e-05      +/- 3.601e-06    (20.71%)
+p3_3            = 1.95572          +/- 0.03249      (1.661%)
+
+correlation matrix of the fit parameters:
+                p3_1   p3_2   p3_3   
+p3_1            1.000 
+p3_2            0.993  1.000 
+p3_3           -0.992 -1.000  1.000 

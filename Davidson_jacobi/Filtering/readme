@@ -1,0 +1,18 @@
+Key Components
+
+chebyshev_filter function: Applies a Chebyshev polynomial filter that amplifies components corresponding to the lowest eigenvalues while damping higher ones. The filter uses the three-term recurrence relation for Chebyshev polynomials.
+estimate_spectral_bounds function: Estimates tight bounds a and b:
+
+a: Upper bound for wanted eigenvalues (uses last converged eigenvalue + 15% margin)
+b: Upper spectral bound (conservative estimate from diagonal)
+
+
+Integration into Davidson: The filter is applied periodically at restart points (controlled by cheb_restart_freq parameter).
+
+How It Works
+
+At restart points: The Chebyshev filter is applied to the search space V, amplifying directions corresponding to the lowest eigenvalues
+Spectral mapping: The filter maps the spectrum interval [a,b] to [-1,1] where Chebyshev polynomials are defined
+Acceleration: By emphasizing the subspace of lowest eigenvalues, convergence is accelerated while maintaining selectivity
+
+The filter integrates seamlessly with your existing hybrid Davidson-JD approach and respects all FLOP counting operations.

@@ -371,7 +371,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     N = size(A, 1)
 
     V = zeros(N, Nlow)
-    for i = 1:Nlow
+    for i = 1:Nlow  
         V[i, i] = 1.0
     end
 
@@ -406,7 +406,7 @@ end
 
 
 betas = [30] #8,16,32,64, 8,16
-numbers = [6] #1,2,3,4,5,6
+numbers = [2] #1,2,3,4,5,6
 ls = [100] #10, 50, 100, 200
 
 for number in numbers

@@ -493,9 +493,9 @@ end
 
 
 
-betas = [20] #8,16,32,64, 8,16
+betas = [25] #8,16,32,64, 8,16
 molecules = ["formaldehyde"] #, "uracil"
-ls = [30] #10, 50, 100, 200
+ls = [10] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas
@@ -508,5 +508,3 @@ for molecule in molecules
     end
     println("Finished processing molecule: $molecule")
 end
-
-

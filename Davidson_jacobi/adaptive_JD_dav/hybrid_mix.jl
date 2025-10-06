@@ -313,7 +313,7 @@ function davidson(
 
             for (i, idx) in enumerate(keep_indices)
                 if idx > current_cutoff
-                    # Anything beyond lc cutoff → always Davidson
+                    # Anything beyond lc cutoff → always Davidson used for the buffer vectors. We don't spend so much time computing JD for high-lying states.
                     push!(dav_indices, i)
                 else
                     r = norms[idx]
@@ -420,9 +420,9 @@ end
 
 
 
-betas = [32] #8,16,32,64, 8,16
-molecules = ["uracil"] #, "uracil"
-ls = [200] #10, 50, 100, 200
+betas = [25] #8,16,32,64, 8,16
+molecules = ["formaldehyde"] #, "uracil"
+ls = [10] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

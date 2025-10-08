@@ -62,12 +62,12 @@ end
 """
 The other concept I have is to sort the diagonal elements and then see the difference between the diagonal element and the exact eigenvalue.
 """
-function analyze_diagonal_dominance_eigenvalue(A::AbstractMatrix{T}, molecule::String, output_filename::String) where T<:Number
+function analyze_diagonal_dominance_eigenvalue(A::AbstractMatrix{T}, number::Int, output_filename::String) where T<:Number
     N = size(A, 1)
     println("Matrix size: $N x $N")
 
     # extract eigenvalues
-    eigenvalues = read_eigenresults(molecule)
+    eigenvalues = read_eigenresults(number)
     println("Number of eigenvalues read: ", length(eigenvalues))
 
     # extract diagonal elements

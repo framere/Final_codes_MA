@@ -92,16 +92,16 @@ end
 
 numbers = 1:14
 
-for molecule in molecules
-    filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
-    output_filename_detailed = "diagonal_analysis_detailed_" * molecule * ".txt"
-    output_filename_eigen = "eigenvalues_data/diagonal_analysis_eigenvalue_" * molecule * "_1.txt"
-    
+for number in numbers
+    filename = "../" * string(number) *"/gamma_VASP_RNDbasis1.dat"
+    output_filename_detailed = "diagonal_analysis_detailed_" * string(number) * ".txt"
+    output_filename_eigen = "eigenvalues_data/diagonal_analysis_eigenvalue_" * string(number) * "_1.txt"
+
     println("Loading matrix from: $filename")
-    A = load_matrix(filename, molecule)
+    A = load_sparse_matrix(filename, number)
 
 
-    analyze_diagonal_dominance_eigenvalue(A, molecule, output_filename_eigen)
+    analyze_diagonal_dominance_eigenvalue(A, number, output_filename_eigen)
     println("Eigenvalue diagonal dominance analysis written to $output_filename_eigen")
 
     analyze_diagonal_dominance_detailed(A, output_filename_detailed)

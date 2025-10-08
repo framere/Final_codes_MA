@@ -29,7 +29,7 @@ function diagonalize_and_save(number::Int)
     println("Done!")
 end
 
-for system in 1:6
+for system in 11:14
     println("Processing system: $system")
     diagonalize_and_save(system)
 end

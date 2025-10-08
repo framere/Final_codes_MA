@@ -406,7 +406,7 @@ end
 
 
 betas = [25] #8,16,32,64, 8,16
-numbers = [5] #1,2,3,4,5,6
+numbers = [10] #1,2,3,4,5,6
 ls = [100] #10, 50, 100, 200
 
 for number in numbers

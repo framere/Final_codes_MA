@@ -68,7 +68,7 @@ number = 1:14
 folder = "diagonalization_data/"
 
 for i in number
-    filename = "analysis_sparse_matrix_" * string(i) * ".data"
+    filename = "large_sparse_matrix_" * string(i) * ".dat"
     A = load_sparse_matrix(filename, i)
     output_filename = folder * "diagonal_dominance_sparse_matrix_" * string(i) * ".dat"
     count = analyze_diagonal_dominance(A, output_filename)

@@ -67,10 +67,20 @@ end
 number = 1:14
 folder = "diagonalization_data/"
 
-for i in number
-    filename = "large_sparse_matrix_" * string(i) * ".dat"
-    A = load_sparse_matrix(filename, i)
-    output_filename = folder * "diagonal_dominance_sparse_matrix_" * string(i) * ".dat"
+# for i in number
+#     filename = "large_sparse_matrix_" * string(i) * ".dat"
+#     A = load_sparse_matrix(filename, i)
+#     output_filename = folder * "diagonal_dominance_sparse_matrix_" * string(i) * ".dat"
+#     count = analyze_diagonal_dominance(A, output_filename)
+#     println("Molecule $i: $count non-diagonally dominant rows")
+# end
+
+molecules = ["H2", "formaldehyde", "uracil"]
+
+for molecule in molecules
+    filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
+    A = load_matrix(filename, molecule)
+    output_filename = folder * "diagonal_dominance_matrix_" * molecule * ".dat"
     count = analyze_diagonal_dominance(A, output_filename)
-    println("Molecule $i: $count non-diagonally dominant rows")
+    println("Molecule $molecule: $count non-diagonally dominant rows")
 end

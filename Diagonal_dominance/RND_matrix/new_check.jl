@@ -93,7 +93,7 @@ end
 numbers = 1:14
 
 for number in numbers
-    filename = "../" * string(number) *"/gamma_VASP_RNDbasis1.dat"
+    filename = "../../test/large_sparse_matrix_" * string(number) * ".dat"
     output_filename_detailed = "diagonal_analysis_detailed_" * string(number) * ".txt"
     output_filename_eigen = "eigenvalues_data/diagonal_analysis_eigenvalue_" * string(number) * "_1.txt"
 

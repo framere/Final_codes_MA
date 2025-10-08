@@ -23,7 +23,7 @@ function diagonalize_and_save(number::Int)
     A = load_matrix(number)
     println("Diagonalizing the matrix for system: $number")
     @time Σexact, Uexact = eigen(A)
-    output_file="Eigenvalues_folder/eigenresults_matrix_$(number).jld2"
+    output_file="Eigenvalues_folder/eigenresults_matrix_$(number)_2.jld2"
     println("Saving results to $output_file")
     jldsave(output_file; Σexact, Uexact)  # JLD2 format
     println("Done!")

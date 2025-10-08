@@ -115,7 +115,7 @@ function load_matrix(filename::String, number::Int)
 end
 
 function read_eigenresults(number::Int)
-    output_file = "../../test/Eigenvalues_folder/eigenresults_matrix_$(number).jld2"
+    output_file = "../../test/Eigenvalues_folder/eigenresults_matrix_$(number)_2.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = -data["Σexact"]
@@ -138,7 +138,7 @@ function davidson(
 
     n_b = size(V, 2)
     l_buffer = round(Int, l * 1.3)
-    lc = round(Int, 1.01 * l)  # We want to converge smallest lc eigenvalues
+    lc = round(Int, l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
 
@@ -405,8 +405,8 @@ end
 
 
 
-betas = [30] #8,16,32,64, 8,16
-numbers = [2] #1,2,3,4,5,6
+betas = [25] #8,16,32,64, 8,16
+numbers = [5] #1,2,3,4,5,6
 ls = [100] #10, 50, 100, 200
 
 for number in numbers

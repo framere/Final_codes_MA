@@ -152,7 +152,7 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.5)
+    l_buffer = round(Int, l * 1.3)
     lc = round(Int, 1.01 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
@@ -420,9 +420,9 @@ end
 
 
 
-betas = [25] #8,16,32,64, 8,16
-molecules = ["formaldehyde"] #, "uracil"
-ls = [10] #10, 50, 100, 200
+betas = [16] #8,16,32,64, 8,16
+molecules = ["uracil"] #, "uracil"
+ls = [200] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

@@ -45,7 +45,7 @@ end
 
 # === MAIN USAGE ===
 Ns = [10000, 20000]  # Different sizes for testing
-factors = [1000.0, 100.0, 10.0]  # Different scaling factors for diagonal elements
+factors = [1e11, 1e9, 1e7]  # Different scaling factors for diagonal elements
 
 global counter = 1
 for (N, factor) in Iterators.product(Ns, factors)

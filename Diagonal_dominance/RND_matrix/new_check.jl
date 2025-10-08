@@ -21,7 +21,7 @@ function load_sparse_matrix(filename::String, number::Int)
 end
 
 function read_eigenresults(number::Int)
-    output_file = "Eigenvalues_folders/eigenresults_matrix_" * string(number) * "_2.jld2"
+    output_file = "../../test/Eigenvalues_folder/eigenresults_matrix_" * string(number) * "_2.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]

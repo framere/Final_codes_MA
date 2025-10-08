@@ -80,7 +80,7 @@ molecules = ["H2", "formaldehyde", "uracil"]
 for molecule in molecules
     filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
     A = load_matrix(filename, molecule)
-    output_filename = folder * "diagonal_dominance_matrix_" * molecule * ".dat"
+    output_filename = folder * "diagonal_dominance_matrix_" * molecule * ".txt"
     count = analyze_diagonal_dominance(A, output_filename)
     println("Molecule $molecule: $count non-diagonally dominant rows")
 end

@@ -1,0 +1,24 @@
+Processing system: 11
+read large_sparse_matrix_11.dat
+Diagonalizing the matrix for system: 11
+147.842001 seconds (25 allocations: 2.239 GiB, 0.03% gc time)
+Saving results to Eigenvalues_folder/eigenresults_matrix_11_2.jld2
+Done!
+Processing system: 12
+read large_sparse_matrix_12.dat
+Diagonalizing the matrix for system: 12
+1125.712560 seconds (25 allocations: 8.948 GiB, 0.01% gc time)
+Saving results to Eigenvalues_folder/eigenresults_matrix_12_2.jld2
+Done!
+Processing system: 13
+read large_sparse_matrix_13.dat
+Diagonalizing the matrix for system: 13
+148.477615 seconds (25 allocations: 2.239 GiB, 0.03% gc time)
+Saving results to Eigenvalues_folder/eigenresults_matrix_13_2.jld2
+Done!
+Processing system: 14
+read large_sparse_matrix_14.dat
+Diagonalizing the matrix for system: 14
+1090.711389 seconds (25 allocations: 8.948 GiB, 0.01% gc time)
+Saving results to Eigenvalues_folder/eigenresults_matrix_14_2.jld2
+Done!

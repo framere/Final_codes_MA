@@ -200,8 +200,8 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.5)
-    lc = round(Int, 1.01 * l)  # We want to converge smallest lc eigenvalues
+    l_buffer = round(Int, l * 1.3)
+    lc = round(Int, 1.005 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
 
@@ -214,6 +214,14 @@ function davidson(
 
     iter = 0
     convergence_tracker = Dict{Int, Tuple{Float64, Int, Float64, Vector{T}}}()
+    residual_history = Dict{Int, Vector{Float64}}()   # for stagnation detection
+
+    # Helper function: stagnation check
+    function is_stagnating(hist::Vector{Float64}; tol=0.1, window=2)
+        length(hist) < window && return false
+        r_old, r_new = hist[end-window+1], hist[end]
+        return abs(r_old - r_new) / r_old < tol
+    end
 
     while nevf < l_buffer
         iter += 1
@@ -325,30 +333,70 @@ function davidson(
         Σ_nc = Σ[keep_indices]
         R_nc = R[:, keep_indices]
 
-        if iter < 20
-            # Compute correction vectors
+        # Update residual histories
+        for idx in keep_indices
+            push!(get!(residual_history, idx, Float64[]), norms[idx])
+            if length(residual_history[idx]) > 3
+                popfirst!(residual_history[idx]) # keep short history
+            end
+        end
+
+        # === Compute correction vectors ===
+        ϵ = 1e-6
+
+        if iter < 10
+            # Pure Davidson correction in the early iterations
             t = Matrix{T}(undef, size(A, 1), length(keep_indices))
-            ϵ = 1e-6
             for (i, idx) in enumerate(keep_indices)
                 denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
                 t[:, i] = R_nc[:, i] ./ denom
                 count_vec_add_flops(length(D))
                 count_vec_scaling_flops(length(D))
             end
-        elseif iter >= 12
-            if solver == :cg
-                if iter == 12
-                    println("Switching to iterative solver for correction equations at iteration $iter")
+        else
+            # Hybrid Davidson–Jacobi-Davidson
+            println("Hybrid Davidson-JD corrections at iteration $iter")
+
+            dav_indices = Int[]
+            jd_indices  = Int[]
+
+            for (i, idx) in enumerate(keep_indices)
+                if idx > current_cutoff
+                    # Anything beyond lc cutoff → always Davidson used for the buffer vectors. We don't spend so much time computing JD for high-lying states.
+                    push!(dav_indices, i)
+                else
+                    r = norms[idx]
+                    hist = get(residual_history, idx, Float64[])
+                    if r >= 1e-2 || is_stagnating(hist; tol=0.1, window=2)
+                        push!(jd_indices, i)
+                    else
+                        push!(dav_indices, i)
+                    end
                 end
-                t = correction_equations_cg(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
-            elseif solver == :minres
-                if iter == 12
-                    println("Switching to iterative solver for correction equations at iteration $iter")
-                end
-                t = correction_equations_minres(A, X_nc, Σ_nc, R_nc; tol=1e-1, maxiter=25)
-            else
-                error("Unknown solver: $solver. Choose :cg or :minres")
             end
+
+            # --- Davidson corrections ---
+            t_dav = Matrix{T}(undef, size(A, 1), length(dav_indices))
+            for (j, i) in enumerate(dav_indices)
+                idx = keep_indices[i]
+                denom = clamp.(Σ_nc[i] .- D, ϵ, Inf)
+                t_dav[:, j] = R_nc[:, i] ./ denom
+                count_vec_add_flops(length(D))
+                count_vec_scaling_flops(length(D))
+            end
+
+            # --- JD corrections ---
+            t_jd = correction_equations_minres(
+                A,
+                X_nc[:, jd_indices],
+                Σ_nc[jd_indices],
+                R_nc[:, jd_indices];
+                tol=1e-1,
+                maxiter=25
+            )
+
+            # Merge
+            t = hcat(t_dav, t_jd)
         end
 
         # Orthogonalize and select correction vectors
@@ -423,10 +471,10 @@ end
 
 
 
-betas = [25, 32] #8,16,32,64, 8,16
+betas = [25] #8,16,32,64, 8,16
 molecules = ["uracil"] #, "formaldehyde", "uracil"
 ls = [10, 50, 100, 200] #10, 50, 100, 200
-solvers = [:cg, :minres] #, :minres
+solvers = [:minres] #, :minres
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

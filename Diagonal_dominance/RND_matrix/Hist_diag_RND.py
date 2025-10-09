@@ -17,6 +17,11 @@ for i in range(1, 15):
     sampled_values = sampled_values[np.isfinite(sampled_values)]
     sampled_values = sampled_values[sampled_values > 0]
 
+    # print the mean and the median of the sampled values
+    mean_val = sampled_values.mean()
+    median_val = sampled_values.median()
+    print(f"{i}: mean = {mean_val}, median = {median_val}")
+
     if len(sampled_values) == 0:
         print(f"Skipping {i}: no valid positive values.")
         continue
@@ -34,6 +39,9 @@ for i in range(1, 15):
 
     plt.figure(figsize=(8, 6))
     sns.histplot(sampled_values, bins=bins, color='blue')
+    plt.axvline(mean_val, color='red', linestyle='dashed', linewidth=1.5, label=f'Mean: {mean_val:.2f}')
+    plt.axvline(median_val, color='green', linestyle='dashed', linewidth=1.5, label=f'Median: {median_val:.2f}')
+    plt.legend()
     plt.xscale('log')
     plt.xlabel(r"$a_{ii}$ / $a_{ij}$")
     plt.ylabel("Frequency")

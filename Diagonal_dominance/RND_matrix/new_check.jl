@@ -24,7 +24,7 @@ function read_eigenresults(number::Int)
     output_file = "../../test/Eigenvalues_folder/eigenresults_matrix_" * string(number) * "_2.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
-    eigenvalues = data["eigenvalues"]
+    eigenvalues = data["Σexact"]
     close(data)
     return sort(eigenvalues)
 end
@@ -95,7 +95,7 @@ numbers = 1:14
 for number in numbers
     filename = "../../test/large_sparse_matrix_" * string(number) * ".dat"
     output_filename_detailed = "diagonal_analysis_detailed_" * string(number) * ".txt"
-    output_filename_eigen = "eigenvalues_data/diagonal_analysis_eigenvalue_" * string(number) * "_1.txt"
+    output_filename_eigen = "diagonal_analysis_eigenvalue_" * string(number) * ".txt"
 
     println("Loading matrix from: $filename")
     A = load_sparse_matrix(filename, number)

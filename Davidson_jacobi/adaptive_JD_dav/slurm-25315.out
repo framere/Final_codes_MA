@@ -1,0 +1,99 @@
+slurmstepd-andoria01: error: *** JOB 25315 ON andoria01 CANCELLED AT 2025-10-09T07:59:54 DUE TO TIME LIMIT ***
+
+[119744] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/hybrid_mix.jl:426
+setindex! at ./array.jl:987 [inlined]
+macro expansion at ./broadcast.jl:973 [inlined]
+macro expansion at ./simdloop.jl:77 [inlined]
+copyto! at ./broadcast.jl:972 [inlined]
+copyto! at ./broadcast.jl:925 [inlined]
+copy at ./broadcast.jl:897 [inlined]
+materialize at ./broadcast.jl:872 [inlined]
+broadcast_preserving_zero_d at ./broadcast.jl:861 [inlined]
+- at ./arraymath.jl:8
+davidson at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/hybrid_mix.jl:192
+davidson at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/hybrid_mix.jl:152 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/hybrid_mix.jl:393
+unknown function (ip: 0x7f05762338b2)
+top-level scope at /home/fmereto/MA_best/Davidson_jacobi/adaptive_JD_dav/hybrid_mix.jl:433
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 9909314129 (Pool: 9909313599; Big: 530); GC: 896467
+Processing molecule: uracil
+Running with beta = 20
+Running with l = 4200
+Starting Davidson with n_aux = 8400, l_buffer = 7560, lc = 4242, thresh = 0.0015, max_iter = 100
+Iter 1: V_size = 840, Converged = 0, ‖r‖ (largest λ) = 0.016329236256352252
+Iter 2: V_size = 1680, Converged = 0, ‖r‖ (largest λ) = 0.002753839798033227
+Iter 3: V_size = 3360, Converged = 0, ‖r‖ (largest λ) = 0.00038522833322008834
+Iter 4: V_size = 6720, Converged = 0, ‖r‖ (largest λ) = 1.3032418776577445e-5
+Iter 5: V_size = 8400, Converged = 30, ‖r‖ (largest λ) = 1.1217597681369027e-7
+Iter 6: V_size = 8400, Converged = 30, ‖r‖ (largest λ) = 9.924720776480417e-8
+Iter 7: V_size = 8400, Converged = 30, ‖r‖ (largest λ) = 1.1413773038652915e-7
+Iter 8: V_size = 8400, Converged = 691, ‖r‖ (largest λ) = 1.1947328153401329e-7
+Iter 9: V_size = 8400, Converged = 691, ‖r‖ (largest λ) = 4.372641155943505e-5
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 21300
+Iter 10: V_size = 8400, Converged = 691, ‖r‖ (largest λ) = 4.4942365379723647e-5
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 39575
+Iter 11: V_size = 8400, Converged = 2222, ‖r‖ (largest λ) = 5.280648971993606e-5
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 4300
+Iter 12: V_size = 8400, Converged = 2222, ‖r‖ (largest λ) = 8.403842017137223e-5
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 125
+Iter 13: V_size = 8400, Converged = 2222, ‖r‖ (largest λ) = 0.00010049268499954808
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 20425
+Iter 14: V_size = 8400, Converged = 2997, ‖r‖ (largest λ) = 0.00012362829643131984
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 14168
+Iter 15: V_size = 8400, Converged = 2997, ‖r‖ (largest λ) = 0.00016561414469412137
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 27489
+Iter 16: V_size = 8400, Converged = 2997, ‖r‖ (largest λ) = 0.00017066079580530154
+Hybrid Davidson-JD corrections at iteration 17
+Total MINRES iterations: 8257
+Iter 17: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00017817586438070485
+Hybrid Davidson-JD corrections at iteration 18
+Total MINRES iterations: 2000
+Iter 18: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00018188923654773763
+Hybrid Davidson-JD corrections at iteration 19
+Total MINRES iterations: 8203
+Iter 19: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00019352625127304568
+Hybrid Davidson-JD corrections at iteration 20
+Total MINRES iterations: 8203
+Iter 20: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00019919508362881591
+Hybrid Davidson-JD corrections at iteration 21
+Total MINRES iterations: 8203
+Iter 21: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00018986178877749868
+Hybrid Davidson-JD corrections at iteration 22
+Total MINRES iterations: 8204
+Iter 22: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00018088801387928504
+Hybrid Davidson-JD corrections at iteration 23
+Total MINRES iterations: 8204
+Iter 23: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00018952028228166366
+Hybrid Davidson-JD corrections at iteration 24
+Total MINRES iterations: 8203
+Iter 24: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00019269648463217498
+Hybrid Davidson-JD corrections at iteration 25
+Total MINRES iterations: 8202
+Iter 25: V_size = 7300, Converged = 3910, ‖r‖ (largest λ) = 0.00019194105949778395

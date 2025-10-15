@@ -8,7 +8,7 @@ using LinearMaps
 # === Global FLOP counter and helpers ===
 global NFLOPs = 0
 
-include("../../FLOP_count.jl")
+include("../FLOP_count.jl")
 
 function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     global NFLOPs
@@ -131,7 +131,7 @@ end
 
 
 function read_eigenresults(molecule::String)
-    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
+    output_file = "../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -374,7 +374,7 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "../../" * molecule *"/gamma_VASP_RNDbasis1.dat"
+    filename = "../" * molecule *"/gamma_VASP_RNDbasis1.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
@@ -418,7 +418,7 @@ end
 
 betas = [25] #8,16,32,64, 8,16
 molecules = ["formaldehyde"] #, "uracil"
-ls = [ 50, 100] #10, 50, 100, 200
+ls = [100] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

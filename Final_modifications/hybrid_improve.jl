@@ -312,11 +312,16 @@ function davidson(
                 if idx > current_cutoff
                     push!(dav_indices, i)
                 else
-                    λ, _, res_hist, _ = convergence_tracker[idx]
                     r = norms[idx]
-                    if r >= 1e-2 || is_stagnating(res_hist; tol=0.1, window=2)
-                        push!(jd_indices, i)
+                    if haskey(convergence_tracker, idx)
+                        _, _, res_hist, _ = convergence_tracker[idx]
+                        if r >= 1e-2 || is_stagnating(res_hist; tol=0.1, window=2)
+                            push!(jd_indices, i)
+                        else
+                            push!(dav_indices, i)
+                        end
                     else
+                        # No history yet → treat as Davidson
                         push!(dav_indices, i)
                     end
                 end

@@ -15,7 +15,7 @@ function correction_equations_minres(A, U, lambdas, R; tol=1e-1, maxiter=100)
     n, k = size(U)
     S = zeros(eltype(A), n, k)
     total_iter = 0
-
+ 
     for j in 1:k
         λ, r = lambdas[j], R[:, j]
 

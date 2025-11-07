@@ -371,14 +371,14 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
         V[i, i] = 1.0
     end
 
-    # @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
-    # idx = sortperm(Σ)
-    # Σ = Σ[idx]
-    # U = U[:, idx]
-    # Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    idx = sortperm(Σ)
+    Σ = Σ[idx]
+    U = U[:, idx]
+    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
     
-    # println("Number of FLOPs: $NFLOPs")
+    println("Number of FLOPs: $NFLOPs")
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
@@ -386,7 +386,6 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
 
     idx_exact = sortperm(Σexact)
     Σexact = Σexact[idx_exact]
-    # Σexact = sqrt.(abs.(Σexact))  # Take square root of exact eigenvalues
 
     # Display difference
     r = min(length(Σ), l)

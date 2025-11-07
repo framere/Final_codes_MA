@@ -34,5 +34,5 @@ end
 numbers = collect(1:5)
 for num in numbers
     filename = "large_sparse_matrix_$(num).dat"
-    diagonalize_and_save(filename)
+    diagonalize_and_save(filename, num)
 end

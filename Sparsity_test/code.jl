@@ -112,7 +112,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./test_EW_results_1.jld2"
+    output_file = "./test_EW_results_$(number).jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]

@@ -111,8 +111,8 @@ function load_matrix(filename::String)
 end
 
 
-function read_eigenresults(molecule::String)
-    output_file = "../../Eigenvalues_folder/eigenres_" * molecule * "_RNDbasis1.jld2"
+function read_eigenresults(number::Integer)
+    output_file = "large_sparse_matrix_$number.dat "
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -217,8 +217,8 @@ function davidson(
         conv_indices = Int[]
         for (sorted_i, original_i) in enumerate(sorted_indices[1:current_cutoff])
             λ = Σ_sorted[sorted_i]
-            λ_est = sqrt(abs(λ))
-            adaptive_thresh = 2 * λ_est * thresh
+            # λ_est = sqrt(abs(λ))
+            adaptive_thresh = thresh # 2 * λ_est 
             rnorm = norms_sorted[sorted_i]
 
             # Update convergence tracking
@@ -371,38 +371,38 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    # @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
-    idx = sortperm(Σ)
-    Σ = Σ[idx]
-    U = U[:, idx]
-    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    # idx = sortperm(Σ)
+    # Σ = Σ[idx]
+    # U = U[:, idx]
+    # Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
     
-    println("Number of FLOPs: $NFLOPs")
+    # println("Number of FLOPs: $NFLOPs")
 
     # Perform exact diagonalization as reference
-    # println("\nReading exact Eigenvalues...")
-    # Σexact_squared = read_eigenresults(molecule)
+    println("\nReading exact Eigenvalues...")
+    Σexact = read_eigenresults(number)
 
-    # idx_exact = sortperm(Σexact_squared)
-    # Σexact_squared = Σexact_squared[idx_exact]
-    # Σexact = sqrt.(abs.(Σexact_squared))  # Take square root of exact eigenvalues
+    idx_exact = sortperm(Σexact)
+    Σexact = Σexact[idx_exact]
+    # Σexact = sqrt.(abs.(Σexact))  # Take square root of exact eigenvalues
 
-    # # Display difference
-    # r = min(length(Σ), l)
-    # println("\nCompute the difference between computed and exact eigenvalues:")
-    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    # difference = (Σ[1:r] .- Σexact[1:r])
-    # for i in 1:r
-    #     println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    # end
+    # Display difference
+    r = min(length(Σ), l)
+    println("\nCompute the difference between computed and exact eigenvalues:")
+    display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    difference = (Σ[1:r] .- Σexact[1:r])
+    for i in 1:r
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
 
 betas = [25] #8,16,32,64, 8,16
-numbers = collect(1:5)  #1,2,3,4,5
+numbers = 5:-1:1
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for number in numbers
     println("Processing molecule: $number")

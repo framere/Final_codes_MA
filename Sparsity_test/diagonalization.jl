@@ -15,12 +15,12 @@ function load_matrix(filename::String)
     return Hermitian(A)
 end
 
-function diagonalize_and_save(filename::String)    
+function diagonalize_and_save(filename::String, Number::Int)    
     A = load_matrix(filename)
     println("Diagonalizing the matrix ...")
     @time F = eigen(A)  # F.values, F.vectors
 
-    output_file = "test_EW_results_1.jld2"
+    output_file = "test_EW_results_$(Number).jld2"
     println("Saving results to $output_file")
 
     jldsave(output_file; 

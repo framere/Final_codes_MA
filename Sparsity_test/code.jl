@@ -112,7 +112,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "large_sparse_matrix_$number.dat "
+    output_file = "./test_EW_results_1.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]

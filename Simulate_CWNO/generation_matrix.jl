@@ -100,7 +100,7 @@ end
 # --- SPARSITY STATISTICS ---
 
 absγ = abs.(gamma)
-threshold = 1e-4
+threshold = 1e-12
 sparse_pct = 100 * count(<(threshold), absγ) / length(absγ)
 @printf("Percent |γ| < %.0e : %.2f%%\n", threshold, sparse_pct)
 

@@ -401,7 +401,7 @@ end
 
 
 betas = [25] #8,16,32,64, 8,16
-numbers = 5:-1:1
+numbers = 2
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for number in numbers
     println("Processing molecule: $number")

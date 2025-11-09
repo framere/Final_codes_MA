@@ -99,8 +99,9 @@ end
 
 
 function load_matrix(filename::String)
-    N = 30000
-    # println("read ", filename)
+    N = 29791  
+
+    println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
     read!(file, A)
@@ -359,7 +360,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "large_sparse_matrix_$number.dat"
+    filename = "CWNO_$number.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta

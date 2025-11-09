@@ -112,7 +112,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./test_EW_results_$(number).jld2"
+    output_file = "./CWNO_$(number)_results.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -371,37 +371,38 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
+    # @time Σ, U = davidson(A, V, Naux, l, 1e-4 * factor, max_iter)
 
-    idx = sortperm(Σ)
-    Σ = Σ[idx]
-    U = U[:, idx]
-    Σ = sqrt.(abs.(Σ))  # Take square root of eigenvalues   
+    # Σ = abs.(Σ)  # Take absolute value of eigenvalues
+    # idx = sortperm(Σ)
+    # Σ = Σ[idx]
+    # U = U[:, idx]
     
-    println("Number of FLOPs: $NFLOPs")
+    # println("Number of FLOPs: $NFLOPs")
 
     # Perform exact diagonalization as reference
     println("\nReading exact Eigenvalues...")
     Σexact = read_eigenresults(number)
-
+    Σexact = abs.(Σexact)
     idx_exact = sortperm(Σexact)
     Σexact = Σexact[idx_exact]
 
     # Display difference
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
+
     display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    difference = (Σ[1:r] .- Σexact[1:r])
-    for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    end
+    # difference = (Σ[1:r] .- Σexact[1:r])
+    # for i in 1:r
+    #     println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    # end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
 
 betas = [25] #8,16,32,64, 8,16
-numbers = 5:-1:1
+numbers = 1
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for number in numbers
     println("Processing molecule: $number")

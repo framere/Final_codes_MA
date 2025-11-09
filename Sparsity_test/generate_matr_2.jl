@@ -5,13 +5,11 @@ function new_curve(x, gamma, delta, epsilon)
     return gamma .* exp.(- delta .* x.^ epsilon)
 end
 
-function generate_random_matrix(N::Int, factor::Float64 = 100.0)
+function generate_random_matrix(N::Int, factor::Int)
     """    generate_random_matrix(N::Int, factor::Float64 = 100.0) -> Matrix{Float64}
     Generates a random NxN matrix with diagonal elements scaled by `factor` and small off-diagonal elements.        
     The diagonal elements are uniformly distributed between 0 and `factor`, while off-diagonal elements are small random values.
     """
-    α = -500.7142494929915
-    β = 0.10931396203607915
     A = Matrix{Float64}(undef, N, N)
     for i in 1:N
         a = 31.2458198825
@@ -53,7 +51,7 @@ global counter = 1
 for (N, factor) in Iterators.product(Ns, factors)
     println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
     A = generate_random_matrix(N, factor)
-    filename = "large_sparse_matrix_$(counter).dat"
+    filename = "matrix_type_2_$(counter).dat"
     println("Saving the generated matrix to '$filename'...")
     save_matrix_to_file(A, filename)
     global counter += 1

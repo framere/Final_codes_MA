@@ -20,7 +20,7 @@ function diagonalize_and_save(filename::String, Number::Int)
     println("Diagonalizing the matrix ...")
     @time F = eigen(A)  # F.values, F.vectors
 
-    output_file = "test_EW_results_$(Number).jld2"
+    output_file = "EV_matrix2_$(Number).jld2"
     println("Saving results to $output_file")
 
     jldsave(output_file; 
@@ -33,6 +33,6 @@ end
 
 numbers = collect(1:5)
 for num in numbers
-    filename = "large_sparse_matrix_$(num).dat"
+    filename = "matrix_type_2_$(num).dat"
     diagonalize_and_save(filename, num)
 end

@@ -1,0 +1,25 @@
+read large_sparse_matrix_1.dat
+Diagonalizing the matrix ...
+2857.563180 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to test_EW_results_1.jld2
+Done saving eigenvalues and eigenvectors.
+read large_sparse_matrix_2.dat
+Diagonalizing the matrix ...
+3090.383823 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to test_EW_results_2.jld2
+Done saving eigenvalues and eigenvectors.
+read large_sparse_matrix_3.dat
+Diagonalizing the matrix ...
+5777.502395 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to test_EW_results_3.jld2
+Done saving eigenvalues and eigenvectors.
+read large_sparse_matrix_4.dat
+Diagonalizing the matrix ...
+3614.029127 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to test_EW_results_4.jld2
+Done saving eigenvalues and eigenvectors.
+read large_sparse_matrix_5.dat
+Diagonalizing the matrix ...
+3655.900027 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to test_EW_results_5.jld2
+Done saving eigenvalues and eigenvectors.

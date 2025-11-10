@@ -108,7 +108,7 @@ function load_matrix(filename::String)
     close(file)
 
     A = reshape(A, N, N)
-    return Hermitian(A)
+    return Hermitian(-A)
 end
 
 
@@ -375,7 +375,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     @time Σ, U = davidson(A, V, Naux, l, 1e-4 * factor, max_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
-    idx = sortperm(Σ)
+    idx = sortperm(Σ, rev=true)
     Σ = Σ[idx]
     U = U[:, idx]
     
@@ -385,7 +385,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     println("\nReading exact Eigenvalues...")
     Σexact = read_eigenresults(number)
     Σexact = abs.(Σexact)
-    idx_exact = sortperm(Σexact)
+    idx_exact = sortperm(Σexact, rev=true)
     Σexact = Σexact[idx_exact]
 
     # Display difference

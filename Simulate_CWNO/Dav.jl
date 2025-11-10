@@ -108,7 +108,8 @@ function load_matrix(filename::String)
     close(file)
 
     A = reshape(A, N, N)
-    return Hermitian(-A)
+    A = Hermitian(A)
+    return -A
 end
 
 

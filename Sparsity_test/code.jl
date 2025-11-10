@@ -99,15 +99,17 @@ end
 
 
 function load_matrix(filename::String)
-    N = 30000
-    # println("read ", filename)
+    N = 29791  
+
+    println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
     read!(file, A)
     close(file)
 
     A = reshape(A, N, N)
-    return Hermitian(A)
+    A = Hermitian(A)
+    return -A
 end
 
 
@@ -368,14 +370,13 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
 
     V = zeros(N, Nlow)
     for i = 1:Nlow
-        V[i, i] = 1.0
+        V[i, i] = -1.0
     end
 
-
-    @time Σ, U = davidson(A, V, Naux, l, 1e-4 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-1 * factor, max_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
-    idx = sortperm(Σ)
+    idx = sortperm(Σ, rev=true)
     Σ = Σ[idx]
     U = U[:, idx]
     
@@ -385,22 +386,26 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     println("\nReading exact Eigenvalues...")
     Σexact = read_eigenresults(number)
     Σexact = abs.(Σexact)
-    idx_exact = sortperm(Σexact)
+    idx_exact = sortperm(Σexact, rev=true)
     Σexact = Σexact[idx_exact]
 
     # Display difference
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
 
-    display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    difference = (Σ[1:r] .- Σexact[1:r])
+    for i in 1:r
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
 
 betas = [25] #8,16,32,64, 8,16
-numbers = 1 
-ls = [10, 50, 100, 200] #10, 50, 100, 200
+numbers = 1
+ls = [1] #10, 50, 100, 200
 for number in numbers
     println("Processing molecule: $number")
     for beta in betas
@@ -413,5 +418,3 @@ for number in numbers
     end
     println("Finished processing molecule: $number")
 end
-
-

@@ -10,8 +10,6 @@ function generate_random_matrix(N::Int, factor::Int)
     Generates a random NxN matrix with diagonal elements scaled by `factor` and small off-diagonal elements.        
     The diagonal elements are uniformly distributed between 0 and `factor`, while off-diagonal elements are small random values.
     """
-    α = -500.7142494929915
-    β = 0.10931396203607915
     A = Matrix{Float64}(undef, N, N)
     for i in 1:N
         for j in 1:N

@@ -404,13 +404,13 @@ end
 
 betas = [25] #8,16,32,64, 8,16
 numbers = 1
-ls = [10, 50, 100, 200] #10, 50, 100, 200
+ls = [1] #10, 50, 100, 200
 for number in numbers
     println("Processing molecule: $number")
     for beta in betas
         println("Running with beta = $beta")
         for (i, l) in enumerate(ls)
-	    nev = l*10
+	    nev = l*5
             println("Running with l = $nev")
             main(number, nev, beta, i, 100)
         end

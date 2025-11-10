@@ -411,7 +411,7 @@ for number in numbers
     for beta in betas
         println("Running with beta = $beta")
         for (i, l) in enumerate(ls)
-	    nev = l*4
+	    nev = l*10
             println("Running with l = $nev")
             main(number, nev, beta, i, 100)
         end

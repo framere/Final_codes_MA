@@ -32,8 +32,8 @@ end
 
 for molecules in molecules
     Σexact = read_eigenresults_mol(molecules)
-    Σexact = abs.(Σexact)
-    idx_exact = sortperm(Σexact, rev=true)
+    Σexact = Σexact
+    idx_exact = sortperm(Σexact)
     Σexact = Σexact[idx_exact]
     println("Printing first and last 5 eigenvalues for molecule $(molecules):")
     println("First 5 eigenvalues: ", Σexact[1:5])

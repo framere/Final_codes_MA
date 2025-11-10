@@ -140,7 +140,7 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1e-1, 100, min_number_iter)
+    @time Σ, U = davidson(A, V, Naux, 1e-5, 100, min_number_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
     idx = sortperm(Σ, rev=true)

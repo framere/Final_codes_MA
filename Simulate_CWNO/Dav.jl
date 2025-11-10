@@ -370,7 +370,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
 
     V = zeros(N, Nlow)
     for i = 1:Nlow
-        V[i, i] = 1.0
+        V[i, i] = -1.0
     end
 
     @time Σ, U = davidson(A, V, Naux, l, 1e-1 * factor, max_iter)

@@ -116,7 +116,7 @@ function davidson(
     end
 end
 
-function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Integer = 5)
+function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Integer = 10)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 

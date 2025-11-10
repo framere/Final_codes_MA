@@ -393,11 +393,11 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
 
-    display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    # difference = (Σ[1:r] .- Σexact[1:r])
-    # for i in 1:r
-    #     println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    # end
+    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    difference = (Σ[1:r] .- Σexact[1:r])
+    for i in 1:r
+        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
@@ -411,7 +411,7 @@ for number in numbers
     for beta in betas
         println("Running with beta = $beta")
         for (i, l) in enumerate(ls)
-	    nev = l*5
+	    nev = l*4
             println("Running with l = $nev")
             main(number, nev, beta, i, 100)
         end

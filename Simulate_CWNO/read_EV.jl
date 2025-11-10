@@ -6,7 +6,7 @@ function read_eigenresults(number::Integer)
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
     close(data)
-    return sort(eigenvalues)
+    return - eigenvalues
 end
 
 function read_eigenresults_mol(molecule::String)
@@ -22,8 +22,7 @@ numbers = 1
 molecules = ["formaldehyde", "H2", "uracil"]
 for num in numbers
     Σexact = read_eigenresults(num)
-    Σexact = abs.(Σexact)
-    idx_exact = sortperm(Σexact, rev=true)
+    idx_exact = sortperm(Σexact)
     Σexact = Σexact[idx_exact]
     println("Printing first and last 5 eigenvalues for CWNO_$(num):")
     println("First 5 eigenvalues: ", Σexact[1:5])

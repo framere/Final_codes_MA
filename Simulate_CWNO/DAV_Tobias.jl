@@ -36,7 +36,8 @@ function davidson(
     V::Matrix{T},
     Naux::Integer,
     thresh::Float64, 
-    max_iter::Integer
+    max_iter::Integer,
+    min_number_iter::Integer
 )::Tuple{Vector{T},Matrix{T}} where T<:Number
     
     global NFLOPs
@@ -91,7 +92,7 @@ function davidson(
         output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
         print(output)
 
-        if rel_Rnorm < thresh
+        if iter >= min_number_iter && rel_Rnorm < thresh
             println("converged!")
             return (Σ, X)
         end
@@ -115,7 +116,7 @@ function davidson(
     end
 end
 
-function main(number::Integer, l::Integer, alpha::Integer)
+function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Integer = 5)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
@@ -139,7 +140,7 @@ function main(number::Integer, l::Integer, alpha::Integer)
     end
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1e-1, 100)
+    @time Σ, U = davidson(A, V, Naux, 1e-1, 100, min_number_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
     idx = sortperm(Σ, rev=true)

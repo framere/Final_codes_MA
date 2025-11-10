@@ -12,9 +12,12 @@ end
 numbers = 1
 
 for num in numbers
-    eigenvalues = read_eigenresults(num)
+    Σexact = read_eigenresults(num)
+    Σexact = abs.(Σexact)
+    idx_exact = sortperm(Σexact)
+    Σexact = Σexact[idx_exact]
     println("Printing first and last 5 eigenvalues for CWNO_$(num):")
-    println("First 5 eigenvalues: ", eigenvalues[1:5])
-    println("Last 5 eigenvalues: ", eigenvalues[end-4:end])
+    println("First 5 eigenvalues: ", Σexact[1:5])
+    println("Last 5 eigenvalues: ", Σexact[end-4:end])
 end
 

@@ -372,7 +372,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
         V[i, i] = 1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-4 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-1 * factor, max_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
     idx = sortperm(Σ, rev=true)

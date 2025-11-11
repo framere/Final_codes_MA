@@ -114,7 +114,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./test_EW_results_$(number).jld2"
+    output_file = "./EV_matrix2_$(number).jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -135,7 +135,7 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.1)
+    l_buffer = round(Int, l * 1.4)
     lc = round(Int, 1.005 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
@@ -361,7 +361,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "large_sparse_matrix_$number.dat"
+    filename = "matrix_type_2_$(number).dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
@@ -373,7 +373,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
         V[i, i] = -1.0
     end
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-1 * factor, max_iter)
+    @time Σ, U = davidson(A, V, Naux, l, 1e-3 * factor, max_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
     idx = sortperm(Σ, rev=true)

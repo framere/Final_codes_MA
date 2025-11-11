@@ -368,12 +368,14 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     A = load_matrix(filename)
     N = size(A, 1)
 
-    V = zeros(N, Nlow)
-    for i = 1:Nlow
-        V[i, i] = -1.0
-    end
+    # V = zeros(N, Nlow)
+    # for i = 1:Nlow
+    #     V[i, i] = -1.0
+    # end
+    V = randn(N, Nlow).- 0.5
 
-    @time Σ, U = davidson(A, V, Naux, l, 1e-1 * factor, max_iter)
+
+    @time Σ, U = davidson(A, V, Naux, l, 1e-4 * factor, max_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
     idx = sortperm(Σ, rev=true)
@@ -405,7 +407,7 @@ end
 
 betas = [25] #8,16,32,64, 8,16
 numbers = 1
-ls = [1] #10, 50, 100, 200
+ls = [10, 50, 100, 200] #10, 50, 100, 200
 for number in numbers
     println("Processing molecule: $number")
     for beta in betas

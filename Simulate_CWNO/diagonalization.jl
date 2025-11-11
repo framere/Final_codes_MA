@@ -20,7 +20,7 @@ function diagonalize_and_save(filename::String, Number::Int)
     println("Diagonalizing the matrix ...")
     @time F = eigen(A)  # F.values, F.vectors
 
-    output_file = "CWNO_$(Number)_results.jld2"
+    output_file = "CWNO_MIC_$(Number)_results.jld2"
     println("Saving results to $output_file")
 
     jldsave(output_file; 
@@ -33,6 +33,6 @@ end
 
 numbers = 1
 for num in numbers
-    filename = "CWNO_$(num).dat"
+    filename = "CWNO_MIC$(num).dat"
     diagonalize_and_save(filename, num)
 end

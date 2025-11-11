@@ -1,0 +1,234 @@
+slurmstepd-andoria01: error: *** JOB 25929 ON andoria01 CANCELLED AT 2025-11-11T11:30:57 ***
+
+[815575] signal 15: Terminated
+in expression starting at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:409
+setindex! at ./array.jl:987 [inlined]
+macro expansion at ./broadcast.jl:973 [inlined]
+macro expansion at ./simdloop.jl:77 [inlined]
+copyto! at ./broadcast.jl:972 [inlined]
+copyto! at ./broadcast.jl:925 [inlined]
+copy at ./broadcast.jl:897 [inlined]
+materialize at ./broadcast.jl:872 [inlined]
+broadcast_preserving_zero_d at ./broadcast.jl:861 [inlined]
+* at ./arraymath.jl:24
+#select_corrections_ORTHO#4 at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:78
+select_corrections_ORTHO at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:61 [inlined]
+davidson at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:337
+davidson at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:135 [inlined]
+macro expansion at ./timing.jl:581 [inlined]
+main at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:376
+unknown function (ip: 0x7fbbe7e03975)
+top-level scope at /home/fmereto/MA_best/Simulate_CWNO/Dav.jl:416
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:557
+jfptr_include_46865.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_73560.1 at /home/fmereto/julia/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/builder-amdci5-5/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 87928458 (Pool: 87927840; Big: 618); GC: 17367
+Processing molecule: 1
+Running with beta = 25
+Running with l = 100
+read CWNO_1.dat
+Starting Davidson with n_aux = 400, l_buffer = 110, lc = 100, thresh = 0.1, max_iter = 100
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (smallest λ) = 1.0952294193852805e-8
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (smallest λ) = 0.0044852495656038955
+Iter 3: V_size = 124, Converged = 3, ‖r‖ (smallest λ) = 0.04529985017450158
+Iter 4: V_size = 231, Converged = 3, ‖r‖ (smallest λ) = 0.14022300895978243
+Iter 5: V_size = 338, Converged = 3, ‖r‖ (smallest λ) = 0.4214578675862549
+Iter 6: V_size = 214, Converged = 3, ‖r‖ (smallest λ) = 1.1563701692558364
+Iter 7: V_size = 321, Converged = 3, ‖r‖ (smallest λ) = 3.0345315382954956
+Iter 8: V_size = 214, Converged = 3, ‖r‖ (smallest λ) = 10.004507506704156
+Iter 9: V_size = 321, Converged = 3, ‖r‖ (smallest λ) = 18.532357816424977
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 2330
+Iter 10: V_size = 214, Converged = 3, ‖r‖ (smallest λ) = 3.9362840119693057
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 2249
+Iter 11: V_size = 321, Converged = 3, ‖r‖ (smallest λ) = 0.04786808119518834
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 2054
+Iter 12: V_size = 214, Converged = 3, ‖r‖ (smallest λ) = 0.0017767169429571345
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 1521
+Iter 13: V_size = 321, Converged = 3, ‖r‖ (smallest λ) = 0.0012660235357927331
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 804
+Iter 14: V_size = 210, Converged = 5, ‖r‖ (smallest λ) = 0.0012659568973977721
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 610
+Iter 15: V_size = 315, Converged = 5, ‖r‖ (smallest λ) = 0.0007061131197157191
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 73
+Iter 16: V_size = 210, Converged = 5, ‖r‖ (smallest λ) = 0.0007061116833801856
+Hybrid Davidson-JD corrections at iteration 17
+Total MINRES iterations: 72
+Iter 17: V_size = 283, Converged = 37, ‖r‖ (smallest λ) = 0.0007061116828595812
+Hybrid Davidson-JD corrections at iteration 18
+Total MINRES iterations: 429
+Iter 18: V_size = 356, Converged = 37, ‖r‖ (smallest λ) = 10.376070861169527
+Hybrid Davidson-JD corrections at iteration 19
+Total MINRES iterations: 2
+Iter 19: V_size = 146, Converged = 37, ‖r‖ (smallest λ) = 7.563790784802905e-5
+Hybrid Davidson-JD corrections at iteration 20
+Total MINRES iterations: 23
+Iter 20: V_size = 219, Converged = 37, ‖r‖ (smallest λ) = 7.561772746839713e-5
+Converged all required eigenvalues.
+1392.060923 seconds (6.70 M allocations: 460.877 GiB, 0.15% gc time, 0.02% compilation time)
+Number of FLOPs: 48332520233801
+
+Reading exact Eigenvalues...
+Reading eigenvalues from ./CWNO_1_results.jld2
+
+Compute the difference between computed and exact eigenvalues:
+  1: 59.0864038039 (computed) - 59.0864038310 (exact) = -2.7124e-08
+  2: 35.2457636857 (computed) - 35.2457636942 (exact) = -8.4987e-09
+  3: 28.3548493341 (computed) - 28.3548493517 (exact) = -1.7584e-08
+  4: 23.4769421730 (computed) - 23.4769421821 (exact) = -9.1387e-09
+  5: 21.1608094833 (computed) - 21.1608095198 (exact) = -3.6522e-08
+  6: 17.5022915061 (computed) - 17.5022915160 (exact) = -9.9918e-09
+  7: 16.1615429326 (computed) - 16.1615429412 (exact) = -8.6125e-09
+  8: 15.9304675193 (computed) - 15.9304675251 (exact) = -5.7440e-09
+  9: 13.9903572868 (computed) - 13.9903572905 (exact) = -3.6917e-09
+ 10: 12.9501144175 (computed) - 12.9501144254 (exact) = -7.8799e-09
+ 11: 12.4817033606 (computed) - 12.4817033620 (exact) = -1.3651e-09
+ 12: 12.0770433356 (computed) - 12.0770433381 (exact) = -2.5375e-09
+ 13: 11.0105100590 (computed) - 11.0105100681 (exact) = -9.1041e-09
+ 14: 10.9683802049 (computed) - 10.9683802171 (exact) = -1.2142e-08
+ 15: 10.5639974895 (computed) - 10.5639974961 (exact) = -6.6458e-09
+ 16: 9.8290518041 (computed) - 9.8290518062 (exact) = -2.1058e-09
+ 17: 9.3002994950 (computed) - 9.3002994986 (exact) = -3.6343e-09
+ 18: 9.2223252099 (computed) - 9.2223252138 (exact) = -3.9120e-09
+ 19: 8.7753611470 (computed) - 8.7753611567 (exact) = -9.7073e-09
+ 20: 8.5436313240 (computed) - 8.5436313293 (exact) = -5.3213e-09
+ 21: 8.1146730423 (computed) - 8.1146730510 (exact) = -8.7432e-09
+ 22: 7.9972260775 (computed) - 7.9972260797 (exact) = -2.2104e-09
+ 23: 7.6740522837 (computed) - 7.6740522853 (exact) = -1.6369e-09
+ 24: 7.6270383079 (computed) - 7.6270383083 (exact) = -3.8980e-10
+ 25: 7.4070927364 (computed) - 7.4070927377 (exact) = -1.3314e-09
+ 26: 7.3378848187 (computed) - 7.3378848208 (exact) = -2.1889e-09
+ 27: 7.0326872073 (computed) - 7.0326872111 (exact) = -3.7734e-09
+ 28: 6.8796599738 (computed) - 6.8796599743 (exact) = -4.5678e-10
+ 29: 6.7380912102 (computed) - 6.7380912141 (exact) = -3.8760e-09
+ 30: 6.7228824224 (computed) - 6.7228824257 (exact) = -3.3103e-09
+ 31: 6.5290531271 (computed) - 6.5290531353 (exact) = -8.1715e-09
+ 32: 6.3845242082 (computed) - 6.3845242090 (exact) = -8.1945e-10
+ 33: 6.2627882502 (computed) - 6.2627882512 (exact) = -9.1299e-10
+ 34: 6.2272035770 (computed) - 6.2272035848 (exact) = -7.8874e-09
+ 35: 6.2232423345 (computed) - 6.2232423387 (exact) = -4.1794e-09
+ 36: 5.9953142301 (computed) - 5.9953142318 (exact) = -1.6663e-09
+ 37: 5.9492155653 (computed) - 5.9492155672 (exact) = -1.9761e-09
+ 38: 5.7261572452 (computed) - 5.7261572464 (exact) = -1.1602e-09
+ 39: 5.6927501982 (computed) - 5.6927502026 (exact) = -4.4808e-09
+ 40: 5.5544061854 (computed) - 5.5544061884 (exact) = -2.9735e-09
+ 41: 5.4700376830 (computed) - 5.4700376839 (exact) = -8.6086e-10
+ 42: 5.4607157807 (computed) - 5.4607157811 (exact) = -3.3881e-10
+ 43: 5.2852947611 (computed) - 5.2852947631 (exact) = -1.9944e-09
+ 44: 5.2343461573 (computed) - 5.2343461581 (exact) = -7.2181e-10
+ 45: 5.1596953580 (computed) - 5.1596953585 (exact) = -5.4240e-10
+ 46: 5.1267879684 (computed) - 5.1267879694 (exact) = -9.8940e-10
+ 47: 5.1203015192 (computed) - 5.1203015230 (exact) = -3.8355e-09
+ 48: 5.0125100595 (computed) - 5.0125100679 (exact) = -8.4540e-09
+ 49: 4.9482542777 (computed) - 4.9482542798 (exact) = -2.0866e-09
+ 50: 4.9303444681 (computed) - 4.9303444687 (exact) = -6.5668e-10
+ 51: 4.8815769006 (computed) - 4.8815769024 (exact) = -1.8710e-09
+ 52: 4.8751675923 (computed) - 4.8751675927 (exact) = -4.1256e-10
+ 53: 4.8188277931 (computed) - 4.8188277933 (exact) = -1.4357e-10
+ 54: 4.7691390735 (computed) - 4.7691390761 (exact) = -2.6031e-09
+ 55: 4.7392562915 (computed) - 4.7392562922 (exact) = -6.7253e-10
+ 56: 4.6434412240 (computed) - 4.6434412250 (exact) = -9.8678e-10
+ 57: 4.5851030220 (computed) - 4.5851030231 (exact) = -1.1076e-09
+ 58: 4.5434030567 (computed) - 4.5434030591 (exact) = -2.3590e-09
+ 59: 4.5299963012 (computed) - 4.5299963035 (exact) = -2.2870e-09
+ 60: 4.5017534681 (computed) - 4.5017534686 (exact) = -5.3446e-10
+ 61: 4.4824602705 (computed) - 4.4824602718 (exact) = -1.2977e-09
+ 62: 4.4329769223 (computed) - 4.4329769259 (exact) = -3.5925e-09
+ 63: 4.3847910514 (computed) - 4.3847910525 (exact) = -1.0680e-09
+ 64: 4.3351100665 (computed) - 4.3351100698 (exact) = -3.2958e-09
+ 65: 4.2964270151 (computed) - 4.2964270168 (exact) = -1.7675e-09
+ 66: 4.2606872740 (computed) - 4.2606872751 (exact) = -1.1287e-09
+ 67: 4.2446158751 (computed) - 4.2446158770 (exact) = -1.9108e-09
+ 68: 4.2072987055 (computed) - 4.2072987080 (exact) = -2.4947e-09
+ 69: 4.1725991566 (computed) - 4.1725991603 (exact) = -3.7020e-09
+ 70: 4.1434763615 (computed) - 4.1434763662 (exact) = -4.6776e-09
+ 71: 4.1329338076 (computed) - 4.1329338099 (exact) = -2.3091e-09
+ 72: 4.0776209289 (computed) - 4.0776209337 (exact) = -4.8620e-09
+ 73: 4.0735048184 (computed) - 4.0735048223 (exact) = -3.9000e-09
+ 74: 4.0289751662 (computed) - 4.0289751697 (exact) = -3.4922e-09
+ 75: 4.0102188077 (computed) - 4.0102188330 (exact) = -2.5328e-08
+ 76: 4.0016613134 (computed) - 4.0016613304 (exact) = -1.6985e-08
+ 77: 3.9971173896 (computed) - 3.9971173948 (exact) = -5.1678e-09
+ 78: 3.9764781147 (computed) - 3.9764781409 (exact) = -2.6116e-08
+ 79: 3.9228975079 (computed) - 3.9228975531 (exact) = -4.5198e-08
+ 80: 3.9069367973 (computed) - 3.9069369127 (exact) = -1.1539e-07
+ 81: 3.8839406430 (computed) - 3.8839407323 (exact) = -8.9295e-08
+ 82: 3.8791460167 (computed) - 3.8791460500 (exact) = -3.3250e-08
+ 83: 3.8595203557 (computed) - 3.8595203824 (exact) = -2.6756e-08
+ 84: 3.8268893618 (computed) - 3.8268895908 (exact) = -2.2899e-07
+ 85: 3.8148272326 (computed) - 3.8148273299 (exact) = -9.7271e-08
+ 86: 3.7778217146 (computed) - 3.7778218095 (exact) = -9.4895e-08
+ 87: 3.7719908955 (computed) - 3.7719910168 (exact) = -1.2135e-07
+ 88: 3.7609787404 (computed) - 3.7609791649 (exact) = -4.2455e-07
+ 89: 3.7221600846 (computed) - 3.7221603560 (exact) = -2.7142e-07
+ 90: 3.6905721105 (computed) - 3.6905729814 (exact) = -8.7089e-07
+ 91: 3.6845297120 (computed) - 3.6845302909 (exact) = -5.7893e-07
+ 92: 3.6782168894 (computed) - 3.6782220445 (exact) = -5.1552e-06
+ 93: 3.6689553534 (computed) - 3.6689563817 (exact) = -1.0284e-06
+ 94: 3.6415041320 (computed) - 3.6415052761 (exact) = -1.1442e-06
+ 95: 3.6360832488 (computed) - 3.6360858581 (exact) = -2.6093e-06
+ 96: 3.6286338950 (computed) - 3.6286369418 (exact) = -3.0468e-06
+ 97: 3.6114142551 (computed) - 3.6114170555 (exact) = -2.8004e-06
+ 98: 0.0000109183 (computed) - 3.5854198495 (exact) = -3.5854e+00
+ 99: 0.0000100088 (computed) - 3.5828913204 (exact) = -3.5829e+00
+100: 0.0000096354 (computed) - 3.5704529200 (exact) = -3.5704e+00
+100 Eigenvalues converges, out of 100 requested.
+Running with l = 500
+read CWNO_1.dat
+Starting Davidson with n_aux = 1250, l_buffer = 550, lc = 502, thresh = 0.2, max_iter = 100
+Iter 1: V_size = 100, Converged = 0, ‖r‖ (smallest λ) = 5.173308642102484e-8
+Iter 2: V_size = 199, Converged = 0, ‖r‖ (smallest λ) = 0.005302653078306749
+Iter 3: V_size = 380, Converged = 17, ‖r‖ (smallest λ) = 0.05735173922976141
+Iter 4: V_size = 758, Converged = 17, ‖r‖ (smallest λ) = 0.3589949588738663
+Iter 5: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 0.891169029477624
+Iter 6: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 2.5785396555525666
+Iter 7: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 8.027243286138999
+Iter 8: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 21.894391633653793
+Iter 9: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 6.261774868443675
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 11862
+Iter 10: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 0.6765203895231648
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 11491
+Iter 11: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 0.007814576990764746
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 10616
+Iter 12: V_size = 1066, Converged = 17, ‖r‖ (smallest λ) = 0.002777981024088958
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 8469
+Iter 13: V_size = 1060, Converged = 20, ‖r‖ (smallest λ) = 0.0027775857205519848
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 3410
+Iter 14: V_size = 1060, Converged = 20, ‖r‖ (smallest λ) = 0.0008948934206716961
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 2716
+Iter 15: V_size = 1060, Converged = 20, ‖r‖ (smallest λ) = 0.0008948933919975665
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 2489
+Iter 16: V_size = 940, Converged = 80, ‖r‖ (smallest λ) = 0.0008948933919907294
+Hybrid Davidson-JD corrections at iteration 17
+Total MINRES iterations: 2288
+Iter 17: V_size = 940, Converged = 80, ‖r‖ (smallest λ) = 0.00036818249233360525
+Hybrid Davidson-JD corrections at iteration 18
+Total MINRES iterations: 1965

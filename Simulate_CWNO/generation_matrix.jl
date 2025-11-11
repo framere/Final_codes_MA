@@ -1,13 +1,3 @@
-# ------------------------------------------------------------
-
-# 3D synthetic 1-RDM (rho) and gamma matrix generator
-
-# Emulates an isolated molecule (e.g., formaldehyde) in a large vacuum box.
-
-# Fixed exponential decay alpha = 1 Å⁻¹
-
-# ------------------------------------------------------------
-
 using LinearAlgebra
 using Random
 using Printf
@@ -16,20 +6,25 @@ using Printf
 
 grid_min = -5.0       # Å
 grid_max =  5.0       # Å
-spacing  =  0.33       # Å (grid step)
+spacing  =  0.33      # Å (grid step)
 alpha    =  1.0       # 1/Å exponential decay constant
 A0       =  1.0       # overall amplitude
 eps      = spacing/2  # small regularizer to avoid singularity
 noise_level = 0.01    # small random noise for realism
 
+# --- BOX LENGTHS (for periodic boundary conditions) ---
+Lx = grid_max - grid_min
+Ly = grid_max - grid_min
+Lz = grid_max - grid_min
+
 # --- MOLECULE GEOMETRY (approximate formaldehyde) ---
 
 atoms = Dict(
-"C"  => [0.0,  0.0,  0.0],
-"O"  => [1.21, 0.0,  0.0],
-"H1" => [-0.63,  0.93,  0.0],
-"H2" => [-0.63, -0.93,  0.0],
-"H3" => [1.97,  0.0,  0.90]
+    "C"  => [0.0,  0.0,  0.0],
+    "O"  => [1.21, 0.0,  0.0],
+    "H1" => [-0.63,  0.93,  0.0],
+    "H2" => [-0.63, -0.93,  0.0],
+    "H3" => [1.97,  0.0,  0.90]
 )
 sigmas = Dict("C"=>0.6, "O"=>0.5, "H1"=>0.8, "H2"=>0.8, "H3"=>0.8)
 
@@ -64,25 +59,33 @@ dens = dens ./ maximum(dens)  # normalize to 1 at max
 sqrt_dens = sqrt.(dens)
 A = A0 .* (sqrt_dens * sqrt_dens')  # outer product
 
-# --- BUILD DISTANCE MATRIX R_ij = |r_i - r_j| ---
+# --- BUILD DISTANCE MATRIX WITH PERIODIC BOUNDARIES (MIC) ---
 
-function distance_matrix(coords)
+function distance_matrix_MIC(coords, Lx, Ly, Lz)
+    """
+    Computes the distance matrix using the Minimum Image Convention (MIC)
+    for periodic boundary conditions in a rectangular box of lengths Lx, Ly, Lz.
+    """
     n = length(coords)
     R = zeros(Float64, n, n)
+    L = [Lx, Ly, Lz]
+
     for i in 1:n
         ri = coords[i]
         for j in i:n
             rj = coords[j]
-            d = sqrt(sum((ri .- rj).^2))
-            R[i,j] = d
-            R[j,i] = d
+            d = ri .- rj                     # direct difference
+            d_MIC = d .- L .* round.(d ./ L) # apply MIC
+            dist = sqrt(sum(d_MIC.^2))
+            R[i,j] = dist
+            R[j,i] = dist
         end
     end
     return R
 end
 
-@printf("Building distance matrix...\n")
-R = distance_matrix(coords)
+@printf("Building distance matrix with periodic boundaries (MIC)...\n")
+R = distance_matrix_MIC(coords, Lx, Ly, Lz)
 
 # --- BUILD rho(r,r') = A * exp(-α r) * (1 + noise) ---
 
@@ -111,6 +114,7 @@ center_idx = argmin([sum(abs2, r) for r in coords])  # closest to origin
 @printf("ρ(center,center) = %.3f\n", rho[center_idx,center_idx])
 @printf("γ(center,center) = %.3f\n", gamma[center_idx,center_idx])
 
+# --- SAVE MATRIX TO FILE ---
 
 function save_matrix_to_file(A::Matrix{Float64}, filename::String)
     """
@@ -124,7 +128,7 @@ function save_matrix_to_file(A::Matrix{Float64}, filename::String)
 end
 
 counter = 1 # increment manually or via loop if needed
-filename = "CWNO_$(counter).dat"
+filename = "CWNO_MIC$(counter).dat"
 println("Saving the generated γ matrix to '$filename'...")
 save_matrix_to_file(gamma, filename)
 println("Matrix saved successfully with dimensions $(size(gamma)).")

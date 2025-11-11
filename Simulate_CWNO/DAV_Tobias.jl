@@ -92,7 +92,7 @@ function davidson(
         output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
         print(output)
 
-        if iter >= min_number_iter && rel_Rnorm < thresh
+        if rel_Rnorm < thresh
             println("converged!")
             return (Σ, X)
         end
@@ -134,11 +134,12 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     end
 
     # initial guess (naiv)
-    V = zeros(N, Nlow)
-    for i = 1:Nlow
-       V[i,i] = 1.0
-    end
-
+    # V = zeros(N, Nlow)
+    # for i = 1:Nlow
+    #    V[i,i] = 1.0
+    # end
+    V = rand(N,Nlow) .- 0.5
+    
     println("Davidson")
     @time Σ, U = davidson(A, V, Naux, 1e-5, 100, min_number_iter)
 
@@ -170,7 +171,7 @@ end
 
 alpha = [8]
 numbers = 1
-ls = [1]
+ls = [10, 50, 100, 200]
 for number in numbers
     println("Processing molecule: $number")
     for a in alpha

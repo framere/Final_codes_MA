@@ -1,0 +1,25 @@
+read matrix_type_2_1.dat
+Diagonalizing the matrix ...
+9220.272435 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to EV_matrix2_1.jld2
+Done saving eigenvalues and eigenvectors.
+read matrix_type_2_2.dat
+Diagonalizing the matrix ...
+6736.238403 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to EV_matrix2_2.jld2
+Done saving eigenvalues and eigenvectors.
+read matrix_type_2_3.dat
+Diagonalizing the matrix ...
+6712.274343 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to EV_matrix2_3.jld2
+Done saving eigenvalues and eigenvectors.
+read matrix_type_2_4.dat
+Diagonalizing the matrix ...
+6655.526175 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to EV_matrix2_4.jld2
+Done saving eigenvalues and eigenvectors.
+read matrix_type_2_5.dat
+Diagonalizing the matrix ...
+7010.879682 seconds (25 allocations: 20.127 GiB, 0.00% gc time)
+Saving results to EV_matrix2_5.jld2
+Done saving eigenvalues and eigenvectors.

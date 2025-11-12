@@ -23,7 +23,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./CWNO_$(number)_results.jld2"
+    output_file = "./CWNO_MIC_$(number)_results.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -92,7 +92,7 @@ function davidson(
         output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
         print(output)
 
-        if rel_Rnorm < thresh
+        if iter > min_number_iter && rel_Rnorm < thresh
             println("converged!")
             return (Σ, X)
         end
@@ -116,11 +116,11 @@ function davidson(
     end
 end
 
-function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Integer = 25)
+function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Integer = 10)
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "CWNO_$number.dat"
+    filename = "CWNO_final.dat"
 
     A = load_matrix(filename)
     N = size(A, 1)
@@ -134,14 +134,25 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     end
 
     # initial guess (naiv)
-    # V = zeros(N, Nlow)
-    # for i = 1:Nlow
-    #    V[i,i] = 1.0
-    # end
-    V = rand(N,Nlow) .- 0.5
+    V0_rr = zeros(N, Nlow)
+    for i = 1:Nlow
+       V0_rr[i,i] = 1.0
+    end
+    
+    # initial guess (randomized)
+    # V0_rr = rand(N, Nlow) .- 0.5
+
+    # # initial guess (improved)
+    # Vstart = rand(N,Nlow) .- 0.5
+    # T = Vstart' * (A * Vstart)
+    # eigT = eigen(Hermitian(T))
+    # # pick the lowest Nlow
+    # Y = eigT.vectors[:, 1:Nlow]
+    # V0_rr = Vstart * Y
+    # V0_rr = Matrix(qr(V0_rr).Q[:,1:Nlow])
     
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 1e-5, 100, min_number_iter)
+    @time Σ, U = davidson(A, V0_rr, Naux, 1e-5, 100, min_number_iter)
 
     Σ = abs.(Σ)  # Take absolute value of eigenvalues
     idx = sortperm(Σ, rev=true)
@@ -161,11 +172,11 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
 
-    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    difference = (Σ[1:r] .- Σexact[1:r])
-    for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    end
+    display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    # difference = (Σ[1:r] .- Σexact[1:r])
+    # for i in 1:r
+    #     println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    # end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 

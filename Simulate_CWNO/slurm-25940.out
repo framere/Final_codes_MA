@@ -1,0 +1,7 @@
+WARNING: using Plots.coords in module Main conflicts with an existing identifier.
+GKS: cannot open display - headless operation mode active
+Grid points: 29791
+Building distance matrix with periodic boundaries (MIC)...
+Building γ-matrix (Coulomb-weighted kernel)...
+
+Computation complete!

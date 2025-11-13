@@ -134,9 +134,9 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     end
 
     # initial guess (naiv)
-    V0_rr = zeros(N, Nlow)
+     V0_rr = zeros(N, Nlow)
     for i = 1:Nlow
-       V0_rr[i,i] = 1.0
+      V0_rr[i,i] = 1.0
     end
     
     # initial guess (randomized)

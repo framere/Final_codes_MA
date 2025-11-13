@@ -64,5 +64,5 @@ savefig("diagonal_elements_CWNO_final.png")
 # Visualization (optional)
 using Plots
 
-heatmap(C[1:1000, 1:1000], title="γ-matrix (first 1000x1000 block)")
-savefig("gamma_matrix_heatmap.png")
+heatmap(C[8000:9000, 8000:9000], title="γ-matrix (first 1000x1000 block)")
+savefig("gamma_matrix_heatmap_middle.png")

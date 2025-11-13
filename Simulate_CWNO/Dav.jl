@@ -361,7 +361,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "CWNO_$number.dat"
+    filename = "CWNO_final_1.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta

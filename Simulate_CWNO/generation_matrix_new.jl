@@ -8,8 +8,8 @@ grid_max =  5.0       # Å
 spacing  =  0.33      # Å (grid step)
 alpha    =  1.0       # 1/Å exponential decay constant --> roughly 10/L for L=10 Å
 A0       =  1.0       # overall amplitude
-eps      = 1e-6       # small regularizer to avoid singularity
-noise_level =0    # small random noise for realism
+eps      = spacing/2  # small regularizer to avoid singularity
+noise_level = 0.001    # small random noise for realism
 
 # --- BOX LENGTHS (for periodic boundary conditions) ---
 Lx = grid_max - grid_min
@@ -63,11 +63,15 @@ for i in 1:n
 end
 
 # Add small symmetric random noise for realism
-if noise_level > 0
-    Random.seed!(1234)
-    noise = noise_level * (rand(n, n) .- 0.5)
-    γ .+= (noise .+ noise') ./ 2
+function add_noise!(γ, noise_level)
+    if noise_level > 0
+        Random.seed!(1234)
+        noise = noise_level * (rand(n, n) .- 0.5)
+        return (noise .+ noise') ./ 2
+    end
 end
+
+γ .= γ .* (1 .+ add_noise!(γ, noise_level))
 
 function save_matrix_to_file(A::Matrix{Float64}, filename::String)
     A_vec = vec(Matrix(A)) # flatten to 1D

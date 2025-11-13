@@ -68,4 +68,4 @@ M = abs.(C[1:1000, 1:1000])
 heatmap(log10.(M .+ eps(Float64)),
     title="γ-matrix (1001×1001 block, log10 color scale)",
     colorbar_title="log10(|γ|)")
-savefig("gamma_matrix_heatmap_middle.png")
+savefig("gamma_matrix_heatmap_logarithmic.png")

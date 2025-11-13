@@ -9,7 +9,7 @@ spacing  =  0.33      # Å (grid step)
 alpha    =  1.0       # 1/Å exponential decay constant --> roughly 10/L for L=10 Å
 A0       =  1.0       # overall amplitude
 eps      = spacing/2  # small regularizer to avoid singularity
-noise_level = 0.01    # small random noise for realism
+noise_level = 0.001    # small random noise for realism
 
 # --- BOX LENGTHS (for periodic boundary conditions) ---
 Lx = grid_max - grid_min
@@ -25,10 +25,6 @@ n = length(coords)
 
 # --- MIC DISTANCE MATRIX ---
 function distance_matrix_MIC(coords, Lx, Ly, Lz)
-    """
-    Computes the distance matrix using the Minimum Image Convention (MIC)
-    for periodic boundary conditions in a rectangular box of lengths Lx, Ly, Lz.
-    """
     n = length(coords)
     R = zeros(Float64, n, n)
     L = [Lx, Ly, Lz]
@@ -47,11 +43,11 @@ function distance_matrix_MIC(coords, Lx, Ly, Lz)
     return R
 end
 
-@printf("Building distance matrix with periodic boundaries (MIC)...\n")
+@printf("Building distance matrix with periodic boundaries (MIC)\n")
 R = distance_matrix_MIC(coords, Lx, Ly, Lz)
 
 # --- γ-MATRIX CALCULATION ---
-@printf("Building γ-matrix (Coulomb-weighted kernel)...\n")
+@printf("Building γ-matrix (Coulomb-weighted kernel)\n")
 γ = zeros(Float64, n, n)
 
 # Precompute |r| for all points
@@ -74,10 +70,6 @@ if noise_level > 0
 end
 
 function save_matrix_to_file(A::Matrix{Float64}, filename::String)
-    """
-    Saves the Hermitian matrix A to a file in flattened binary format.
-    The file can later be read with read!(io, Array{Float64,1}) and reshaped.
-    """
     A_vec = vec(Matrix(A)) # flatten to 1D
     open(filename, "w") do file
         write(file, A_vec)
@@ -89,8 +81,8 @@ save_matrix_to_file(γ, output_filename)
 
 @printf("\nComputation complete!\n")
 
-# --- Optional: visualize shape or save ---
-using Plots
-heatmap(γ[1:50, 1:50], title="γ-matrix (first 50x50 block)")
-savefig("gamma_matrix_heatmap.png")
+# # Visualization (optional)
+# using Plots
+# heatmap(γ[1:50, 1:50], title="γ-matrix (first 50x50 block)")
+# savefig("gamma_matrix_heatmap.png")
 

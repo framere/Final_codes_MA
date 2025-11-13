@@ -60,3 +60,9 @@ plot(1:length(D3), D3,
         size=(600, 600))    
 
 savefig("diagonal_elements_CWNO_final.png") 
+
+# Visualization (optional)
+using Plots
+
+heatmap(C[1:1000, 1:1000], title="γ-matrix (first 1000x1000 block)")
+savefig("gamma_matrix_heatmap.png")

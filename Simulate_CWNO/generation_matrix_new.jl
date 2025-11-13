@@ -8,7 +8,7 @@ grid_max =  5.0       # Å
 spacing  =  0.33      # Å (grid step)
 alpha    =  1.0       # 1/Å exponential decay constant --> roughly 10/L for L=10 Å
 A0       =  1.0       # overall amplitude
-eps      = spacing/2  # small regularizer to avoid singularity
+eps      = 1e-6       # small regularizer to avoid singularity
 noise_level = 0.001    # small random noise for realism
 
 # --- BOX LENGTHS (for periodic boundary conditions) ---

@@ -1,0 +1,5 @@
+read CWNO_final.dat
+Diagonalizing the matrix ...
+2855.622202 seconds (25 allocations: 19.848 GiB, 0.00% gc time)
+Saving results to CWNO_final_results.jld2
+Done saving eigenvalues and eigenvectors.

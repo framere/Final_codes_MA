@@ -64,5 +64,8 @@ savefig("diagonal_elements_CWNO_final.png")
 # Visualization (optional)
 using Plots
 
-heatmap(C[8000:9000, 8000:9000], title="γ-matrix (first 1000x1000 block)")
+M = abs.(C[1:1000, 1:1000])
+heatmap(log10.(M .+ eps(Float64)),
+    title="γ-matrix (1001×1001 block, log10 color scale)",
+    colorbar_title="log10(|γ|)")
 savefig("gamma_matrix_heatmap_middle.png")

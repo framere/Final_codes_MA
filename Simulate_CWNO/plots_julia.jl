@@ -48,7 +48,7 @@ end
 
 # savefig("diagonal_elements_CWNO1.png")
 
-C = load_matrix("./CWNO_final.dat"; N=29791)
+C = load_matrix("./CWNO_final_1.dat"; N=29791)
 D3 = abs.(diag(C))
 plot(1:length(D3), D3,
         title="Diagonal Elements Scatter Plot",

@@ -80,7 +80,7 @@ function save_matrix_to_file(A::Matrix{Float64}, filename::String)
     end
 end
 
-output_filename = "CWNO_final.dat"
+output_filename = "CWNO_final_1.dat"
 save_matrix_to_file(γ, output_filename)
 
 @printf("\nComputation complete!\n")

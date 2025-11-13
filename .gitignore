@@ -5,3 +5,5 @@ formaldehyde/
 *.pdf
 *.png
 *.txt
+
+!Simulate_CWNO/*.png

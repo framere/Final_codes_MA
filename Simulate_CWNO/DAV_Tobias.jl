@@ -120,7 +120,7 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "CWNO_final.dat"
+    filename = "CWNO_final_1.dat"
 
     A = load_matrix(filename)
     N = size(A, 1)
@@ -134,13 +134,13 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     end
 
     # initial guess (naiv)
-     V0_rr = zeros(N, Nlow)
-    for i = 1:Nlow
-      V0_rr[i,i] = 1.0
-    end
+    # V0_rr = zeros(N, Nlow)
+    # for i = 1:Nlow
+    #  V0_rr[i,i] = 1.0
+    #end
     
     # initial guess (randomized)
-    # V0_rr = rand(N, Nlow) .- 0.5
+    V0_rr = rand(N, Nlow) .- 0.5
 
     # # initial guess (improved)
     # Vstart = rand(N,Nlow) .- 0.5

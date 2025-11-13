@@ -31,5 +31,5 @@ function diagonalize_and_save(filename::String)
     println("Done saving eigenvalues and eigenvectors.")
 end
 
-filename = "CWNO_final.dat"
+filename = "CWNO_final_1.dat"
 diagonalize_and_save(filename)

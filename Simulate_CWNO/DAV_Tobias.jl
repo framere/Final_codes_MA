@@ -23,7 +23,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./CWNO_MIC_$(number)_results.jld2"
+    output_file = "./CWNO_final_results.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -92,7 +92,7 @@ function davidson(
         output = @sprintf("iter=%6d  rel‖R‖=%11.3e  size(V,2)=%6d\n", iter, rel_Rnorm, size(V,2))
         print(output)
 
-        if iter > min_number_iter && rel_Rnorm < thresh
+        if rel_Rnorm < thresh
             println("converged!")
             return (Σ, X)
         end
@@ -134,22 +134,18 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     end
 
     # initial guess (naiv)
-    # V0_rr = zeros(N, Nlow)
-    # for i = 1:Nlow
-    #  V0_rr[i,i] = 1.0
-    #end
+    V0_rr = zeros(N, Nlow)
+    for i = 1:Nlow
+        V0_rr[i,i] = 1.0
+    end
     
     # initial guess (randomized)
-    V0_rr = rand(N, Nlow) .- 0.5
+    # V0_rr = rand(N, Nlow) .- 0.5
 
-    # # initial guess (improved)
-    # Vstart = rand(N,Nlow) .- 0.5
-    # T = Vstart' * (A * Vstart)
-    # eigT = eigen(Hermitian(T))
-    # # pick the lowest Nlow
-    # Y = eigT.vectors[:, 1:Nlow]
-    # V0_rr = Vstart * Y
-    # V0_rr = Matrix(qr(V0_rr).Q[:,1:Nlow])
+    # largest diagonal elements as initial guess  
+    D = diag(A)
+    idxs = sortperm(abs.(D), rev = true)[1:Nlow]
+    V0_rr = A[:, idxs]
     
     println("Davidson")
     @time Σ, U = davidson(A, V0_rr, Naux, 1e-5, 100, min_number_iter)
@@ -180,7 +176,7 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
-alpha = [8]
+alpha = [4]
 numbers = 1
 ls = [10, 50, 100, 200]
 for number in numbers

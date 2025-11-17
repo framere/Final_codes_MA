@@ -21,6 +21,12 @@ function load_matrix(filename::String)
     return -A
 end
 
+function load_vector_from_file(filename::String)
+    # read raw bytes and reinterpret as Float64
+    bytes = read(filename)
+    return reinterpret(Float64, bytes)
+end
+
 
 function read_eigenresults(number::Integer)
     output_file = "./CWNO_final_results.jld2"
@@ -52,7 +58,15 @@ function davidson(
 
     while true
         iter += 1
-        
+
+        # Orthogonalize against occupied orbital
+        phi_occ = load_vector_from_file("occupied_orbital.dat")
+        norm_phi_occ = phi_occ' * phi_occ  # scalar normalization
+
+        for j in 1:size(V, 2)
+            V[:, j] -= phi_occ * (phi_occ' * V[:, j]) / norm_phi_occ
+        end
+
         # QR-Orthogonalisierung
         count_qr_flops(size(V,1), size(V,2))
         qr_decomp = qr(V)
@@ -133,20 +147,20 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
         return
     end
 
-    # initial guess (naiv)
-    V0_rr = zeros(N, Nlow)
-    for i = 1:Nlow
-        V0_rr[i,i] = 1.0
-    end
-    
-    # initial guess (randomized)
-    # V0_rr = rand(N, Nlow) .- 0.5
-
     # largest diagonal elements as initial guess  
     D = diag(A)
     idxs = sortperm(abs.(D), rev = true)[1:Nlow]
     V0_rr = A[:, idxs]
     
+    # phi_occ = load_vector_from_file("occupied_orbital.dat")
+    # norm_phi_occ = phi_occ' * phi_occ  # scalar normalization
+
+    # for j in 1:size(V0_rr, 2)
+    #     V0_rr[:, j] -= phi_occ * (phi_occ' * V0_rr[:, j]) / norm_phi_occ
+    # end
+    # V0_rr = randn(N, Nlow).- 0.5
+
+    # davidson algorithm
     println("Davidson")
     @time Σ, U = davidson(A, V0_rr, Naux, 1e-5, 100, min_number_iter)
 

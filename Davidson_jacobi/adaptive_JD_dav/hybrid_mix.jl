@@ -152,7 +152,7 @@ function davidson(
     global NFLOPs
 
     n_b = size(V, 2)
-    l_buffer = round(Int, l * 1.1)
+    l_buffer = round(Int, l * 1.3)
     lc = round(Int, 1.005 * l)  # We want to converge smallest lc eigenvalues
     nu_0 = max(l_buffer, n_b)
     nevf = 0
@@ -385,10 +385,14 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     A = load_matrix(filename,molecule)
     N = size(A, 1)
 
-    V = zeros(N, Nlow)
-    for i = 1:Nlow
-        V[i, i] = 1.0
-    end
+    # V = zeros(N, Nlow)
+    # for i = 1:Nlow
+    #     V[i, i] = 1.0
+    # end
+
+    D = diag(A)
+    idxs = sortperm(abs.(D), rev = true)[1:Nlow]
+    V = A[:, idxs]
 
     @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
@@ -420,7 +424,7 @@ end
 
 
 
-betas = [32, 36] #8,16,32,64, 8,16
+betas = [25] #8,16,32,64, 8,16
 molecules = ["formaldehyde"] #, "uracil"
 ls = [ 50, 100] #10, 50, 100, 200
 for molecule in molecules

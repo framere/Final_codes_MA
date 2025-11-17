@@ -1,0 +1,6 @@
+read CWNO_final_1.dat
+Diagonalizing the matrix ...
+2786.975807 seconds (25 allocations: 19.848 GiB, 0.00% gc time)
+Projecting out the occupied orbital from eigenvectors ...
+Saving results to CWNO_final_results.jld2
+Done saving eigenvalues and eigenvectors.

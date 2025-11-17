@@ -53,6 +53,11 @@ R = distance_matrix_MIC(coords, Lx, Ly, Lz)
 # Precompute |r| for all points
 abs_r = [sqrt(sum(c.^2)) for c in coords]
 
+# computen occupied orbital
+phi = @. exp(-alpha * abs_r)  
+phi ./= norm(phi)             
+phi_occ = phi
+
 for i in 1:n
     for j in i:n
         denom = R[i, j] + eps
@@ -82,6 +87,24 @@ end
 
 output_filename = "CWNO_final_1.dat"
 save_matrix_to_file(γ, output_filename)
+
+# save occupied orbital to file
+function save_vector_to_file(v::Vector{Float64}, filename::String)
+    open(filename, "w") do file
+        write(file, v)
+    end
+end
+
+orbital_filename = "occupied_orbital.dat"
+save_vector_to_file(phi_occ, orbital_filename)
+
+A = phi_occ' * γ          # k x n
+B = A * phi_occ           # k x k   (== phi_occ' * γ * phi_occ)
+
+gamma_tilde = γ - (phi_occ * A) - (A' * phi_occ') + (phi_occ * B * phi_occ')
+# save gamma_tilde to file
+output_filename_tilde = "CWNO_final_tilde.dat"
+save_matrix_to_file(gamma_tilde, output_filename_tilde)
 
 @printf("\nComputation complete!\n")
 

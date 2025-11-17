@@ -29,7 +29,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./CWNO_final_results.jld2"
+    output_file = "./CWNO_final_tilde_results.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -134,7 +134,7 @@ function main(number::Integer, l::Integer, alpha::Integer, min_number_iter::Inte
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "CWNO_final_1.dat"
+    filename = "CWNO_final_tilde.dat"
 
     A = load_matrix(filename)
     N = size(A, 1)

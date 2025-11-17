@@ -26,20 +26,11 @@ function project_out(x::AbstractVector, y::AbstractVector)
     return x - proj
 end
 
-function diagonalize_and_save(filename::String)    
+function diagonalize_and_save(filename::String, output_file::String)    
     A = load_matrix(filename)
     println("Diagonalizing the matrix ...")
     @time F = eigen(A)  # F.values, F.vectors
-    occ_orbital = load_vector_from_file("occupied_orbital.dat")
 
-    # project out the occupied orbital from eigenvectors
-    println("Projecting out the occupied orbital from eigenvectors ...")
-    for i in 1:size(F.vectors, 2)
-        F.vectors[:, i] = project_out(F.vectors[:, i], occ_orbital)
-        F.vectors[:, i] ./= norm(F.vectors[:, i])  # normalize
-    end
-
-    output_file = "CWNO_final_results.jld2"
     println("Saving results to $output_file")
 
     jldsave(output_file; 
@@ -50,5 +41,10 @@ function diagonalize_and_save(filename::String)
     println("Done saving eigenvalues and eigenvectors.")
 end
 
+filename_tilde = "CWNO_final_tilde.dat"
+output_file_tilde = "CWNO_final_tilde_results.jld2"
+diagonalize_and_save(filename_tilde, output_file_tilde)
+
 filename = "CWNO_final_1.dat"
-diagonalize_and_save(filename)
+output_file = "CWNO_final_results.jld2"
+diagonalize_and_save(filename, output_file)

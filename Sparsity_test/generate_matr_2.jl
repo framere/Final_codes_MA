@@ -5,7 +5,7 @@ function new_curve(x, gamma, delta, epsilon)
     return gamma .* exp.(- delta .* x.^epsilon)
 end
 
-function generate_positive_definite_matrix(N::Int, factor::Float64=100.0)
+function generate_positive_definite_matrix(N::Int, factor::Int)
     A = Matrix{Float64}(undef, N, N)
 
     # Your parameters
@@ -58,7 +58,7 @@ factors = 10 .^ (2:2:10)  # [1e10, 1e2]
 global counter = 1
 for (N, factor) in Iterators.product(Ns, factors)
     println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
-    A = generate_random_matrix(N, factor)
+    A = generate_positive_definite_matrix(N, factor)
     filename = "matrix_type_2_$(counter).dat"
     println("Saving the generated matrix to '$filename'...")
     save_matrix_to_file(A, filename)

@@ -35,7 +35,7 @@ function generate_positive_definite_matrix(N::Int, factor::Float64=100.0)
     # Make the matrix positive definite
     # Robust approach: A' * A ensures PSD, then add small shift
     A = A' * A
-    A += 1e-6 * I
+    A += 1e-9 * I
 
     return A
 end

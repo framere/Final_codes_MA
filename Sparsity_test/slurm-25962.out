@@ -1,0 +1,6 @@
+ERROR: LoadError: UndefVarError: `generate_random_matrix` not defined in `Main`
+Stacktrace:
+ [1] top-level scope
+   @ ~/MA_best/Sparsity_test/generate_matr_2.jl:61
+in expression starting at /home/fmereto/MA_best/Sparsity_test/generate_matr_2.jl:59
+Generating a random Hermitian matrix of size 30000 x 30000 with diagonal scaling factor 100...

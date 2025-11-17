@@ -99,7 +99,7 @@ end
 
 
 function load_matrix(filename::String)
-    N = 29791  
+    N = 30000  
 
     println("read ", filename)
     file = open(filename, "r")
@@ -368,10 +368,9 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     A = load_matrix(filename)
     N = size(A, 1)
 
-    V = zeros(N, Nlow)
-    for i = 1:Nlow
-        V[i, i] = -1.0
-    end
+    D = diag(A)
+    idxs = sortperm(abs.(D), rev = true)[1:Nlow]
+    V = A[:, idxs]
 
     @time Σ, U = davidson(A, V, Naux, l, 1e-3 * factor, max_iter)
 
@@ -393,11 +392,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
 
-    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    difference = (Σ[1:r] .- Σexact[1:r])
-    for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    end
+    display("text/plain", (Σ[1:r] - Σexact[1:r])')
     println("$r Eigenvalues converges, out of $l requested.")
 end
 

@@ -2,35 +2,43 @@ using LinearAlgebra
 using Random
 
 function new_curve(x, gamma, delta, epsilon)
-    return gamma .* exp.(- delta .* x.^ epsilon)
+    return gamma .* exp.(- delta .* x.^epsilon)
 end
 
-function generate_random_matrix(N::Int, factor::Int)
-    """    generate_random_matrix(N::Int, factor::Float64 = 100.0) -> Matrix{Float64}
-    Generates a random NxN matrix with diagonal elements scaled by `factor` and small off-diagonal elements.        
-    The diagonal elements are uniformly distributed between 0 and `factor`, while off-diagonal elements are small random values.
-    """
+function generate_positive_definite_matrix(N::Int, factor::Float64=100.0)
     A = Matrix{Float64}(undef, N, N)
+
+    # Your parameters
+    a = 34.39875072
+    b = 0.32439069
+    c = 0.40287325
+
+    # Fill matrix
     for i in 1:N
-        a = 31.2458198825
-        b = 0.6473512253
-        c = 0.3556968463
         for j in 1:N
             if i == j
-                A[i, j] = - new_curve(i, a,b,c)  # Diagonal elements
+                A[i,j] = new_curve(i, a, b, c)
             else
-                a = rand()
-                if a < 0.5
-                    A[i, j] = - new_curve(i, a,b,c) / factor  # Small off-diagonal elements
+                r = rand()
+                if r < 0.5
+                    A[i,j] = new_curve(min(i,j), a, b, c) / factor
                 else
-                    A[i, j] = 0  # Even smaller off-diagonal elements
+                    A[i,j] = 0.0
                 end
             end
         end
     end
-    return -A
-end
 
+    # Make the matrix Hermitian
+    A = (A + A') / 2
+
+    # Make the matrix positive definite
+    # Robust approach: A' * A ensures PSD, then add small shift
+    A = A' * A
+    A += 1e-6 * I
+
+    return A
+end
 
 
 function save_matrix_to_file(A::Matrix{Float64}, filename::String)

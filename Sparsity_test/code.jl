@@ -382,24 +382,24 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     println("Number of FLOPs: $NFLOPs")
 
     # Perform exact diagonalization as reference
-    println("\nReading exact Eigenvalues...")
-    Σexact = read_eigenresults(number)
-    Σexact = abs.(Σexact)
-    idx_exact = sortperm(Σexact, rev=true)
-    Σexact = Σexact[idx_exact]
+    # println("\nReading exact Eigenvalues...")
+    # Σexact = read_eigenresults(number)
+    # Σexact = abs.(Σexact)
+    # idx_exact = sortperm(Σexact, rev=true)
+    # Σexact = Σexact[idx_exact]
 
     # Display difference
-    r = min(length(Σ), l)
-    println("\nCompute the difference between computed and exact eigenvalues:")
+    # r = min(length(Σ), l)
+    # println("\nCompute the difference between computed and exact eigenvalues:")
 
-    display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    println("$r Eigenvalues converges, out of $l requested.")
+    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    # println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
 
 betas = [25] #8,16,32,64, 8,16
-numbers = 1
+numbers = 6
 ls = [10, 50, 100, 200]
 for number in numbers
     println("Processing molecule: $number")

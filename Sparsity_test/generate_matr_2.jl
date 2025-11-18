@@ -53,9 +53,10 @@ end
 
 # === MAIN USAGE ===
 Ns = [30000]  # Different sizes for testing
-factors = 10 .^ (2:2:10)  # [1e10, 1e2]
+# factors = 10 .^ (2:2:10)  # [1e10, 1e2]
+factors = 10^12
 
-global counter = 1
+global counter = 6
 for (N, factor) in Iterators.product(Ns, factors)
     println("Generating a random Hermitian matrix of size $N x $N with diagonal scaling factor $factor...")
     A = generate_positive_definite_matrix(N, factor)

@@ -114,7 +114,7 @@ end
 
 
 function read_eigenresults(number::Integer)
-    output_file = "./CWNO_$(number)_results.jld2"
+    output_file = "./CWNO_final_tilde_results.jld2"
     println("Reading eigenvalues from $output_file")
     data = jldopen(output_file, "r")
     eigenvalues = data["eigenvalues"]
@@ -361,7 +361,7 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     global NFLOPs
     NFLOPs = 0  # reset for each run
 
-    filename = "CWNO_final_1.dat"
+    filename = "CWNO_final_tilde.dat"
 
     Nlow = max(round(Int, 0.1*l), 16)
     Naux = Nlow * beta
@@ -372,7 +372,11 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     # for i = 1:Nlow
     #     V[i, i] = -1.0
     # end
-    V = randn(N, Nlow).- 0.5
+    # V = randn(N, Nlow).- 0.5
+    # largest diagonal elements as initial guess  
+    D = diag(A)
+    idxs = sortperm(abs.(D), rev = true)[1:Nlow]
+    V = A[:, idxs]
 
 
     @time Σ, U = davidson(A, V, Naux, l, 1e-4 * factor, max_iter)
@@ -395,17 +399,17 @@ function main(number::Integer, l::Integer, beta::Integer, factor::Integer, max_i
     r = min(length(Σ), l)
     println("\nCompute the difference between computed and exact eigenvalues:")
 
-    # display("text/plain", (Σ[1:r] - Σexact[1:r])')
-    difference = (Σ[1:r] .- Σexact[1:r])
-    for i in 1:r
-        println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
-    end
+    display("text/plain", (Σ[1:r] - Σexact[1:r])')
+    # difference = (Σ[1:r] .- Σexact[1:r])
+    # for i in 1:r
+    #     println(@sprintf("%3d: %.10f (computed) - %.10f (exact) = % .4e", i, Σ[i], Σexact[i], difference[i]))
+    # end
     println("$r Eigenvalues converges, out of $l requested.")
 end
 
 
 
-betas = [25] #8,16,32,64, 8,16
+betas = [20] #8,16,32,64, 8,16
 numbers = 1
 ls = [10, 50, 100, 200] #10, 50, 100, 200
 for number in numbers

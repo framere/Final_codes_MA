@@ -12,6 +12,8 @@ function occupied_orbitals(molecule::String)
         return 1
     elseif molecule == "formaldehyde"
         return 6
+    elseif molecule == "uracil"
+        return 21
     else
         error("Unknown molecule: $molecule")
     end
@@ -22,10 +24,12 @@ function load_matrix(filename::String, molecule::String)
         N = 11994
     elseif molecule == "formaldehyde"
         N = 27643
+    elseif molecule == "uracil"
+        N = 32416
     else
         error("Unknown molecule: $molecule")
     end
-    println("read ", filename)
+    # println("read ", filename)
     file = open(filename, "r")
     A = Array{Float64}(undef, N * N)
     read!(file, A)
@@ -43,7 +47,6 @@ function read_eigenresults(molecule::String)
     close(data)
     return sort(eigenvalues)
 end
-
 
 function davidson(
     A::AbstractMatrix{T},
@@ -148,13 +151,17 @@ function main(molecule::String, l::Integer, alpha::Integer)
     #end
 
     # initial guess (naiv)
-    V = zeros(N, Nlow)
-    for i = 1:Nlow
-       V[i,i] = 1.0
-    end
+    # V = zeros(N, Nlow)
+    # for i = 1:Nlow
+    #    V[i,i] = 1.0
+    # end
+
+    D = diag(A)
+    idxs = sortperm(abs.(D), rev = true)[1:Nlow]
+    V = A[:, idxs]
 
     println("Davidson")
-    @time Σ, U = davidson(A, V, Naux, 5e-5, 5000)
+    @time Σ, U = davidson(A, V, Naux, 1e-4, 400)
     idx = sortperm(Σ)
     Σ = Σ[idx]
     U = U[:, idx]
@@ -174,9 +181,9 @@ function main(molecule::String, l::Integer, alpha::Integer)
     display("text/plain", rel_dev')
 end
 
-alpha = [4,8,10]
+alpha = [6]
 
-molecules = ["H2"]
+molecules = ["H2", "formaldehyde", "uracil"]
 
 ls = [10, 50, 100, 200]
 for molecule in molecules

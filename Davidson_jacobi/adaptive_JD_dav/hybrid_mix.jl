@@ -426,7 +426,7 @@ end
 
 betas = [25] #8,16,32,64, 8,16
 molecules = ["formaldehyde"] #, "uracil"
-ls = [ 50, 100] #10, 50, 100, 200
+ls = [10] #10, 50, 100, 200
 for molecule in molecules
     println("Processing molecule: $molecule")
     for beta in betas

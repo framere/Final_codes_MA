@@ -1,0 +1,86 @@
+Processing molecule: 6
+Running with beta = 25
+Running with l = 100
+read matrix_type_2_6.dat
+Starting Davidson with n_aux = 400, l_buffer = 140, lc = 100, thresh = 0.001, max_iter = 100
+Iter 1: V_size = 32, Converged = 0, ‖r‖ (largest λ) = 5.754699262948465e-10
+Iter 2: V_size = 64, Converged = 0, ‖r‖ (largest λ) = 20.953347884444142
+Iter 3: V_size = 112, Converged = 16, ‖r‖ (largest λ) = 9.32873823681085
+Iter 4: V_size = 224, Converged = 16, ‖r‖ (largest λ) = 0.7142276689816804
+Iter 5: V_size = 348, Converged = 16, ‖r‖ (largest λ) = 2.814286219557087
+Iter 6: V_size = 248, Converged = 16, ‖r‖ (largest λ) = 0.16000182309506705
+Iter 7: V_size = 329, Converged = 59, ‖r‖ (largest λ) = 0.024115115088893028
+Iter 8: V_size = 162, Converged = 59, ‖r‖ (largest λ) = 7.528924613480067e-8
+Iter 9: V_size = 243, Converged = 59, ‖r‖ (largest λ) = 1.9065383100924547
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 77
+Iter 10: V_size = 323, Converged = 59, ‖r‖ (largest λ) = 2.6480138497425747
+Hybrid Davidson-JD corrections at iteration 11
+Total MINRES iterations: 73
+Iter 11: V_size = 366, Converged = 97, ‖r‖ (largest λ) = 2.6257700642442687
+Hybrid Davidson-JD corrections at iteration 12
+Total MINRES iterations: 75
+Iter 12: V_size = 86, Converged = 97, ‖r‖ (largest λ) = 2.4422341256792235
+Hybrid Davidson-JD corrections at iteration 13
+Total MINRES iterations: 57
+Iter 13: V_size = 129, Converged = 97, ‖r‖ (largest λ) = 1.5953017766337976
+Hybrid Davidson-JD corrections at iteration 14
+Total MINRES iterations: 13
+Iter 14: V_size = 172, Converged = 97, ‖r‖ (largest λ) = 1.9722213189108733
+Hybrid Davidson-JD corrections at iteration 15
+Total MINRES iterations: 3
+Iter 15: V_size = 215, Converged = 97, ‖r‖ (largest λ) = 2.631136524386471
+Hybrid Davidson-JD corrections at iteration 16
+Total MINRES iterations: 0
+Iter 16: V_size = 258, Converged = 97, ‖r‖ (largest λ) = 0.6776582162901524
+Hybrid Davidson-JD corrections at iteration 17
+Total MINRES iterations: 0
+Iter 17: V_size = 301, Converged = 97, ‖r‖ (largest λ) = 0.1099275405522982
+Converged all required eigenvalues.
+229.409802 seconds (5.87 M allocations: 421.765 GiB, 0.56% gc time, 0.12% compilation time)
+Number of FLOPs: 9977622638240
+Running with l = 500
+read matrix_type_2_6.dat
+Starting Davidson with n_aux = 1250, l_buffer = 700, lc = 502, thresh = 0.002, max_iter = 100
+Iter 1: V_size = 100, Converged = 0, ‖r‖ (largest λ) = 2.2914473301862013e-10
+Iter 2: V_size = 200, Converged = 0, ‖r‖ (largest λ) = 4.742792372680304
+Iter 3: V_size = 350, Converged = 50, ‖r‖ (largest λ) = 1.2961793074957348
+Iter 4: V_size = 700, Converged = 50, ‖r‖ (largest λ) = 0.031409457858080164
+Iter 5: V_size = 1250, Converged = 50, ‖r‖ (largest λ) = 0.07452004638388558
+Iter 6: V_size = 1250, Converged = 50, ‖r‖ (largest λ) = 0.011121998744792264
+Iter 7: V_size = 1250, Converged = 50, ‖r‖ (largest λ) = 0.002316959469796199
+Iter 8: V_size = 444, Converged = 478, ‖r‖ (largest λ) = 0.0021003667045462675
+Iter 9: V_size = 666, Converged = 478, ‖r‖ (largest λ) = 0.0007844731874387894
+Hybrid Davidson-JD corrections at iteration 10
+Total MINRES iterations: 0
+Iter 10: V_size = 888, Converged = 478, ‖r‖ (largest λ) = 0.002079751714947694
+Converged all required eigenvalues.
+665.686278 seconds (48.01 M allocations: 3.558 TiB, 1.25% gc time)
+Number of FLOPs: 21536781735040
+Running with l = 1000
+read matrix_type_2_6.dat
+Starting Davidson with n_aux = 2500, l_buffer = 1400, lc = 1005, thresh = 0.003, max_iter = 100
+Iter 1: V_size = 200, Converged = 0, ‖r‖ (largest λ) = 1.1569838177125699e-10
+Iter 2: V_size = 400, Converged = 0, ‖r‖ (largest λ) = 1.3968603343264425
+Iter 3: V_size = 700, Converged = 100, ‖r‖ (largest λ) = 0.238696639984189
+Iter 4: V_size = 1400, Converged = 100, ‖r‖ (largest λ) = 0.004184412846265441
+Iter 5: V_size = 2500, Converged = 100, ‖r‖ (largest λ) = 0.010848347671223174
+Iter 6: V_size = 2500, Converged = 100, ‖r‖ (largest λ) = 0.0003731629164014833
+Iter 7: V_size = 2500, Converged = 100, ‖r‖ (largest λ) = 5.6580981847301566e-5
+Converged all required eigenvalues.
+1401.347321 seconds (122.27 M allocations: 9.133 TiB, 1.48% gc time)
+Number of FLOPs: 35643610760000
+Running with l = 2000
+read matrix_type_2_6.dat
+Starting Davidson with n_aux = 5000, l_buffer = 2800, lc = 2010, thresh = 0.004, max_iter = 100
+Iter 1: V_size = 400, Converged = 0, ‖r‖ (largest λ) = 3.867983357658518e-11
+Iter 2: V_size = 800, Converged = 0, ‖r‖ (largest λ) = 0.2303386179898742
+Iter 3: V_size = 1400, Converged = 200, ‖r‖ (largest λ) = 0.022324467389438742
+Iter 4: V_size = 2800, Converged = 200, ‖r‖ (largest λ) = 0.00026647756964125814
+Iter 5: V_size = 5000, Converged = 200, ‖r‖ (largest λ) = 7.415573067057152e-5
+Iter 6: V_size = 5000, Converged = 200, ‖r‖ (largest λ) = 0.00011469412623088937
+Iter 7: V_size = 5000, Converged = 200, ‖r‖ (largest λ) = 5.054128692925575e-7
+Converged all required eigenvalues.
+4765.909982 seconds (493.78 M allocations: 36.848 TiB, 1.80% gc time)
+Number of FLOPs: 85771491820000
+Finished processing molecule: 6

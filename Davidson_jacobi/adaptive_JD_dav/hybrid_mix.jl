@@ -385,14 +385,14 @@ function main(molecule::String, l::Integer, beta::Integer, factor::Integer, max_
     A = load_matrix(filename,molecule)
     N = size(A, 1)
 
-    # V = zeros(N, Nlow)
-    # for i = 1:Nlow
-    #     V[i, i] = 1.0
-    # end
+    V = zeros(N, Nlow)
+    for i = 1:Nlow
+        V[i, i] = 1.0
+    end
 
-    D = diag(A)
-    idxs = sortperm(abs.(D), rev = true)[1:Nlow]
-    V = A[:, idxs]
+    # D = diag(A)
+    # idxs = sortperm(abs.(D), rev = true)[1:Nlow]
+    # V = A[:, idxs]
 
     @time Σ, U = davidson(A, V, Naux, l, 1e-3 + 0.5e-3 * factor, max_iter)
 
